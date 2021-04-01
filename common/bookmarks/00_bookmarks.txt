@@ -1,0 +1,41 @@
+	bm_newfoundland = {
+	name = "BM_NEWFOUNDLAND_ERA"
+	desc = "BM_NEWFOUNDLAND_ERA_INFO"
+	date = 2325.1.1
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_4
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = {
+		id = 600000
+		age = 26
+		name = ERA_CHAR_NAME_200
+		title = c_st_johns
+		title_name = c_st_johns
+		
+		character = {
+			religion="inuit_pagan"
+			culture="newfindler"
+			government = tribal_government
+			dynasty=4022294
+		}
+	}
+	
+	selectable_character = {
+		id = 600001
+		age = 25
+		name = ERA_CHAR_NAME_201
+		title = c_st_mary
+		title_name = c_st_mary
+		dlc = "The Old Gods"
+		
+		character = {
+			religion="inuit_pagan"
+			culture="newfindler"
+			government = tribal_government
+			dynasty=4022299
+		}
+	}
+	
+}
