@@ -1,0 +1,2263 @@
+
+#### BASICALLY THE VARANGIAN GUARD ####
+
+d_knights_golden_circle = {
+	color={ 180 180 180 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+
+	capital = 149 # Atlanta
+	
+	religion = evangelical
+	culture = southron
+
+	allow = {
+		OR = {
+			has_landed_title = e_dixie
+			culture_group = south_anglo
+		}
+	}
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 0.10
+	
+	mercenary_type = d_knights_golden_circle_composition
+}
+
+
+#### MERCS ####
+
+d_eagles = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 27 # Philadelphia
+	
+	culture = delawarean
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_eagles_composition
+}
+
+d_buckeyes = {
+	color={ 200 0 0 }
+	color2={ 255 255 255 }
+
+	capital = 111 # Columbus
+	
+	culture = rostmann
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_buckeyes_composition
+}
+
+d_MI_wolverines = {
+	color={ 0 39 88 }
+	color2={ 255 255 255 }
+
+	capital = 119 # Washtenaw
+	
+	culture = rostmann
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_GOBLU_composition
+}
+
+d_brave_men_of_atlanta = {
+	color={ 209 16 26 }
+	color2={ 255 255 255 }
+
+	capital = 149 # Atlanta
+	
+	religion = evangelical
+	culture = dixie
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_atlanta_composition
+}
+
+d_pinkerton_company = {
+	color={ 255 174 201 }
+	color2={ 255 255 255 }
+
+	capital = 170 # Chicago
+	
+	allow = {
+		OR = {
+			culture_group = amerodeutsch
+			culture_group = north_atlantic
+			culture_group = afroanglo
+			culture_group = laurentian
+		}
+	}
+	
+	culture = rostmann
+
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_pinkerton_company_composition
+}
+
+d_seventhcav = {
+	color={ 232 213 7 }
+	color2={ 34 47 181 }
+
+	capital = 1236 # McLennan
+
+	culture = texan
+
+	title = "COLONEL"
+	foa = "COLONEL_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_seventhcav_composition
+}
+
+d_nancy_harts = {
+	color={ 255 174 201 }
+	color2={ 255 255 255 }
+
+	capital = 1030 # LaGrange
+	
+	allow = {
+		culture_group = south_anglo
+	}
+	
+	religion = evangelical
+	culture = dixie
+
+	title = "CAPTAIN"
+	title_female = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_nancy_harts_composition
+}
+
+d_reillys_rangers = {
+	color={ 21 129 10 }
+	color2={ 255 255 255 }
+		
+	capital = 63 # Washington
+
+	culture = beltway
+	
+	allow = {
+		OR = {
+			religion_group = christian
+			religion = americanist
+		}
+	}
+		
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+		
+	mercenary = yes
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = d_reillys_rangers_composition
+}
+
+d_talon_company = {
+	color={ 128 128 128 }
+	color2={ 255 255 255 }
+		
+	capital = 63 # Washington
+
+	culture = beltway
+	
+	allow = {
+		OR = {
+			religion_group = christian
+			religion_group = pagan_group
+			religion = occultist
+			religion = americanist
+		}
+	}
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = d_talon_company_composition
+}
+
+d_red_tails = {
+	color={ 192 37 41 }
+	color2={ 255 255 255 }
+
+	capital = 1033 # Tuskegee
+		
+	culture = tuskegean
+	
+	allow = {
+		OR = {
+			religion_group = afro_syncretic
+			culture_group = afroanglo
+		}
+	}
+
+	title = "GROUP_CAPTAIN"
+	foa = "GROUP_CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_red_tails_composition
+}
+
+d_hells_angels = {
+	color={ 255 92 38 }
+	color2={ 34 47 181 }
+
+	capital = 1217 # Montreal
+
+	title = "CHARTER_PRESIDENT"
+	foa = "COLONEL_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_hells_angels_composition
+}
+
+d_tonton_macoutes = {
+	color={ 94 177 16 }
+	color2={ 255 255 255 }
+
+	capital = 1187 # Port-au-Prince
+	
+	culture = haitian
+
+	allow = {
+		OR = {
+			religion_group = afro_syncretic
+			culture_group = afroanglo
+			culture_group = caribbanglo
+			culture_group = antillais
+			culture_group = antilliaanse
+			culture_group = caribeno
+		}
+	}
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_tonton_macoutes_composition
+}
+
+d_shower_posse = {
+	color={ 0 171 77 }
+	color2={ 255 255 255 }
+
+	capital = 1174 # Surrey
+	
+	culture = west_indian
+
+	allow = {
+		OR = {
+			religion_group = afro_syncretic
+			culture_group = afroanglo
+			culture_group = caribbanglo
+			culture_group = antillais
+			culture_group = antilliaanse
+			culture_group = caribeno
+		}
+	}
+	
+	title = "DON"
+	foa = "DON_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_shower_posse_composition
+}
+
+d_spanglers_posse = {
+	color={ 0 171 77 }
+	color2={ 254 152 5 }
+
+	capital = 1174 # Surrey
+	
+	culture = west_indian
+
+	allow = {
+		OR = {
+			religion_group = afro_syncretic
+			culture_group = afroanglo
+			culture_group = caribbanglo
+			culture_group = antillais
+			culture_group = antilliaanse
+			culture_group = caribeno
+		}
+	}
+	
+	title = "DON"
+	foa = "DON_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_shower_posse_composition
+}
+
+d_shaolin_company = {
+	color = { 255 201 14 }
+	capital = 2 # Brooklyn
+	
+	allow = {
+		culture_group = afroanglo
+	}
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	
+	# Wu-Tang and Five Percenter names
+	male_names = {
+		"Allah Mathematics" "Allah Wise" Armel "Allah Real" "Ace Nyc"
+		"Bronze Nazareth" "Busta Rhymes"
+		Cappadonna Cheese Cilvaringz
+		Darkim
+		"Free Murda" Flash
+		"Gang Starr" "Ghostface Killah" Gravediggah Guru
+		"Hanz On" "Hell Razah"
+		"Inspectah Deck" Intell Islord
+		"J-Love" "J Dillah"
+		"Killa Sin" "Killah Priest"
+		"Large Professor" "Letha Face"
+		"Method Man" "Masta Killa" "Mad Professor" "Mathematics Allah"
+		Pachino Profes
+		Raekwon Riza Rakeem Remedy
+		Shyheim Silkski Shabazz "Sun God" "Stone Mecca" "Su-Preme" "Supreme Allah" "Supreme Understanding"
+		Timbo
+		"U-God"
+		Warcloud
+		"Y-Kim"
+	}
+	female_names = {
+		Cleo
+		Erykah
+		Jamie
+		Mahogany Makeba Mooncycle
+		Roxy
+		Scheez
+		Tekitha Tash Thea
+	}	
+		
+	mercenary_type = d_shaolin_company_composition
+}
+
+# d_cleveland_zoo = {
+	# color={ 230 17 50 }
+	# color2={ 255 255 255 }
+
+	# capital = 102 # Cuyahoga
+	
+	# mercenary = yes
+	
+	# #religion = catholic
+	
+	# culture = tuskegean
+
+	# title = "ZOOKEEPER"
+	# foa = "ZOOKEEPER_FOA"
+
+	# landless = yes
+	
+	# primary = yes
+	
+	# strength_growth_per_century = 1.0
+
+	# mercenary_type = d_cleveland_zoo_composition
+# }
+
+d_anachronists = {
+	color={ 128 0 128 }
+	color2={ 0 128 0 }
+
+	capital = 1222 # Lanaudière
+	
+	allow = {
+		always = yes
+	}
+	
+	religion = catholic
+	culture = quebecois
+
+	title = "SIR"
+	foa = "SIR_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_anachronists_composition
+	
+	male_names = {
+		Agar Amren Aredhel Argus
+		Brennan Balin Bors Belgarion
+		Cador Corwin Cyric
+		Delphos Dante Daymin Deimos
+		Erec Euric
+		Folcwine
+		Ghillebert Gawain Galahad Gregor Gareth Galrog Goldmoon Gideon
+		Ian Ivar 
+		Johannes Jaxom Jory
+		Kay Kendrick Kyran
+		Lancel Lamorak Lakus
+		Margul Malorius Malagant Mordred Morholt Maurice
+		Nevron
+		Osgkar
+		Percival Perseverus
+		Qualin
+		Seregon 
+		Tristan 
+		Uryens
+		Victor
+		Xenos Xenon
+	}
+	female_names = {
+		Ariana Alora Aurelia
+		Briana
+		Camilla Corvina
+		Diana Destrie 
+		Elaine Elissa Eskana Elora Emmara
+		Fionna
+		Galla
+		Helene Honoria Hilaria
+		Joan Jahana
+		Kyra
+		Lila Lily
+		Melisande Morgause Morgana
+		Pia
+		Rose
+		Sethra
+		Tawnee
+		Ursula
+		Valante
+	}
+}
+
+
+d_minutemen = { # thank you rowanswarden
+	color = { 5 81 128 }
+	color2= { 255 255 255 }
+
+	capital = 63 # Washington
+ 
+	allow = {
+		any_current_enemy = {
+			OR = {
+				culture = british
+				has_landed_title = e_redcoat_dominion
+			}
+		}
+	}
+ 
+	culture = beltway
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_minutemen_composition
+}
+
+d_shiner_company = {
+	color = { 24 70 3 }
+	color2= { 255 255 255 }
+
+	capital = 1297
+
+	culture = ontarian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_shiner_company_composition
+}
+
+d_keetowah_nighthawk_band = {
+	color = { 22 202 44 }
+	color2= { 255 255 255 }
+
+	capital = 326 # Tulsa
+
+	culture = cherokee
+
+	allow = {
+		OR = {
+			culture_group = native_american
+			culture_group = first_nations
+		}
+	}
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_keetowah_nighthawk_band_composition
+}
+
+d_free_rangers_division = {
+	color={ 211 3 37 }
+	color2={ 34 47 181 }
+
+	capital = 1235 # Travis
+
+	culture = texan
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_free_rangers_division_composition
+}
+
+d_hood_company = {
+	color={ 132 213 70 }
+	color2={ 34 47 181 }
+
+	capital = 1236 # McLennan
+
+	culture = texan
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_hood_company_composition
+}
+
+d_hood_band = {
+	color = { 102 183 40 }
+	color2= { 255 255 255 }
+
+	capital = 1236 # McLennan
+
+	culture = texan
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_hood_band_composition
+}
+
+d_tonkawa_scouts = {
+	color={ 50 100 0 }
+	color2={ 255 255 255 }
+
+	capital = 325 # Oklahoma (Oklahoma City)
+	
+	culture = comanche
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_tonkawa_scouts_composition
+}
+
+d_minnesota_norsemen = {
+	color={ 50 10 100 }
+	color2={ 255 255 255 }
+
+	capital = 263 # Twin Cities
+	
+	culture = northlander
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_minnesota_norsemen_composition
+}
+
+d_steel_company = {
+	color={ 35 31 32 }
+	color2={ 255 255 255 }
+
+	capital = 88 # Yohogania (Pittsburgh)
+	
+	culture = rostmann
+
+	title = "CHIEF_FOREMAN"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_steel_company_composition
+}
+
+d_aztlan_guard = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3067 # Mexico
+	
+	allow = {
+		religion_group = mesoamerican_gods
+	}
+	
+	religion = sol_invicta
+	culture = nahua
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_aztlan_guard_composition
+}
+
+
+d_catrachos = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3161 # Tegucigalpa
+	
+	allow = {
+		culture_group = centrolatino
+	}
+	
+	religion = falling_star
+	culture = chapin
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_catrachos_composition
+}
+
+d_chapines = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3147 # Guatemala
+	
+	allow = {
+		culture_group = centrolatino
+	}
+	
+	religion = falling_star
+	culture = chapin
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_chapines_composition
+}
+
+d_children_of_the_toad = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3093 # Oaxaca
+	
+	allow = {
+		religion_group = mesoamerican_gods
+	}
+	
+	religion = mictlantec
+	culture = zapotec
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_children_of_the_toad_composition
+}
+
+d_dread_pirates = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3173 # Cayman
+	
+	allow = {
+		religion = brethren
+	}
+	
+	religion = brethren
+	culture = west_indian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_dread_pirates_composition
+}
+
+d_eagle_warriors = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3064 # Pachuca
+	
+	religion = mictlantec
+	culture = nahua
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_eagle_warriors_composition
+}
+
+d_foreign_legion = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 1187 # Port-au-Prince
+	
+	religion = catholic
+	culture = acadien
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_foreign_legion_composition
+}
+
+d_granaderos = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3079 # Heroica Veracruz
+	
+	religion = catholic
+	culture = jarocho
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_granaderos_composition
+}
+
+d_jaguar_band = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3054 # Patzcuaro
+			
+	religion = mictlantec
+	culture = zapotec
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_jaguar_band_composition
+}
+
+d_lost_legion = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3195 # c_cali
+	
+	religion = sacred_heart
+	culture = quechua
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_lost_legion_composition
+}
+
+
+d_masked_men_of_capistrano = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3067 # Mexico
+		
+	religion = sacred_heart
+	culture = californio
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_masked_men_of_capistrano_composition
+}
+
+d_morgan_marines = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3172 # San Andres
+		
+	religion = brethren
+	culture = raizal
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_morgan_marines_composition
+}
+
+d_oxyotl_skirmishers = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3117 # Campeche
+	
+	religion = neomayan
+	culture = yucateco
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_oxyotl_skirmishers_composition
+}
+
+d_palace_guard = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3067 # Mexico
+	
+	religion = sacred_heart
+	culture = chilango
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_palace_guard_composition
+}
+
+d_plumed_archers = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3113 # Chichen Itza
+	
+	allow = {
+		religion_group = mesoamerican_gods
+	}
+	
+	religion = uahomche
+	culture = maya
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_plumed_archers_composition
+}
+
+
+d_salvatruchos = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3148 # San Salvador
+	
+	religion = falling_star
+	culture = chapin
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_salvatruchos_composition
+}
+
+
+d_san_patricios = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3078 # Xalapa
+	
+	religion = sacred_heart
+	culture = maritimer
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_san_patricios_composition
+}
+
+
+d_skull_legion = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3103 # Acatlan
+	
+	religion = mictlantec
+	culture = nahua
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_skull_legion_composition
+}
+
+d_warriors_of_itza = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3125 # Nojpeten
+	
+	religion = uahomche
+	culture = maya
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_warriors_of_itza_composition
+}
+
+d_tricolor_footmen = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3067 # Mexico
+	
+	religion = sacred_heart
+	culture = chilango
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_tricolor_footmen_composition
+}
+
+d_sun_knights = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3072 # Tehuacan
+	
+	religion = sol_invicta
+	culture = nahua
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_sun_knights_composition
+}
+
+d_prowling_jaguars = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 3103 # Acatlan
+	
+	religion = mictlantec
+	culture = mixtec
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_prowling_jaguars_composition
+}
+
+d_mounted_men = {
+	color = { 248 65 62 }
+	
+	capital = 1297 # Ottawa
+	
+	religion = high_church
+	culture = ontarian
+	
+	title = "COMMISSIONER"
+	title_female = "COMMISSIONER"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	mercenary_type = d_mounted_men_composition
+}
+
+# really just a court for overseas mercantile adventurers to chill in
+d_overseas_merchants = {
+	color = { 47 65 220 }
+	
+	capital = 601 # Bermuda
+	
+	allow = {
+		always = no
+	}
+	
+	religion = thelemic
+	culture = british
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = d_mounted_men_composition
+}
+
+
+d_black_flag_raiders = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
+
+	capital = 601 # Bermuda
+	
+	allow = {
+		religion = brethren
+	}
+	
+	religion = brethren
+	culture = bermudian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_black_flag_raiders_composition
+}
+
+d_oakland_raiders = {
+	color={ 34 34 34 }
+	color2={ 255 255 255 }
+
+	capital = 2032 # Alameda
+	
+	religion = cetic
+	culture = bayfolk
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_oakland_raiders_composition
+}
+
+d_old_breed = {
+	color={ 210 38 38 }
+	color2={ 55 55 200 }
+
+	capital = 2012 # Pendleton
+		
+	religion = cetic
+	culture = angeleno
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_old_breed_composition
+}
+
+d_apple_cult = {
+	color={ 220 220 220 }
+	color2={ 255 255 255 }
+
+	capital = 2029 # San Jose
+		
+	religion = cetic
+	culture = bayfolk
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_apple_cult_composition
+}
+
+d_forty_nine_giants = {
+	color={ 250 105 22 }
+	color2={ 255 255 255 }
+
+	capital = 2031 # San Francisco
+	
+	religion = cetic
+	culture = bayfolk
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_forty_nine_giants_composition
+}
+
+d_burning_men = {
+	color={ 250 105 22 }
+	color2={ 255 255 255 }
+
+	capital = 2067 # Black Rock
+	
+	religion = gaian
+	culture = bayfolk
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.5
+
+	mercenary_type = d_burning_men_composition
+}
+
+d_chargers = {
+	color={ 25 55 100 }
+	color2={ 255 255 255 }
+
+	capital = 2010 # San Diego
+	
+	religion = cetic
+	culture = angeleno
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_chargers_composition
+}
+
+d_steel_brotherhood = {
+	color={ 60 70 95 }
+	color2={ 255 255 255 }
+
+	capital = 2040 # Mariposa
+	
+	allow = {
+		OR = {
+			religion_group = oldworld
+			religion_group = pagan_group
+		}
+	}
+	
+	religion = rust_cultist
+	culture = valleyan
+
+	title = "SUPREME_KNIGHT"
+	foa = "SIR_KNIGHT_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_steel_brotherhood_composition
+}
+
+d_extras = {
+	color={ 200 200 200 }
+	color2={ 255 255 255 }
+
+	capital = 2019 # Los Angeles
+	
+	religion = cetic
+	culture = angeleno
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_extras_composition
+}
+
+d_hawaiian_guard = {
+	color={ 142 69 137 }
+	color2={ 255 255 255 }
+	graphical_culture = holygfx
+	capital = 2046 # Sacramento
+	
+	allow = {
+		OR = {
+			has_landed_title = e_california
+			religion = cetic
+		}
+	}	
+	religion = cetic
+	culture = hawaiian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = no
+	strength_growth_per_century = 0.20
+
+	mercenary_type = d_hawaiian_guard_composition
+}
+
+d_lekwiltok = {
+	color = { 0	119	68 }
+	color2 = { 153 0 0 }
+	
+	capital = 556 #Comox
+		
+	religion = raven_tales
+	culture = haida
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_lekwiltok_composition
+}
+
+d_pike_place_pikemen = {
+	color = { 234 56 20 }
+	color2 = { 248 169 130 }
+	
+	capital = 543 #Seattle
+		
+	religion = raven_tales
+	culture = canuck
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_pike_place_pikemen_composition
+}
+
+d_walla_walla_warriors = {
+	color = { 246 201 9 }
+	color2 = { 255 255 255 }
+	
+	capital = 515 #Wallawalla
+	
+	religion = gaian
+	culture = salishan
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_walla_walla_warriors_composition
+}
+
+d_stampede = {
+	color = { 248 193 80 }
+	color2 = { 0 0 0 }
+	
+	capital = 499 #Foothills
+	
+	religion = ghost_dance
+	culture = cree
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_stampede_composition
+}
+
+d_tri_river_outlaws = {
+	color = { 124 124 124 }
+	color2 = { 211 7 17 }
+	
+	capital = 513 #Kittitas
+	
+	religion = raven_tales
+	culture = portlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_tri_river_outlaws_composition
+}
+
+d_roughriders = {
+	color = { 100 118 0 }
+	color2 = { 251 0 46 }
+	
+	capital = 469 #Beaverhead
+	
+	religion = gaian
+	culture = mountainer
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_roughriders_composition
+}
+
+d_aguilas = {
+	color = { 200 200 200 }
+	color2 = { 251 0 46 }
+	
+	capital = 3209 # c_maracaibo
+	
+	religion = espiritista
+	culture = truenonato
+	
+	title = "CAPITAN"
+	foa = "CAPITAN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_aguilas_composition
+}
+
+d_gaiteros = {
+	color = { 50 200 200 }
+	color2 = { 251 0 46 }
+	
+	capital = 3209 # c_maracaibo
+	
+	religion = espiritista
+	culture = truenonato
+	
+	title = "CAPITAN"
+	foa = "CAPITAN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_gaiteros_composition
+}
+
+d_rojos_del_avila = {
+	color = { 200 50 50 }
+	color2 = { 251 0 46 }
+	
+	capital = 3237 # c_caracas
+		
+	religion = espiritista
+	culture = agraciado
+	
+	title = "CAPITAN"
+	foa = "CAPITAN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_rojos_del_avila_composition
+}
+
+d_cafeteros = {
+	color = { 50 50 250 }
+	color2 = { 251 0 46 }
+	
+	capital = 3266 # c_huila
+	
+	religion = gracia_divina
+	culture = paisa
+	
+	title = "CAPITAN"
+	foa = "CAPITAN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_cafeteros_composition
+}
+
+d_canaleros = {
+	color = { 50 50 200 }
+	color2 = { 251 0 46 }
+	
+	capital = 3189 # c_panama
+		
+	religion = gracia_divina
+	culture = istmeno
+	
+	title = "CAPITAN"
+	foa = "CAPITAN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_canaleros_composition
+}
+
+d_golden_jaguars = {
+	color = { 250 250 50 }
+	color2 = { 251 0 46 }
+	
+	capital = 3270 # c_georgetown
+	
+	religion = espiritista
+	culture = guyanese
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_golden_jaguars_composition
+}
+
+d_sons_of_samedi = {
+	color={ 50 205 92 }
+	color2={ 255 255 255 }
+
+	capital = 1124 # New Orleans
+	
+	allow = {
+		religion = voodoo
+	}
+	
+	religion = voodoo
+	culture = creole
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_sons_of_samedi_composition
+}
+
+d_akademikov = {
+	color={ 220 55 52 }
+	color2={ 255 255 255 }
+
+	capital = 2091 # Port Hardy
+	
+	allow = {
+		religion = atomicist
+		culture = novorusskiy
+	}
+	
+	religion = atomicist
+	culture = novorusskiy
+
+	title = "AKADEMIK"
+	foa = "AKADEMIK_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_akademikov_composition
+}
+
+d_dogs_of_war = {
+	color={ 220 225 252 }
+	color2={ 255 255 255 }
+
+	capital = 3172 # San Andres
+			
+	culture = istmeno
+	
+	title = "BOSS"
+	foa = "BOSS_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_dogs_of_war_composition
+}
+
+d_omega_guard = {
+	color={ 20 55 152 }
+	color2={ 255 255 255 }
+
+	capital = 1115 # Guantanamo
+	
+	allow = {
+		religion = americanist
+	}
+	
+	religion = americanist
+	culture = cajun
+
+	title = "COLONEL"
+	foa = "COLONEL_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_omega_guard_composition
+}
+
+d_desperados = {
+	color={ 220 25 25 }
+	color2={ 255 255 255 }
+
+	capital = 389 # Denver
+		
+	allow = {
+		OR = {
+			religion_group = oldworld
+			religion_group = pagan_group
+		}
+	}
+	
+	religion = americanist
+	culture = coloradan
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_desperados_composition
+}
+
+d_chivas = {
+	color={ 250 105 92 }
+	color2={ 255 255 255 }
+
+	capital = 3040 # c_guadalajara
+	
+	allow = {
+		culture = tapatio
+	}
+	
+	culture = tapatio
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_chivas_composition
+}
+
+d_seminole_band = {
+	color = { 92 202 94 }
+	color2= { 255 255 255 }
+
+	capital = 325 # Oklahoma City
+
+	culture = muscogee
+
+	allow = {
+		OR = {
+			culture_group = native_american
+			culture_group = first_nations
+		}
+	}
+
+	title = "CHIEF"
+	foa = "CHIEF_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_seminole_band_composition
+}
+
+d_hazardeers = {
+	color = { 152 232 134 }
+	color2= { 255 255 255 }
+
+	capital = 172 # Flint
+
+	religion = atomicist
+
+	allow = {
+		religion = atomicist
+	}
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_hazardeers_composition
+}
+
+d_yukon_travellers = {
+	color = { 52 32 234 }
+	color2= { 255 255 255 }
+
+	capital = 2093 # Edmonton
+
+	culture = metis
+	religion = ghost_dance
+
+	allow = {
+		OR = {
+			culture_group = native_american
+			culture_group = first_nations
+			religion_group = pacific
+		}
+	}
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_yukon_travellers_composition
+}
+
+#Galley mercenaries
+
+d_staten_island_ferriers = {
+	color = { 255 255 255 }
+	color2= { 255 255 20 }
+
+	capital = 3 # Manhattan
+	
+	culture = gothamite
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+
+	mercenary_type = d_medium_ships_composition
+}
+
+d_boucaniers = {
+	color = { 207 16 26 }
+	color2= { 255 255 20 }
+
+	capital = 2086 # Tortuga
+	
+	religion = brethren
+	culture = haitian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+
+	mercenary_type = d_small_ships_composition
+
+	male_names = {
+		Avery
+		Blackbeard Barbarossa Bellamy Black Bart
+		Calico
+		Jack
+		Kidd
+		Lucifer
+		Morningstar
+		Rackham Redbeard
+		Strangways
+	}
+}
+
+d_freesails_of_trinidad = {
+	color = { 157 216 126 }
+	color2= { 255 255 20 }
+
+	capital = 3178 # Trinidad
+	
+	religion = brethren
+	culture = calypsonian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+
+	mercenary_type = d_medium_ships_composition
+}
+
+d_colima_traders = {
+	color = { 17 206 226 }
+	color2= { 255 255 20 }
+
+	capital = 3049 # Colima
+	
+	culture = tapatio
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_large_ships_composition
+}
+
+d_north_sea_whalers = {
+	color = { 207 116 156 }
+	color2= { 255 255 20 }
+
+	capital = 2078 # St. Johns
+	
+	religion = brethren
+	culture = inuit
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_small_ships_composition
+}
+
+d_haida_coasters = {
+	color = { 57 216 26 }
+	color2= { 255 255 20 }
+
+	capital = 2091 # Port Hardy
+	
+	culture = haida
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_small_ships_composition
+}
+
+d_panamax_company = {
+	color = { 207 116 226 }
+	color2= { 255 255 20 }
+
+	capital = 3189 # Panama
+	
+	culture = istmeno
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_medium_ships_composition
+}
+
+d_michigan_chartists = {
+	color = { 157 56 226 }
+	color2= { 255 255 20 }
+
+	capital = 170 # Chicago
+		
+	culture = chicagoan
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_small_ships_composition
+}
+
+d_golden_gate_galleys = {
+	color = { 157 56 226 }
+	color2= { 255 255 20 }
+
+	capital = 2031 # San Francisco
+	
+	culture = bayfolk
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_medium_ships_composition
+}
+
+d_delta_blues = {
+	color = { 157 56 226 }
+	color2= { 255 255 20 }
+
+	capital = 1124 # New Orleans
+	
+	culture = creole
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_medium_ships_composition
+}
+
+d_cartagena_cartel = {
+	color = { 17 216 226 }
+	color2= { 255 255 20 }
+
+	capital = 3215 # Cartagena
+	
+	culture = cartagenero
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_large_ships_composition
+}
+
+d_bermuda_barracudas = {
+	color = { 157 156 126 }
+	color2= { 255 255 20 }
+
+	capital = 601 # Bermuda
+	
+	culture = bermudian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_medium_ships_composition
+}
+
+d_corsairs_of_cortes = {
+	color = { 57 56 26 }
+	color2= { 255 255 20 }
+
+	capital = 2000 # La Paz
+	
+	culture = californio
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1 # yar harr pirates
+	
+	mercenary_type = d_small_ships_composition
+}
+
