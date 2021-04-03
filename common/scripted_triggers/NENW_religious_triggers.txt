@@ -1,0 +1,831 @@
+isnt_forced_to_theocracy = {
+	trigger_if = {
+		limit = { controls_religion = yes }
+		OR = {
+			AND = {
+				religion_group = muslim
+				NOR = {
+					religion = ibadi
+					religion = shiite
+				}
+			}
+			religion = jacobinist
+			religion = prussianist
+			religion = zarist
+			religion = stalinist
+			religion = katerinist
+			religion = trotskyite
+			religion = titoist
+			religion = khanist
+			religion = transatlantic
+			religion = anglican
+			religion = dynamitist
+			religion = druze
+			religion = xinjiao
+			religion = summer_queen
+			religion = gnostic
+			religion = marblists
+			religion = high_church
+			has_religion_feature = religion_temporal_head
+			AND = {
+				has_religion_features = no
+				is_reformed_religion = yes
+			}
+		}
+	}
+}
+is_equalist_religion = {
+	OR = {
+		has_religion_feature = religion_equal
+		religion = bahai
+		religion = katerinist
+		religion = hussite
+		has_game_rule = {
+			name = gender
+			value = all
+		}
+	}
+}
+is_feminist_religion = {
+	OR = {
+		has_religion_feature = religion_matriarchal
+		is_equalist_religion = yes
+	}
+}
+religion_openly_folklorist_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_folklorist_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = folklorist
+				religion = folklorist_reformed
+			}
+		}
+	}
+}
+religion_openly_celtic_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_celtic_pagan_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_inuit_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_inuit_pagan_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = inuit_pagan
+				religion = inuit_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_lakefolk_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_lakefolk_pagan_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = lakefolk_pagan
+				religion = lakefolk_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_starist_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_starist_pagan_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = starist_pagan
+				religion = starist_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_novelist_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_novelist_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = novelist
+				religion = novelist_reformed
+			}
+		}
+	}
+}
+religion_openly_maunaxite_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_maunaxite_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = maunaxite
+				religion = maunaxite_reformed
+			}
+		}
+	}
+}
+
+religion_openly_maoist_trigger = {
+	custom_tooltip = {
+		text = religion_openly_maoist_trigger
+		hidden_trigger = {
+				religion = maoist
+		}
+	}
+}
+
+religion_openly_summer_queen_trigger = {
+	custom_tooltip = {
+		text = religion_openly_summer_queen_trigger
+		hidden_trigger = {
+				religion = summer_queen
+		}
+	}
+}
+
+religion_openly_gnostic_trigger = {
+	custom_tooltip = {
+		text = religion_openly_gnostic_trigger
+		hidden_trigger = {
+				religion = gnostic
+		}
+	}
+}
+
+religion_openly_lakefolk_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_maunaxite_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = lakefolk_pagan
+				religion = lakefolk_reformed
+			}
+		}
+	}
+}
+
+religion_openly_nousthreskeia_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_nousthreskeia_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = nousthreskeia
+				religion = nousthreskeia_reformed
+			}
+		}
+	}
+}
+religion_openly_occultist_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_occultist_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = occultist
+				religion = occultist_reformed
+			}
+		}
+	}
+}
+religion_openly_americanist_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_americanist_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = americanist
+				religion = americanist_reformed
+			}
+		}
+	}
+}
+
+is_mesopotamian_religion_trigger = {
+	religion = mesopotamian
+}
+is_sikh_religion_trigger = {
+	religion = sikh
+}
+is_esoteric_religion_trigger = {
+	OR = {
+		religion = thelemic_reformed
+		religion = summer_queen
+		religion = thelemic
+		religion = orange_king
+	}
+}
+# Old World Cultist branches
+is_communist_religion_trigger = { # Stalinism, its heresies and Maoism
+	OR = {
+		religion = stalinist
+		religion = trotskyite
+		religion = titoist
+		religion = maoist
+		religion = maunaxite
+		religion = maunaxite_reformed
+	}
+}
+is_zarist_religion_trigger = {
+	OR = {
+		religion = zarist
+		religion = katerinist
+		religion = petrist
+	}
+}
+is_nobelian_religion_trigger = {
+	OR = {
+		religion = nobelian
+		religion = dynamitist
+	}
+}
+is_ironist_religion_trigger = {
+	religion = ironist
+}
+is_khanist_religion_trigger = {
+	religion = khanist
+}
+is_jacobinist_religion_trigger = {
+	religion = jacobinist
+}
+is_jadidist_religion_trigger = {
+	religion = jadidist
+}
+is_yarsani_religion_trigger = {
+	OR = {
+		religion = yersenism
+		religion = yazidi
+	}
+}
+has_zarist_emulate_ambition = {
+	OR = {
+		has_ambition = obj_zarist_emulate_peter
+		has_ambition = obj_zarist_emulate_nicholas
+		has_ambition = obj_zarist_emulate_ivan
+		has_ambition = obj_zarist_emulate_catherine
+		has_ambition = obj_zarist_emulate_alexander
+		has_ambition = obj_zarist_emulate_alexis
+	}
+}
+zarist_emulated_trigger = {
+	OR = {
+		has_character_modifier = zarist_emulated_peter
+		has_character_modifier = zarist_emulated_nicholas
+		has_character_modifier = zarist_emulated_ivan
+		has_character_modifier = zarist_emulated_catherine
+		has_character_modifier = zarist_emulated_alexander
+		has_character_modifier = zarist_emulated_alexis
+		has_character_modifier = emulation_failed
+	}
+}
+
+has_lutheran_emulate_ambition = {
+	OR = {
+		has_ambition = obj_lutheran_exodus
+		has_ambition = obj_lutheran_luke
+		has_ambition = obj_lutheran_ephesians
+		has_ambition = obj_lutheran_corinthians
+		has_ambition = obj_lutheran_galatians
+		has_ambition = obj_lutheran_hebrews
+		has_ambition = obj_lutheran_psalm
+	}
+}
+lutheran_emulated_trigger = {
+	OR = {
+		has_character_modifier = lutheran_emulated_exodus
+		has_character_modifier = lutheran_emulated_luke
+		has_character_modifier = lutheran_emulated_ephesians
+		has_character_modifier = lutheran_emulated_corinthians
+		has_character_modifier = lutheran_emulated_galatians
+		has_character_modifier = lutheran_emulated_hebrews
+		has_character_modifier = lutheran_emulated_psalm
+		has_character_modifier = emulation_failed
+	}
+}
+fatima_massacre_ruler_potential = {
+	realm_size = 50
+	NOT = {
+		religion = event_target:fatima_religion
+	}
+	religion_group = event_target:fatima_religion
+	higher_tier_than = DUKE
+	OR = {
+		capital_scope = {
+			region = world_europe_west_iberia
+		}
+		any_demesne_title = {
+			higher_tier_than = DUKE
+			is_titular = no
+			is_primary_type_title = no
+			capital_scope = {
+				region = world_europe_west_iberia
+			}
+		}
+		any_vassal = {
+			any_demesne_title = {
+				higher_tier_than = DUKE
+				is_titular = no
+				is_primary_type_title = no
+				capital_scope = {
+					region = world_europe_west_iberia
+				}
+			}
+		}
+	}
+}
+at_fatima_region_trigger = {
+	OR = {
+		AND = {
+			region = world_europe_east
+			has_global_flag = fatima_at_east_europe
+		}
+		AND = {
+			region = world_europe_south_italy
+			has_global_flag = fatima_at_italy
+		}
+	}
+}
+passage_emulation_trigger = {	
+	OR = {
+		religion = lutheran
+		religion = baptist
+		religion = hussite
+		religion = neo_donatist
+	}
+}
+same_satanist_society_potential = {
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_satanists } }
+		has_satanists_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_cult_of_kali } }
+		has_cult_of_kali_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_cold_ones } }
+		has_cold_ones_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_plaguebringers } }
+		has_plaguebringers_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_bacchants } }
+		has_bacchants_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = unseelie_petitioners } }
+		has_unseelie_petitioners_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = starry_wisdom } }
+		has_starry_wisdom_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = davy_jones_mates } }
+		has_davy_jones_mates_prerequisites_special = yes
+	}
+	conditional_tooltip = {
+		trigger = { FROM = { society_member_of = the_illuminati } }
+		has_the_illuminati_prerequisites_special = yes
+	}
+}
+unreformed_pagan_trigger = {
+	custom_tooltip = {
+		text = TT_UNREFORMED_PAGAN
+		hidden_tooltip = {
+			religion_group = pagan_group
+			NOT = { is_reformed_religion = yes }
+		}
+	}
+}
+not_unreformed_pagan_trigger = {
+	custom_tooltip = {
+		text = TT_NOT_UNREFORMED_PAGAN
+		hidden_tooltip = {
+			NAND = {
+				religion_group = pagan_group
+				NOT = { is_reformed_religion = yes }
+			}
+		}
+	}
+}
+
+# should be equal has_heresies, but we need to have faith based coding instead of actually trusting the people who not 3 years ago tested it...
+safe_has_heresies = {
+	NOR = {
+		religion = theravada
+		religion = thaislam
+		religion = orthodox
+		religion = old_believer
+		religion = calvinist
+		religion = jugoslavist
+		religion = chaldean
+		religion = nasrini
+		religion = koptic
+		religion = anglican
+		religion = high_church
+		religion = ursuline
+		religion = evangelical
+		religion = batenburger
+		religion = malikite
+		religion = sufi
+		religion = ibadi
+		religion = ahmadiyya
+		religion = mesopotamian
+		religion = islamity
+		religion = muwahidunna
+		religion = ironist
+		religion = jadidist
+		religion = jacobinist
+		religion = khanist
+		religion = maoist
+	}
+}
+
+is_pope_trigger = {
+	OR = {
+		has_landed_title = k_papacy
+		has_landed_title = d_fraticelli
+		has_landed_title = k_palmarian_pope
+		any_claim = { title = k_papacy }
+		any_claim = { title = d_fraticelli }
+	}
+}
+
+has_investiture_trigger = { # Need to update laws too!
+	OR = {
+		religion = catholic
+		religion = fraticelli
+		religion = palmarian
+		religion = transatlantic
+	}
+}
+has_coronation_trigger = {
+	OR = {
+		religion = catholic
+		religion = fraticelli
+		religion = palmarian
+	}
+}
+has_coronation_religion_title_trigger = {
+	OR = { 
+		has_landed_title = k_papacy
+		has_landed_title = k_palmarian_pope
+		has_landed_title = d_fraticelli
+	}
+}
+powerful_bishop_trigger = {
+	OR = {
+		higher_tier_than = BARON  
+		is_cardinal_trigger = yes
+		any_claim = { title = k_papacy } #Antipope
+		any_claim = { title = d_fraticelli } #Antipope
+	}
+	has_coronation_religion_title_trigger = no
+}
+can_handle_coronation = {
+	is_theocracy = yes
+	religion = ROOT
+	NOT = { block_general_event_trigger = yes }
+}
+should_have_coronation = {
+	has_dlc = "Holy Fury"
+	higher_tier_than = DUKE
+	age = 16
+	is_feudal = yes
+	is_landed = yes
+	is_vice_royalty = no
+	has_coronation_trigger = yes
+	NOR = { 
+		trait = crowned_by_pope 
+		trait = crowned_by_bishop
+		trait = crowned_by_priest
+		trait = crowned_by_myself
+		trait = crowned_by_priest_rd
+		trait = crowned_by_bishop_rd
+		trait = crowned_by_pope_rd
+		government = order_government
+		government = oligarchic_republic
+	}
+}
+is_cardinal_trigger = {
+	OR = {
+		has_minor_title = title_cardinal
+		has_minor_title = title_fraticelli_cardinal
+		has_minor_title = title_palmarian_cardinal
+	}
+}
+holy_war_start_trigger = {	
+	conditional_tooltip = {
+		trigger = {
+			has_game_rule = { name = holy_war_cooldown_rule value = on }
+		}
+		NOT = { has_character_modifier = holy_war_cooldown }
+	}
+	conditional_tooltip = {
+		trigger = {
+			has_character_flag = currently_reconquering_iberia
+		}
+		custom_tooltip = {
+			text = no_reconquista_tt
+			NOT = { has_character_flag = currently_reconquering_iberia }
+		}
+	}
+}
+seafaring_doctrine_trigger = {
+	OR = {
+		has_religion_feature = religion_seafaring
+		has_religion_feature = religion_feature_celtic
+		has_religion_feature = religion_feature_finnish
+		has_religion_feature = religion_feature_americanist
+	}
+}
+pirate_raider_trait_gain_trigger = {
+	OR = {
+		religion_group = pirate
+		any_owned_bloodline = {
+			has_bloodline_flag = bloodline_viking
+		}
+		AND = {
+			has_religion_feature = religion_adventuring
+			has_religion_feature = religion_seafaring
+		}
+	}
+}
+can_use_muslim_stuff_trigger = {
+	OR = {
+		religion_group = muslim
+		religion_group = syncratic_group
+	}
+}
+can_use_christian_stuff_trigger = {
+	OR = {
+		religion_group = christian
+		religion_group = syncratic_group
+	}
+}
+abrahamic_religion_trigger = {
+	OR = {
+		religion_group = christian
+		religion_group = muslim
+		religion_group = syncratic_group
+		religion_group = jewish_group
+	}
+}
+novelist_switch_trigger = {
+	OR = {
+		should_switch_to_novelist_trigger = yes
+		should_switch_to_non_novelist_trigger = yes
+	}
+}
+should_switch_to_novelist_trigger = {
+	persistent_event_target:novelist_title = { always = yes }
+	NOT = { has_title_flag = novelist_title }
+	PREV = {
+		religion_openly_novelist_or_reformed_trigger = yes
+	}
+}
+should_switch_to_non_novelist_trigger = {
+	persistent_event_target:non_novelist_title = { always = yes }
+	has_title_flag = novelist_title
+	PREV = {
+		religion_openly_novelist_or_reformed_trigger = no
+	}
+}
+muslim_switch_trigger = {
+	OR = {
+		should_switch_to_muslim_trigger = yes
+		should_switch_to_non_muslim_trigger = yes
+	}
+}
+should_switch_to_muslim_trigger = {
+	persistent_event_target:muslim_title = { always = yes }
+	NOT = { has_title_flag = muslim_title }
+	PREV = {
+		religion_group = muslim
+	}
+}
+should_switch_to_non_muslim_trigger = {
+	persistent_event_target:non_muslim_title = { always = yes }
+	has_title_flag = muslim_title
+	PREV = {
+		NOT = { religion_group = muslim }
+	}
+}
+jewish_switch_trigger = {
+	OR = {
+		should_switch_to_jewish_trigger = yes
+		should_switch_to_non_jewish_trigger = yes
+	}
+}
+should_switch_to_jewish_trigger = {
+	persistent_event_target:jewish_title = { always = yes }
+	NOT = { has_title_flag = jewish_title }
+	PREV = {
+		religion_group = jewish_group
+	}
+}
+should_switch_to_non_jewish_trigger = {
+	persistent_event_target:non_jewish_title = { always = yes }
+	has_title_flag = jewish_title
+	PREV = {
+		NOT = { religion_group = jewish_group }
+	}
+}
+christian_switch_trigger = {
+	OR = {
+		should_switch_to_christian_trigger = yes
+		should_switch_to_non_christian_trigger = yes
+	}
+}
+should_switch_to_christian_trigger = {
+	persistent_event_target:christian_title = { always = yes }
+	NOT = { has_title_flag = christian_title }
+	PREV = {
+		religion_group = christian
+	}
+}
+should_switch_to_non_christian_trigger = {
+	persistent_event_target:non_christian_title = { always = yes }
+	has_title_flag = christian_title
+	PREV = {
+		NOT = { religion_group = christian }
+	}
+}
+allowed_to_use_stele_trigger = {
+	OR = {
+		religion = thelemic_reformed
+		religion = thelemic
+		religion = orange_king
+	}
+}
+can_search_god_trigger = {
+	is_adult = yes
+	is_landed = yes
+	religion = yersenism
+	NOR = {
+		has_alternate_start_parameter = { key = religion_names value = random }
+		is_title_active = d_yersenism
+		has_character_flag = searched_for_god
+	}
+}
+one_holy_order_avalaible_trigger = {
+	NOT = { has_character_modifier = expelled_one_holy_order }
+	NOT = {
+		any_liege = {
+			religion = PREV
+			has_character_modifier = expelled_one_holy_order
+		}
+	}
+	religion_scope = {
+		is_title_active = persistent_event_target:one_holy_order
+		persistent_event_target:one_holy_order = {
+			always = yes
+		}
+	}
+}
+two_holy_order_avalaible_trigger = {
+	NOT = { has_character_modifier = expelled_two_holy_order }
+	NOT = {
+		any_liege = {
+			religion = PREV
+			has_character_modifier = expelled_two_holy_order
+		}
+	}
+	religion_scope = {
+		is_title_active = persistent_event_target:two_holy_order
+		persistent_event_target:two_holy_order = {
+			always = yes
+		}
+	}
+}
+preferred_by_one_holy_order_trigger = {
+	trigger_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_columbus_knights
+				}
+			}
+		}
+		culture = castilian
+	}
+	trigger_else_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_huguenots
+				}
+			}
+		}
+		culture_group = francophone
+	}
+	trigger_else_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_bektashi
+				}
+			}
+		}
+		culture_group = iranian
+	}
+	trigger_else = {
+		always = no
+	}
+}
+preferred_by_two_holy_order_trigger = {
+	trigger_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_carmelites
+				}
+			}
+		}
+		culture = andalusian
+	}
+	trigger_else_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_knights_hospitaler_2
+				}
+			}
+		}
+		culture_group = alpinian
+	}
+	trigger_else_if = {
+		limit = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					OR = {
+						title = d_egyptian_brotherhood
+						title = d_ikhwan
+					}
+				}
+			}
+		}
+		culture_group = arabic
+	}
+	trigger_else = {
+		always = no
+	}
+}
+jacobinist_revolution_trigger = {
+	has_game_rule = {
+		name = jacobinist_revolution
+		value = on
+	}
+	controls_religion = no
+	is_landed = yes
+	is_tribal = no
+	realm_size = 15
+	capital_scope = { 
+		OR = {#For now they can only spawn in France, Germany, Russia, and Eastern Europe
+			region = world_europe_west_germania
+			region = world_europe_west_francia
+			region = world_europe_east
+			region = world_europe_west_low_countries
+		}
+	}	
+	NOT = {
+		has_alternate_start_parameter = { key = religion_names value = random }
+	}
+	is_landed = yes
+	NOT = { religion = jacobinist }
+	higher_tier_than = COUNT
+	d_jacobinist = {
+		has_holder = no
+	}
+	custom_tooltip = {
+		text = launch_jacobinist_revolution_tt
+		any_realm_province = {
+
+			kingdom = {
+				OR = {
+					has_holder = no
+					holder_scope = {
+						character = ROOT
+					}
+				}
+				num_title_realm_provs = {
+					who = ROOT
+					value = 4
+				}
+			}
+		}
+	}
+	hidden_tooltip = {
+		OR = {
+			NOT = { has_global_flag = jacobinist_revolution_ended }
+			had_global_flag = { flag = jacobinist_revolution_ended days = 9125 } # 25 years
+		}
+
+		NOT = { has_global_flag = jacobin_revolt_ongoing }
+	}
+}
