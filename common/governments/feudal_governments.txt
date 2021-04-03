@@ -13,7 +13,6 @@ feudal_governments = {
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			eastern_feudal
 			chinese_imperial_government
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -41,9 +40,6 @@ feudal_governments = {
 				is_government_potential = eastern_feudal
 				is_government_potential = indian_feudal
 				is_government_potential = confucian_bureaucracy
-			}
-			NOT = {
-				religion_group = muslim
 			}
 			has_oligarchy_title_trigger = no
 			is_patrician = no
@@ -143,76 +139,6 @@ feudal_governments = {
 		capital_move_delay = 800
 	}	
 	
-	muslim_government = {
-		preferred_holdings = { CASTLE }
-		allowed_holdings = { 
-			CASTLE
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			theocracy_government
-			eastern_feudal
-			chinese_imperial_government
-			muslim_government
-			calvinist_government
-			theocratic_feudal_government
-			roman_imperial_government
-			confederation_government
-			bhutanese_decayed_government
-			bhutanese_restored_government
-			feudal_government
-			colonial_government
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-		}
-		frame_suffix = "_iqta"
-		potential = {
-			NOR = {
-				is_government_potential = roman_imperial_government
-				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
-				is_government_potential = chinese_imperial_government
-				is_government_potential = theocratic_feudal_government
-				is_government_potential = confederation_government
-				is_government_potential = calvinist_government
-				is_government_potential = eastern_feudal
-				is_government_potential = indian_feudal
-				is_government_potential = confucian_bureaucracy
-			}
-			isnt_forced_to_theocracy = yes
-			religion_group = muslim
-			is_patrician = no
-			has_oligarchy_title_trigger = no
-		}
-		
-		color = { 10 138 57 }
-		
-		uses_decadence = yes
-		uses_piety_for_law_change = yes
-		
-		dukes_called_kings = yes
-		barons_need_dynasty = yes
-		have_gender_laws = no
-		#allows_matrilineal_marriage = no
-		free_retract_vassalage = yes
-
-		free_levies_in_offensive_war = yes # Took away the hardcoded stuff for muslims where they could raise levies without pissing off vassals if in an offensive war.
-
-		can_build_tribal = no
-		
-		ignore_in_vassal_limit_calculation = {
-			tribal_government
-		}
-		capital_move_delay = 600
-	}
-	
 	theocratic_feudal_government = {
 		preferred_holdings = { CASTLE TEMPLE }
 		allowed_holdings = { 
@@ -228,7 +154,6 @@ feudal_governments = {
 			theocracy_government
 			eastern_feudal
 			chinese_imperial_government
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -290,7 +215,6 @@ feudal_governments = {
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			chinese_imperial_government
 			eastern_feudal
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -359,7 +283,6 @@ feudal_governments = {
 			chinese_imperial_government
 			eastern_feudal
 			indian_feudal
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -449,7 +372,6 @@ feudal_governments = {
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			chinese_imperial_government
 			eastern_feudal
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -541,7 +463,6 @@ feudal_governments = {
 		accepts_liege_governments = { # Should always be independent, nothing else really makes sense
 			chinese_imperial_government
 			eastern_feudal
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -557,7 +478,6 @@ feudal_governments = {
 			tribal_government
 			eastern_feudal
 			feudal_government
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			oligarchic_republic
@@ -584,7 +504,6 @@ feudal_governments = {
 			eastern_feudal
 			tribal_government
 			feudal_government
-			muslim_government
 			calvinist_government
 			theocratic_feudal_government
 			oligarchic_republic
