@@ -82,6 +82,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 	}
 	
 	transatlantic = {
@@ -140,6 +141,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 	}
 	lutheran = {
 		graphical_culture = westerngfx
@@ -202,6 +204,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 	}
 	
 	baptist = {
@@ -263,6 +266,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 	}
 	
 	orthodox = {
@@ -320,6 +324,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 		
 	}
 
@@ -382,6 +387,7 @@ christian = {
 		intermarry = charismatic
 		intermarry = quaker
 		intermarry = columbian
+		intermarry = insular
 	}
 
 	chaldean = {
@@ -437,6 +443,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 
 	koptic = {
@@ -499,6 +506,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	anglican = {
 		graphical_culture = westerngfx
@@ -560,6 +568,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	high_church = {
 		graphical_culture = westerngfx
@@ -620,6 +629,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	sedevacantist = {
 		graphical_culture = westerngfx
@@ -677,6 +687,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	evangelical = {
 		graphical_culture = westerngfx
@@ -729,6 +740,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	charismatic = { #Okinawan Christianity
 		graphical_culture = westerngfx
@@ -784,6 +796,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	apostolic = { #Brazilian Christianity
 		graphical_culture = westerngfx
@@ -839,6 +852,7 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	quaker = {
 		graphical_culture = westerngfx
@@ -899,6 +913,7 @@ christian = {
 		#intermarry = quaker
 		intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 
 	columbian = {
@@ -959,6 +974,7 @@ christian = {
 		intermarry = quaker
 		#intermarry = columbian
 		intermarry = mainline
+		intermarry = insular
 	}
 	mainline = {
 		graphical_culture = westerngfx
@@ -983,7 +999,7 @@ christian = {
 			SATAN LUCIFER THE_DEVIL
 		}
 		character_modifier = {
-			orange_king_opinion = -50 #Being a member of the Orange Order IRL earns automatic excommunication
+			
 		}
 		
 		aggression = 0.9
@@ -1014,4 +1030,65 @@ christian = {
 		intermarry = quaker
 		intermarry = columbian
 		#intermarry = mainline
-}
+		intermarry = insular
+	}
+	insular = {
+		graphical_culture = westerngfx
+
+		icon = 108
+		heresy_icon = 108
+
+		color = { 60 100 60 }
+
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = FATHER
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		
+		character_modifier = {
+			temple_levy_size = 0.1
+			monthly_character_piety = 0.05
+		}
+		
+		aggression = 0.2
+		can_call_crusade = no
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		defensive_attrition = yes
+		female_temple_holders = no 
+				
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = orthodox
+		intermarry = catholic
+		intermarry = lutheran
+		intermarry = calvinist
+		intermarry = transatlantic
+		intermarry = baptist
+		intermarry = koptic
+		intermarry = batenburger
+		intermarry = evangelical
+		intermarry = sedevacantist
+		intermarry = high_church
+		intermarry = anglican
+		intermarry = brethren
+		intermarry = chaldean
+		intermarry = apostolic
+		intermarry = charismatic
+		intermarry = quaker
+		intermarry = columbian
+		intermarry = mainline
+		#intermarry = insular
+	}
