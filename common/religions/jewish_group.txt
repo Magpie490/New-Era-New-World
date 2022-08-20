@@ -1,0 +1,446 @@
+jewish_group = {
+	graphical_culture = jewishgfx
+	crusade_cb = crusade
+	playable = yes
+	ai_peaceful = yes # Will make Hordes lose their super aggressiveness
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1	# try to convert if ai_zeal is high
+	
+	color = { 0.1 0.7 1.0 }
+	
+	interface_skin = { jews_interface }
+	
+	# Names given only to Jewish characters (base names)
+	male_names = {
+		Ben-Tzion Ezra Hezekiah Levi Menasheh Nissim Shimon Yitzhak Zevulun Yehudah
+	}
+	female_names = {
+		Adah Adinah Asnat Batya Chana Chava Devorah Ester Hadassah Leah Miriam Peninah Rachel Rivkah Rut Sarah Tamar Tirtzah Tzipporah Tziviah Yael Yehudit Yiska Yocheved Yonah Yudit
+	}
+
+	jewish = {
+		graphical_culture = jewishgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		
+		icon = 38
+		heresy_icon = 39
+		
+		color = { 0 56 184 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = PRIEST_RAV
+		
+		high_god_name = HASHEM
+		
+		god_names = {
+			ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN AYIN
+		}
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		priests_can_inherit = yes
+		
+		religious_clothing_head = 22
+		religious_clothing_priest = 7
+		unit_modifier = {		
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		#intermarry = jewish
+		intermarry = hasidic
+		intermarry = mikraist
+		intermarry = maaravi
+		intermarry = haymanot
+		intermarry = congregationist
+		intermarry = federationist
+	}
+
+	mikraist = {
+		graphical_culture = jewishgfx
+		
+		icon = 38
+		heresy_icon = 39
+		
+		color = { 0.2 0.6 1.0 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = RABBI
+		
+		high_god_name = HASHEM
+		
+		god_names = {
+			ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN AYIN
+		}
+		
+		parent = jewish
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		female_temple_holders = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		unit_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		intermarry = jewish
+		intermarry = hasidic
+		#intermarry = mikraist
+		intermarry = maaravi
+		intermarry = haymanot
+		intermarry = orthodox
+		intermarry = chaldean
+		intermarry = congregationist
+		intermarry = federationist
+	}
+
+	maaravi = {
+		graphical_culture = jewishgfx
+		
+		icon = 140
+		heresy_icon = 141
+		
+		color = { 0.1 0.8 0.8 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = RABBI
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN
+		}
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		female_temple_holders = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		unit_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		intermarry = jewish
+		intermarry = hasidic
+		intermarry = mikraist
+		#intermarry = maaravi
+		intermarry = haymanot
+		intermarry = congregationist
+		intermarry = federationist
+	}
+
+	hasidic = {
+		graphical_culture = jewishgfx
+		
+		icon = 140
+		heresy_icon = 141
+		
+		color = { 0 56 120 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = RABBI
+		
+		high_god_name = HASHEM
+		
+		god_names = {
+			ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN
+		}
+		
+		parent = maaravi
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		unit_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		intermarry = jewish
+		#intermarry = hasidic
+		intermarry = mikraist
+		intermarry = maaravi
+		intermarry = haymanot
+		intermarry = congregationist
+		intermarry = federationist
+	}
+	haymanot = {
+		graphical_culture = jewishgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		
+		icon = 158
+		heresy_icon = 159
+		
+		color = { 150 160 255 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = MASHAFA_KEDUS
+		priest_title = PRIEST_COHEN
+		
+		high_god_name = HASHEM
+		
+		god_names = {
+			ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN
+		}
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		priests_can_inherit = yes
+		
+		religious_clothing_head = 23
+		religious_clothing_priest = 23
+		unit_modifier = {		
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			culture_techpoints = 0.05
+			economy_techpoints = 0.05
+			health = 0.5
+		}
+		intermarry = jewish
+		intermarry = hasidic
+		intermarry = mikraist
+		intermarry = maaravi
+		intermarry = congregationist
+		intermarry = federationist
+	}
+	congregationist = {
+		graphical_culture = jewishgfx
+		
+		icon = 170
+		heresy_icon = 171
+		
+		color = { 0 150 180 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = RABBI
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN
+		}
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		unit_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		intermarry = jewish
+		intermarry = hasidic
+		intermarry = mikraist
+		#intermarry = maaravi
+		intermarry = haymanot
+		intermarry = federationist
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = thelemic_reformed
+		intermarry = orange_king
+		intermarry = anglican
+		intermarry = catholic
+		intermarry = quaker
+		intermarry = brethren
+		intermarry = poseidonian
+		#They can intermarry the various faiths found in the British Isles
+	}
+	federationist = {
+		graphical_culture = jewishgfx
+		
+		icon = 169
+		heresy_icon = 170
+		
+		color = { 100 150 160 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TANAKH
+		priest_title = RABBI
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD ELOHIM HASHEM
+		}
+		evil_god_names = {
+			SATAN
+		}
+		
+		parent = congregationist
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		can_grant_divorce = yes
+		can_call_crusade = no
+		defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		hard_to_convert = yes
+		priests_can_marry = yes
+		attacking_same_religion_piety_loss = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		unit_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		expel_modifier = expelled_jewish
+		
+		character_modifier = {
+			learning = 1 #This way they're not too OP
+			health = 0.5
+		}
+		intermarry = jewish
+		intermarry = hasidic
+		intermarry = mikraist
+		#intermarry = maaravi
+		intermarry = haymanot
+		intermarry = congregationist
+		#No intermarrying with non Jews for obvious reasons
+	}
+}

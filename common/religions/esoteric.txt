@@ -1,0 +1,573 @@
+esoteric = {
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1	# convert if zeal high
+	ai_fabricate_claims = yes
+	
+	color = { 0.6 0.0 0.0 }
+	
+	interface_skin = { pagan_interface }
+
+	thelemic_reformed = {
+		graphical_culture = reformednorsegfx
+
+		icon = 65
+		heresy_icon = 66
+		
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 0.9 0.2 0.1 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+
+		high_god_name = GOD_THE_QUEEN
+
+		god_names = {
+			GOD_THE_QUEEN GOD_NUIT GOD_HADIT GOD_RA_HOOR_KHUIT GOD_HOOR_PAAR_KRAAT
+		}
+		evil_god_names = {
+			GOD_JESUS_BAD GOD_BABALON GOD_CHORONZON GOD_THERION
+		}
+		
+		character_modifier = {
+			orange_king_opinion = 10
+			thelemic_opinion = 5 #They see old Thelema as just old and traditional, and sometimes odd
+			summer_queen_opinion = 5
+			fertility = 0.15
+			religion_flex = -0.25
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_THE_LAW
+		priest_title = MAGE
+
+		piety_name = MAGICK
+		
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		
+		can_call_crusade = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		max_consorts = 9
+		allow_in_ruler_designer = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = orange_king
+		intermarry = congregationist
+		intermarry = ibadi
+	}
+
+	summer_queen = {
+		graphical_culture = reformednorsegfx
+		secondary_event_pictures = thelemic_reformed
+		icon = 65
+		heresy_icon = 66
+		parent = thelemic_reformed
+
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 0.8 0.8 0.2 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+
+		high_god_name = GOD_THE_SUMMER_QUEEN
+
+		god_names = {
+			GOD_THE_SUMMER_QUEEN GOD_THE_WINTER_KING GOD_JOAN_THE_WALD GOD_JACK_THE_LANTERN GOD_MERLIN
+		}
+		evil_god_names = {
+			GOD_JESUS_BAD GOD_BEAST_OF_BODMIN GOD_BLOODY_BONES GOD_MORDRED GOD_MORGANNA GOD_BABALON GOD_CHORONZON GOD_THERION
+		}
+		character_modifier = {
+			orange_king_opinion = -20
+			thelemic_reformed_opinion = 5
+			fertility = 0.15
+			religion_flex = -0.35
+		}
+		
+		piety_name = MAGICK
+		crusade_name = WINTER_WAR
+		scripture_name = THE_MATTER_OF_BRITAIN
+		priest_title = DRUID
+		can_call_crusade = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		allow_in_ruler_designer = yes
+		feminist = yes
+		max_consorts = 3
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = thelemic_reformed
+		intermarry = thelemic
+		intermarry = orange_king
+		intermarry = celtic_pagan
+		intermarry = celtic_pagan_reformed
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = ibadi
+		intermarry = congregationist
+	}
+	thelemic = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = thelemic_reformed
+		icon = 65
+		heresy_icon = 66
+		parent = thelemic_reformed
+
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 0.9 0.6 0.2 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+
+		high_god_name = GOD_NUIT
+
+		god_names = {
+			GOD_NUIT GOD_HADIT GOD_RA_HOOR_KHUIT GOD_HOOR_PAAR_KRAAT
+		}
+		evil_god_names = {
+			GOD_JESUS_BAD GOD_BABALON GOD_CHORONZON GOD_THERION
+		}
+		character_modifier = {
+			liege_opinion = -10
+		    orange_king_opinion = -10 #Yeah they dont get along
+			thelemic_reformed_opinion = 5 #Not completely disliked by the Reformed, just considered old fashioned
+			diplomacy = 1
+			intrigue = 1
+			religion_flex = -0.5
+			fertility = 0.25
+		}
+
+		piety_name = MAGICK
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_THE_LAW
+		priest_title = MAGE
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		max_consorts = 9
+		allow_in_ruler_designer = yes
+		has_heir_designation = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = thelemic_reformed
+		intermarry = summer_queen
+		intermarry = orange_king
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = congregationist
+	}
+	
+	orange_king = {
+		graphical_culture = reformednorsegfx
+        icon = 65
+		heresy_icon = 66
+		parent = thelemic_reformed
+		
+		ai_convert_same_group = 0
+		ai_convert_other_group = 2
+		
+		color = { 1 0.49 0 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+
+		high_god_name = GOD_THE_QUEEN
+
+		god_names = {
+			GOD_THE_QUEEN GOD_NUIT GOD_HADIT GOD_RA_HOOR_KHUIT GOD_HOOR_PAAR_KRAAT GOD_ORANGE_KING
+		}
+		evil_god_names = {
+			GOD_JESUS_BAD GOD_COLLINS GOD_THE_FEIN GOD_THE_FENIAN GOD_BABALON GOD_CHORONZON GOD_THERION
+		}
+		
+		character_modifier = {
+		    liege_opinion = 5
+			catholic_opinion = -50 #Historical Reasons
+			thelemic_reformed_opinion = 10 #Counteracts Heresy Modifier
+			summer_queen_opinion = -20
+			thelemic_opinion = -10
+			fertility = 0.05
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_THE_LAW
+		priest_title = MAGE
+	
+	    can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		allow_in_ruler_designer = yes
+		hard_to_convert = yes
+		attacking_same_religion_piety_loss = yes
+
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+        piety_name = HONOUR
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = thelemic_reformed
+		intermarry = congregationist
+	}
+	
+	nousthreskeia_reformed = {
+		graphical_culture = reformedpagangfx
+		#secondary_event_pictures = slavic_pagan
+		alternate_start = { always = no }
+
+		icon = 105
+		heresy_icon = 106
+		
+		color = { 0.54 0.49 0.43 }
+		
+		interface_skin = { pagan_interface muslim_interface } #placeholder
+		
+		high_god_name = GOD_MIRRAZUM
+		
+		god_names = {
+			GOD_MUDROST GOD_ZNANIYA GOD_PROSVESHCHENIYE GOD_PONYYATIYE_DUKHI GOD_CHELOVECHESKIYE_DUKHI
+		}
+		
+		evil_god_names = {
+			THE_EVENT GOD_PONYYATIYE_DUKHI GOD_CHELOVECHESKIYE_DUKHI
+		}
+		
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		allow_rivermovement = yes
+		max_consorts = 3 #can take concubines
+		allow_in_ruler_designer = no
+		religious_clothing_head = 14
+		religious_clothing_priest = 14
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = STSENARIY_RAZUMA
+		priest_title = PREACHER
+		piety_name = CONSCIOUSNESS
+		intermarry = folklorist
+		intermarry = folklorist_reformed
+		intermarry = nousthreskeia
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = starist_pagan
+		intermarry = starist_pagan_reformed
+	}
+	nousthreskeia = {
+		graphical_culture = pagangfx
+		#secondary_event_pictures = slavic_pagan
+
+		icon = 104
+		heresy_icon = 106
+		
+		color = { 0.44 0.39 0.33 }
+		
+		interface_skin = { pagan_interface muslim_interface } #placeholder
+		
+		high_god_name = GOD_MIRRAZUM
+		
+		god_names = {
+			GOD_MUDROST GOD_ZNANIYA GOD_PROSVESHCHENIYE GOD_PONYYATIYE_DUKHI GOD_CHELOVECHESKIYE_DUKHI
+		}
+		
+		evil_god_names = {
+			THE_EVENT GOD_PONYYATIYE_DUKHI GOD_CHELOVECHESKIYE_DUKHI
+		}
+		
+		reformed = nousthreskeia_reformed
+		
+		aggression = 1.1
+		priests_can_marry = yes
+        female_temple_holders = yes
+		allow_rivermovement = yes
+		max_consorts = 3 #can take concubines
+		defensive_attrition = yes
+		allow_looting = yes
+		has_heir_designation = yes 
+		can_demand_religious_conversion = no
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 14
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = STSENARIY_RAZUMA
+		priest_title = PREACHER
+		piety_name = CONSCIOUSNESS
+		intermarry = folklorist
+		intermarry = folklorist_reformed
+		intermarry = nousthreskeia_reformed
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = starist_pagan
+		intermarry = starist_pagan_reformed
+	}
+	druze = {
+		graphical_culture = reformedzunistgfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		secondary_event_pictures = shiite
+		icon = 126
+		heresy_icon = 127
+		
+		crusade_name = JIHAD
+		scripture_name = THE_EPISTLES_OF_WISDOM
+		priest_title = UQQAL
+		
+		color = { 0.0 0.9 0.4 }
+		
+		high_god_name = GOD_THE_UNIVERSE
+		
+		god_names = {
+			GOD_THE_COSMIC_MIND GOD_ALLAH GOD_GOD GOD_YHWH
+		}
+		
+		evil_god_names = {
+			IBLIS
+		}
+		
+		piety_name = ENLIGHTENMENT
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		psc_marriage = no
+		max_wives = 1
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		
+		character_modifier={
+			learning=1
+			jewish_group_opinion = 20
+			christian_opinion = 20
+			muslim_opinion = 20
+			zoroastrian_group_opinion = 20
+			religion_flex = -0.5
+		}
+		
+		intermarry = hellenic_pagan_reformed
+		intermarry = hellenic_pagan
+		intermarry = alawite
+		
+	}
+	alawite = {
+		graphical_culture = reformedzunistgfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		secondary_event_pictures = shiite
+		icon = 234
+		heresy_icon = 235
+		parent = druze
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KITAB_AL_MAJMU
+		priest_title = UQQAL
+		
+		color = { 0.0 0.9 0.6 }
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_THE_TRINITY GOD_ALLAH GOD_GOD GOD_YHWH GOD_ALI
+		}
+		
+		evil_god_names = {
+			IBLIS
+		}
+		
+		piety_name = ENLIGHTENMENT
+		
+		allow_looting = yes
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		psc_marriage = no
+		max_wives = 1
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		independence_war_score_bonus = 30
+		features = { religion_patriarchal }
+		
+		character_modifier={
+			intrigue=1
+			jewish_group_opinion = 10
+			christian_opinion = 10
+			muslim_opinion = 10
+			religion_flex = -0.5
+			defensive_plot_power_modifier = 0.1
+			plot_discovery_chance = 0.1
+		}
+		
+		intermarry = hellenic_pagan_reformed
+		intermarry = hellenic_pagan
+		intermarry = druze
+		
+	}
+	
+	mandaeanism = {
+		graphical_culture = reformedzunistgfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		secondary_event_pictures = shiite
+		icon = 160
+		heresy_icon = 161
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = GINZA_RBA
+		priest_title = RABBI
+		
+		color = { 0.2 0.7 0.4 }
+		
+		high_god_name = LORD_OF_GREATNESS
+		
+		god_names = {
+			LORD_OF_GREATNESS GREAT_MIND KING_OF_LIGHT
+		}
+		
+		evil_god_names = {
+			KRUN RUHA PTAHIL
+		}
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		psc_marriage = no
+		max_wives = 1
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		defensive_attrition = yes
+		hard_to_convert = yes
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+		pacifist = yes
+		short_reign_opinion_year_mult = 0 # No short reign penalty
+		can_demand_religious_conversion = no
+		
+		character_modifier={
+			christian_opinion = 10
+			muslim_opinion = 10
+			zoroastrian_group_opinion = 10
+			health = 0.5
+			religion_flex = -0.5
+		}
+		unit_modifier = {		
+			garrison_size = 0.3
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {	
+			garrison_size = 0.3
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+	}
+	
+	gnostic = {
+		graphical_culture = reformednorsegfx
+		icon = 136
+		heresy_icon = 137
+		
+		crusade_name = WAR_OF_REDEMPTION
+		scripture_name = THE_TALES 
+		priest_title = ELDER
+		
+		color = { 0.1 0.7 0.6 }
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD SATANAEL GOD_LUTHER GOD_LION_MIDNIGHT ARMINIUS GOD_ALARIC
+		}
+		
+		evil_god_names = {
+			THE_POPE DEMIURGE YALDABAOTH
+		}
+				
+		piety_name = FERVOUR
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		female_temple_holders = yes		
+		psc_marriage = no
+		max_wives = 1
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		
+		character_modifier={
+			martial = 2
+			lutheran_opinion = 5
+			vagarna_opinion = 10
+			hussite_opinion = 5
+			orthodox_opinion = -15 #They dont like Romaboos
+			marblists_opinion = -15 #They dont like Romaboos
+			catholic_opinion = -30 #They REALLY dont like the Pope
+			sevillian_opinion = -30 #They hate all Popes
+			religion_flex = 0.05
+		}
+		
+		intermarry = lutheran
+		intermarry = vagarna
+		intermarry = hussite
+		
+	}	
+}
