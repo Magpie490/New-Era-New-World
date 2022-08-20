@@ -1,0 +1,407 @@
+castle = {
+	ca_bhutan_palace = { # Dechencholing Palace
+		potential = {
+			FROMFROM = { 
+				title = b_paro
+			}
+		}
+		desc = ca_bhutan_palace_desc
+		gold_cost = 800
+		build_time = 2190 #6y
+		fort_level = 1.0
+		local_revolt_risk = -0.05
+		liege_prestige = 0.25
+		plot_discovery_chance = 0.1
+		arrest_chance_modifier = 0.1
+		retinuesize = 100
+		pikemen = 50
+		gunmen = 50
+		tax_income = -0.5
+	}
+	ca_parthenon = { # Parthenon
+		potential = {
+			FROMFROM = { 
+				title = b_athens
+			}
+		}
+		desc = ca_parthenon_desc
+		gold_cost = 400
+		build_time = 1460 #4y
+		liege_piety = 0.2
+		land_morale = 0.05
+		pikemen = 20
+		knights = 10
+		tax_income = -0.35
+	}
+	ca_white_tower = { # White Tower
+		potential = {
+			FROMFROM = { 
+				title = b_thessaloniki
+			}
+		}
+		desc = ca_white_desc
+		gold_cost = 300
+		build_time = 900
+		liege_prestige = 0.2
+		fort_level = 0.1
+		levy_size = 0.001
+		arrest_chance_modifier = 0.01
+		economy_techpoints = 0.01
+		tax_income = -0.35
+	}
+	ca_ukraine_dams = { # Ukraine Dams
+		potential = {
+			FROMFROM = { 
+				OR = {
+					title = b_dnipro
+					title = b_dnieprkherson
+					title = b_kiev
+				}
+			}
+		}
+		desc = ca_ukraine_dams_desc
+		gold_cost = 1000
+		build_time = 2920 #8y
+		liege_prestige = 0.15
+		tax_income = 1.5
+		fort_level = 1.5
+		disease_defence = 0.05
+		light_infantry = 20
+		archers = 20
+	}
+	ca_transnistrian_palace = { # Transnistrian Palace
+		potential = {
+			FROMFROM = { 
+					title = b_soroca
+			}
+		}
+		desc = ca_transnistrian_palace_desc
+		gold_cost = 800
+		build_time = 2190 #6y
+		local_revolt_risk = -0.05
+		garrison_size = 0.05
+		liege_prestige = 0.3
+		fort_level = 1
+		disease_defence = 0.05
+		heavy_infantry = 20
+		archers = 10
+		tax_income = -0.35
+	}
+}
+city = {
+	ct_siberian_fortress_1 = {#Frontier Fortresses of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		desc = ct_siberian_fortress_desc
+		gold_cost = 500
+		build_time = 900
+		fort_level = 1.5
+		heavy_infantry = 50
+		retinuesize = 25
+		tax_income = -0.2
+	}
+	ct_siberian_fortress_2 = {#Frontier Fortresses of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 3 }
+		upgrades_from = ct_siberian_fortress_1	
+		desc = ct_siberian_fortress_desc
+		gold_cost = 500
+		build_time = 900
+		fort_level = 1.5
+		heavy_infantry = 50
+		retinuesize = 25		
+		tax_income = -0.2
+	}
+	ct_siberian_fortress_3 = {#Frontier Fortresses of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
+		upgrades_from = ct_siberian_fortress_2		
+		desc = ct_siberian_fortress_desc
+		gold_cost = 500
+		build_time = 900
+		fort_level = 1.5
+		heavy_infantry = 50
+		retinuesize = 25		
+		tax_income = -0.2
+	}
+	ct_siberian_fortress_4 = {#Frontier Fortresses of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 5 }
+		upgrades_from = ct_siberian_fortress_3		
+		desc = ct_siberian_fortress_desc
+		gold_cost = 500
+		build_time = 900
+		fort_level = 1.5
+		heavy_infantry = 50
+		retinuesize = 25	
+		tax_income = -0.2	
+	}
+	ct_siberian_fortress_5 = {#Frontier Fortresses of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
+		upgrades_from = ct_siberian_fortress_4			
+		desc = ct_siberian_fortress_desc
+		gold_cost = 500
+		build_time = 900
+		fort_level = 1.5
+		heavy_infantry = 50
+		retinuesize = 25		
+		tax_income = -0.2
+	}	
+	ct_cossack_stable_1 = {#Stables of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		#prerequisites = { ca_wall_1 }		
+		desc = ct_cossack_stable_desc
+		gold_cost = 500
+		build_time = 900
+		knights = 30
+		tax_income = -0.2
+	}
+	ct_cossack_stable_2 = {#Stables of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		prerequisites = { ct_cossack_stable_1 }
+		upgrades_from = ct_cossack_stable_1
+		desc = ct_cossack_stable_desc
+		gold_cost = 500
+		build_time = 900
+		knights = 30
+		tax_income = -0.2
+	}
+	ct_cossack_stable_3 = {#Stables of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		prerequisites = { ct_cossack_stable_2 }	
+		upgrades_from = ct_cossack_stable_2		
+		desc = ct_cossack_stable_desc
+		gold_cost = 500
+		build_time = 900
+		knights = 30
+		tax_income = -0.2
+	}
+	ct_cossack_stable_4 = {#Stables of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		prerequisites = { ct_cossack_stable_3 }
+		upgrades_from = ct_cossack_stable_3
+		desc = ct_cossack_stable_desc
+		gold_cost = 500
+		build_time = 900
+		knights = 30
+		tax_income = -0.2
+	}
+	ct_cossack_stable_5 = {#Stables of the Siberian City States
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		prerequisites = { ct_cossack_stable_4 }
+		upgrades_from = ct_cossack_stable_4		
+		desc = ct_cossack_stable_desc
+		gold_cost = 500
+		build_time = 900
+		knights = 30
+		tax_income = -0.2
+	}
+	ct_streltsy_barracks_1 = {#Streltsy
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		#prerequisites = { ca_wall_1 }		
+		desc = ct_streltsy_barracks_desc
+		gold_cost = 500
+		build_time = 900
+		archers = 60
+		tax_income = -0.2
+	}
+	ct_streltsy_barracks_2 = {#Streltsy
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		prerequisites = { ct_streltsy_barracks_1 }
+		upgrades_from = ct_streltsy_barracks_1		
+		desc = ct_streltsy_barracks_desc
+		gold_cost = 500
+		build_time = 900
+		archers = 60
+		tax_income = -0.2
+	}
+	ct_streltsy_barracks_3 = {#Streltsy
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		prerequisites = { ct_streltsy_barracks_2 }
+		upgrades_from = ct_streltsy_barracks_2		
+		desc = ct_streltsy_barracks_desc
+		gold_cost = 500
+		build_time = 900
+		archers = 60
+		tax_income = -0.2
+	}
+	ct_streltsy_barracks_4 = {#Streltsy
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		prerequisites = { ct_streltsy_barracks_3 }
+		upgrades_from = ct_streltsy_barracks_3		
+		desc = ct_streltsy_barracks_desc
+		gold_cost = 500
+		build_time = 900
+		archers = 60
+		tax_income = -0.2
+	}
+	ct_streltsy_barracks_5 = {#Streltsy
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_chita_mon
+					title = b_irkutsk
+					title = b_akutikha
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		prerequisites = { ct_streltsy_barracks_4 }
+		upgrades_from = ct_streltsy_barracks_4		
+		desc = ct_streltsy_barracks_desc
+		gold_cost = 500
+		build_time = 900
+		archers = 60
+		tax_income = -0.2
+	}	
+}
+temple = {
+	tp_bone_temple = { # Bone Temple
+		potential = {
+			FROMFROM = { 
+					title = b_melar
+			}
+		}
+		desc = tp_bone_temple_desc
+		gold_cost = 800
+		build_time = 2190 #6y
+		liege_prestige = 0.3
+		liege_piety = 0.3
+		tax_income = 0.5
+	}
+	tp_colleseum = { # Colleseum
+		potential = {
+			FROMFROM = { 
+					title = b_roma
+			}
+		}
+		desc = tp_colleseum_desc
+		gold_cost = 800
+		build_time = 2190 #6y
+		liege_prestige = 0.3
+		liege_piety = 0.3
+		culture_techpoints = 0.01
+		tax_income = -0.2
+	}
+}

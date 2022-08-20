@@ -76,10 +76,8 @@ religion_nature = {
 					character = yes
 					OR = { 
 						religion = bon 
-						religion = slavic_pagan
 						religion = baltic_pagan
 						religion = finnish_pagan
-						religion = west_african_pagan
 					}
 				}
 			}
@@ -189,19 +187,9 @@ religion_nature = {
 				FROM = { 
 					character = yes 
 					OR = { 
-						religion = norse_pagan
 						religion = tengri_pagan
-						religion = zun_pagan
 						religion = hellenic_pagan
-						religion = west_african_pagan
 					}
-				}
-			}
-			modifier = { 	
-				factor = 0.001
-				FROM = { 
-					character = yes 
-					religion = aztec 
 				}
 			}
 			modifier = { 	
@@ -273,11 +261,7 @@ religion_nature = {
 				factor = 0.1
 				FROM = { 
 					character = yes 
-					NOR = { 
-						religion = zun_pagan
-						religion = hellenic_pagan
-						religion = west_african_pagan
-					}
+					religion = hellenic_pagan
 				}
 			}
 			modifier = { 	
@@ -373,16 +357,6 @@ religion_nature = {
 		ai_will_do = {
 			factor = 50
 			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					NOR = { 
-						religion = zun_pagan
-						religion = west_african_pagan
-					}
-				}
-			}
-			modifier = { 	
 				factor = 0.01
 				FROM = { 
 					character = yes 
@@ -459,10 +433,8 @@ religion_nature = {
 				factor = 0.1
 				FROM = { 
 					character = yes 
-					NOR = { 
+					NOT = { 
 						religion = hellenic_pagan
-						religion = west_african_pagan
-						religion = slavic_pagan
 					}
 				}
 			}
@@ -540,8 +512,9 @@ religion_doctrine = {
 		picture = GFX_religion_feature_holy_family
 		
 		trigger = {
-			NOT = {
+			NOR = {
 				has_selected_religion_feature = religion_feature_novelist
+				has_selected_religion_feature = religion_feature_baltic_2
 			}
 		}
 
@@ -571,13 +544,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_holy_family
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_baltic
-			} 
+				has_selected_religion_feature = religion_feature_baltic_2
+			}
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_incest }
 			custom_tooltip = { text = tooltip_religion_feature_holy_family }
-			hidden_tooltip = { 
+			hidden_tooltip = {
 				set_divine_blood = yes
 				set_psc_marriage = yes
 				set_bs_marriage = yes
@@ -587,10 +560,10 @@ religion_doctrine = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = { 	
+			modifier = {
 				factor = 0.1
 				FROM = { 
-					character = yes 
+					character = yes
 				}
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
@@ -603,9 +576,10 @@ religion_doctrine = {
 	religion_harems = {
 		picture = GFX_religion_feature_harems
 		trigger = {
-			NOR = { 
+			NOR = {
 				has_selected_religion_feature = religion_matriarchal #Incompatible
-			} 
+				has_selected_religion_feature = religion_feature_tengri
+			}
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_harems }
@@ -621,8 +595,8 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_patriarchal # Incompatible
 				has_selected_religion_feature = religion_matriarchal # Incompatible
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant				
-				has_selected_religion_feature = religion_feature_americanist
+				has_selected_religion_feature = religion_feature_maunaxite #Redundant	
+				has_selected_religion_feature = religion_feature_starist #Redundant
 			}
 		}
 		effect = {
@@ -643,6 +617,10 @@ religion_doctrine = {
 	religion_stable = {
 		picture = GFX_religion_feature_stable
 		trigger = {
+			NOR = {
+				has_selected_religion_feature = religion_feature_finnish
+				has_selected_religion_feature = religion_feature_nousthreskeia
+			}
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_stable }
@@ -688,6 +666,7 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_novelist
+				has_selected_religion_feature = religion_feature_starist
 			}
 		}
 		effect = {
@@ -715,13 +694,16 @@ religion_doctrine = {
 	}
 	religion_syncretic = { #Gives option for each ruler to pick one of the sympathy_for_traits via decision.
 		picture = GFX_religion_feature_syncretic
+		potential = {
+			NOT = { religion = inuit_pagan } #Core feature of the religion itself.
+			NOT = { religion = inuit_pagan_reformed } #Core feature of the religion itself.
+		}
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_jizya
 				has_selected_religion_feature = religion_dogmatic
 				has_selected_religion_feature = religion_feature_folklorist # Redundant Doctrine
 				has_selected_religion_feature = religion_feature_hellenic #Redundant
-				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 			}
 		}
 		effect = {
@@ -734,7 +716,6 @@ religion_doctrine = {
 				FROM = { 
 					character = yes 
 					OR = { 
-						religion = aztec
 						religion = baltic_pagan
 						religion = finnish_pagan
 					}
@@ -747,7 +728,7 @@ religion_doctrine = {
 			}
 			modifier = { 	
 				factor = 5
-				FROM = { 
+				FROM = {
 					character = yes 
 					religion = inuit_pagan
 				}
@@ -760,9 +741,68 @@ religion_doctrine = {
 			NOT = { religion = hellenic_pagan } #Core feature of the religion itself.
 			NOT = { religion = hellenic_pagan_reformed } #Core feature of the religion itself.
 		}
+		trigger = {
+			NOR = {
+				has_selected_religion_feature = religion_feature_lakefolk_pagan #Redundant
+			}
+		}
 
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_haruspicy }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	religion_tarot = { #Gives option to divinate your future using tarot.
+		picture = GFX_religion_feature_tarot
+		potential = {
+			NOT = { religion = thelemic } #Core feature of the religion itself.
+			NOT = { religion = thelemic_reformed } #Core feature of the religion itself.
+			NOT = { religion = summer_queen } #Core feature of the religion itself.
+			NOT = { religion = orange_king } #Core feature of the religion itself.
+		}
+		trigger = {
+		}
+
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_tarot }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { 	
+				factor = 0.01
+				FROM = { 
+					character = yes
+					OR = { #Too Western for them.
+						religion = bon
+						religion = tengri_pagan
+						religion = finnish_pagan
+						religion = sarna_pagan
+						religion = starist_pagan
+						religion = folklorist
+						religion = inuit_pagan
+						religion = wuist
+						religion = mo_pagan
+						religion = bungan_pagan
+						religion = kaharingan_pagan
+						religion = thuyhoa_pagan
+						religion = satsana_pi_pagan
+					}
+				}
+			}
+		}
+	}
+	religion_self_immolate = { #Gives option to earn piety and a virtue in exchange of immolating a bodypart
+		picture = GFX_religion_feature_immolation
+		potential = {
+			NOT = { religion = bezpopotvsy }
+		}
+		trigger = {
+		}
+
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_self_immolate }
 		}
 		ai_will_do = {
 			factor = 1
@@ -773,7 +813,15 @@ religion_doctrine = {
 		potential = {
 			NOT = { religion = hellenic_pagan } #Core feature of the religion itself.
 			NOT = { religion = hellenic_pagan_reformed } #Core feature of the religion itself.
-			NOT = { has_selected_religion_feature = religion_feature_folklorist }
+			NOT = { religion = starist_pagan } #Core feature of the religion itself.
+			NOT = { religion = starist_pagan_reformed } #Core feature of the religion itself.
+			NOT = { religion = nousthreskeia } #Core feature of the religion itself.
+			NOT = { religion = nousthreskeia_reformed } #Core feature of the religion itself.
+		}
+		trigger = {
+			NOR = {
+				has_selected_religion_feature = religion_feature_folklorist_2 #Redundant
+			}
 		}
 
 		effect = {
@@ -790,6 +838,13 @@ religion_doctrine = {
 						religion = bon
 						religion = tengri_pagan
 						religion = finnish_pagan
+						religion = sarna_pagan
+						religion = wuist
+						religion = mo_pagan
+						religion = bungan_pagan
+						religion = kaharingan_pagan
+						religion = thuyhoa_pagan
+						religion = satsana_pi_pagan
 					}
 				}
 			}
@@ -845,17 +900,11 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_matriarchal
 				has_selected_religion_feature = religion_patriarchal
-
-
-
 				has_selected_religion_feature = religion_feature_maunaxite #Redundant
-				has_selected_religion_feature = religion_feature_americanist
-
-
 				has_selected_religion_feature = religion_feature_bon
 				trigger_if = {
 					limit = { has_game_started = yes }
-					FROM = { 
+					FROM = {
 						character = yes 
 						government = merchant_republic_government 
 					}
@@ -915,9 +964,9 @@ religion_doctrine = {
 			custom_tooltip = { text = tooltip_religion_feature_matriarchal }
 			custom_tooltip = { text = tooltip_religion_feature_open_succession }
 			custom_tooltip = { text = tooltip_religion_feature_matriarchal_negatives }
-			hidden_tooltip = { 
+			hidden_tooltip = {
 				set_allows_matrilineal_marriage = yes
-				set_feminist = yes 
+				set_feminist = yes
 				set_women_can_take_consorts = yes
 				set_men_can_take_consorts = no
 				set_female_temple_holders = yes
@@ -975,8 +1024,7 @@ religion_doctrine = {
 			NOT = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_feature_celtic
-				has_selected_religion_feature = religion_feature_hellenic
-				has_selected_religion_feature = religion_feature_americanist
+				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 			}
 		}
 		effect = {
@@ -994,8 +1042,7 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_feature_celtic
-				has_selected_religion_feature = religion_feature_finnish
-				has_selected_religion_feature = religion_feature_americanist
+				has_selected_religion_feature = religion_feature_finnish_2
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant				
 			}
 		}
@@ -1045,7 +1092,8 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_defensive
-				has_selected_religion_feature = religion_feature_hellenic #Redundant
+				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
+				has_selected_religion_feature = religion_feature_tengri #Redundant
 			}
 		}
 		effect = {
@@ -1073,13 +1121,6 @@ religion_doctrine = {
 				factor = 1.5
 				FROM = { 
 					character = yes 
-					religion = aztec
-				}
-			}
-			modifier = { 	
-				factor = 1.5
-				FROM = { 
-					character = yes 
 					religion = tengri_pagan
 				}
 			}
@@ -1087,9 +1128,10 @@ religion_doctrine = {
 	}
 	religion_animistic = {
 		picture = GFX_religion_feature_animistic
-		potential = {
+		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 			}
 		}
 		effect = {
@@ -1104,13 +1146,6 @@ religion_doctrine = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = { 	
-				factor = 1.5
-				FROM = { 
-					character = yes 
-					religion = aztec
-				}
-			}
 			modifier = { 	
 				factor = 1.5
 				FROM = { 
@@ -1154,6 +1189,7 @@ religion_doctrine = {
 					key = "ANIMISTIC_RELIGION"
 				}
 				set_seafaring = yes
+				set_allow_rivermovement = yes
 				if = {
 					limit = { #Unlock looting for religions which do not have it already.
 						FROM = { 
@@ -1221,7 +1257,7 @@ religion_doctrine = {
 		}
 	}
 	religion_feature_celtic = {
-		picture = GFX_religion_feature_celtic
+		picture = GFX_religion_feature_norse
 		potential = {
 			has_game_started = yes
 			religion = celtic_pagan_reformed
@@ -1238,11 +1274,55 @@ religion_doctrine = {
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_adventuring }
+			custom_tooltip = { text = tooltip_religion_feature_pirating }
 			custom_tooltip = { text = tooltip_religion_feature_ship_maintenance }
 			custom_tooltip = { text = tooltip_religion_feature_seafaring }
 			hidden_tooltip = { 
 				enable_prepared_invasion = ROOT
 				set_seafaring = yes
+				set_allow_rivermovement = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_tengri = {
+		picture = GFX_religion_feature_tengri
+		potential = {
+			has_game_started = yes
+			religion = tengri_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = tengri_pagan_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_relentless
+				has_selected_religion_feature = religion_harems
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
+			custom_tooltip = { text = tooltip_religion_feature_offensive }
+			custom_tooltip = { text = tooltip_religion_feature_harems }
+			hidden_tooltip = {
+				set_max_consorts = 0
+				set_max_wives = 4
+				set_ignores_defensive_attrition = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "TENGRI_RELENTLESS_RELIGION"
+				}
 			}
 		}
 		ai_will_do = {
@@ -1260,15 +1340,53 @@ religion_doctrine = {
 		}
 		trigger = {
 			religion = baltic_pagan_reformed
+			NOR = {
+				has_selected_religion_feature = religion_meritocratic
+				has_selected_religion_feature = religion_feature_baltic_2
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_hard_conversion }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
+			hidden_tooltip = { 
+				set_hard_to_convert = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_baltic_2 = {
+		picture = GFX_religion_feature_baltic
+		potential = {
+			has_game_started = yes
+			religion = baltic_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = baltic_pagan_reformed
 			NOR = { 
+				has_selected_religion_feature = religion_feature_baltic
 				has_selected_religion_feature = religion_holy_family
+				has_selected_religion_feature = religion_pronatal
 			}
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_hard_conversion }
 			custom_tooltip = { text = tooltip_religion_feature_incest }
 			custom_tooltip = { text = tooltip_religion_feature_holy_family }
-			hidden_tooltip = { 
+			custom_tooltip = { text = tooltip_religion_feature_fertility_bonus }
+			custom_tooltip = { text = tooltip_religion_feature_dynasty_bonus }
+			custom_tooltip = { text = tooltip_religion_feature_improve_children }
+			custom_tooltip = { text = tooltip_religion_feature_love_likely }
+			set_character_modifier = {
+				dynasty_opinion = 15
+				fertility = 0.15
+				key = "FAMILY_ATTR_RELIGION"
+			}
+			hidden_tooltip = {
 				set_hard_to_convert = yes
 				set_divine_blood = yes
 				set_psc_marriage = yes
@@ -1292,8 +1410,38 @@ religion_doctrine = {
 		}
 		trigger = {
 			religion = finnish_pagan_reformed
-			NOT = { 
+			NOR = {
+				has_selected_religion_feature = religion_stable
+				has_selected_religion_feature = religion_feature_finnish_2
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_hard_conversion }
+			custom_tooltip = { text = tooltip_religion_feature_stable }
+			custom_tooltip = { text = tooltip_religion_feature_meliorism } 
+			hidden_tooltip = { 
+				set_hard_to_convert = yes
+				set_short_reign_opinion_year_mult = 0
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_finnish_2 = {
+		picture = GFX_religion_feature_finnish
+		potential = {
+			has_game_started = yes
+			religion = finnish_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = finnish_pagan_reformed
+			NOR = { 
 				has_selected_religion_feature = religion_seafaring
+				has_selected_religion_feature = religion_feature_finnish
 			}
 		}
 		effect = {
@@ -1303,6 +1451,7 @@ religion_doctrine = {
 			hidden_tooltip = {
 				set_hard_to_convert = yes
 				set_seafaring = yes
+				set_allow_rivermovement = yes
 			}
 		}
 		ai_will_do = {
@@ -1390,7 +1539,6 @@ religion_doctrine = {
 		picture = GFX_religion_feature_pyramids
 		potential = {
 			has_game_started = yes
-			NOT = { religion = aztec }
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_pyramids }
@@ -1400,13 +1548,19 @@ religion_doctrine = {
 		picture = GFX_religion_feature_bon
 		potential = {
 			has_game_started = yes
-			religion = bon_reformed
+			OR = {
+				religion = bon_reformed
+				religion = sarna_pagan_reformed
+			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = bon_reformed
+			OR = {
+				religion = bon_reformed
+				religion = sarna_pagan_reformed
+			}
 			NOR = { 
 				has_selected_religion_feature = religion_holy_family
 				has_selected_religion_feature = religion_meritocratic
@@ -1454,6 +1608,7 @@ religion_doctrine = {
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
 			custom_tooltip = { text = tooltip_religion_feature_monastic }
 			custom_tooltip = { text = tooltip_religion_feature_fertility_bonus }
 			custom_tooltip = { text = tooltip_religion_feature_dynasty_bonus }
@@ -1571,47 +1726,6 @@ religion_doctrine = {
 					land_morale = 0.05
 					key = "ANIMISTIC_RELIGION"
 				}
-				set_allow_matrilineal_marriage = yes
-				set_feminist = yes
-				set_women_can_take_consorts = yes
-				set_men_can_take_consorts = yes
-				set_female_temple_holders = yes
-				set_male_temple_holders = yes
-				set_heir_designation = yes
-				#FROM = { any_demesne_title = { add_law = status_of_women_4 } } 
-			}			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
-	religion_feature_americanist = {
-		picture = GFX_religion_feature_americanist	
-		potential = {
-			has_game_started = yes
-			religion = americanist_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = americanist_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_seafaring #redundant
-				has_selected_religion_feature = religion_equal #redundant
-				has_selected_religion_feature = religion_meritocratic #redundant
-				has_selected_religion_feature = religion_adventuring #redundant
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_seafaring }
-			custom_tooltip = { text = tooltip_religion_feature_adventuring }
-			custom_tooltip = { text = tooltip_religion_feature_feminist }
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
-			hidden_tooltip = { 
-				set_allow_looting = yes
-				set_seafaring = yes
-				enable_prepared_invasion = ROOT
 				set_allows_matrilineal_marriage = yes
 				set_feminist = yes
 				set_women_can_take_consorts = yes
@@ -1625,33 +1739,34 @@ religion_doctrine = {
 		ai_will_do = {
 			factor = 50
 		}
-	}							   #Thanks ATE
-	religion_feature_occultist = { #Combination of Haruspicy and Astrology. (Also retains access to Eldership succession)
-		picture = GFX_religion_feature_slavic
+	}
+	religion_feature_starist = {
+		picture = GFX_religion_feature_astrology
 		potential = {
 			has_game_started = yes
-			religion = occultist_reformed
+			religion = starist_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = occultist_reformed
+			religion = starist_pagan_reformed
 			NOR = { 
-				has_selected_religion_feature = religion_haruspicy
-				has_selected_religion_feature = religion_astrology
+				has_selected_religion_feature = religion_monastic #redundant
+				has_selected_religion_feature = religion_meritocratic #redundant
 			}
 		}
 		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_haruspicy }
-			custom_tooltip = { text = tooltip_religion_feature_astrology }
-			custom_tooltip = { text = tooltip_religion_feature_hermetics }
-			custom_tooltip = { text = tooltip_religion_feature_eldership }
+			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			custom_tooltip = { text = tooltip_religion_feature_monastic }
+			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
+
 		}
 		ai_will_do = {
 			factor = 50
 		}
 	}
+
 	religion_feature_nousthreskeia = {
 		picture = GFX_religion_feature_nousthreskeia
 		potential = {
@@ -1706,15 +1821,6 @@ religion_leadership = {
 		}
 		ai_will_do = {
 			factor = 50
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					NOR = { 
-						religion = norse_pagan
-						religion = aztec
-					}
-				}
-			}
 		}
 	}
 	religion_theocratic_head = {
@@ -1774,7 +1880,7 @@ religion_leadership = {
 					}
 				}
 			}
-			modifier = { 	
+			modifier = {
 				factor = 5
 				FROM = { 
 					character = yes 
@@ -1812,11 +1918,15 @@ religion_leadership = {
 					FROM = { 
 						character = yes 
 						OR = { 
-							religion = celtic_pagan 
+							religion = celtic_pagan
 							religion = hellenic_pagan
-						} 
+							religion = starist_pagan
+						}
 					}
-					has_selected_religion_feature = religion_monastic
+					OR = {
+						has_selected_religion_feature = religion_monastic
+						has_selected_religion_feature = religion_feature_starist
+					}
 				}
 				set_character_modifier = {
 					martial = 2
@@ -1831,6 +1941,7 @@ religion_leadership = {
 						OR = { 
 							religion = celtic_pagan
 							religion = hellenic_pagan
+							religion = starist_pagan
 						} 
 					} 
 				}
@@ -1843,10 +1954,7 @@ religion_leadership = {
 				limit = { 
 					FROM = { 
 						character = yes 
-							OR = {
-								religion = baltic_pagan
-								religion = americanist
-							}
+							religion = baltic_pagan
 					}
 					has_selected_religion_feature = religion_monastic
 				}
@@ -1861,7 +1969,6 @@ religion_leadership = {
 					FROM = { 
 						character = yes 
 						religion = baltic_pagan
-						religion = americanist
 					}
 				}
 				set_character_modifier = {
@@ -1876,7 +1983,6 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = occultist
 							religion = maunaxite
 						}
 					}
@@ -1898,7 +2004,6 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = occultist
 							religion = maunaxite
 						}
 					}
@@ -1912,11 +2017,7 @@ religion_leadership = {
 				limit = { 
 					FROM = { 
 						character = yes 
-						OR = { 
-							religion = west_african_pagan
-							religion = zun_pagan
-							religion = nousthreskeia
-						}
+						religion = nousthreskeia
 					}
 					has_selected_religion_feature = religion_monastic
 				}
@@ -1930,11 +2031,7 @@ religion_leadership = {
 				limit = { 
 					FROM = { 
 						character = yes 
-						OR = { 
-							religion = west_african_pagan
-							religion = zun_pagan
 							religion = nousthreskeia
-						}
 					}
 				}
 				set_character_modifier = {
@@ -1983,24 +2080,7 @@ religion_leadership = {
 				factor = 0.1
 				FROM = { 
 					character = yes 
-					NOR = { 
-						religion = bon
-						religion = west_african_pagan
-					}
-				}
-			}
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					religion = zun_pagan 
-				}
-			}
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					religion = norse_pagan 
+					religion = bon
 				}
 			}
 			modifier = { 	
@@ -2057,11 +2137,8 @@ religion_leadership = {
 					limit = { 
 						OR = { 
 							religion = orthodox 
-							religion = monothelite
-							religion = iconoclast
-							religion = paulician
-							religion = miaphysite
-							religion = monophysite
+							religion = armenianapostolic
+							religion = koptic
 						} 
 					}
 					set_autocephaly = yes
@@ -2072,15 +2149,8 @@ religion_leadership = {
 							religion_group = christian
 							religion_group = zoroastrian_group
 							religion_group = jewish_group
-							religion_group = dharmic
+							religion_group = indian_group
 						} 
-						NOR = {
-							religion = cathar
-							religion = waldensian
-							religion = lollard
-							religion = bogomilist
-							religion = messalian
-						}
 					}
 					set_can_grant_divorce = yes
 				}
@@ -2090,12 +2160,8 @@ religion_leadership = {
 							religion = catholic
 							religion = fraticelli
 							religion = orthodox
-							religion = miaphysite
-							religion = monophysite
-							religion = monothelite
-							religion = iconoclast
-							religion = paulician
-							religion = nestorian
+							religion = koptic
+							religion = armenianapostolic
 							religion_group = zoroastrian_group
 							religion_group = jewish_group
 						} 
