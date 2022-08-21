@@ -14,18 +14,29 @@ isnt_forced_to_theocracy = {
 			religion = zarist
 			religion = stalinist
 			religion = katerinist
+			religion = petrist
 			religion = trotskyite
 			religion = titoist
 			religion = khanist
 			religion = transatlantic
 			religion = anglican
-			religion = dynamitist
 			religion = druze
 			religion = xinjiao
 			religion = summer_queen
 			religion = gnostic
 			religion = marblists
 			religion = high_church
+			religion = leninist
+			religion = alawite
+			religion = pashartist
+			religion = blorgist
+			religion = maoist
+			religion = juche
+			religion = pusaka
+			religion = ho_cult
+			religion = eastern_lightning
+			religion = el_shaddai
+			religion = red_cult
 			has_religion_feature = religion_temporal_head
 			AND = {
 				has_religion_features = no
@@ -40,6 +51,7 @@ is_equalist_religion = {
 		religion = bahai
 		religion = katerinist
 		religion = hussite
+		religion = sikh
 		has_game_rule = {
 			name = gender
 			value = all
@@ -107,6 +119,28 @@ religion_openly_starist_pagan_or_reformed_trigger = {
 		}
 	}
 }
+religion_openly_sarna_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_sarna_pagan_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = sarna_pagan
+				religion = sarna_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_inuit_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_inuit_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = inuit_pagan
+				religion = inuit_pagan_reformed
+			}
+		}
+	}
+}
 religion_openly_novelist_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_novelist_or_reformed_trigger
@@ -157,18 +191,6 @@ religion_openly_gnostic_trigger = {
 	}
 }
 
-religion_openly_lakefolk_or_reformed_trigger = {
-	custom_tooltip = {
-		text = religion_openly_maunaxite_or_reformed_trigger
-		hidden_trigger = {
-			OR = {
-				religion = lakefolk_pagan
-				religion = lakefolk_reformed
-			}
-		}
-	}
-}
-
 religion_openly_nousthreskeia_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_nousthreskeia_or_reformed_trigger
@@ -176,28 +198,6 @@ religion_openly_nousthreskeia_or_reformed_trigger = {
 			OR = {
 				religion = nousthreskeia
 				religion = nousthreskeia_reformed
-			}
-		}
-	}
-}
-religion_openly_occultist_or_reformed_trigger = {
-	custom_tooltip = {
-		text = religion_openly_occultist_or_reformed_trigger
-		hidden_trigger = {
-			OR = {
-				religion = occultist
-				religion = occultist_reformed
-			}
-		}
-	}
-}
-religion_openly_americanist_or_reformed_trigger = {
-	custom_tooltip = {
-		text = religion_openly_americanist_or_reformed_trigger
-		hidden_trigger = {
-			OR = {
-				religion = americanist
-				religion = americanist_reformed
 			}
 		}
 	}
@@ -222,10 +222,15 @@ is_communist_religion_trigger = { # Stalinism, its heresies and Maoism
 	OR = {
 		religion = stalinist
 		religion = trotskyite
+		religion = leninist
 		religion = titoist
 		religion = maoist
-		religion = maunaxite
-		religion = maunaxite_reformed
+		religion = navayana
+		religion = karmapa
+		religion = combuddhist
+		religion = ho_cult
+		religion = juche
+		religion = red_cult
 	}
 }
 is_zarist_religion_trigger = {
@@ -235,20 +240,28 @@ is_zarist_religion_trigger = {
 		religion = petrist
 	}
 }
-is_nobelian_religion_trigger = {
-	OR = {
-		religion = nobelian
-		religion = dynamitist
-	}
-}
 is_ironist_religion_trigger = {
 	religion = ironist
+}
+is_muwahidunna_religion_trigger = {
+	religion = muwahidunna
 }
 is_khanist_religion_trigger = {
 	religion = khanist
 }
+is_steppe_religion_trigger = {
+	OR = {
+		religion = tengri_pagan
+		religion = tengri_pagan_reformed
+		religion = khanist
+		religion = ironist
+	}
+}
 is_jacobinist_religion_trigger = {
 	religion = jacobinist
+}
+is_constitutional_religion_trigger = {
+	religion = constitutional
 }
 is_jadidist_religion_trigger = {
 	religion = jadidist
@@ -259,6 +272,48 @@ is_yarsani_religion_trigger = {
 		religion = yazidi
 	}
 }
+
+# Abrahamic branches
+is_protestant_religion_trigger = {
+	OR = {
+		religion = lutheran
+		religion = vagarna
+		religion = gnostic
+		religion = baptist
+		religion = charismatic
+		religion = xinjiao
+		religion = eastern_protestant
+		religion = calvinist
+		religion = evangelical
+		religion = prussianist
+		religion = anglican
+		religion = quaker
+		religion = mainline
+		religion = high_church
+	}
+}
+
+christian_syncretic_religion = {
+	OR = {
+		religion = jugoslavist
+		religion = vagarna
+		religion = islamity
+		religion = muwahidunna
+		religion = bushism
+		religion = bahai
+	}
+}
+
+muslim_syncretic_religion = {
+	OR = {
+		religion = jugoslavist
+		religion = voodun
+		religion = islamity
+		religion = muwahidunna
+		religion = bahai
+	}
+}
+
 has_zarist_emulate_ambition = {
 	OR = {
 		has_ambition = obj_zarist_emulate_peter
@@ -352,7 +407,7 @@ passage_emulation_trigger = {
 		religion = lutheran
 		religion = baptist
 		religion = hussite
-		religion = neo_donatist
+		religion = neo_donatists
 	}
 }
 same_satanist_society_potential = {
@@ -419,13 +474,10 @@ safe_has_heresies = {
 	NOR = {
 		religion = theravada
 		religion = thaislam
-		religion = orthodox
-		religion = old_believer
 		religion = calvinist
 		religion = jugoslavist
 		religion = chaldean
 		religion = nasrini
-		religion = koptic
 		religion = anglican
 		religion = high_church
 		religion = ursuline
@@ -443,6 +495,14 @@ safe_has_heresies = {
 		religion = jacobinist
 		religion = khanist
 		religion = maoist
+		religion = red_cult
+		religion = armenianapostolic
+		religion = osvicenism
+		religion = navayana
+		religion = combuddhist
+		religion = ho_cult
+		religion = juche
+		religion = eastern_lightning
 	}
 }
 
@@ -450,7 +510,7 @@ is_pope_trigger = {
 	OR = {
 		has_landed_title = k_papacy
 		has_landed_title = d_fraticelli
-		has_landed_title = k_palmarian_pope
+		has_landed_title = k_sevillian_pope
 		any_claim = { title = k_papacy }
 		any_claim = { title = d_fraticelli }
 	}
@@ -460,22 +520,26 @@ has_investiture_trigger = { # Need to update laws too!
 	OR = {
 		religion = catholic
 		religion = fraticelli
-		religion = palmarian
+		religion = sevillian
 		religion = transatlantic
+		religion = katoliko
+		religion = aglipayan
 	}
 }
 has_coronation_trigger = {
 	OR = {
 		religion = catholic
 		religion = fraticelli
-		religion = palmarian
+		religion = sevillian
+		religion = aglipayan
 	}
 }
 has_coronation_religion_title_trigger = {
 	OR = { 
 		has_landed_title = k_papacy
-		has_landed_title = k_palmarian_pope
+		has_landed_title = k_sevillian_pope
 		has_landed_title = d_fraticelli
+		has_landed_title = k_aglipayan
 	}
 }
 powerful_bishop_trigger = {
@@ -500,8 +564,8 @@ should_have_coronation = {
 	is_landed = yes
 	is_vice_royalty = no
 	has_coronation_trigger = yes
-	NOR = { 
-		trait = crowned_by_pope 
+	NOR = {
+		trait = crowned_by_pope
 		trait = crowned_by_bishop
 		trait = crowned_by_priest
 		trait = crowned_by_myself
@@ -516,10 +580,15 @@ is_cardinal_trigger = {
 	OR = {
 		has_minor_title = title_cardinal
 		has_minor_title = title_fraticelli_cardinal
-		has_minor_title = title_palmarian_cardinal
+		has_minor_title = title_sevillian_cardinal
+		has_minor_title = title_jugoslavist_cardinal
+		has_minor_title = title_armenianapostolic_cardinal
+		has_minor_title = title_caodai_cardinal
+		has_minor_title = title_katoliko_cardinal
+		has_minor_title = title_aglipayan_cardinal
 	}
 }
-holy_war_start_trigger = {	
+holy_war_start_trigger = {
 	conditional_tooltip = {
 		trigger = {
 			has_game_rule = { name = holy_war_cooldown_rule value = on }
@@ -546,7 +615,7 @@ seafaring_doctrine_trigger = {
 }
 pirate_raider_trait_gain_trigger = {
 	OR = {
-		religion_group = pirate
+		religion_group = oceanic
 		any_owned_bloodline = {
 			has_bloodline_flag = bloodline_viking
 		}
@@ -554,6 +623,7 @@ pirate_raider_trait_gain_trigger = {
 			has_religion_feature = religion_adventuring
 			has_religion_feature = religion_seafaring
 		}
+		has_religion_feature = religion_feature_celtic
 	}
 }
 can_use_muslim_stuff_trigger = {
@@ -572,8 +642,29 @@ abrahamic_religion_trigger = {
 	OR = {
 		religion_group = christian
 		religion_group = muslim
-		religion_group = syncratic_group
+		religion = islamity
+		religion = muwahidunna
+		religion = jugoslavist
+		religion = bahai
+		religion = vagarna
+		religion = bushism
 		religion_group = jewish_group
+		religion = druze
+		religion = alawite
+	}
+}
+abrahamic_without_jews_religion_trigger = {
+	OR = {
+		religion_group = christian
+		religion_group = muslim
+		religion = islamity
+		religion = muwahidunna
+		religion = jugoslavist
+		religion = bahai
+		religion = vagarna
+		religion = bushism
+		religion = druze
+		religion = alawite
 	}
 }
 novelist_switch_trigger = {
@@ -781,6 +872,7 @@ jacobinist_revolution_trigger = {
 		name = jacobinist_revolution
 		value = on
 	}
+	NOT ={ year = 2700 }
 	controls_religion = no
 	is_landed = yes
 	is_tribal = no
@@ -796,7 +888,6 @@ jacobinist_revolution_trigger = {
 	NOT = {
 		has_alternate_start_parameter = { key = religion_names value = random }
 	}
-	is_landed = yes
 	NOT = { religion = jacobinist }
 	higher_tier_than = COUNT
 	d_jacobinist = {
@@ -828,4 +919,13 @@ jacobinist_revolution_trigger = {
 
 		NOT = { has_global_flag = jacobin_revolt_ongoing }
 	}
+}
+iqta_religion_trigger = {
+	OR = {
+	religion_group = muslim
+	religion = ahlehaqq
+	}
+	NOT = { religion = koranist }
+	NOT = { religion = ramadi }
+	NOT = { religion = syafi }
 }

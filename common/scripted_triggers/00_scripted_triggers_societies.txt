@@ -40,10 +40,13 @@ is_christian_monastic_member_trigger = {
 		society_member_of = monastic_order_orthodox
 		society_member_of = monastic_order_benedictine
 		society_member_of = monastic_order_dominican
+		society_member_of = monastic_order_ignatius
 		society_member_of = monastic_order_nestorian
 		society_member_of = monastic_order_monophysite
 		society_member_of = monastic_order_lutheran
 		society_member_of = monastic_order_methodist
+		society_member_of = monastic_order_osvicenism
+		society_member_of = monastic_order_kirishitan
 	}
 }
 
@@ -60,9 +63,11 @@ is_monastic_member_trigger = {
 		is_dharmic_monastic_member_trigger = yes
 		is_christian_monastic_member_trigger = yes
 		society_member_of = monastic_order_stoics
-		society_member_of = monastic_order_nobelian	
 		society_member_of = monastic_order_novelist
 		society_member_of = monastic_order_zhao
+		society_member_of = monastic_order_jewish
+		society_member_of = monastic_order_jugoslavist
+		society_member_of = monastic_order_qurani
 	}
 }
 
@@ -83,21 +88,22 @@ has_common_devilworship_prerequisites = {
 }
 
 has_satanists_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_satanists_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_satanists_prerequisites_special = yes
+	}
 }
 has_satanists_prerequisites_special = {
 	OR = {
-		religion_group = christian
-		religion_group = muslim
+		abrahamic_without_jews_religion_trigger = yes
 		religion_group = zoroastrian_group
-		religion_group = jewish_group
-		is_jadidist_religion_trigger = yes
 	}
 }
 has_cult_of_kali_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_cult_of_kali_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_cult_of_kali_prerequisites_special = yes
+	}
 }
 has_cult_of_kali_prerequisites_special = {
 	OR = {
@@ -109,23 +115,29 @@ has_cult_of_kali_prerequisites_special = {
 	}
 }
 has_cold_ones_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_cold_ones_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_cold_ones_prerequisites_special = yes
+	}
 }
 has_cold_ones_prerequisites_special = {
 	OR = {
 		religion_openly_baltic_or_reformed_trigger = yes
 		religion_openly_finnish_or_reformed_trigger = yes
 		religion_openly_folklorist_or_reformed_trigger = yes
+		religion_openly_starist_pagan_or_reformed_trigger = yes
 		is_communist_religion_trigger = yes
 	}
 }
 has_plaguebringers_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_plaguebringers_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_plaguebringers_prerequisites_special = yes
+	}
 }
 has_plaguebringers_prerequisites_special = {
 	OR = {
+		religion_openly_tengri_or_reformed_trigger = yes
 		is_ironist_religion_trigger = yes
 		is_khanist_religion_trigger = yes
 	}
@@ -138,8 +150,8 @@ has_bacchants_prerequisites_special = {
 	OR = { 
 		religion_openly_hellenic_or_reformed_trigger = yes
 		culture = turkish #Those femboys are tempting.
-		culture = greek #Those femboys are tempting.
-		culture = rumca #Those femboys are tempting.
+		culture_group = byzantine #Those femboys are tempting.
+		culture = arvanitika #Those femboys are tempting.
 		AND = { 
 			has_global_flag = flag_started_roman_renaissance
 			top_liege = { has_landed_title = e_roman_empire } #Historically a plague for the Empire.
@@ -159,32 +171,36 @@ has_unseelie_petitioners_prerequisites_special = {
 	}
 }
 has_starry_wisdom_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_starry_wisdom_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_starry_wisdom_prerequisites_special = yes
+	}
 }
 has_starry_wisdom_prerequisites_special = {
 	OR = {
 		religion_group = esoteric
-		religion_openly_occultist_or_reformed_trigger = yes
-		#is_jacobinist_religion_trigger = yes #They fit nowhere.
 	}
 }
 has_davy_jones_mates_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_davy_jones_mates_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_davy_jones_mates_prerequisites_special = yes
+	}
 }
 has_davy_jones_mates_prerequisites_special = {
-	religion_group = pirate
+	religion_group = oceanic
 }
 has_the_illuminati_prerequisites = {
-	has_common_devilworship_prerequisites = yes
-	has_the_illuminati_prerequisites_special = yes
+	OR = {
+		has_common_devilworship_prerequisites = yes
+		has_the_illuminati_prerequisites_special = yes
+	}
 }
 has_the_illuminati_prerequisites_special = {
 	OR = {
-		is_nobelian_religion_trigger = yes
 		is_zarist_religion_trigger = yes
-		religion_openly_americanist_or_reformed_trigger = yes
+		is_constitutional_religion_trigger = yes
+		is_jacobinist_religion_trigger = yes
 	}
 }
 

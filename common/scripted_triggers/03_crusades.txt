@@ -96,7 +96,7 @@ defender_pledge_crusade_trigger = {
 					is_within_diplo_range = ROOT
 				}
 			}
-			palmarian = {
+			sevillian = {
 				crusade_target_char = {
 					is_within_diplo_range = ROOT
 				}
@@ -120,7 +120,7 @@ defender_pledge_crusade_trigger = {
 				}
 			}
 		}
-		palmarian = {
+		sevillian = {
 			NOT = {
 				crusade_target_char = {
 					character = PREVPREV
@@ -151,7 +151,7 @@ check_if_crusader_trigger = {
 				OR = {
 					religion = catholic
 					religion = fraticelli
-					religion = palmarian
+					religion = sevillian
 				}
 				OR = {
 					has_pledged_crusade_participation = yes
@@ -193,21 +193,10 @@ check_if_crusader_trigger = {
 check_if_alternate_crusades_trigger = {
 	NOR = {
 		any_war = {
-			OR = {
-				using_cb = northern_crusade_war
-				using_cb = shepherds_crusade_invasion
-			}
+			using_cb = shepherds_crusade_invasion
 		}
 
 		trigger_if = {
-			limit = { has_global_flag = northern_crusades_active }
-
-			OR = {
-				has_landed_title = d_teutonic_order
-				has_landed_title = k_teutonic_state
-			}
-		}
-		trigger_else_if = {
 			limit = { has_global_flag = active_reconquista }
 
 			OR = {
@@ -260,6 +249,7 @@ check_if_not_fourth_crusade_trigger = {
 has_reconquista_culture = {
 	OR = {
 		culture_group = caucasian
+		culture_group = armenian_group
 		culture_group = albanian
 		culture_group = byzantine
 		culture = assyrian				

@@ -1,0 +1,430 @@
+########################################################
+# RELIGIOUS TITLES
+# Titles given out by the religious head
+########################################################
+#	religion: Religion that owns this title.
+#	can_elect_head: If holders of this title can elect a new head.
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allow: conditions for the character to hold the title
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+title_cardinal = {
+	religion = catholic
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = catholic
+		is_theocracy = yes
+		k_papacy = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = k_papacy
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_fraticelli_cardinal = {
+	religion = fraticelli
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = fraticelli
+		is_theocracy = yes
+		d_fraticelli = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = d_fraticelli
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_sevillian_cardinal = {
+	religion = sevillian
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = sevillian
+		is_theocracy = yes
+		k_sevillian_pope = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_gelugpa_cardinal = {
+	religion = gelugpa
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = gelugpa
+		is_theocracy = yes
+		d_gelugpa = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = d_gelugpa
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_armenianapostolic_cardinal = {
+	religion = armenianapostolic
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = armenianapostolic
+		is_theocracy = yes
+		d_armenianapostolic = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = d_armenianapostolic
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_jugoslavist_cardinal = {
+	religion = jugoslavist
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = jugoslavist
+		is_theocracy = yes
+		k_serbia_triumvirate = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = k_serbia_triumvirate
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_caodai_cardinal = {
+	religion = caodai
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = caodai
+		is_theocracy = yes
+		d_cao_dai = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = d_cao_dai
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_katoliko_cardinal = {
+	religion = katoliko
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = katoliko
+		is_theocracy = yes
+		k_katoliko = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = k_katoliko
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_aglipayan_cardinal = {
+	religion = aglipayan
+	can_elect_head = yes
+	revoke_allowed = no
+	
+	grant_limit = 9
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = aglipayan
+		is_theocracy = yes
+		k_aglipayan = {
+			holder_scope = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = k_aglipayan
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}

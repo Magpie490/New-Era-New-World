@@ -1,0 +1,75 @@
+##################################################
+#
+# STRATEGIC EFFECTS - A.K.A. "TRIGGERED MODIFIERS"
+#
+##################################################
+
+# Bankruptcy
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		NOT = { wealth = 0 }
+	}
+	
+	icon = 24
+	
+	land_morale = -0.25
+	
+	active = no
+}
+
+jacobinist_havent_sacrificed = {
+	potential = {
+		is_playable = yes
+		religion = jacobinist
+	}
+	
+	trigger = {
+		ruled_years = 5
+		NOT = { has_character_modifier = madame_sacrifice_timer_1 }
+		religion = jacobinist
+	}
+	
+	icon = 42
+	
+	monthly_character_piety = -2
+	
+	#active = no
+}
+
+austria_hungary_hungarian_bonus = {
+	potential = {
+		is_playable = yes
+	}
+	
+	trigger = {
+		culture = austrian
+		has_landed_title = e_austria_hungary
+	}
+	
+	icon = 16 
+	
+	hungarian_opinion = 5
+	
+	#active = no
+}
+
+austria_hungary_austrian_bonus = {
+	potential = {
+		is_playable = yes
+	}
+	
+	trigger = {
+		culture = hungarian
+		has_landed_title = e_austria_hungary
+	}
+	
+	icon = 16 
+	
+	austrian_opinion = 5
+	
+	#active = no
+}

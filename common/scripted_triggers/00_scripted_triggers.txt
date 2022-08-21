@@ -194,10 +194,8 @@ has_impious_trait_trigger = {
 		trait = cynical
 		trait = bad_priest_christian
 		trait = bad_priest_muslim
-		trait = bad_priest_norse
 		trait = bad_priest_tengri
 		trait = bad_priest_zoroastrian
-		trait = bad_priest_aztec
 		trait = hedonist
 		trait = lustful
 		trait = cannibal_trait
@@ -776,10 +774,6 @@ has_crusade_trait_trigger = {
 		trait = communist_crusader
 	}
 	trigger_else_if = {
-		limit = { is_nobelian_religion_trigger = yes }
-		trait = nobelian_crusader
-	}
-	trigger_else_if = {
 		limit = { is_khanist_religion_trigger = yes }
 		trait = khanist_crusader
 	}
@@ -793,7 +787,11 @@ has_crusade_trait_trigger = {
 	}
 	trigger_else_if = {
 		limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
-		trait = inuit_pagan_crusader
+		trait = crusader_inuit
+	}
+	trigger_else_if = {
+		limit = { religion_openly_bon_or_reformed_trigger = yes }
+		trait = kailash_guardian
 	}
 	trigger_else_if = {
 		limit = { religion_openly_lakefolk_pagan_or_reformed_trigger = yes }
@@ -801,19 +799,15 @@ has_crusade_trait_trigger = {
 	}
 	trigger_else_if = {
 		limit = { religion_openly_starist_pagan_or_reformed_trigger = yes }
-		trait = starist_pagan_crusader
+		trait = starist_crusader
+	}
+	trigger_else_if = {
+		limit = { religion_openly_inuit_or_reformed_trigger = yes }
+		trait = crusader_inuit
 	}
 	trigger_else_if = {
 		limit = { religion_openly_novelist_or_reformed_trigger = yes }
 		trait = novelist_crusader
-	}
-	trigger_else_if = {
-		limit = { religion_openly_occultist_or_reformed_trigger = yes }
-		trait = occultist_crusader
-	}
-	trigger_else_if = {
-		limit = { religion_openly_americanist_or_reformed_trigger = yes }
-		trait = americanist_crusader
 	}
 	trigger_else_if = {
 		limit = { religion = summer_queen }
@@ -822,6 +816,34 @@ has_crusade_trait_trigger = {
 	trigger_else = {
 		religion_openly_maunaxite_or_reformed_trigger = yes
 		trait = maunaxite_crusader
+	}
+	trigger_else = {
+		religion_openly_maoist_trigger = yes
+		trait = maoist_crusader
+	}
+	trigger_else = {
+		religion_openly_gnostic_trigger = yes
+		trait = gnostic_crusader
+	}
+	trigger_else = {
+		religion_openly_lakefolk_pagan_or_reformed_trigger = yes
+		trait = lakefolk_crusader
+	}
+	trigger_else = {
+		religion_openly_starist_pagan_or_reformed_trigger = yes
+		trait = starist_crusader
+	}
+	trigger_else = {
+		religion_openly_inuit_or_reformed_trigger = yes
+		trait = crusader_inuit
+	}
+	trigger_else = {
+		religion_openly_bon_or_reformed_trigger = yes
+		trait = kailash_guardian
+	}
+	trigger_else = {
+		religion_openly_sarnaist_or_reformed_trigger = yes
+		trait = crusader_sarnaist
 	}
 }
 
@@ -966,10 +988,6 @@ can_be_marshal_trigger = {
 						
 					}
 				}
-			}
-			OR = {
-				NOT = { religion = hindu }
-				trait = kshatriya
 			}
 			is_adult = yes
 		}
@@ -1144,7 +1162,13 @@ can_be_spiritual_trigger = {
 				has_religion_feature = religion_patriarchal
 			}
 			OR = {
-				NOT = { religion = hindu }
+				NOR = {
+					religion = old_hindu
+					religion = parabrahmanist
+					religion = jain
+					religion = maunaxite_reformed
+					religion = maunaxite
+				}
 				trait = brahmin
 				is_ascetic_trigger = yes
 			}
@@ -1375,6 +1399,7 @@ is_unimportant_trigger = {
 		has_character_modifier = elder_long_life_modifier
 		immortal = yes
 		trait = possible_reincarnation_of_god
+		trait = real_reincarnation_of_god
 	}
 }
 
@@ -1715,6 +1740,15 @@ is_richer_holding = {
 	}
 }
 
+has_positive_congenital_trigger = {
+    OR = {
+        trait = strong
+        trait = fair
+        trait = quick
+        trait = genius
+    }
+}
+
 has_negative_congenital_trigger = {
 	OR = {
 		trait = ugly
@@ -1899,13 +1933,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				ROOT = { religion = bogomilist }
 			}
 		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = monothelite
-				ROOT = { religion = monothelite }
-			}
-		}
+		# NAND = {
+			# any_artifact = {
+				# has_artifact_flag = looted_artifact_tooltip_1
+				# has_artifact_flag = monothelite
+				# ROOT = { religion = monothelite }
+			# }
+		# }
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
@@ -2619,6 +2653,7 @@ proselytize_convert_independent_trigger = {
 					religion_group = jewish_group 
 					religion = mandaeanism
 					religion = druze
+					religion = alawite
 					religion = ironist
 					religion = khanist
 					religion = zarist
@@ -2635,6 +2670,7 @@ proselytize_convert_independent_trigger = {
 		NOT = { religion = FROM }
 		OR = {
 			religion_group = pagan_group
+			religion_group = oceanic
 			religion = ironist
 			religion = khanist
 			religion = zarist
@@ -3415,23 +3451,22 @@ has_scarred_trait_trigger = {
 this_is_warrior_culture_trigger = { #Not really about culture - Used in AI voting logic.
 	NOT = { pacifist = yes }
 	OR = { 
-		AND = {
-			religion_group = muslim
-			NOT = { religion = bahai }
-		}
-		religion_group = pirate
+		religion_group = muslim
+		religion_group = oceanic
 		is_khanist_religion_trigger = yes
 		is_ironist_religion_trigger = yes
 		religion = hellenic_pagan
 		religion = maunaxite
+		religion = purge
 		has_religion_feature = religion_warlike
 		is_tribal = yes
 		is_nomadic = yes
+		#government = military_government
 		AND = { 
 			NOT = { has_dlc = "Holy Fury"}
 			religion = hellenic_pagan_reformed
 		}
-		AND = { 
+		AND = {
 			NOT = { has_dlc = "Holy Fury"}
 			religion = maunaxite_reformed
 		}
@@ -3462,10 +3497,9 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 	}
 }
 this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI voting logic.
-	OR = { 
+	OR = {
 		religion_group = indian_group
 		religion_group = buddhist_group
-		is_nobelian_religion_trigger = yes
 		has_religion_feature = religion_peaceful
 		religion = bahai
 	}
@@ -3481,7 +3515,7 @@ this_is_sea_raider_trigger = {
 }
 
 #Sex restrictions on Great Tribal Festival activities.
-can_enter_festival_physical_competitions_trigger = { 
+can_enter_festival_physical_competitions_trigger = {
 	is_adult = yes
 	OR = {
 		AND = {
@@ -3778,6 +3812,15 @@ has_any_sympathy_trait_trigger = {
 		trait = sympathy_zoroastrianism
 		trait = sympathy_judaism
 		trait = sympathy_indian
+		trait = sympathy_syncratic
+		trait = sympathy_old_world_cultist
+		trait = sympathy_oceanic
+		trait = sympathy_buddhism
+		trait = sympathy_esoteric
+		trait = sympathy_alien
+		trait = sympathy_synth
+		trait = sympathy_chinese
+		trait = sympathy_shinto
 	}
 }
 
@@ -4111,6 +4154,13 @@ region_africa_west_central_or_east_trigger = {
 		region = world_africa_west
 		region = world_africa_east
 		region = world_africa_central
+		region = world_india
+		region = world_southern_himalayas
+		region = world_zhujiang
+		region = world_minyue
+		region = world_southeast_asia
+		region = world_taiwan
+		region = world_ryukyu
 	}
 }
 
@@ -4193,11 +4243,7 @@ have_duplicate_goldsmith_artifacts_flag_good_trigger = {
 		  	}
 		}
 		AND = {
-	        OR = {
-	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
-	        }
+	        religion_group = muslim 
 	        AND = {
 		        has_artifact = bejeweled_dagger
         		has_artifact = golden_bracelets
@@ -4217,8 +4263,6 @@ have_duplicate_goldsmith_artifacts_flag_good_trigger = {
         AND = {
 	        OR = {
 	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
 			}
 			AND = {
 			    has_artifact = circlet_of_the_heavens
@@ -4226,10 +4270,6 @@ have_duplicate_goldsmith_artifacts_flag_good_trigger = {
         	}
         }
        	AND = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
 		    AND = {
 		        has_artifact = crown_of_the_sea
         		has_artifact = golden_sword
@@ -4257,11 +4297,7 @@ have_duplicate_goldsmith_artifacts_flag_expensive_trigger = {
 		  	}
 		}
 		AND = {
-	        OR = {
-	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
-	        }
+	        religion_group = muslim 
 	        AND = {
 		        has_artifact = dagger_of_glory
 		        has_artifact = ruby_bracelets
@@ -4279,21 +4315,13 @@ have_duplicate_goldsmith_artifacts_flag_expensive_trigger = {
         	}
         }
         AND = {
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			AND = {
 			    has_artifact = circlet_of_the_heavens
 			    has_artifact = staff_of_majesty
         	}
         }
        	AND = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
 		    AND = {
 		        has_artifact = crown_of_crows
 		        has_artifact = sword_of_heroes
@@ -4321,11 +4349,7 @@ have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
 		  	}
 		}
 		AND = {
-	        OR = {
-	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
-	        }
+	        religion_group = muslim 
 	        AND = {
 		        has_artifact = dagger_of_glory_2
 		        has_artifact = ruby_bracelets_2
@@ -4343,21 +4367,13 @@ have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
         	}
         }
         AND = {
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			AND = {
 			    has_artifact = circlet_of_the_heavens_2
 			    has_artifact = staff_of_majesty_2
         	}
         }
        	AND = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
 		    AND = {
 		        has_artifact = crown_of_crows_2
 		        has_artifact = sword_of_heroes_2
@@ -4742,16 +4758,308 @@ have_duplicate_smith_artifacts_flag_expensive_optionC_trigger = {
 
 is_accepting_of_homosexuality_trigger = {
 	hidden_tooltip = {
-		OR = { 
+		OR = {
 			religion = thelemic
 			religion = thelemic_reformed
 			religion = lutheran
 			religion = vagarna
 			religion = katerinist
+			religion = summer_queen
+			religion = orange_king
 			trait = maaravi_reform
+			trait = koranist_progressive
+			trait = jew_liberal
+			is_alien_religion_trigger = yes
 			has_character_flag = overridemarriage
 			has_religion_feature = religion_equal
 		}
-	
 	}
+}
+this_has_terrible_opinion_modifier_of_prev_extended_trigger = {
+    OR = {
+        #Personal grievances.
+
+        has_opinion_modifier = { who = PREV modifier = opinion_hate }
+        has_opinion_modifier = { who = PREV modifier = opinion_tortured_me }
+        has_opinion_modifier = { who = PREV modifier = opinion_mutilated_me }
+        has_opinion_modifier = { who = PREV modifier = opinion_imprisoned }
+        has_opinion_modifier = { who = PREV modifier = attempted_murder }
+
+        #Family grievances
+        has_opinion_modifier = { who = PREV modifier = opinion_tortured_family }
+        has_opinion_modifier = { who = PREV modifier = opinion_tortured_close_kin }
+        has_opinion_modifier = { who = PREV modifier = opinion_mutilated_family }
+        has_opinion_modifier = { who = PREV modifier = opinion_mutilated_close_kin }
+        has_opinion_modifier = { who = PREV modifier = opinion_executed_child }
+
+        has_opinion_modifier = { who = PREV modifier = attempted_murder_of_spouse }
+        has_opinion_modifier = { who = PREV modifier = attempted_murder_of_child }
+        has_opinion_modifier = { who = PREV modifier = attempted_murder_of_parent }
+        has_opinion_modifier = { who = PREV modifier = attempted_murder_of_sibling }
+    }
+}
+prev_has_terrible_opinion_modifier_of_this_extended_trigger = {
+    OR = {
+        #Personal grievances.
+
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_hate }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_me }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_me }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_imprisoned }
+        reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder }
+
+        #Family grievances
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_family }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_close_kin }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_family }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_close_kin }
+        reverse_has_opinion_modifier = { who = PREV modifier = opinion_executed_child }
+
+        reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_spouse }
+        reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_child }
+        reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_parent }
+        reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_sibling }
+    }
+}
+
+higher_society_rank_than_root_trigger = {
+    OR = {
+        AND = {
+            ROOT = { society_rank == 1 }
+            society_rank > 1
+        }
+        AND = {
+            ROOT = { society_rank == 2 }
+            society_rank > 2
+        }
+        AND = {
+            ROOT = { society_rank == 3 }
+            society_rank > 3
+        }
+    }
+}
+
+can_still_be_commander_byzantine_trigger = { 
+	NOT = { 
+		primary_title = { temporary = yes } 
+	}
+	liege = { 
+		character = FROMFROM 
+		has_law = succ_byzantine_elective
+	}
+	OR = {
+		AND = {
+			OR = {
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_commander_title_trigger = yes
+			}
+			OR = {
+				NOR = {
+					religion = old_hindu
+					religion = parabrahmanist
+					religion = jain
+					religion = maunaxite_reformed
+					religion = maunaxite
+				}
+				trait = kshatriya
+			}
+			is_adult = yes
+		}
+		has_character_flag = special_marshal
+	}
+	
+	prisoner = no
+	NOT = { trait = incapable }
+ 	NOT = { trait = sick_incapable }
+	NOT = { is_inaccessible_trigger = yes }
+	NOT = { has_character_flag = guru }
+	NOT = { has_character_modifier = refusing_to_lead }
+	NOR = { 
+		war_with = FROMFROM
+		any_liege = {  
+			war_with = FROMFROM
+		}
+	}
+	OR = { 
+		higher_real_tier_than = BARON #Either potential commander is vassal...
+		NOT = { #...Or there are no valid vassal candidates that can be commanders.
+			custom_tooltip = { 
+				text = tooltip_byzantine_empire_can_appoint_commanders
+				liege = { 
+					any_vassal = { 
+						higher_real_tier_than = BARON
+						NOT = { 
+							primary_title = { temporary = yes } 
+						}
+						OR = {
+							AND = {
+								OR = {
+									male_can_hold_minor_title_trigger = yes
+									female_can_hold_minor_commander_title_trigger = yes
+								}
+								OR = {
+									NOR = {
+										religion = old_hindu
+										religion = parabrahmanist
+										religion = jain
+										religion = maunaxite_reformed
+										religion = maunaxite
+									}
+									trait = kshatriya
+								}
+								is_adult = yes
+							}
+							has_character_flag = special_marshal
+						}
+						
+						prisoner = no
+						NOT = { trait = incapable }
+						NOT = { is_inaccessible_trigger = yes }
+						NOT = { has_character_flag = guru }
+						NOT = { has_character_modifier = refusing_to_lead }
+						NOR = {
+							has_job_title = job_chancellor
+							has_job_title = job_marshal
+							has_job_title = job_treasurer
+							has_job_title = job_spymaster
+							has_job_title = job_spiritual
+							has_minor_title = title_commander
+						}
+					} 
+				} 
+			} 
+		}
+	}
+}
+
+can_still_be_marshal_byzantine_trigger = {
+	liege = { 
+		character = FROMFROM
+		has_law = succ_byzantine_elective
+	}
+	NOR = { 
+		war_with = FROMFROM
+		any_liege = {  
+			war_with = FROMFROM
+		}
+	}
+	OR = {
+		AND = {
+			OR = {
+				AND = { #Patriarchal religions can only hire males. Matriarchal religions can only hire females.
+					is_female = no 
+					NOT = { liege = { has_religion_feature = religion_matriarchal } } 
+				}
+				AND = {
+					is_female = yes 
+					OR = { 
+						liege = { has_religion_feature = religion_matriarchal } 
+						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_bon } 
+					} 
+				}
+				trait = horse # So we can have female glitterhoofs! :D
+				OR = {
+					AND = {
+						religion = cathar
+						liege = { religion = cathar }
+					}
+					AND = {
+						religion = messalian
+						liege = { religion = messalian }
+					}
+				}
+				AND = {
+					liege = {
+						primary_title = {
+							OR = {
+								has_law = status_of_women_3
+							}
+						}
+					}
+					OR = {
+						liege = {
+							OR = {
+								dynasty = ROOT
+								is_close_relative = ROOT
+								any_spouse = { character = ROOT }
+								any_consort = { character = ROOT }
+							}
+						}
+						is_landed = yes
+						
+					}
+				}
+				OR = {
+					AND = { 
+						is_female = yes
+						liege = { primary_title = { has_law = status_of_women_4 } } 
+					}
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+				}
+			}
+			OR = {
+				NOR = {
+					religion = old_hindu
+					religion = parabrahmanist
+					religion = jain
+					religion = maunaxite_reformed
+					religion = maunaxite
+				}
+				trait = kshatriya
+			}
+			is_adult = yes
+		}
+		has_character_flag = special_marshal
+	}
+	
+	independent = no
+	prisoner = no
+	NOT = { trait = incapable }
+ 	NOT = { trait = sick_incapable }
+	NOT = { trait = in_hiding }
+	NOT = { has_character_flag = guru }
+	NOT = { has_character_modifier = resigned_in_anger }
+	NOT = { 
+		liege = { 
+			has_opinion_modifier = {
+				who = ROOT	
+				modifier = opinion_resigned_from_council 
+			} 
+		} 
+	}
+}
+
+is_single_player_observer_mode = {
+	AND = {
+		multiplayer = no
+		is_local_human_observer = yes
+	}
+}
+
+varangian_guard_events_default_trigger = {
+	ai = yes
+	age = 16
+	is_incapable = no
+	prisoner = no
+	culture_group = byzantine
+	has_character_flag = serving_varangian
+}
+
+
+ere_elective_politician_titles_trigger = { #Used in Imperial Elective to determine AI behavior.
+	OR = {
+		has_job_title = job_marshal
+		has_job_title = job_spymaster
+		has_job_title = job_treasurer
+		has_job_title = job_chancellor
+		has_minor_title = title_despot
+		has_minor_title = title_sebastokrator
+		has_minor_title = title_caesar
+		has_minor_title = title_kouropalates
+		has_minor_title = title_anthypatos
+	} 
 }

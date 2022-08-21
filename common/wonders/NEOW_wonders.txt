@@ -1,0 +1,1454 @@
+# A10.Notre Dame .................. wonder_cathedral_notre_dame
+# A11. Sagrada Familia .................. wonder_cathedral_sagrada_familia
+# A12. Third Temple of Jerusalem .................. wonder_synagogue_third_temple
+# A13. wonder_holland_dams
+# A14. wonder_motherland_calls
+
+#A10. Notre Dame
+wonder_cathedral_notre_dame = {
+	picture = GFX_wonder_strip_notre_dame
+	allow_construction = no
+	model = wonder_cathedral
+	potential = {
+		religion_group = christian
+	}
+	active = {
+		ROOT = {
+			OR = {
+				religion_group = christian
+				religion = novelist_reformed
+				religion = novelist
+				religion = jacobinist #Temple of Reason/the Supreme Being
+				christian_syncretic_religion = yes
+			}
+		}
+	}
+	flags = {
+		no_name_change
+		holy_building
+		inspires_piety
+		is_destructible
+		cost_medium
+		gives_artifact
+		gives_artifact_bells
+		is_historical
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_gargoyles
+		upgrade_bells
+		upgrade_stained_glass_window
+		upgrade_relic_tomb
+		upgrade_grand_basilica
+		upgrade_catacombs
+		upgrade_giant_cross
+		upgrade_bells_golden
+
+		#
+		upgrade_torture_chamber
+		upgrade_historical_mural
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2000
+		gold_cost_ticking = 3
+		restore_time = 100
+		loot_time = 6
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2200
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2400
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2600
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 1
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+			monthly_character_piety = 0.2
+		}
+	}
+}
+#A11. Sagrada Familia
+wonder_cathedral_sagrada_familia = {
+	picture = GFX_wonder_strip_sagardo
+	allow_construction = no
+	model = wonder_cathedral
+	potential = {
+		religion_group = christian
+	}
+	active = {
+		ROOT = {
+			religion_group = christian
+		}
+	}
+	flags = {
+		no_name_change
+		holy_building
+		inspires_piety
+		is_destructible
+		cost_medium
+		gives_artifact
+		gives_artifact_bells
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_gargoyles
+		upgrade_bells
+		upgrade_stained_glass_window
+		upgrade_relic_tomb
+		upgrade_grand_basilica
+		upgrade_catacombs
+		upgrade_giant_cross
+		upgrade_bells_golden
+
+		#
+		upgrade_torture_chamber
+		upgrade_historical_mural
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2000
+		gold_cost_ticking = 3
+		restore_time = 100
+		loot_time = 6
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2200
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2400
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2600
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 1
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+			monthly_character_piety = 0.2
+		}
+	}
+}
+
+# A12 Third Temple of Jerusalem
+wonder_synagogue_third_temple = {
+	picture = GFX_wonder_strip_jewish_temple
+	allow_construction = no
+	model = wonder_generic
+	potential = {
+		religion_group = jewish_group
+	}
+	active = {
+		ROOT = {
+			religion_group = jewish_group
+		}
+	}
+	flags = {
+		no_name_change
+		holy_building
+		inspires_piety
+		is_destructible
+		cost_medium
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_tallest_building
+		upgrade_garden_outer
+		upgrade_holy_ark
+		upgrade_decorations
+		upgrade_choir_rooms
+		upgrade_school_synagogue
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2000
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2200
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_piety = 0.1
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2400
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_piety = 0.2
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2600
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_piety = 0.2
+			monthly_character_prestige = 0.2
+		}
+	}
+}
+
+wonder_holland_dams = {
+	picture = GFX_wonder_strip_holland_dams
+	model = wonder_generic
+	default_picture_stage = 3
+	allow_construction = no
+	is_in_water = no
+	allow_coastal = yes
+	show_model = yes
+	background_overrides = {
+		jungle = fields
+	}
+	potential = {
+		OR = {
+			culture = dutch
+			culture = frisian
+		}
+	}
+	flags = {
+		no_name_change
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_master_of_tides
+		upgrade_military_wharf
+		upgrade_lighthouse
+		upgrade_relic_tomb
+		upgrade_catacombs
+		upgrade_giant_cross
+		upgrade_royal_apartments
+		upgrade_giant_banners
+
+		#
+		upgrade_torture_chamber
+		upgrade_historical_mural
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.5					
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.5					
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.15
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.5					
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+			fort_level = 0.5					
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.25
+		}
+	}
+}
+
+wonder_motherland_calls = {
+	picture = GFX_wonder_strip_motherland_calls
+	model = wonder_statue
+	default_picture_stage = 3
+	allow_construction = no
+	is_in_water = no
+	allow_coastal = yes
+	show_model = yes
+	background_overrides = {
+		jungle = fields
+	}
+	potential = {
+		OR = {
+			religion = folklorist_reformed
+			religion = folklorist
+			religion = zarist
+			religion = stalinist
+			religion = katerinist
+			religion = petrist
+			religion = trotskyite
+			religion = titoist
+			religion = leninist
+		}
+	}
+	active = {
+		OR = {
+			religion = folklorist_reformed
+			religion = folklorist
+			religion = zarist
+			religion = stalinist
+			religion = katerinist
+			religion = petrist
+			religion = trotskyite
+			religion = titoist
+			religion = leninist
+		}
+	}
+	flags = {
+		no_name_change
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_plating_gold
+		upgrade_plating_silver
+		upgrade_plating_bronze
+		upgrade_statues_family
+		upgrade_golden_crown
+		upgrade_watcher_of_giants
+		upgrade_eternal_flame
+		upgrade_secluded_groves
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+
+		owner_modifier = {
+			ai_zeal = 10
+			land_morale = 0.05
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+		
+		}
+		owner_modifier = {
+			ai_zeal = 10
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1				
+			}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+		
+		}
+		owner_modifier = {
+			ai_zeal = 10
+			land_morale = 0.05
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1				
+			}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		local_modifier = {
+		
+		}
+		owner_modifier = {
+			ai_zeal = 10
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1				
+
+		}
+	}
+}
+
+wonder_al_sunta_kum = {
+	picture = GFX_wonder_strip_al_sunta_kum
+	model = wonder_abrams
+	default_picture_stage = 3
+	allow_construction = no
+	is_in_water = no
+	allow_coastal = no
+	#show_model = no
+	background_overrides = {
+	}
+	potential = {
+	}
+	flags = {
+		no_name_change
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_abramiz_proving_grounds
+		upgrade_excavation_sites
+		upgrade_martial_metal_forges
+		upgrade_precious_metal_forges
+		upgrade_ancient_fortresses
+		upgrade_dhakhira
+		upgrade_memorial
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		owner_modifier = {
+			monthly_character_prestige = 0.15
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 600
+		restore_time = 90
+		loot_time = 10
+		gold_cost_flat = 1000
+		gold_cost_ticking = 2
+		restore_cost_flat = 427
+		restore_cost_ticking = 3
+		upgrade_slots = 2
+		owner_modifier = {
+			monthly_character_prestige = 0.25
+		}
+	}
+}
+wonder_bunker_city = {
+	picture = GFX_wonder_strip_bunker_city
+	show_model = no
+	default_picture_stage = 3
+	allow_construction = no
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		no_name_change
+		defensive
+		cost_medium
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_caves_natural
+		upgrade_tunnels_travel
+		upgrade_metal_mine_precious
+		upgrade_dungeon
+		upgrade_guardian_of_the_deep
+
+		#
+		upgrade_torture_chamber
+		upgrade_historical_mural
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 2000
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 200
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 2050
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 200
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 400
+		gold_cost_flat = 2100
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 500
+		gold_cost_flat = 200
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			siege_defence = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+}
+# 4B. Royal Palace
+wonder_riyadh_palaces = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_riyadhpalace
+	default_picture_stage = 3
+	allow_construction = no
+	potential = {
+	}
+	active = {
+	}
+	background_overrides = {
+		tells = desert
+	}
+	flags = {
+		no_name_change
+		inspires_relaxing
+		inspires_contentedness
+		cost_medium
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_throne_fancy
+		upgrade_trap_door
+		upgrade_royal_bedchamber
+		upgrade_skull_throne
+		upgrade_golden_throne
+		upgrade_royal_custodian
+		upgrade_automata_throne
+
+		#
+		upgrade_torture_chamber
+		upgrade_brewery
+		upgrade_historical_mural
+		upgrade_dueling_room
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 2600
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 100
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_modifier = 5
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 100
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_maintenance_cost_modifier = -0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_modifier = 5
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize_perc = 0.2
+			monthly_character_prestige = 0.1
+			land_morale = 0.03
+			court_size_maintenance_cost_modifier = -0.05
+		}
+	}
+}
+wonder_university_soroca = {
+	picture = GFX_wonder_strip_university
+	allow_construction = no
+	potential = {
+		is_nomadic = no
+		trigger_if = {
+			limit = {
+				religion_group = pagan_group
+			}
+			is_reformed_religion = yes
+		}
+	}
+	active = {
+		trigger_if = {
+			limit = {
+				religion_group = pagan_group
+			}
+			ROOT = {
+				is_reformed_religion = yes
+			}
+		}
+	}
+	flags = {
+		no_name_change
+		inspires_learning
+		cost_high
+		gives_artifact
+		gives_artifact_book
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_great_seminars
+		upgrade_wing_of_diplomacy
+		upgrade_wing_of_martial
+		upgrade_wing_of_stewardship
+		upgrade_wing_of_intrigue
+		upgrade_wing_of_learning
+		upgrade_guardian_of_knowledge
+
+		upgrade_historical_mural
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+			FROMFROMFROM = { 
+				TECH_CULTURE_FLEX = 3
+				TECH_LEGALISM = 3
+			}
+		}
+		build_time = 350
+		gold_cost_flat = 1500
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 20
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			culture_techpoints = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+			FROMFROMFROM = { 
+				TECH_CULTURE_FLEX = 3
+				TECH_LEGALISM = 3
+			}
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			culture_techpoints = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+			FROMFROMFROM = { 
+				TECH_CULTURE_FLEX = 3
+				TECH_LEGALISM = 3
+			}
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			culture_techpoints = 0.05
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+			FROMFROMFROM = { 
+				TECH_CULTURE_FLEX = 3
+				TECH_LEGALISM = 3
+			}
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+			culture_techpoints = 0.05
+			military_techpoints = 0.02
+			economy_techpoints = 0.02
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+}
+
+wonder_angkor_wat = {
+	picture = GFX_wonder_strip_hindu_temple
+	allow_construction = no
+	potential = {
+		religion_group = buddhist_group
+	}
+	active = {
+		ROOT = {
+			religion_group = buddhist_group
+		}
+	}
+	flags = {
+		holy_building
+		inspires_piety
+		is_destructible
+		cost_medium
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_chaitya-grihas
+		upgrade_gompa
+		upgrade_bodhi_tree
+		upgrade_cave_complex
+		upgrade_vihara
+		upgrade_school_buddhist
+		upgrade_skull_throne
+		upgrade_relic_stupa
+		upgrade_commerative_stupa
+		upgrade_symbolic_stupa
+		upgrade_votive_stupa
+		
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2000
+		gold_cost_ticking = 5
+		restore_time = 150
+		loot_time = 12
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.5
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2200
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 12
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2400
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 12
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2600
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.3
+		}
+	}
+}
+wonder_malacanang_palace = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_malacanang
+	allow_construction = no
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		inspires_relaxing
+		inspires_contentedness
+		cost_medium
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_throne_fancy
+		upgrade_trap_door
+		upgrade_royal_bedchamber
+		upgrade_skull_throne
+		upgrade_golden_throne
+		upgrade_royal_custodian
+		upgrade_automata_throne
+
+		#
+		upgrade_torture_chamber
+		upgrade_brewery
+		upgrade_historical_mural
+		upgrade_dueling_room
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 2600
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 100
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_modifier = 5
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 100
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_maintenance_cost_modifier = -0.05
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 315
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize = 250
+			monthly_character_prestige = 0.1
+			court_size_modifier = 5
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 2
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			retinuesize_perc = 0.2
+			monthly_character_prestige = 0.1
+			land_morale = 0.03
+			court_size_maintenance_cost_modifier = -0.05
+		}
+	}
+}
+wonder_borobudur_temple = {
+	picture = GFX_wonder_strip_borobudur
+	allow_construction = no
+	model = wonder_cathedral
+	potential = {
+	}
+	active = {
+	}
+	flags = {
+		holy_building
+		inspires_piety
+		is_destructible
+		cost_medium
+		gives_artifact
+		gives_artifact_bells
+		is_historical
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_gargoyles
+		upgrade_bells
+		upgrade_stained_glass_window
+		upgrade_relic_tomb
+		upgrade_grand_basilica
+		upgrade_catacombs
+		upgrade_giant_cross
+		upgrade_bells_golden
+
+		#
+		upgrade_torture_chamber
+		upgrade_historical_mural
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2000
+		gold_cost_ticking = 3
+		restore_time = 100
+		loot_time = 6
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.05
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2200
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 375
+		gold_cost_flat = 2400
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 6
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 325
+		gold_cost_flat = 2600
+		gold_cost_ticking = 5
+		restore_time = 200
+		loot_time = 1
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+			monthly_character_piety = 0.2
+		}
+	}
+}

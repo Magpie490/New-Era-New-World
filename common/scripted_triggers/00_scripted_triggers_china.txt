@@ -450,9 +450,6 @@ likes_albanians = {
 likes_miscellophones = {
 	culture_group = alpinian
 }
-likes_altaic_germanics = {
-	culture_group = altaic_germanic
-}
 likes_amero_lusophones = {
 	culture_group = amero_lusophone
 }
@@ -469,7 +466,7 @@ likes_balts = {
 	culture_group = baltic
 }
 likes_basque = {
-	culture_group = basque
+	culture_group = basque_group
 }
 likes_berbers = {
 	culture_group = berber
@@ -479,9 +476,6 @@ likes_britans = {
 }
 likes_caucasians = {
 	culture_group = caucasian
-}
-likes_central_africans = {
-	culture_group = central_african
 }
 likes_ruthenians = {
 	culture_group = central_slavic
@@ -504,14 +498,14 @@ likes_dardics = {
 likes_east_africans = {
 	culture_group = east_african
 }
-likes_east_asians = {
-	culture_group = east_asian_group
-}
 likes_arabs = {
 	culture_group = arabic
 }
 likes_celts = {
 	culture_group = celtic
+}
+likes_byzantines = {
+	culture_group = byzantine
 }
 likes_east_slavs = {
 	culture_group = east_slavic
@@ -537,8 +531,32 @@ likes_high_americans = {
 likes_hispanophones = {
 	culture_group = hispanophone
 }
-likes_indo_aryans = {
-	culture_group = indo_aryan_group
+likes_occitanophones = {
+	culture_group = occitanophone
+}
+likes_far_west_indo_aryans = {
+	culture_group = far_west_indo_aryan_group
+}
+likes_eastern_indo_aryans = {
+	culture_group = eastern_indo_aryan_group
+}
+likes_west_indo_aryans = {
+	culture_group = west_indo_aryan_group
+}
+likes_northern_indo_aryans = {
+	culture_group = northern_indo_aryan_group
+}
+likes_southern_indo_aryans = {
+	culture_group = southern_indo_aryan_group
+}
+likes_north_west_indo_aryans = {
+	culture_group = north_west_indo_aryan_group
+}
+likes_central_indo_aryans = {
+	culture_group = central_indo_aryan_group
+}
+likes_armenians = {
+	culture_group = armenian_group
 }
 likes_iranian = {
 	culture_group = iranian
@@ -594,14 +612,8 @@ likes_tibetans = {
 likes_transnistrians = {
 	culture_group = transnistrian
 }
-likes_west_africans = {
-	culture_group = west_african
-}
 likes_west_germans = {
 	culture_group = west_german
-}
-likes_west_indo_aryans = {
-	culture_group = west_indo_aryan_group
 }
 likes_south_indo_aryans = {
 	culture_group = southern_indo_aryan_group
@@ -611,12 +623,6 @@ likes_north_indo_aryans = {
 }
 likes_east_indo_aryans = {
 	culture_group = eastern_indo_aryan_group
-}
-likes_north_west_indo_aryans = {
-	culture_group = north_west_indo_aryan_group
-}
-likes_central_indo_aryans = {
-	culture_group = central_indo_aryan_group
 }
 likes_west_slavs = {
 	culture_group = west_slavic
@@ -660,9 +666,9 @@ likes_catholic = {
 		religion = columbian
 	}
 }
-likes_palmarian = {
+likes_sevillian = {
 	OR = {
-		religion = palmarian
+		religion = sevillian
 		religion = transatlantic
 	}
 }
@@ -701,7 +707,10 @@ likes_nasrini = {
 	religion = nasrini
 }
 likes_koptic = {
-	religion = koptic
+	OR = {
+		religion = koptic
+		religion = mattaism
+	}
 }
 likes_anglican = {
 	OR = {
@@ -735,7 +744,10 @@ likes_mirrazumudrost = {
 	}
 }
 likes_druze = {
-	religion = druze
+	OR = {
+		religion = druze
+		religion = alawite
+	}
 }
 likes_einblicker = {
 	religion = gnostic
@@ -934,7 +946,7 @@ likes_pagans = {
 	religion_group = pagan_group
 }
 likes_pirates = {
-	religion_group = pirate
+	religion_group = oceanic
 }
 likes_syncretics = {
 	religion_group = syncratic_group

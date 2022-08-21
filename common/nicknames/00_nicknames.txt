@@ -10,9 +10,21 @@
 # TRIGGERED ONLY
 ################
 
+nick_the_one_day_king = {}
+nick_citizen_king = {}
+nick_red_tide = {}
+nick_the_guillotined = {}
+nick_sun_king = {}
+nick_breaker_of_chains = {}
+nick_the_human = {}
+nick_the_deathbringer = {}
+nick_the_magician = {}
+nick_the_visionary = {}
+nick_saltspite = {}
 nick_the_lawgiver = {}
 nick_the_usurper = {}
 nick_the_hammer = {}
+nick_the_iron_rider = {}
 nick_the_conqueror = {}
 nick_the_victorious = {}
 nick_the_crusader = {}
@@ -141,11 +153,11 @@ nick_the_scourge = {}
 nick_the_guide = {}
 nick_the_belligerent = {}
 nick_the_knight_of_turnips = {}
-nick_the_dane = {}
-nick_the_festive = {}
-nick_the_burden = {}
-nick_the_snake = {}
-nick_longsword = {}
+nick_the_livid = {}
+nick_the_mouth_sauron = {}
+nick_professor = {}
+nick_dragon_warrior = {}
+nick_tiger_malaysia = {}
 
 #Warrior Lodge
 nick_the_great_beast = {}
@@ -205,6 +217,10 @@ nick_the_fury = {}
 nick_the_stormforged = {}
 nick_the_tempest_of_capital = {}
 
+#Israel nicknames
+nick_ben_david = {}
+nick_the_static = {}
+
 # GIVEN BY TRAITS
 #################
 nick_the_lisp_and_lame = {
@@ -259,6 +275,102 @@ nick_the_troubadour = {
 	}
 	chance = {
 		factor = 1
+	}
+}
+
+nick_the_artist = {
+	allow = {
+		age = 20
+		OR = {
+			trait = poet
+			trait = bard_sibir
+		}
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+nick_the_broad_shouldered= {
+	allow = {
+		age = 20
+		OR = {
+			trait = strong
+			trait = robust
+			trait = giant
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_cabbage= {
+	allow = {
+		age = 20
+		trait = peasant_leader
+		OR = {
+			trait = just
+			trait = kind
+			trait = strong
+		}
+	}
+	chance = {
+		factor = 4
+	}
+}
+
+
+nick_the_crowned= {
+	allow = {
+		age = 20
+		OR = {
+			trait = crowned_by_priest
+			trait = crowned_by_bishop
+			trait = crowned_by_pope
+		}
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+
+nick_the_self_crowned= {
+	allow = {
+		age = 20
+		trait = crowned_by_myself
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_american= {
+	allow = {
+		age = 20
+		OR = {
+			culture_group = gallomerican
+			culture_group = south_anglo
+			culture_group = north_atlantic
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_wrymouth= {
+	allow = {
+		age = 20
+		OR = {
+			trait = cynical
+			trait = deceitful
+			trait = stutter
+		}
+	}
+	chance = {
+		factor = 3
 	}
 }
 
@@ -387,6 +499,19 @@ nick_the_silent = {
 	}
 	chance = {
 		factor = 1
+	}
+}
+
+nick_the_iron_ruler = {
+	allow = {
+		age = 20
+		trait = patient
+		trait = humble
+		trait = strong
+		trait = stubborn
+	}
+	chance = {
+		factor = 3
 	}
 }
 
@@ -573,6 +698,16 @@ nick_the_hideous = {
 	}
 }
 
+nick_the_elbow_high = {
+	allow = {
+		age = 15
+		trait = dwarf
+	}
+	chance = {
+		factor = 2
+	}
+}
+
 nick_the_frog = {
 	allow = {
 		age = 15
@@ -581,16 +716,6 @@ nick_the_frog = {
 			trait = ugly
 			trait = disfigured
 		}
-	}
-	chance = {
-		factor = 2
-	}
-}
-
-nick_the_tenacious = {
-	allow = {
-		age = 15
-		trait = patient
 	}
 	chance = {
 		factor = 2
@@ -953,6 +1078,20 @@ nick_the_weak = {
 		OR = {
 			is_weak_trigger = yes
 			trait = cancer
+			trait = infirm
+		}	
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+nick_the_spindleshanks = {
+	allow = {
+		age = 16
+		OR = {
+			is_weak_trigger = yes
+			trait = one_legged
 			trait = infirm
 		}	
 	}
@@ -1383,7 +1522,7 @@ nick_priest_hater = {
 		age = 20
 		NOT = { piety = -100 }
 		trait = cynical
-		NOT = { religion = buddhist }
+		NOT = { religion_group = buddhist_group }
 		NOT = { religion = jain }
 	}
 	chance = {
@@ -1716,6 +1855,21 @@ nick_the_terrible = {
 	}
 }
 
+nick_the_miserable = {
+	allow = {
+		culture_group = francophone
+		religion = jacobinist
+		OR = {
+			trait = depressed
+			trait = stressed
+			trait = paranoid
+		}
+	}
+	chance = {
+		factor = 4
+	}
+}
+
 nick_the_tyrant = {
 	allow = {
 		age = 30
@@ -1836,6 +1990,61 @@ nick_the_devil = {
 	}
 }
 
+nick_the_horned = {
+	allow = {
+		ruled_years = 10
+		OR = {
+			is_any_kinslayer_trigger = yes
+			trait = excommunicated
+			trait = impaler
+			trait = possessed
+		}
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			OR = {
+				is_any_kinslayer_trigger = yes
+				trait = excommunicated
+			}
+		}
+	}
+}
+
+
+nick_the_pharaoh = {
+	allow = {
+		age = 30
+		ruled_years = 10
+		
+		AND = {
+			OR = {
+				trait = wroth
+				trait = lunatic
+				trait = cruel
+				trait = impaler
+				trait = arbitrary
+				trait = stubborn
+				trait = deceitful
+				trait = paranoid
+				trait = envious
+			}
+			OR = {
+				culture = coptic
+				culture = zabbalin
+				culture = misri
+			}
+		}
+		any_vassal = {
+			has_opinion_modifier = { who = ROOT modifier = opinion_tyrant }
+		}
+	}
+	chance = {
+		factor = 4
+	}
+}
+
 nick_the_dragon = {
 	allow = {
 		is_female = no
@@ -1936,6 +2145,208 @@ nick_the_careless = {
 		modifier = {
 			factor = 2
 			is_any_kinslayer_trigger = yes
+		}
+	}
+}
+nick_the_antiquarian = {
+	allow = {
+		any_artifact = {
+			has_artifact_flag = salvage
+			count = 5
+		}	
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 2
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 4
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 6
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 8
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 10
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 12
+			}	
+		}
+	}
+}
+nick_the_delver = {
+	allow = {
+		any_artifact = {
+			has_artifact_flag = salvage
+			count = 5
+		}	
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 2
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 4
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 6
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 8
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 10
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = salvage
+				count = 12
+			}	
+		}
+	}
+}
+nick_the_collector = {
+	allow = {
+		any_artifact = {
+			has_artifact_flag = book
+			count = 5
+		}	
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 2
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 4
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 6
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 8
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 10
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			any_artifact = {
+				has_artifact_flag = book
+				count = 12
+			}	
+		}
+	}
+}
+nick_the_thunderer = {
+	allow = {
+		any_artifact = {
+			has_artifact_flag = gun
+			count = 1
+		}	
+	}
+	chance = {
+		factor = 2
+	}
+}
+nick_the_scientist = {
+	allow = {
+		society_member_of = hermetics
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			society_member_of = hermetics
+			society_rank = 2
+		}
+		modifier = {
+			factor = 2.0
+			society_member_of = hermetics
+			society_rank = 3
+		}
+	}
+}
+nick_the_laureate = {
+	allow = {
+		society_member_of = hermetics
+		society_rank = 4
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			society_member_of = hermetics
+			society_rank = 4
 		}
 	}
 }
@@ -2372,7 +2783,7 @@ nick_the_ladder_legs = {
 		factor = 2
 	}
 }
-
+nick_the_orangeman = {}
 nick_the_peacock = {
 	allow = {
 		age = 16
@@ -2427,9 +2838,6 @@ nick_the_myrrh_streaming = {
 }
 
 nick_the_god_bearing = {
-}
-
-nick_the_prophet = {
 }
 
 nick_the_understanding = {
@@ -2717,5 +3125,163 @@ nick_the_benevolent = {}
 nick_the_elder = {
 	is_prefix = yes
 }
+nick_hindu_hammer = {}
+
+# ATE OW new nicknames
+
+
+nick_the_seedless = {
+	allow = {
+		age = 40
+		has_children = no
+		is_female = no
+	}
+	chance = {
+		factor = 1
+	}
+}
+
+nick_the_incorruptible = {
+	allow = {
+		age = 20
+		trait = just
+		trait = honest
+		NOT = { trait = greedy }
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 5
+			trait = guillotine_master_1
+		}
+		modifier = {
+			factor = 10
+			trait = guillotine_master_2
+		}
+		modifier = {
+			factor = 20
+			trait = guillotine_master_3
+		}
+	}
+}
+
+nick_the_grey = {
+	allow = {
+		age = 50
+		OR = {
+			ruled_years = 10
+			religion = novelist
+			religion = novelist_reformed
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			age = 65
+		}
+		modifier = {
+			factor = 2.0
+			age = 75
+		}
+		modifier = {
+			factor = 3
+			AND = {
+				ruled_years = 10
+				OR = {
+					religion = novelist
+					religion = novelist_reformed
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			ruled_years = 20
+		}
+		modifier = {
+			factor = 1.5
+			ruled_years = 30
+		}
+		modifier = {
+			factor = 1.5
+			ruled_years = 40
+		}
+	}
+}
+
+nick_the_bookish = {
+	allow = {
+		age = 16
+		is_learned_trigger = yes
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			OR = {
+				religion = novelist
+				religion = novelist_reformed
+			}
+		}
+	}
+}
+
+nick_the_wardrobe = {
+	allow = {
+		age = 16
+		trait = sturdy
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				religion = novelist
+				religion = novelist_reformed
+			}
+		}
+		modifier = {
+			factor = 2
+			is_strong_trigger = yes
+		}
+	}
+}
+nick_the_crimson = {}
+
+# Novelist story nicknames
+nick_the_rhetor = {}
+nick_the_beast_slayer = {}
+nick_the_sleeping_beauty = {}
+# Cloud Added Nicknames
+nick_storm_of_arabia = {}
+nick_axe_of_feroes = {}
+nick_hereward = {}
+nick_thunder_dragon_slayer = {}
+
+nick_the_poseidonist = {}
+nick_the_marble_emperor = {}
+nick_the_atlantian = {}
+nick_snake_oil_todd = {}
+nick_goldsmith = {}
+
+#Russian title history nicknames
+nick_rurikovich = {}
+nick_ivanova = {}
+nick_the_peacemaker = {}
+nick_the_red_tzar = {}
+nick_halevi = {}
+nick_ayit_hagadol = {}
+nick_evangelist = {}
+
+
+#Siamese title history nicknames
+nick_the_suspicious = {}
+nick_ten_thousand_den = {}
+nick_the_atoner = {}
+nick_the_blood_washed = {}
+nick_of_teahouse = {}
+nick_prince_of_suvanabhumi = {}
+nick_lion_of_singapura = {}
+nick_last_sri_vijaya = {}
 #NENW Nicknames
 nick_of_the_rock = {}

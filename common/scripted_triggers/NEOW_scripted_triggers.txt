@@ -47,9 +47,21 @@ bhutan_minor_cb = {
 	}
 }
 
+legatian_guard_events_default_trigger = {
+	ai = yes
+	age = 16
+	is_incapable = no
+	prisoner = no
+	culture_group = byzantine
+	OR = {
+		religion = hellenic_pagan_reformed
+		religion = hellenic_pagan
+	}
+	has_character_flag = serving_legatian
+	has_dlc = "The Old Gods"
+}
 is_real_offmap_governor = {
 	is_offmap_governor = yes
-	NOT = { has_landed_title = d_soldiers_of_horthy }
 }
 
 is_anti_caliph = {
@@ -57,9 +69,45 @@ is_anti_caliph = {
 }
 
 uses_theocratic_feudal = {
-	religion = insular
+	OR={
+		AND = { 
+			OR = {
+				culture_group = tibetan_group
+				culture = nepali
+			}
+			religion_group = buddhist_group
+		}
+		religion = druze
+		religion = alawite
+		religion = quaker
+		religion = bon
+		religion = bon_reformed
+		religion = haymanot
+		religion = neo_donatists
+		religion = insular
+	}
 }
-
+uses_zodiacs = {
+	OR={
+		religion = starist_pagan
+		religion = starist_pagan_reformed
+		religion = hellenic_pagan
+		religion = hellenic_pagan_reformed
+		has_religion_feature = religion_astrology
+		religion = thelemic_reformed
+		religion = summer_queen
+		religion = thelemic
+		religion = orange_king
+		religion = nousthreskeia_reformed
+		religion = nousthreskeia
+		religion = druze
+		religion = alawite
+		religion = neo_zorvanite
+		religion = poseidonian
+		religion = mandaeanism
+		has_religion_feature = religion_feature_folklorist_2
+	}
+}
 doesnt_holds_special_empire = {
 	custom_tooltip = {
 		text = does_not_hold_special_empire
@@ -85,15 +133,13 @@ doesnt_holds_special_empire = {
 					title = e_austria_romaia
 					title = e_roman_empire
 					title = e_shangri_la
-					title = e_britannia
-					title = e_transnistria
 					title = e_ruthenia
 					title = e_karnataka
 					title = e_german_confederation
+					title = e_aegean
 					title = e_al-andalus
 					title = e_droid
 					title = e_druze
-					title = e_prussia
 					title = e_latin_empire
 					title = e_ottoman
 					title = e_atlantis
@@ -101,7 +147,8 @@ doesnt_holds_special_empire = {
 					title = e_maoist
 					title = e_roman_republic
 					title = e_russian_republic
-					title = e_ruthenia
+					title = e_hellenic_republic
+					title = e_turkish_republic
 					title = e_centcom
 					title = e_kuhjungs
 					title = e_gnostic
@@ -110,6 +157,7 @@ doesnt_holds_special_empire = {
 					title = e_lusitania
 					title = e_hui
 					title = e_heavenly
+					title = e_hcm
 					title = e_aragon
 					title = e_caucasia
 					title = e_konkani
@@ -119,7 +167,8 @@ doesnt_holds_special_empire = {
 					title = e_baltic
 					title = e_spain_t
 					title = e_norway
-					title = e_spain
+					title = e_marblists
+					title = e_bengal
 				}
 			}
 		}
@@ -132,7 +181,6 @@ form_kingdom_potential = {
 	}
 }
 form_kingdom_without_order_potential = {
-	is_alternate_start = no
 	rebel = no	
 	primary_title = {
 		temporary = no
@@ -263,11 +311,17 @@ should_have_byz_elective_trigger = {
 		title = e_britannia
 		title = e_transnistria
 		title = e_ruthenia
+		title = e_marblists
+		title = e_bengal
 		AND = {
 			title = k_britannia
 			holder_scope = {
 				has_landed_title = e_britannia
 			}
+		}
+		AND = {
+			has_landed_title = e_great_russia
+			has_landed_title = e_petrist
 		}
 	}
 }
@@ -307,7 +361,7 @@ desired_by_madame_1 = {
 			FROM = { has_character_modifier = madame_wants_unattractive }
 			is_unattractive_trigger = yes
 		}
-		# Education and lifestyle based preferencesAND
+		# Education and lifestyle based preferences
 		AND = {
 			FROM = { has_character_modifier = madame_wants_diplomacy }
 			into_diplomacy_trigger = yes
@@ -318,15 +372,15 @@ desired_by_madame_1 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_learning }
-			into_martial_trigger = yes
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_intrigue }
 			into_learning_trigger = yes
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_stewardship }
+			FROM = { has_character_modifier = madame_wants_intrigue }
 			into_intrigue_trigger = yes
+		}
+		AND = {
+			FROM = { has_character_modifier = madame_wants_stewardship }
+			into_stewardship_trigger = yes
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_young }
@@ -353,8 +407,8 @@ desired_by_madame_1 = {
 			religion_group = jewish_group
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_pirate }
-			religion_group = pirate
+			FROM = { has_character_modifier = madame_wants_oceanic }
+			religion_group = oceanic
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_muslim }
@@ -379,10 +433,6 @@ desired_by_madame_1 = {
 		AND = {
 			FROM = { has_character_modifier = madame_wants_zarist }
 			is_zarist_religion_trigger = yes
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_nobelian }
-			is_nobelian_religion_trigger = yes
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
@@ -443,23 +493,23 @@ hated_by_madame_1 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_martial }
-			into_diplomacy_trigger = yes
+			into_martial_trigger = no
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_learning }
-			into_learning_trigger = yes
+			into_learning_trigger = no
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_intrigue }
-			into_intrigue_trigger = yes
+			into_intrigue_trigger = no
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_stewardship }
-			into_stewardship_trigger = yes
+			into_stewardship_trigger = no
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_diplomacy }
-			into_stewardship_trigger = yes
+			into_diplomacy_trigger = no
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_young }
@@ -486,8 +536,8 @@ hated_by_madame_1 = {
 			NOT = { religion_group = jewish_group }
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_pirate }
-			NOT = { religion_group = pirate }
+			FROM = { has_character_modifier = madame_wants_oceanic }
+			NOT = { religion_group = oceanic }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_muslim }
@@ -507,27 +557,23 @@ hated_by_madame_1 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_communist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_communist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_zarist }
-			NOT = { religion_group = old_world_cultist_group }
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_nobelian }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_zarist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_ironist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_khanist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_khanist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_jacobinist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_female }
@@ -586,15 +632,15 @@ desired_by_madame_2 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_learning }
-			into_martial_trigger = yes
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_intrigue }
 			into_learning_trigger = yes
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_stewardship }
+			FROM = { has_character_modifier = madame_wants_intrigue }
 			into_intrigue_trigger = yes
+		}
+		AND = {
+			FROM = { has_character_modifier = madame_wants_stewardship }
+			into_stewardship_trigger = yes
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_young }
@@ -621,8 +667,8 @@ desired_by_madame_2 = {
 			religion_group = jewish_group
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_pirate }
-			religion_group = pirate
+			FROM = { has_character_modifier = madame_wants_oceanic }
+			religion_group = oceanic
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_muslim }
@@ -647,10 +693,6 @@ desired_by_madame_2 = {
 		AND = {
 			FROM = { has_character_modifier = madame_wants_zarist }
 			is_zarist_religion_trigger = yes
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_nobelian }
-			is_nobelian_religion_trigger = yes
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
@@ -712,23 +754,23 @@ hated_by_madame_2 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_martial }
-			into_diplomacy_trigger = yes
+			NOT = { into_martial_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_learning }
-			into_learning_trigger = yes
+			NOT = { into_learning_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_intrigue }
-			into_intrigue_trigger = yes
+			NOT = { into_intrigue_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_stewardship }
-			into_stewardship_trigger = yes
+			NOT = { into_stewardship_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_diplomacy }
-			into_stewardship_trigger = yes
+			NOT = { into_diplomacy_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_young }
@@ -755,8 +797,8 @@ hated_by_madame_2 = {
 			NOT = { religion_group = jewish_group }
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_pirate }
-			NOT = { religion_group = pirate }
+			FROM = { has_character_modifier = madame_wants_oceanic }
+			NOT = { religion_group = oceanic }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_muslim }
@@ -776,27 +818,23 @@ hated_by_madame_2 = {
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_communist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_communist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_zarist }
-			NOT = { religion_group = old_world_cultist_group }
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_nobelian }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_zarist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_ironist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_khanist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_khanist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
-			NOT = { religion_group = old_world_cultist_group }
+			NOT = { is_jacobinist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_female }
@@ -945,7 +983,51 @@ confederation_title_trigger = {
 		title = e_german_confederation
 		title = e_karnataka
 		title = k_cyprus_league
+		title = e_aegean
+		title = e_kedah
+		title = k_kawthoolei
 		has_title_flag = is_a_confederacy
+	}
+}
+
+uses_mandala_government_trigger = {
+	OR = {
+		culture_group = thai
+		culture_group = bali_sumbawa
+		culture_group = khmer_group
+		culture_group = chamic
+		culture_group = mon_group
+		culture_group = bahnaric
+		culture_group = malay_group
+		culture_group = sumatric
+		culture_group = borneonic
+		culture_group = iban_dayakic
+		culture_group = aslian
+		culture = myanmarese
+		culture = karen
+		culture = rakhine
+		culture = kuy
+		culture = khmu
+		culture = palaung
+		culture = wa
+	}
+}
+uses_eastern_feudal_trigger = {
+	OR = {
+		culture_group = chinese_group
+		culture_group = south_chinese_group
+		culture_group = korean_group
+		culture_group = viet
+		religion_group = chinese_traditional_group
+		religion = xinjiao
+		religion = maoist
+		religion = red_cult
+		religion = tridemism
+		religion = mahayana
+		religion = neoncult
+		religion = mo_pagan_reformed
+		religion = mo_pagan
+		religion = hmongism
 	}
 }
 
@@ -956,6 +1038,7 @@ is_feminist_culture = {
 		culture_group = francophone
 		culture_group = lusophone
 		culture_group = hispanophone
+		culture_group = occitanophone
 		culture_group = west_german
 		culture_group = alpinian
 		culture_group = low_american
@@ -978,6 +1061,7 @@ is_feminist_culture = {
 		culture = kuhjungs
 		culture = moldavian
 		culture = czech
+		culture = moravian
 		culture = skanian
 		culture = swedish
 		culture = norwegian
@@ -1000,6 +1084,7 @@ is_feminist_culture = {
 		culture = tuareg
 		culture = atlantian
 		NOT = { culture = traveller }
+		is_alien_culture_trigger = yes
 	}
 }
 
@@ -1207,5 +1292,24 @@ oligarchy_title_trigger = {
 	OR = {
 		title = e_roman_republic
 		title = e_russian_republic
+		title = e_hellenic_republic
+		title = e_turkish_republic
+	}
+}
+
+is_american_culture = {
+	OR = {
+		culture_group = low_american
+		culture_group = high_american
+		culture = kuhjungs
+		culture = weeb
+		culture = amriqi
+	}
+}
+
+has_military_government_potential = {
+	OR = {
+		is_american_culture = yes
+		is_communist_religion_trigger = yes
 	}
 }
