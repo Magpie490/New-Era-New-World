@@ -1,0 +1,224 @@
+namespace=sikh
+#########################################
+#
+#	Sikh religious events
+#
+#########################################
+# Your Khalsa Baptism
+narrative_event = {
+	id = sikh.1
+	is_triggered_only = yes
+	title = sikh1Title
+	picture = GFX_evt_cathedral_indian_group
+	border = GFX_event_narrative_frame_religion
+
+	hide_from = yes
+
+	desc = {
+		text = sikh1Desc
+
+	}
+
+	
+	option = {#You swear to follow the Khalsa
+		name = EVTOPTA_sikh1
+		add_trait = khalsa_baptism
+	}
+
+}
+
+character_event = {#You lose the Khalsa Baptism for having bad traits, breaking one of the four rules
+	id = sikh.2
+
+	picture = GFX_evt_scandal
+	border = GFX_event_normal_frame_war
+
+	trigger = {
+		trait = khalsa_baptism
+		OR = {
+			trait = gluttonous
+			trait = drunkard
+			trait = hedonist
+			trait = lustful
+		}
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	hide_from = yes
+
+	desc = {
+		text = sikh2Desc
+	}
+
+	
+	option = {#Oof
+		name = EVTOPTA_sikh2
+		remove_trait = khalsa_baptism
+		piety = -100	
+	}
+
+}
+narrative_event = {#Formation of the Sikh Empire
+	id = sikh.3
+	title = sikh3Title	
+    picture = GFX_evt_throne_room_indo_aryan_group
+    border = GFX_event_narrative_frame_diplomacy
+    is_triggered_only = yes
+
+	hide_from = yes
+
+	desc = {
+		text = sikh3Desc
+
+	}
+	option = {#Yay (for the Emperor only)
+		name = EVTOPTA_sikh3
+		trigger = {
+			primary_title = { title = e_sikh_empire }
+		}
+		religion_authority = {
+			modifier = sikh_empire_founded
+			years = 30
+		}		
+	}
+	option = {#Yay (for other Sikhs)
+		name = EVTOPTB_sikh3
+		trigger = {
+			religion = sikh
+			NOT = {
+				primary_title = { title = e_sikh_empire }
+			}
+		}
+	}
+	option = {#Other Dharmics are iffy
+		name = EVTOPTC_sikh3
+		trigger = {
+			OR = {
+				AND = {
+					religion_group = indian_group
+						NOT = {
+							religion = sikh
+						}
+					}
+				religion_group = buddhist_group
+			}
+		}
+	}
+	option = {#Muslims really don't like it
+		name = EVTOPTD_sikh3
+		trigger = {
+			religion_group = muslim
+		}
+	}	
+	option = {#Everyone else
+		name = EVTOPTE_sikh3
+		trigger = {
+			NOR = {
+				religion_group = muslim
+				religion_group = indian_group
+				religion = maunaxite_reformed
+				religion = maunaxite
+			}
+		}
+	}
+	option = {#Oh and one other for the maunaxites. Since the Sikhs were the first to abolish castes they'd probably like them
+		name = EVTOPTF_sikh3
+		trigger = {
+			OR = {
+				religion = maunaxite
+				religion = maunaxite_reformed
+			}
+		}
+	}
+}
+
+character_event = {#You drink Sukha Parshaad (crushed, liquid cannabis) to come closer to God
+	id = sikh.4
+	is_triggered_only = yes
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
+
+	hide_from = yes
+
+	desc = {
+		text = sikh4Desc
+	}
+	
+	option = {#You see a vision of God
+		name = EVTOPTA_sikh4
+		random_list = {
+			30 = {
+				add_trait = zealous
+			}
+			30 = {
+				add_trait = brave
+			}
+			30 = {
+				add_trait = humble
+			}
+			30 = {
+				add_trait = content
+			}
+		}
+		random_list = {#slim chance you get addicted
+			10 = {
+				add_trait = hedonist
+			}
+			90 = {
+			
+			}
+		}
+	}
+	option = {#You see a vision of a terrible battle
+		name = EVTOPTB_sikh4
+		random_list = {
+			30 = {
+				add_trait = zealous
+			}
+			30 = {
+				add_trait = brave
+			}
+			30 = {
+				add_trait = wroth
+			}
+			30 = {
+				add_trait = depressed
+			}
+		}
+		random_list = {#slim chance you get addicted
+			10 = {
+				add_trait = hedonist
+			}
+			90 = {
+			
+			}
+		}
+	}
+	option = {#You see a vision of yourself as married to a beautiful spouse...whether you have one or not
+		name = EVTOPTC_sikh4
+		remove_trait = stressed
+		remove_trait = depressed
+		random_list = {
+			30 = {
+				add_trait = lustful
+			}
+			30 = {
+				add_trait = content
+			}	
+			30 = {
+				add_trait = kind
+			}				
+		}
+		random_list = {#slim chance you get addicted
+			10 = {
+				add_trait = hedonist
+			}
+			90 = {
+			
+			}
+		}
+	}	
+
+}

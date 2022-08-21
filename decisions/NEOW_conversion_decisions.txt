@@ -1,0 +1,1978 @@
+targeted_decisions = {
+	convert_to_adessite = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = ukrainer
+			}
+			capital_scope = {
+				culture = adessite
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = ukrainer
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = adessite
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = wallachian
+					culture = transylvanian
+					culture = moldavian
+					culture = ukrainer
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = adessite
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = wallachian
+								culture = transylvanian
+								culture = moldavian 
+							}
+					}
+					NOT ={
+						capital_scope = { culture = adessite }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = adessite }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = adessite
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = adessite
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = adessite
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = adessite
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = adessite
+				}
+			}
+		}
+	}
+	convert_to_low_bhutanese = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = bhutanese
+			culture = assamese
+			culture = bengali
+			}
+			capital_scope = {
+				culture = low_bhutanese
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = bhutanese
+			culture = assamese
+			culture = bengali
+			}
+			NOT= { primary_title= {title = e_bhutan } }
+		}
+		effect = {
+			culture = low_bhutanese
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = bhutanese
+					culture = assamese
+					culture = bengali
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = low_bhutanese
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = bhutanese
+							}
+					}
+					NOT ={
+						capital_scope = { culture = low_bhutanese }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = low_bhutanese }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = low_bhutanese
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = low_bhutanese
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = low_bhutanese
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = low_bhutanese
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = low_bhutanese
+				}
+			}
+		}
+	}
+	
+	convert_to_lietuvininkai = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = prussian
+			culture = lithuanian
+			}
+			capital_scope = {
+				culture = lietuvininkai
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = prussian
+			culture = lithuanian
+			}
+			NOT= { primary_title= {title = k_prussia } }
+		}
+		effect = {
+			culture = lietuvininkai
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = prussian
+					culture = lithuanian
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = lietuvininkai
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = prussian
+							}
+					}
+					NOT ={
+						capital_scope = { culture = lietuvininkai }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = lietuvininkai }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = lietuvininkai
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = lietuvininkai
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = lietuvininkai
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = lietuvininkai
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = lietuvininkai
+				}
+			}
+		}
+	}
+	
+	convert_to_schleswigvolk = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = prussian
+			culture = danish
+			}
+			capital_scope = {
+				culture = schleswigvolk
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = prussian
+			culture = danish
+			}
+			NOT= { primary_title= {title = k_prussia }}
+		}
+		effect = {
+			culture = schleswigvolk
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = prussian
+					culture = danish
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = schleswigvolk
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = prussian
+							}
+					}
+					NOT ={
+						capital_scope = { culture = schleswigvolk }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = schleswigvolk }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = schleswigvolk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = schleswigvolk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = schleswigvolk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = schleswigvolk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = schleswigvolk
+				}
+			}
+		}
+	}
+	
+	convert_to_sazzac = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = cossack
+			}
+			capital_scope = {
+				culture = sazzac
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = cossack
+			}
+			NOT= { primary_title= {title = e_transnistria }}
+		}
+		effect = {
+			culture = sazzac
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = wallachian
+					culture = transylvanian
+					culture = moldavian
+					culture = cossack
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = sazzac
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = wallachian
+								culture = transylvanian
+								culture = moldavian
+							}
+					}
+					NOT ={
+						capital_scope = { culture = sazzac }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = sazzac }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = sazzac
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = sazzac
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = sazzac
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = sazzac
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = sazzac
+				}
+			}
+		}
+	}
+	convert_to_wendish = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = prussian
+			culture = brandenburger
+			culture = polish
+			culture = mazovian
+			culture = greater_polish
+			culture = saxon
+			culture = czech
+			culture = moravian
+			}
+			capital_scope = {
+				culture = wendish
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture = prussian
+				culture = brandenburger
+				culture = polish
+				culture = mazovian
+				culture = greater_polish
+				culture = czech
+				culture = moravian
+				culture = saxon
+			}
+		}
+		effect = {
+			culture = wendish
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = prussian
+					culture = brandenburger
+					culture = polish
+					culture = mazovian
+					culture = greater_polish
+					culture = czech
+					culture = moravian
+					culture = saxon
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = wendish
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = polish
+								culture = mazovian
+								culture = greater_polish
+								culture = czech
+							}
+					}
+					NOT ={
+						capital_scope = { culture = wendish }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = wendish }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = wendish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = wendish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = wendish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = wendish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = wendish
+				}
+			}
+		}
+	}
+	convert_to_atlantian = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				AND = {
+					culture_group = byzantine
+					NOT = {
+						culture = atlantian
+					}
+				}
+			culture = doggerlander
+			}
+			capital_scope = {
+				culture = atlantian
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				AND = {
+					culture_group = byzantine
+					NOT = {
+						culture = atlantian
+					}
+				}
+				culture = doggerlander
+			}
+		}
+		effect = {
+			culture = atlantian
+			any_courtier = {
+				limit = {
+					OR ={
+					culture_group = byzantine
+					culture = doggerlander
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = atlantian
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture_group = byzantine
+							}
+					}
+					NOT ={
+						capital_scope = { culture = atlantian }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = atlantian }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = atlantian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = atlantian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = atlantian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = atlantian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = atlantian
+				}
+			}
+		}
+	}
+	convert_to_poseidonian = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				religion_openly_hellenic_or_reformed_trigger = yes
+				AND = {
+					religion_group = oceanic
+					NOT = {
+						religion = poseidonian
+					}
+				}
+			}
+			capital_scope = {
+				religion = poseidonian
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				religion_openly_hellenic_or_reformed_trigger = yes
+				AND = {
+					religion_group = oceanic
+					NOT = {
+						religion = poseidonian
+					}
+				}
+			}
+		}
+		effect = {
+			religion = poseidonian
+			any_courtier = {
+				limit = {
+					OR ={
+					religion_openly_hellenic_or_reformed_trigger = yes
+					religion_group = oceanic
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = poseidonian
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = {
+					religion_openly_hellenic_or_reformed_trigger = yes
+					}
+				NOT ={
+					capital_scope = { religion = poseidonian }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { religion = poseidonian }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					religion = poseidonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					religion = poseidonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					religion = poseidonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					religion = poseidonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					religion = poseidonian
+				}
+			}
+		}
+	}
+	convert_to_frencig = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture_group = brittannic
+				culture_group = francophone
+			}
+			capital_scope = {
+				culture = frencig
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture_group = brittannic
+			culture_group = francophone
+			}
+		}
+		effect = {
+			culture = frencig
+			any_courtier = {
+				limit = {
+					OR ={
+					culture_group = brittannic
+					culture_group = francophone
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = frencig
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = {	
+						culture_group = brittannic
+				}
+				NOT ={
+					capital_scope = { culture = frencig }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = frencig }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = frencig
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = frencig
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = frencig
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = frencig
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = frencig
+				}
+			}
+		}
+	}
+	convert_to_lytsvin = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = ukrainer
+			culture = cossack
+			culture = bielaruskaja
+			culture = lithuanian
+			}
+			capital_scope = {
+				culture = lytsvin
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = ukrainer
+			culture = cossack
+			culture = bielaruskaja
+			culture = lithuanian
+			}
+		}
+		effect = {
+			culture = lytsvin
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = ukrainer
+					culture = cossack
+					culture = bielaruskaja
+					culture = lithuanian
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = lytsvin
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+								culture = lithuanian
+					}
+					NOT ={
+						capital_scope = { culture = lytsvin }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = lytsvin }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = lytsvin
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = lytsvin
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = lytsvin
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = lytsvin
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = lytsvin
+				}
+			}
+		}
+	}
+	convert_to_pondicherien = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture_group = central_indo_aryan_group
+				culture_group = west_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = northern_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = francophone
+			}
+			capital_scope = {
+				culture = pondicherien
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture_group = central_indo_aryan_group
+				culture_group = west_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = northern_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = francophone
+			}
+		}
+		effect = {
+			culture = pondicherien
+			any_courtier = {
+				limit = {
+					OR ={
+					culture_group = central_indo_aryan_group
+					culture_group = west_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = northern_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = francophone
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = pondicherien
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = pondicherien }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = pondicherien
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = pondicherien
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = pondicherien
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = pondicherien
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = pondicherien
+				}
+			}
+		}
+	}
+	
+	convert_to_gottonsk = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = gothic
+			}
+			capital_scope = {
+				culture = gottonsk
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = gothic
+			}
+		}
+		effect = {
+			culture = gottonsk
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = gothic
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = gottonsk
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = gottonsk }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = gottonsk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = gottonsk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = gottonsk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = gottonsk
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = gottonsk
+				}
+			}
+		}
+	}
+	
+	convert_to_babylonian = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = assyrian
+			culture = aramaic
+			culture = siryon
+			}
+			capital_scope = {
+				culture = babylonian
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = assyrian
+			culture = aramaic
+			culture = siryon
+			culture = iraqi
+			}
+		}
+		effect = {
+			culture = babylonian
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = assyrian
+					culture = aramaic
+					culture = siryon
+					culture = iraqi
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = babylonian
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = babylonian }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = babylonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = babylonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = babylonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = babylonian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = babylonian
+				}
+			}
+		}
+	}
+	convert_to_rumca = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture_group = byzantine
+			culture = turkish
+			culture = elbistanli
+			culture = egeli
+			culture = kapadokyali
+			culture = karadenizci
+			}
+			capital_scope = {
+				culture = rumca
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture_group = byzantine
+			culture = turkish
+			culture = elbistanli
+			culture = egeli
+			culture = kapadokyali
+			culture = karadenizci
+			}
+		}
+		effect = {
+			culture = rumca
+			any_courtier = {
+				limit = {
+					OR ={
+					culture_group = byzantine
+					culture = turkish
+					culture = elbistanli
+					culture = egeli
+					culture = kapadokyali
+					culture = karadenizci
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = rumca
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = rumca }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = rumca
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = rumca
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = rumca
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = rumca
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = rumca
+				}
+			}
+		}
+	}
+	convert_to_anglische = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = kuhjungs
+			culture = low_german
+			culture_group = brittannic
+			culture_group = anglo_frisian
+			}
+			capital_scope = {
+				culture = anglish
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = kuhjungs
+			culture = low_german
+			culture_group = brittannic
+			culture_group = anglo_frisian
+			}
+		}
+		effect = {
+			culture = anglish
+			any_courtier = {
+				limit = {
+					OR ={
+						culture = kuhjungs
+						culture = low_german
+						culture_group = brittannic
+						culture_group = anglo_frisian
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = anglish
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = anglish }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = anglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = anglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = anglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = anglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = anglish
+				}
+			}
+		}
+	}
+	convert_to_prinsesser = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			culture = oglallan
+			capital_scope = {
+				culture = prinsesser
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = oglallan
+			culture = faroyingar
+			}
+		}
+		effect = {
+			culture = prinsesser
+			any_courtier = {
+				limit = {
+					OR ={
+						culture = oglallan
+						culture = faroyingar
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = prinsesser
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = prinsesser }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = prinsesser
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = prinsesser
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = prinsesser
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = prinsesser
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = prinsesser
+				}
+			}
+		}
+	}
+	convert_to_andalusian_arabic = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR = {
+				culture = moroccan
+				culture = algerian
+				culture = tunisian
+			}
+			capital_scope = {
+				culture = andalusian_arabic
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				culture = andalusian
+				culture = castilian
+				culture = aragonese
+				culture = extrameduran
+				culture = catalan
+				culture = portuguese
+				culture = moroccan
+				culture = algerian
+				culture = tunisian
+			}
+		}
+		effect = {
+			culture = andalusian_arabic
+			any_courtier = {
+				limit = {
+					OR = {
+						culture = andalusian
+						culture = castilian
+						culture = aragonese
+						culture = extrameduran
+						culture = catalan
+						culture = portuguese
+						culture = moroccan
+						culture = algerian
+						culture = tunisian
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = andalusian_arabic
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = andalusian_arabic }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = andalusian_arabic
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = andalusian_arabic
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = andalusian_arabic
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = andalusian_arabic
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = andalusian_arabic
+				}
+			}
+		}
+	}
+	convert_to_langobardic = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR = {
+				culture = lombard
+				culture = swabian
+				culture = bavarian
+				culture = piemontese
+				culture = venetian
+				culture = lazian
+				culture = tuscanian
+				culture = rheinlander
+			}
+			capital_scope = {
+				culture = langobardische
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				culture = lombard
+				culture = swabian
+				culture = bavarian
+				culture = piemontese
+				culture = venetian
+				culture = lazian
+				culture = tuscanian
+				culture = rheinlander
+			}
+		}
+		effect = {
+			culture = langobardische
+			any_courtier = {
+				limit = {
+					OR = {
+						culture = lombard
+						culture = swabian
+						culture = bavarian
+						culture = piemontese
+						culture = venetian
+						culture = lazian
+						culture = tuscanian
+						culture = rheinlander
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = langobardische
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = langobardische }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = langobardische
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = langobardische
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = langobardische
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = langobardische
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = langobardische
+				}
+			}
+		}
+	}
+	convert_to_deluzi = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			culture = durzi
+			capital_scope = {
+				culture = deluzi
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = durzi
+			religion = druze
+			}
+		}
+		effect = {
+			culture = deluzi
+			any_courtier = {
+				limit = {
+					culture = durzi
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = deluzi
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = deluzi }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = deluzi
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = deluzi
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = deluzi
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = deluzi
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = deluzi
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+namespace = jadidist
+
+character_event = {
+	id = jadidist.1
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_jadidist_1
+	desc = EVTDESC_jadidist_1
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_jadidist
+	}
+	
+	option = {#we love christians
+		name = EVTOPTA_jadidist1
+		add_trait = sympathy_christendom
+		remove_trait = sympathy_old_world_cultist
+		remove_trait = sympathy_pagans
+	}
+	
+	option = {#we love owcs
+		name = EVTOPTB_jadidist1
+		add_trait = sympathy_old_world_cultist
+		remove_trait = sympathy_christendom
+		remove_trait = sympathy_pagans
+	}
+	
+	option = {#we love pagans i guess
+		name = EVTOPTC_jadidist1
+		add_trait = sympathy_pagans
+		remove_trait = sympathy_christendom
+		remove_trait = sympathy_old_world_cultist
+	}
+	
+	after = {
+		clr_character_flag = picking_jadidist
+	}
+}
+
+character_event = {
+	id = jadidist.2
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_jadidist_2
+	desc = EVTDESC_jadidist_2
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_jadidist2
+	}
+	
+	option = {#study SCIENCE
+		name = EVTOPTA_jadidist2
+		add_trait = jadid_science
+	}
+	
+	option = {#study TURKS
+		name = EVTOPTB_jadidist2
+		add_trait = jadid_turk
+	}
+	
+	option = {#study ISLAM
+		name = EVTOPTC_jadidist2
+		add_trait = jadid_islam
+	}
+	
+	after = {
+		clr_character_flag = picking_jadidist2
+	}
+}

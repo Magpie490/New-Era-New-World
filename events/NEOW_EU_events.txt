@@ -1,0 +1,34 @@
+#EU events
+
+namespace = european_union_event
+
+narrative_event = {
+	id = european_union_event.001
+	title = TITLE_european_union_restoration
+	desc = {
+		text = EVTDESC_european_union_restoration
+		trigger = {
+			is_alternate_start = no
+		}
+	}
+	picture = GFX_evt_european_union_restoration
+	is_triggered_only = yes
+
+	#immediate = {
+    #
+	#}
+	option = {
+		name = OPT_A_european_union_restoration
+		prestige = 2000
+		effect = { set_government = confederation_government }
+		if = { #New Imperial Bloodline.
+			limit = { 
+				has_dlc = "Holy Fury" 
+			}
+			create_bloodline = {
+				type = european_union_bloodline
+			}
+			sound_effect = bloodline_added			
+		}
+    }
+}
