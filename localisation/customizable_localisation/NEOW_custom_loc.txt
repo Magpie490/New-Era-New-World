@@ -1,0 +1,1955 @@
+	# Get the religion's title for antipopes, TODO
+defined_text = {
+	name = GetAPtype
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			has_polygamy = yes
+		}
+		localisation_key = String_Pretender_Caliph
+	}
+
+	text = {
+		trigger = {
+			has_polygamy = no
+		}
+		localisation_key = String_Antipope
+	}
+}
+defined_text = {
+	name = GetRandomFreeTag
+
+	text = {
+		localisation_key = String_Revolutionary
+		weight_multiplier = { factor = 100 }
+	}
+
+	text = {
+		localisation_key = String_Free
+		weight_multiplier = { factor = 100 }
+	}
+
+	text = {
+		localisation_key = String_Religion
+		weight_multiplier = { factor = 100 }
+	}
+
+	text = {
+		localisation_key = String_Peoples
+		trigger = {
+			religion = trotskyite
+		}
+		weight_multiplier = {
+			factor = 100
+		}
+	}
+}
+defined_text = {
+	name = get_revolution_leader_text
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			NOT = { has_character_flag = jacobinist_during_revolution }
+		}
+		localisation_key = String_Revolution_Leader_With_Target
+	}
+
+	text = {
+		trigger = {
+			has_character_flag = jacobinist_during_revolution
+		}
+		localisation_key = String_Revolution_Leader_Without_Target
+	}
+}
+defined_text = {
+	name = GetCrownReaction
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_liked value = 1.0 }
+		}
+		localisation_key = String_CrownDefaultReaction
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { which = local_madame_liked value = 1.0 } }
+		}
+		localisation_key = String_CrownBadReaction
+	}
+	text = {
+		trigger = {
+			check_variable = { which = local_madame_liked value = 1.2 }
+		}
+		localisation_key = String_CrownGoodReaction
+	}
+}
+defined_text = {
+	name = GetNewPreference
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 1 }
+		}
+		localisation_key = String_NewPreference_Strong
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 2 }
+		}
+		localisation_key = String_NewPreference_Weak
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 3 }
+		}
+		localisation_key = String_NewPreference_Smart
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 4 }
+		}
+		localisation_key = String_NewPreference_Dumb
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 5 }
+		}
+		localisation_key = String_NewPreference_Virtue
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 6 }
+		}
+		localisation_key = String_NewPreference_Vice
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 7 }
+		}
+		localisation_key = String_NewPreference_Attractive
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 8 }
+		}
+		localisation_key = String_NewPreference_Unattractive
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 9 }
+		}
+		localisation_key = String_NewPreference_Diplomacy
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 10 }
+		}
+		localisation_key = String_NewPreference_Martial
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 11 }
+		}
+		localisation_key = String_NewPreference_Learning
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 12 }
+		}
+		localisation_key = String_NewPreference_Intrigue
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 13 }
+		}
+		localisation_key = String_NewPreference_Stewardship
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 14 }
+		}
+		localisation_key = String_NewPreference_Young
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 15 }
+		}
+		localisation_key = String_NewPreference_Old
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 16 }
+		}
+		localisation_key = String_NewPreference_Christian
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 17 }
+		}
+		localisation_key = String_NewPreference_Esoteric
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 18 }
+		}
+		localisation_key = String_NewPreference_Pagan_Group
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 19 }
+		}
+		localisation_key = String_NewPreference_Jewish_Group
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 20 }
+		}
+		localisation_key = String_NewPreference_Oceanic
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 21 }
+		}
+		localisation_key = String_NewPreference_Muslim
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 22 }
+		}
+		localisation_key = String_NewPreference_Indian_Group
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 23 }
+		}
+		localisation_key = String_NewPreference_Buddhist_Group
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 24 }
+		}
+		localisation_key = String_NewPreference_Zoroastrian_Group
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 25 }
+		}
+		localisation_key = String_NewPreference_Communist
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 26 }
+		}
+		localisation_key = String_NewPreference_Zarist
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 27 }
+		}
+		localisation_key = String_NewPreference_Nobelian
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 28 }
+		}
+		localisation_key = String_NewPreference_Ironist
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 29 }
+		}
+		localisation_key = String_NewPreference_Khanist
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 30 }
+		}
+		localisation_key = String_NewPreference_Jacobinist
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 31 }
+		}
+		localisation_key = String_NewPreference_Female
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_madame_new_preference value = 32 }
+		}
+		localisation_key = String_NewPreference_Male
+	}
+}
+defined_text = {
+	name = GetEmulatedTzar
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_peter
+				has_character_flag = temp_zarist_emulate_peter
+				has_artifact_flag = peter
+			}
+		}
+		localisation_key = String_Tzar_Peter
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_nicholas
+				has_character_flag = temp_zarist_emulate_nicholas
+				has_artifact_flag = nicholas
+			}
+		}
+		localisation_key = String_Tzar_Nicholas
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_ivan
+				has_character_flag = temp_zarist_emulate_ivan
+				has_artifact_flag = ivan
+			}
+		}
+		localisation_key = String_Tzar_Ivan
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_catherine
+				has_character_flag = temp_zarist_emulate_catherine
+				has_artifact_flag = catherine
+			}
+		}
+		localisation_key = String_Tzar_Catherine
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_alexander
+				has_character_flag = temp_zarist_emulate_alexander
+				has_artifact_flag = alexander
+			}
+		}
+		localisation_key = String_Tzar_Alexander
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_alexis
+				has_character_flag = temp_zarist_emulate_alexis
+				has_artifact_flag = alexis
+			}
+		}
+		localisation_key = String_Tzar_Alexis
+	}
+}
+defined_text = {
+	name = GetEmulatedPassage
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_exodus
+		}
+		localisation_key = String_Passage_Exodus
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_luke
+		}
+		localisation_key = String_Passage_Luke
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_ephesians
+		}
+		localisation_key = String_Passage_Ephesians
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_corinthians
+		}
+		localisation_key = String_Passage_Corinthians
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_galatians
+		}
+		localisation_key = String_Passage_Galatians
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_hebrews
+		}
+		localisation_key = String_Passage_Hebrews
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_lutheran_psalm
+		}
+		localisation_key = String_Passage_Psalm
+	}
+}
+defined_text = {
+	name = GetEmulatedTzarOrPassage
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			has_zarist_emulate_ambition = yes
+		}
+		localisation_key = String_GetEmulatedTzar
+	}
+	text = {
+		trigger = {
+			has_lutheran_emulate_ambition = yes
+		}
+		localisation_key = String_GetEmulatedPassage
+	}
+}
+
+defined_text = {
+	name = GetEmulatedTzarHeSheCap
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			OR = {
+				has_ambition = obj_zarist_emulate_peter
+				has_ambition = obj_zarist_emulate_nicholas
+				has_ambition = obj_zarist_emulate_ivan
+				has_ambition = obj_zarist_emulate_catherine
+				has_ambition = obj_zarist_emulate_alexander
+				has_ambition = obj_zarist_emulate_alexis
+				has_lutheran_emulate_ambition = yes #I'm lazy
+			}
+		}
+		localisation_key = EV_HE_S
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_zarist_emulate_catherine
+		}
+		localisation_key = EV_SHE
+	}
+}
+
+defined_text = {
+	name = GetEmulationAction
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_emulation_opinion_subject value = 1 }
+		}
+		localisation_key = String_Emulation_Studies
+	}
+	text = {
+		trigger = {
+			is_variable_equal = { which = local_emulation_opinion_subject value = 2 }
+		}
+		localisation_key = String_Emulation_Cilice
+	}
+}
+defined_text = {
+	name = GetAReligiousFigure
+
+	text = {
+		localisation_key = String_A_Bolsevik
+		weight_multiplier = { factor = 100 }
+		trigger = { is_zarist_religion_trigger = yes }
+	}
+	text = {
+		localisation_key = String_A_Tzar
+		weight_multiplier = { factor = 100 }
+		trigger = { is_zarist_religion_trigger = yes }
+	}
+	text = {
+		localisation_key = String_An_Angel
+		weight_multiplier = { factor = 100 }
+		trigger = { religion_group = christian }
+	}
+	text = {
+		localisation_key = String_A_Demon
+		weight_multiplier = { factor = 100 }
+		trigger = { religion_group = christian }
+	}
+	text = {
+		localisation_key = String_An_Apostle
+		weight_multiplier = { factor = 100 }
+		trigger = { religion_group = christian }
+	}
+	text = {
+		localisation_key = String_GetRandomMythologicalCreature
+		weight_multiplier = { factor = 100 }
+	}
+}
+defined_text = {
+	name = GetDreamAction
+
+	text = {
+		localisation_key = String_Slaps
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Kneels
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Undresses
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Plays_BG
+		weight_multiplier = { factor = 100 }
+	}
+}
+defined_text = {
+	name = GetStarryWisdomSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = davy_jones_mates_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = starry_wisdom_real
+	}
+}
+
+defined_text = {
+	name = GetStarryWisdomSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = devil_worshiper_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = starry_wisdom_desc_real
+	}
+}
+defined_text = {
+	name = GetDavyJonesSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = davy_jones_mates_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = davy_jones_mates_real
+	}
+}
+
+defined_text = {
+	name = GetDavyJonesSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = devil_worshiper_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = davy_jones_mates_desc_real
+	}
+}
+
+defined_text = {
+	name = GetIlluminatiSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = the_illuminati_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = the_illuminati_real
+	}
+}
+
+defined_text = {
+	name = GetIlluminatiSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = devil_worshiper_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = the_illuminati_desc_real
+	}
+}
+
+defined_text = {
+	name = GetUnseeliePetitionersSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = unseelie_petitioners_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = unseelie_petitioners_real
+	}
+}
+
+defined_text = {
+	name = GetUnseeliePetitionersSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = devil_worshiper_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = unseelie_petitioners_desc_real
+	}
+}
+defined_text = {
+	name = GetHistDesc
+	text = { 
+		trigger = { 
+			character = c_26667106
+	    }
+		localisation_key = pyotr_i_zvetun
+	}
+	text = { 
+		trigger = { 
+			NOT = {
+				character = c_26667106
+			}
+	    }
+		localisation_key = regular_no_wikipedia
+	}
+}
+defined_text = {
+	name = GetMissionFight
+
+	text = {
+		localisation_key = String_Endless_Fight
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Holy_Mission
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Mighty_Battles
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Sacred_Wars
+		weight_multiplier = { factor = 100 }
+	}
+}
+defined_text = {
+	name = GetAgainstForFaith
+
+	text = {
+		localisation_key = String_For_RandomGod
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_For_OurFaith
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_For_ReligionHead
+		weight_multiplier = { factor = 100 }
+		trigger = {
+			religion_head = { always = yes }
+		}
+	}
+	text = {
+		localisation_key = String_Against_The_Infidel
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Against_Works_Of_RandomEvilGod
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_Against_The_Heretic
+		trigger = {
+			religion_group = christian
+		}
+		weight_multiplier = { factor = 100 }
+	}
+}
+defined_text = {
+	name = GetReligionsOneHolyOrder
+	text = {
+		localisation_key = d_white_army
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_white_army
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_blue_stripes
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_blue_stripes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_strugglers
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_strugglers
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_shiv_sena
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_shiv_sena
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_khalsa_army
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_khalsa_army
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_jugo_order
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_jugo_order
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_sans_culottes
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_sans_culottes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_musketeers
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_musketeers
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_redcoats
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_redcoats
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_tectonic_order
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_tectonic_order
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_hashshashin
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_hashshashin
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_bektashi
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_bektashi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_tijani_order
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_tijani_order
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_naqshbandi
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_naqshbandi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_haruriyyah
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_haruriyyah
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_immortals
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_immortals
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_zealots
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_zealots
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_holy_sepulchre
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_holy_sepulchre
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_sky_lords
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_sky_lords
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_champions_of_the_khan
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_champions_of_the_khan
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_chosen_perkunas
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_chosen_perkunas
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_sons_kaleva
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_sons_kaleva
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_ashokas_chosen
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_ashokas_chosen
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_bulls_rishabha
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_bulls_rishabha
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_army_salvation
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_army_salvation
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_huguenots
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_huguenots
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_knights_hospitaler_3
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_knights_hospitaler_3
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_seekers
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_seekers
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_saint_anthony
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_saint_anthony
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_warriors_al_atrash
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_warriors_al_atrash
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_columbus_knights
+		trigger = {
+			religion_scope = {
+				persistent_event_target:one_holy_order = {
+					title = d_columbus_knights
+				}
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = String_ReligionsHolyOrder
+	}
+}
+defined_text = {
+	name = GetReligionsTwoHolyOrder
+	text = {
+		localisation_key = d_carmelites
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_carmelites
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_egyptian_brotherhood
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_egyptian_brotherhood
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_ikhwan
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_ikhwan
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_knights_hospitaler_1
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_knights_hospitaler_1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_knights_hospitaler_2
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_knights_hospitaler_2
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_saint_basil
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_saint_basil
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = d_hussite_order
+		trigger = {
+			religion_scope = {
+				persistent_event_target:two_holy_order = {
+					title = d_hussite_order
+				}
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = String_ReligionsHolyOrder
+	}
+}
+defined_text = {
+	name = GetArtifactSearchBegining
+
+	text = {
+		localisation_key = String_ArtifactSearch1
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_ArtifactSearch2
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_ArtifactSearch3
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_ArtifactSearch4
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_ArtifactSearch5
+		weight_multiplier = { factor = 100 }
+	}
+	text = {
+		localisation_key = String_ArtifactSearch6
+		weight_multiplier = { factor = 100 }
+	}
+}
+
+defined_text = {
+	name = FleshButcher
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			NAND = {
+				trait = one_eyed
+				trait = one_legged
+				trait = one_handed
+				trait = disfigured
+			}
+		}
+		localisation_key = String_ThirdGateNotYet
+	}
+	text = {
+		trigger = {
+			AND = {
+				trait = one_eyed
+				trait = one_legged
+				trait = one_handed
+				trait = disfigured
+			}
+		}
+		localisation_key = String_ThirdGatePassed
+	}	
+}
+defined_text = {
+	name = SilentNight
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			diplomacy > 5
+		}
+		localisation_key = String_SilentNotYet
+	}
+	text = {
+		trigger = {
+			diplomacy <= 5
+		}
+		localisation_key = String_PastSilence
+	}	
+}
+
+defined_text = {
+	name = LoseAFight
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			martial > 5
+		}
+		localisation_key = String_CantLose
+	}
+	text = {
+		trigger = {
+			martial <= 5
+		}
+		localisation_key = String_CantWin
+	}	
+}
+
+defined_text = {
+	name = WasteYourMoney
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			stewardship > 5
+		}
+		localisation_key = String_StewFail
+	}
+	text = {
+		trigger = {
+			stewardship <= 5
+		}
+		localisation_key = String_StewPass
+	}	
+}
+
+defined_text = {
+	name = BecomeGullible
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			intrigue > 5
+		}
+		localisation_key = String_IntrFail
+	}
+	text = {
+		trigger = {
+			intrigue <= 5
+		}
+		localisation_key = String_IntrPass
+	}	
+}
+defined_text = {
+	name = BecomeStupid
+	use_first_valid = yes	
+	text = {
+		trigger = {
+			learning > 10
+		}
+		localisation_key = String_LrnFail
+	}
+	text = {
+		trigger = {
+			learning <= 10
+		}
+		localisation_key = String_LrnPass
+	}	
+}
+defined_text = {
+	name = GetCulturalOceanic
+	use_first_valid = yes
+
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					religion_group = oceanic
+					liege = {
+						NOT = {
+							religion_group = oceanic
+						}
+					}
+				}
+				AND = {
+					is_tributary = yes
+					is_tributary = { type = corsair }
+				}
+			}
+		}
+		localisation_key = tooltip_cultural_pirate_corsair
+	}
+	text = {
+		localisation_key = tooltip_cultural_pirate_buccaneer
+	}
+}
+defined_text = {
+	name = GetCBSRName
+	use_first_valid = yes
+
+	text = {
+		trigger = {
+			religion = jacobinist
+		}
+		localisation_key = String_Establish_Republique
+	}
+	text = {
+		trigger = {
+			religion = trotskyite
+		}
+		localisation_key = String_Awaken_People
+	}
+}
+defined_text = {
+	name = GetWARSRName
+	use_first_valid = yes
+
+	text = {
+		trigger = {
+			religion = jacobinist
+		}
+		localisation_key = String_Establishment_Republique
+	}
+	text = {
+		trigger = {
+			religion = trotskyite
+		}
+		localisation_key = String_Awakening_People
+	}
+}
+
+defined_text = {
+	name = GetCulturalMythologicalCreature
+	
+	text = {
+		localisation_key = random_mythological_creature_dragon
+	}
+	text = {
+		localisation_key = random_mythological_creature_giant_snail
+	}
+	text = {
+		trigger = {
+		culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_hydra
+	}
+	text = {
+		trigger = {
+		culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_gorgon
+	}
+	text = {
+		trigger = {
+		culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_harpy
+	}
+	text = {
+		trigger = {
+		culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_siren
+	}
+	text = {
+		localisation_key = random_mythological_creature_giant
+	}
+	text = {
+		localisation_key = random_mythological_creature_kraken
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture_group = byzantine
+				culture_group = brittannic
+				culture_group = anglo_frisian
+			}
+		}
+		localisation_key = random_mythological_creature_griffin
+	}
+	text = {
+		localisation_key = random_mythological_creature_basilisk
+	}
+	text = {
+		trigger = {
+			culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_manticore
+	}
+	text = {
+		trigger = {
+			culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_cyclops
+	}
+	text = {
+		trigger = {
+			culture_group = nord
+		}
+		localisation_key = random_mythological_creature_sleipnir
+	}
+	text = {
+		trigger = {
+			culture_group = nord
+		}
+		localisation_key = random_mythological_creature_fenrir
+	}
+	text = {
+		trigger = {
+			culture_group = nord
+		}
+		localisation_key = random_mythological_creature_jörmungandr
+	}
+	text = {
+		trigger = {
+			culture_group = nord
+		}
+		localisation_key = random_mythological_creature_nidhogg
+	}
+	text = {
+		trigger = {
+			culture_group = nord
+		}
+		localisation_key = random_mythological_creature_draugr
+	}
+	text = {
+		trigger = {
+			culture_group = byzantine
+		}
+		localisation_key = random_mythological_creature_chimera
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture_group = byzantine
+				culture_group = brittannic
+				culture_group = celtic
+			}
+		}
+		localisation_key = random_mythological_creature_dryad
+	}
+	fallback_text = {
+		localisation_key = random_mythological_creature_dragon
+	}
+}
+
+defined_text = {
+	name = GetRandomBhutanPrefix
+	
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion_group = indian_group
+					religion_group = buddhist_group
+					religion = bon
+					religion = bon_reformed
+					religion = sarna_pagan
+					religion = sarna_pagan_reformed
+				}
+			}
+		}
+		localisation_key = bhutan_thunder
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion_group = muslim
+					religion = islamity
+					religion = bahai
+					religion = druze
+					religion = alawite
+				}
+			}
+		}
+		localisation_key = bhutan_earth
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion_group = zoroastrian_group
+					religion_group = jewish_group
+					religion = mandaeanism
+				}
+			}
+		}
+		localisation_key = bhutan_fire
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion_group = christian
+					religion = lakefolk_pagan
+					religion = lakefolk_pagan_reformed
+					religion = thelemic
+					religion = thelemic_reformed
+					religion = summer_queen
+					religion = orange_king
+					religion = jugoslavist
+				}
+				NOT = {
+					religion = marblists
+				}
+			}
+		}
+		localisation_key = bhutan_water
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion_group = oceanic
+					has_religion_feature = religion_seafaring
+				}
+			}
+		}
+		localisation_key = bhutan_sea
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = ironist
+					religion_group = synth_group
+				}
+			}
+		}
+		localisation_key = bhutan_iron
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {	
+					religion = jacobinist
+					has_religion_feature = religion_ritual_sacrifice
+				}
+			}
+		}
+		localisation_key = bhutan_blood
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = voodun
+					religion = muwahidunna
+				}
+			}
+		}
+		localisation_key = bhutan_sand
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = vagarna
+					religion = starist_pagan
+					religion = starist_pagan_reformed
+					religion = inuit_pagan
+					religion = inuit_pagan_reformed
+					religion = finnish_pagan
+					religion = finnish_pagan_reformed
+					religion = nousthreskeia
+				}
+			}
+		}
+		localisation_key = bhutan_ice
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = baltic_pagan
+					religion = baltic_pagan_reformed
+					religion = folklorist
+					religion = folklorist_reformed
+					religion = celtic_pagan
+					religion = celtic_pagan_reformed
+				}
+			}
+		}
+		localisation_key = bhutan_forest
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = novelist
+					religion = novelist_reformed
+				}
+			}
+		}
+		localisation_key = bhutan_paper
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = marblists
+					religion = hellenic_pagan
+					religion = hellenic_pagan_reformed
+				}
+			}
+		}
+		localisation_key = bhutan_marble
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = zarist
+					religion = petrist
+					religion = katerinist
+				}
+			}
+		}
+		localisation_key = bhutan_gold
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = stalinist
+					religion = trotskyite
+					religion = leninist
+					religion = titoist
+					religion = ho_cult
+					religion = juche
+				}
+			}
+		}
+		localisation_key = bhutan_red
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = maoist
+					religion = red_cult
+				}
+			}
+		}
+		localisation_key = bhutan_ruby
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				religion_group = chinese_traditional_group
+			}
+		}
+		localisation_key = bhutan_jade
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				religion = tridemism
+			}
+		}
+		localisation_key = bhutan_sapphire
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				religion = khanist
+			}
+		}
+		localisation_key = bhutan_sky
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				religion = neoncult
+			}
+		}
+		localisation_key = bhutan_neon
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = starist_pagan
+					religion = starist_pagan_reformed
+					religion_group = alien_group
+				}
+			}
+		}
+		localisation_key = bhutan_celestial
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					religion = noreligion
+					culture_group = nullic
+					culture = noculture
+				}
+			}
+		}
+		localisation_key = bhutan_void
+	}
+	fallback_text = {
+		localisation_key = hre_holy
+	}
+}
+
+defined_text = {
+	name = GetRandomBhutanCreature
+	
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = tibetan_group
+					culture_group = chinese_group
+					culture_group = south_chinese_group
+					culture_group = celtic
+					culture_group = japan_group
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_dragon
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = francophone
+					culture_group = hispanophone
+					culture_group = occitanophone
+					culture_group = germanic
+					culture_group = alpinian
+					culture_group = apeninian
+					culture_group = west_german
+					culture_group = anglo_frisian
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_giant_snail
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_hydra
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_gorgon
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_harpy
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_siren
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = nord
+					culture_group = brittannic
+					culture_group = anglo_frisian
+					culture_group = byzantine
+					culture_group = armenian_group
+					culture_group = caucasian
+					culture_group = apeninian
+					culture_group = near_eastern
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_giant
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = nord
+					culture_group = brittannic
+					culture_group = anglo_frisian
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_kraken
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = byzantine
+					culture_group = brittannic
+					culture_group = anglo_frisian
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_griffin
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = byzantine
+					culture_group = apeninian
+					culture_group = francophone
+					culture_group = hispanophone
+					culture_group = occitanophone
+					culture_group = germanic
+					culture_group = alpinian
+					culture_group = west_german
+					culture_group = anglo_frisian
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_basilisk
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_manticore
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_cyclops
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = nord
+			}
+		}
+		localisation_key = random_mythological_creature_sleipnir
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = nord
+			}
+		}
+		localisation_key = random_mythological_creature_fenrir
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = nord
+			}
+		}
+		localisation_key = random_mythological_creature_jörmungandr
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = nord
+			}
+		}
+		localisation_key = random_mythological_creature_nidhogg
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = nord
+			}
+		}
+		localisation_key = random_mythological_creature_draugr
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				culture_group = byzantine
+			}
+		}
+		localisation_key = random_mythological_creature_chimera
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = byzantine
+					culture_group = brittannic
+					culture_group = celtic
+				}
+			}
+		}
+		localisation_key = random_mythological_creature_dryad
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = niger_congolese
+					culture_group = high_american
+					culture_group = low_american
+					culture_group = afroatlantic
+					culture_group = senegambian
+					culture_group = germanic
+					culture_group = west_german
+					culture_group = albanian
+				}
+			}
+		}
+		localisation_key = bhutan_creature_eagle
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = central_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = northern_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = west_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = dardic
+				}
+			}
+		}
+		localisation_key = bhutan_creature_tiger
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = east_slavic
+					culture_group = central_slavic
+					culture_group = far_east_slavic
+					culture_group = finno_ugric
+				}
+			}
+		}
+		localisation_key = bhutan_creature_bear
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = oghuz
+					culture_group = oghur_turkic
+					culture_group = arghu
+					culture_group = karluk
+					culture_group = kipchak
+					culture_group = samoyedic
+				}
+			}
+		}
+		localisation_key = bhutan_creature_wolf
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = francophone
+					culture_group = occitanophone
+				}
+			}
+		}
+		localisation_key = bhutan_creature_rooster
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = hispanophone
+					culture_group = amero_hispanophone
+				}
+			}
+		}
+		localisation_key = bhutan_creature_bull
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+					culture_group = alpinian
+			}
+		}
+		localisation_key = bhutan_creature_cow
+	}
+	text = {
+		trigger = {
+			event_target:target_ruler = {
+				OR = {
+					culture_group = horse_group
+					culture_group = cat_group
+					culture_group = bear_group
+					culture_group = hedgehog_group
+					culture_group = duck_group
+					culture_group = dog_group
+					culture_group = dragon_group
+					culture_group = elephant_group
+					culture_group = panda_group
+				}
+			}
+		}
+		localisation_key = bhutan_creature_human
+	}
+	fallback_text = {
+		localisation_key = random_mythological_creature_dragon
+	}
+}
