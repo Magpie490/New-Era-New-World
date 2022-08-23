@@ -1,0 +1,54 @@
+pittian_group = {
+	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
+	graphical_cultures = { croatsouthslavicgfx }
+
+	pittian = {
+		graphical_cultures = { croatsouthslavicgfx }
+		unit_graphical_cultures = { germangfx }
+		
+		color = { 167 184 189 }
+
+		male_names = {
+			Abelino Adam Albert Albi Alen Aldo Aleks Alesandro Akine Amadeus Andrev Andria Angus Arkin Aron August Augustin Aurelian
+			Baldwin Bartolomeus Basil Belo Benjamin Boris Brian Calvin Casimir Caspar Clement Cornelius Cosmo
+			Daniel Deargo Dearo Defo Demetrius Dino Dragan Dujm Duncan Ed Eduard Elijah Elio Elvis Emanuel Emil Ethan Eugene Eid Ezio
+			Felicio Feliks Fin Firo Fodoprid Fortunato Francis Frank Fred Fredi
+			Gabriel Gabrino George Gilbert Gregori Guerino Han Harko Hrvoie Hubert Hugh Hupold
+			Igor Ingvar Ivanis Jacob Jack Jacki James Jesi John Johni Jordan Joseph Joshua Jitei Juri
+			Koloman Konrad Kormak Karles Kristopher Laurence Lambert Lazarus Leo Leonardo Leonid Leopold Liam Lidio Loris Lovi Luke
+			Malcom Marco Marius Martin Mason Mateo Mathew Mersed Mikael Milano Mislav Mitrofan Murkad Neno Nick Nighto Nikita Nikolas Noah Oliver Orlando Oscar
+			Patrik Paul Philip Pecevar Peter Prospero Poropat Radul Randolph Roman Rudolph Rulepece Rusti
+			Sandro Sergio Shaun Simon Slavi Srd Stephen Sulvan
+			Tajlor Taran Theodor Thieri Thomas Tom Toni Travis Ubaldo Ulf Valter Viktor Visho Vito Vukan Viliam Virgil Verner Zack Zackeri
+		}
+		female_names = {
+			Adela Adriana Aleks Alesandra Ambrosia Amelia Antonela Antonia Ana Ava Augusta Aurelina
+			Barbara Bela Belapece Benjamina Bone Borisa Briana Brigit Brunhild Calvina Casimira Catherine Cleara Clementina
+			Danica Dearana Dilva Dubrava Dubravka Dorothi Eda Edith Elenor Eli Elizabet Elvira Ema Emanuela Emili Emilia Eva Evelin
+			Felicia Feliksa Fine Fortuna Franka Freda Frida
+			Gabriela Gea Gordana Goldi Gormeli Hana Harper Hapira Hedviga Helena Helen Hope
+			Ida Iolanda Isabela Jackina Jadranka Jagoda Jane Jean Joan Jolanda Jordana Judit Josephina
+			Kamila Karla Karlote Karmela Kecilia Kera Keri Kisala Konstant Ksenia Ladika Laura Lea Leonida Lidia Livia Lightila Lili Lizi Lorna Lova Lucia
+			Madison Marca Margaret Maria Mare Martina Masonia Matea Mia Mikaela Mariana Mirena Mirna Muriel Natali Natalia Nikita Nives Nuala Olivia
+			Patrika Pauliana Pelina Petra Pita Rea Rebeka Redmila Rhonda River Romana Rubi Ruth
+			Sandra Sheri Sergia Sibila Silenta Silvia Sinek Sista Snovi Sophia Sunshina Susan
+			Tajlorina Tatiana Theodora Thomaslava Toma Tomasina Valeria Vanesa Veronika Viktoria Viliama Virgila Virginia Vishana Zackeria
+		}
+		
+		from_dynasty_prefix = "from "
+		
+		feminist = yes
+
+		modifier = default_culture_modifier
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 35
+		father_name_chance = 5
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 35
+		mother_name_chance = 5
+		
+	}
+}
