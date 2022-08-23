@@ -18,12 +18,16 @@
 	dynasty = 5000001 #Griffin
 	religion = "puritan"
 	culture = "proviguese"
-	secret_religion = "columbian" 
+	secret_religion = "columbian"
 	trait = "slothful"
 	trait = "is_fat"
 	trait = "proud"
+	trait = "arbitrary"
 	2279.1.31 = {
 		birth = yes
+	}
+	2299.7.12={
+		add_spouse=700006
 	}
 	2360.1.1 = {
 		death = yes
@@ -80,12 +84,125 @@
 		birth = yes
 	}
 	2284.4.10 ={ 
-	create_bloodline = {
-		type = mayflower_bloodline 
+		create_bloodline = {
+			type = mayflower_bloodline 
+		}
 	}
-}
 	2666.1.1 = { 
 		death = yes
 	}
 }
+700006 = {
+	name = "Lois"
+	female = yes
+	religion = "puritan"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "cruel"
+	2281.1.31 = {
+		birth = yes
+	}
+	2299.7.12={
+		add_spouse=700001
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700007 = {
+	name = "Meg"
+	female = yes
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "puritan"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	2306.1.31 = {
+		birth = yes
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700008 = {
+	name = "Chris"
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "puritan"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "is_fat"
+	trait = "trusting"
+	trait = "kind"
+	2309.1.31 = {
+		birth = yes
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700009 = {
+	name = "Stewie"
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "puritan"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "genius"
+	2323.1.31 = {
+		birth = yes
+	}
+	2299.7.12={
+		add_friend=700010
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700010 = {
+	name = "Brian"
+	religion = "puritan"
+	culture = "dog_culture"
+	secret_religion = "columbian"
+	trait = "poet"
+	trait = "drunkard"
+	trait = "shrewd"
+	trait = "lustful"
+	2308.1.31 = {
+		birth = yes
+	}
+	2299.7.12={
+		employer=700001
+		add_friend=700009
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700011 = {
+	name = "Billy"
+	dynasty = 5000006
+	dna=dhccicgacfc
+	properties=ei00o
+	#race=englishgfx
+	religion=columbian
+	culture=nutmegger
+	trait=strong
+	trait=fair
+	trait=bisexual
+	trait=lustful
+	trait=kind
+	trait=cynical
+	trait=grey_eminence
+	disallow_random_traits = yes
+	#give_nickname=nick_aniki
+	2298.07.14 = {
+		birth = yes
+	}
+	2418.03.02 = {
+		death = yes
+	}
 }
