@@ -87,6 +87,7 @@ republic_governments = {
 					title = d_anartta
 					title = e_roman_republic
 					has_title_flag = cypriote_member_state
+					has_title_flag = new_oligarchic_state
 				}
 			}
 			has_oligarchy_title_trigger = no
@@ -124,6 +125,10 @@ republic_governments = {
 		landed_inheritance = no
 		
 		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 5
+		court_size_maintenance_cost_modifier = -0.05
 	}
 	
 	republic_government = {
@@ -193,6 +198,13 @@ republic_governments = {
 			tribal_government
 			merchant_republic_government
 			republic_government
+			eastern_feudal
+			calvinist_government
+			confederation_government
+			oligarchic_republic
+			colonial_government
+			blorg_government
+			pasharti_government
 		}
 		gets_religion_opinion_penalties = no
 		vassal_government_opinion_penalties = no

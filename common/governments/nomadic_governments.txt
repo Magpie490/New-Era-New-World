@@ -26,6 +26,9 @@ nomadic_governments = {
 			theocracy_government
 			tribal_government
 			colonial_government
+			blorg_government
+			pasharti_government
+			civic_government
 		}
 		ignore_in_vassal_limit_calculation = {
 			nomadic_government
@@ -45,7 +48,9 @@ nomadic_governments = {
 		}
 		
 		color = { 201 179 36 }
-		
+		character_modifier = {
+			monthly_character_prestige = -0.25
+		}
 		uses_prestige_for_law_change = yes
 		allow_title_revokation = yes
 		allow_looting = yes
