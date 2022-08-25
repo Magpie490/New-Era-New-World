@@ -1,0 +1,460 @@
+zarist_painting_peter = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		OR = {
+			religion = zarist
+			religion = petrist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = zarist
+			religion = petrist
+		}
+	}
+	flags = { religious zarist art decor zarist_painting peter }
+	picture = "GFX_zarist_painting_peter"
+}
+zarist_painting_nicholas = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		religion = zarist
+	}
+	allowed_gift = {
+		religion = zarist
+	}
+	flags = { religious zarist art decor zarist_painting nicholas }
+	picture = "GFX_zarist_painting_nicholas"
+}
+zarist_painting_ivan = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		religion = zarist
+	}
+	allowed_gift = {
+		religion = zarist
+	}
+	flags = { religious zarist art decor zarist_painting ivan }
+	picture = "GFX_zarist_painting_ivan"
+}
+zarist_painting_catherine = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		OR = {
+			religion = zarist
+			religion = katerinist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = zarist
+			religion = katerinist
+		}
+	}
+	flags = { religious zarist art decor zarist_painting catherine }
+	picture = "GFX_zarist_painting_catherine"
+}
+zarist_painting_alexander = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		religion = zarist
+	}
+	allowed_gift = {
+		religion = zarist
+	}
+	flags = { religious zarist art decor zarist_painting alexander }
+	picture = "GFX_zarist_painting_alexander"
+}
+zarist_painting_alexis = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	helps_emulating_tzar = 1
+	quality = 2
+	stacking = no
+	active = {
+		religion = zarist
+	}
+	allowed_gift = {
+		religion = zarist
+	}
+	flags = { religious zarist art decor zarist_painting alexis }
+	picture = "GFX_zarist_painting_alexis"
+}
+hat_of_asterix = {
+	slot = crown
+	monthly_character_prestige = 0.5
+	intrigue = 2
+	combat_rating = 15
+	same_religion_opinion = 5
+	quality = 5
+	stacking = no
+	active = {
+		religion_openly_novelist_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_novelist_or_reformed_trigger = yes
+	}
+	command_modifier = {
+		speed = 0.1
+	}
+	flags = { religious novelist very_rare crown }
+	picture = "GFX_Placeholder"
+}
+armalite = {
+	monthly_character_prestige = 0.75
+	martial = 3
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.10
+		morale_defence = 0.10
+	}
+	quality = 4
+	active = {
+		is_adult = yes
+	}
+	flags = { combat_weapon sword great_conqueror }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_sword_T3_glow_red"
+	slot = weapon
+}
+heart_of_bathman = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety= 0.5
+	jacobinist_opinion = 15
+	quality = 5
+	stacking = no
+	active = {
+		religion = jacobinist 
+	}
+	allowed_gift = {
+		religion = jacobinist
+	}
+	flags = { religious bodypart very_rare jacobinist remains }
+	picture = "GFX_relicbox_iron"
+}
+sword_of_attila = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	hungarian_opinion = 5
+	budaism_opinion = 5
+	martial = 2
+	combat_rating = 15
+	command_modifier = {
+		light_cavalry_morale = 0.2
+	}
+	quality = 4
+	active = {
+		is_adult = yes
+		OR = {
+			religion = budaism
+			culture = hungarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = budaism
+			culture = hungarian
+		}
+	}
+	flags = { combat_weapon sword great_conqueror religious very_rare }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_sword_T3_glow_red"
+	slot = weapon
+}
+kantele = { #Congratulations for reforming the Suomenusko faith
+	learning = 3
+	quality = 4
+	active = {
+		is_adult = yes
+		OR = {
+			religion = finnish_pagan_reformed
+			religion = finnish_pagan
+			culture = finnish
+		}
+	}
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.6
+	suomenusko_opinion = 10
+	suomenusko_reformed_opinion = 10
+	scholar_opinion = 5
+	flags = { about_religion religious suomenusko }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_kantele"
+}
+golden_fleece = { # Wow, you actually completed the Argonauts event chain?
+	learning = 3
+	stewardship = 3
+	martial = 1
+	quality = 4
+	active = {
+		is_adult = yes
+		OR = {
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			culture_group = byzantine
+			religion = poseidonian
+		}
+	}
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	hellenic_opinion = 20
+	hellenic_reformed_opinion = 20
+	scholar_opinion = 5
+	flags = { about_religion religious hellenic }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_golden_fleece"
+}
+lance_blaiddyd_bongpoker = {
+	monthly_character_prestige = 1.0
+	martial = 4
+	combat_rating = 20
+	command_modifier = {
+		light_infantry = 0.15
+		actual_heavy_infantry = 0.25
+		morale_offence = 0.10
+		morale_defence = 0.10
+	}
+	quality = 4
+	active = {
+		OR = {
+			dynasty = 1996002
+			any_owned_bloodline = {
+				has_bloodline_flag = can_use_angry_celtic_murder_spear
+				bloodline_is_active_for = PREV
+			}
+		}
+		is_adult = yes
+	}
+	flags = { combat_weapon lance spear }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_ahreadbar"
+	slot = weapon
+}
+sword_of_misunderstanded_lightning = {
+	monthly_character_piety = 0.25
+	martial = 1
+	combat_rating = 10
+	command_modifier = {
+		actual_heavy_infantry = 0.05
+	}
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_blue_glowing_sword"
+	slot = weapon
+}
+hope_armor = {
+	monthly_character_prestige = 0.5
+	martial = 1
+	combat_rating = 5
+	command_modifier = { morale_defence = 0.05 }
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	flags = { armor_set armor }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_splint_mail"
+	slot = torso
+}
+fist_of_the_north_star = {
+	monthly_character_prestige = 1
+	martial = 2
+	combat_rating = 20
+	command_modifier = {
+		heavy_infantry = 0.2
+		light_cavalry = 0.2
+	}
+	quality = 4
+	active = {
+		is_adult = yes
+		OR = {
+			religion = starist_pagan
+			religion = starist_pagan_reformed
+		}
+	}
+	flags = { combat_weapon mace about_religion religious starist }
+	stacking = no
+	picture = "GFX_mace"
+	slot = weapon
+}
+ear_of_isukiri = {
+	monthly_character_prestige = 0.1
+	fertility = 0.15
+	health = 0.5
+	active = { 
+		religion = isukirian
+	}
+	allowed_gift = {
+		religion = isukirian
+	}
+	quality = 3
+	flags = { religious christian rare isukiri }
+	stacking = no
+	picture = "GFX_pouch"
+}
+#Necklace Martial
+martial_fetish_low = {
+	monthly_character_prestige = 0.1
+	martial = 1
+	quality = 2
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { necklace african_fetish }
+	picture = "GFX_pearl_necklace"
+	slot = weapon
+}
+#Mask Martial
+martial_fetish_medium = {
+	monthly_character_prestige = 0.25
+	martial = 2
+	quality = 3
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { mask african_fetish }
+	picture = "GFX_crown_african_mask_6"
+	slot = mask
+}
+#Totems Martial
+martial_fetish_high = {
+	monthly_character_prestige = 0.5
+	martial = 3
+	command_modifier = { morale_offence = 0.05 }
+	quality = 4
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { scepter totem african_fetish }
+	picture = "GFX_scepter_african_1"
+	slot = scepter
+}
+#Necklace Diplo
+diplomacy_fetish_low = {
+	monthly_character_prestige = 0.1
+	diplomacy = 1
+	quality = 2
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { necklace african_fetish }
+	picture = "GFX_pearl_necklace"
+	slot = weapon
+}
+#Mask Diplo
+diplomacy_fetish_medium = {
+	monthly_character_prestige = 0.25
+	diplomacy = 2
+	quality = 3
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { mask african_fetish }
+	picture = "GFX_crown_african_mask_7"
+	slot = mask
+}
+#Totems Diplo
+diplomacy_fetish_high = {
+	monthly_character_prestige = 0.5
+	diplomacy = 3
+	castle_opinion = 1
+	tribal_opinion = 1
+	town_opinion = 1
+	quality = 4
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { scepter totem african_fetish }
+	picture = "GFX_scepter_african_2"
+	slot = scepter
+}
+
+#Necklace Stewardship
+stewardship_fetish_low = {
+	monthly_character_prestige = 0.1
+	stewardship = 1
+	quality = 2
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { necklace african_fetish }
+	picture = "GFX_pearl_necklace"
+	slot = weapon
+}
+#Mask Stewardship
+stewardship_fetish_medium = {
+	monthly_character_prestige = 0.25
+	stewardship = 2
+	quality = 3
+	active = {
+		religion = voodun
+	}
+	stacking = yes
+	flags = { mask african_fetish }
+	picture = "GFX_crown_african_mask_8"
+	slot = mask
+}
+#Totems Stewardship
+stewardship_fetish_high = {
+	monthly_character_prestige = 0.5
+	stewardship = 3
+	global_tax_modifier = 0.05
+	quality = 4
+	active = {
+		religion = voodun 
+	}
+	stacking = yes
+	flags = { scepter totem african_fetish }
+	picture = "GFX_scepter_african_3"
+	slot = scepter
+}
+#Stone of Mercy
+stone_mercy = {
+	jewish_opinion = 5
+	church_opinion = 5
+	quality = 4
+	active = {
+		religion_group = jewish_group 
+	}
+	indestructible = yes
+	stacking = no
+	flags = { stone }
+	picture = "GFX_stone_mercy"
+}

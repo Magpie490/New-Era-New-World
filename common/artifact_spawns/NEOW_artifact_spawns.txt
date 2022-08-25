@@ -1,0 +1,364 @@
+ancient_artifact = {
+	max_amount = 75
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ate_firearm = {
+			value = 1 # rare
+		}
+		gold_bar = {
+			value = 1 # rare
+		}
+		silver_bar = {
+			value = 1 # rare
+		}
+		pottery = {
+			value = 10
+		}
+		record_1 = {
+			value = 10
+		}
+		ate_calculator = {
+			value = 2
+		}
+		ate_watch = {
+			value = 2
+		}
+		ate_typewriter = {
+			value = 2
+		}
+		ate_telescope = {
+			value = 2
+		}
+		ate_textbooks = {
+			value = 2
+		}
+		ate_compass = {
+			value = 2
+		}
+		old_world_glass = {
+			value = 2
+		}
+		old_world_jewelry = {
+			value = 2
+		}
+		old_world_musicbox = {
+			value = 2
+		}
+		old_world_shades = {
+			value = 2
+		}
+		old_world_engine = {
+			value = 2
+			additive_modifier = {
+				value = 0
+				NOT = {
+					religion = ironist
+				}
+			}
+		}
+		ate_euro = {
+			value = 10
+			additive_modifier = {
+				value = 0
+				NOT = {
+					capital_scope = {
+						region = world_europe
+					}
+				}
+			}
+		}
+	}
+}
+
+
+ate_jewish_artifacts = {
+	max_amount = 5
+	spawn_date = -1.1.1
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion_group = jewish_group
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		golden_menorah = {
+			value = 1 # really rare to spawn
+		}
+		ancient_torah = {
+			value = 3 # rare
+		}
+		jewish_banner = {
+			value = 5
+		}
+		ate_fingerbone_of_rabbi = {
+			value = 5
+		}
+	}
+}
+
+ate_christian_artifacts = {
+	max_amount = 4
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 75 # 3 on average
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion_group = christian
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		sword_michael = {
+			value = 1
+		}
+		horn_gabriel = {
+			value = 1
+		}
+		right_hand_petrus = {
+			value = 1
+		}
+		stone_of_golgotha = {
+			value = 1
+		}
+	}
+}
+ancient_christian_artifacts = {
+	max_amount = 35
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion_group = christian
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		ancient_rosary = {
+			value = 1
+			additive_modifier = {
+				value = 0
+				NOR = {
+					religion = catholic
+					religion = fraticelli
+					religion = sevillian
+				}
+			}
+		}
+	}
+}
+ancient_japanese_christain_artifacts = {
+	max_amount = 4
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion = isukirian
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		ear_of_isukiri = {
+			value = 1
+			additive_modifier = {
+				value = 0
+				NOT = {
+					religion = isukirian
+				}
+			}
+		}
+	}
+}
+excalibur = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+				culture_group = anglo_frisian
+				religion = summer_queen
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+			}
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		excalibur = {
+			value = 1
+		}
+	}
+}
+folklorist_artifacts = {
+	max_amount = 15
+	spawn_date = -1.1.1
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+				religion = folklorist
+				religion = folklorist_reformed
+			}
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		the_malachite_box = {
+			value = 1
+		}
+		the_witcher_king = {
+			value = 1
+		}
+		the_white_wolf_book = {
+			value = 1
+		}
+		alexander_nevsky = {
+			value = 1
+		}
+		warship_potemkin = {
+			value = 1
+		}
+		night_on_bald_mountain = {
+			value = 1
+		}
+	}
+}
+napoleon_crown_artifacts = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	spawn_chance = {
+		value = 100
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+				culture_group = francophone
+				culture_group = hispanophone
+				culture_group = occitanophone
+				culture_group = germanic
+				culture_group = alpinian
+				culture_group = apeninian
+				culture_group = west_german
+			}
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		crown_napoleon = {
+			value = 1
+		}
+	}
+}
+buddhist_artifact = {
+	max_amount = 50
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 25 # 
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			religion_group = buddhist_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		buddha_statue = {
+			value = 1
+		}
+	}
+}
+skeleton_pope = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+		}
+	}
+    
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_ecclesiarchy
+			}
+		}
+	}
+    artifacts = {
+        skeleton_pope = {
+            value = 1
+        }
+    }
+}
