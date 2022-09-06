@@ -104,5 +104,35 @@ decisions = {
 			d_connecticut = { de_jure_liege = k_connecticut }
 		}
 	}
+	form_springfield = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			dynasty = 5000010 #Simpson
+			e_springfield = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = c_springfield
+			completely_controls = c_pioneer_valley
+			completely_controls = c_lane
+			completely_controls = c_savannah
+			completely_controls = c_dayton
+			completely_controls = c_windsor
+			completely_controls = c_nashville
+			completely_controls = c_sangamon
+			completely_controls = c_blue_earth
+		}
+		effect = { 
+			e_springfield = { gain_title_effect = yes }
+			#d_connecticut = { de_jure_liege = k_connecticut }
+		}
+	}
 	
 }
