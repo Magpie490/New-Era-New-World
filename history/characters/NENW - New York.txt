@@ -123,6 +123,7 @@
 	dynasty = 5000013 #Leed
 	religion = columbian
 	culture = jerseyite
+	father = 800010
 	mother = 800007
 	trait = legit_bastard
 	trait = fair
@@ -149,6 +150,8 @@
 	dynasty = 5000013 #Leed
 	religion = columbian
 	culture = jerseyite
+	father = 800013
+	mother = 800015
 	trait = lustful
 	trait = cannibal_trait
 	trait = fair
@@ -165,6 +168,202 @@
 	2325.1.1 = {
 		death = {
 			death_reason = death_rabble
+		}
+	}
+}
+800008 = {
+	name = "Abraham"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	father = 800014
+	trait = bastard
+	2267.4.5 = {
+		birth = yes
+	}
+	2280.5.5 = {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800009 = {
+	name = "Issac"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	father = 800014
+	trait = bastard
+	2269.8.25 = {
+		birth = yes
+	}
+	2280.5.5 {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800010 = {
+	name = "Clyde"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	father = 800014
+	trait = bastard
+	trait = adventurer
+	trait = elusive_shadow
+	2278.2.5 = {
+		birth = yes
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800011 = {
+	name = "Malric"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	father = 800013
+	mother = 800016
+	2274.8.25  {
+		birth = yes
+	}
+	2280.5.5 = {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800012 = {
+	name = "Mandy"
+	female = yes
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	father = 800013
+	mother = 800016
+	2278.1.7 = {
+		birth = yes
+	}
+	2280.5.5 {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800013 = {
+	name = "Erebus"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	mother = 800017
+	trait = kinslayer
+	trait = wroth
+	trait = paranoid
+	trait = intricate_webweaver
+	give_nickname = nick_the_vengefulcuck
+	2258.7.20 = {
+		birth = yes
+	}
+	2273.12.12 = {
+		add_spouse = 800016
+	}
+	2280.5.6 = {
+		add_spouse = 800015
+	}
+	2305.3.6 = {
+		death = {
+			death_reason = death_accident
+		}
+	}
+}
+800014 = {
+	name = "Malacoda"
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	mother = 800017
+	trait = seducer
+	trait = lustful
+	trait = arbitrary
+	trait = flamboyant_schemer
+	give_nickname = nick_the_brothercucker
+	2256.9.30 = {
+		birth = yes
+	}
+	2273.10.10 = {
+		add_spouse = 800015
+	}
+	2280.5.5 {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800015 = {
+	name = "Becca"
+	female = yes
+	religion = columbian
+	culture = jerseyite
+	2254.12.5 = {
+		birth = yes
+	}
+	2273.10.10 = {
+		add_spouse = 800014
+	}
+	2280.5.6 = {
+		add_spouse = 800013
+	}
+	2310.6.1 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800016 = {
+	name = "Mandy"
+	female = yes
+	religion = columbian
+	culture = jerseyite
+	trait = pregnant
+	2258.11.9 = {
+		birth = yes
+	}
+	2273.12.12 = {
+		add_spouse = 800013
+	}
+	2280.5.5 {
+		death = {
+			death_reason = death_execution
+			killer = 800013
+		}
+	}
+}
+800017 = {
+	name = "Cruella"
+	female = yes
+	dynasty = 5000013 #Leed
+	religion = columbian
+	culture = jerseyite
+	trait = cruel
+	trait = wroth
+	trait = arbitrary
+	trait = ugly
+	trait = cancer
+	trait = indulgent_wastrel
+	give_nickname = nick_the_skinflayer
+	2235.12.25 = {
+		birth = yes
+	}
+	2265.4.20 = {
+		death = {
+			death_reason = death_trait
 		}
 	}
 }
