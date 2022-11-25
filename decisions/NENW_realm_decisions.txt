@@ -104,6 +104,103 @@ decisions = {
 			d_connecticut = { de_jure_liege = k_connecticut }
 		}
 	}
+	form_wampanoag = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			culture = wampanoag
+			k_wampanoag = {
+				is_titular = yes
+				has_holder = no 
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = d_rhode_island
+			completely_controls = d_boston
+			completely_controls = d_nantucket
+			prestige = 500
+		}
+		effect = { 
+			k_wampanoag = { gain_title_effect = yes }
+			d_rhode_island = { de_jure_liege = k_wampanoag }
+			d_boston = { de_jure_liege = k_wampanoag }
+			d_nantucket = { de_jure_liege = k_wampanoag }
+		}
+	}
+	form_new_acadia = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			culture = aroostois
+			k_new_acadia = {
+				is_titular = yes
+				has_holder = no 
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = d_maine
+			completely_controls = d_penobscot
+			completely_controls = d_aroostook
+			completely_controls = d_pennacook
+			prestige = 500
+		}
+		effect = {
+			k_new_acadia = { gain_title_effect = yes }
+			d_maine = { de_jure_liege = k_new_acadia }
+			d_penobscot = { de_jure_liege = k_new_acadia }
+			d_aroostook = { de_jure_liege = k_new_acadia }
+			d_pennacook = { de_jure_liege = k_new_acadia }
+		}
+	}
+	form_great_lakes = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			#culture = No Cultures Yet!
+			e_great_lakes = {
+				is_titular = yes
+				has_holder = no 
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = k_wabash
+			completely_controls = k_illinois
+			completely_controls = k_michigan
+			completely_controls = k_superior
+			completely_controls = k_wisconsin
+			completely_controls = k_ohio
+			completely_controls = k_upstachia
+			completely_controls = k_allegheny
+			completely_controls = k_aurora
+			completely_controls = k_ontario
+			prestige = 5000
+		}
+		effect = {
+			e_great_lakes = { gain_empire_effect = yes }
+			k_wabash = { de_jure_liege = e_great_lakes }
+			k_illinois = { de_jure_liege = e_great_lakes }
+			k_michigan = { de_jure_liege = e_great_lakes }
+			k_superior = { de_jure_liege = e_great_lakes }
+			k_wisconsin = { de_jure_liege = e_great_lakes }
+			k_ohio = { de_jure_liege = e_great_lakes }
+			k_upstachia = { de_jure_liege = e_great_lakes }
+			k_allegheny = { de_jure_liege = e_great_lakes }
+			k_aurora = { de_jure_liege = e_great_lakes }
+			k_ontario = { de_jure_liege = e_great_lakes }
+		}
+	}
 	form_springfield = {
 		is_high_prio = yes
 		only_playable = yes
@@ -131,7 +228,6 @@ decisions = {
 		}
 		effect = { 
 			e_springfield = { gain_title_effect = yes }
-			#d_connecticut = { de_jure_liege = k_connecticut }
 		}
 	}
 	
