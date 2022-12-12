@@ -81,6 +81,7 @@ rough_terrain_leader = {
 mountain_terrain_leader = {
 	leader = yes
 	random = no
+	days_of_supply = 30
 	
 	command_modifier = {
 		terrain = mountain
@@ -258,6 +259,7 @@ viking = {
 	combat_rating = 10 #old value: 1
 	monthly_character_prestige = 0.3
 	oceanic_opinion = 10
+	heroic_tales_opinion = 10
 	
 	same_opinion = 5
 	#religious = yes
@@ -842,6 +844,7 @@ narrow_flank_leader = {
 brahmin = {
 	potential = {
 		OR = {
+			religion = agamatirta
 			religion = old_hindu
 			religion = parabrahmanist
 			religion = jain
@@ -855,6 +858,7 @@ brahmin = {
 	}
 	
 	global_levy_size = -2
+	global_garrison_size = 0.75
 	caste_tier = 3
 
 	monthly_character_prestige = 0.1
@@ -868,6 +872,7 @@ brahmin = {
 kshatriya = {
 	potential = {
 		OR = {
+			religion = agamatirta
 			religion = old_hindu
 			religion = parabrahmanist
 			religion = jain
@@ -893,6 +898,7 @@ kshatriya = {
 vaishya = {
 	potential = {
 		OR = {
+			religion = agamatirta
 			religion = old_hindu
 			religion = parabrahmanist
 			religion = jain
@@ -981,6 +987,11 @@ decadent = {
 			religion_group = muslim
 			religion = calvinist
 			religion = combuddhist
+			religion = islamity
+			religion = muwahidunna
+			religion = ahlehaqq
+			religion = jugoslavist
+			religion = voodun
 		}
 	}
 	
@@ -1108,7 +1119,9 @@ seductress = {
 administrator = {
 	lifestyle = yes
 	
+	global_levy_size = 0.05
 	stewardship = 3
+	legalist_opinion = 5
 	
 	command_modifier = {
 		speed = 0.1
@@ -1251,6 +1264,7 @@ erudite = {
 	combat_rating = -2 #new value!
 	
 	church_opinion = 5
+	legalist_opinion = 5
 	
 	male_insult = INSULT_WINDBAG
 	female_insult = INSULT_WINDBAG
@@ -1269,6 +1283,7 @@ stubborn = {
 	stewardship = 1
 	diplomacy = -1
 	combat_rating = 3 #new value!
+	legalist_opinion = 5
 	
 	vassal_opinion = -5
 	ai_ambition = 10
@@ -5842,7 +5857,15 @@ sanyasi = {
 	potential = {
 		is_ruler = no
 		is_female = no
-		religion = hindu
+		OR = {
+			religion = agamatirta
+			religion = old_hindu 
+			religion = sikh 
+			religion = maunaxite_reformed 
+			religion = maunaxite 
+			religion = parabrahmanist 
+			religion = neovedantic 
+		}
 	}
 	
 	monthly_character_piety = 0.3
@@ -5861,7 +5884,15 @@ sanyasini = {
 	potential = {
 		is_ruler = no
 		is_female = yes
-		religion = hindu
+		OR = {
+			religion = agamatirta
+			religion = old_hindu 
+			religion = sikh 
+			religion = maunaxite_reformed 
+			religion = maunaxite 
+			religion = parabrahmanist 
+			religion = neovedantic 
+		}
 	}
 	
 	monthly_character_piety = 0.3
@@ -6118,6 +6149,7 @@ kow_tow_completed_tier_3 = {
 giant = {
 	birth = 50
 	inherit_chance = 5
+	both_parent_has_trait_inherit_chance = 15
 	
 	opposites =  {
 		dwarf
@@ -6205,6 +6237,10 @@ uncrowned = { #Used to handle portrait appearance
 	random = no
 }
 
+training = {
+	pilgrimage = yes # Will need a regent, but can still be guardian to children.
+	customizer = no
+}
 travelling = {
 	pilgrimage = yes # Will need a regent, but can still be guardian to children.
 	customizer = no
@@ -6247,6 +6283,7 @@ troubled_pregnancy = {
 
 lefthanded = {
 	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 50
 	birth = 75
 
 	combat_rating = 15
@@ -6604,7 +6641,7 @@ celtic_pagan_leader = {
 		morale_offence = 0.2
 	}
 }
-nousthreskeia_leader = {
+razumist_leader = {
 	leader = yes
 	random = no
 	command_modifier = {
@@ -6631,6 +6668,96 @@ starist_leader = {
 		winter_combat = 0.3
 		winter_supply = 3
 		defence = 0.1
+	}
+}
+sea_creed_leader = {
+	leader = yes
+	random = no
+	trait_effect_capture_commanders = 1
+	galleys_perc = 0.05
+	command_modifier = {
+		siege = 0.2
+		morale_offence = 0.05
+		speed = 0.1
+	}
+}
+poseidonian_leader = {
+	leader = yes
+	random = no
+	trait_effect_capture_commanders = 1
+	galleys_perc = 0.05
+	command_modifier = {
+		siege = 0.2
+		speed = 0.1
+		morale_defence = 0.05
+	}
+}
+wokou_leader = {
+	leader = yes
+	random = no
+	trait_effect_capture_commanders = 1
+	galleys_perc = 0.2
+	command_modifier = {
+		siege = 0.2
+		morale_offence = 0.2
+		speed = 0.1
+	}
+}
+shinto_leader = {
+	leader = yes
+	random = no
+	command_modifier = {
+		terrain = mountain
+		terrain = hills
+		light_cavalry = 0.2
+		speed = 0.1
+	}
+}
+mo_leader = {
+	leader = yes
+	random = no
+	command_modifier = {
+		speed = 0.2
+		retreat = 0.2
+		archers = 0.2
+	}
+}
+bungan_leader = {
+	leader = yes
+	random = no
+	galleys_perc = 0.05
+	command_modifier = {
+		terrain = jungle
+		speed = 0.2
+		retreat = 0.2
+	}
+}
+kaharingan_leader = {
+	leader = yes
+	random = no
+	galleys_perc = 0.05
+	command_modifier = {
+		morale_offence = 0.25
+		siege = 0.2
+	}
+}
+thuyhoa_leader = {
+	leader = yes
+	random = no
+	command_modifier = {
+		light_infantry = 0.1
+		retreat = 0.25
+		archers = 0.1
+	}
+}
+satsana_pi_leader = {
+	leader = yes
+	random = no
+	trait_effect_capture_commanders = 1
+	command_modifier = {
+		speed = 0.1
+		morale_offence = 0.2
+		light_infantry = 0.2
 	}
 }
 
@@ -7349,6 +7476,7 @@ bloodthirsty_gods_1 = { #10 burned_hearts_points
 	potential = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -7387,6 +7515,7 @@ bloodthirsty_gods_2 = { #50 burned_hearts_points
 	potential = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -7425,6 +7554,7 @@ bloodthirsty_gods_3 = { #100 burned_hearts_points
 	potential = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist

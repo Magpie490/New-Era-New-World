@@ -85,21 +85,39 @@ defender_pledge_crusade_trigger = {
 	custom_tooltip = {
 		text = defense_pledge_crusade_target_TT_2
 
-		OR = {
-			catholic = {
-				crusade_target_char = {
-					is_within_diplo_range = ROOT
-				}
+		catholic = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
 			}
-			fraticelli = {
-				crusade_target_char = {
-					is_within_diplo_range = ROOT
-				}
+		}
+		fraticelli = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
 			}
-			sevillian = {
-				crusade_target_char = {
-					is_within_diplo_range = ROOT
-				}
+		}
+		cadaverist = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		calvinist = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		sevillian = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		katoliko = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
+			}
+		}
+		aglipayan = {
+			crusade_target_char = {
+				is_within_diplo_range = ROOT
 			}
 		}
 	}
@@ -120,7 +138,35 @@ defender_pledge_crusade_trigger = {
 				}
 			}
 		}
+		cadaverist = {
+			NOT = {
+				crusade_target_char = {
+					character = PREVPREV
+				}
+			}
+		}
+		calvinist = {
+			NOT = {
+				crusade_target_char = {
+					character = PREVPREV
+				}
+			}
+		}
 		sevillian = {
+			NOT = {
+				crusade_target_char = {
+					character = PREVPREV
+				}
+			}
+		}
+		katoliko = {
+			NOT = {
+				crusade_target_char = {
+					character = PREVPREV
+				}
+			}
+		}
+		aglipayan = {
 			NOT = {
 				crusade_target_char = {
 					character = PREVPREV
@@ -151,7 +197,11 @@ check_if_crusader_trigger = {
 				OR = {
 					religion = catholic
 					religion = fraticelli
+					religion = cadaverist
+					religion = calvinist
 					religion = sevillian
+					religion = katoliko
+					religion = aglipayan
 				}
 				OR = {
 					has_pledged_crusade_participation = yes

@@ -1322,10 +1322,10 @@ character_event = {
 					}
 					random_list = {
 						100 = {
-							religion = high_church
+							religion = highchurch
 						}
 						10 = {
-							religion = high_church
+							religion = highchurch
 						}
 						5 = {
 							religion = baptist
@@ -1571,7 +1571,10 @@ character_event = {
 			factor = 0
 			FROM = {
 				offmap_ruler = {
-					culture = jurchen
+					OR = {
+						culture = liberian
+						culture = congolese
+					}
 				}
 			}
 		}
@@ -1877,7 +1880,7 @@ character_event = {
 							religion = baptist
 						}
 						5 = {
-							religion = high_church
+							religion = highchurch
 						}
 						5 = {
 							religion = sufi
@@ -2471,7 +2474,7 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = yes
-							religion = high_church # A bit strange, but necessary - hopefully this doesn't require islamity and cause a breaking of the code
+							religion = highchurch # A bit strange, but necessary - hopefully this doesn't require islamity and cause a breaking of the code
 							culture = igbo
 							dynasty = actually_culture
 							trait = brilliant_strategist
@@ -2483,7 +2486,7 @@ character_event = {
 							age = 30
 							random_traits = yes
 							female = no
-							religion = high_church # A bit strange, but necessary
+							religion = highchurch # A bit strange, but necessary
 							culture = igbo
 							dynasty = actually_culture
 							trait = brilliant_strategist
@@ -3020,8 +3023,6 @@ character_event =  { # Clean up living members of the chinese dynasty
 						NOR = {
 							is_offmap_ruler = yes
 							is_ruler = yes
-							dynasty = 11100
-							dynasty = 1051210
 						}
 					}
 					death = { death_reason = death_went_back_to_china }
@@ -3033,8 +3034,6 @@ character_event =  { # Clean up living members of the chinese dynasty
 						NOR = {
 							is_offmap_ruler = yes
 							is_ruler = yes
-							dynasty = 11100
-							dynasty = 1051210
 						}
 					}
 					death = { death_reason = death_went_back_to_china }

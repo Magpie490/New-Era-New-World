@@ -11,6 +11,7 @@ decisions = {
 			holy_order = no
 			capital_scope = {
 				port = yes
+				NOT = { region = world_east_asia }
 			}
 			NOT = { religion = brethren }
 		}
@@ -22,6 +23,40 @@ decisions = {
 		}
 		effect = {
 			religion = brethren
+			prestige = -500
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				has_unpleasant_trait_trigger = no
+			}
+		}
+	}
+	become_east_pirate = {
+		only_playable = yes
+		only_independent = yes
+		ai_check_interval = 24
+		potential = {
+			lower_tier_than = KING
+			independent = yes
+			controls_religion = no
+			mercenary = no
+			holy_order = no
+			capital_scope = {
+				port = yes
+				region = world_east_asia
+			}
+			NOT = { religion = east_brethren }
+		}
+		allow = {
+			wealth <= -10
+			prestige = 500
+			has_benevolent_trait_trigger = no
+			NOT = { trait = zealous }
+		}
+		effect = {
+			religion = east_brethren
 			prestige = -500
 		}
 		ai_will_do = {
@@ -53,7 +88,10 @@ decisions = {
 			}
 			prestige = 1000
 			wealth = 5000
-			trait = seaking
+			OR = {
+				trait = seaking
+				trait = sea_queen
+			}
 		}
 
 		effect = {
@@ -65,6 +103,31 @@ decisions = {
 				any_demesne_title = {
 					limit = { tier = KING }
 					de_jure_liege = e_high_seas
+				}
+			}
+			if = {
+				limit = {
+					is_female = no 
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = high_seas_bloodline
+				}
+				new_bloodline = {
+					set_description = "high_seas_bloodline_desc"
+				}
+			}
+			if = { 
+				limit = { 
+					is_female = yes 
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = high_seas_bloodline
+					inheritance = matrilineal
+				}
+				new_bloodline = {
+					set_description = "high_seas_bloodline_desc"
 				}
 			}
 		}

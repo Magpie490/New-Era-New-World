@@ -1394,7 +1394,6 @@ character_event = {
 character_event = {
 	id = ATV.27
 	hide_window = yes
-	is_triggered_only = yes
 	trigger = {
 		mother_even_if_dead = {
 			any_owned_bloodline = {
@@ -1620,6 +1619,7 @@ province_event = {
 			religion = neo_zorvanite
 			religion = jain
 			religion = bahai
+			religion = white_lotus
 		}
 		NOT = {
 			has_province_modifier = clean_religious_practices
@@ -1644,6 +1644,7 @@ province_event = {
 			religion = neo_zorvanite
 			religion = jain
 			religion = bahai
+			religion = white_lotus
 		}
 		has_province_modifier = clean_religious_practices
 	}
@@ -1808,32 +1809,6 @@ narrative_event = {
 		wealth = 300
 		add_artifact = firearm_bhutan
 		give_nickname = nick_thunder_dragon_slayer
-	}
-}
-character_event = {
-	id = ATV.41
-	title = EVTNAME_ATV.41
-	desc = EVTDESC_ATV.41
-	hide_window = yes
-	only_rulers = yes
-	
-	trigger = {
-		d_defender_faith = { 
-			holder_scope = {
-				NOT = {
-					religion = catholic
-				}
-			}
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		d_defender_faith = {
-			destroy_landed_title = THIS
-		}
 	}
 }
 character_event = {
@@ -2008,7 +1983,6 @@ narrative_event = {
 }
 character_event = {
 	id = ATV.45
-	is_triggered_only = yes
 	picture = GFX_evt_book_carolingian_script
 	border = GFX_event_normal_frame_religion
 	title = EVTNAME_ATV_45
@@ -2016,6 +1990,7 @@ character_event = {
 
 	trigger = {
 		age = 16 
+		religion = calvinist
 		NOR = {
 			has_character_flag = picking_damned_or_blessed
 			has_character_flag = dont_ask_about_damnation_for_while
@@ -2034,22 +2009,22 @@ character_event = {
 		piety = -250
 		trigger = {
 			OR = {
-				has_trait = proud
-				has_trait = lustful
-				has_trait = gluttonous
-				has_trait = greedy
-				has_trait = slothful
-				has_trait = envious
-				has_trait = wroth
+				trait = proud
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = envious
+				trait = wroth
 			}
 			NOR = {
-				has_trait = chaste
-				has_trait = temperate
-				has_trait = charitable
-				has_trait = diligent
-				has_trait = kind
-				has_trait = patient
-				has_trait = humble
+				trait = chaste
+				trait = temperate
+				trait = charitable
+				trait = diligent
+				trait = kind
+				trait = patient
+				trait = humble
 			}
 		}
 		set_character_flag = dont_ask_about_damnation_for_while
@@ -2057,27 +2032,27 @@ character_event = {
 	
 	option = {#blessed
 		name = EVTOPTB_ATV45
-		add_trait = calvinist_damned
-		remove_trait = calvinist_blessed
+		add_trait = calvinist_blessed
+		remove_trait = calvinist_damned
 		piety = 250
 		trigger = {
 			OR = {
-				has_trait = chaste
-				has_trait = temperate
-				has_trait = charitable
-				has_trait = diligent
-				has_trait = kind
-				has_trait = patient
-				has_trait = humble
+				trait = chaste
+				trait = temperate
+				trait = charitable
+				trait = diligent
+				trait = kind
+				trait = patient
+				trait = humble
 			}
 			NOR = {
-				has_trait = proud
-				has_trait = lustful
-				has_trait = gluttonous
-				has_trait = greedy
-				has_trait = slothful
-				has_trait = envious
-				has_trait = wroth
+				trait = proud
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = envious
+				trait = wroth
 			}
 		}
 		set_character_flag = dont_ask_about_damnation_for_while
@@ -2087,20 +2062,20 @@ character_event = {
 		name = EVTOPTC_ATV45
 		trigger = {
 			NOR = { 
-				has_trait = proud
-				has_trait = lustful
-				has_trait = gluttonous
-				has_trait = greedy
-				has_trait = slothful
-				has_trait = envious
-				has_trait = wroth
-				has_trait = chaste
-				has_trait = temperate
-				has_trait = charitable
-				has_trait = diligent
-				has_trait = kind
-				has_trait = patient
-				has_trait = humble
+				trait = proud
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = envious
+				trait = wroth
+				trait = chaste
+				trait = temperate
+				trait = charitable
+				trait = diligent
+				trait = kind
+				trait = patient
+				trait = humble
 			}
 		}
 		set_character_flag = dont_ask_about_damnation_for_while
@@ -2108,24 +2083,64 @@ character_event = {
 	option = {#Neither..... Too complicated
 		name = EVTOPTD_ATV45
 		trigger = {
-			OR = { 
-				OR = { 
-					has_trait = proud
-					has_trait = lustful
-					has_trait = gluttonous
-					has_trait = greedy
-					has_trait = slothful
-					has_trait = envious
-					has_trait = wroth
+			NOT = {
+				OR = {
+					trait = proud
+					trait = lustful
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = envious
+					trait = wroth
+				}
+				NOR = {
+					trait = chaste
+					trait = temperate
+					trait = charitable
+					trait = diligent
+					trait = kind
+					trait = patient
+					trait = humble
+				}
+			}
+			NOT = {
+				NOR = {
+					trait = proud
+					trait = lustful
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = envious
+					trait = wroth
 				}
 				OR = {
-					has_trait = chaste
-					has_trait = temperate
-					has_trait = charitable
-					has_trait = diligent
-					has_trait = kind
-					has_trait = patient
-					has_trait = humble
+					trait = chaste
+					trait = temperate
+					trait = charitable
+					trait = diligent
+					trait = kind
+					trait = patient
+					trait = humble
+				}
+			}
+			OR = { 
+				OR = { 
+					trait = proud
+					trait = lustful
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = envious
+					trait = wroth
+				}
+				OR = {
+					trait = chaste
+					trait = temperate
+					trait = charitable
+					trait = diligent
+					trait = kind
+					trait = patient
+					trait = humble
 				}
 			}
 		}
@@ -2148,7 +2163,6 @@ character_event = {
 }
 character_event = {
 	id = ATV.46
-	is_triggered_only = yes
 	picture = GFX_evt_book_carolingian_script
 	border = GFX_event_normal_frame_religion
 	title = EVTNAME_ATV_46
@@ -2425,9 +2439,53 @@ character_event = {
 		}
 	}
 }
+#Poseidonian Warrior Lodge has been recreated.
+#Players notified.
+narrative_event = {
+	id = ATV.69
+	title = EVTTITLEATV25026
+	desc = EVTDESCATV25026
+	hide_new = yes
+
+	picture = GFX_evt_hippodrome_byzantine
+	
+	only_playable = yes
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATV25026
+		trigger = {
+			OR = { 
+				society_member_of = warrior_lodge_poseidonian
+				religion = poseidonian
+				secret_religion = poseidonian
+				can_join_society = warrior_lodge_poseidonian
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = warrior_lodge_poseidonian }
+				can_join_society = warrior_lodge_poseidonian
+			}
+			join_society = warrior_lodge_poseidonian
+		}
+	}
+	option = {
+		name = EVTOPTBATV25026
+		trigger = {
+			NOR = { 
+				society_member_of = warrior_lodge_poseidonian
+				religion = poseidonian
+				secret_religion = poseidonian
+			}
+		}
+	}
+}
 ##Singapore
 character_event = {
-	id = ATV.69
+	id = ATV.70
 	hide_window = yes
 	trigger = {
 		NOT = { has_character_flag = diversity }
@@ -2465,12 +2523,12 @@ character_event = {
 			}
 		}
 		any_child_even_if_dead = {
-			character_event = { id = ATV.70 }
+			character_event = { id = ATV.71 }
 		}
 	}
 }
 character_event = {
-	id = ATV.70
+	id = ATV.71
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -2481,13 +2539,13 @@ character_event = {
 		set_character_flag = diversity
 		set_graphical_culture = FROM
 		any_child_even_if_dead = {
-			character_event = { id = ATV.69 }
+			character_event = { id = ATV.70 }
 		}
 	}
 }
 ##Romani Diversity
 character_event = {
-	id = ATV.71
+	id = ATV.72
 	hide_window = yes
 	trigger = {
 		NOT = { has_character_flag = diversity }
@@ -2530,7 +2588,7 @@ character_event = {
 	}
 }
 character_event = {
-	id = ATV.72
+	id = ATV.73
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -2541,12 +2599,12 @@ character_event = {
 		set_character_flag = diversity
 		set_graphical_culture = FROM
 		any_child_even_if_dead = {
-			character_event = { id = ATV.72 }
+			character_event = { id = ATV.73 }
 		}
 	}
 }
 character_event = {
-	id = ATV.73
+	id = ATV.74
 	hide_window = yes
 	trigger = {
 		NOT = { has_character_flag = diversity }
@@ -2578,12 +2636,12 @@ character_event = {
 			}
 		}
 		any_child_even_if_dead = {
-			character_event = { id = ATV.74 }
+			character_event = { id = ATV.75 }
 		}
 	}
 }
 character_event = {
-	id = ATV.74
+	id = ATV.75
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -2597,15 +2655,21 @@ character_event = {
 		set_character_flag = diversity
 		set_graphical_culture = FROM
 		any_child_even_if_dead = {
-			character_event = { id = ATV.74 }
+			character_event = { id = ATV.75 }
 		}
 	}
 }
-province_event = {
-	id = ATV.75
+character_event = {
+	id = ATV.76
 	hide_window = yes
 	trigger = {
-		has_landed_title = e_tokyo
+		OR = {
+			AND = {
+				culture_group = japan_group
+				has_landed_title = e_japan
+			}
+			has_landed_title = e_tokyo
+		}
 		NOT = {
 			trait = japanese_emperor_trait
 		}
@@ -2615,5 +2679,23 @@ province_event = {
 	}
 	immediate = {
 		add_trait = japanese_emperor_trait
+	}
+}
+character_event = {
+	id = ATV.77
+	hide_window = yes
+	trigger = {
+		NOT = {
+			trait = japanese_emperor_killer_trait
+		}
+		any_kill_list_character = {
+			trait = japanese_emperor_trait
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		add_trait = japanese_emperor_killer_trait
 	}
 }

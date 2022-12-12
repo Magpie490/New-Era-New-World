@@ -98,7 +98,14 @@ succession_laws = {
 					}
 				}
 				NOR = { 
-					religion_group = muslim					
+					religion = jacobinist
+					religion_group = muslim	
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult	
+					has_religion_feature = religion_ritual_sacrifice	
+					has_religion_feature = religion_feature_satsana_phi	
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -205,7 +212,16 @@ succession_laws = {
 						}
 					}
 				}
-				NOT = { religion_group = muslim }
+				NOR = { 
+						religion = jacobinist
+						religion_group = muslim 
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
+						}
 				is_merchant_republic = no		
 				is_patrician = no
 				OR = {
@@ -297,7 +313,7 @@ succession_laws = {
 	
 		potential = {
 			NAND = { 
-				has_law = succ_byzantine_elective 
+				has_law = succ_byzantine_elective
 				should_have_byz_elective_trigger = yes
 			}			
 			holder_scope = {
@@ -308,11 +324,24 @@ succession_laws = {
 						is_tribal = yes
 						religion = folklorist
 					}
+					religion = finnish_pagan
+					religion = finnish_pagan_reformed
+					religion = baltic_pagan
+					religion = baltic_pagan_reformed
+					religion = maoist
+					religion = ovlatii
+					religion = voodun
+					religion = xinjiao
+					religion = zoroastrian
+					religion = neo_zorvanite
+					religion = taoist
+					religion = white_lotus
 					has_religion_feature = religion_beatification
 					has_religion_feature = religion_feature_baltic
 					has_religion_feature = religion_feature_folklorist
 					has_religion_feature = religion_feature_folklorist_2
 					has_religion_feature = religion_feature_novelist
+					has_religion_feature = religion_feature_sarna
 				}
 			}
 			holder_scope = {
@@ -328,6 +357,13 @@ succession_laws = {
 				}
 				NOR = { 
 					religion_group = muslim 
+					religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_matriarchal
 					has_religion_feature = religion_patriarchal
 				}
@@ -374,6 +410,18 @@ succession_laws = {
 							is_tribal = yes
 							religion = folklorist
 						}
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+						religion = maoist
+						religion = ovlatii
+						religion = voodun
+						religion = xinjiao
+						religion = zoroastrian
+						religion = neo_zorvanite
+						religion = taoist
+						religion = white_lotus
 						has_religion_feature = religion_beatification
 						has_religion_feature = religion_feature_baltic
 						has_religion_feature = religion_feature_folklorist
@@ -441,6 +489,13 @@ succession_laws = {
                 OR = {
                     NOR = {
 						religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
 						religion_group = indian_group 
 					}
                     is_patrician = yes
@@ -596,7 +651,16 @@ succession_laws = {
 				should_have_byz_elective_trigger = yes
 			}			
 			holder_scope = {					
-				NOT = { religion_group = muslim }
+				NOR = { 
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+						religion_group = muslim 
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
+						}
 				is_merchant_republic = no
 				is_patrician = no
 			}
@@ -774,6 +838,13 @@ succession_laws = {
 				OR = {
 					NOR = { 
 						religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
 						#religion_group = indian_group
 					}
 					has_law = succession_voting_power_1
@@ -883,6 +954,13 @@ succession_laws = {
 				OR = {
 					NOR = { 
 						religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
 						religion_group = indian_group
 					}
 					government = confederation_government
@@ -978,9 +1056,16 @@ succession_laws = {
 					religion = marblists
 					should_have_byz_elective_trigger = yes
 					government = blorg_government
-					government = civic_government
+					government = hellenic_government
 				}
-				NOT = { religion_group = muslim }
+				NOR = { religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult 
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi}
 				is_merchant_republic = no
 				is_patrician = no
 				OR = {
@@ -1042,7 +1127,14 @@ succession_laws = {
 						}
 					}
 				}
-				NOT = { religion_group = muslim }
+				NOR = { religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi }
 				is_merchant_republic = no					
 				is_patrician = no
 				OR = {
@@ -1084,9 +1176,9 @@ succession_laws = {
 						society_member_of = hermetics
 						society_rank = 4
 						}
+						religion = celtic_pagan
+						religion = celtic_pagan_reformed
 					}
-					religion = celtic_pagan
-					religion = celtic_pagan_reformed
 				}
 				AND = {
 					tier = baron
@@ -1185,7 +1277,14 @@ succession_laws = {
 					not_unreformed_pagan_trigger = yes
 				}
 				
-				NOT = { religion_group = muslim }
+				NOR = { religion_group = muslim
+						religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite	
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi }
 				is_merchant_republic = no						
 				is_patrician = no
 				OR = {
@@ -1304,7 +1403,246 @@ succession_laws = {
 			always = no
 		}
 	}
-
+	
+	succ_muslim_elective = {
+		oldest_child_opinion = -15
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 10
+		potential = {
+			NAND = { 
+				has_law = succ_byzantine_elective 
+				should_have_byz_elective_trigger = yes
+			}			
+			holder_scope = {
+				OR = {
+					AND = {
+						religion = ibadi
+						is_theocracy = no
+					}
+					AND = {
+						religion_group = muslim
+						NOR = {
+							religion = wahhabi
+							religion = mesopotamian
+						}
+						OR = {
+							culture_group = hispanophone
+							culture_group = maghreb_arabic
+							culture_group = berber
+							culture_group = lusophone
+							culture_group = occitanophone
+							culture_group = francophone
+							culture_group = basque_group
+						}
+						is_theocracy = no
+					}
+					AND = {
+						has_religion_feature = religion_patriarchal
+						OR = {
+							culture_group = hispanophone
+							culture_group = maghreb_arabic
+							culture_group = berber
+							culture_group = lusophone
+							culture_group = occitanophone
+							culture_group = francophone
+							culture_group = basque_group
+						}
+						is_theocracy = no
+					}
+					AND = {
+						has_religion_feature = religion_matriarchal
+						OR = {
+							culture_group = hispanophone
+							culture_group = maghreb_arabic
+							culture_group = berber
+							culture_group = lusophone
+							culture_group = occitanophone
+							culture_group = francophone
+							culture_group = basque_group
+						}
+						is_theocracy = no
+					}
+				}
+				is_republic = no					
+				is_merchant_republic = no
+				is_nomadic = no
+			}
+			OR = {
+				holder_scope = { # Viceroyalties can always have turkish succession if muslim
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+				AND = {
+					OR = {
+						is_landless_type_title = no
+						is_tribal_type_title = yes
+						temporary = yes
+					}
+					holder_scope = {
+						OR = {
+							independent = yes
+							NOT = {
+								any_liege = {
+									holy_order = yes
+								}
+							}
+						}
+					}
+					is_primary_type_title = no
+				}
+			}
+			NAND = { 
+				has_law = succession_voting_power_1
+				OR = { 
+					has_law = succ_muslim_elective 
+					has_law = succ_hre_elective
+				}
+			}
+			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = feudal_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	succ_phonocratic_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 10
+		potential = {
+			holder_scope = {
+				OR = {
+					religion = jacobinist
+					religion = titoist	
+					religion = stalinist
+					religion = trotskyite
+					religion = red_cult
+					has_religion_feature = religion_ritual_sacrifice
+					has_religion_feature = religion_feature_satsana_phi
+					has_religion_feature = religion_feature_satsana_phi
+				}
+				is_republic = no
+				is_merchant_republic = no
+				is_nomadic = no
+			}
+			OR = {
+				holder_scope = { 
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+				AND = {
+					OR = {
+						is_landless_type_title = no
+						is_tribal_type_title = yes
+						temporary = yes
+					}
+					holder_scope = {
+						OR = {
+							independent = yes
+							NOT = {
+								any_liege = {
+									holy_order = yes
+								}
+							}
+						}
+					}
+					is_primary_type_title = no
+				}
+			}
+			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = phonocratic_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	succ_salafi_elective = {
+		oldest_child_opinion = -15
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 10
+		potential = {
+			NAND = { 
+				has_law = succ_byzantine_elective 
+				should_have_byz_elective_trigger = yes
+			}			
+			holder_scope = {
+				OR = {
+					AND = {
+						OR = {
+							religion = wahhabi
+							religion = mesopotamian
+						}
+						is_theocracy = no
+					}
+				}
+				is_republic = no
+				is_merchant_republic = no
+				is_nomadic = no
+			}
+			OR = {
+				holder_scope = { # Viceroyalties can always have turkish succession if muslim
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+				AND = {
+					OR = {
+						is_landless_type_title = no
+						is_tribal_type_title = yes
+						temporary = yes
+					}
+					holder_scope = {
+						OR = {
+							independent = yes
+							NOT = {
+								any_liege = {
+									holy_order = yes
+								}
+							}
+						}
+					}
+					is_primary_type_title = no
+				}
+			}
+			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = byzantine_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
 	succ_turkish_succession = {
 		oldest_child_opinion = -5
 		#child_opinion = 30
@@ -1318,6 +1656,10 @@ succession_laws = {
 				OR = {
 					AND = {
 						religion_group = muslim
+						NOR = {
+							religion = wahhabi
+							religion = mesopotamian
+						}
 						is_theocracy = no
 					}
 					AND = {
@@ -1458,6 +1800,7 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = feudal_government } }
+			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
@@ -1607,8 +1950,23 @@ succession_laws = {
 					}
 				}
 				OR = {
+					has_landed_title = e_german_confederation
+					has_landed_title = e_karnataka
+					has_landed_title = k_cyprus_league
+					has_landed_title = e_aegean
+					has_landed_title = e_kedah
+					has_landed_title = k_kawthoolei
+				}
+				OR = {
 					NOR = { 
 						#religion_group = muslim
+						religion = jacobinist
+						religion = titoist	
+						religion = stalinist
+						religion = trotskyite	
+						religion = red_cult
+						has_religion_feature = religion_ritual_sacrifice
+						has_religion_feature = religion_feature_satsana_phi
 						#religion_group = indian_group
 					}
 					has_law = succession_voting_power_1
@@ -1667,6 +2025,7 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = feudal_government } }
+			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1822,7 +2181,7 @@ gender_laws = {
 				}
 				OR = {
 					AND = {
-						NOT = { religion_group = muslim }
+						NOR = { religion_group = muslim }
 						has_horde_culture = no
 						#is_tribal = no
 						is_nomadic = no

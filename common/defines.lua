@@ -892,7 +892,7 @@ NCharacter = {
 	NOT_SPOUSE_FERTILITY_MULT = 0.50,				-- Applied to fertility when two lovers are not married
 	MARRIED_LOVERS_FERTILITY_MULT = 1.5,			-- Applied to fertility when lovers are married
 	INFANT_DEATH_CHANCE = 0.0,						-- Chance of stillbirth / death at birth
-	EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2400,		-- Before this date, early versions of Units and Portraits will be used if available
+	EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2550,		-- Before this date, early versions of Units and Portraits will be used if available
 	LATE_PORTRAIT_AND_UNIT_AFTER_YEAR = 2555,		-- After this date, late versions of Units and Portraits will be used if available
 	TRIBAL_EMPTY_HOLDING_LEVY_MULTIPLIER = 0.5,
 	TRIBAL_EMPTY_HOLDING_GARRISON_MULTIPLIER = 0.5,
@@ -1130,8 +1130,8 @@ NEconomy = {
 	LOOT_IDEAL_MIN_TROOPS = 500,					-- Minimum troops for maximum loot, less than this scales down the amount looted
 	BUILDING_COST_MULT = 0.5,						-- Increase to the build cost of all buildings that cost GOLD
 	SILK_ROAD_TP_BUILD_COST_MOT = 0.333,			-- Build cost modifier for non-Merchant republic Trade Posts
-	TRADE_ROUTE_SIEGE_MULTIPLIER = 0.9,				-- Sieges multiply the value of trade routes by this amount downstream
-	TRADE_ROUTE_OCCUPATION_MULTIPLIER = 0.75,		-- Occupied provinces multiply the value of trade routes by this amount downstream. If sieged as well, the lowest of this and TRADE_ROUTE_SIEGE_MULTIPLIER is used
+	TRADE_ROUTE_SIEGE_MULTIPLIER = 0.75,				-- Sieges multiply the value of trade routes by this amount downstream
+	TRADE_ROUTE_OCCUPATION_MULTIPLIER = 0.5,		-- Occupied provinces multiply the value of trade routes by this amount downstream. If sieged as well, the lowest of this and TRADE_ROUTE_SIEGE_MULTIPLIER is used
 	FORT_CONSUMED_IN_SETTLEMENT_CONTRUCTION = 1,	-- If set to 1 then fort holdings are consumed by the construction of another holding in the province while giving a discount to the construction cost in return.
 	WONDER_ABORT_FIRST_STAGE_RETURN_FACTOR = 0.0,	-- Factor for the amount the owner of a wonder gets when they abort the first stage of a wonder construction
 	WONDER_STACKING_PENALTY = 0.4,					-- Additional cost for each consecutive wonder construction
@@ -1231,8 +1231,8 @@ NMilitary = {
 	MAX_LEVY_RAISE_OPINION_THRESHOLD = 100,			-- Above this opinion value you'll get the max amount of troops possible
 	MIN_LEVIES_ABOVE_OPINION_THRESHOLD = 0,			-- The minimum percentage of levies that will be provided if opinion is above threshold
 	LEVY_PERCENT_BEFORE_CAN_RAISE = 1.1,			-- Needs at least this much % of full levy before we can raise it again, not used in vanilla anymore
-	ATTACKER_SIEGE_DAMAGE = 0.4,						-- Siege attack values are multiplied by this value(when not doing a sally), for attackers
-	DEFENDER_SIEGE_DAMAGE = 0.02,						-- Siege attack values are multiplied by this value(when not doing a sally), for defenders
+	ATTACKER_SIEGE_DAMAGE = 0.35,						-- damage done to attackers by defenders when not sallying
+	DEFENDER_SIEGE_DAMAGE = 0.02,						-- damage done to defenders by attackers when not sallying
 	PERCENT_OF_GARRISON_DETACHED = 0.1,				-- This percent of the garrison is detached from the winning unit of a siege
 	NUM_DAYS_BETWEEN_SIEGE_MORALE_LOSS = 12,		-- Number of days between morale loss for defender in a siege
 	SIEGE_MORALE_LOSS = 0.5,										-- Base monthly morale loss in a siege
@@ -1312,9 +1312,9 @@ NMilitary = {
 	LOOTED_MODIFIER_MONTHS = 36,					-- How long pagan looting lasts
 	LOOT_TAX_MULTIPLIER = 1.5,						-- Base gold looted from raided holdings is (tax * LOOT_TAX_MULTIPLIER) + (total building value * LOOT_BUILDING_MULTIPLIER)
 	LOOT_BUILDING_MULTIPLIER = 0.02,				-- Extra gold looted from raided holdings, from buildings (LOOT_BUILDING_MULTIPLIER * building built cost)
-	LOOT_HOLDING_DEST_MIN_SAFE = 4,					-- there is a 1 in LOOT_HOLDING_DESTRUCTION_ODDS chance that
-	LOOT_HOLDING_DESTRUCTION_ODDS = 20,				-- a holding with less than LOOT_HOLDING_DEST_MIN_SAFE buildings will be destroyed by looting
-	LOOT_HOLDING_BUILDING_DEST_ODDS = 10,			-- there is a 1 in this chance a random building is destroyed when looted
+	LOOT_HOLDING_DEST_MIN_SAFE = 6,					-- there is a 1 in LOOT_HOLDING_DESTRUCTION_ODDS chance that
+	LOOT_HOLDING_DESTRUCTION_ODDS = 33,				-- a holding with less than LOOT_HOLDING_DEST_MIN_SAFE buildings will be destroyed by looting
+	LOOT_HOLDING_BUILDING_DEST_ODDS = 5,			-- there is a 1 in this chance a random building is destroyed when looted
 	SETTLED_ADVENTURER_MODIFIER_YEARS = 20,			-- How long provinces are spared from raiding after settling a raider adventurer.
 
 	RETINUE_FROM_REALMSIZE = 2.0,
@@ -1509,7 +1509,7 @@ NMilitary = {
 },
 
 NTechnology = {
-	DONT_EXECUTE_TECH_BEFORE = 2325,				-- Set this to your earliest starting year
+	DONT_EXECUTE_TECH_BEFORE = 2555,				-- Set this to your earliest starting year
 	POINTS_PER_ATTRIBUTE = 0.04,
 
 	BASE_NEIGHBOUR_SPREAD_BONUS = 0.03, 		-- bonus for each neighbour with the tech
@@ -1519,7 +1519,7 @@ NTechnology = {
 	TRADEPOST_SPREAD_BONUS = 0.002, 			-- Spread from trade posts
 	SPYACTION_SPREAD_BONUS = 0.006,				-- Spread from the target of the study technology spymaster action
 
-	IDEAL_YEAR_LEVEL_0 = 2200, 					-- the chance to get a progress to this level will increase after this date and decrease before it
+	IDEAL_YEAR_LEVEL_0 = 2400, 					-- the chance to get a progress to this level will increase after this date and decrease before it
 	IDEAL_YEAR_LEVEL_8 = 3075,
 	IDEAL_YEAR_AHEAD_PENALTY_INVEST = 0.6,		-- Percent increase in cost pre level ahead of ideal date
 
@@ -1577,14 +1577,14 @@ NGraphics = {
 },
 
 NEngine = {
-	EVENT_PROCESS_OFFSET = 25, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
-	COURTIER_EVENT_PROCESS_OFFSET = 60, 	 -- Events are checked every X day for courtiers. Max value of 255
+	EVENT_PROCESS_OFFSET = 55, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
+	COURTIER_EVENT_PROCESS_OFFSET = 110, 	 -- Events are checked every X day for courtiers. Max value of 255
 	COURTIERS_MTTTH_EVENTS = 1,  -- Toggles if courtiers are allowed to run MTTH events or not
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066, -- The missing scripted successor error will not be shown before this date
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_MONTH = 8,
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_DAY = 16,
-	COURT_PRUNE_SIZE = 10, 				-- Courts larger than this will be checked for pruning each month
-	PRUNE_MINIMAL_AGE = 40,				-- Minimum age for a courtier to be prunable if considered irrelevant
+	COURT_PRUNE_SIZE = 13, 				-- Courts larger than this will be checked for pruning each month
+	PRUNE_MINIMAL_AGE = 37,				-- Minimum age for a courtier to be prunable if considered irrelevant
 	HEALTH_IMMUNITY_TO_PRUNING = 7,		-- If a character has that much health, they won't be pruned
 },
 
@@ -1721,18 +1721,18 @@ NAI =
 
 NFrontend =
 {
-	CAMERA_LOOKAT_X = 790.0, 			-- Rotation point in main menu
+	CAMERA_LOOKAT_X = 1350.0, 			-- Rotation point in main menu
 	CAMERA_LOOKAT_Y = 0.0,
-	CAMERA_LOOKAT_Z = 1000.0,
+	CAMERA_LOOKAT_Z = 800.0,
 	CAMERA_LOOKAT_SETTINGS_X = 1400.0,  -- Rotation point in settings
 	CAMERA_LOOKAT_SETTINGS_Y = 0.0,		-- Y is height
 	CAMERA_LOOKAT_SETTINGS_Z = 648.0,
-	CAMERA_START_X = 790.0,				-- Initial position in main menu
+	CAMERA_START_X = 1000.0,				-- Initial position in main menu
 	CAMERA_START_Y = 150.0,				-- Y is height
-	CAMERA_START_Z = 500.0,
-	CAMERA_END_X = 790.0,				-- Move to position in main menu
-	CAMERA_END_Y = 500.0,
-	CAMERA_END_Z = 600.0,
+	CAMERA_START_Z = 400.0,
+	CAMERA_END_X = 1350.0,				-- Move to position in main menu
+	CAMERA_END_Y = 1400.0,
+	CAMERA_END_Z = 200.0,
 	TIME_FROZEN = 1.0,  				-- Time before initial animation starts (some delay here so it should NOT be 0, then the animation starts before you can see it)
 	GUI_MOVE_SPEED = 800,				-- How fast sliding gui objects move ( pixels/s )
 	MAX_ZOOM_LEVEL = 2500,				-- How far out the player can zoom. Warning: At very high zoom levels, the ground will no longer render
@@ -1743,12 +1743,12 @@ NFrontend =
 
 	CAMERA_SPEED_IN_MENUS = 0.1,
 
-	FRONTEND_POS_X = 790.0,
-	FRONTEND_POS_Y = 500.0,
-	FRONTEND_POS_Z = 600.0,
-	FRONTEND_LOOK_X = 790.0,
+	FRONTEND_POS_X = 1350.0,
+	FRONTEND_POS_Y = 1400.0,
+	FRONTEND_POS_Z = 200.0,
+	FRONTEND_LOOK_X = 1350.0,
 	FRONTEND_LOOK_Y = 0.0,
-	FRONTEND_LOOK_Z = 1000.0,
+	FRONTEND_LOOK_Z = 800.0,
 
 	SETTINGS_POS_X = 790.0,
 	SETTINGS_POS_Y = 500.0,

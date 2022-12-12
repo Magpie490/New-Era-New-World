@@ -35,6 +35,15 @@ is_member_of_any_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_starist
 			society_member_of = warrior_lodge_iranian
 			society_member_of = warrior_lodge_bon
+			society_member_of = warrior_lodge_sea_creed
+			society_member_of = warrior_lodge_poseidonian
+			society_member_of = warrior_lodge_wokou
+			society_member_of = warrior_lodge_shinto
+			society_member_of = warrior_lodge_mo
+			society_member_of = warrior_lodge_bungan
+			society_member_of = warrior_lodge_kaharingan
+			society_member_of = warrior_lodge_thuyhoa
+			society_member_of = warrior_lodge_satsana_pi
 		}
 	}
 }
@@ -57,9 +66,18 @@ has_any_warrior_lodge_training_trait_trigger = {
 		trait = ironist_leader
 		trait = muwa_leader
 		trait = iranian_leader
-		trait = nousthreskeia_leader
+		trait = razumist_leader
 		trait = starist_leader
 		trait = bon_leader
+		trait = sea_creed_leader
+		trait = poseidonian_leader
+		trait = wokou_leader
+		trait = shinto_leader
+		trait = mo_leader
+		trait = bungan_leader
+		trait = kaharingan_leader
+		trait = thuyhoa_leader
+		trait = satsana_pi_leader
 	}
 }
 
@@ -126,17 +144,53 @@ has_current_warrior_lodge_leader_trait_trigger = {
 			limit = { society_member_of = warrior_lodge_muwa }
 			trait = muwa_leader
 		}
-		trigger_else = {
-			society_member_of = warrior_lodge_nousthreskeia
-			trait = nousthreskeia_leader
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_nousthreskeia }
+			trait = razumist_leader
 		}
-		trigger_else = {
-			society_member_of = warrior_lodge_iranian
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_iranian }
 			trait = iranian_leader
 		}
-		trigger_else = {
-			society_member_of = warrior_lodge_starist
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_starist }
 			trait = starist_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_sea_creed }
+			trait = sea_creed_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_poseidonian }
+			trait = poseidonian_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_wokou }
+			trait = wokou_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_shinto }
+			trait = shinto_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_mo }
+			trait = mo_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_bungan }
+			trait = bungan_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_kaharingan }
+			trait = kaharingan_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_thuyhoa }
+			trait = thuyhoa_leader
+		}
+		trigger_else = {
+			limit = { society_member_of = warrior_lodge_satsana_pi }
+			trait = satsana_pi_leader
 		}
 	}
 }
@@ -204,21 +258,61 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			limit = { is_mesopotamian_religion_trigger = yes }
 			society_member_of = warrior_lodge_mesopotamian
 		}
-		trigger_else = {
+		trigger_else_if = {
 			limit = { religion_openly_nousthreskeia_or_reformed_trigger = yes }
 			society_member_of = warrior_lodge_nousthreskeia
 		}
-		trigger_else = {
+		trigger_else_if = {
 			limit = { religion_openly_starist_pagan_or_reformed_trigger = yes}
 			society_member_of = warrior_lodge_starist
 		}
-		trigger_else = {
+		trigger_else_if = {
 			limit = { 
 			OR = {
 				true_religion_group_zoroastrian_group_trigger = yes
 				culture_group = iranian
 			} }
 			society_member_of = warrior_lodge_iranian
+		}
+		trigger_else_if = {
+			limit = {
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			} }
+			society_member_of = warrior_lodge_shinto
+		}
+		trigger_else_if = {
+			limit = { religion = brethren }
+			society_member_of = warrior_lodge_sea_creed
+		}
+		trigger_else_if = {
+			limit = { religion = poseidonian }
+			society_member_of = warrior_lodge_poseidonian
+		}
+		trigger_else_if = {
+			limit = { religion = east_brethren }
+			society_member_of = warrior_lodge_wokou
+		}
+		trigger_else_if = {
+			limit = { religion_openly_mo_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_mo
+		}
+		trigger_else_if = {
+			limit = { religion_openly_bungan_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_bungan
+		}
+		trigger_else_if = {
+			limit = { religion_openly_kaharingan_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_kaharingan
+		}
+		trigger_else_if = {
+			limit = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_thuyhoa
+		}
+		trigger_else = {
+			limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_satsana_pi
 		}
 	}
 }
@@ -284,21 +378,60 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		limit = { is_mesopotamian_religion_trigger = yes }
 		warrior_lodge_mesopotamian = { society_has_members = yes }
 	}
-	trigger_else = {
-		religion_openly_nousthreskeia_or_reformed_trigger = yes
+	trigger_else_if = {
+		limit = { religion_openly_nousthreskeia_or_reformed_trigger = yes }
 		warrior_lodge_nousthreskeia = { society_has_members = yes }
 	}
-	trigger_else = {
-		religion_openly_starist_pagan_or_reformed_trigger = yes
+	trigger_else_if = {
+		limit = { religion_openly_starist_pagan_or_reformed_trigger = yes }
 		warrior_lodge_starist = { society_has_members = yes }
 	}
-	trigger_else = {
+	trigger_else_if = {
 		
 			OR = {
 				true_religion_group_zoroastrian_group_trigger = yes
 				culture_group = iranian
 			} 
 		warrior_lodge_iranian = { society_has_members = yes }
+	}
+	trigger_else_if = {
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			} 
+		warrior_lodge_shinto = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion = brethren }
+		warrior_lodge_sea_creed = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion = poseidonian }
+		warrior_lodge_poseidonian = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion = east_brethren }
+		warrior_lodge_wokou = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_mo_or_reformed_trigger = yes }
+		warrior_lodge_mo = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_bungan_or_reformed_trigger = yes }
+		warrior_lodge_bungan = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_kaharingan_or_reformed_trigger = yes }
+		warrior_lodge_kaharingan = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+		warrior_lodge_thuyhoa = { society_has_members = yes }
+	}
+	trigger_else = {
+		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+		warrior_lodge_satsana_pi = { society_has_members = yes }
 	}
 }
 
@@ -360,20 +493,59 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			limit = { is_mesopotamian_religion_trigger = yes }
 			warrior_lodge_mesopotamian = { num_of_society_members < 30 }
 		}
-		trigger_else = {
-			religion_openly_nousthreskeia_or_reformed_trigger = yes
+		trigger_else_if = {
+			limit = { religion_openly_nousthreskeia_or_reformed_trigger = yes }
 			warrior_lodge_nousthreskeia = { num_of_society_members < 30 }
 		}
-		trigger_else = {
-			religion_openly_starist_pagan_or_reformed_trigger = yes
+		trigger_else_if = {
+			limit = { religion_openly_starist_pagan_or_reformed_trigger = yes }
 			warrior_lodge_starist = { num_of_society_members < 30 }
 		}
-		trigger_else = {
+		trigger_else_if = {
 			OR = {
 				true_religion_group_zoroastrian_group_trigger = yes
 				culture_group = iranian
 			}
 			warrior_lodge_iranian = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			}
+			warrior_lodge_shinto = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion = brethren }
+			warrior_lodge_sea_creed = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion = poseidonian }
+			warrior_lodge_poseidonian = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion = east_brethren }
+			warrior_lodge_wokou = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_mo_or_reformed_trigger = yes }
+			warrior_lodge_mo = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_bungan_or_reformed_trigger = yes }
+			warrior_lodge_bungan = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_kaharingan_or_reformed_trigger = yes }
+			warrior_lodge_kaharingan = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+			warrior_lodge_thuyhoa = { num_of_society_members < 30 }
+		}
+		trigger_else = {
+			limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+			warrior_lodge_satsana_pi = { num_of_society_members < 30 }
 		}
 		trigger_if = {
 			limit = { is_nomadic = yes }
@@ -446,20 +618,59 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		limit = { religion_openly_nousthreskeia_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_nousthreskeia = { society_has_members = yes } }
 	}
-	trigger_else = {
-		is_mesopotamian_religion_trigger = yes
+	trigger_else_if = {
+		limit = { is_mesopotamian_religion_trigger = yes }
 		NOT = { warrior_lodge_mesopotamian = { society_has_members = yes } }
 	}
-	trigger_else = {
-		religion_openly_starist_pagan_or_reformed_trigger = yes
+	trigger_else_if = {
+		limit = { religion_openly_starist_pagan_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_starist = { society_has_members = yes } }
 	}
-	trigger_else = {
+	trigger_else_if = {
 		OR = {
 			true_religion_group_zoroastrian_group_trigger = yes
 			culture_group = iranian
 		}
 		NOT = { warrior_lodge_iranian = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		OR = {
+			true_religion_group_shinto_trigger = yes
+			culture_group = japan_group
+		}
+		NOT = { warrior_lodge_shinto = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion = brethren }
+		NOT = { warrior_lodge_sea_creed = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion = poseidonian }
+		NOT = { warrior_lodge_poseidonian = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion = east_brethren }
+		NOT = { warrior_lodge_wokou = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_mo_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_mo = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_bungan_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_bungan = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_kaharingan_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_kaharingan = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_thuyhoa = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_satsana_pi = { society_has_members = yes } }
 	}
 }
 
@@ -484,6 +695,15 @@ this_society_is_a_warrior_lodge_trigger = {
 		is_society = warrior_lodge_nousthreskeia
 		is_society = warrior_lodge_starist
 		is_society = warrior_lodge_iranian
+		is_society = warrior_lodge_sea_creed
+		is_society = warrior_lodge_poseidonian
+		is_society = warrior_lodge_wokou
+		is_society = warrior_lodge_shinto
+		is_society = warrior_lodge_mo
+		is_society = warrior_lodge_bungan
+		is_society = warrior_lodge_kaharingan
+		is_society = warrior_lodge_thuyhoa
+		is_society = warrior_lodge_satsana_pi
 	}
 }
 
@@ -507,6 +727,13 @@ has_religion_matching_any_warrior_lodge_trigger = {
 		religion_openly_nousthreskeia_or_reformed_trigger = yes
 		religion_openly_starist_pagan_or_reformed_trigger = yes
 		true_religion_group_zoroastrian_group_trigger = yes
+		true_religion_group_shinto_trigger = yes
+		religion_group = oceanic
+		religion_openly_mo_or_reformed_trigger = yes
+		religion_openly_bungan_or_reformed_trigger = yes
+		religion_openly_kaharingan_or_reformed_trigger = yes
+		religion_openly_thuyhoa_or_reformed_trigger = yes
+		religion_openly_satsana_pi_or_reformed_trigger = yes
 	}
 }
 
@@ -584,9 +811,50 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_iranian }
 	}
-	trigger_else = {
-		is_mesopotamian_religion_trigger = yes
+	trigger_else_if = {
+		limit = { 
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			} 
+		}
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_shinto }
+	}
+	trigger_else_if = {
+		limit = { is_mesopotamian_religion_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_mesopotamian }
+	}
+	trigger_else_if = {
+		limit = { religion = brethren }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_sea_creed }
+	}
+	trigger_else_if = {
+		limit = { religion = poseidonian }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_poseidonian }
+	}
+	trigger_else_if = {
+		limit = { religion = east_brethren }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_wokou }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_mo_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_mo }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_bungan_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_bungan }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_kaharingan_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_kaharingan }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_thuyhoa }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_satsana_pi }
 	}
 }
 
@@ -723,6 +991,31 @@ special_join_warrior_lodge_trigger = {
 			}
 		}
 		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_shinto } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_shinto_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { 
+							OR = {
+								true_religion_group_shinto_trigger = yes
+								culture_group = japan_group
+							}  }
+						any_liege = { 
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			}  }
+						any_neighbor_independent_ruler = { 
+			OR = {
+				true_religion_group_shinto_trigger = yes
+				culture_group = japan_group
+			}  }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
 			limit = { FROM = { is_society = warrior_lodge_maunaxite } }
 			custom_tooltip = {
 				text = has_liege_vassal_or_neighbor_of_maunaxite_religion_tt
@@ -826,8 +1119,8 @@ special_join_warrior_lodge_trigger = {
 				}
 			}
 		}
-		trigger_else = {
-			FROM = { is_society = warrior_lodge_mesopotamian }
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_mesopotamian } }
 			custom_tooltip = {
 				text = has_liege_vassal_or_neighbor_of_mesopotamian_religion_tt
 				hidden_trigger = {
@@ -835,6 +1128,110 @@ special_join_warrior_lodge_trigger = {
 						any_vassal = { is_mesopotamian_religion_trigger = yes }
 						any_liege = { is_mesopotamian_religion_trigger = yes }
 						any_neighbor_independent_ruler = { is_mesopotamian_religion_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_sea_creed } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_sea_creed_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion = brethren }
+						any_liege = { religion = brethren }
+						any_neighbor_independent_ruler = { religion = brethren }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_poseidonian } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_poseidonian_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion = poseidonian }
+						any_liege = { religion = poseidonian }
+						any_neighbor_independent_ruler = { religion = poseidonian }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_wokou } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_wokou_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion = east_brethren }
+						any_liege = { religion = east_brethren }
+						any_neighbor_independent_ruler = { religion = east_brethren }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_mo } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_mo_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_mo_or_reformed_trigger = yes }
+						any_liege = { religion_openly_mo_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_mo_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_bungan } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_bungan_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_bungan_or_reformed_trigger = yes }
+						any_liege = { religion_openly_bungan_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_bungan_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_kaharingan } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_kaharingan_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_kaharingan_or_reformed_trigger = yes }
+						any_liege = { religion_openly_kaharingan_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_kaharingan_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_thuyhoa } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_thuyhoa_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+						any_liege = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_thuyhoa_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else = {
+			limit = { FROM = { is_society = warrior_lodge_satsana_pi } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_satsana_pi_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+						any_liege = { religion_openly_satsana_pi_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_satsana_pi_or_reformed_trigger = yes }
 					}
 				}
 			}
