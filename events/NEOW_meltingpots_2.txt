@@ -1,0 +1,1410 @@
+namespace = MPE
+
+#Rumeli
+character_event = {
+	id = MPE.15
+	desc = "EVTDESCMPE.15"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = turkish
+			culture = elbistanli
+			culture = egeli
+			culture = kapadokyali
+			culture = karadenizci
+		}
+		any_demesne_province = {
+			OR = {
+				culture = greek
+				culture = makedonas
+				culture = aigionoi
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = rumeli
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.15
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = greek
+					culture = makedonas
+					culture = aigionoi
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = rumeli
+		}
+	}
+}
+
+character_event = {
+	id = MPE.151
+	desc = "EVTDESCMPE.151"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = greek
+			culture = makedonas
+			culture = aigionoi
+			culture = turkish
+			culture = elbistanli
+			culture = egeli
+			culture = kapadokyali
+			culture = karadenizci
+		}
+		any_demesne_province = {
+			culture = rumeli
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.151
+		culture = rumeli
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.151
+		prestige = 5
+	}
+}
+
+#Rumeli
+character_event = {
+	id = MPE.1511
+	desc = "EVTDESCMPE.1511"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.1511"
+		culture = rumeli
+	}
+}
+#Scythian
+character_event = {
+	id = MPE.16
+	desc = "EVTDESCMPE.16"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		culture = alan
+		any_demesne_province = {
+			OR = {
+				culture = rus_cossack
+				culture = cossack
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = scythian
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_bloodline = {
+				has_bloodline_flag = scythian_blood
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.16
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = rus_cossack
+					culture = cossack
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = scythian
+		}
+	}
+}
+
+character_event = {
+	id = MPE.161
+	desc = "EVTDESCMPE.161"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = rus_cossack
+			culture = cossack
+			culture = alan
+		}
+		any_demesne_province = {
+			culture = scythian
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_bloodline = {
+				has_bloodline_flag = scythian_blood
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.161
+		culture = scythian
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.161
+		prestige = 5
+	}
+}
+
+#Scythian
+character_event = {
+	id = MPE.1611
+	desc = "EVTDESCMPE.1611"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.1611"
+		culture = scythian
+	}
+}
+#Marocain
+character_event = {
+	id = MPE.17
+	desc = "EVTDESCMPE.17"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = occitan
+			culture = provencal
+			culture = gascon
+		}
+		any_demesne_province = {
+			OR = {
+				culture = tunisian
+				culture = algerian
+				culture = libyan
+				culture = hassaniya
+				culture = moroccan
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = marocain
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.17
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = tunisian
+					culture = algerian
+					culture = libyan
+					culture = hassaniya
+					culture = moroccan
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = marocain
+		}
+	}
+}
+
+character_event = {
+	id = MPE.171
+	desc = "EVTDESCMPE.171"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = tunisian
+			culture = algerian
+			culture = libyan
+			culture = hassaniya
+			culture = moroccan
+			culture = occitan
+			culture = provencal
+			culture = gascon
+		}
+		any_demesne_province = {
+			culture = marocain
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.171
+		culture = marocain
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.171
+		prestige = 5
+	}
+}
+
+#Marocain
+character_event = {
+	id = MPE.1711
+	desc = "EVTDESCMPE.1711"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.1711"
+		culture = marocain
+	}
+}
+
+#Morisco
+character_event = {
+	id = MPE.18
+	desc = "EVTDESCMPE.18"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = castilian
+			culture = aragonese
+			culture = andalusian
+			culture = canarian
+			culture = asturian
+			culture = extrameduran
+			culture = spanish
+		}
+		any_demesne_province = {
+			OR = {
+				culture = tunisian
+				culture = algerian
+				culture = libyan
+				culture = hassaniya
+				culture = moroccan
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = morisco
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.18
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = tunisian
+					culture = algerian
+					culture = libyan
+					culture = hassaniya
+					culture = moroccan
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = morisco
+		}
+	}
+}
+
+character_event = {
+	id = MPE.181
+	desc = "EVTDESCMPE.181"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = tunisian
+			culture = algerian
+			culture = libyan
+			culture = hassaniya
+			culture = moroccan
+			culture = castilian
+			culture = aragonese
+			culture = andalusian
+			culture = canarian
+			culture = asturian
+			culture = extrameduran
+			culture = spanish
+		}
+		any_demesne_province = {
+			culture = morisco
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.181
+		culture = morisco
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.181
+		prestige = 5
+	}
+}
+
+#Morisco
+character_event = {
+	id = MPE.1811
+	desc = "EVTDESCMPE.1811"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.1811"
+		culture = morisco
+	}
+}
+
+
+#Panonica
+character_event = {
+	id = MPE.19
+	desc = "EVTDESCMPE.19"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+		}
+		any_demesne_province = {
+			culture = hungarian
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = panonica
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.19
+		random_demesne_province = {
+			limit = {
+				culture = hungarian
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = panonica
+		}
+	}
+}
+
+character_event = {
+	id = MPE.191
+	desc = "EVTDESCMPE.191"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR ={
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = hungarian
+		}
+		any_demesne_province = {
+			culture = panonica
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.191
+		culture = panonica
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.191
+		prestige = 5
+	}
+}
+
+#panonica
+character_event = {
+	id = MPE.1911
+	desc = "EVTDESCMPE.1911"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.1911"
+		culture = panonica
+	}
+}
+
+
+#nemet
+character_event = {
+	id = MPE.20
+	desc = "EVTDESCMPE.20"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = hungarian
+			culture = szekely
+			culture = csangok
+		}
+		any_demesne_province = {
+			OR = {
+				culture = swabian
+				culture = bavarian
+				culture = austrian
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = nemet
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.20
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = swabian
+					culture = bavarian
+					culture = austrian
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = nemet
+		}
+	}
+}
+
+character_event = {
+	id = MPE.201
+	desc = "EVTDESCMPE.201"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR ={
+			culture = swabian
+			culture = bavarian
+			culture = austrian
+			culture = hungarian
+			culture = szekely
+			culture = csangok
+		}
+		any_demesne_province = {
+			culture = nemet
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.201
+		culture = nemet
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.201
+		prestige = 5
+	}
+}
+
+#nemet
+character_event = {
+	id = MPE.2011
+	desc = "EVTDESCMPE.2011"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.2011"
+		culture = nemet
+	}
+}
+
+
+#ostprussian
+character_event = {
+	id = MPE.21
+	desc = "EVTDESCMPE.21"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = prussian
+			culture = brandenburger
+			culture = danzigian
+			culture = saxon
+		}
+		any_demesne_province = {
+			culture = kaliningrader
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = ostprussian
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.21
+		random_demesne_province = {
+			limit = {
+				culture = kaliningrader
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = ostprussian
+		}
+	}
+}
+
+character_event = {
+	id = MPE.211
+	desc = "EVTDESCMPE.211"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR ={
+			culture = prussian
+			culture = brandenburger
+			culture = danzigian
+			culture = saxon
+			culture = kaliningrader
+		}
+		any_demesne_province = {
+			culture = ostprussian
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.211
+		culture = ostprussian
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.211
+		prestige = 5
+	}
+}
+
+#ostprussian
+character_event = {
+	id = MPE.2111
+	desc = "EVTDESCMPE.2111"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.2111"
+		culture = ostprussian
+	}
+}
+#macedonian
+character_event = {
+	id = MPE.22
+	desc = "EVTDESCMPE.22"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = aigionoi
+			culture = makedonas
+			culture = greek
+		}
+		any_demesne_province = {
+			OR = {
+				culture = serbian
+				culture = montenegrin
+				culture = bulgarian
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = macedonian
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 15
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.22
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = serbian
+					culture = montenegrin
+					culture = bulgarian
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = macedonian
+		}
+	}
+}
+
+character_event = {
+	id = MPE.221
+	desc = "EVTDESCMPE.221"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR ={
+			culture = aigionoi
+			culture = makedonas
+			culture = greek
+			culture = serbian
+			culture = montenegrin
+			culture = bulgarian
+		}
+		any_demesne_province = {
+			culture = macedonian
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.221
+		culture = macedonian
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.221
+		prestige = 5
+	}
+}
+
+#macedonian
+character_event = {
+	id = MPE.2211
+	desc = "EVTDESCMPE.2211"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.2211"
+		culture = macedonian
+	}
+}

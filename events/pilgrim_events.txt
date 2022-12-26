@@ -37,14 +37,14 @@ character_event = {
 				limit = {
 					OR = {
 						religion = orthodox  # Jeru, Const/Axum, Antio/Mecca
-						religion = old_believer
+						religion = oldbeliever
 						religion = marblists
-						religion = neo_donatists
+						religion = neodonatists
 						religion = koptic
 						religion = jugoslavist
 						religion = chaldean
 						religion = bezpopotvsy
-						religion = eastern_protestant
+						religion = easternprotestant
 						religion = armenianapostolic
 					}
 				}
@@ -70,7 +70,7 @@ character_event = {
 						religion = hussite
 						religion = calvinist
 						religion = anglican
-						religion = high_church
+						religion = highchurch
 						religion = evangelical
 					}
 				}
@@ -234,17 +234,6 @@ character_event = {
 				entry = CHRONICLE_PILGRIMAGE_TO_AXUM
 				picture = GFX_evt_pilgrims_epic_journey
 			}
-		}
-	}
-	option = {
-		name = EVTOPTE_SoA_5011
-		trigger = {
-			religion = jugoslavist
-			NOT = { capital_scope = { province_id = 719 } }
-		}
-		set_character_flag = pilgrimage_to_mecca
-		hidden_tooltip = {
-			character_event = { id = 86100 days = 15 }
 		}
 	}
 	option = {
@@ -3697,6 +3686,7 @@ character_event = {
 		clr_character_flag = good_pilgrimage
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
+		hidden_tooltip = { remove_trait = decadent }
 		hidden_tooltip = { remove_trait = on_pilgrimage }
 		piety = 30
 	}
@@ -3741,6 +3731,7 @@ character_event = {
 		clr_character_flag = bad_pilgrimage
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
+		hidden_tooltip = { remove_trait = decadent }
 		hidden_tooltip = { remove_trait = on_pilgrimage }
 		piety = -10
 		if = {
@@ -3797,6 +3788,7 @@ character_event = {
 		clr_character_flag = abominable_pilgrimage
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
+		hidden_tooltip = { remove_trait = decadent }
 		hidden_tooltip = { remove_trait = on_pilgrimage }
 		piety = -100
 	}

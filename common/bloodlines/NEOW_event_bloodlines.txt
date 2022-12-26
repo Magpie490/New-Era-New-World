@@ -94,33 +94,6 @@ amogus = {
 	flags = { historical_bloodline bloodline_murder_stalk bloodline_murderous amogus_bloodline }
 }
 
-atlantian_bloodline = {
-    picture = GFX_bloodlines_symbol_trident
-	inheritance = patrilineal
-	allow_bastards = yes
-	atlantian_opinion = 10
-	doggerlander_opinion = 10
-	oceanic_opinion = 5
-	hellenic_opinion = 5
-	hellenic_reformed_opinion = 5
-	bloodline_effect_always_viking = 1
-	saintly_cultural_bloodline = 1
-	flags = { created_bloodline bloodline_viking cultural_saintly_bloodline bloodline_atlantis }
-}
-atlantian_bloodline_female = {
-    picture = GFX_bloodlines_symbol_trident
-	inheritance = matrilineal
-	allow_bastards = yes
-	atlantian_opinion = 10
-	doggerlander_opinion = 10
-	oceanic_opinion = 5
-	hellenic_opinion = 5
-	hellenic_reformed_opinion = 5
-	bloodline_effect_always_viking = 1
-	saintly_cultural_bloodline = 1
-	flags = { created_bloodline bloodline_viking cultural_saintly_bloodline bloodline_atlantis }
-}
-
 minotaur = {
     picture = GFX_bloodlines_symbol_bull
 	inheritance = patrilineal
@@ -203,5 +176,33 @@ trinity_the_spirit = {
 	flags = { historical_bloodline bloodline_the_spirit }
 	active = {
 		religion = alawite
+	}
+}
+
+child_of_death_bloodline = {
+	picture = GFX_bloodlines_symbol_bloodthirsty
+	inheritance = all_descendants
+	allow_bastards = yes
+	combat_rating = 15
+	bloodline_effect_battle_survivor = 1
+	defensive_plot_power_modifier = 0.1
+	child_of_death_opinion = 5
+	health = 2
+	monthly_character_prestige = 0.2
+	flags = { created_bloodline battle_survivor_bloodline death_bloodline }
+}
+
+reincarnation_of_god_bloodline = {
+	monthly_character_piety = 1
+	yersenism_opinion = 10
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = all_descendants
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_zoroastrian
+	flags = { created_bloodline }
+	active = {
+		religion = yersenism
 	}
 }

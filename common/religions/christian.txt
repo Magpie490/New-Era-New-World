@@ -55,8 +55,7 @@ christian = {
 		aggression = 0.9
 		allow_rivermovement = yes		
 		investiture = yes
-		autocephaly = yes
-		pentarchy = yes
+		can_have_antipopes = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
@@ -87,8 +86,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -172,8 +171,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		#intermarry = hussite
 		intermarry = anglican
@@ -255,8 +254,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -336,8 +335,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		#intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -413,10 +412,10 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -497,8 +496,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -590,8 +589,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -671,10 +670,10 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -704,7 +703,8 @@ christian = {
 		parent = lutheran
 		color = { 0 0.1 0.3 }
 		
-		crusade_name = CRUSADE
+		crusade_name = WAR_OF_REDEMPTION
+		crusade_cb = crusade
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -715,7 +715,7 @@ christian = {
 		}
 		
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL THE_POPE
+			SATAN LUCIFER THE_DEVIL 
 		}
 		
 		aggression = 0.9
@@ -725,6 +725,7 @@ christian = {
 		can_grant_claim = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
+		pacifist = yes
 		
 		character_modifier = {
 			temple_levy_size = 0.05
@@ -753,8 +754,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -833,8 +834,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -920,7 +921,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		
 		intermarry = fraticelli
 		intermarry = hussite
@@ -936,7 +937,7 @@ christian = {
 		intermarry = marblists
 		intermarry = columbian
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian
@@ -1022,7 +1023,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		
 		intermarry = fraticelli
 		intermarry = hussite
@@ -1037,7 +1038,7 @@ christian = {
 		intermarry = marblists
 		intermarry = columbian
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian
@@ -1108,7 +1109,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		
 		intermarry = fraticelli
 		intermarry = hussite
@@ -1127,7 +1128,7 @@ christian = {
 		intermarry = zarist
 		intermarry = constitutional
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian
@@ -1199,7 +1200,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		
 		intermarry = fraticelli
 		intermarry = hussite
@@ -1217,7 +1218,7 @@ christian = {
 		intermarry = zarist
 		intermarry = constitutional
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian
@@ -1225,7 +1226,7 @@ christian = {
 		intermarry = gidoggyo
 		
 	}
-	neo_donatists = { #Doomer religion
+	neodonatists = { #Doomer religion
 		graphical_culture = orthodoxholygfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		secondary_event_pictures = orthodox
@@ -1255,11 +1256,18 @@ christian = {
 		
 		aggression = 1.7
 		allow_looting = yes
+		can_call_crusade = yes
 		allow_rivermovement = yes
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
 		can_retire_to_monastery = yes
 		priests_can_marry = yes
 		priests_can_inherit = no
 		hard_to_convert = yes
+		uses_jizya_tax = yes
 		has_heir_designation = yes
 		attacking_same_religion_piety_loss = yes
 		defensive_attrition = yes
@@ -1268,7 +1276,7 @@ christian = {
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
 	}
-	eastern_protestant = {
+	easternprotestant = {
 		graphical_culture = orthodoxholygfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		secondary_event_pictures = orthodox
@@ -1339,7 +1347,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -1356,7 +1364,7 @@ christian = {
 		intermarry = zarist
 		intermarry = constitutional
 		intermarry = osvicenism
-		#intermarry = eastern_protestant
+		#intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian
@@ -1364,7 +1372,7 @@ christian = {
 		intermarry = gidoggyo
 		
 	}
-	old_believer = {
+	oldbeliever = {
 		graphical_culture = orthodoxholygfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
@@ -1435,7 +1443,7 @@ christian = {
 		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
-		parent = old_believer
+		parent = oldbeliever
 		
 		high_god_name = GOD_GOD
 		
@@ -1538,10 +1546,10 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -1621,8 +1629,8 @@ christian = {
 		intermarry = xinjiao
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -1670,14 +1678,15 @@ christian = {
 			diplomacy = 1
 		}
 		
-		aggression = 0.8
+		aggression = 1.0
 		allow_rivermovement = yes
-		autocephaly = no
+		autocephaly = yes
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		can_call_crusade = no
 		priests_can_inherit = no
+		hard_to_convert = yes
 		
 		can_retire_to_monastery = yes
 		
@@ -1702,7 +1711,7 @@ christian = {
 		intermarry = xinjiao
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = buddhist_group
 		intermarry = zoroastrian_group
 		intermarry = indian_group
@@ -1792,10 +1801,10 @@ christian = {
 		intermarry = nasrini
 		#intermarry = koptic
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -1868,10 +1877,10 @@ christian = {
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -1952,8 +1961,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = brethren
@@ -1973,7 +1982,7 @@ christian = {
 		intermarry = eastern_lightning
 		intermarry = gidoggyo
 	}
-	high_church = {
+	highchurch = {
 		graphical_culture = westerngfx
 
 		icon = 108
@@ -2033,8 +2042,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		#intermarry = high_church
-		intermarry = eastern_protestant
+		#intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2059,7 +2068,7 @@ christian = {
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 117
-		heresy_icon = 116
+		heresy_icon = 117
 		
 		color = { 0.9 0.7 0 }
 		
@@ -2110,8 +2119,8 @@ christian = {
 		
 		intermarry = evangelical
 		#intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2183,8 +2192,8 @@ christian = {
 		
 		#intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2259,8 +2268,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2331,10 +2340,10 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -2413,8 +2422,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = brethren
@@ -2493,8 +2502,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2569,8 +2578,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2607,10 +2616,14 @@ christian = {
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+			GOD_GOD GOD_THE_LORD GOD_JESUS
 		}
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			SATAN THE_DEVIL
+		}
+		
+		character_modifier = {
+			diplomacy = 1			
 		}
 		
 		can_excommunicate = yes
@@ -2624,7 +2637,7 @@ christian = {
 		autocephaly = yes
 		attacking_same_religion_piety_loss = yes
 		landed_kin_prestige_bonus = yes
-		allow_rivermovement = yes
+		pacifist = yes
 		peace_piety_gain = 1.0
 		
 		aggression = 1.25
@@ -2650,8 +2663,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2695,7 +2708,19 @@ christian = {
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		can_excommunicate = yes
+		can_grant_claim = yes
 		rel_head_defense = yes
+		autocephaly = yes
+		feminist = yes
+		allow_looting = yes
+		seafarer = yes
+		short_reign_opinion_year_mult = 0
+		has_heir_designation = yes
+		peace_piety_gain = 1.0
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -2719,8 +2744,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2766,7 +2791,19 @@ christian = {
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		can_excommunicate = yes
+		can_grant_claim = yes
 		rel_head_defense = yes
+		autocephaly = yes
+		feminist = yes
+		allow_looting = yes
+		seafarer = yes
+		short_reign_opinion_year_mult = 0
+		has_heir_designation = yes
+		peace_prestige_loss = yes
+		uses_jizya_tax = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -2790,8 +2827,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2819,6 +2856,7 @@ christian = {
 		
 		crusade_name = CRUSADE
 		use_new_crusade = yes
+		crusade_cb = new_crusade
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -2833,8 +2871,7 @@ christian = {
 		
 		aggression = 0.9
 		allow_rivermovement = yes		
-		investiture = yes
-		can_have_antipopes = yes
+		autocephaly = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
@@ -2865,8 +2902,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -2896,6 +2933,7 @@ christian = {
 		
 		crusade_name = CRUSADE
 		use_new_crusade = yes
+		crusade_cb = new_crusade
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -2942,8 +2980,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -3018,8 +3056,8 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
-		intermarry = eastern_protestant
+		intermarry = highchurch
+		intermarry = easternprotestant
 		intermarry = fraticelli
 		intermarry = hussite
 		intermarry = anglican
@@ -3047,14 +3085,14 @@ christian = {
 		
 		color = { 66 87 142 }
 		
-		crusade_name = HEAVENLY_WAR
+		crusade_name = CRUSADE
 		scripture_name = THE_WORD
 		priest_title = PRIEST
 		
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_HEAVENLY_ORDER THE_ANCESTORS
+			GOD_GOD GOD_THE_LORD GOD_JESUS THE_ANCESTORS
 		}
 		
 		evil_god_names = {
@@ -3072,7 +3110,7 @@ christian = {
 		allow_rivermovement = yes
 		can_grant_claim = yes
 		can_excommunicate = yes
-		can_call_crusade = yes
+		can_call_crusade = no
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
@@ -3103,7 +3141,7 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
-		intermarry = high_church
+		intermarry = highchurch
 		
 		intermarry = fraticelli
 		intermarry = hussite
@@ -3118,7 +3156,7 @@ christian = {
 		intermarry = marblists
 		intermarry = columbian
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		intermarry = katoliko
 		intermarry = kirishitan
 		intermarry = isukirian

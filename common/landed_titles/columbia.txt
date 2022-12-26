@@ -1121,7 +1121,7 @@ e_columbia = {
 	k_new_england = {
 		color={ 100 175 145 }
 		color2={ 220 220 0 }
-		
+		allow = { always = no }
 		quebecois = "Nouvelle Angleterre" 
 		
 		capital = 69
@@ -2396,6 +2396,19 @@ e_columbia = {
 		color={ 34 177 76 }
 		color2={ 220 220 0 }
 		capital = 43 # Montpelier
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_vermont = {
+						is_titular = yes
+					}
+				}
+				k_vermont = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	k_new_hampshire = {
 		color = { 230 230 255 }
@@ -2404,26 +2417,92 @@ e_columbia = {
 		
 		vermonter = "Albmont"
 		albmonter = "Albmont"
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_new_hampshire = {
+						is_titular = yes
+					}
+				}
+				k_new_hampshire = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	k_connecticut = {
 		color = { 255 255 172 }
 		color2 = { 255 255 255 }
 		capital = 47 #Hartford
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_connecticut = {
+						is_titular = yes
+					}
+				}
+				k_connecticut = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	k_rhode_island = {
 		color = { 255 216 0 }
 		color2 = { 255 255 255 }
 		capital = 58 #Providence
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_rhode_island = {
+						is_titular = yes
+					}
+				}
+				k_rhode_island = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	k_new_acadia = {
 		color = { 15 123 166 }
 		color2 = { 255 255 255 }
 		capital = 200
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_new_acadia = {
+						is_titular = yes
+					}
+				}
+				k_new_acadia = {
+					is_titular = no
+				}
+			}
+		}
 	}
-
-#	k_new_jersey = {
-#		color = { 13 103 147 }
-#		color2 = { 220 220 0 }
-#		capital = 23 # Trenton
-#	}
+	k_wampanoag = {
+		color = { 18 18 40 }
+		color2 = { 255 255 255 }
+		capital = 68 #Plymouth
+		short_name = yes
+		
+		wampanoag = "Wopanaak"
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_wampanoag = {
+						is_titular = yes
+					}
+				}
+				k_wampanoag = {
+					is_titular = no
+				}
+			}
+		}
+	}
 }

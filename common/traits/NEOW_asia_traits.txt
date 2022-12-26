@@ -8,6 +8,74 @@ japanese_emperor_trait = {
 	customizer = no
 	random = no
 }
+japanese_emperor_killer_trait = {
+	japan_group_opinion = -100
+	
+	customizer = no
+	random = no
+}
+trained_imperial_law = {
+	
+	stewardship = 1
+	global_tax_modifier = 0.05
+	vassal_limit = 1
+	potential = { religion = legalist }
+	
+	opposites = {
+		trained_ccp_law
+		trained_republican_law
+		#trained_imperial_law
+	}
+
+	opposite_opinion = -5
+	same_opinion = 5
+	taoist_opinion = 5
+	wuist_opinion = 5
+	wuist_reformed_opinion = 5
+	
+	random = no
+}
+trained_republican_law = {
+	
+	stewardship = 1
+	tech_growth_modifier = 0.05
+	vassal_limit = 1
+	potential = { religion = legalist }
+	
+	opposites = {
+		trained_ccp_law
+		#trained_republican_law
+		trained_imperial_law
+	}
+
+	opposite_opinion = -5
+	same_opinion = 5
+	tridemist_opinion = 5
+	tolerates_old_world_cultist_group = yes
+	
+	random = no
+}
+trained_ccp_law = {
+	
+	stewardship = 1
+	levy_size = 0.05
+	vassal_limit = 1
+	potential = { religion = legalist }
+	
+	opposites = {
+		#trained_ccp_law
+		trained_republican_law
+		trained_imperial_law
+	}
+
+	opposite_opinion = -5
+	same_opinion = 5
+	maoist_opinion = 5
+	red_cult_opinion = 5
+	tolerates_old_world_cultist_group = yes
+	
+	random = no
+}
 way_saint = {
 
 	martial = 1
@@ -230,7 +298,7 @@ wood_type = {
 		fire_type
 		metal_type
 	}
-	stewarship = 1
+	stewardship = 1
 	metal_type_opinion = -15
 	earth_type_opinion = -15
 	water_type_opinion = 10
@@ -590,4 +658,20 @@ wuxia_grandmaster = {
 	combat_rating = 50
 	customizer = no
 	random = no
+}
+
+pancasila_tolerations = {
+	hidden = yes
+	tolerates_christian = yes
+	tolerates_muslim = yes
+	tolerates_indian_group = yes
+	tolerates_buddhist_group = yes
+
+	potential = {
+		religion = pancasila
+	}
+	
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
 }

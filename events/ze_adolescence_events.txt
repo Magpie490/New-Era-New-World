@@ -570,7 +570,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -869,7 +869,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -1155,7 +1155,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -1650,7 +1650,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -1962,7 +1962,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -2307,7 +2307,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -2775,7 +2775,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -3090,7 +3090,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -3355,7 +3355,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -3641,7 +3641,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -4261,7 +4261,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -4619,7 +4619,7 @@ character_event = {
 			limit = {
 				educator = { ai = no }
 			}
-			educator = { achievement_follow_me_done_effect = yes }
+			educator = { set_character_flag = achievement_follow_me }
 		}
 	}
 	option = {
@@ -4836,19 +4836,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOR = { 
-					trait = homosexual 
-					trait = bisexual
-				}
+				NOT = { trait = homosexual }
 			}
-			random_list = {
-				50 = { 
-					add_trait = homosexual
-				}
-				50 = { 
-					add_trait = bisexual
-				}
-			}
+			add_trait = homosexual
 		}
 	}
 
@@ -4859,19 +4849,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOR = { 
-					trait = homosexual 
-					trait = bisexual
-				}
+				NOT = { trait = homosexual }
 			}
-			random_list = {
-				50 = { 
-					add_trait = homosexual
-				}
-				50 = { 
-					add_trait = bisexual
-				}
-			}
+			add_trait = homosexual
 		}
 		if = {
 			limit = {
@@ -4888,19 +4868,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOR = { 
-					trait = homosexual 
-					trait = bisexual
-				}
+				NOT = { trait = homosexual }
 			}
-			random_list = {
-				50 = { 
-					add_trait = homosexual
-				}
-				50 = { 
-					add_trait = bisexual
-				}
-			}
+			add_trait = homosexual
 		}
 		if = {
 			limit = {
@@ -5081,14 +5051,7 @@ character_event = {
 		ai_chance = {
 			factor = 22
 		}
-		random_list = {
-			50 = { 
-				add_trait = homosexual
-			}
-			50 = { 
-				add_trait = bisexual
-			}
-		}
+		add_trait = homosexual
 		set_character_flag = ZE_13610_carpenter
 		character_event = { id = ZE.13611 days = 30 }
 	}
@@ -5101,14 +5064,7 @@ character_event = {
 		ai_chance = {
 			factor = 22
 		}
-		random_list = {
-			50 = { 
-				add_trait = homosexual
-			}
-			50 = { 
-				add_trait = bisexual
-			}
-		}
+		add_trait = homosexual
 		set_character_flag = ZE_13610_farrier_male
 		character_event = { id = ZE.13611 days = 30 }
 	}

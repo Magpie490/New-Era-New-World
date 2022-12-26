@@ -89,16 +89,17 @@ indian_group = {
 		
 		color = { 0 1 0.8 }
 		
-		interface_skin = { pagan_interface indian_interface muslim_interface }		
+		interface_skin = { indian_interface muslim_interface }		
 
 		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
+		scripture_name = VEDAS
 		priest_title = PUJARI
+		piety_name = KARMA
 		
 		high_god_name = GOD_KALKI
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH GOD_KALKI
+			GOD_SHIVA GOD_VISHNU GOD_BRAHMA GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH GOD_KALKI
 		}
 		
 		evil_god_names = {
@@ -133,16 +134,17 @@ indian_group = {
 		
 		color = { 0.2 1 0.8 }
 		
-		interface_skin = { pagan_interface indian_interface muslim_interface }		
+		interface_skin = { indian_interface muslim_interface }		
 
 		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
+		scripture_name = VEDAS
 		priest_title = PUJARI
+		piety_name = KARMA
 		
 		high_god_name = GOD_DEVAS
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH
+			GOD_SHIVA GOD_VISHNU GOD_BRAHMA GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH
 		}
 		
 		evil_god_names = {
@@ -204,7 +206,7 @@ indian_group = {
 
 		color = { 0 0.5 0.4 }
 		
-		interface_skin = { buddhist_interface indian_interface muslim_interface }
+		interface_skin = { indian_interface muslim_interface }
 		
 		high_god_name = GOD_BHAGAVAN
 		
@@ -249,6 +251,7 @@ indian_group = {
 		intermarry = jain
 		intermarry = buddhist_group
 		intermarry = old_hindu
+		intermarry = agamatirta
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
 		intermarry = bon
@@ -293,6 +296,7 @@ indian_group = {
 		intermarry = jain
 		intermarry = buddhist_group
 		intermarry = old_hindu
+		intermarry = agamatirta
 		intermarry = brethren
 		intermarry = east_brethren
 		intermarry = poseidonian
@@ -351,6 +355,68 @@ indian_group = {
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
 		intermarry = bon
+	}
+	agamatirta = {
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 67
+		heresy_icon = 67
+		
+		color = { 140 73 255 }
+		
+		high_god_name = GOD_ACINTYA
+		
+		god_names = {
+			GOD_ACINTYA GOD_BRAHMA GOD_SIWA GOD_WISNU GOD_HYANG GOD_BATARA_BATARI GOD_DEWI_SRI
+		}
+		
+		evil_god_names = {
+			GOD_ASURAS ADHARMA
+		}
+		
+		aggression = 1
+		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_looting = yes
+		max_consorts = 3
+		feminist = yes
+		caste_opinions = yes
+		castes = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = VEDAS
+		priest_title = PUJARI
+		piety_name = KARMA
+
+		character_modifier = {
+			martial = 1
+			parabrahmanist_opinion = 5
+			old_hindu_opinion = 5
+		}
+		unit_modifier = {
+			land_morale = 0.1
+
+			key = "OFF_RELIGION"
+		}
+		intermarry = sikh
+		intermarry = jain
+		intermarry = buddhist_group
+		intermarry = neovedantic
+		intermarry = parabrahmanist
+		intermarry = brethren
+		intermarry = east_brethren
+		intermarry = poseidonian
+		#intermarry = zoroastrian_group
+		intermarry = bon_reformed
+		intermarry = bon
+		intermarry = pusaka
+		intermarry = pancasila
 	}
 	jain = {
 		graphical_culture = jaingfx
