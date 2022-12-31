@@ -2429,7 +2429,7 @@ opinion_declined_hajj = {
 	opinion = -10
 	months = 1000
 }
-opinion_attepmt_hajj = {
+opinion_attempt_hajj = {
 	opinion = -15
 	months = 1000
 }
@@ -2462,7 +2462,7 @@ opinion_hajj_rivalry_mended = {
 	months = 1000
 }
 
-opinion_hajj_not_helpin  = {
+opinion_hajj_not_helping = {
 	opinion = -20
 	months = 72	
 }
@@ -2588,7 +2588,24 @@ opinion_blinded_close_kin = {
 	months = 360
 	prison_reason = yes
 }
+opinion_denippled_me = {
+	opinion = -50
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}
+opinion_denippled_family = {
+	opinion = -5
+	months = 240
+	prison_reason = yes
+}
 
+opinion_denippled_close_kin = {
+	opinion = -20
+	months = 360
+	prison_reason = yes
+}
 opinion_loyal_servant = {
 	opinion = 50
 	months = 1200	# For life
@@ -2935,6 +2952,10 @@ opinion_restored_to_rome = {
 	opinion = 50
 	months = 1200
 }
+opinion_restored_to_sevilla = {
+	opinion = 50
+	months = 1200
+}
 
 opinion_creator_of_rel_heal = {
 	opinion = 50
@@ -3195,6 +3216,12 @@ opinion_charge_dw = {
 	months = 24
 }
 opinion_charge_traitor = {
+	opinion = -50
+	prison_reason = yes
+	revoke_reason = yes
+	months = 24
+}
+opinion_trumped_up_charges = {
 	opinion = -50
 	prison_reason = yes
 	revoke_reason = yes
@@ -3834,6 +3861,9 @@ opinion_accused_apostate = {
 	banish_reason = yes
 	execute_reason = yes
 	divorce_reason = yes
+}
+
+opinion_apostate_timer = {
 }
 
 opinion_stargazing = {

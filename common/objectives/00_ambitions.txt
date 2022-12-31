@@ -1833,21 +1833,6 @@ obj_become_king = {
 				always = yes
 			}
 		}
-		NAND = {
-			ai = yes
-			kingdom = {
-				OR = {
-					title = k_nenets
-					title = k_sapmi
-					title = k_perm
-				}
-			}
-			OR = {
-				culture = lappish
-				culture = samoyed
-				culture = komi
-			}
-		}
 	}
 	
 	allow = {
@@ -1963,10 +1948,16 @@ obj_buddhist_stop_drinking = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = drunkard
 	}
@@ -1998,10 +1989,16 @@ obj_buddhist_stop_drinking = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2019,10 +2016,16 @@ obj_buddhist_reject_empty_pleasures = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = hedonist
 	}
@@ -2054,10 +2057,16 @@ obj_buddhist_reject_empty_pleasures = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2075,10 +2084,16 @@ obj_buddhist_abstain_sexual_excess = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = lustful
 	}
@@ -2110,10 +2125,16 @@ obj_buddhist_abstain_sexual_excess = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2131,10 +2152,16 @@ obj_buddhist_reject_cruelty = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		OR = {
 			trait = impaler
@@ -2170,10 +2197,16 @@ obj_buddhist_reject_cruelty = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = gidoggyo
+			religion = white_lotus
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2191,10 +2224,16 @@ obj_buddhist_temperance_food = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = gluttonous
 	}
@@ -2226,10 +2265,16 @@ obj_buddhist_temperance_food = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
-			religion = fraticelli
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2247,10 +2292,16 @@ obj_buddhist_reject_greed = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = greedy
 	}
@@ -2282,10 +2333,16 @@ obj_buddhist_reject_greed = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2303,10 +2360,16 @@ obj_buddhist_reject_envy = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = envious
 	}
@@ -2339,10 +2402,16 @@ obj_buddhist_reject_envy = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2360,10 +2429,16 @@ obj_buddhist_reject_hate = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = wroth
 	}
@@ -2395,10 +2470,16 @@ obj_buddhist_reject_hate = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2416,10 +2497,16 @@ obj_buddhist_reject_pride = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		trait = proud
 	}
@@ -2451,10 +2538,16 @@ obj_buddhist_reject_pride = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {
@@ -2472,10 +2565,16 @@ obj_buddhist_defeat_fear = {
 	potential = {
 		OR={
 			religion_group = buddhist_group
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
 			religion = fraticelli
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 		OR = {
 			trait = paranoid
@@ -2512,10 +2611,16 @@ obj_buddhist_defeat_fear = {
 	abort = {
 		NOR = { 
 			religion_group = buddhist_group 
+			religion = sufi
+			religion = yazidi
+			religion = prussianist
 			religion = fraticelli
 			religion = bon
 			religion = bon_reformed
 			religion = osvicenism
+			religion = white_lotus
+			religion = gidoggyo
+			religion = kirishitan
 		}
 	}
 	abort_effect = {

@@ -7,7 +7,7 @@ fort = {
 	ft_wall_1 = {
 		desc = ft_wall_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		gold_cost = 50
+		gold_cost = 75
 		build_time = 365
 		fort_level = 0.5
 		garrison_size = 0.05
@@ -21,9 +21,9 @@ fort = {
 		desc = ft_wall_2_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 1 }
 		upgrades_from = ft_wall_1
-		gold_cost = 50
+		gold_cost = 125
 		build_time = 547 #1.5y
-		fort_level = 0.5
+		fort_level = 1
 		garrison_size = 0.05
 		add_number_to_name = no
 		ai_creation_factor = 89
@@ -35,9 +35,9 @@ fort = {
 		desc = ft_wall_3_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
 		upgrades_from = ft_wall_2
-		gold_cost = 50
+		gold_cost = 175
 		build_time = 730 #2y
-		fort_level = 1.0
+		fort_level = 1.25
 		garrison_size = 0.05
 		add_number_to_name = no
 		ai_creation_factor = 88
@@ -49,9 +49,68 @@ fort = {
 		desc = ft_wall_4_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
 		upgrades_from = ft_wall_3
-		gold_cost = 50
+		gold_cost = 225
 		build_time = 730 #2y
-		fort_level = 1.0
+		fort_level = 1.75
+		garrison_size = 0.05
+		add_number_to_name = no
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 0.2
+		tax_income = -0.2
+	}
+	ft_extra_defences_1 = {
+		desc = ft_extra_defences_1_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+		prerequisites = { ft_wall_1 }
+		gold_cost = 75
+		build_time = 365
+		fort_level = 0.5
+		garrison_size = 0.05
+		add_number_to_name = no
+		ai_creation_factor = 90
+		
+		extra_tech_building_start = 1.0
+		tax_income = -0.2
+	}
+	ft_extra_defences_2 = {
+		desc = ft_extra_defences_2_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 1 }
+		prerequisites = { ft_wall_1 }
+		upgrades_from = ft_extra_defences_1
+		gold_cost = 150
+		build_time = 547 #1.5y
+		fort_level = 1
+		garrison_size = 0.05
+		add_number_to_name = no
+		ai_creation_factor = 89
+		
+		extra_tech_building_start = 0.2
+		tax_income = -0.2
+	}
+	ft_extra_defences_3 = {
+		desc = ft_extra_defences_3_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
+		prerequisites = { ft_wall_1 }
+		upgrades_from = ft_extra_defences_2
+		gold_cost = 225
+		build_time = 730 #2y
+		fort_level = 1.25
+		garrison_size = 0.05
+		add_number_to_name = no
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 0.2
+		tax_income = -0.2
+	}
+	ft_extra_defences_4 = {
+		desc = ft_extra_defences_4_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
+		prerequisites = { ft_wall_1 }
+		upgrades_from = ft_extra_defences_3
+		gold_cost = 350
+		build_time = 730 #2y
+		fort_level = 1.75
 		garrison_size = 0.05
 		add_number_to_name = no
 		ai_creation_factor = 88
@@ -104,7 +163,7 @@ fort = {
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		gold_cost = 50
 		build_time = 365
-		garrison_size = 0.1
+		garrison_size = 0.15
 		local_revolt_risk = -0.01
 		add_number_to_name = no
 		ai_creation_factor = 100
@@ -120,7 +179,7 @@ fort = {
 		upgrades_from = ft_barracks_1
 		gold_cost = 50
 		build_time = 547
-		garrison_size = 0.1
+		garrison_size = 0.2
 		local_revolt_risk = -0.01
 		add_number_to_name = no
 		ai_creation_factor = 99
@@ -136,7 +195,7 @@ fort = {
 		upgrades_from = ft_barracks_2
 		gold_cost = 50
 		build_time = 1095
-		garrison_size = 0.1
+		garrison_size = 0.25
 		local_revolt_risk = -0.01
 		add_number_to_name = no
 		ai_creation_factor = 98
@@ -152,7 +211,7 @@ fort = {
 		upgrades_from = ft_barracks_3
 		gold_cost = 50
 		build_time = 1095
-		garrison_size = 0.1
+		garrison_size = 0.3
 		local_revolt_risk = -0.01
 		add_number_to_name = no
 		ai_creation_factor = 98
@@ -187,8 +246,7 @@ fort = {
 		ai_creation_factor = 95
 		add_number_to_name = no
 		
-		trade_route_wealth = 0.5	# Affects total value of trade route
-		tradevalue = 10
+		tradevalue = 15
 		
 		extra_tech_building_start = 10.0 # Never get at start of game
 		tax_income = -0.2
@@ -220,8 +278,7 @@ fort = {
 		ai_creation_factor = 95
 		add_number_to_name = no
 		
-		trade_route_wealth = 0.5	# Affects total value of trade route
-		tradevalue = 10
+		tradevalue = 15
 		
 		extra_tech_building_start = 10.0 # Never get at start of game
 		tax_income = -0.2
@@ -253,8 +310,7 @@ fort = {
 		ai_creation_factor = 95
 		add_number_to_name = no
 		
-		trade_route_wealth = 0.5	# Affects total value of trade route
-		tradevalue = 10
+		tradevalue = 15
 		
 		extra_tech_building_start = 10.0 # Never get at start of game
 		tax_income = -0.2

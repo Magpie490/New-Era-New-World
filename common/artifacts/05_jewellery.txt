@@ -65,14 +65,14 @@ crown_russia = {
 		always = no
 	}
 }
-crown_napoleon = { 
+crown_napoleon = {
 	monthly_character_prestige = 1
 	monthly_character_piety = 1
 	martial = 2
 	threat_decay_speed = 0.1
 	same_religion_opinion = 5
 	francophone_opinion = 5
-	west_germanic_opinion = 5
+	west_german_opinion = 5
 	germanic_opinion = 5
 	apeninian_opinion = 5
 	quality = 5
@@ -95,7 +95,7 @@ crown_napoleon = {
 		always = no
 	}
 }
-crown_transnistria = { 
+crown_transnistria = {
 	monthly_character_prestige = 1
 	monthly_character_piety = 1
 	stewardship = 4
@@ -104,7 +104,11 @@ crown_transnistria = {
 	quality = 5
 	active = { 
 		is_feudal = yes
-		has_landed_title = e_transnistria
+		OR = {
+			has_landed_title = e_transnistria
+			has_landed_title = k_moldova
+			has_landed_title = k_romania
+		}
 	}
 	flags = { religious unique crown jewelry crown_jewel }
 	picture = "GFX_crown_transnistria"
@@ -115,7 +119,28 @@ crown_transnistria = {
 		always = no
 	}
 }
-crown_britannia = { 
+crown_jugoslavia = {
+	monthly_character_prestige = 1
+	monthly_character_piety = 1
+	diplomacy = 2
+	intrigue = 2
+	defensive_plot_power_modifier = 0.25
+	same_religion_opinion = 10
+	quality = 5
+	active = { 
+		is_feudal = yes
+		has_landed_title = e_yugoslavia
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_jugoslavia"
+	slot = crown
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_britannia = {
 	monthly_character_prestige = 1
 	monthly_character_piety = 1
 	diplomacy = 2
@@ -136,15 +161,28 @@ crown_britannia = {
 		always = no
 	}
 }
-crown_hungary = { 
+crown_hungary = {
 	monthly_character_prestige = 1
 	monthly_character_piety = 1
 	learning = 2
 	same_religion_opinion = 5
 	hungarian_opinion = 5
 	quality = 5
-	active = { 
-		has_landed_title = k_hungary
+	active = {
+		OR = {
+			has_landed_title = k_hungary
+			has_landed_title = k_aromania
+			has_landed_title = k_cyprus
+			has_landed_title = k_byzantium
+			has_landed_title = k_athos
+			has_landed_title = k_macedonia
+			has_landed_title = e_byzantium
+			has_landed_title = e_marblists
+			has_landed_title = e_roman_empire
+			has_landed_title = e_austria_romaia
+			has_landed_title = e_austria_hungary
+			has_landed_title = e_austria_hungary_dummy
+		}
 	}
 	flags = { religious unique crown jewelry crown_jewel }
 	picture = "GFX_holy_crown_hungary"

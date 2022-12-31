@@ -21,6 +21,27 @@ claim = {
 	can_use = {
 		#Bhutan can only use this if Expansionist
 		ROOT = { bhutan_medium_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	can_use_title = {
@@ -313,6 +334,27 @@ other_claim = {
 		ROOT = { bhutan_medium_cb = yes	}
 		ROOT = {
 			mercenary = no
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 	}
 
@@ -754,6 +796,27 @@ claim_on_liege = {
 	}
 	can_use = {
 		ROOT = { bhutan_medium_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}	
 
 	can_use_title = {
@@ -1805,6 +1868,27 @@ claim_all = {
 				value = 2
 			}
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	can_use_gui = {
@@ -2656,6 +2740,27 @@ invasion = {
 		ROOT = {
 			mercenary = no
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	can_use_gui = {
@@ -3100,6 +3205,27 @@ tribal_invasion = {
 	
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 	
 	on_add = {
@@ -3472,17 +3598,17 @@ tribal_invasion = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			ROOT = {
-				has_character_flag = is_temujin
-				has_landed_title = e_mongol_empire
-				demesne_size = 1
-			}
-			FROM = {
-				has_landed_title = e_china_west_governor
-			}
-		}
+		# modifier = {
+			# factor = 0
+			# ROOT = {
+				# has_character_flag = is_temujin
+				# has_landed_title = e_mongol_empire
+				# demesne_size = 1
+			# }
+			# FROM = {
+				# has_landed_title = e_china_west_governor
+			# }
+		# }
 		modifier = {
 			factor = 0
 			FROM = {
@@ -3608,10 +3734,11 @@ crusade = {
 					limit = { 
 						OR = {
 							religion = xinjiao
-							religion = high_church
+							religion = highchurch
 							religion = lutheran
 							religion = transatlantic
 							religion = marblists
+							religion = neodonatists
 						}
 					}
 					custom_tooltip = {
@@ -3624,12 +3751,15 @@ crusade = {
 						religion_group = zoroastrian_group
 						religion_group = jewish_group
 						religion_group = old_world_cultist_group
+						religion = maunaxite_reformed
 						religion = summer_queen
 						religion = druze
 						religion = alawite
 						religion = nousthreskeia_reformed
 						religion = gnostic
 						religion = eastern_lightning
+						religion = east_brethren
+						religion = pusaka
 					}
 				}
 			}
@@ -3641,6 +3771,27 @@ crusade = {
 		ROOT = {
 			uses_new_crusade = no
 			can_call_crusade = yes
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 		
 		FROM = {
@@ -4354,6 +4505,8 @@ new_crusade = {
 							religion = catholic
 							religion = fraticelli
 							religion = cadaverist
+							religion = katoliko
+							religion = aglipayan
 						}
 					}
 					custom_tooltip = {
@@ -4383,6 +4536,27 @@ new_crusade = {
 				NOR = {
 					religion = catholic
 					religion = fraticelli
+				}
+			}
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
 				}
 			}
 		}
@@ -5881,6 +6055,27 @@ religious = {
 
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			is_nomadic = no
 			NOT = { government = confederation_government }
@@ -6078,17 +6273,17 @@ religious = {
 												}
 											}
 										}
-										#AND = {
-										#	is_land = no
-										#	any_neighbor_province = {
-										#		owner = {
-										#			OR = {
-										#				character = ROOT
-										#				is_liege_or_above = ROOT
-										#			}
-										#		}
-										#	}
-										#}
+										AND = {
+											is_land = no
+											any_neighbor_province = {
+												owner = {
+													OR = {
+														character = ROOT
+														is_liege_or_above = ROOT
+													}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -6502,50 +6697,50 @@ religious = {
 		}
 		
 		# Try to guide the Hordes in the right direction
-		modifier = {
-			factor = 0.1
-			ROOT = {
-				OR = {
-					dynasty = 613 # Seljuks
-					dynasty = 800 # Timurids
-					primary_title = { title = e_il-khanate }
-				}
-			}
-			OR = {
-				empire = {
-					NOT = {
-						OR = {
-							title = e_persia
-							title = e_byzantium
-							title = e_arabia
-						}
-					}
-				}
-				FROM = {
-					primary_title = { title = e_golden_horde }
-					NOT = { year = 1300 }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			ROOT = {
-				primary_title = { title = e_golden_horde }
-			}
-			OR = {
-				empire = {
-					OR = {
-						title = e_persia
-						title = e_byzantium
-						title = e_arabia
-					}
-				}
-				FROM = {
-					primary_title = { title = e_il-khanate }
-					NOT = { year = 1300 }
-				}
-			}
-		}
+		# modifier = {
+			# factor = 0.1
+			# ROOT = {
+				# OR = {
+					# dynasty = 613 # Seljuks
+					# dynasty = 800 # Timurids
+					# primary_title = { title = e_il-khanate }
+				# }
+			# }
+			# OR = {
+				# empire = {
+					# NOT = {
+						# OR = {
+							# title = e_persia
+							# title = e_byzantium
+							# title = e_arabia
+						# }
+					# }
+				# }
+				# FROM = {
+					# primary_title = { title = e_golden_horde }
+					# NOT = { year = 1300 }
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 0.1
+			# ROOT = {
+				# primary_title = { title = e_golden_horde }
+			# }
+			# OR = {
+				# empire = {
+					# OR = {
+						# title = e_persia
+						# title = e_byzantium
+						# title = e_arabia
+					# }
+				# }
+				# FROM = {
+					# primary_title = { title = e_il-khanate }
+					# NOT = { year = 1300 }
+				# }
+			# }
+		# }
 		modifier = {
 			factor = 2.0
 			OR = {
@@ -6581,6 +6776,27 @@ excommunicated_ruler = {
 
 	can_use = {
 		ROOT = { bhutan_minor_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		FROM = {
 			excommunicated_for = ROOT
 			in_revolt = no
@@ -7078,6 +7294,27 @@ depose_liege = {
 		ROOT = {
 			de_facto_liege = FROM
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		
 		FROM = {
 			is_feudal = yes
@@ -7257,6 +7494,27 @@ overthrow_ruler = {
 		FROM = {
 			primary_title = {
 				is_vice_royalty = no
+			}
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
 			}
 		}
 		ROOT = {
@@ -7463,6 +7721,27 @@ overthrow_ruler_no_calls = {
 		FROM = {
 			primary_title = {
 				is_vice_royalty = no
+			}
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
 			}
 		}
 		ROOT = {
@@ -8188,6 +8467,27 @@ coastal_republic = {
 			NOT = { same_liege = FROM }
 			mercenary = no
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	can_use_title = {
@@ -8356,6 +8656,27 @@ coastal_county_republic = {
 			NOT = { is_vassal_or_below = FROM }
 			NOT = { same_liege = FROM }
 			mercenary = no
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 	}
 
@@ -8726,6 +9047,27 @@ decadence_invasion = {
 		ROOT = {
 			has_character_flag = decadence_invader
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	on_add = {
@@ -8957,6 +9299,27 @@ muslim_invasion = {
 
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			OR = {
 				ai = yes
@@ -9618,6 +9981,27 @@ imperial_reconquest = {
 
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			has_landed_title = e_roman_empire
 			independent = yes
@@ -9835,6 +10219,27 @@ embargo_cb = {
 			independent = yes
 			NOT = { has_embargo = FROM }
 			mercenary = no
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 		FROM = {
 			OR = {
@@ -10070,6 +10475,27 @@ seize_trade_post = {
 			}
 			mercenary = no
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		FROM = {
 			NOT = { is_liege_or_above = ROOT }
 		}
@@ -10220,6 +10646,27 @@ viking_invasion = {
 			has_opinion_modifier = { who = FROM modifier = preparing_to_invade }
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 	}
 	
@@ -10398,6 +10845,72 @@ viking_invasion = {
 	defender_ai_defeat_worth = {
 		factor = 100
 	}
+	ai_will_do = { 
+		factor = 1
+		modifier = {#nomads wont invade islands
+			factor = 0
+			ROOT = {
+				is_nomadic = yes
+			}
+			FROM = {
+				OR = {
+					primary_title = { title = k_cyprus_league }
+					primary_title = { title = k_cyprus }
+					primary_title = { title = k_lanka }
+					primary_title = { title = k_canarias }
+					primary_title = { title = k_sardinia }
+					primary_title = { title = k_azores }
+					primary_title = { title = k_cape_verde }
+					primary_title = { title = k_jan_mayen }
+					primary_title = { title = k_doggerland }
+					primary_title = { title = k_iceland }
+					primary_title = { title = k_norf_gov }
+					primary_title = { title = k_wales_gov }
+					primary_title = { title = e_britannia }
+					primary_title = { title = k_britannia }
+					primary_title = { title = k_cornwall }
+					primary_title = { title = k_england }
+					primary_title = { title = k_wales }
+					primary_title = { title = k_scotland }
+					primary_title = { title = k_ireland }
+					primary_title = { title = k_bakufu }
+					primary_title = { title = k_pretender_bakufu }
+					primary_title = { title = e_tokyo }
+					primary_title = { title = k_ryukyu }
+					primary_title = { title = k_kyushu }
+					primary_title = { title = k_chubu }
+					primary_title = { title = k_kanto }
+					primary_title = { title = k_kinki }
+					primary_title = { title = k_shikoku }
+					primary_title = { title = k_chugoku }
+					primary_title = { title = k_hokkaido }
+					primary_title = { title = k_taiwan }
+					primary_title = { title = k_luzon }
+					primary_title = { title = k_ilocos }
+					primary_title = { title = k_visayas }
+					primary_title = { title = k_palawan }
+					primary_title = { title = k_sulu }
+					primary_title = { title = k_zamboanga }
+					primary_title = { title = e_phillipines }
+					primary_title = { title = e_japan }
+					primary_title = { title = e_indonesia }
+					primary_title = { title = k_java }
+					primary_title = { title = k_borneo }
+					primary_title = { title = k_west_kalimantan }
+					primary_title = { title = k_kalimantan }
+					primary_title = { title = k_sabah }
+					primary_title = { title = k_sarawak }
+					primary_title = { title = k_aceh }
+					primary_title = { title = e_sumatra }
+					primary_title = { title = k_bengkulu }
+					primary_title = { title = k_riau }
+					primary_title = { title = k_brunei }
+					primary_title = { title = k_miri_kapit }
+				}
+			}
+		}
+		
+	}
 }
 
 # Pagans can subjugate other pagans
@@ -10415,6 +10928,27 @@ pagan_subjugation = {
 	
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			religion_group = pagan_group
 			is_reformed_religion = no
@@ -11242,6 +11776,27 @@ duchy_adventure = {
 
 	can_use = {
 		ROOT = { has_character_flag = duchy_adventurer }
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 
 	is_valid = {
@@ -11279,54 +11834,54 @@ duchy_adventure = {
 			}
 		}
 		
-		ROOT = {
-			hidden_tooltip = {
-				# Special case: Seljuk succeeds in his first conquest
-				if = {
-					limit = {
-						has_character_flag = seljuk_himself
-					}
-					narrative_event = {
-						id = 60206
-						days = 1
-					}
-				}
+		# ROOT = {
+			# hidden_tooltip = {
+				# # Special case: Seljuk succeeds in his first conquest
+				# if = {
+					# limit = {
+						# has_character_flag = seljuk_himself
+					# }
+					# narrative_event = {
+						# id = 60206
+						# days = 1
+					# }
+				# }
 				
-				# Special case: Timur succeeds in his first conquest
-				if = {
-					limit = {
-						has_character_flag = timur_himself
-					}
-					narrative_event = {
-						id = 60306
-						days = 1
-					}
-				}
+				# # Special case: Timur succeeds in his first conquest
+				# if = {
+					# limit = {
+						# has_character_flag = timur_himself
+					# }
+					# narrative_event = {
+						# id = 60306
+						# days = 1
+					# }
+				# }
 				
-				# Special case: Sabuktigin succeeds in his first conquest
-				if = {
-					limit = {
-						has_character_flag = sabuktigin_himself
-					}
-					narrative_event = {
-						id = 60406
-						days = 1
-					}
-				}
+				# # Special case: Sabuktigin succeeds in his first conquest
+				# if = {
+					# limit = {
+						# has_character_flag = sabuktigin_himself
+					# }
+					# narrative_event = {
+						# id = 60406
+						# days = 1
+					# }
+				# }
 				
-				# Special case: Sultanate of Rum creator succeeds in his first conquest
-				if = {
-					limit = {
-						has_character_flag = rum_creator
-					}
-					character_event = {
-						id = 60610
-						days = 600
-						random = 300
-					}
-				}
-			}
-		}
+				# # Special case: Sultanate of Rum creator succeeds in his first conquest
+				# if = {
+					# limit = {
+						# has_character_flag = rum_creator
+					# }
+					# character_event = {
+						# id = 60610
+						# days = 600
+						# random = 300
+					# }
+				# }
+			# }
+		# }
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
@@ -11422,6 +11977,27 @@ kingdom_adventure = { # Used mainly for Muslims adventuring into India
 			OR = {
 				has_character_flag = duchy_adventurer
 				has_character_flag = rum_creator
+			}
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
 			}
 		}
 	}
@@ -11700,16 +12276,16 @@ kingdom_adventure = { # Used mainly for Muslims adventuring into India
 				}
 				
 				# Special case: Sultanate of Rum might start yet another war
-				if = {
-					limit = {
-						has_character_flag = rum_creator
-					}
-					character_event = {
-						id = 60610
-						days = 600
-						random = 300
-					}
-				}
+				# if = {
+					# limit = {
+						# has_character_flag = rum_creator
+					# }
+					# character_event = {
+						# id = 60610
+						# days = 600
+						# random = 300
+					# }
+				# }
 			}
 		}
 
@@ -11861,6 +12437,27 @@ pagan_holy_war = {
 
 	can_use = {
 		ROOT = { bhutan_medium_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			OR ={
 				religion_group = pagan_group
@@ -12165,6 +12762,27 @@ caliphal_subjugation = {
 
 	can_use = {
 		ROOT = { bhutan_major_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			OR = {
 				ai = yes
@@ -12352,6 +12970,27 @@ muslim_county_conquest = {
 	
 	can_use = {
 		ROOT = { bhutan_medium_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
@@ -12372,7 +13011,14 @@ muslim_county_conquest = {
 		}
 		
 		ROOT = {
-			religion_group = muslim
+			OR = {
+				religion_group = muslim
+				religion = voodun
+				religion = islamity
+				religion = muwahidunna
+				religion = ahlehaqq
+				religion = jugoslavist
+			}
 		}
 
 		NOT = {
@@ -12589,6 +13235,27 @@ pagan_county_conquest = {
 	can_use = {
 		ROOT = {
 			mercenary = no
+		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
 		}
 		OR = {
 			ROOT = {
@@ -13343,6 +14010,27 @@ dejure_county_claim = {
 	
 	can_use = {
 		ROOT = { bhutan_minor_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 	}
 	
 	can_use_title = {
@@ -13797,6 +14485,27 @@ other_dejure_county_claim = {
 		NOT = {
 			character = ROOT
 		}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		
 		ROOT = { bhutan_minor_cb = yes	}
 		
@@ -13993,6 +14702,27 @@ depose_antipope = {
 
 	can_use = {
 		ROOT = { bhutan_medium_cb = yes	}
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			religion = FROM
 			OR = {
@@ -14196,6 +14926,27 @@ cb_install_antiking = {
 	}
 
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			vassal_of = FROM
 			religion = FROM
@@ -14391,6 +15142,27 @@ buddhist_holy_war = {
 		}
 	}
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			bhutan_medium_cb = yes
 			OR = {
@@ -14750,6 +15522,27 @@ indian_subjugation = {
 	}
 	
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			bhutan_major_cb = yes
 			has_dharmic_religion_trigger = yes
@@ -15082,6 +15875,27 @@ manifest_destiny_invasion = {
 	}
 
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			OR = {
 				ai = yes
@@ -15345,6 +16159,27 @@ cb_decadence_usurption = {
 	allowed_to_target_tributaries = no
 	
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = { 
 			religion_group = muslim
 		}
@@ -15622,6 +16457,27 @@ tributary_cb = {
 	}
 
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		has_dlc = "Horse Lords"
 
 		ROOT = {
@@ -18586,6 +19442,27 @@ powerful_vassal_takeover_war = { # Started from faction
 	}
 
 	can_use = {
+		NAND = {
+			ROOT = {
+				OR = {
+					culture = kyushu
+					culture = shikoku
+					culture = chugoku
+					culture = kansai
+					culture = kanto
+					culture = tohoku
+					culture = chubu
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+			FROM = {
+				OR = {
+					has_landed_title = e_tokyo
+					trait = japanese_emperor_trait
+				}
+			}
+		}
 		ROOT = {
 			vassal_of = FROM
 		}

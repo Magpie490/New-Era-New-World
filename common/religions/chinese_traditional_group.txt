@@ -37,6 +37,7 @@ chinese_traditional_group = {
 			city_vassal_tax_modifier = 0.01
 			threat_decay_speed = 0.05
 			religion_flex = -0.5
+			trained_imperial_law_opinion = 5
 		}
 
 		aggression = 0.7
@@ -57,6 +58,9 @@ chinese_traditional_group = {
 		intermarry = wuist_reformed
 		intermarry = wuist
 		intermarry = hmongism
+		intermarry = legalist
+		intermarry = white_lotus
+		intermarry = neoncult
 		
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
@@ -101,6 +105,7 @@ chinese_traditional_group = {
 		allow_rivermovement = yes
 		has_heir_designation = yes
 		can_grant_divorce = yes
+		can_call_crusade = yes
 		priests_can_inherit = no
 		allow_looting = yes
 		max_consorts = 3
@@ -118,6 +123,8 @@ chinese_traditional_group = {
 		intermarry = wuist_reformed
 		intermarry = wuist
 		intermarry = hmongism
+		intermarry = white_lotus
+		intermarry = neoncult
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = CODE_OF_XIA
@@ -136,7 +143,7 @@ chinese_traditional_group = {
 
 		parent = wuxia
 		
-		color = { 252 248 3 }
+		color = { 252 203 15 }
 		
 		interface_skin = { taoist_interface indian_interface muslim_interface }
 		
@@ -178,6 +185,8 @@ chinese_traditional_group = {
 		intermarry = wuist_reformed
 		intermarry = wuist
 		intermarry = hmongism
+		intermarry = white_lotus
+		intermarry = neoncult
 		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = CODE_OF_XIA
@@ -195,6 +204,7 @@ chinese_traditional_group = {
 		color = { 5 250 238 }
 		alternate_start = { always = no }
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = WU
@@ -207,6 +217,10 @@ chinese_traditional_group = {
 		
 		evil_god_names = {
 			GOD_THE_EVIL_ONES
+		}
+		
+		character_modifier = {
+			trained_imperial_law_opinion = 5
 		}
 		
 		can_call_crusade = yes
@@ -239,6 +253,9 @@ chinese_traditional_group = {
 		intermarry = bon
 		intermarry = wuist
 		intermarry = hmongism
+		intermarry = legalist
+		intermarry = white_lotus
+		intermarry = neoncult
 		
 		dislike_tribal_organization = yes
 		allow_in_ruler_designer = no
@@ -253,6 +270,7 @@ chinese_traditional_group = {
 		
 		color = { 52 207 199 }
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = WU
@@ -267,6 +285,9 @@ chinese_traditional_group = {
 			GOD_THE_EVIL_ONES
 		}
 		
+		character_modifier = {
+			trained_imperial_law_opinion = 5
+		}
 
 		has_heir_designation = yes
 		priests_can_inherit = yes
@@ -279,7 +300,6 @@ chinese_traditional_group = {
 		priests_can_marry = yes
 		allow_looting = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		can_demand_religious_conversion = no
 
 		hard_to_convert = yes
 		
@@ -294,6 +314,9 @@ chinese_traditional_group = {
 		intermarry = bon
 		intermarry = wuist_reformed
 		intermarry = hmongism
+		intermarry = legalist
+		intermarry = white_lotus
+		intermarry = neoncult
 
 		reformed = wuist_reformed
 		
@@ -309,6 +332,7 @@ chinese_traditional_group = {
 		
 		color = { 183 149 80 }
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = HAN_FEIZI
 		priest_title = WU
@@ -325,6 +349,10 @@ chinese_traditional_group = {
 		
 
 		has_heir_designation = yes
+		can_have_antipopes = no
+		can_excommunicate = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes	
@@ -344,7 +372,12 @@ chinese_traditional_group = {
 		intermarry = bon_reformed
 		intermarry = bon
 		intermarry = wuist_reformed
+		intermarry = wuist
 		intermarry = hmongism
-
+		intermarry = tridemism
+		intermarry = maoist
+		intermarry = red_cult
+		intermarry = white_lotus
+		intermarry = neoncult
 	}
 }

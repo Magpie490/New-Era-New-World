@@ -1,5 +1,4 @@
 oceanic = {
-	has_coa_on_barony_only = no
 	graphical_culture = norsegfx
 	playable = yes
 	hostile_within_group = yes
@@ -18,10 +17,11 @@ oceanic = {
 		
 		color = { 0 0 0 }
 
+		crusade_name = GREAT_PLUNDER
 		high_god_name = GOD_NEPTUNE
 
 		god_names = {
-			GOD_THE_MARINER GOD_NEPTUNE GOD_THE_SEA_PEOPLES GOD_REDBEARD GOD_NAUTILUS
+			GOD_THE_MARINER GOD_NEPTUNE GOD_THE_SEA_PEOPLES GOD_REDBEARD GOD_NAUTILUS GOD_ADFINN_STORMLORD GOD_ONE_EYED_RAVEN GOD_FREJA_SEAWED
 		}
 		evil_god_names = {
 			NIGHTMARE_LIFE_IN_DEATH THE_HANGMAN THE_FLYING_DUTCHMAN THE_GHOST_FLEET THE_KRAKEN THE_LEVIATHAN
@@ -40,6 +40,7 @@ oceanic = {
 		has_heir_designation = yes
 		peace_prestige_loss = yes
 		defensive_attrition = yes
+		has_coa_on_barony_only = no
 		aggression = 2.0 # AI aggression factor
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		short_reign_opinion_year_mult = 2
@@ -72,11 +73,11 @@ oceanic = {
 		intermarry = mattaism
 		intermarry = xinjiao
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = armenianapostolic
 		intermarry = muwahidunna
 		intermarry = fraticelli
@@ -100,6 +101,7 @@ oceanic = {
 		
 		color = { 71 95 146 }
 
+		crusade_name = GREAT_PLUNDER
 		high_god_name = GOD_POSEIDON
 
 		god_names = {
@@ -122,6 +124,7 @@ oceanic = {
 		has_heir_designation = yes
 		peace_prestige_loss = yes
 		defensive_attrition = yes
+		has_coa_on_barony_only = no
 		aggression = 2.0 # AI aggression factor
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		short_reign_opinion_year_mult = 2
@@ -154,11 +157,11 @@ oceanic = {
 		intermarry = mattaism
 		intermarry = xinjiao
 		intermarry = osvicenism
-		intermarry = eastern_protestant
+		intermarry = easternprotestant
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = armenianapostolic
 		intermarry = muwahidunna
 		intermarry = fraticelli
@@ -180,6 +183,7 @@ oceanic = {
 		
 		color = { 225 115 24 }
 
+		crusade_name = GREAT_PLUNDER
 		high_god_name = GOD_MAZU
 
 		god_names = {
@@ -195,6 +199,9 @@ oceanic = {
 		allow_rivermovement = yes
 		allow_viking_invasion = yes
 		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
 		female_temple_holders = yes
 		max_consorts = 6
 		seafarer = yes
@@ -237,7 +244,7 @@ oceanic = {
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = armenianapostolic
 		intermarry = muwahidunna
 		intermarry = fraticelli

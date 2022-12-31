@@ -25,6 +25,48 @@ syncratic_group = {
 		Ayesha Abrar Afifah Anabia Hijrah Hind Hareem Iqra Judi Karida Khadijah Khalidah Khawlah Madeeha Maryam Mariyah Maymunah Mariam Mina Nuwwarrah Qismah Ruqayyah Saba Safaa Safiyyah Salma Shahrazad Sirin Sumaiyah Thuwaibah Umamah Zainab Zubaidah 
 	}
 	
+	puritan = {
+		graphical_culture = westerngfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 5
+		
+		color = { 0.1 0.8 0.5 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_THE_LIGHT GOD_THE_PATH
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_ONES_FROM_BEYOND THE_DARKNESS THE_POWERS
+		}
+		character_modifier = {
+			christian_opinion = 5
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+	}
 	voodun = {
 		graphical_culture = africangfx
 
@@ -93,50 +135,6 @@ syncratic_group = {
 		intermarry = syncratic_group
 		intermarry = ahlehaqq
 	}
-	
-	puritan = {
-		graphical_culture = westerngfx
-		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 5
-		
-		color = { 0.1 0.8 0.5 }
-		
-		crusade_name = CRUSADE
-		use_new_crusade = no
-		crusade_cb = crusade
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_THE_LIGHT GOD_THE_PATH
-		}
-		
-		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL THE_ONES_FROM_BEYOND THE_DARKNESS THE_POWERS
-		}
-		character_modifier = {
-			christian_opinion = 5
-		}
-
-		aggression = 0.8
-		allow_rivermovement = yes
-		investiture = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		can_call_crusade = yes
-		can_retire_to_monastery = yes
-		priests_can_inherit = no
-		rel_head_defense = yes
-		
-		religious_clothing_head = 2
-		religious_clothing_priest = 2
-	}
-	
 	pusaka = {
 		graphical_culture = muslimgfx
 
@@ -150,11 +148,11 @@ syncratic_group = {
 		high_god_name = GOD_ALLAH
 		
 		god_names = {
-			GOD_ALLAH GOD_THE_GREATEST
+			GOD_ALLAH GOD_THE_GREATEST GARUDA PROKLAMATOR MANGKUBUMI WALI_SANGA SI_PITUNG IBU_KITA MAHA_GURU AYAM_JANTAN BAPAK_KOPERASI PANGERAN_JOGJA
 		}
 		
 		evil_god_names = {
-			IBLIS SHAYTAN
+			IBLIS INDON_SATAN PENGADU_DOMBA PRAJURIT_HUKUM KIDUL POCONG KUNTILANAK
 		}
 
 		color = { 0 0.8 0 }
@@ -197,6 +195,7 @@ syncratic_group = {
 		intermarry = koranist
 		#intermarry = pusaka
 		intermarry = syafi
+		intermarry = agamatirta
 	}
 	
 	islamity = {
@@ -380,6 +379,8 @@ syncratic_group = {
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_call_crusade = yes
+		uses_decadence = yes
+		attacking_same_religion_piety_loss = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		rel_head_defense = yes
@@ -408,7 +409,7 @@ syncratic_group = {
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -554,7 +555,7 @@ syncratic_group = {
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -635,7 +636,7 @@ syncratic_group = {
 		
 		intermarry = evangelical
 		
-		intermarry = high_church
+		intermarry = highchurch
 		intermarry = muwahidunna
 		intermarry = fraticelli
 		intermarry = hussite
@@ -662,7 +663,7 @@ syncratic_group = {
 		
 		color = { 0.1 0.6 0 }
 		
-		interface_skin = { cao_dai_interface }
+		interface_skin = { cao_dai_interface buddhist_interface indian_interface muslim_interface }
 		
 		crusade_name = GREAT_HOLY_WAR
 		high_god_name = GOD_CAODAI
@@ -672,7 +673,7 @@ syncratic_group = {
 		}
 		
 		evil_god_names = {
-			GOD_THE_WEST GOD_YELLOW_EMP GOD_RED_EMP
+			GOD_YELLOW_EMP GOD_RED_EMP GOD_CORRUPTION GOD_WICKEDNESS
 		}
 		
 		piety_name = KARMA
@@ -685,6 +686,7 @@ syncratic_group = {
 		can_call_crusade = no
 		max_consorts = 5
 		allow_looting = no
+		hard_to_convert = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		investiture = yes
 		female_temple_holders = yes
@@ -707,55 +709,6 @@ syncratic_group = {
 		intermarry = christian
 		intermarry = buddhist_group
 	}
-	pancasila = {
-		graphical_culture = reformedzunistgfx
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-		secondary_event_pictures = shiite
-		icon = 183
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_FIVE_PRINCIPLES
-		priest_title = ELDER
-		
-		color = { 0.8 0.5 0.1 }
-		
-		high_god_name = MAHA_ESA
-		
-		god_names = {
-			THE_FIVE_PRINCIPLES TUHAN
-		}
-		
-		evil_god_names = {
-			WRETCHEDNESS
-		}
-		
-		allow_rivermovement = yes
-		priests_can_marry = yes
-		priests_can_inherit = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_claim = yes
-		psc_marriage = no
-		max_wives = 3
-		landed_kin_prestige_bonus = yes
-		attacking_same_religion_piety_loss = yes
-		defensive_attrition = yes
-		hard_to_convert = yes
-		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
-		short_reign_opinion_year_mult = 0 # No short reign penalty
-		character_modifier = {
-			christian_opinion = 5
-			muslim_opinion = 5
-			buddhist_group_opinion = 5
-			indian_group_opinion = 5
-			stewardship = 1
-		}
-		intermarry = christian
-		intermarry = muslim
-		intermarry = buddhist_group
-		intermarry = indian_group_opinion
-		
-	}
 	hmongism = {
 		graphical_culture = buddhistgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
@@ -768,19 +721,21 @@ syncratic_group = {
 		
 		color = { 0.5 0.5 0.5 }
 		
-		high_god_name = THE_FIVE_PRINCIPLES
+		high_god_name = GOD_TXIV_YAWG
 		
 		god_names = {
-			ALMIGHTY_GOD HUMANITY UNITY PEOPLES_WILL
+			GOD_TXIV_YAWG GOD_YWAM_SAUB GOD_NPLOOJ_LWG GOD_YAJ_YUAM GOD_NYUJ_VAJ_TUAM_TEEM GOD_NIAM_NKAUJ_KAB_YEEB GOD_DAB_POG GOD_THE_BUDDHA GOD_JESUS GOD_SAUL JADE_EMPEROR GOD_SAPPHIRE_DIDACT GOD_JADE_CHAIRMAN
 		}
 		
 		evil_god_names = {
-			WRETCHEDNESS
+			GOD_RED_TYRANT GOD_YELLOW_TYRANT MARA SATAN THE_DEVIL
 		}
 		
 		allow_rivermovement = yes
+		has_heir_designation = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
+		female_temple_holders = yes
 		psc_marriage = no
 		max_wives = 3
 		landed_kin_prestige_bonus = yes
@@ -790,7 +745,11 @@ syncratic_group = {
 		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		character_modifier = {
-			stewardship = 2
+			learning = 1
+			diplomacy = 1
+			chinese_traditional_group_opinion = 5
+			buddhist_group_opinion = 5
+			religion_flex = -0.5
 		}
 		intermarry = christian
 		intermarry = buddhist_group

@@ -184,6 +184,12 @@ faction_succ_seniority = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
 		
 		modifier = {
 			factor = 0
@@ -382,7 +388,13 @@ faction_succ_seniority = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}		
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}	
 		
 		modifier = {
 			factor = 0
@@ -908,7 +920,13 @@ faction_succ_primogeniture = {
 		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
-		}		
+		}	
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}	
 		
 		modifier = {
 			factor = 0
@@ -1093,6 +1111,12 @@ faction_succ_primogeniture = {
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
 			}
 		}
 		modifier = {
@@ -1615,6 +1639,12 @@ faction_succ_gavelkind = {
 			factor = 0.2
 			FROM = { pacifist = yes }
 		}		
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
 		
 		modifier = {
 			factor = 0
@@ -1885,6 +1915,12 @@ faction_succ_gavelkind = {
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
 			}
 		}
 		modifier = {
@@ -2415,6 +2451,12 @@ faction_succ_feudal_elective = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
 			factor = 1.5
 			liege = {  
 				primary_title = { title = e_yugoslavia }
@@ -2704,6 +2746,12 @@ faction_succ_feudal_elective = {
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
 			}
 		}
 		modifier = {
@@ -3234,6 +3282,12 @@ faction_succ_byzantine_elective = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
 			factor = 1.5
 			liege = {  
 				primary_title = { should_have_byz_elective_trigger = yes }
@@ -3517,6 +3571,12 @@ faction_succ_byzantine_elective = {
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
 			}
 		}
 		modifier = {
@@ -3953,6 +4013,12 @@ faction_lower_crown_authority = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
 		}
@@ -3960,6 +4026,16 @@ faction_lower_crown_authority = {
 			factor = 1.3
 			liege = {
 				government = confederation_government
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
 			}
 		}
 		modifier = {
@@ -4171,6 +4247,22 @@ faction_lower_crown_authority = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -4579,6 +4671,12 @@ faction_lower_tribal_organization = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
 			factor = 0
 			FROM = { dislike_tribal_organization = no }
 		}
@@ -4793,6 +4891,12 @@ faction_lower_tribal_organization = {
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
 			}
 		}
 		modifier = {
@@ -5267,6 +5371,30 @@ faction_independence = {
 			}
 			NOT = { culture = liege }
 		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
+			factor = 2
+			liege = {
+				has_landed_title = d_prussianist
+				OR = {
+					trait = greedy
+					trait = lustful
+					trait = gluttonous
+					trait = slothful
+					trait = envious
+					trait = wroth
+					trait = proud
+					trait = cruel
+					trait = impaler
+				}
+			}
+			religion = prussianist
+		}
 		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
 			factor = 2
 			OR = {
@@ -5290,6 +5418,16 @@ faction_independence = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
 		modifier = {#Gnostics hate catholics
 			factor = 5
 			religion = gnostic
@@ -5310,6 +5448,82 @@ faction_independence = {
 			liege = {
 				NOT = {
 					religion_group = jewish_group
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = ibadi
+			liege = {
+				OR = {
+					AND = {
+						trait = lustful
+						trait = proud
+					}
+					AND = {
+						trait = gluttonous
+						trait = proud
+					}
+					AND = {
+						trait = greedy
+						trait = proud
+					}
+					AND = {
+						trait = slothful
+						trait = proud
+					}
+					AND = {
+						trait = envious
+						trait = proud
+					}
+					AND = {
+						trait = wroth
+						trait = proud
+					}
+					AND = {
+						trait = gluttonous
+						trait = lustful
+					}
+					AND = {
+						trait = gluttonous
+						trait = greedy
+					}
+					AND = {
+						trait = gluttonous
+						trait = slothful
+					}
+					AND = {
+						trait = gluttonous
+						trait = envious
+					}
+					AND = {
+						trait = gluttonous
+						trait = wroth
+					}
+					AND = {
+						trait = greedy
+						trait = slothful
+					}
+					AND = {
+						trait = greedy
+						trait = envious
+					}
+					AND = {
+						trait = greedy
+						trait = wroth
+					}
+					AND = {
+						trait = slothful
+						trait = envious
+					}
+					AND = {
+						trait = slothful
+						trait = wroth
+					}
+					AND = {
+						trait = envious
+						trait = wroth
+					}
 				}
 			}
 		}
@@ -5688,6 +5902,30 @@ faction_independence = {
 			culture_group = south_slavic
 			NOT = { culture = liege }
 		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
+			factor = 2
+			liege = {
+				has_landed_title = d_prussianist
+				OR = {
+					trait = greedy
+					trait = lustful
+					trait = gluttonous
+					trait = slothful
+					trait = envious
+					trait = wroth
+					trait = proud
+					trait = cruel
+					trait = impaler
+				}
+			}
+			religion = prussianist
+		}
 		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
 			factor = 2
 			OR = {
@@ -5711,6 +5949,16 @@ faction_independence = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
 		modifier = {#Gnostics hate catholics
 			factor = 5
 			religion = gnostic
@@ -5731,6 +5979,82 @@ faction_independence = {
 			liege = {
 				NOT = {
 					religion_group = jewish_group
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = ibadi
+			liege = {
+				OR = {
+					AND = {
+						trait = lustful
+						trait = proud
+					}
+					AND = {
+						trait = gluttonous
+						trait = proud
+					}
+					AND = {
+						trait = greedy
+						trait = proud
+					}
+					AND = {
+						trait = slothful
+						trait = proud
+					}
+					AND = {
+						trait = envious
+						trait = proud
+					}
+					AND = {
+						trait = wroth
+						trait = proud
+					}
+					AND = {
+						trait = gluttonous
+						trait = lustful
+					}
+					AND = {
+						trait = gluttonous
+						trait = greedy
+					}
+					AND = {
+						trait = gluttonous
+						trait = slothful
+					}
+					AND = {
+						trait = gluttonous
+						trait = envious
+					}
+					AND = {
+						trait = gluttonous
+						trait = wroth
+					}
+					AND = {
+						trait = greedy
+						trait = slothful
+					}
+					AND = {
+						trait = greedy
+						trait = envious
+					}
+					AND = {
+						trait = greedy
+						trait = wroth
+					}
+					AND = {
+						trait = slothful
+						trait = envious
+					}
+					AND = {
+						trait = slothful
+						trait = wroth
+					}
+					AND = {
+						trait = envious
+						trait = wroth
+					}
 				}
 			}
 		}
@@ -6476,6 +6800,22 @@ faction_claimant = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
+		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
 		}	
@@ -7112,6 +7452,22 @@ faction_claimant = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -7948,6 +8304,22 @@ faction_antiking = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
+		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
 		}		
@@ -8108,6 +8480,22 @@ faction_antiking = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -8444,6 +8832,22 @@ faction_overthrow = {
 			factor = 0.5
 			liege = {  
 				any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
 			}
 		}
 		modifier = {
@@ -8807,6 +9211,22 @@ faction_overthrow = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -9397,6 +9817,22 @@ faction_increase_council_power = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
+		modifier = {
 			factor = 1.3
 			liege = {
 				government = confederation_government
@@ -9638,6 +10074,22 @@ faction_increase_council_power = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -10125,9 +10577,25 @@ faction_powerful_vassal_takeover = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
 		}		
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
+				}
+			}
+		}
 
 		modifier = {
 			factor = 0
@@ -10326,6 +10794,22 @@ faction_powerful_vassal_takeover = {
 			ROOT = {  
 				liege = { 
 					any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion = legalist
+			liege = {
+				religion = legalist
+				any_artifact = {
+					has_artifact_flag = chinese_stamp
 				}
 			}
 		}
@@ -10659,6 +11143,12 @@ faction_true_belivers = {
 			factor = 1000
 			FROM = { has_character_flag = ai_flag_refuse_conversion }
 		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
 		
 		modifier = {
 			factor = 0
@@ -10673,6 +11163,12 @@ faction_true_belivers = {
 		modifier = {
 			factor = 1000
 			has_character_flag = ai_flag_refuse_conversion
+		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
 		}
 		modifier = {
 			factor = 0
@@ -10774,6 +11270,12 @@ faction_abrahamic_revolters = {
 			factor = 1000
 			FROM = { has_character_flag = flag_abrahamic_revolter }
 		}
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
 		
 		modifier = {
 			factor = 0
@@ -10784,6 +11286,12 @@ faction_abrahamic_revolters = {
 	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
 	membership = {
 		factor = 1
+		modifier = {
+			factor = 0.85
+			liege = {
+				has_character_modifier = dread_modifier
+			}
+		}
 
 	}
 	
