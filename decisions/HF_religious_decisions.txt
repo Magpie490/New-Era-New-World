@@ -13,6 +13,7 @@ targetted_decisions = {
 			is_playable = yes
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -224,8 +225,19 @@ targetted_decisions = {
 				has_religion_feature = religion_stable
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
+				has_religion_feature = religion_feature_moism
+				religion = nasrini
 				religion = malikite
 				religion = navayana
+				religion = white_lotus
+				religion = gidoggyo
+				religion = tridemism
+				religion = taoist
+				religion = wuxia
+				religion = xianxia
+				religion = amidism
+				religion = mahayana
+				religion = hmongism
 			}
 			has_dlc = "Holy Fury"
 		}
@@ -474,8 +486,19 @@ targetted_decisions = {
 				has_religion_feature = religion_stable
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
+				has_religion_feature = religion_feature_moism
+				religion = nasrini
 				religion = malikite
 				religion = navayana
+				religion = white_lotus
+				religion = tridemism
+				religion = gidoggyo
+				religion = taoist
+				religion = wuxia
+				religion = xianxia
+				religion = amidism
+				religion = mahayana
+				religion = hmongism
 			}
 			has_dlc = "Holy Fury"
 		}
@@ -592,7 +615,9 @@ decisions = {
 				trait = sympathy_buddhism
 				trait = sympathy_esoteric
 				trait = sympathy_syncratic
-				#trait = sympathy_oceanic
+				trait = sympathy_oceanic
+				trait = sympathy_chinese
+				trait = sympathy_shinto
 				has_character_flag = flag_picking_sympathy
 			}
 			OR = { 
@@ -600,8 +625,28 @@ decisions = {
 				has_religion_feature = religion_feature_hellenic
 				has_religion_feature = religion_feature_folklorist
 				has_religion_feature = religion_feature_nousthreskeia
+				has_religion_feature = religion_feature_bungan
+				has_religion_feature = religion_feature_kaharingan
+				has_religion_feature = religion_feature_thuyhoa
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = nasrini
+				religion = maunaxite
+				religion = maunaxite_reformed
 				religion = inuit_pagan
 				religion = inuit_pagan_reformed
+				religion = taoist
+				religion = white_lotus
+				religion = voodun
+				religion = islamity
+				religion = muwahidunna
+				religion = bahai
+				religion = jugoslavist
+				religion = vagarna
+				religion = bushism
+				religion = malikite
+				religion = hmongism
+				religion = caodai
 			}
 		}
 		
@@ -612,8 +657,28 @@ decisions = {
 				has_religion_feature = religion_feature_hellenic 
 				has_religion_feature = religion_feature_folklorist
 				has_religion_feature = religion_feature_nousthreskeia
+				has_religion_feature = religion_feature_bungan
+				has_religion_feature = religion_feature_kaharingan
+				has_religion_feature = religion_feature_thuyhoa
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = nasrini
+				religion = maunaxite
+				religion = maunaxite_reformed
 				religion = inuit_pagan
 				religion = inuit_pagan_reformed
+				religion = taoist
+				religion = white_lotus
+				religion = voodun
+				religion = islamity
+				religion = muwahidunna
+				religion = bahai
+				religion = jugoslavist
+				religion = vagarna
+				religion = bushism
+				religion = malikite
+				religion = hmongism
+				religion = caodai
 			}
 		}
 		
@@ -949,6 +1014,136 @@ decisions = {
 									}
 									any_demesne_province = {
 										religion_group = jewish_group
+									}
+								}
+							}
+						}
+						100 = {
+							add_trait = sympathy_shinto
+							
+							modifier = {
+								factor = 0
+								religion_group = shintoist_group
+							}
+							modifier = { # Prioritize getting a sympathy trait that is useful
+								factor = 100
+								OR = {
+									any_demesne_province = {
+										religion_group = shintoist_group
+									}
+									any_vassal = {
+										religion_group = shintoist_group
+									}
+								}
+							}
+							modifier = { # Otherwise try to emulate your liege
+								factor = 5
+								NOR = {
+									any_demesne_province = {
+										NOT = { religion_group = shintoist_group }
+									}
+									any_vassal = {
+										NOT = { religion_group = shintoist_group }
+									}
+								}
+								any_liege = {
+									OR = {
+										AND = {
+											trait = sympathy_shinto
+											religion = ROOT
+										}
+										religion_group = shintoist_group
+									}
+								}	
+							}
+							modifier = {
+								factor = 0
+								NOR = {
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_shinto
+												religion = ROOT
+											}
+											religion_group = shintoist_group
+										}
+									}
+									spouse = {
+										religion_group = shintoist_group
+									}
+									any_courtier_or_vassal = {
+										religion_group = shintoist_group
+									}
+									any_neighbor_independent_ruler = {
+										religion_group = shintoist_group
+									}
+									any_demesne_province = {
+										religion_group = shintoist_group
+									}
+								}
+							}
+						}
+						100 = {
+							add_trait = sympathy_chinese
+							
+							modifier = {
+								factor = 0
+								religion_group = chinese_traditional_group
+							}
+							modifier = { # Prioritize getting a sympathy trait that is useful
+								factor = 100
+								OR = {
+									any_demesne_province = {
+										religion_group = chinese_traditional_group
+									}
+									any_vassal = {
+										religion_group = chinese_traditional_group
+									}
+								}
+							}
+							modifier = { # Otherwise try to emulate your liege
+								factor = 5
+								NOR = {
+									any_demesne_province = {
+										NOT = { religion_group = chinese_traditional_group }
+									}
+									any_vassal = {
+										NOT = { religion_group = chinese_traditional_group }
+									}
+								}
+								any_liege = {
+									OR = {
+										AND = {
+											trait = sympathy_chinese
+											religion = ROOT
+										}
+										religion_group = chinese_traditional_group
+									}
+								}	
+							}
+							modifier = {
+								factor = 0
+								NOR = {
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_chinese
+												religion = ROOT
+											}
+											religion_group = chinese_traditional_group
+										}
+									}
+									spouse = {
+										religion_group = chinese_traditional_group
+									}
+									any_courtier_or_vassal = {
+										religion_group = chinese_traditional_group
+									}
+									any_neighbor_independent_ruler = {
+										religion_group = chinese_traditional_group
+									}
+									any_demesne_province = {
+										religion_group = chinese_traditional_group
 									}
 								}
 							}
@@ -1413,7 +1608,12 @@ decisions = {
 			NOT = { trait = pagan_branch_4 }
 			NOT = { has_character_flag = flag_picking_branch }
 			has_religion_feature = religion_no_leader
-			
+			NOR = {
+				religion = novelist
+				religion = novelist_reformed
+				religion = maunaxite
+				religion = maunaxite_reformed
+			}
 		}
 		
 		allow = {
@@ -1541,352 +1741,6 @@ decisions = {
 			}
 		}
 	}
-	# Create Myrmidons - Hellenic Holy Order
-	create_myrmidons = {
-		only_playable = yes
-		is_high_prio = yes
-		ai_check_interval = 120 #check only once every 120 months.
-		
-		potential = {
-			NOT = { is_title_active = d_myrmidons }
-			#NOT = { has_landed_title = e_roman_empire } #To activate in the event of special case being defined for Roman Emperors. (!!!!)
-			OR = {
-				independent = yes
-				tier = king
-			}
-			religion = hellenic_pagan_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		
-		allow = {
-			OR = {
-				AND = {
-					completely_controls = c_thessalonike
-					completely_controls = c_atheniai
-					completely_controls = c_siracusa
-					completely_controls = c_alexandria
-					piety = 1000
-				}
-				AND = {
-					year = 2700
-					piety = 200
-				}
-			}
-		}
-		
-		effect = {
-			custom_tooltip = { text = create_myrmidons_tooltip }
-			hidden_tooltip = {
-				activate_title = { title = d_myrmidons status = yes }
-				create_character = {
-					random_traits = no
-					dynasty = random
-					religion = ROOT
-					culture = greek
-					female = no
-					age = 33
-					trait = brilliant_strategist
-					trait = zealous
-					trait = humble
-					trait = ambitious
-					trait = strategist
-					trait = holy_warrior
-				}
-				new_character = {
-					wealth = 500
-					d_myrmidons = {
-						grant_title = PREV
-					}
-					set_government_type = feudal_government
-					save_event_target_as = leader_of_myrmidons
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 16
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 18
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 18
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 20
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 25
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 26
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = no
-						age = 28
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = yes
-						age = 16
-					}
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = greek
-						female = yes
-						age = 17
-					}
-				}
-				any_player = {
-					limit = {
-						OR = {
-							religion = hellenic_pagan_reformed
-							capital_scope = { region = world_europe_west }
-						}
-					}
-					narrative_event = { id = HF.23120 }
-				}
-			}
-		}
-		
-		revoke_allowed = {
-			always = no
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	# Create Stoics - Hellenic Monks
-	create_stoics = {
-		only_playable = yes
-		is_high_prio = yes
-		ai_check_interval = 120 #check only once every 120 months.
-		
-		potential = {
-			NOT = {
-				has_global_flag = flag_restored_stoic_intelligentia
-			}
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-			OR = {
-				has_global_flag = hellenic_reformation
-				has_global_flag = flag_started_roman_renaissance #Required cultural basis in order for them to take root.
-			}
-			has_dlc = "Mystics"
-			age = 16
-			NOT = { has_religion_feature = religion_dogmatic }
-			NOR = { #Not for savages.
-				is_tribal = yes
-				is_nomadic = yes
-			}
-			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-				religion = poseidonian
-				AND = {
-                    OR = {
-			        culture = roman
-					culture_group = byzantine
-					culture = arvanitika
-					culture = aromanian
-					}
-				    OR = { #Somewhat compatible when mixed with Greek culture.
-					religion_group = christian
-					religion_group = jewish_group
-					religion = bon
-					religion = bon_reformed
-					religion_group = buddhist_group
-					religion_group = esoteric
-					religion_group = syncratic_group
-					religion = mesopotamian
-					religion = novelist
-					religion = novelist_reformed
-					}
-				}
-			}
-			NOT = { trait = excommunicated }
-			NOT = { 
-				monastic_order_stoics = {
-					society_has_members = yes								
-				}
-			}
-		}
-		
-		allow = {
-			is_in_society = no
-			NOR = { 
-				trait = incapable
-			}
-			OR = { #Must have one of the Stoic virtues to restart the movement.
-				trait = temperate
-				trait = erudite
-				trait = brave
-				trait = just
-			}
-			higher_tier_than = COUNT
-			learning = 15
-			is_inaccessible_trigger = no
-			scaled_wealth = 0.25
-		}
-		
-		effect = {
-			scaled_wealth = -0.25
-			custom_tooltip = { text = create_stoics_tooltip }
-			hidden_tooltip = {
-				set_global_flag = flag_restored_stoic_intelligentia 
-				join_society = monastic_order_stoics
-				set_society_grandmaster = yes # Set character as Grand Master
-				add_society_currency_massive_effect = yes
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 16
-					}
-					new_character = { join_society = monastic_order_stoics }
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 18
-					}
-					new_character = { join_society = monastic_order_stoics }
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 20
-					}
-					new_character = { join_society = monastic_order_stoics }
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 25
-					}
-					new_character = { join_society = monastic_order_stoics }
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 26
-					}
-					new_character = { join_society = monastic_order_stoics }
-					create_random_priest = {
-						random_traits = yes
-						dynasty = random
-						religion = ROOT
-						culture = ROOT
-						attributes = {
-							learning = 10
-						}
-						female = no
-						age = 28
-					}
-					new_character = { join_society = monastic_order_stoics }
-				any_vassal = {
-					limit = {
-						ai = yes
-						can_join_society = monastic_order_stoics
-					}
-					join_society = monastic_order_stoics
-				}
-				any_independent_ruler = {
-					limit = {
-						ai = yes
-						can_join_society = monastic_order_stoics
-						is_within_diplo_range = ROOT
-					}
-					random = { chance = 35 join_society = monastic_order_stoics }
-				}
-				any_player = {
-					limit = {
-						OR = {
-							religion = hellenic_pagan_reformed
-							religion = hellenic_pagan
-							religion = poseidonian
-							culture = roman
-							culture_group = byzantine
-							is_within_diplo_range = ROOT
-						}
-					}
-					narrative_event = { id = HF.23123 }
-				}
-			}
-		}
-		
-		revoke_allowed = {
-			always = no
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	bloodthirsty_games_decision = {
 		is_high_prio = yes
 		ai_check_interval = 240 #check only once every 240 months.
@@ -1902,11 +1756,12 @@ decisions = {
 			NOT = { has_any_opinion_modifier = opinion_blood_games_guest }
 			NOT = { has_religion_feature = religion_peaceful }
 			OR = {
-			has_religion_feature = religion_ritual_sacrifice
-			religion = stalinist
-			religion = trotskyite
-			religion = titoist
-			religion = red_cult
+				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
+				religion = stalinist
+				religion = trotskyite
+				religion = titoist
+				religion = red_cult
 			}
 		}
 		
@@ -2004,11 +1859,12 @@ decisions = {
 			independent = yes
 			NOT = { has_religion_feature = religion_peaceful } #Aztecs could reform as Peaceful.
 			OR = {
-			has_religion_feature = religion_ritual_sacrifice
-			religion = stalinist
-			religion = trotskyite
-			religion = titoist
-			religion = red_cult
+				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
+				religion = stalinist
+				religion = trotskyite
+				religion = titoist
+				religion = red_cult
 			}
 		}
 		

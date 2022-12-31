@@ -89,28 +89,8 @@ character_event = {
 		text = EVTDESCHF23002_D 	#Do it yourself.
 	}
 	
-	picture = { 
-		trigger = { 
-			ROOT = { 
-				OR = {  
-					religion = aztec
-					religion = aztec_reformed
-				}
-			} 
-		} 
-		picture = GFX_evt_bishop_aztec
-	}
-	picture = { 
-		trigger = { 
-			ROOT = { 
-				NOR = {  
-					religion = aztec
-					religion = aztec_reformed
-				}
-			} 
-		} 
-		picture = GFX_evt_pagan_blood_sacrifice
-	}
+	picture = GFX_evt_pagan_blood_sacrifice
+	
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
@@ -147,7 +127,7 @@ character_event = {
 				has_wonder_upgrade = upgrade_sacrificial_altar
 				is_active = yes
 			}
-			religion = stalinist
+				religion = stalinist
 			}
 		}
 		tooltip_info_custom = EVTOPTBHF23002_TT
@@ -378,6 +358,8 @@ character_event = {
 						trait = sympathy_zoroastrianism
 						trait = sympathy_indian
 						trait = sympathy_buddhism
+						trait = sympathy_chinese
+						trait = sympathy_shinto
 					}
 				}
 			}
@@ -388,6 +370,8 @@ character_event = {
 						trait = sympathy_zoroastrianism
 						trait = sympathy_indian
 						trait = sympathy_buddhism
+						trait = sympathy_chinese
+						trait = sympathy_shinto
 					}
 				}
 			}
@@ -398,6 +382,8 @@ character_event = {
 						trait = sympathy_zoroastrianism
 						trait = sympathy_indian
 						trait = sympathy_buddhism
+						trait = sympathy_chinese
+						trait = sympathy_shinto
 					}
 				}
 			}
@@ -435,6 +421,30 @@ character_event = {
 				factor = 1.5
 				any_courtier_or_vassal = { 
 					religion_group = buddhist_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = chinese_traditional_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = { 
+					religion_group = chinese_traditional_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = shintoist_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = { 
+					religion_group = shintoist_group
 				}
 			}
 		}
@@ -1166,13 +1176,13 @@ character_event = {
 			modifier = { 
 				factor = 1.5
 				any_demesne_province = { 
-					religion_group = sympathy_old_world_cultist
+					religion_group = old_world_cultist_group
 				}
 			}
 			modifier = { 
 				factor = 1.5
 				any_courtier_or_vassal = { 
-					religion_group = sympathy_old_world_cultist
+					religion_group = old_world_cultist_group
 				}
 			}
 		}
@@ -1348,10 +1358,18 @@ character_event = {
 			has_religion_feature = religion_haruspicy
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan
-			has_religion_feature = religion_feature_celtic_2
+			has_religion_feature = religion_feature_celtic
+			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_wuist
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shindo
+			religion = shinko
 		} 
 		NOR = {
 			has_character_modifier = divination_crit_success
@@ -1424,10 +1442,18 @@ character_event = {
 			has_religion_feature = religion_haruspicy 
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan			
-			has_religion_feature = religion_feature_celtic_2			
+			has_religion_feature = religion_feature_celtic		
+			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_wuist
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shindo
+			religion = shinko
 		} 
 		NOR = {
 			has_character_modifier = divination_crit_success
@@ -1470,10 +1496,18 @@ character_event = {
 			has_religion_feature = religion_haruspicy
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan		
-			has_religion_feature = religion_feature_celtic_2		
+			has_religion_feature = religion_feature_celtic	
+			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_wuist
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shindo
+			religion = shinko
 		} 
 		NOR = {
 			has_character_modifier = divination_crit_success
@@ -1495,7 +1529,7 @@ character_event = {
 			set_character_flag = flag_cheap_diviner #Prevents crit success, increases crit failure.
 		}
 		if = { 
-			limit = { has_religion_feature = religion_ritual_sacrifice }
+			limit = { OR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } }
 			random_courtier = { 
 				limit = {
 					NOR = {
@@ -1529,12 +1563,15 @@ character_event = {
 	option = { #Human - Ensure no Critical Fail - Unlocks Critical success - Only if also Bloodthirsty Gods.
 		name = EVTOPTZHF23007
 		trigger = { 
-			has_religion_feature = religion_ritual_sacrifice 
+			OR = {
+				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
+			}
 			event_target:potential_victim = { is_alive = yes } 
 		}
 		if = { 
 			limit = { ai = no }
-			scaled_wealth = { value = -1 min = -200 max = -400 } 
+			scaled_wealth = { value = -1 min = -150 max = -250 } 
 		}
 		event_target:potential_victim = { 
 			show_scope_change = no 
@@ -1566,10 +1603,10 @@ character_event = {
 	}
 	option = { #Great bull - Ensure no Critical Fail - Unlocks Critical success
 		name = EVTOPTAHF23007
-		trigger = { NOT = { has_religion_feature = religion_ritual_sacrifice } }
+		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } }
 		if = { 
 			limit = { ai = no }
-			scaled_wealth = { value = -1 min = -175 max = -500 } 
+			scaled_wealth = { value = -0.9 min = -100 max = -200 } 
 		}
 		set_character_flag = flag_sacrificing_bull
 		ai_chance = { 
@@ -1596,7 +1633,7 @@ character_event = {
 		name = EVTOPTBHF23007
 		if = { 
 			limit = { ai = no }
-			scaled_wealth = { value = -0.75 min = -50 max = -130 }
+			scaled_wealth = { value = -0.75 min = -25 max = -100 }
 		}
 		set_character_flag = flag_sacrificing_cow
 		ai_chance = { 
@@ -1623,7 +1660,7 @@ character_event = {
 		name = EVTOPTCHF23007
 		if = { 
 			limit = { ai = no }
-			scaled_wealth = { value = -0.5 min = -30 max = -75 }
+			scaled_wealth = { value = -0.5 min = -20 max = -66 }
 		}
 		set_character_flag = flag_sacrificing_goat
 		ai_chance = { 
@@ -1638,7 +1675,7 @@ character_event = {
 		name = EVTOPTDHF23007
 		if = { 
 			limit = { ai = no }
-			scaled_wealth = { value = -0.1 min = -5 max = -30 }
+			scaled_wealth = { value = -0.1 min = -5 max = -20 }
 		}
 		set_character_flag = flag_sacrificing_chicken
 		ai_chance = { 
@@ -3545,7 +3582,7 @@ character_event = {
 				has_religion_feature = religion_equal
 				has_religion_feature = religion_feature_bon
 				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_feature_celtic_2
+				has_religion_feature = religion_feature_celtic
 			}
 		}
 	}
@@ -3638,7 +3675,7 @@ character_event = {
 					OR = { 
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
-						has_religion_feature = religion_feature_celtic_2
+						has_religion_feature = religion_feature_celtic
 					}
 					NOR = {  
 						#is_merchant_republic = yes
@@ -3671,7 +3708,7 @@ character_event = {
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_matriarchal
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 					ROOT = { has_religion_feature = religion_matriarchal }
@@ -3701,7 +3738,7 @@ character_event = {
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_patriarchal
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 					ROOT = { has_religion_feature = religion_patriarchal }
@@ -3731,7 +3768,7 @@ character_event = {
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_matriarchal
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 				}
@@ -3760,7 +3797,7 @@ character_event = {
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_patriarchal
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 				}
@@ -3787,7 +3824,7 @@ character_event = {
 						OR = { 
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 					ROOT = { 
@@ -3817,7 +3854,7 @@ character_event = {
 						OR = { 
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
-							has_religion_feature = religion_feature_celtic_2
+							has_religion_feature = religion_feature_celtic
 						}
 					}
 					ROOT = { 
@@ -3858,7 +3895,7 @@ character_event = {
 			has_religion_feature = religion_equal
 			has_religion_feature = religion_feature_bon
 			has_religion_feature = religion_matriarchal
-			has_religion_feature = religion_feature_celtic_2
+			has_religion_feature = religion_feature_celtic
 		}
 	}
 	is_triggered_only = yes
@@ -3942,7 +3979,7 @@ character_event = {
 					OR = { 
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
-						has_religion_feature = religion_feature_celtic_2
+						has_religion_feature = religion_feature_celtic
 					}
 				}
 			}
@@ -4951,7 +4988,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23207
 		trigger = { 
-			OR = { religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice } 
+			OR = { religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
@@ -5854,7 +5891,7 @@ character_event = {
 								has_religion_feature = religion_matriarchal 
 								has_religion_feature = religion_equal 
 								has_religion_feature = religion_feature_bon
-								has_religion_feature = religion_feature_celtic_2
+								has_religion_feature = religion_feature_celtic
 							}
 						} 
 					} 
@@ -6535,7 +6572,7 @@ character_event = {
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
 				FROM = { owner = { has_religion_feature = religion_feature_bon } }
-				FROM = { owner = { has_religion_feature = religion_feature_celtic_2 } }
+				FROM = { owner = { has_religion_feature = religion_feature_celtic } }
 				FROM = { 
 					owner = { 
 						religion_group = pagan_group
@@ -6591,7 +6628,7 @@ character_event = {
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
 				FROM = { owner = { has_religion_feature = religion_feature_bon } }
-				FROM = { owner = { has_religion_feature = religion_feature_celtic_2 } }
+				FROM = { owner = { has_religion_feature = religion_feature_celtic } }
 			} 
 		} 
 		custom_tooltip = { text = TOOLTIP_EVTOPTCHF23219 } 
@@ -7047,6 +7084,10 @@ narrative_event = {
 				has_religion_feature = religion_astrology 
 			}
 			AND = {
+				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_astrology 
+			}
+			AND = {
 				has_religion_feature = religion_feature_lakefolk_pagan
 				has_religion_feature = religion_astrology 
 			}
@@ -7496,6 +7537,11 @@ narrative_event = {
 				has_religion_feature = religion_no_leader 
 			}
 			AND = {
+				has_religion_feature = religion_haruspicy
+				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_no_leader 
+			}
+			AND = {
 				has_religion_feature = religion_feature_lakefolk_pagan
 				has_religion_feature = religion_astrology 
 				has_religion_feature = religion_no_leader 
@@ -7744,14 +7790,17 @@ character_event = {
 			NOT = { trait = incapable }
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = aztec
 				religion = aztec_reformed
 			}
 			OR = {
 				has_religion_feature = religion_feature_folklorist_2
 				has_religion_feature = religion_feature_lakefolk_pagan			
-				has_religion_feature = religion_feature_celtic_2			
+				has_religion_feature = religion_feature_celtic			
 				has_religion_feature = religion_haruspicy
+				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_sarna
 				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
 			}
@@ -8472,6 +8521,7 @@ character_event = {
 			NOT = { trait = incapable }
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -8573,6 +8623,7 @@ character_event = {
 		NOT = { trait = bloodthirsty_gods_1 }
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -8643,6 +8694,7 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -8724,6 +8776,7 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -8802,6 +8855,7 @@ narrative_event = {
 	trigger = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -8921,6 +8975,7 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -8934,6 +8989,7 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -8974,6 +9030,7 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -8987,6 +9044,7 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -10861,6 +10919,7 @@ character_event = {
 	trigger = {
 		NOR = {
 			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
 			religion = titoist
@@ -10924,6 +10983,7 @@ character_event = {
 		trigger  = {  
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -10939,6 +10999,7 @@ character_event = {
 		trigger  = {  
 			NOR = {
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
@@ -11089,6 +11150,7 @@ character_event = {
 						religion = titoist
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
+						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11193,6 +11255,7 @@ character_event = {
 						religion = titoist
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
+						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11259,6 +11322,7 @@ character_event = {
 							NOT = { has_religion_feature = religion_peaceful }
 						}
 						has_religion_feature = religion_ritual_sacrifice
+						has_religion_feature = religion_feature_satsana_phi
 						religion = stalinist
 						religion = trotskyite
 						religion = titoist
@@ -11402,6 +11466,7 @@ character_event = {
 				religion = titoist
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 			}
 		}
 		if = { 
@@ -11425,6 +11490,7 @@ character_event = {
 				religion = titoist
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
 			}
 		}
 	}
@@ -12022,14 +12088,14 @@ character_event = {
 					OR = { 
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon 	
-						has_religion_feature = religion_feature_celtic_2
+						has_religion_feature = religion_feature_celtic
 					} 
 				} 
 				FROMFROM = { 
 					OR = { 
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
-						has_religion_feature = religion_feature_celtic_2
+						has_religion_feature = religion_feature_celtic
 					} 
 				}
 			}
@@ -12129,7 +12195,7 @@ character_event = {
 					OR = { 
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
-						has_religion_feature = religion_feature_celtic_2
+						has_religion_feature = religion_feature_celtic
 					}
 					NOR = {  
 						#is_merchant_republic = yes
@@ -14377,7 +14443,8 @@ character_event = {
 				has_religion_feature = religion_animistic
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
-				has_religion_feature = religion_feature_celtic_2
+				has_religion_feature = religion_feature_celtic
+				has_religion_feature = religion_feature_sarna
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14389,7 +14456,8 @@ character_event = {
 				has_religion_feature = religion_animistic
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
-				has_religion_feature = religion_feature_celtic_2
+				has_religion_feature = religion_feature_celtic
+				has_religion_feature = religion_feature_sarna
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -14410,7 +14478,8 @@ character_event = {
 			has_religion_feature = religion_animistic 
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
-			has_religion_feature = religion_feature_celtic_2
+			has_religion_feature = religion_feature_celtic
+			has_religion_feature = religion_feature_sarna
 		}
 	}
 	
@@ -14577,7 +14646,8 @@ character_event = {
 				has_religion_feature = religion_animistic
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
-				has_religion_feature = religion_feature_celtic_2
+				has_religion_feature = religion_feature_celtic
+				has_religion_feature = religion_feature_sarna
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14589,7 +14659,8 @@ character_event = {
 				has_religion_feature = religion_animistic
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
-				has_religion_feature = religion_feature_celtic_2
+				has_religion_feature = religion_feature_celtic
+				has_religion_feature = religion_feature_sarna
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -14966,7 +15037,8 @@ character_event = {
 			has_religion_feature = religion_animistic 
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
-			has_religion_feature = religion_feature_celtic_2
+			has_religion_feature = religion_feature_celtic
+			has_religion_feature = religion_feature_sarna
 		}
 	}
 	
@@ -14995,7 +15067,8 @@ character_event = {
 			has_religion_feature = religion_animistic
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
-			has_religion_feature = religion_feature_celtic_2
+			has_religion_feature = religion_feature_celtic
+			has_religion_feature = religion_feature_sarna
 		}
 	}
 	immediate = { 

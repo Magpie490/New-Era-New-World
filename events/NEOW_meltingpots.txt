@@ -1,5 +1,4 @@
 namespace = MPU
-
 #Adessite
 character_event = {
 	id = MPU.1
@@ -91,7 +90,17 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = adessite }
+		OR = {
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = ukrainer
+		}
+		capital_scope = {
+			NOT = {
+				region = custom_romania_region
+			}
+		}
 		any_demesne_province = {
 			culture = adessite
 			is_capital = yes
@@ -258,7 +267,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = low_bhutanese }
+		OR = {
+			culture = assamese
+			culture = bengali
+		}
 		any_demesne_province = {
 			culture = low_bhutanese
 			is_capital = yes
@@ -418,7 +430,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = lietuvininkai }
+		OR = {
+			culture = prussian
+			culture = lithuanian
+		}
 		any_demesne_province = {
 			culture = lietuvininkai
 			is_capital = yes
@@ -574,7 +589,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = schleswigvolk }
+		OR = {
+			culture = prussian
+			culture = danish
+		}
 		any_demesne_province = {
 			culture = schleswigvolk
 			is_capital = yes
@@ -735,7 +753,17 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = sazzac }
+		OR = {
+			culture = wallachian
+			culture = transylvanian
+			culture = moldavian
+			culture = cossack
+		}
+		capital_scope = {
+			NOT = {
+				region = custom_romania_region
+			}
+		}
 		any_demesne_province = {
 			culture = sazzac
 			is_capital = yes
@@ -1019,7 +1047,23 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = angrezi }
+			OR = {
+				culture_group = northern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = central_indo_aryan_group
+				culture_group = southern_dravidian_group
+				culture_group = southern_indo_aryan_group
+				culture_group = west_indo_aryan_group
+				culture_group = eastern_dravidian_group
+				culture = ulsterite
+				culture = westlander
+				culture = eastlander
+				culture = northlander
+				culture = old_norman
+				culture = new_english
+			}
 		any_demesne_province = {
 			culture = angrezi
 			is_capital = yes
@@ -1193,7 +1237,16 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = wendish }
+		OR = {
+			culture = polish
+			culture = mazovian
+			culture = greater_polish
+			culture = czech
+			culture = moravian
+			culture = prussian
+			culture = brandenburger
+			culture = saxon
+		}
 		any_demesne_province = {
 			culture = wendish
 			is_capital = yes
@@ -1353,7 +1406,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = atlantian }
+		OR = {
+			culture_group = byzantine
+			culture = doggerlander
+		}
 		any_demesne_province = {
 			culture = atlantian
 			is_capital = yes
@@ -1511,7 +1567,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = frencig }
+		OR = {
+			culture_group = brittannic
+			culture_group = francophone
+		}
 		any_demesne_province = {
 			culture = frencig
 			is_capital = yes
@@ -1687,7 +1746,18 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = pondicherien }
+			OR = {
+				culture_group = francophone
+				culture_group = northern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = central_indo_aryan_group
+				culture_group = west_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = northern_indo_aryan_group
+			}
 		any_demesne_province = {
 			culture = pondicherien
 			is_capital = yes
@@ -1845,7 +1915,7 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = gottonsk }
+		culture = gothic 
 		any_demesne_province = {
 			culture = gottonsk
 			is_capital = yes
@@ -2006,7 +2076,13 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = babylonian }
+		OR = {
+		culture = assyrian
+		culture = aramaic
+		culture = siryon
+		culture = babylonian
+		culture = iraqi
+		}
 		any_demesne_province = {
 			culture = babylonian
 			is_capital = yes
@@ -2077,7 +2153,6 @@ character_event = {
 		culture = babylonian
 	}
 }
-
 #Rumi
 character_event = {
 	id = MPU.15
@@ -2174,7 +2249,14 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = rumca }
+			OR = {
+				culture_group = byzantine
+				culture = turkish
+				culture = elbistanli
+				culture = egeli
+				culture = kapadokyali
+				culture = karadenizci
+			}
 		any_demesne_province = {
 			culture = rumca
 			is_capital = yes
@@ -2342,7 +2424,15 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = anglish }
+		OR = {
+			culture = kuhjungs
+			culture = frisian
+			culture = low_german
+			culture = saxon
+			culture = british
+			culture = southener
+			culture = scouse
+		}
 		any_demesne_province = {
 			culture = anglish
 			is_capital = yes
@@ -2498,7 +2588,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = prinsesser }
+		OR = {
+			culture = oglallan
+			culture = faroyingar
+		}
 		any_demesne_province = {
 			culture = prinsesser
 			is_capital = yes
@@ -2671,7 +2764,17 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = andalusian_arabic }
+		OR = {
+			culture = moroccan
+			culture = algerian
+			culture = tunisian
+			culture = andalusian
+			culture = castilian
+			culture = aragonese
+			culture = extrameduran
+			culture = catalan
+			culture = portuguese
+		}
 		any_demesne_province = {
 			culture = andalusian_arabic
 			is_capital = yes
@@ -2843,7 +2946,16 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = langobardische }
+		OR = {
+			culture = bavarian
+			culture = swabian
+			culture = rheinlander
+			culture = lombard
+			culture = piemontese
+			culture = venetian
+			culture = lazian
+			culture = tuscanian
+		}
 		any_demesne_province = {
 			culture = langobardische
 			is_capital = yes
@@ -2924,7 +3036,10 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		culture = lithuanian
+		OR = {
+			culture = lithuanian
+			culture = samogitian
+		}
 		any_demesne_province = {
 			OR = {
 				culture = bielaruskaja
@@ -3003,7 +3118,11 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = lytsvin }
+		OR = {
+			culture = lithuanian
+			culture = samogitian
+			culture = bielaruskaja
+		}
 		any_demesne_province = {
 			culture = lytsvin
 			is_capital = yes
@@ -3077,8 +3196,8 @@ character_event = {
 
 #Poseidonian
 character_event = {
-	id = MPU.21
-	desc = "EVTDESCMPU.21"
+	id = MPU.23
+	desc = "EVTDESCMPU.23"
 	picture = GFX_evt_emissary
 	
 	only_playable = yes
@@ -3148,7 +3267,7 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTAMPU.21
+		name = EVTOPTAMPU.23
 		random_demesne_province = {
 			limit = {
 				OR = {
@@ -3165,14 +3284,17 @@ character_event = {
 }
 
 character_event = {
-	id = MPU.211
-	desc = "EVTDESCMPU.211"
+	id = MPU.231
+	desc = "EVTDESCMPU.231"
 	picture = GFX_evt_stone_church
 	
 	only_playable = yes
 	
 	trigger = {
-		NOT = { religion = poseidonian }
+			OR = {
+				religion = hellenic_pagan_reformed
+				religion = hellenic_pagan
+			}
 		any_demesne_province = {
 			religion = poseidonian
 			is_capital = yes
@@ -3239,14 +3361,14 @@ character_event = {
 
 #Poseidonian
 character_event = {
-	id = MPU.2121
-	desc = "EVTDESCMPU.2121"
+	id = MPU.232
+	desc = "EVTDESCMPU.232"
 	picture = GFX_evt_throne_room
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTAMPU.2121"
+		name = "EVTOPTAMPU.232"
 		religion = poseidonian
 	}
 }
@@ -3348,7 +3470,11 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = { culture = deluzi }
+			OR = {
+				culture_group = chinese_group
+				culture_group = south_chinese_group
+				culture = durzi
+			}
 		any_demesne_province = {
 			culture = deluzi
 			is_capital = yes

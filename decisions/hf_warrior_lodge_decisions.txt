@@ -29,6 +29,7 @@ targeted_decisions = {
 						has_bloodline_flag = duelist_bloodline
 					}
 	        	}
+				religion = xianxia
 				trait = emul_gilgamesh
 	        }
 	        has_regent = no
@@ -44,6 +45,7 @@ targeted_decisions = {
 	                OR = {
 	                    trait = brave
 	                    religion_group = pagan_group
+						religion = xianxia
 	                    is_nomadic = yes
 	                    religion_group = buddhist_group
 	                    gender_equality_trigger = yes
@@ -63,6 +65,20 @@ targeted_decisions = {
 		    		FROM = { is_adult = no }
 		    	}
 	    	}
+			OR = {
+				AND = {
+					religion = xianxia
+					FROM = { 
+						religion = xianxia
+					}
+				}
+				AND = {
+					NOT = { religion = xianxia }
+					FROM = { 
+						NOT = { religion = xianxia }
+					}
+				}
+			}
 
 	        prisoner = no
 	        NOT = { character = FROM }
@@ -171,7 +187,7 @@ targeted_decisions = {
 #	                                    religion_group = pagan_group
 #	                                    is_nomadic = yes
 #	                                    religion_group = buddhist_group
-#	                                    religion = bogomilist
+#	                                    religion = thelemic
 #	                                }
 #	                                FROM = {
 #	                                    OR = {
@@ -179,7 +195,7 @@ targeted_decisions = {
 #	                                        religion_group = pagan_group
 #	                                        is_nomadic = yes
 #	                                        religion_group = buddhist_group
-#	                                        religion = bogomilist
+#	                                        religion = thelemic
 #	                                    }
 #	                                }
 #	                            }
@@ -344,7 +360,7 @@ targeted_decisions = {
 	                    religion_group = pagan_group
 	                    is_nomadic = yes
 	                    religion_group = buddhist_group
-	                    religion = bogomilist
+	                    religion = thelemic
 	                    gender_equality_trigger = yes
 	                }
 	            }
@@ -434,7 +450,7 @@ targeted_decisions = {
 #                                religion_group = pagan_group
 #                                is_nomadic = yes
 #                                religion_group = buddhist_group
-#                                religion = bogomilist
+#                                religion = thelemic
 #                            }
 #                            FROM = {
 #                                OR = {
@@ -442,7 +458,7 @@ targeted_decisions = {
 #                                    religion_group = pagan_group
 #                                    is_nomadic = yes
 #                                    religion_group = buddhist_group
-#                                    religion = bogomilist
+#                                    religion = thelemic
 #                                }
 #                            }
 #                        }
@@ -1338,6 +1354,7 @@ society_decisions = {
 			}
 			}
 			new_character = {
+				religion = ROOT
 				remove_trait = weak
 				remove_trait = slow
 				remove_trait = imbecile
@@ -1415,11 +1432,7 @@ society_decisions = {
 				}
 				join_prev_warrior_lodge_society_effect = yes
 				hidden_tooltip = {
-					random = { 
-						chance = 50  #Chance of the commander being spawned from another religion.
-						give_this_warrior_lodge_religion_effect = yes 
-						set_character_flag = ai_flag_refuse_conversion	#In which case don't allow liege to immediately demand conversion.
-					}
+					set_character_flag = ai_flag_refuse_conversion	#In which case don't allow liege to immediately demand conversion.
 					add_warrior_lodge_leader_trait_effect = yes
 					if = {
 						limit = {

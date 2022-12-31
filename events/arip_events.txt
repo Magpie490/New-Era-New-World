@@ -1,0 +1,138 @@
+namespace = ARIP
+character_event = {
+	id = ARIP.1
+	picture = GFX_evt_lovers
+	desc = EVTDESC_ARIP_1
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTA_ARIP1
+		hidden_tooltip = { character_event = { id = ARIP.2 } }
+	}
+	option = {
+		name = EVTOPTB_ARIP1
+		trigger = {
+			OR = {
+				diplomacy = 15
+				AND = {
+					diplomacy = 10
+					trait = gregarious
+				}
+				AND = {
+					diplomacy = 10
+					trait = poet
+				}
+			}
+		}
+		hidden_tooltip = { character_event = { id = ARIP.3 } }
+		clr_character_flag = walked_with_death
+		clr_character_flag = invited_death
+		clr_character_flag = gave_death_money
+	}
+}
+character_event = {
+	id = ARIP.2
+	picture = GFX_evt_bloody_tools
+	desc = EVTDESC_ARIP_2
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_ARIP2
+		random_list = {
+			#You die
+			60 = {	
+				death = { death_reason = death_murder_unknown }
+
+				hidden_tooltip = {
+					event_target:death = {
+						leave_court_effect = yes
+		  				death = { death_reason = death_missing }
+					}
+				}
+			}
+			#You survive
+			40 = {
+				modifier = {
+					factor = 0
+					trait = wounded
+					trait = mangled
+					trait = one_eyed
+					trait = one_handed
+				}
+				custom_tooltip = { text = EVTOPTB_RIP_30224_TOOLTIP_SURVIVE }
+				set_character_flag = chess_30225
+				hidden_tooltip = { FROM = { character_event = { id = RIP.30225 } } }
+			}
+		}
+
+		clr_character_flag = walked_with_death
+		clr_character_flag = invited_death
+		clr_character_flag = gave_death_money
+	}
+}
+character_event = {
+	id = ARIP.3
+	picture = GFX_evt_lovers
+	desc = EVTDESC_ARIP_3
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_ARIP3
+		hidden_tooltip = { character_event = { id = ARIP.4 } }
+	}
+}
+character_event = {
+	id = ARIP.4
+	picture = GFX_evt_lovers
+	desc = EVTDESC_ARIP_4
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:death = {
+			leave_court_effect = yes
+		  	death = { death_reason = death_missing }
+		}
+	}
+	option = {
+		name = EVTOPTA_ARIP4
+		hidden_tooltip = { character_event = { id = ARIP.5 days = 280 random = 5 } }
+	}
+}
+character_event = {
+	id = ARIP.5
+	picture = GFX_evt_birth
+	desc = EVTDESC_ARIP_5
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_ARIP5
+			if = {
+				limit = {
+					is_female = yes
+				}
+				create_character = {
+					age = 0
+					trait = bastard
+					trait = child_of_death
+				}
+				new_character = {
+					set_mother = ROOT
+					create_bloodline = {
+						type = child_of_death_bloodline
+					}
+				}
+			}
+			else = {
+				create_character = {
+					age = 0
+					trait = bastard
+					trait = child_of_death
+				}
+				new_character = {
+					set_father = ROOT
+					create_bloodline = {
+						type = child_of_death_bloodline
+					}
+				}
+			}
+	}
+}

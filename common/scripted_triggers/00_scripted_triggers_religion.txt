@@ -152,14 +152,14 @@ true_religion_armenianapostolic_trigger = {
 true_religion_marblists_trigger = {
 	true_religion = marblists
 }
-true_religion_neo_donatists_trigger = {
-	true_religion = neo_donatists
+true_religion_neodonatists_trigger = {
+	true_religion = neodonatists
 }
-true_religion_eastern_protestant_trigger = {
-	true_religion = eastern_protestant
+true_religion_easternprotestant_trigger = {
+	true_religion = easternprotestant
 }
-true_religion_old_believer_trigger = {
-	true_religion = old_believer
+true_religion_oldbeliever_trigger = {
+	true_religion = oldbeliever
 }
 true_religion_bezpopotvsy_trigger = {
 	true_religion = bezpopotvsy
@@ -186,8 +186,8 @@ true_religion_anglican_trigger = {
 	true_religion = anglican
 }
 
-true_religion_high_church_trigger = {
-	true_religion = high_church
+true_religion_highchurch_trigger = {
+	true_religion = highchurch
 }
 
 true_religion_sedevacantist_trigger = {
@@ -228,6 +228,9 @@ true_religion_neovedantic_trigger = {
 }
 true_religion_old_hindu_trigger = {
 	true_religion = old_hindu
+}
+true_religion_agamatirta_trigger = {
+	true_religion = agamatirta
 }
 true_religion_mikraist_trigger = {
 	true_religion = mikraist
@@ -768,6 +771,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_christendom
 			trait = novelist_son_of_aslan
+			trait = novelist_reformed_son_of_aslan
 			trait = vaishna_ganda_hindu
 			trait = muwa_christian
 			trait = jewish_yona
@@ -775,6 +779,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -789,6 +794,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -799,6 +805,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
 			trait = blorg_tolerations
+			trait = heroic_tales
 		}
 	}
 	trigger_else_if = {
@@ -833,8 +840,11 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_old_world_cultist
 			trait = novelist_elf_friend
+			trait = novelist_reformed_elf_friend
 			trait = old_lore
 			trait = blorg_tolerations
+			trait = trained_republican_law
+			trait = trained_ccp_law
 		}
 	}
 	trigger_else_if = {
@@ -845,6 +855,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = bhagavanist_akbar
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 			trait = osvicenism_tolerations
 		}
@@ -854,6 +865,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
+			trait = novelist_reformed_ingsoc
 			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
@@ -882,6 +894,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_alien
 			trait = novelist_star_child
+			trait = novelist_reformed_star_child
 		}
 	}
 	trigger_else_if = {
@@ -910,6 +923,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_christendom
 			trait = novelist_son_of_aslan
+			trait = novelist_reformed_son_of_aslan
 			trait = vaishna_ganda_hindu
 			trait = muwa_christian
 			trait = jewish_yona
@@ -917,6 +931,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -931,6 +946,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -941,6 +957,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
 			trait = blorg_tolerations
+			trait = heroic_tales
 		}
 	}
 	trigger_else_if = {
@@ -968,6 +985,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_indian
 			trait = blorg_tolerations
+			trait = pancasila_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -975,8 +993,11 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_old_world_cultist
 			trait = novelist_elf_friend
+			trait = novelist_reformed_elf_friend
 			trait = old_lore
 			trait = blorg_tolerations
+			trait = trained_republican_law
+			trait = trained_ccp_law
 		}
 	}
 	trigger_else_if = {
@@ -989,6 +1010,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = neo_zorvanite_tolerations
 			trait = blorg_tolerations
 			trait = osvicenism_tolerations
+			trait = pancasila_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -996,6 +1018,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
+			trait = novelist_reformed_ingsoc
 			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
@@ -1024,6 +1047,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_alien
 			trait = novelist_star_child
+			trait = novelist_reformed_star_child
 		}
 	}
 	trigger_else_if = {
@@ -1052,6 +1076,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_christendom
 			trait = novelist_son_of_aslan
+			trait = novelist_reformed_son_of_aslan
 			trait = vaishna_ganda_hindu
 			trait = muwa_christian
 			trait = jewish_yona
@@ -1059,6 +1084,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -1073,6 +1099,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
+			trait = pancasila_tolerations
 			trait = blorg_tolerations
 		}
 	}
@@ -1083,6 +1110,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
 			trait = blorg_tolerations
+			trait = heroic_tales
 		}
 	}
 	trigger_else_if = {
@@ -1110,6 +1138,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_indian
 			trait = blorg_tolerations
+			trait = pancasila_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1117,8 +1146,11 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_old_world_cultist
 			trait = novelist_elf_friend
+			trait = novelist_reformed_elf_friend
 			trait = old_lore
 			trait = blorg_tolerations
+			trait = trained_republican_law
+			trait = trained_ccp_law
 		}
 	}
 	trigger_else_if = {
@@ -1131,6 +1163,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = neo_zorvanite_tolerations
 			trait = blorg_tolerations
 			trait = osvicenism_tolerations
+			trait = pancasila_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1138,6 +1171,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
+			trait = novelist_reformed_ingsoc
 			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
@@ -1166,6 +1200,7 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_alien
 			trait = novelist_star_child
+			trait = novelist_reformed_star_child
 		}
 	}
 	trigger_else_if = {
@@ -1190,6 +1225,62 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 
 has_prevs_secret_religion_truly_trigger = {
 	secret_religion = { target = PREV target_type = true }
+}
+
+
+# Christian Branches
+is_catholic_branch = {
+	OR = {
+		religion = catholic
+		religion = hussite
+		religion = fraticelli
+		religion = cadaverist
+	}
+}
+
+is_catholic_true_branch = {
+	OR = {
+		true_religion = catholic
+		true_religion = hussite
+		true_religion = fraticelli
+		true_religion = cadaverist
+	}
+}
+
+is_catholic_secret_branch = {
+	OR = {
+		secret_religion = catholic
+		secret_religion = hussite
+		secret_religion = fraticelli
+		secret_religion = cadaverist
+	}
+}
+
+is_orthodox_branch = {
+	OR = {
+		religion = orthodox
+		religion = easternprotestant
+		religion = neodonatists
+		religion = marblists
+	}
+}
+
+is_orthodox_true_branch = {
+	OR = {
+		true_religion = orthodox
+		true_religion = easternprotestant
+		true_religion = neodonatists
+		true_religion = marblists
+	}
+}
+
+is_orthodox_secret_branch = {
+	OR = {
+		secret_religion = orthodox
+		secret_religion = easternprotestant
+		secret_religion = neodonatists
+		secret_religion = marblists
+	}
 }
 
 has_roots_secret_religion_truly_trigger = {
@@ -1351,6 +1442,50 @@ religion_openly_wuist_or_reformed_trigger = {
 		}
 	}
 }
+religion_openly_thuyhoa_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_thuyhoa_pagan_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = thuyhoa_pagan
+				religion = thuyhoa_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_kaharingan_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_kaharingan_pagan_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = kaharingan_pagan
+				religion = kaharingan_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_bungan_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_bungan_pagan_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = bungan_pagan
+				religion = bungan_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_satsana_pi_pagan_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_satsana_pi_pagan_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = satsana_pi_pagan
+				religion = satsana_pi_pagan_reformed
+			}
+		}
+	}
+}
 religion_openly_hellenic_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_hellenic_or_reformed_tooltip
@@ -1360,6 +1495,69 @@ religion_openly_hellenic_or_reformed_trigger = {
 				religion = hellenic_pagan_reformed
 			}
 		}
+	}
+}
+
+is_sunni_branch = {
+	OR = {
+		religion = sunni
+		religion = koranist
+		religion = malikite
+		religion = wahhabi
+	}
+}
+
+is_sunni_true_branch = {
+	OR = {
+		true_religion = sunni
+		true_religion = koranist
+		true_religion = malikite
+		true_religion = wahhabi
+	}
+}
+
+is_sunni_secret_branch = {
+	OR = {
+		secret_religion = sunni
+		secret_religion = koranist
+		secret_religion = malikite
+		secret_religion = wahhabi
+	}
+}
+
+is_ibadi_branch = {
+	religion = ibadi
+}
+
+is_ibadi_true_branch = {
+	true_religion = ibadi
+}
+
+is_ibadi_secret_branch = {
+	secret_religion = ibadi
+}
+
+is_shiite_branch = {
+	OR = {
+		religion = shiite
+		religion = zaydi
+		religion = ismaili
+	}
+}
+
+is_shiite_true_branch = {
+	OR = {
+		true_religion = shiite
+		true_religion = zaydi
+		true_religion = ismaili
+	}
+}
+
+is_shiite_secret_branch = {
+	OR = {
+		secret_religion = shiite
+		secret_religion = zaydi
+		secret_religion = ismaili
 	}
 }
 
@@ -1391,7 +1589,7 @@ has_unsafe_religion = {
 			limit = {
 				OR = {
 					religion_group = buddhist_group
-					religion_group  = indian_group
+					religion_group = indian_group
 				}
 			}
 			NOT = { has_dlc = "Rajas of India" }
@@ -1463,5 +1661,48 @@ dlc_religion_check_trigger_without_nomad_check = {
 			religion_group = zoroastrian_group
 		}
 		has_dlc = "The Old Gods"
+	}
+}
+
+religion_has_excommunication = {
+	OR = {
+		religion = catholic
+		religion = fraticelli
+		religion = orthodox
+		religion = chaldean
+		religion = neodonatists
+		religion = marblists
+		religion = armenianapostolic
+		religion = xinjiao
+		religion = sevillian
+		religion = cadaverist
+		religion = apostolic
+		religion = anglican
+		religion = koptic
+	}
+}
+
+religion_has_incest = {
+	has_religion_feature = religion_holy_family
+}
+
+is_antipope = {
+	OR = {
+		has_claim = k_papacy
+		has_claim = d_fraticelli
+		has_claim = k_koptic
+		has_claim = d_wahhabi
+		has_claim = d_sunni
+	}
+}
+
+is_cardinal = {
+	OR = {
+		has_minor_title = title_cardinal
+		has_minor_title = title_fraticelli_cardinal
+		has_minor_title = title_sevillian_cardinal
+		has_minor_title = title_gelugpa_cardinal
+		has_minor_title = title_armenianapostolic_cardinal
+		has_minor_title = title_jugoslavist_cardinal
 	}
 }

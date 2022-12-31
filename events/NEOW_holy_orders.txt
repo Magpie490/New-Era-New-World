@@ -136,13 +136,13 @@ narrative_event = {#The Formation of the Strugglers
 	option = {
 		name = "EVTOPTB_STR_creation"
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { religion_group = indian_group }
 		}
 	}
 	option = {
 		name = "EVTOPTC_STR_creation"
 		trigger = {
-			religion_group = pagan_group
+			religion_group = indian_group
 			NOT = { religion = maunaxite_reformed }
 		}
 	}
@@ -813,7 +813,7 @@ character_event = {
 		shiite = { save_persistent_event_target = { name = one_holy_order scope = d_shahrbani } }
 		charismatic = { save_persistent_event_target = { name = one_holy_order scope = d_kadena } }
 		bushism = { save_persistent_event_target = { name = one_holy_order scope = d_liberian_order } }
-		high_church = { save_persistent_event_target = { name = one_holy_order scope = d_lawrence_order } }
+		highchurch = { save_persistent_event_target = { name = one_holy_order scope = d_lawrence_order } }
 		nousthreskeia = { save_persistent_event_target = { name = one_holy_order scope = d_nousthreskeia_order } }
 		nousthreskeia_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_nousthreskeia_order } }
 		armenianapostolic = { save_persistent_event_target = { name = one_holy_order scope = d_knights_of_thaddeus } }

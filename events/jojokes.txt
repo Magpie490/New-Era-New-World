@@ -69,24 +69,17 @@ character_event = {#Private Event for DIO that sets him up to return in 100 year
 	
 	option = {#This isn't the end, Jojo! I'll hunt down your bloodline forever!
 		name = "EVTOPTA_jojo.3"
-		#This character dies and in 100 years DIO will be created
 		death = { death_reason = death_accident_fall }
-		#add_trait = immortal
-		#add_trait = incapable
-		#_canarias = {#Meant to represent DIO being found off the African coast - as a matter of fact, he remains in the Canaries for 100 years
-		#	holder_scope = {
-		#		ROOT = {#I *think* this is how that's supposed to work
-		#			move_character = PREV
-		#		}
-		#	}
-		#}
-		333 = {
-			province_event = {
-				id = jojo.5	years = 100 #change to 100 years for final release
+	}
+	immediate = {
+		k_papacy = {
+			holder_scope = {
+				narrative_event = {
+					id = jojo.5	years = 100 #change to 100 years for final release
 				}
+			}
 		}
 	}
-	
 }
 
 narrative_event = {#You have won and gain the Joestar Bloodline
@@ -108,21 +101,17 @@ narrative_event = {#You have won and gain the Joestar Bloodline
 		}
 	}
 }
-province_event = {#DIO reawakens
+narrative_event = {#DIO reawakens
 	id = jojo.5
 	title = "EVTNAMEJOJO5"
 	desc = "EVTDESCJOJO5"
 	picture = GFX_evt_battle_scene
-	border = GFX_event_narrative_frame_diplomacy
 	
-	#show_ROOT = yes
-	hide_new = yes
 	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	immediate = {#I live again! Now to deal with those pesky Joestars...
-		name = "EVTOPTA_jojo.5"
 		activate_title = { title = d_dios_world status = yes }		
 		create_character = {
 			random_traits = no
@@ -134,10 +123,6 @@ province_event = {#DIO reawakens
 			culture = british
 			female = no
 			age = 121
-			effect = {
-			set_character_flag = diversity
-			set_graphical_culture = british
-		    }
 			attributes = {
 				diplomacy = 16
 				martial = 22
@@ -165,96 +150,10 @@ province_event = {#DIO reawakens
 			}
 			wealth = 500		
 			set_character_flag = is_dio
-			save_event_target_as = DIO_sama
-			random_list = {
-				20 = {
-					change_martial = 3
-				}
-				20 = {
-					change_martial = 5
-				}
-				20 = {
-					change_martial = 6
-				}
-				20 = {
-					change_martial = 7
-				}
-				20 = {
-					change_martial = 8
-				}
-			}
-			random_list = {
-				20 = {
-					change_diplomacy = 3
-				}
-				20 = {
-					change_diplomacy = 5
-				}
-				20 = {
-					change_diplomacy = 6
-				}
-				20 = {
-					change_diplomacy = 7
-				}
-				20 = {
-					change_diplomacy = 8
-				}
-			}
-			random_list = {
-				20 = {
-					change_stewardship = 3
-				}
-				20 = {
-					change_stewardship = 5
-				}
-				20 = {
-					change_stewardship = 6
-				}
-				20 = {
-					change_stewardship = 7
-				}
-				20 = {
-					change_stewardship = 8
-				}
-			}
-			random_list = {
-				20 = {
-					change_intrigue = 3
-				}
-				20 = {
-					change_intrigue = 5
-				}
-				20 = {
-					change_intrigue = 6
-				}
-				20 = {
-					change_intrigue = 7
-				}
-				20 = {
-					change_intrigue = 8
-				}
-			}
-			random_list = {
-				20 = {
-					change_learning= 3
-				}
-				20 = {
-					change_learning = 5
-				}
-				20 = {
-					change_learning = 6
-				}
-				20 = {
-					change_learning = 7
-				}
-				20 = {
-					change_learning = 8
-				}
-			}			
+			set_character_flag = diversity
+			save_event_target_as = DIO_sama		
 		}
-		
 		set_global_flag = stardust_crusaders
-		
 	}
 	
 }
@@ -319,7 +218,7 @@ narrative_event = {#DIO creates a random assassin
 			#random_traits = no
 			name = "Gray"
 			dynasty = 2081202
-			religion = old_thelemic
+			religion = thelemic
 			culture = british
 			female = no
 			age = 65
@@ -335,6 +234,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=cruel
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {
@@ -352,6 +255,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.7
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {
@@ -373,6 +280,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=strong
 			trait=lustful
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {
@@ -390,6 +301,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.6
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {
@@ -409,6 +324,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=fair
 			trait=proud
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#J Geil
@@ -427,6 +346,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=cruel
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#THE ENTIRE EQUINE
@@ -448,14 +371,18 @@ narrative_event = {#DIO creates a random assassin
 			trait=seducer
 			trait=content
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
 			#random_traits = no
 			name = "Nena"
 			dynasty = random
-			religion = gujurati
-			culture = parabrahmanist
+			culture = gujurati
+			religion = parabrahmanist
 			female = yes
 			age = 40
 			attributes = {
@@ -465,6 +392,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.4
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -472,7 +403,7 @@ narrative_event = {#DIO creates a random assassin
 			name = "ZZ"
 			dynasty = 2081209
 			religion = ironist
-			culture = punjabi
+			culture = panjabi
 			female = no
 			age = 34
 			attributes = {
@@ -483,6 +414,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.7
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -502,6 +437,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=cruel
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -520,6 +459,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -537,8 +480,12 @@ narrative_event = {#DIO creates a random assassin
 			health = 10
 			fertility = 0
 			trait=intricate_webweaver
-			trait="fat"
+			trait="is_fat"
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -557,6 +504,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -575,6 +526,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.5
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -592,6 +547,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.6
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -611,6 +570,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=blinded
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -629,6 +592,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -647,6 +614,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0
 			trait=tough_soldier
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -665,6 +636,10 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.6
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -684,6 +659,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=impaler
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 	   }
 		10={
 		create_character = {#
@@ -704,6 +683,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=deceitful
 			trait=gamer
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 		}
 		10 = {
 		create_character = {#
@@ -723,6 +706,10 @@ narrative_event = {#DIO creates a random assassin
 			trait=intricate_webweaver
 			trait=gamer
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 		}
 		10 = {
 		create_character = {#
@@ -741,29 +728,33 @@ narrative_event = {#DIO creates a random assassin
 			fertility = 0.6
 			trait=intricate_webweaver
 		}
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
 		}
 		10={
-        create_character = {#	
-		    #random_traits = no 
-			name = "Vanilla"	
-			dynasty = 2081223	
-			religion = sunni
-			culture = misri
-			female = no
-			age = 29
-			attributes = {
-			    martial = 22
-			    intrigue = 8
-			}
-			health = 7
-			fertility = 0.6
-			trait=intricate_webweaver	
-            }
-		}	   
-		new_character = {
-			set_character_flag = is_DIO_assassin
-			save_event_target_as = dios_assassin
-		}	
+			create_character = {#	
+				#random_traits = no 
+				name = "Vanilla"	
+				dynasty = 2081223	
+				religion = sunni
+				culture = misri
+				female = no
+				age = 29
+				attributes = {
+					martial = 22
+					intrigue = 8
+				}
+				health = 7
+				fertility = 0.6
+				trait=intricate_webweaver	
+            } 
+			new_character = {
+				set_character_flag = is_DIO_assassin
+				save_event_target_as = dios_assassin
+			}	
+		}	  
     }
     }
 }

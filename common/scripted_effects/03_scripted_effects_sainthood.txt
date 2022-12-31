@@ -58,7 +58,7 @@ deciding_upon_saint_effect = {
                         religion = marblists
                     }
 					event_target:saint_person = {
-                        religion = old_believer
+                        religion = oldbeliever
                     }
                     event_target:saint_person = {
                         religion = sevillian
@@ -74,6 +74,30 @@ deciding_upon_saint_effect = {
                     }
                     event_target:saint_person = {
 						OR = {
+							has_religion_feature = religion_feature_sarna
+							has_religion_feature = religion_feature_wuist
+							religion = finnish_pagan
+							religion = finnish_pagan_reformed
+							religion = baltic_pagan
+							religion = baltic_pagan_reformed
+							religion = tengri_pagan
+							religion = tengri_pagan_reformed
+							religion = maoist
+							religion = sufi
+							religion = yazidi
+							religion = ovlatii
+							religion = voodun
+							religion = xinjiao
+							religion = red_cult
+							religion = zoroastrian
+							religion = neo_zorvanite
+							religion = hmongism
+							religion = shinto
+							religion = bushinto
+							religion = buddhoshinto
+							religion = ainushinto
+							religion = shindo
+							religion = shinko
 							has_religion_feature = religion_beatification
 							has_religion_feature = religion_feature_novelist
 						}
@@ -85,6 +109,30 @@ deciding_upon_saint_effect = {
                     }
                     event_target:saint_person = {
 						OR = {
+							has_religion_feature = religion_feature_sarna
+							has_religion_feature = religion_feature_wuist
+							religion = finnish_pagan
+							religion = finnish_pagan_reformed
+							religion = baltic_pagan
+							religion = baltic_pagan_reformed
+							religion = tengri_pagan
+							religion = tengri_pagan_reformed
+							religion = maoist
+							religion = sufi
+							religion = yazidi
+							religion = ovlatii
+							religion = voodun
+							religion = xinjiao
+							religion = red_cult
+							religion = zoroastrian
+							religion = neo_zorvanite
+							religion = hmongism
+							religion = shinto
+							religion = bushinto
+							religion = buddhoshinto
+							religion = ainushinto
+							religion = shindo
+							religion = shinko
 							has_religion_feature = religion_beatification
 							has_religion_feature = religion_feature_novelist
 						}
@@ -114,7 +162,7 @@ deciding_upon_saint_effect = {
                     religion = orthodox
                 }
 				event_target:saint_person = {
-                    religion = old_believer
+                    religion = oldbeliever
                 }
                 event_target:saint_person = {
                     religion = jugoslavist
@@ -322,9 +370,9 @@ deciding_upon_saint_effect = {
                     }
                 }
 				AND = {
-                    religion = old_believer
+                    religion = oldbeliever
                     NOT = {
-                        has_global_flag = old_believer_saint
+                        has_global_flag = oldbeliever_saint
                     }
                 }
                 AND = {
@@ -363,7 +411,7 @@ deciding_upon_saint_effect = {
             fraticelli = { set_global_flag = fraticelli_saint }
             orthodox = { set_global_flag = orthodox_saint }
             marblists = { set_global_flag = marblist_saint }
-            old_believer = { set_global_flag = old_believer_saint }
+            oldbeliever = { set_global_flag = oldbeliever_saint }
             sevillian = { set_global_flag = sevillian_saint }
             transatlantic = { set_global_flag = transatlantic_saint }
             jugoslavist = { set_global_flag = jugoslavist_saint }
@@ -1316,6 +1364,8 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_hellenic
 				religion = inuit_pagan
 				religion = inuit_pagan_reformed
+				religion = taoist
+				religion = white_lotus
 			}
             has_any_sympathy_trait_trigger = yes
         }
@@ -1328,6 +1378,8 @@ check_if_ancestor_worship_worthy_effect = {
 				has_religion_feature = religion_feature_hellenic
 				religion = inuit_pagan
 				religion = inuit_pagan_reformed
+				religion = taoist
+				religion = white_lotus
 			}      
 			NOT = {
                 has_any_sympathy_trait_trigger = yes

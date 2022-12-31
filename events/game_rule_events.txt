@@ -172,12 +172,12 @@ character_event = {
 				factor = 3
 				is_nomadic = yes
 			}
-			modifier = {
-				factor = 10
-				liege = {
-					has_landed_title = e_mongol_empire
-				}
-			}
+			#modifier = {
+			#	factor = 10
+			#	liege = {
+			#		has_landed_title = e_mongol_empire
+			#	}
+			#}
 			modifier = {
 				factor = 4
 				trait = content
@@ -7838,22 +7838,26 @@ character_event = { # Generate 'Fake Family' for characters without any
 		if = { # Caste fix
 			limit = {
 				OR = {
-					religion = old_hindu
-					religion = parabrahmanist
-					religion = jain
 					religion = maunaxite_reformed
 					religion = maunaxite
+					religion = parabrahmanist
+					religion = neovedantic
+					religion = old_hindu
+					religion = agamatirta
+					religion = jain
 				}
 				trait = kshatriya
 			}
 			any_child = {
 				limit = {
 					OR = {
-						religion = old_hindu
-						religion = parabrahmanist
-						religion = jain
 						religion = maunaxite_reformed
 						religion = maunaxite
+						religion = parabrahmanist
+						religion = neovedantic
+						religion = old_hindu
+						religion = agamatirta
+						religion = jain
 					}
 					NOT = { trait = kshatriya }
 				}
@@ -7995,6 +7999,59 @@ character_event = {
 			calvinist = {
 				set_uses_decadence = no
 			}
+			jugoslavist = {
+				set_uses_decadence = no
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = {
+						name = decadence_rule
+						value = only_jugoslavists
+					}
+					has_game_rule = {
+						name = decadence_rule
+						value = off
+					}
+				}
+			}
+			calvinist = {
+				set_uses_decadence = no
+			}
+			sunni = {
+				set_uses_decadence = no
+			}
+			ovlatii = {
+				set_uses_decadence = no
+			}
+			malikite = {
+				set_uses_decadence = no
+			}
+			sufi = {
+				set_uses_decadence = no
+			}
+			ibadi = {
+				set_uses_decadence = no
+			}
+			shiite = {
+				set_uses_decadence = no
+			}
+			ismaili = {
+				set_uses_decadence = no
+			}
+			ahmadiyya = {
+				set_uses_decadence = no
+			}
+			mesopotamian = {
+				set_uses_decadence = no
+			}
+			islamity = {
+				set_uses_decadence = no
+			}
+			muwahidunna = {
+				set_uses_decadence = no
+			}
 		}
 		if = {
 			limit = {
@@ -8040,6 +8097,84 @@ character_event = {
 				set_uses_decadence = no
 			}
 			muwahidunna = {
+				set_uses_decadence = no
+			}
+			jugoslavist = {
+				set_uses_decadence = no
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = {
+						name = decadence_rule
+						value = only_jugoslavists_calvinists
+					}
+					has_game_rule = {
+						name = decadence_rule
+						value = off
+					}
+				}
+			}
+			sunni = {
+				set_uses_decadence = no
+			}
+			ovlatii = {
+				set_uses_decadence = no
+			}
+			malikite = {
+				set_uses_decadence = no
+			}
+			sufi = {
+				set_uses_decadence = no
+			}
+			ibadi = {
+				set_uses_decadence = no
+			}
+			shiite = {
+				set_uses_decadence = no
+			}
+			ismaili = {
+				set_uses_decadence = no
+			}
+			ahmadiyya = {
+				set_uses_decadence = no
+			}
+			mesopotamian = {
+				set_uses_decadence = no
+			}
+			islamity = {
+				set_uses_decadence = no
+			}
+			muwahidunna = {
+				set_uses_decadence = no
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = {
+						name = decadence_rule
+						value = only_muslims_calvinists
+					}
+					has_game_rule = {
+						name = decadence_rule
+						value = off
+					}
+				}
+			}
+			jugoslavist = {
+				set_uses_decadence = no
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					name = decadence_rule
+					value = only_jugoslavists_muslims
+				}
+			}
+			calvinist = {
 				set_uses_decadence = no
 			}
 		}
