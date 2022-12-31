@@ -188,13 +188,7 @@ uses_agrarian_feudal = {
 }
 uses_theocratic_feudal = {
 	OR={
-		AND = {
-			OR = {
-				culture_group = tibetan_group
-				culture = nepali
-			}
-			religion_group = buddhist_group
-		}
+		religion = insular
 		religion = celtic_pagan
 		religion = celtic_pagan_reformed
 		religion = druze
@@ -205,45 +199,6 @@ uses_theocratic_feudal = {
 		religion = haymanot
 		religion = neodonatists
 		religion = neoncult
-		AND = {
-			primary_title = {
-				OR = {
-					title = k_athos		
-					title = d_athos
-				}				
-			}
-			OR = {
-				religion = orthodox
-				religion = marblists
-				any_owned_bloodline = {
-					has_bloodline_flag = athos_blood
-				}
-			}
-		}
-		AND = {
-			top_liege = {
-				primary_title = {
-					OR = {
-						title = k_athos
-						title = d_athos
-					}
-				}
-				OR = {
-					religion = orthodox
-					religion = marblists
-					any_owned_bloodline = {
-						has_bloodline_flag = athos_blood
-					}
-				}
-			}
-			OR = {
-				religion = orthodox
-				religion = marblists
-				any_owned_bloodline = {
-					has_bloodline_flag = athos_blood
-				}
-			}
-		}
 	}
 }
 uses_zodiacs = {
