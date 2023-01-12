@@ -428,6 +428,96 @@ e_mississippi = {
 				b_shipman_IL = {}
 			}
 		}
+		d_outer_chicagoland = {
+			color={ 202 101 167 }
+			color2={ 255 255 20 }
+
+			capital = 1053 #Rockford
+		
+			allow = {
+				OR = {
+					has_landed_title = c_chicago
+					has_landed_title = d_calumet
+				}
+			}
+
+			c_des_plaines = {
+				color={ 205 104 170 }
+				color2={ 255 255 20 }
+
+				b_kenosha_WI = {}
+				b_racine_WI = {}
+				b_waukegan_IL = {}
+				b_antioch_IL = {}
+				b_gurnee_IL = {}
+				b_bristol_WI = {}
+				b_wadsworth_IL = {}
+				b_somers_WI = {}
+			}
+			c_rockford = {
+				color={ 208 107 173 }
+				color2={ 255 255 20 }
+
+				b_rockford_IL = {}
+				b_belvidere_IL = {}
+				b_rockton_IL = {}
+				b_marengo_IL = {}
+				b_huntley_IL = {}
+				b_genoa_IL = {}
+				b_poplar_grove_IL = {}
+				b_capron_IL = {}
+			}
+			c_galena = {
+				color={ 45 215 55 }
+				color2={ 220 220 0 }
+
+				b_galena_IL = {}
+				b_freeport_WI = {}
+				b_schullsburg_WI = {}
+				b_benton_WI = {}
+				b_lena_IL = {}
+				b_savanna_IL = {}
+				b_polo_IL = {}
+				b_stockton_IL = {}
+			}
+		}
+		d_calumet = {
+			color={ 122 85 87 }
+			color2={ 220 220 0 }
+
+			capital = 170
+
+			culture = chicagoan
+
+			c_chicago = {
+				color={ 105 170 70 }
+				color2={ 220 220 0 }
+				northlander = "Vindgarðr"
+				dellsman = "Vindgarðr"
+				yooper = "Vindgarðr"
+				holy_site = atomicist
+				holy_site = rust_cultist
+				holy_site = rust_cultist_reformed
+				holy_site = pagan
+				holy_site = celticist
+				holy_site = norse_pagan
+				holy_site = norse_pagan_reformed
+				holy_site = catholic
+				holy_site = consumerist
+
+				b_chicago_IL = {
+				}
+				b_cicero_IL = {}
+				b_joliet_IL = {}
+				b_aurora_IL = {}
+				b_naperville_IL = {}
+				b_wheaton_IL = {}
+				b_elmhurst_IL = {}
+				b_evanston_IL = {}
+				b_romeoville_IL = {}
+				b_berwyn_IL = {}
+			}
+		}
 	}
 	k_michigan = {
 		color={ 48 83 224 }
@@ -941,83 +1031,175 @@ e_mississippi = {
 				b_whitelaw_WI = {}
 			}
 		}
-		d_calumet = {
-			color={ 122 85 87 }
-			color2={ 220 220 0 }
+		d_northwoods = {
+			color = { 147 164 67 }
+			color2= { 220 220 0 }
 
-			capital = 170
+			capital = 220
 
-			culture = chicagoan
+			c_shawano = {
+				color = { 124 139 39 }
+				color2= { 220 220 0 }
 
-			c_chicago = {
-				color={ 105 170 70 }
-				color2={ 220 220 0 }
-				northlander = "Vindgarðr"
-				dellsman = "Vindgarðr"
-				yooper = "Vindgarðr"
-				holy_site = atomicist
-				holy_site = rust_cultist
-				holy_site = rust_cultist_reformed
-				holy_site = pagan
-				holy_site = celticist
-				holy_site = norse_pagan
-				holy_site = norse_pagan_reformed
-				holy_site = catholic
-				holy_site = consumerist
+				b_shawano_WI = {}
+				b_bonduel_WI = {}
+				b_clintonville_WI = {}
+				b_navarino_WI = {}
+				b_thornton_WI = {}
+				b_tilleda_WI = {}
+				b_pella_WI = {}
+				b_marion_WI = {}
+			}
+			c_peshtigo = {
+				color = { 13 170 0 }
+				color2= { 220 220 0 }
 
-				b_chicago_IL = {
+				b_peshtigo_WI = {}
+				b_marinette_WI = {}
+				b_oconto_WI = {}
+				b_porterfield_WI = {}
+				b_beaver_WI = {}
+				b_wausaukee_WI = {}
+				b_wagner_WI = {}
+				b_crivitz_WI = {}
+			}
+			c_wausau = {
+				color = { 175 187 89 }
+				color2= { 220 220 0 }
+
+				b_wausau_WI = {}
+				b_kronenwetter_WI = {}
+				b_marathon_city_WI = {
+					used_for_dynasty_names = no
 				}
-				b_cicero_IL = {}
-				b_joliet_IL = {}
-				b_aurora_IL = {}
-				b_naperville_IL = {}
-				b_wheaton_IL = {}
-				b_elmhurst_IL = {}
-				b_evanston_IL = {}
-				b_romeoville_IL = {}
-				b_berwyn_IL = {}
+				b_mosinee_WI = {}
+				b_schofield_WI = {}
+				b_weston_WI = {}
+				b_ringle_WI = {}
+				b_rothschild_WI = {}				
+			}
+			c_nicolet = {
+				color = { 193 210 100 }
+				color2= { 220 220 0 }
+
+				b_crandon_WI = {}
+				b_lakewood_WI = {}
+				b_wabeno_WI = {}
+				b_mountain_WI = {}
+				b_townsend_WI = {}
+				b_laona_WI = {}
+				b_langlade_WI = {}
+				b_tipler_WI = {}
+			}
+			c_hodagland = {
+				color = { 100 106 21 }
+				color2= { 220 220 0 }
+
+				b_rhinelander_WI = {}
+				b_tomahawk_WI = {}
+				b_newbold_WI = {}
+				b_harshaw_WI = {}
+				b_woddboro_WI = {}
+				b_harrison_WI = {}
+				b_pelican_lake_WI = {
+					used_for_dynasty_names = no
+				}
+				b_elcho_WI = {}
+			}
+			c_chequamegon = {
+				color = { 129 163 48 }
+				color2= { 220 220 0 }
+
+				b_glidden_WI = {}
+				b_drummond_WI = {}
+				b_pine_lake_WI = {
+					used_for_dynasty_names = no
+				}
+				b_morse_WI = {}
+				b_cable_WI = {}
+				b_hayward_WI = {}
+				b_clam_lake_WI = {
+					used_for_dynasty_names = no
+				}
+				b_park_falls_WI = {
+					used_for_dynasty_names = no
+				}
 			}
 		}
-		d_outer_chicagoland = {
-			color={ 202 101 167 }
-			color2={ 255 255 20 }
+		d_chippewa = {
+			color = { 201 98 86 }
+			color2= { 255 255 255 }
 
-			capital = 1053 #Rockford
-		
-			allow = {
-				OR = {
-					has_landed_title = c_chicago
-					has_landed_title = d_calumet
+			capital = 221 #Eau Claire
+			
+			c_eau_claire = {
+				color = { 210 100 80 }
+				color2= { 220 220 0 }
+
+				b_eau_claire_WI = {
+					used_for_dynasty_names = no
 				}
+				b_chippewa_falls_WI = {
+					used_for_dynasty_names = no
+				}
+				b_ludington_WI = {}
+				b_crescent_WI = {}
+				b_bloomer_WI = {}
+				b_lake_hallie_WI = {
+					used_for_dynasty_names = no
+				}
+				b_edson_WI = {}
+				b_altoona_WI = {}
 			}
+			c_st_croix = {
+				color = { 184 68 48 }
+				color2= { 220 220 0 }
 
-			c_des_plaines = {
-				color={ 205 104 170 }
-				color2={ 255 255 20 }
-
-				b_kenosha_WI = {}
-				b_racine_WI = {}
-				b_waukegan_IL = {}
-				b_antioch_IL = {}
-				b_gurnee_IL = {}
-				b_bristol_WI = {}
-				b_wadsworth_IL = {}
-				b_somers_WI = {}
+				b_st_croix_falls_WI = {
+					used_for_dynasty_names = no
+				}
+				b_danbury_WI = {}
+				b_randall_WI = {}
+				b_frederic_WI = {}
+				b_cushing_WI = {}
+				b_luck_WI = {}
+				b_siren_WI = {}
+				b_grantsburg_WI = {}
 			}
-			c_rockford = {
-				color={ 208 107 173 }
-				color2={ 255 255 20 }
+			c_willow = {
+				color = { 204 119 115 }
+				color2= { 220 220 0 }
 
-				b_rockford_IL = {}
-				b_belvidere_IL = {}
-				b_rockton_IL = {}
-				b_marengo_IL = {}
-				b_huntley_IL = {}
-				b_genoa_IL = {}
-				b_poplar_grove_IL = {}
-				b_capron_IL = {}
+				b_hudson_WI = {}
+				b_river_falls_WI = {
+					used_for_dynasty_names = no
+				}
+				b_martell_WI = {}
+				b_hager_city_WI = {
+					used_for_dynasty_names = no
+				}
+				b_trimbelle_WI = {}
+				b_ellsworth_WI = {}
+				b_pepin_WI = {}
+				b_maxville_WI = {}
+				b_salem_WI = {}
 			}
-		}
+			c_chetek = {
+				color = { 204 64 67 }
+				color2= { 220 220 0 }
+
+				b_rice_lake_WI = {
+					used_for_dynasty_names = no
+				}
+				b_chetek_WI = {}
+				b_barron_WI = {}
+				b_canton_WI = {}
+				b_dallas_WI = {}
+				b_cameron_WI = {}
+				b_almena_WI = {}
+				b_strickland_WI = {}
+			}
+		}		
 		
 		d_coulee = {
 			color={ 39 197 47 }
@@ -1052,19 +1234,7 @@ e_mississippi = {
 				b_eastman_WI = {}
 				b_steuben_WI = {}
 			}
-			c_galena = {
-				color={ 45 215 55 }
-				color2={ 220 220 0 }
-
-				b_galena_IL = {}
-				b_freeport_WI = {}
-				b_schullsburg_WI = {}
-				b_benton_WI = {}
-				b_lena_IL = {}
-				b_savanna_IL = {}
-				b_polo_IL = {}
-				b_stockton_IL = {}
-			}
+			
 			c_the_dells = {
 				color={ 50 205 40 }
 				color2={ 220 220 0 }
@@ -1166,6 +1336,56 @@ e_mississippi = {
 				b_nekoosa_WI = {}
 			}
 		}
+		d_superior = { # "La Pointe"?
+			color = { 121 188 196 }
+			color2= { 220 220 0 }
+
+
+			quebecois = "La Pointe"
+			cajun = "La Pointe"
+			ojibwe = "Gichigami"
+
+			capital = 224 # Duluth
+
+			c_duluth = {
+				color = { 139 193 205 }
+				color2= { 220 220 0 }
+
+				ojibwe = "Onigamiinsing"
+
+				b_duluth_MN = {
+					ojibwe = "Onigamiinsing"
+				}
+				b_superior_WI = {}
+				b_west_duluth_MN = {
+					used_for_dynasty_names = no
+				}
+				b_hermantown_MN = {}
+				b_proctor_MN = {}
+				b_spirit_valley_MN = {
+					used_for_dynasty_names = no
+				}
+				b_parkland_WI = {}
+				b_oneota_MN = {}
+			}
+			c_south_shore = {
+				color = { 100 179 187 }
+				color2= { 220 220 0 }
+
+				b_ashland_WI = {}
+				b_washburn_WI = {}
+				b_bayfield_WI = {}
+				b_cornucopia_WI = {}
+				b_la_pointe_WI = {
+					used_for_dynasty_names = no
+				}
+				b_herbster_WI = {}
+				b_port_wing_WI = {
+					used_for_dynasty_names = no
+				}
+				b_birch_WI = {}
+			}
+		}
 	}
 	k_superior = {
 		color={ 135 153 182 }
@@ -1257,19 +1477,7 @@ e_mississippi = {
 
 			capital = 1048 # Marquette
 			
-			c_peshtigo = {
-				color = { 13 170 0 }
-				color2= { 220 220 0 }
-
-				b_peshtigo_WI = {}
-				b_marinette_WI = {}
-				b_oconto_WI = {}
-				b_porterfield_WI = {}
-				b_beaver_WI = {}
-				b_wausaukee_WI = {}
-				b_wagner_WI = {}
-				b_crivitz_WI = {}
-			}
+			
 			c_marquette = {
 				color={ 200 196 196 }
 				color2={ 220 220 0 }
@@ -1409,358 +1617,6 @@ e_mississippi = {
 				b_marenisco_MI = {}
 				b_gogebic_MI = {}
 				b_erwin_MI = {}
-			}
-		}
-		d_northwoods = {
-			color = { 147 164 67 }
-			color2= { 220 220 0 }
-
-			capital = 220
-
-			c_shawano = {
-				color = { 124 139 39 }
-				color2= { 220 220 0 }
-
-				b_shawano_WI = {}
-				b_bonduel_WI = {}
-				b_clintonville_WI = {}
-				b_navarino_WI = {}
-				b_thornton_WI = {}
-				b_tilleda_WI = {}
-				b_pella_WI = {}
-				b_marion_WI = {}
-			}
-			c_wausau = {
-				color = { 175 187 89 }
-				color2= { 220 220 0 }
-
-				b_wausau_WI = {}
-				b_kronenwetter_WI = {}
-				b_marathon_city_WI = {
-					used_for_dynasty_names = no
-				}
-				b_mosinee_WI = {}
-				b_schofield_WI = {}
-				b_weston_WI = {}
-				b_ringle_WI = {}
-				b_rothschild_WI = {}				
-			}
-			c_nicolet = {
-				color = { 193 210 100 }
-				color2= { 220 220 0 }
-
-				b_crandon_WI = {}
-				b_lakewood_WI = {}
-				b_wabeno_WI = {}
-				b_mountain_WI = {}
-				b_townsend_WI = {}
-				b_laona_WI = {}
-				b_langlade_WI = {}
-				b_tipler_WI = {}
-			}
-			c_hodagland = {
-				color = { 100 106 21 }
-				color2= { 220 220 0 }
-
-				b_rhinelander_WI = {}
-				b_tomahawk_WI = {}
-				b_newbold_WI = {}
-				b_harshaw_WI = {}
-				b_woddboro_WI = {}
-				b_harrison_WI = {}
-				b_pelican_lake_WI = {
-					used_for_dynasty_names = no
-				}
-				b_elcho_WI = {}
-			}
-			c_chequamegon = {
-				color = { 129 163 48 }
-				color2= { 220 220 0 }
-
-				b_glidden_WI = {}
-				b_drummond_WI = {}
-				b_pine_lake_WI = {
-					used_for_dynasty_names = no
-				}
-				b_morse_WI = {}
-				b_cable_WI = {}
-				b_hayward_WI = {}
-				b_clam_lake_WI = {
-					used_for_dynasty_names = no
-				}
-				b_park_falls_WI = {
-					used_for_dynasty_names = no
-				}
-			}
-		}
-		d_superior = { # "La Pointe"?
-			color = { 121 188 196 }
-			color2= { 220 220 0 }
-
-
-			quebecois = "La Pointe"
-			cajun = "La Pointe"
-			ojibwe = "Gichigami"
-
-			capital = 224 # Duluth
-
-			c_duluth = {
-				color = { 139 193 205 }
-				color2= { 220 220 0 }
-
-				ojibwe = "Onigamiinsing"
-
-				b_duluth_MN = {
-					ojibwe = "Onigamiinsing"
-				}
-				b_superior_WI = {}
-				b_west_duluth_MN = {
-					used_for_dynasty_names = no
-				}
-				b_hermantown_MN = {}
-				b_proctor_MN = {}
-				b_spirit_valley_MN = {
-					used_for_dynasty_names = no
-				}
-				b_parkland_WI = {}
-				b_oneota_MN = {}
-			}
-			c_south_shore = {
-				color = { 100 179 187 }
-				color2= { 220 220 0 }
-
-				b_ashland_WI = {}
-				b_washburn_WI = {}
-				b_bayfield_WI = {}
-				b_cornucopia_WI = {}
-				b_la_pointe_WI = {
-					used_for_dynasty_names = no
-				}
-				b_herbster_WI = {}
-				b_port_wing_WI = {
-					used_for_dynasty_names = no
-				}
-				b_birch_WI = {}
-			}
-		}
-		d_chippewa = {
-			color = { 201 98 86 }
-			color2= { 255 255 255 }
-
-			capital = 221 #Eau Claire
-			
-			c_eau_claire = {
-				color = { 210 100 80 }
-				color2= { 220 220 0 }
-
-				b_eau_claire_WI = {
-					used_for_dynasty_names = no
-				}
-				b_chippewa_falls_WI = {
-					used_for_dynasty_names = no
-				}
-				b_ludington_WI = {}
-				b_crescent_WI = {}
-				b_bloomer_WI = {}
-				b_lake_hallie_WI = {
-					used_for_dynasty_names = no
-				}
-				b_edson_WI = {}
-				b_altoona_WI = {}
-			}
-			c_st_croix = {
-				color = { 184 68 48 }
-				color2= { 220 220 0 }
-
-				b_st_croix_falls_WI = {
-					used_for_dynasty_names = no
-				}
-				b_danbury_WI = {}
-				b_randall_WI = {}
-				b_frederic_WI = {}
-				b_cushing_WI = {}
-				b_luck_WI = {}
-				b_siren_WI = {}
-				b_grantsburg_WI = {}
-			}
-			c_willow = {
-				color = { 204 119 115 }
-				color2= { 220 220 0 }
-
-				b_hudson_WI = {}
-				b_river_falls_WI = {
-					used_for_dynasty_names = no
-				}
-				b_martell_WI = {}
-				b_hager_city_WI = {
-					used_for_dynasty_names = no
-				}
-				b_trimbelle_WI = {}
-				b_ellsworth_WI = {}
-				b_pepin_WI = {}
-				b_maxville_WI = {}
-				b_salem_WI = {}
-			}
-			c_chetek = {
-				color = { 204 64 67 }
-				color2= { 220 220 0 }
-
-				b_rice_lake_WI = {
-					used_for_dynasty_names = no
-				}
-				b_chetek_WI = {}
-				b_barron_WI = {}
-				b_canton_WI = {}
-				b_dallas_WI = {}
-				b_cameron_WI = {}
-				b_almena_WI = {}
-				b_strickland_WI = {}
-			}
-		}
-		d_arrowhead = {
-			color = { 190 65 3 }
-			color2= { 255 255 255 }
-
-			capital = 259 #Mesabi
-			
-			c_north_shore = { # previously c_grand_marais
-				color = { 164 27 0 }
-				color2= { 255 255 255 }
-
-				b_grand_marais_MN = {
-					used_for_dynasty_names = no
-				}
-				b_grand_portage_MN = {
-					used_for_dynasty_names = no
-				}
-				b_hovland_MN = {}
-				b_tofte_MN = {}
-				b_lutsen_MN = {}
-				b_two_harbors_MN = {
-					used_for_dynasty_names = no
-				}
-				b_larsmont_MN = {}
-				b_little_marais_MN = {
-					used_for_dynasty_names = no
-				}
-				b_silver_bay_MN = {
-					used_for_dynasty_names = no
-				}
-				b_knife_river_MN = {
-					used_for_dynasty_names = no
-				}
-				b_highland_MN = {}
-			}
-			c_kabetogama = {
-				color = { 167 62 3 }
-				color2= { 255 255 255 }
-
-				b_international_falls_MN = {
-					used_for_dynasty_names = no
-				}
-				b_kabetogama_MN = {}
-				b_littlefork_MN = {}
-				b_ranier_MN = {}
-				b_ray_MN = {}
-				b_orr_MN = {}
-			}
-			c_mesabi = { # previously c_cloquet
-				color = { 204 93 39 }
-				color2= { 255 255 255 }
-				
-				b_virginia_MN = {}
-				b_chisholm_MN = {}
-				b_eveleth_MN = {}
-				b_hibbing_MN = {}
-				b_gilbert_MN = {}
-				b_mountain_iron_MN = {
-					used_for_dynasty_names = no
-				}
-				b_buhl_MN = {}
-				b_iron_junction_MN = {
-					used_for_dynasty_names = no
-				}
-			}
-			c_pokegama = {
-				color = { 190 108 67 }
-				color2= { 255 255 255 }
-
-				b_grand_rapids_MN = {
-					used_for_dynasty_names = no
-				}
-				b_blackberry_MN = {}
-				b_deer_river_MN = {
-					used_for_dynasty_names = no
-				}
-				b_pengilly_MN = {}
-				b_swan_river_MN = {
-					used_for_dynasty_names = no
-				}
-				b_hill_city_MN = {
-					used_for_dynasty_names = no
-				}
-				b_bovey_MN = {}
-				b_coleraine_MN = {}
-			}
-			c_mille_lacs = {
-				color = { 195 98 53 }
-				color2= { 255 255 255 }
-
-				b_sandstone_MN = {}
-				b_sturgeon_lake_MN = {
-					used_for_dynasty_names = no
-				}
-				b_finlayson_MN = {}
-				b_askov_MN = {}
-				b_mora_MN = {}
-				b_hinckley_MN = {}
-				b_bruno_MN = {}
-			}
-		}
-		d_st_anthony = {
-			color = { 108 167 255 }
-			color2= { 255 255 255 }
-
-			capital = 263
-
-			c_twin_cities = {
-				color = { 146 205 254 }
-				color2= { 255 255 255 }
-				holy_site = pagan
-				holy_site = celticist
-				holy_site = norse_pagan
-				holy_site = norse_pagan_reformed
-
-				b_st_paul_MN = {
-					sioux = "I-mni-za Ska Dan"
-				}
-				b_minneapolis_MN = {}
-				b_fort_snelling_MN = {
-					used_for_dynasty_names = no
-				}
-				b_minnetonka_MN = {}
-				b_eagan_MN = {}
-				b_burnsville_MN = {}
-				b_powderhorn_MN = {}
-				b_fridley_MN = {}
-				b_osseo_MN = {}
-				b_eden_prairie_MN = {
-					used_for_dynasty_names = no
-				}
-			}
-			c_anoka = {
-				color = { 127 186 254 }
-				color2= { 255 255 255 }
-
-				b_anoka_MN = {}
-				b_andover_MN = {}
-				b_wyoming_MN = {}
-				b_princeton_MN = {}
-				b_cambridge_MN = {}
-				b_zimmerman_MN = {}
-				b_ramsey_MN = {}
-				b_isanti_MN = {}
-				b_lindstrom_MN = {}
 			}
 		}
 	}
@@ -2060,7 +1916,6 @@ e_mississippi = {
 		}
 	}
 
-
 	k_ozarks = {
 		color = { 162 181 147 }
 		color2= { 255 255 255 }
@@ -2357,74 +2212,7 @@ e_mississippi = {
 				b_rockwell_AR = {}
 			}
 		}
-		d_sequoyah = {
-			color = { 22 202 44 }
-			color2= { 255 255 255 }
-
-			capital = 326 # Tulsa / Muskogee
-
-			c_tallasi = {
-				color = { 35 177 76 }
-				color2 = { 255 255 255 }
-
-				b_tulsa_OK = {}
-				b_broken_arrow_OK = {
-					used_for_dynasty_names = no
-				}
-				b_muskogee_OK = {}
-				b_sapulpa_OK = {}
-				b_fort_gibson_OK = {
-					used_for_dynasty_names = no
-				}
-				b_claremore_OK = {}
-				b_jenks_OK = {}
-				b_vinita_OK = {}
-			}
-			c_mcalester = {
-				color = { 53 170 88 }
-				color2= { 255 255 255 }
-
-				b_mcalester_OK = {}
-				b_henryetta_OK = {}
-				b_talihina_OK = {}
-				b_wilburton_OK = {}
-				b_poteau_OK = {}
-				b_hartshome_OK = {}
-				b_stigler_OK = {}
-				b_holdenville_OK = {}
-			}
-			c_kiamichi = {
-				color = { 33 143 52 }
-				color2= { 255 255 255 }
-
-				culture = dixie
-
-				b_hugo_OK = {}
-				b_broken_bow_OK = {
-					used_for_dynasty_names = no
-				}
-				b_antlers_OK = {}
-				b_spencerville_OK = {}
-				b_idabel_OK = {}
-				b_eagletown_OK = {}
-				b_garvin_OK = {}
-				b_millerton_OK = {}
-			}
-			c_bryan = {
-				color = { 20 194 43 }
-				color2= { 255 255 255 }
-
-				b_durant_OK = {}
-				b_ardmore_OK = {}
-				b_tishomingo_OK = {}
-				b_madil_OK = {}
-				b_caddo_OK = {}
-				b_springer_OK = {}
-				b_calera_OK = {}
-				b_milburn_OK = {}
-				b_kenefic_OK = {}
-			}
-		}
+		
 	}
 	
 	k_missouri = {
@@ -2836,6 +2624,319 @@ e_mississippi = {
 				b_triplett_MO = {}
 				b_salisbury_MO = {}
 				b_keytesville_MO = {}
+			}
+		}
+	}
+	
+	k_minnesota = {
+		color = { 75 75 255 }
+		color2 = { 255 255 255 }
+		
+		capital = 263
+	
+		d_minnesota = {
+			color = { 75 0 130 }
+			color2= { 110 22 132 }
+
+			capital = 368 # Sauk, St. Cloud
+
+			culture = northlander
+
+			c_coteau = {		# 365
+				color = { 230 161 158 }
+				color2= { 255 255 20 }
+
+				b_marshall_MN = {}
+				b_redwood_falls_MN = {
+					used_for_dynasty_names = no
+				}
+				b_windom_MN = {}
+				b_lower_sioux_MN = {
+					used_for_dynasty_names = no
+				}
+				b_wabasso_MN = {}
+				b_pipestone_MN = {}
+				b_slayton_MN = {}
+				b_tyler_MN = {}
+			}
+			c_blue_earth = {	# 366
+				color = { 255 206 204 }
+				color2= { 255 255 20 }
+
+				b_blue_earth_MN = {
+					used_for_dynasty_names = no
+				}
+				b_mankato_MN = {}
+				b_new_ulm_MN = {
+					used_for_dynasty_names = no
+				}
+				b_le_seur_MN = {}
+				b_hanska_MN = {}
+				b_sleepy_eye_MN = {
+					used_for_dynasty_names = no
+				}
+				b_le_center_MN = {}
+				b_springfield_MN = {}
+			}
+			c_rush = {		# 367
+				color = { 230 129 126 }
+				color2= { 255 255 20 }
+
+				b_st_peter_MN = {}
+				b_nicollet_MN = {}
+				b_olivia_MN = {}
+				b_gaylord_MN = {}
+				b_courtland_MN = {}
+				b_lafayette_MN = {}
+				b_arlington_MN = {}
+				b_renville_MN = {}
+			}
+			c_sauk = { 		# 368
+				color = { 217 143 141 }
+				color2= { 255 255 20 }
+
+				b_st_cloud_MN = {}
+				b_sauk_rapids_MN = {
+					used_for_dynasty_names = no
+				}
+				b_st_augusta_MN = {}
+				b_rockville_MN = {}
+				b_avon_MN = {}
+				b_belgrade_MN = {}
+				b_albany_MN = {}
+				b_st_joseph_MN = {}
+			}
+			c_cuyuna = {		# 369
+				color = { 242 160 157 }
+				color2= { 255 255 20 }
+
+				b_brainerd_MN = {}
+				b_walker_MN = {}
+				b_lake_shore_MN = {
+					used_for_dynasty_names = no
+				}
+				b_garrison_MN = {}
+				b_nisswa_MN = {}
+				b_cuyuna_MN = {}
+				b_pillager_MN = {}
+				b_hackensack_MN = {}
+			}
+			c_otter_tail_pelican = {# 370
+				color = { 196 149 147 }
+				color2= { 255 255 20 }
+
+				b_alexandria_MN = {}
+				b_fergus_falls_MN = {
+					used_for_dynasty_names = no
+				}
+				b_foxhome_MN = {}
+				b_elbow_lake_MN = {
+					used_for_dynasty_names = no
+				}
+				b_wendell_MN = {}
+				b_miltona_MN = {}
+				b_dent_MN = {}
+				b_clitherall_MN = {}
+			}
+		}
+		d_arrowhead = {
+			color = { 190 65 3 }
+			color2= { 255 255 255 }
+
+			capital = 259 #Mesabi
+			
+			c_north_shore = { # previously c_grand_marais
+				color = { 164 27 0 }
+				color2= { 255 255 255 }
+
+				b_grand_marais_MN = {
+					used_for_dynasty_names = no
+				}
+				b_grand_portage_MN = {
+					used_for_dynasty_names = no
+				}
+				b_hovland_MN = {}
+				b_tofte_MN = {}
+				b_lutsen_MN = {}
+				b_two_harbors_MN = {
+					used_for_dynasty_names = no
+				}
+				b_larsmont_MN = {}
+				b_little_marais_MN = {
+					used_for_dynasty_names = no
+				}
+				b_silver_bay_MN = {
+					used_for_dynasty_names = no
+				}
+				b_knife_river_MN = {
+					used_for_dynasty_names = no
+				}
+				b_highland_MN = {}
+			}
+			c_kabetogama = {
+				color = { 167 62 3 }
+				color2= { 255 255 255 }
+
+				b_international_falls_MN = {
+					used_for_dynasty_names = no
+				}
+				b_kabetogama_MN = {}
+				b_littlefork_MN = {}
+				b_ranier_MN = {}
+				b_ray_MN = {}
+				b_orr_MN = {}
+			}
+			c_mesabi = { # previously c_cloquet
+				color = { 204 93 39 }
+				color2= { 255 255 255 }
+				
+				b_virginia_MN = {}
+				b_chisholm_MN = {}
+				b_eveleth_MN = {}
+				b_hibbing_MN = {}
+				b_gilbert_MN = {}
+				b_mountain_iron_MN = {
+					used_for_dynasty_names = no
+				}
+				b_buhl_MN = {}
+				b_iron_junction_MN = {
+					used_for_dynasty_names = no
+				}
+			}
+			c_pokegama = {
+				color = { 190 108 67 }
+				color2= { 255 255 255 }
+
+				b_grand_rapids_MN = {
+					used_for_dynasty_names = no
+				}
+				b_blackberry_MN = {}
+				b_deer_river_MN = {
+					used_for_dynasty_names = no
+				}
+				b_pengilly_MN = {}
+				b_swan_river_MN = {
+					used_for_dynasty_names = no
+				}
+				b_hill_city_MN = {
+					used_for_dynasty_names = no
+				}
+				b_bovey_MN = {}
+				b_coleraine_MN = {}
+			}
+			c_mille_lacs = {
+				color = { 195 98 53 }
+				color2= { 255 255 255 }
+
+				b_sandstone_MN = {}
+				b_sturgeon_lake_MN = {
+					used_for_dynasty_names = no
+				}
+				b_finlayson_MN = {}
+				b_askov_MN = {}
+				b_mora_MN = {}
+				b_hinckley_MN = {}
+				b_bruno_MN = {}
+			}
+		}
+		d_st_anthony = {
+			color = { 108 167 255 }
+			color2= { 255 255 255 }
+
+			capital = 263
+
+			c_twin_cities = {
+				color = { 146 205 254 }
+				color2= { 255 255 255 }
+				holy_site = pagan
+				holy_site = celticist
+				holy_site = norse_pagan
+				holy_site = norse_pagan_reformed
+
+				b_st_paul_MN = {
+					sioux = "I-mni-za Ska Dan"
+				}
+				b_minneapolis_MN = {}
+				b_fort_snelling_MN = {
+					used_for_dynasty_names = no
+				}
+				b_minnetonka_MN = {}
+				b_eagan_MN = {}
+				b_burnsville_MN = {}
+				b_powderhorn_MN = {}
+				b_fridley_MN = {}
+				b_osseo_MN = {}
+				b_eden_prairie_MN = {
+					used_for_dynasty_names = no
+				}
+			}
+			c_anoka = {
+				color = { 127 186 254 }
+				color2= { 255 255 255 }
+
+				b_anoka_MN = {}
+				b_andover_MN = {}
+				b_wyoming_MN = {}
+				b_princeton_MN = {}
+				b_cambridge_MN = {}
+				b_zimmerman_MN = {}
+				b_ramsey_MN = {}
+				b_isanti_MN = {}
+				b_lindstrom_MN = {}
+			}
+		}
+		d_pembina = {
+			color = { 159 206 170 }
+			color2= { 255 255 20 }
+
+			capital = 399
+
+			c_bemidji = { 		# 371
+				color = { 139 205 159 }
+				color2= { 255 255 20 }
+
+				ojibwe = "Bemijigamaag"
+
+				b_bemidji_MN = {
+					ojibwe = "Bemijigamaag"
+				}
+				b_baudette_MN = {}
+				b_blackduck_MN = {}
+				b_funkley_MN = {}
+				b_waskish_MN = {}
+				b_nebish_MN = {}
+				b_northern_MN = {}
+				b_quiring_MN = {}
+			}
+			c_becker = {		# 372
+				color = { 182 205 186 }
+				color2= { 255 255 20 }
+
+				ojibwe = "Gaa-waabaabiganikaag"
+
+				b_detroit_lakes_MN = {
+					used_for_dynasty_names = no
+				}
+				b_mahnomen_MN = {}
+				b_bagley_MN = {}
+				b_frazee_MN = {}
+				b_clearbrook_MN = {}
+				b_gonvick_MN = {}
+				b_shevlin_MN = {}
+				b_popple_MN = {}
+			}
+			c_roseau = {		# 373
+				color = { 104 179 121 }
+				color2= { 255 255 20 }
+
+				b_roseau_MN = {}
+				b_hallock_MN = {}
+				b_badger_MN = {}
+				b_roosevelt_MN = {}
+				b_strathcona_MN = {}
+				b_warroad_MN = {}
+				b_karlstad_MN = {}
+				b_halma_MN = {}
 			}
 		}
 	}
