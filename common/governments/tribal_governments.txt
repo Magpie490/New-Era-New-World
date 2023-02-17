@@ -12,7 +12,10 @@ tribal_governments = {
 		accepts_liege_governments_culture = { # Tribals have no opinion penalty towards their liege if of the same culture
 			theocracy_government
 			muslim_government
+			makhzen_government
+			neoziamet_government
 			calvinist_government
+			hellenic_government
 			agrarian_feudal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -21,8 +24,14 @@ tribal_governments = {
 			oligarchic_republic
 			feudal_government
 		}
+		accepts_liege_governments_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion
+			makhzen_government
+			neoziamet_government
+			ghazwa_government
+		}
 		accepts_liege_governments_culture_and_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion
 			order_government
+			colonial_government
 		}
 		vassal_call_to_arms = {
 			tribal_government

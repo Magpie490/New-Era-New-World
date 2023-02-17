@@ -1640,6 +1640,7 @@
 						title = k_hospitaller_state
 						title = d_knights_templar
 						title = d_knights_lazarus
+						title = k_lazarean_state
 						title = e_china_west_governor
 					}
 				}
@@ -1688,6 +1689,7 @@
 								title = d_knights_hospitaler_3
 								title = d_knights_templar
 								title = d_knights_lazarus
+								title = k_lazarean_state
 								title = k_hospitaller_state
 								title = e_china_west_governor
 							}
@@ -3018,6 +3020,7 @@
 						title = d_knights_templar
 						title = k_hospitaller_state
 						title = d_knights_lazarus
+						title = k_lazarean_state
 						title = e_china_west_governor
 					}
 				}
@@ -3071,6 +3074,7 @@
 						title = d_knights_templar
 						title = k_hospitaller_state
 						title = d_knights_lazarus
+						title = k_lazarean_state
 						title = e_china_west_governor
 					}
 				}
@@ -4637,6 +4641,10 @@
 				trait = dead_crown_britannia
 				trait = dead_crown_siam
 				trait = augustus # Laurels
+				trait = dead_crown_hungary
+				trait = dead_crown_jugoslavia
+				trait = dead_crown_russia
+				trait = dead_crown_napoleon
 			}
 		}
 		modifier = {
@@ -4655,6 +4663,9 @@
 					artifact_type = crown_britannia
 					artifact_type = crown_siam
 					artifact_type = cursed_diamond_crown
+					artifact_type = crown_jugoslavia
+					artifact_type = crown_russia
+					artifact_type = crown_napoleon
 				}
 				is_artifact_equipped = yes 
 			}
@@ -4778,25 +4789,82 @@
 				value = on
 			}
 		}
-		modifier = { #Siamese Crown
+		modifier = { #Hungary Crown
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = crown_siam
+					artifact_type = crown_hungary
 					is_artifact_equipped = yes 
 				}
-				trait = dead_crown_siam
+				trait = dead_crown_hungary
 			}
 		}
 	}
 	7 = {
-		factor = 0
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { #Jugoslav crown Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_jugoslavia
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_jugoslavia
+			}
+		}
 	}
 	8 = {
-		factor = 0
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { #Russian Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_russia
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_russia
+			}
+		}
 	}
 	9 = {
-		factor = 0
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { #Napoleon Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_napoleon
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_napoleon
+			}
+		}
 	}
 	10 = {
 		factor = 0
@@ -5809,10 +5877,56 @@
 			factor = 0
 			OR = {
 				has_character_modifier = aztec_warpaint_1
-				has_character_modifier = aztec_warpaint_2
+					AND = {
+						war = yes 
+						OR = {
+							trait = is_fat
+							trait = wroth
+							trait = proud
+							trait = drunkard
+							trait = british_leader
+							trait = lunatic
+							trait = uncouth
+						}
+						OR = {
+							culture = westlander
+							culture = new_english
+							culture = northlander
+							culture = eastlander
+							culture = old_norman
+							culture = british
+							culture = scouse
+							culture = southener
+							culture = frencig
+							culture = oglallan
+							culture = brytwysher
+							culture = prinsesser
+							culture = llanito
+							culture = scots
+							culture = ulsterite
+							culture = farlander
+						}
+						OR = {
+							has_minor_title = title_commander
+							has_job_title = job_marshal
+						}
+					}
 				has_character_modifier = finnish_warpaint_1
 				has_character_modifier = finnish_warpaint_2
-				has_character_modifier = zun_warpaint_1
+				AND = {
+					OR = {
+						trait = mystic
+						trait = zealous
+						trait = mastermind_theologian
+						trait = scholarly_theologian
+					}
+					OR = {
+						religion = thelemic_reformed
+						religion = summer_queen
+						religion = thelemic
+						religion = orange_king
+					}
+				}
 				has_character_modifier = zun_warpaint_2
 				has_character_modifier = tengri_warpaint_1
 				has_character_modifier = tengri_warpaint_2
@@ -5831,7 +5945,42 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = { has_character_modifier = aztec_warpaint_2 }
+			NOT = { 
+				AND = {
+					war = yes 	
+					OR = {
+						trait = is_fat
+						trait = wroth
+						trait = proud
+						trait = drunkard
+						trait = british_leader
+						trait = lunatic
+						trait = uncouth
+					}
+					OR = {
+						culture = westlander
+						culture = new_english
+						culture = northlander
+						culture = eastlander
+						culture = old_norman
+						culture = british
+						culture = scouse
+						culture = southener
+						culture = frencig
+						culture = oglallan
+						culture = brytwysher
+						culture = prinsesser
+						culture = llanito
+						culture = scots
+						culture = ulsterite
+						culture = farlander
+					}
+					OR = {
+						has_minor_title = title_commander
+						has_job_title = job_marshal
+					}
+				}
+			}
 		}
   	}
 	3 = { 
@@ -5849,14 +5998,29 @@
 		}
   	}
 	5 = { 
-		factor = 100
+		factor = 100#zun
 		modifier = {
 			factor = 0
-			NOT = { has_character_modifier = zun_warpaint_1 }
+			NOR = {  
+				AND = {
+					OR = {
+						trait = mystic
+						trait = zealous
+						trait = mastermind_theologian
+						trait = scholarly_theologian
+					}
+					OR = {
+						religion = thelemic_reformed
+						religion = summer_queen
+						religion = thelemic
+						religion = orange_king
+					}
+				}
+			}
 		}
   	}
 	6 = { 
-		factor = 100
+		factor = 100#zun
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = zun_warpaint_2 }
@@ -6517,6 +6681,7 @@
 				has_landed_title = d_knights_hospitaler_3
 				has_landed_title = k_hospitaller_state
 				has_landed_title = d_knights_lazarus
+				has_landed_title = k_lazarean_state
 				has_landed_title = d_purifiers 
 				has_landed_title = d_white_army 
 				has_landed_title = d_adeptus_custodes 
@@ -6531,6 +6696,7 @@
 				liege = { has_landed_title = d_knights_hospitaler_3 }
 				liege = { has_landed_title = k_hospitaller_state }
 				liege = { has_landed_title = d_knights_lazarus }
+				liege = { has_landed_title = k_lazarean_state }
 				liege = { has_landed_title = d_purifiers }
 				liege = { has_landed_title = d_white_army }
 				liege = { has_landed_title = d_adeptus_custodes }
@@ -6690,8 +6856,12 @@
 				liege = { has_landed_title = d_knights_hospitaler_2 }
 				has_landed_title = d_knights_hospitaler_3
 				liege = { has_landed_title = d_knights_hospitaler_3 }
+				has_landed_title = k_hospitaller_state
+				liege = { has_landed_title = k_hospitaller_state }
 				has_landed_title = d_knights_lazarus
 				liege = { has_landed_title = d_knights_lazarus }
+				has_landed_title = k_lazarean_state
+				liege = { has_landed_title = k_lazarean_state }
 			}
 		}
 	}

@@ -845,7 +845,7 @@ character_event = {
 			random_list = { # Flavor Randomization
 				15 = { change_martial = 2 }
 				 5 = { change_martial = 4 }
-				10 = { add_trait = brawny }
+				10 = { add_trait = robust }
 				 5 = { add_trait = shrewd }
 				10 = { add_trait = duelist }
 				10 = { add_trait = hunter }
@@ -884,7 +884,7 @@ character_event = {
 		if = {
 			limit = {
 				can_grant_title = title_commander
-				byzantines_can_grant_commander_trigger = yes
+				#byzantines_can_grant_commander_trigger = yes
 			}
 
 			event_target:found_commander = {
@@ -900,7 +900,7 @@ character_event = {
 
 		trigger = {
 			NOT = { can_grant_title = title_commander }
-			byzantines_can_grant_commander_trigger = yes
+			#byzantines_can_grant_commander_trigger = yes
 
 			# Commander to replace
 			any_courtier_or_vassal = {

@@ -2021,7 +2021,7 @@ decisions = {
 						type = cccp_female_trotskyite
 					}
 					new_bloodline = {
-						set_description = "cccp_female_trotsky_desc"
+						set_description = "cccp_female_trotskyite_desc"
 					}
 				}
 				if = {
@@ -2033,13 +2033,16 @@ decisions = {
 						type = cccp_male_trotskyite
 					}
 					new_bloodline = {
-						set_description = "cccp_male_trotsky_desc"
+						set_description = "cccp_male_trotskyite_desc"
 					}
 				}
 			}
 			else_if = {
 				limit = { religion = leninist }
 				add_trait = leninov
+				any_child_even_if_dead = {
+					add_trait = leninov
+				}
 				character_event = { id = LENIN.1000 }
 				if = {
 					limit = {
@@ -2050,7 +2053,7 @@ decisions = {
 						type = cccp_female_leninist
 					}
 					new_bloodline = {
-						set_description = "cccp_female_lenin_desc"
+						set_description = "cccp_female_leninist_desc"
 					}
 				}
 				if = {
@@ -2062,7 +2065,7 @@ decisions = {
 						type = cccp_male_leninist
 					}
 					new_bloodline = {
-						set_description = "cccp_male_lenin_desc"
+						set_description = "cccp_male_leninist_desc"
 					}
 				}
 			}
@@ -4537,12 +4540,10 @@ decisions = {
 		}
 
 		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			completely_controls = e_turkestan
-			completely_controls = k_yarlung
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
 		}
 
 		effect = {
@@ -4550,28 +4551,176 @@ decisions = {
 				text = form_west_mandate_TT
 				hidden_tooltip = {
 				
-				e_turkestan = {
-					destroy_landed_title = THIS
-				}
-				activate_title = {
-					title = e_turkestan
-					status = no
-				}				
-				
-				k_xixia = { de_jure_liege = e_maoist }
-				k_khotan = { de_jure_liege = e_maoist }
-				k_yarlung = { de_jure_liege = e_maoist }
-				k_kham = { de_jure_liege = e_maoist }
 				narrative_event = { id =  maoevent.1 }
-				e_maoist = {
-					gain_empire_effect = yes
-				}				
+					e_maoist = {
+						gain_empire_effect = yes
+					}				
 					any_demesne_title = {
 						limit = {
 							tier = EMPEROR
 							NOT = { title = e_maoist }
 						}
 						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_maoist
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			maoist = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_legalist = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = legalist
+			e_legalist = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_legalist_TT
+				hidden_tooltip = {	
+					e_legalist = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_legalist }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_legalist
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			legalist = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_taoist = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = taoist
+			e_taoist = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_taoist_TT
+				hidden_tooltip = {	
+					e_taoist = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_taoist }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_taoist
 					}
 				}
 			}
@@ -4607,13 +4756,13 @@ decisions = {
 			factor = 1
 		}
 	}
-	form_legalist = {
+	form_white_lotus = {
 		is_high_prio = yes
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			religion = legalist
-			e_legalist = {
+			religion = white_lotus
+			e_white_lotus = {
 				has_holder = no
 			}
 			prisoner = no
@@ -4624,27 +4773,26 @@ decisions = {
 			doesnt_holds_special_empire = yes
 			piety = 1000
 			num_of_holy_sites = 3
+			realm_size = 100
 		}
 
 		effect = {
 			custom_tooltip = {
-				text = form_legalist_TT
+				text = form_white_lotus_TT
 				hidden_tooltip = {	
-				
-				k_xixia = { de_jure_liege = e_legalist }
-				k_khotan = { de_jure_liege = e_legalist }
-				k_yarlung = { de_jure_liege = e_legalist }
-				k_kham = { de_jure_liege = e_legalist }
-				#narrative_event = { id =  maoevent.1 }
-				e_legalist = {
-					gain_empire_effect = yes
-				}				
+					e_white_lotus = {
+						gain_empire_effect = yes
+					}				
 					any_demesne_title = {
 						limit = {
 							tier = EMPEROR
-							NOT = { title = e_legalist }
+							NOT = { title = e_white_lotus }
 						}
 						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_white_lotus
 					}
 				}
 			}
@@ -4670,6 +4818,327 @@ decisions = {
 				}
 				new_bloodline = {
 					set_description = "bloodline_desc_chinese"
+				}
+			}
+			white_lotus = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_tridemism  = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = tridemism 
+			e_tridemism = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_tridemism_TT
+				hidden_tooltip = {	
+					e_tridemism = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_tridemism }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_tridemism
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			tridemism = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_wuxia  = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = wuxia 
+			e_wuxia = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_wuxia_TT
+				hidden_tooltip = {	
+					e_wuxia = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_wuxia }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_wuxia
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			wuxia = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_xianxia  = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = xianxia 
+			e_xianxia = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_xianxia_TT
+				hidden_tooltip = {	
+					e_xianxia = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_xianxia }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_xianxia
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			xianxia = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_heavenly  = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			religion = xinjiao 
+			e_heavenly = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			doesnt_holds_special_empire = yes
+			piety = 1000
+			num_of_holy_sites = 3
+			realm_size = 100
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_heavenly_TT
+				hidden_tooltip = {	
+					e_heavenly = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_heavenly }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_heavenly
+					}
+				}
+			}
+			if = {
+				limit = {
+						is_female = yes
+						has_dlc = "Holy Fury"
+					}
+				create_bloodline = {
+					type = chinese_emperor_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = chinese_emperor_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_chinese"
+				}
+			}
+			xinjiao = {
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
 				}
 			}
 		}
@@ -7100,56 +7569,7 @@ decisions = {
 			factor = 1
 		}
 	}
-	
-	form_heavenly = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			culture = sinoshan
-			religion = xinjiao
-			e_heavenly = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
 
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			#Control a bunch of lands
-				k_yarlung = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_kham = { show_scope_change = no province_completely_controls_trigger = yes }												
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_heavenly_tt 
-				e_heavenly = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-				###Christian China
-				k_yarlung = { de_jure_liege = e_heavenly }
-				k_kham = { de_jure_liege = e_heavenly }
-				k_guge = { de_jure_liege = e_heavenly }
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	form_aragon = {
 		is_high_prio = yes
@@ -7771,8 +8191,7 @@ decisions = {
 		potential = {
 			form_empire_potential = yes
 			OR = {
-				dynasty = 6113900
-				culture = wu				
+				dynasty = 6113900							
 			}
 			e_ming = {
 				is_titular = yes
@@ -9208,483 +9627,6 @@ decisions = {
 		}
 	}
 	
-	form_kuy = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_kingdom_potential = yes
-			culture = kuy
-			
-			k_kuy= {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_kingdom_allow = yes
-			
-			d_sisaket = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_siemreap = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_kuy_tt 
-				k_kuy = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-				d_sisaket = { de_jure_liege = k_kuy }
-				d_siemreap = { de_jure_liege = k_kuy }
-				d_ubon = { de_jure_liege = k_kuy }
-				c_sakeo = { de_jure_liege = d_siemreap }
-				c_det_udom = { de_jure_liege = d_sisaket }
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_burma_lame = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			culture = myanmarese
-			NOT = {
-				dynasty = 3732605 #They got cooler bloodline
-			}
-			e_burma = {
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			k_mandalay = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_mon = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_karen = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_irrawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_hanthawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_burma_tt
-				e_burma = {
-					gain_empire_effect = yes					
-				}
-			}
-			if = {
-				limit = {
-					is_female = yes
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = burmar_female
-				}
-				new_bloodline = {
-					set_description = "burmar_female_desc"
-				}
-			}
-			if = {
-				limit = {
-					is_female = no
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = burmar_male
-				}
-				new_bloodline = {
-					set_description = "burmar_male_desc"
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_burma_cool = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			culture = myanmarese
-			dynasty = 3732605 #They got cooler bloodline
-			e_burma = {
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			k_mandalay = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_mon = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_karen = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_irrawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_hanthawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_burma_tt
-				e_burma = {
-					gain_empire_effect = yes					
-				}
-			}
-			if = {
-				limit = {
-					is_female = yes
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = burmar_wacky_female
-				}
-				new_bloodline = {
-					set_description = "burmar_wacky_female_desc"
-				}
-			}
-			if = {
-				limit = {
-					is_female = no
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = burmar_wacky_male
-				}
-				new_bloodline = {
-					set_description = "burmar_wacky_male_desc"
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_panglong = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			OR = {
-				culture = tai_shan
-				culture = mon
-				culture = karen
-				culture = chin
-			}
-			
-			e_panglong = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			
-			k_mon = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_karen = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_shan = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_irrawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_mandalay = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_rakhine = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_hanthawaddy = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-		
-		
-			custom_tooltip = {
-				text = form_panglong_tt 
-				e_panglong = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-			e_burma = {
-					destroy_landed_title = THIS
-				}
-				activate_title = {
-					title = e_burma
-					status = no
-				}
-			
-				###Epically troll the burmeese
-				k_mon = { de_jure_liege = e_panglong }
-				k_karen = { de_jure_liege = e_panglong }
-				k_shan = { de_jure_liege = e_panglong }
-				k_irrawaddy = { de_jure_liege = e_panglong }
-				k_mandalay = { de_jure_liege = e_panglong }
-				k_rakhine = { de_jure_liege = e_panglong }
-				k_chin = { de_jure_liege = e_panglong }
-				k_hanthawaddy = { de_jure_liege = e_panglong }
-			}
-			if = {
-				limit = {
-					is_female = yes
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = panglong_female
-				}
-				new_bloodline = {
-					set_description = "panglong_female_desc"
-				}
-			}
-			if = {
-				limit = {
-					is_female = no
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = panglong_male
-				}
-				new_bloodline = {
-					set_description = "panglong_male_desc"
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_angkor = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			OR = {
-				culture_group = khmer_group
-				culture = khmu
-				culture = kuy
-			}
-			
-			e_angkor = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			
-			k_cambodia = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_isan = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_chantabun = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_south_mekong = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_middle_mekong = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_north_mekong = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_vientian = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_champasak = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_angkor_tt 
-				e_angkor = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-			
-				###Epically troll the thai
-				k_cambodia = { de_jure_liege = e_angkor }
-				k_isan = { de_jure_liege = e_angkor }
-				k_vientian = { de_jure_liege = e_angkor }
-				k_champasak = { de_jure_liege = e_angkor }
-				k_luang_prabang = { de_jure_liege = e_angkor }
-				d_chantabun = { de_jure_liege = k_cambodia }
-				d_sisaket = { de_jure_liege = k_cambodia }
-				d_prachin = { de_jure_liege = k_cambodia }
-				d_chonburi = { de_jure_liege = k_cambodia }
-				d_south_mekong = { de_jure_liege = k_cambodia }
-				d_middle_mekong = { de_jure_liege = k_cambodia }
-				d_north_mekong = { de_jure_liege = k_cambodia }
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_laos = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			OR = {
-				culture = isan
-				culture = laotian
-				culture = midland_laotian
-				culture = highland_laotian
-			}
-			
-			e_laos = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_empire_allow = yes
-			
-			k_luang_prabang = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_ubon = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_udon = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_roiet = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_kalasin = { show_scope_change = no province_completely_controls_trigger = yes }
-			d_rattanakiri = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_vientian = { show_scope_change = no province_completely_controls_trigger = yes }
-			k_champasak = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_laos_tt 
-				e_laos = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-			
-				###Epically troll the thai
-				k_luang_prabang = { de_jure_liege = e_laos }
-				k_isan = { de_jure_liege = e_laos }
-				k_vientian = { de_jure_liege = e_laos }
-				k_champasak = { de_jure_liege = e_laos }
-				d_ubon = { de_jure_liege = k_champasak }
-				d_udon = { de_jure_liege = k_vientian }
-				d_kalasin = { de_jure_liege = k_vientian }
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_sri_vijaya = { #Sri Vijaya
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			OR = {
-				dynasty = 3843605 #Sri Vijaya scions
-				dynasty = 3843606
-				dynasty = 3843603
-			}
-			e_sri_vijaya = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_kingdom_allow = yes
-			#Controls those kingdoms
-				e_sumatra = { show_scope_change = no province_completely_controls_trigger = yes }
-				e_malaysia = { show_scope_change = no province_completely_controls_trigger = yes }				
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_sri_vijaya_tt
-				e_sri_vijaya = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-				k_aceh = { de_jure_liege = e_sri_vijaya }
-				k_bengkulu = { de_jure_liege = e_sri_vijaya }
-				k_riau = { de_jure_liege = e_sri_vijaya }
-				k_kedah = { de_jure_liege = e_sri_vijaya }		
-				k_pahang = { de_jure_liege = e_sri_vijaya }	
-				k_malaca = { de_jure_liege = e_sri_vijaya }	
-				k_paktai = { de_jure_liege = e_sri_vijaya }	
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	form_marblists = {
 		is_high_prio = yes

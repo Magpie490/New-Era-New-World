@@ -25,6 +25,48 @@ syncratic_group = {
 		Ayesha Abrar Afifah Anabia Hijrah Hind Hareem Iqra Judi Karida Khadijah Khalidah Khawlah Madeeha Maryam Mariyah Maymunah Mariam Mina Nuwwarrah Qismah Ruqayyah Saba Safaa Safiyyah Salma Shahrazad Sirin Sumaiyah Thuwaibah Umamah Zainab Zubaidah 
 	}
 	
+	puritan = {
+		graphical_culture = westerngfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 5
+		
+		color = { 0.1 0.8 0.5 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_THE_LIGHT GOD_THE_PATH
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_ONES_FROM_BEYOND THE_DARKNESS THE_POWERS
+		}
+		character_modifier = {
+			christian_opinion = 5
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+	}
 	voodun = {
 		graphical_culture = africangfx
 
@@ -92,48 +134,6 @@ syncratic_group = {
 		intermarry = zoroastrian_group
 		intermarry = syncratic_group
 		intermarry = ahlehaqq
-	}
-	puritan = {
-		graphical_culture = westerngfx
-		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 5
-		
-		color = { 0.1 0.8 0.5 }
-		
-		crusade_name = CRUSADE
-		use_new_crusade = no
-		crusade_cb = crusade
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_THE_LIGHT GOD_THE_PATH
-		}
-		
-		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL THE_ONES_FROM_BEYOND THE_DARKNESS THE_POWERS
-		}
-		character_modifier = {
-			christian_opinion = 5
-		}
-
-		aggression = 0.8
-		allow_rivermovement = yes
-		investiture = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		can_call_crusade = yes
-		can_retire_to_monastery = yes
-		priests_can_inherit = no
-		rel_head_defense = yes
-		
-		religious_clothing_head = 2
-		religious_clothing_priest = 2
 	}
 	pusaka = {
 		graphical_culture = muslimgfx
@@ -686,6 +686,7 @@ syncratic_group = {
 		can_call_crusade = no
 		max_consorts = 5
 		allow_looting = no
+		hard_to_convert = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		investiture = yes
 		female_temple_holders = yes

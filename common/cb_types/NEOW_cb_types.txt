@@ -8430,9 +8430,29 @@ taoist_county_conquest = {
 		}
 		
 		ROOT = {
-			religion = taoist
+			OR = {
+				religion_group = chinese_traditional_group
+				religion = white_lotus
+				religion = maoist
+				religion = red_cult
+				religion = tridemism
+				religion = neoncult
+				religion = xinjiao
+				religion = eastern_lightning
+			}
 		}
-
+		FROM = {
+			OR = {
+				religion_group = chinese_traditional_group
+				religion = white_lotus
+				religion = maoist
+				religion = red_cult
+				religion = tridemism
+				religion = neoncult
+				religion = xinjiao
+				religion = eastern_lightning
+			}
+		}
 		NOT = {
 			OR = {
 				ROOT = {
@@ -9739,7 +9759,6 @@ ottoman_reconquest = {
 			de_jure_liege_or_above = k_aromania
 			de_jure_liege_or_above = k_azerbaijan
 			de_jure_liege_or_above = k_montenegro
-			de_jure_liege_or_above = k_aromania
 			de_jure_liege_or_above = k_assyria
 			de_jure_liege_or_above = k_kurdistan
 			de_jure_liege_or_above = k_iraq
@@ -11680,13 +11699,13 @@ dismantle_threat_vladivostok_cb = {
 	
 	can_use_gui = {
 		ROOT = {
-			prestige = 1000
+			prestige = 500
 		}
 	}
 	
 	on_add = {
 		ROOT = {
-			prestige = -1000
+			prestige = -500
 		}
 	}
 	can_use = {
@@ -11696,17 +11715,7 @@ dismantle_threat_vladivostok_cb = {
 		}
 		FROM = { 
 			independent = yes
-			capital_scope = {
-				OR = {
-					region = world_manchuria
-					region = world_korea
-					region = world_china
-					region = world_japan
-					region = world_far_north_east
-					region = world_steppe_east
-				}
-			}
-			realm_size = 110 
+			realm_size = 95 
 			NOT = { government = confederation_government }
 		}
 	}
@@ -11805,9 +11814,6 @@ dismantle_threat_vladivostok_cb = {
 	ai_will_do = {
 		factor = 1
 			modifier = {
-				factor = 0.9
-			}
-			modifier = {
 				factor = 0.5
 				ROOT = {trait = misguided_warrior}
 			}
@@ -11829,24 +11835,12 @@ dismantle_threat_vladivostok_cb = {
 			}
 			modifier = {
 				factor = 0
-				ROOT = {trait = bhutan_isolationist}
-			}
-			modifier = {
-				factor = 0.5
-				ROOT = {trait = bhutan_open}
-			}
-			modifier = {
-				factor = 0
 				ROOT = {
 					opinion = { 
 						who = FROM
 						value = 40
 					}
 				}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = bhutan_expansionist}
 			}
 			modifier = {
 				factor = 2
@@ -11861,7 +11855,7 @@ dismantle_threat_vladivostok_cb = {
 				ROOT = {trait = proud}
 			}
 			modifier = {
-				factor = 0.2
+				factor = 0.8
 				ROOT = {trait = greedy}
 			}
 			modifier = {
@@ -12110,7 +12104,7 @@ dismantle_threat_anti_vladivostok_cb = {
 								liege = { character = ROOT_FROM }
 							}
 						}
-						narrative_event = { id = japan.3 }
+						narrative_event = { id = japan.31 }
 					}
 					death = { death_reason = death_execution_beheading killer = ROOT }
 					any_child = {
@@ -12184,9 +12178,6 @@ dismantle_threat_anti_vladivostok_cb = {
 	ai_will_do = {
 		factor = 1
 			modifier = {
-				factor = 0.9
-			}
-			modifier = {
 				factor = 0.5
 				ROOT = {trait = misguided_warrior}
 			}
@@ -12208,24 +12199,12 @@ dismantle_threat_anti_vladivostok_cb = {
 			}
 			modifier = {
 				factor = 0
-				ROOT = {trait = bhutan_isolationist}
-			}
-			modifier = {
-				factor = 0.5
-				ROOT = {trait = bhutan_open}
-			}
-			modifier = {
-				factor = 0
 				ROOT = {
 					opinion = { 
 						who = FROM
 						value = 40
 					}
 				}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = bhutan_expansionist}
 			}
 			modifier = {
 				factor = 2

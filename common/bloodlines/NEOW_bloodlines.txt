@@ -750,9 +750,8 @@ japanese_imperial_bloodline = {#Blood of the Japanese Emperor
 	monthly_character_piety = 0.5
 	japan_group_opinion = 10
 	shintoist_group_opinion = 5
-	inheritance = patrilineal
 	allow_bastards = no
-	picture = GFX_bloodlines_placeholder_symbol_2
+	picture = GFX_bloodlines_symbol_japanese_imperial
 	flags = { historical_bloodline japanese_imperial_blood }
 }
 supreme_leader_bloodline = {#Blood of the Supreme Leader
@@ -873,4 +872,17 @@ teiai = {
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_ruthless
 	flags = { historical_bloodline ambitious_bloodline teiai_blood bloodline_murder_deflection bloodline_murderous }
+}
+qing_bloodline = {
+	stewardship = 1
+	diplomacy = 1
+	bloodline_effect_ambition = 1
+	monthly_character_prestige = 0.25
+	liehuo_opinion = -5
+	red_cult_opinion = -5
+	tridemist_opinion = -5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { historical_bloodline ambitious_bloodline qing_blood }
 }

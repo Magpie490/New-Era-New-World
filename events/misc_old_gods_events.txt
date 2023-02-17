@@ -1,6 +1,6 @@
 # v1.10: Old Gods Events: 62300 - 62999
 
-# Written by Henrik Fåhraeus
+# Written by Henrik Fï¿½hraeus
 
 # Called from on_action: on_prepared_invasion_aborts
 # The target character is in FROM
@@ -301,7 +301,7 @@ character_event = {
 						}
 					}
 
-					religion_openly_norse_or_reformed_trigger = no
+					religion_group = oceanic
 					NOT = { has_religion_feature = religion_adventuring }
 				}
 			}
@@ -449,7 +449,7 @@ character_event = {
 		text = EVTDESC62320
 		trigger = {
 			OR = {
-				religion_openly_norse_or_reformed_trigger = yes
+				religion_group = oceanic
 				has_religion_feature = religion_adventuring
 			}
 
@@ -481,7 +481,7 @@ character_event = {
 						}
 					}
 
-					religion_openly_norse_or_reformed_trigger = no
+					religion_group = oceanic
 					NOT = { has_religion_feature = religion_adventuring }
 				}
 			}
