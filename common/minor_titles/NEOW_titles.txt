@@ -671,6 +671,9 @@ title_red_druk = {
 			}
 		}
 	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
 
 	message = yes
 }
@@ -754,6 +757,9 @@ title_blue_druk = {
 				opinion = { who = ROOT modifier = opinion_resigned_from_council }
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 
 	message = yes
@@ -839,6 +845,9 @@ title_yellow_druk = {
 			}
 		}
 	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
 
 	message = yes
 }
@@ -923,6 +932,9 @@ title_green_druk = {
 			}
 		}
 	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
 
 	message = yes
 }
@@ -980,6 +992,9 @@ title_senegal_prince = {
 			culture = nigerian
 		}
 	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
 
 	message = yes
 }
@@ -1002,6 +1017,7 @@ title_member_parliament = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1011,7 +1027,10 @@ title_member_parliament = {
 	}
 	
 	allowed_to_grant = {
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		has_landed_title = e_bhutan
 		primary_title = { 
 			OR = {
@@ -1023,6 +1042,9 @@ title_member_parliament = {
 				has_law = parliament_laws_bhutan_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1053,6 +1075,7 @@ title_member_parliament_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1062,7 +1085,10 @@ title_member_parliament_1 = {
 	}
 	
 	allowed_to_grant = {
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		has_landed_title = e_bhutan
 		primary_title = { 
 			OR = {
@@ -1073,6 +1099,9 @@ title_member_parliament_1 = {
 				has_law = parliament_laws_bhutan_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1103,6 +1132,7 @@ title_member_parliament_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1112,7 +1142,10 @@ title_member_parliament_2 = {
 	}
 	
 	allowed_to_grant = {
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		has_landed_title = e_bhutan
 		primary_title = {
 			NOT = { 
@@ -1120,6 +1153,9 @@ title_member_parliament_2 = {
 			}
 			has_law = parliament_laws_bhutan_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1150,6 +1186,7 @@ title_member_parliament_britannia = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1161,7 +1198,10 @@ title_member_parliament_britannia = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_britannia
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_brit_1 
@@ -1173,7 +1213,9 @@ title_member_parliament_britannia = {
 			}
 		}
 	}
-	
+	revoke_trigger = {
+		is_foe = FROM
+	}
 	gain_effect = {
 		character_event = { id = DRUK.5 }
 	}
@@ -1212,6 +1254,7 @@ title_member_parliament_britannia_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1223,7 +1266,10 @@ title_member_parliament_britannia_1 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_britannia
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_brit_2
@@ -1233,6 +1279,9 @@ title_member_parliament_britannia_1 = {
 				has_law = parliament_laws_brit_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1273,6 +1322,7 @@ title_member_parliament_britannia_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1284,13 +1334,19 @@ title_member_parliament_britannia_2 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_britannia
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = {
 			NOT = { 
 				has_law = parliament_laws_brit_0
 			}
 			has_law = parliament_laws_brit_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1332,6 +1388,7 @@ title_member_parliament_germany = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1346,7 +1403,10 @@ title_member_parliament_germany = {
 			has_landed_title = e_hre
 			has_landed_title = e_german_confederation
 		}
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_german_1 
@@ -1357,6 +1417,9 @@ title_member_parliament_germany = {
 				has_law = parliament_laws_german_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1397,6 +1460,7 @@ title_member_parliament_germany_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1411,7 +1475,10 @@ title_member_parliament_germany_1 = {
 			has_landed_title = e_hre
 			has_landed_title = e_german_confederation
 		}
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_german_2
@@ -1421,6 +1488,9 @@ title_member_parliament_germany_1 = {
 				has_law = parliament_laws_german_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1461,6 +1531,7 @@ title_member_parliament_germany_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1475,13 +1546,19 @@ title_member_parliament_germany_2 = {
 			has_landed_title = e_hre
 			has_landed_title = e_german_confederation
 		}
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = {
 			NOT = { 
 				has_law = parliament_laws_german_0
 			}
 			has_law = parliament_laws_german_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1524,6 +1601,7 @@ title_senator = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1544,6 +1622,9 @@ title_senator = {
 				has_law = parliament_laws_roman_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1585,6 +1666,7 @@ title_senator_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1604,6 +1686,9 @@ title_senator_1 = {
 				has_law = parliament_laws_roman_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1645,6 +1730,7 @@ title_senator_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1661,6 +1747,9 @@ title_senator_2 = {
 			}
 			has_law = parliament_laws_roman_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1703,6 +1792,7 @@ title_chechnik = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1727,6 +1817,9 @@ title_chechnik = {
 				has_law = parliament_laws_israel_3
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1768,6 +1861,7 @@ title_chechnik_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1791,6 +1885,9 @@ title_chechnik_1 = {
 				has_law = parliament_laws_israel_3
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1832,6 +1929,7 @@ title_chechnik_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1852,6 +1950,9 @@ title_chechnik_2 = {
 			}	
 			has_law = parliament_laws_israel_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1892,6 +1993,7 @@ title_member_parliament_russia = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1903,7 +2005,10 @@ title_member_parliament_russia = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_russian_republic
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_russian_1 
@@ -1914,6 +2019,9 @@ title_member_parliament_russia = {
 				has_law = parliament_laws_russian_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -1954,6 +2062,7 @@ title_member_parliament_russia_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -1965,7 +2074,10 @@ title_member_parliament_russia_1 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_russian_republic
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_russian_2
@@ -1975,6 +2087,9 @@ title_member_parliament_russia_1 = {
 				has_law = parliament_laws_russian_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -2015,6 +2130,7 @@ title_member_parliament_russia_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -2026,13 +2142,19 @@ title_member_parliament_russia_2 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_russian_republic
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = {
 			NOT = { 
 				has_law = parliament_laws_russian_0
 			}
 			has_law = parliament_laws_russian_3
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -2073,6 +2195,7 @@ title_member_parliament_EU = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -2084,7 +2207,10 @@ title_member_parliament_EU = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_european_union
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_EU_1 
@@ -2095,6 +2221,9 @@ title_member_parliament_EU = {
 				has_law = parliament_laws_EU_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -2135,6 +2264,7 @@ title_member_parliament_EU_1 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -2146,7 +2276,10 @@ title_member_parliament_EU_1 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_european_union
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = { 
 			OR = {
 				has_law = parliament_laws_EU_2
@@ -2156,6 +2289,9 @@ title_member_parliament_EU_1 = {
 				has_law = parliament_laws_EU_0
 			}
 		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
 	}
 	
 	gain_effect = {
@@ -2196,6 +2332,7 @@ title_member_parliament_EU_2 = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
+		is_landed = yes
 		is_adult = yes
 		prisoner = no
 		is_incapable = no
@@ -2207,7 +2344,10 @@ title_member_parliament_EU_2 = {
 	
 	allowed_to_grant = {
 		has_landed_title = e_european_union
-		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
 		primary_title = {
 			NOT = { 
 				has_law = parliament_laws_EU_0
@@ -2215,12 +2355,286 @@ title_member_parliament_EU_2 = {
 			has_law = parliament_laws_EU_3
 		}
 	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
 	
 	gain_effect = {
 		character_event = { id = DRUK.19 }
 	}
 	lose_effect = {
 		character_event = { id = DRUK.20 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_boyar_vladivostok = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 6
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		has_landed_title = e_vladivostok
+		culture_group = far_east_slavic
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		primary_title = { 
+			OR = {
+				has_law = parliament_laws_vlad_1 
+				has_law = parliament_laws_vlad_2
+				has_law = parliament_laws_vlad_3
+			}
+			NOT = { 
+				has_law = parliament_laws_vlad_0
+			}
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = DRUK.21 }
+	}
+	lose_effect = {
+		character_event = { id = DRUK.22 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_boyar_vladivostok_1 = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 6
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		has_landed_title = e_vladivostok
+		culture_group = far_east_slavic
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		primary_title = { 
+			OR = {
+				has_law = parliament_laws_vlad_2
+				has_law = parliament_laws_vlad_3
+			}
+			NOT = { 
+				has_law = parliament_laws_vlad_0
+			}
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = DRUK.21 }
+	}
+	lose_effect = {
+		character_event = { id = DRUK.22 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_boyar_vladivostok_2 = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 6
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		has_landed_title = e_vladivostok
+		culture_group = far_east_slavic
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		primary_title = {
+			NOT = { 
+				has_law = parliament_laws_vlad_0
+			}
+			has_law = parliament_laws_vlad_3
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = DRUK.21 }
+	}
+	lose_effect = {
+		character_event = { id = DRUK.22 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_shareholder = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 5
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.5
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		OR = {
+			has_landed_title = k_kia
+			has_landed_title = k_samsung
+			has_landed_title = k_hyundai
+			has_landed_title = k_lg
+			has_landed_title = e_kia
+			has_landed_title = e_samsung
+			has_landed_title = e_hyundai
+			has_landed_title = e_lg
+		}
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+	}
+	revoke_trigger = {
+		always = no
+	}
+	gain_effect = {
+		character_event = { id = DRUK.23 }
+	}
+	lose_effect = {
+		character_event = { id = DRUK.24 }
 		if = {
 			limit = {
 				FROM = {

@@ -11,7 +11,6 @@ feudal_governments = {
 			TRIBAL
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			eastern_feudal
 			chinese_imperial_government
 			muslim_government
 			makhzen_government
@@ -38,9 +37,6 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
 				is_government_potential = theocratic_feudal_government
 				is_government_potential = phonocratic_government
@@ -187,7 +183,6 @@ feudal_governments = {
 			republic_government
 			confederation_government
 			oligarchic_republic
-			colonial_government
 		}
 		free_revoke_on_governments_culture_and_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -213,9 +208,6 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
 				is_government_potential = confederation_government
 				is_government_potential = merchant_republic_government
@@ -259,18 +251,17 @@ feudal_governments = {
 		vassal_limit = -2
 		court_size_modifier = 5
 		court_size_maintenance_cost_modifier = -0.05
-	}	
+	}
 	
-	indian_feudal = {
+	muslim_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
-			CASTLE  
+			CASTLE
 			FORT
 			HOSPITAL
 		}
-		allowed_holdings_culture = { 
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
-			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -281,6 +272,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			agrarian_feudal_government
 			theocratic_feudal_government
 			roman_imperial_government
 			confederation_government
@@ -293,18 +285,14 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		free_revoke_on_tiers = { baron count }
-		frame_suffix = "_indianfeudal"
-		title_prefix = "indianfeudal_"
+		frame_suffix = "_iqta"
 		potential = {
-			isnt_forced_to_theocracy = yes
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
+				is_government_potential = theocratic_feudal_government
+				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
 				is_government_potential = hellenic_government
@@ -351,31 +339,25 @@ feudal_governments = {
 			has_oligarchy_title_trigger = no
 		}
 		
-		color = { 3 252 207 }
+		color = { 10 138 57 }
 		
-		uses_prestige_for_law_change = yes
-		can_imprison_without_reason = no
-		can_revoke_without_reason = no
-		ignores_de_jure_laws = yes 
 		uses_decadence = yes
-		men_can_take_consorts = yes
-		women_can_take_consorts = yes
-		max_consorts = 2
+		uses_piety_for_law_change = yes
+		
+		dukes_called_kings = yes
 		barons_need_dynasty = yes
-		aggression = 0.9
+		have_gender_laws = no
+		#allows_matrilineal_marriage = no
+		free_retract_vassalage = yes
+
+		free_levies_in_offensive_war = yes # Took away the hardcoded stuff for muslims where they could raise levies without pissing off vassals if in an offensive war.
 
 		can_build_tribal = no
 		
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
 		}
-        character_modifier = {
-			vassal_opinion = -15 #need to take coronation decision in order to offset debuff
-			build_cost_modifier = 0.05
-			local_build_time_modifier = 0.05
-			retinue_maintenence_cost = 0.05
-		}
-		capital_move_delay = 400
+		capital_move_delay = 600
 	}
 	hellenic_government = {
         color = { 43 35 129 }
@@ -468,8 +450,10 @@ feudal_governments = {
 			FORT
 			HOSPITAL
 		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+		allowed_holdings_religion = {  #Will not get the wrong government type penalty for tribes of the same religion
 			TRIBAL
+			TEMPLE
+			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -493,14 +477,15 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		frame_suffix = "_iqta"
+		free_revoke_on_tiers_religion = {
+			baron count
+		}
+		title_prefix = "phonocracy_"
+		frame_suffix = "_phonocracy"
 		potential = {
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
 				is_government_potential = theocratic_feudal_government
 				is_government_potential = phonocratic_government
@@ -516,21 +501,30 @@ feudal_governments = {
 				is_government_potential = mandala_government
 			}
 			isnt_forced_to_theocracy = yes
-			iqta_religion_trigger = yes
+			uses_phonocracy_trigger = yes
 			is_patrician = no
 			has_oligarchy_title_trigger = no
 		}
+		character_modifier = {
+			global_revolt_risk = 0.01
+			city_tax_modifier = -0.75
+			city_vassal_tax_modifier = -0.75
+			city_levy_size = 0.1
+			infidel_opinion = -15
+		}
 		
-		color = { 10 138 57 }
+		color = { 158 3 3 }
 		
-		uses_decadence = yes
 		uses_piety_for_law_change = yes
+		allow_looting = yes
 		
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
 		have_gender_laws = no
 		#allows_matrilineal_marriage = no
 		free_retract_vassalage = yes
+		ignores_de_jure_laws = yes
+		uses_jizya_tax = yes
 
 		free_levies_in_offensive_war = yes # Took away the hardcoded stuff for muslims where they could raise levies without pissing off vassals if in an offensive war.
 
@@ -539,6 +533,7 @@ feudal_governments = {
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
 		}
+		commander_limit = 6
 		capital_move_delay = 600
 	}
 	makhzen_government = {
@@ -890,7 +885,6 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
-			eastern_feudal
 			chinese_imperial_government
 			muslim_government
 			makhzen_government
@@ -915,9 +909,6 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
@@ -959,7 +950,6 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
-			eastern_feudal
 			chinese_imperial_government
 			muslim_government
 			makhzen_government
@@ -983,9 +973,6 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
 				is_government_potential = theocratic_feudal_government
 				is_government_potential = confederation_government
@@ -1114,7 +1101,6 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			chinese_imperial_government
-			eastern_feudal
 			muslim_government
 			makhzen_government
 			neoziamet_government
@@ -1141,10 +1127,6 @@ feudal_governments = {
 			primary_title = { has_title_flag = pretender_chinese_empire }
 			OR = {
 				culture_group = niger_congolese
-				culture_group = senegambian
-				culture_group = mande
-				culture_group = francacfrique
-				culture_group = afroatlantic
 				has_character_flag = chinese_imperial_government_preserve #keeps government when player is given culture change opton
 			}
 			is_patrician = no
@@ -1187,8 +1169,6 @@ feudal_governments = {
 		accepts_liege_governments = {
 			theocracy_government
 			chinese_imperial_government
-			eastern_feudal
-			indian_feudal
 			muslim_government
 			makhzen_government
 			neoziamet_government
@@ -1283,7 +1263,6 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			chinese_imperial_government
-			eastern_feudal
 			muslim_government
 			makhzen_government
 			neoziamet_government
@@ -1344,10 +1323,6 @@ feudal_governments = {
 					has_law = succ_byzantine_elective
 					higher_tier_than = KING
 				}
-				AND = {
-				    has_landed_title = e_great_russia
-					has_landed_title = d_petrist
-				}
 			}
 			is_patrician = no
 		}
@@ -1395,7 +1370,6 @@ feudal_governments = {
 		#}
 		accepts_liege_governments = { # Should always be independent, nothing else really makes sense
 			chinese_imperial_government
-			eastern_feudal
 			muslim_government
 			makhzen_government
 			neoziamet_government
@@ -1415,7 +1389,6 @@ feudal_governments = {
 		}
 		no_vassal_tax = {
 			tribal_government
-			eastern_feudal
 			feudal_government
 			agrarian_feudal_government
 			muslim_government
@@ -1445,7 +1418,6 @@ feudal_governments = {
 		can_build_tribal = yes
 		ignores_de_jure_laws = yes
 		vassal_call_to_arms = {
-			eastern_feudal
 			tribal_government
 			feudal_government
 			agrarian_feudal_government
