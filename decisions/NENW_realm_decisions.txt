@@ -230,5 +230,61 @@ decisions = {
 			e_springfield = { gain_title_effect = yes }
 		}
 	}
-	
+	form_carolina = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = karaliner
+				culture = carolino
+			}
+			e_carolina = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_tarheel
+			completely_controls = k_palmetto
+		}
+		effect = {
+			e_carolina = { gain_empire_effect = yes }
+			k_tarheel = { de_jure_liege = e_carolina }
+			k_palmetto = { de_jure_liege = e_carolina }
+			if = {
+				limit = {
+					completely_controls = d_bluehills
+					completely_controls = d_walhalla
+				}
+				d_bluehills = { de_jure_liege = k_tarheel }
+				d_walhalla = { de_jure_liege = k_tarheel }
+			}
+			if = {
+				limit = {
+					completely_controls = d_bristol
+					completely_controls = d_east_tennessee
+					completely_controls = d_beans
+					completely_controls = d_middle_tennessee
+					completely_controls = d_west_tennessee
+				}
+				d_bristol = { de_jure_liege = k_tennessee }
+				d_east_tennessee = { de_jure_liege = k_tennessee }
+				d_beans = { de_jure_liege = k_tennessee }
+				d_middle_tennessee = { de_jure_liege = k_tennessee }
+				d_west_tennessee = { de_jure_liege = k_tennessee }
+				k_tennessee = { de_jure_liege = e_carolina }
+			}
+			if = {
+				limit = {
+					completely_controls = d_blue_ridge
+				}
+				d_blue_ridge = { de_jure_liege = k_palmetto }
+			}
+		}
+	}
 }
