@@ -45,6 +45,8 @@ e_great_lakes = {
 	color2 = { 255 255 255 }
 	capital = 170 #Chicago
 	
+	
+	
 	allow = {
 		conditional_tooltip = {
 			trigger = {
@@ -53,6 +55,28 @@ e_great_lakes = {
 				}
 			}
 			e_great_lakes = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_carolina = {
+	color = { 123 50 220 }
+	color2 = { 220 220 220 }
+	
+	capital = 164
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_carolina = {
+					is_titular = yes
+				}
+			}
+			e_carolina = {
 				is_titular = no
 			}
 		}

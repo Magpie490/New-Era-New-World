@@ -1,5 +1,5 @@
 e_columbia = {
-	color={ 174 221 225 }
+	color={ 56 109 255 }
 	color2={ 220 220 0 }
 	capital = 63 #Washington
 	creation_requires_capital = yes
@@ -936,7 +936,7 @@ e_columbia = {
 			}
 		}
 	}
-	k_columbia = { #
+	k_columbia = { 
 		color={ 174 221 225 }
 		color2={ 220 220 0 }
 
@@ -980,7 +980,7 @@ e_columbia = {
 				b_edgemoor_DE = {}
 				b_newport_DE = {}
 				b_christiana_DE = {}
-				b_elkton_MD = {}
+				
 				b_glasgow_DE = {}
 			}
 			c_dover = {
@@ -988,19 +988,27 @@ e_columbia = {
 				color2={ 220 220 0 }
 
 				b_dover_DE = {}
-				b_milford_DE = {}
+				b_kenton_DE = {}
 				b_harrington_DE = {}
-				b_millsboro_DE = {}
-				b_laurel_DE = {}
+				b_wyoming_DE = {}
+				b_felton_DE = {}
+				b_viola_DE = {}
+				b_farmingon_DE = {}
+			}
+			c_sussex = {
+				color = {71 81 145}
+				color2 = {255 255 255}
+				
+				b_georgetown_DE = {}
 				b_seaford_DE = {}
 				b_lewes_DE = {}
-				b_dagsboro_DE = {}
-				### above and beyond ###
-				#b_bridgeville_DE = {
-				#}
-				#b_selbyville_DE = {
-				#}
+				b_millsboro_DE = {}
+				b_laurel_DE = {}
+				b_selbyville_DE = {}
+				b_bridgeville_DE = {}
 			}
+		}
+		d_eastshore = {
 			c_choptank = {
 				color={ 195 160 45 }
 				color2={ 220 220 0 }
@@ -1014,19 +1022,32 @@ e_columbia = {
 				b_preston_MD = {}
 				b_rhodesdale_MD = {}
 			}
-			c_pocomoke = {
-				color={ 195 100 45 }
-				color2={ 220 220 0 }
-
-				b_crisfield_MD = {}
-				b_temperanceville_VA = {}
-				b_horntown_VA = {}
-				b_exmore_VA = {}
-				b_greenbackville_VA = {}
-				b_stockton_MD = {}
-				b_bloxom_VA = {}
-				b_parksley_VA = {}
+			c_cecil = {
+				color = {14 234 227}
+				color2 = {255 255 255}
+				
+				b_elkton_MD = {}
+				b_cecilton_MD = {}
+				b_chesapeake_city_MD = {}
+				b_betterton_MD = {}
+				b_earleville_MD = {}
+				b_galena_MD = {}
+				b_butlertown_MD = {}
 			}
+			c_worcester_MD = {
+				color = {68 99 88}
+				color2 = {255 255 255}
+				
+				b_salisbury_MD = {}
+				b_fruitland_MD = {}
+				b_snow_hill_MD = {}
+				b_pocomoke_MD = {}
+				b_ocean_pines_MD = {}
+				b_princess_anne_MD = {}
+				b_crisfield_MD = {}
+				
+			}
+			
 		}
 		d_maryland = {
 			color={ 92 86 71 }
@@ -1041,18 +1062,25 @@ e_columbia = {
 				color2={ 220 220 0 }
 
 				b_baltimore_MD = {}
+				b_towson_MD = {}
 				b_dundalk_MD = {}
-				b_edgewood_MD = {}
-				b_abingdon_MD = {}
 				b_cockeysville_MD = {}
 				b_reisterstown_MD = {}
-				b_halethorpe_MD = {}
 				b_lutherville_MD = {}
-				### above and beyond ###
 				b_timonium_MD = {}
-				b_towson_MD = {}
 				b_pikesville_MD = {}
-				b_cheswolde_MD = {}
+			}
+			c_harford = {
+				color = {97 150 57}
+				color2 = {255 255 255}
+				
+				b_bel_air_MD = {}
+				b_aberdeen_MD = {}
+				b_havre_de_grace_MD = {}
+				b_perryville_MD = {}
+				b_north_east_MD = {}
+				b_edgewood_MD = {}
+				b_abingdon_MD = {}
 			}
 			c_severn = {
 				color={ 136 128 102 }
@@ -1063,10 +1091,21 @@ e_columbia = {
 				b_davidsonville_MD = {}
 				b_crownsville_MD = {}
 				b_parole_MD = {}
-				b_mechanicsville_MD = {}
 				b_brandywine_MD = {}
 				b_nanjemoy_MD = {}
 				b_fort_meade_MD = {}
+			}
+			c_calvert = {
+				color = {196 111 7}
+				color2 = {255 255 255}
+				
+				b_chesapeake_beach_MD = {}
+				b_la_plata_MD = {}
+				b_leonardtown_MD = {}
+				b_north_beach_MD = {}
+				b_pomfret_MD = {}
+				b_mechanicsville_MD = {}
+				b_huntingtown_MD = {}
 			}
 			c_frederick = {
 				color={ 130 120 100 }
@@ -1074,13 +1113,36 @@ e_columbia = {
 				holy_site = anabaptist
 
 				b_frederick_MD = {}
-				b_hagerstown_MD = {}
+				b_brunswick_MD = {}
 				b_thurmont_MD = {}
-				b_boonsboro_MD = {}
+				b_emmitsburg_MD = {}
 				b_walkersville_MD = {}
 				b_urbana_MD = {}
-				b_germantown_MD = {}
+				b_rosemont_MD = {}
+			}
+			c_westminister = {
+				color = {19 140 104}
+				color2 = {255 255 255}
+				
+				b_westminister_MD = {}
+				b_eldersburg_MD = {}
 				b_taneytown_MD = {}
+				b_new_windsor_MD = {}
+				b_hampstead_MD = {}
+				b_mount_airy_MD = {}
+				b_union_bridge_MD = {}
+			}
+			c_montgomery_md = {
+				color = {158 201 226}
+				color2 = {255 255 255}
+				
+				b_rockville_MD = {}
+				b_gaithersburg_MD = {}
+				b_germantown_MD = {}
+				b_brookeville_MD = {}
+				b_kensington_MD = {}
+				b_chevy_chase_MD = {}
+				b_drummond_MD = {}
 			}
 		}
 		d_capital = {
@@ -1608,6 +1670,14 @@ e_columbia = {
 		color = { 0 0 255 }
 		color2 = { 255 255 255 }
 		capital = 69 #Boston
+		d_boston_republic = {
+			color={ 190 200 120 }
+			color2={ 220 220 20 }
+			short_name = yes
+			capital = 69
+			allow = { always = no }
+			dignity = 100
+		}
 		d_massachusetts = {
 			color={ 31 44 92 }
 			color2={ 220 220 0 }
@@ -1790,9 +1860,12 @@ e_columbia = {
 			}
 		}
 	}
-		k_carolina = {
-		color={ 226 239 175 }
-		color2={ 220 220 0 }
+
+	k_tarheel = {
+		color = { 200 75 75 }
+		color2 = { 220 220 220 }
+		
+		capital = 139
 
 		# Crusade target weight
 		catholic = 5
@@ -1805,13 +1878,13 @@ e_columbia = {
 		capital = 164
 
 		d_lowcountry = {
-			color={ 18 141 80 }
+			color={ 156 106 114 }
 			color2={ 220 220 0 }
 
 			capital = 164
 
 			c_beaufort = {
-				color={ 25 135 75 }
+				color={ 137 95 102 }
 				color2={ 220 220 0 }
 
 				b_beaufort_SC = {}
@@ -1824,7 +1897,7 @@ e_columbia = {
 				b_hollywood_SC = {}
 			}
 			c_charleston = {
-				color={ 22 165 98 }
+				color={ 155 116 123 }
 				color2={ 220 220 0 }
 
 				b_charleston_SC = {}
@@ -1836,41 +1909,28 @@ e_columbia = {
 				b_summerville_SC = {}
 				b_lincolnville_SC = {}
 			}
-			c_grand_strand = {
-				color={ 35 103 75 }
+			c_berkeley = {
+				color={ 182 119 130 }
 				color2={ 220 220 0 }
 
-				b_myrtle_beach_SC = {}
-				b_conway_SC = {}
-				b_georgetown_SC = {}
-				b_socastee_SC = {}
-				b_andrews_SC = {}
-				b_red_hill_SC = {}
-				b_salters_SC = {}
-				b_lane_SC = {}
-			}
-			c_pee_dee = {
-				color={ 47 145 79 }
-				color2={ 220 220 0 }
-
-				b_florence_SC = {}
-				b_darlington_SC = {}
-				b_effingham_SC = {}
-				b_timmonsville_SC = {}
-				b_latta_SC = {}
-				b_lamar_SC = {}
-				b_pamplico_SC = {}
-				b_olanta_SC = {}
+				b_dorchester_SC = {}
+				b_pinopolis_SC = {}
+				b_ridgeville_SC = {}
+				b_cottageville_SC = {}
+				b_givhans_ferry_SC = {}
+				b_cross_SC = {}
+				b_walterboro_SC = {}
+				b_round_o_SC = {}
 			}
 		}
 		d_santee = {
-			color={ 57 51 181 }
+			color={ 91 104 92 }
 			color2={ 220 220 0 }
 
-			capital=154 # Congaree/Columbia, SC
+			capital=155
 
 			c_upcountry = {
-				color={ 68 71 202 }
+				color={ 69 80 70 }
 				color2={ 220 220 0 }
 
 				b_greenville_SC = {}
@@ -1882,99 +1942,69 @@ e_columbia = {
 				b_powdersville_SC = {}
 				b_gaffney_SC = {}
 			}
-			c_wateree = {
-				color={ 72 62 170 }
+			c_anderson = {
+				color={ 99 110 100 }
 				color2={ 220 220 0 }
 
-				b_rock_hill_SC = {
+				b_northlake_SC = {}
+				b_starr_SC = {}
+				b_allendale_SC = {}
+				b_antreville_SC = {}
+				b_lowndesville_SC = {}
+				b_belton_SC = {}
+				b_aaron_SC = {}
+				b_sadlers_creek_SC = {}
+			}
+			c_greenwood = {
+				color={ 82 114 85 }
+				color2={ 220 220 0 }
+
+				b_greenwood_SC = {}
+				b_abbeville_SC = {}
+				b_edgefield_SC = {}
+				b_mccormick_SC = {}
+				b_calhoun_falls_SC = {
 					used_for_dynasty_names = no
 				}
-				b_catawba_SC = {}
-				b_york_SC = {}
-				b_clover_SC = {}
-				b_chester_SC = {}
-				b_lancaster_SC = {}
-				b_springdale_SC = {}
-				b_great_falls_SC = {
-					used_for_dynasty_names = no
-				}
-			}
-			c_congaree = {
-				color={ 48 43 149 }
-				color2={ 220 220 0 }
-
-				b_columbia_SC = {}
-				b_blythewood_SC = {}
-				b_cayce_SC = {}
-				b_dentsville_SC = {}
-				b_seven_oaks_SC = {
-					used_for_dynasty_names = no
-				}
-				b_irmo_SC = {}
-				b_chapin_SC = {}
-				b_lexington_SC = {}
-			}
-			c_saluda = {
-				color={ 47 41 185 }
-				color2={ 220 220 0 }
-
-				b_saluda_SC = {}
-				b_batesburg_SC = {}
-				b_leesville_SC = {}
-				b_johnston_SC = {}
-				b_monetta_SC = {}
-				b_ridge_spring_SC = {}
-				b_ward_SC = {}
-				b_chappells_SC = {}
-			}
-			c_edisto = {
-				color={ 60 64 180 }
-				color2={ 220 220 0 }
-
-				b_orangeburg_SC = {}
-				b_santee_SC = {}
-				b_denmark_SC = {}
-				b_brookdale_SC = {}
-				b_matthews_SC = {}
-				b_bamberg_SC = {}
-				b_branchville_SC = {}
-				b_bowman_SC = {}
+				b_lowndesville_SC = {}
+				b_iva_SC = {}
+				b_antreville_SC = {}
 			}
 		}
 		d_outer_banks = {
-			color={ 230 225 25 }
+			color={ 33 182 219 }
 			color2={ 220 220 0 }
 
 			capital = 130
 
 			c_currituck = {
-				color={ 205 200 20 }
+				color={ 17 163 199 }
 				color2={ 220 220 0 }
 
 				b_currituck_NC = {}
 				b_moyock_NC = {}
-				b_kitty_hawk_NC = {}
-				b_kill_devil_hills_NC = {}
+				b_gregory_NC = {}
+				b_shawboro_NC = {}
 				b_grandy_NC = {}
 				b_camden_NC = {}
-				b_corolla_NC = {}
+				b_sligo_NC = {}
 				b_barco_NC = {}
 			}
-			c_albemarle_hatteras = {
-				color={ 230 225 130 }
+			c_mattamuskeet = {
+				color={ 38 177 212 }
 				color2={ 220 220 0 }
 
 				b_belhaven_NC = {}
 				b_columbia_NC = {}
-				b_hatteras_NC = {}
+				b_lake_landing_NC = {}
 				b_creswell_NC = {}
 				b_swanquarter_NC = {}
 				b_plymouth_NC = {}
-				b_rodanthe_NC = {}
-				b_salvo_NC = {}
+				b_phelps_NC = {}
+				b_green_valley_NC = {}
 			}
 			c_carteret = {
-				color={ 230 250 25 }
+				color={ 55 192 226 }
 				color2={ 220 220 0 }
 
 				b_swansboro_NC = {}
@@ -1983,34 +2013,47 @@ e_columbia = {
 				b_newport_NC = {}
 				b_davis_NC = {}
 				b_atlantic_NC = {}
-				b_ocracoke_NC = {}
+				b_south_river_NC = {}
 				b_havelock_NC = {}
 				b_emerald_isle_NC = {}
 			}
-		}
-		d_inner_banks = {
-			color={ 153 201 54 }
-			color2={ 220 220 0 }
-
-			capital = 133
-
-			c_greenville = {
-				color={ 167 226 29 }
+			c_corolla_banks = {
+				color={ 17 177 218 }
 				color2={ 220 220 0 }
 
-				b_greenville_NC = {}
-				b_new_bern_NC = {
-					deitsch = "Nei Bann"
-				}
-				b_washington_NC = {}
-				b_ernul_NC = {}
-				b_winterville_NC = {}
-				b_ayden_NC = {}
-				b_grifton_NC = {}
-				b_vanceboro_NC = {}
+				b_kitty_hawk_NC = {}
+				b_kill_devil_hills_NC = {}
+				b_duck_NC = {}
+				b_corolla_NC = {}
+				b_sandbridge_NC = {}
+				b_carova_beach_NC = {}
+				b_nags_head_NC = {}
+				b_southern_shores_NC = {}
+				b_sandy_run_NC = {}
 			}
+			c_hatteras_islands = {
+				color={ 28 157 189 }
+				color2={ 220 220 0 }
+
+				b_hatteras_NC = {}
+				b_frisco_NC = {}
+				b_buxton_NC = {}
+				b_ocracoke_NC = {}
+				b_portsmouth_NC = {}
+				b_hammock_hills_NC = {}
+				b_avon_NC = {}
+				b_rodanthe_NC = {}
+				b_salvo_NC = {}
+			}
+		}
+		d_inner_banks = {
+			color={ 255 204 102 }
+			color2={ 220 220 0 }
+
+			capital = 134
+
 			c_chowan = {
-				color={ 130 170 145 }
+				color={ 245 192 87 }
 				color2={ 220 220 0 }
 
 				b_murfreesboro_NC = {}
@@ -2022,41 +2065,53 @@ e_columbia = {
 				b_lasker_NC = {}
 				b_woodland_NC = {}
 			}
-			c_roanoke_rapids = {
-				color={ 150 200 55 }
+			c_five_points = {
+				color={ 247 208 128 }
 				color2={ 220 220 0 }
 
-				b_roanoke_rapids_NC = {}
-				b_rocky_mount_NC = {}
-				b_hollister_NC = {}
-				b_henderson_NC = {}
-				b_battleboro_NC = {}
-				b_whitakers_NC = {}
-				b_enfield_NC = {}
-				b_norlina_NC = {}
+				b_washington_NC = {}
+				b_river_road_NC = {}
+				b_bath_NC = {}
+				b_bayview_NC = {}
+				b_pinetown_NC = {}
+				b_pantego_NC = {}
+				b_belhaven_NC = {}
+				b_manning_NC = {}
 			}
-			c_lejeune = {
-				color={ 227 227 35 }
+			c_pamlico = {
+				color={ 219 178 97 }
 				color2={ 220 220 0 }
 
-				b_jacksonville_NC = {}
-				b_chinquapin_NC = {}
-				b_richlands_NC = {}
-				b_stump_sound_NC = {}
-				b_holly_ridge_NC = {}
-				b_sneads_ferry_NC = {}
-				b_half_moon_NC = {}
-				b_maple_hill_NC = {}
+				b_grantsboro_NC = {}
+				b_alliance_NC = {}
+				b_bayboro_NC = {}
+				b_fairfield_harbour_NC = {}
+				b_arapahoe_NC = {}
+				b_oriental_NC = {}
+				b_aurora_NC = {}
+				b_edward_NC = {}
+			}
+			c_hofmann = {
+				color={ 228 193 123 }
+				color2={ 220 220 0 }
+
+				b_new_bern_NC = {}
+				b_james_city_NC = {}
+				b_trent_woods_NC = {}
+				b_riverbend_NC = {}
+				b_trenton_NC = {}
+				b_oak_grove_NC = {}
+				b_cove_city_NC = {}
 			}
 		}
 		d_triangle = {
-			color={ 122 70 153 }
+			color={ 123 161 228 }
 			color2={ 220 220 0 }
 
 			capital = 139
 
 			c_raleigh = {
-				color={ 120 70 155 }
+				color={ 109 147 213 }
 				color2={ 220 220 0 }
 
 				b_raleigh_NC = {}
@@ -2069,7 +2124,7 @@ e_columbia = {
 				b_rolesville_NC = {}
 			}
 			c_durham = {
-				color={ 115 66 145 }
+				color={ 99 146 226 }
 				color2={ 220 220 0 }
 
 				b_durham_NC = {}
@@ -2081,45 +2136,56 @@ e_columbia = {
 				b_timberlake_NC = {}
 				b_schley_NC = {}
 			}
-			c_chapel_hill = {
-				color={ 112 65 160 }
+			c_granville = {
+				color={ 78 121 195 }
 				color2={ 220 220 0 }
-				holy_site = evangelical
 
-				b_chapel_hill_NC = {
+				b_henderson_NC = {}
+				b_oxford_NC = {}
+				b_watkins_NC = {}
+				b_middleburg_NC = {}
+				b_woodworth_NC = {}
+				b_dabney_NC = {}
+				b_lewis_NC = {}
+				b_kittrell_NC = {}
+			}
+			c_roanoke_rapids = {
+				color={ 51 108 208 }
+				color2={ 220 220 0 }
+
+				b_roanoke_rapids_NC = {}
+				b_rocky_mount_NC = {}
+				b_hollister_NC = {}
+				b_henderson_NC = {}
+				b_battleboro_NC = {}
+				b_whitakers_NC = {}
+				b_enfield_NC = {}
+				b_norlina_NC = {}
+			}
+			c_greenville = {
+				color={ 100 150 236 }
+				color2={ 220 220 0 }
+
+				b_greenville_NC = {}
+				b_new_bern_NC = {
+					deitsch = "Nei Bann"
 				}
-				b_carrboro_NC = {}
-				b_moncure_Nc = {}
-				b_pittsboro_NC = {}
-				b_fearrington_NC = {}
-				b_snow_camp_NC = {
-					used_for_dynasty_names = no
-				}
-				b_golston_NC = {}
-				b_saxapahaw_NC = {}
+				b_house_NC = {}
+				b_ernul_NC = {}
+				b_winterville_NC = {}
+				b_ayden_NC = {}
+				b_grifton_NC = {}
+				b_vanceboro_NC = {}
 			}
 		}
 		d_piedmont_crescent = {
-			color={ 149 242 233 }
+			color={ 30 185 118 }
 			color2={ 220 220 0 }
 
 			capital = 143
 
-			c_catawba = {
-				color={ 94 213 234 }
-				color2={ 220 220 0 }
-
-				b_harmony_NC = {}
-				b_statesville_NC = {}
-				b_mooresville_NC = {}
-				b_taylorsville_NC = {}
-				b_valdese_NC = {}
-				b_union_grove_NC = {}
-				b_claremont_NC = {}
-				b_troutman_NC = {}
-			}
 			c_metrolina = {
-				color={ 111 238 225 }
+				color={ 43 181 121 }
 				color2={ 220 220 0 }
 
 				b_charlotte_NC = {}
@@ -2136,7 +2202,7 @@ e_columbia = {
 				b_lincolnton_NC = {}
 			}
 			c_piedmont_triad = {
-				color={ 113 218 236 }
+				color={ 48 205 137 }
 				color2={ 220 220 0 }
 
 				b_winston_salem_NC = {}
@@ -2151,7 +2217,7 @@ e_columbia = {
 				b_kernersville_NC = {}
 			}
 			c_uwharrie = {
-				color={ 113 210 220 }
+				color={ 32 215 136 }
 				color2={ 220 220 0 }
 
 				b_albemarle_NC = {}
@@ -2163,6 +2229,36 @@ e_columbia = {
 				b_carthage_NC = {}
 				b_ansonville_NC = {}
 			}
+			c_anson = {
+				color={ 56 189 131 }
+				color2={ 220 220 0 }
+
+				b_ansonville_NC = {}
+				b_porter_NC = {}
+				b_aquadale_NC = {}
+				b_norwood_NC = {}
+				b_new_london_NC = {}
+				b_endy_NC = {}
+				b_badin_NC = {}
+				b_gold_hill_NC = {}
+			}
+			c_chapel_hill = {
+				color={ 74 230 163 }
+				color2={ 220 220 0 }
+				holy_site = evangelical
+
+				b_chapel_hill_NC = {
+				}
+				b_carrboro_NC = {}
+				b_moncure_Nc = {}
+				b_pittsboro_NC = {}
+				b_fearrington_NC = {}
+				b_snow_camp_NC = {
+					used_for_dynasty_names = no
+				}
+				b_golston_NC = {}
+				b_saxapahaw_NC = {}
+			}
 		}
 		d_sandhills = {
 			color={ 193 184 132 }
@@ -2170,19 +2266,6 @@ e_columbia = {
 
 			capital = 137
 
-			c_cape_fear = {
-				color={ 188 167 92 }
-				color2={ 220 220 0 }
-
-				b_wilmington_NC = {}
-				b_winnabow_NC = {}
-				b_murrayville_NC = {}
-				b_shallotte_NC = {}
-				b_southport_NC = {}
-				b_delco_NC = {}
-				b_leland_NC = {}
-				b_whiteville_NC = {}
-			}
 			c_cheraw = {
 				color={ 201 192 146 }
 				color2={ 220 220 0 }
@@ -2212,8 +2295,83 @@ e_columbia = {
 				b_benson_NC = {}
 				b_roseboro_NC = {}
 			}
+			c_robeson = {
+					color={ 232 228 203 }
+					color2={ 220 220 0 }
+
+					b_chadbourn_NC = {}
+					b_whiteville_NC = {}
+					b_warsaw_NC = {}
+					b_pireway_NC = {}
+					b_antioch_NC = {}
+					b_cerro_gordo_NC = {}
+					b_tabor_city_NC = {}
+					b_nakina_NC = {}
+			}
+			c_moore = {
+					color={ 189 185 158 }
+					color2={ 220 220 0 }
+
+					b_aberdeen_NC = {}
+					b_pinehurst_NC = {}
+					b_pinebluff_NC = {}
+					b_ashley_heights_NC = {}
+					b_southern_pines_NC = {}
+					b_vass_NC = {}
+					b_whispering_pines_NC = {}
+					b_foxfire_NC = {}
+			}
+		}
+		d_cape_fear = {
+
+			color={ 216 56 56 }
+			color2={ 220 220 0 }
+
+			capital = 135
+
+			c_cape_fear = {
+				color={ 240 64 64 }
+				color2={ 220 220 0 }
+
+				b_wilmington_NC = {}
+				b_winnabow_NC = {}
+				b_murrayville_NC = {}
+				b_shallotte_NC = {}
+				b_southport_NC = {}
+				b_delco_NC = {}
+				b_leland_NC = {}
+				b_whiteville_NC = {}
+			}
+			c_lejeune = {
+				color={ 223 29 29 }
+				color2={ 220 220 0 }
+
+				b_jacksonville_NC = {}
+				b_chinquapin_NC = {}
+				b_richlands_NC = {}
+				b_stump_sound_NC = {}
+				b_holly_ridge_NC = {}
+				b_sneads_ferry_NC = {}
+				b_half_moon_NC = {}
+				b_maple_hill_NC = {}
+			}
+			c_bladen = {
+				color={ 193 25 25 }
+				color2={ 220 220 0 }
+
+				b_wallace_NC = {}
+				b_teachy_NC = {}
+				b_warsaw_NC = {}
+				b_magnolia_NC = {}
+				b_greenevers_NC = {}
+				b_beulaville_NC = {}
+				b_kenansville_NC = {}
+				b_rose_hill_NC = {}
+			}
 		}
 	}
+	
+	
 	
 	k_old_dominion = {
 		color={ 182 89 84 }
@@ -2342,6 +2500,19 @@ e_columbia = {
 				b_zuni_VA = {}
 				b_lynnhaven_VA = {}
 				b_the_great_dismal_VA = {}
+			}
+			
+			c_pocomoke = {
+				color={ 195 100 45 }
+				color2={ 220 220 0 }
+				
+				b_temperanceville_VA = {}
+				b_horntown_VA = {}
+				b_exmore_VA = {}
+				b_greenbackville_VA = {}
+				b_stockton_MD = {}
+				b_bloxom_VA = {}
+				b_parksley_VA = {}
 			}
 		}
 		d_southside = {
@@ -2500,6 +2671,62 @@ e_columbia = {
 					}
 				}
 				k_wampanoag = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_maryland = {
+		color = { 234 170 0 }
+		color2 = { 255 255 255 }
+		capital = 52
+		
+		deitsch = "Marrland"
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_maryland = {
+						is_titular = yes
+					}
+				}
+				k_maryland = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_delaware = {
+		color = { 10 20 180 }
+		color2 = { 255 255 255 }
+		capital = 54
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_delaware = {
+						is_titular = yes
+					}
+				}
+				k_delaware = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_delmarva = {
+		color = { 200 50 50 }
+		color2 = { 255 255 255 }
+		capital = 54
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_delmarva = {
+						is_titular = yes
+					}
+				}
+				k_delmarva = {
 					is_titular = no
 				}
 			}
