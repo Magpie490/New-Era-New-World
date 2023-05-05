@@ -94,7 +94,7 @@ e_columbia = {
 		}
 		d_finger_lakes = {
 
-			capital = 16
+			capital = 17
 
 			color={ 160 87 63 }
 			color2={ 220 220 0 }
@@ -154,6 +154,21 @@ e_columbia = {
 				b_jasper_NY = {}
 				b_canisteo_NY = {}
 			}
+			c_buffalo = {
+				color={ 130 60 60 }
+				color2={ 220 220 0 }
+
+				b_buffalo_NY = {}
+				b_cheektowaga_NY = {}
+				b_tonawanda_NY = {}
+				b_amherst_NY = {}
+				b_lackawanna_NY = {}
+				b_bowmansville_NY = {
+					deitsch = "Baumanschteddel"
+				}
+				b_newfane_NY = {}
+				b_wheatfield_NY = {}
+			}
 		}
 		d_cayuga = {
 			color={ 95 102 197 }
@@ -205,6 +220,19 @@ e_columbia = {
 				b_hector_NY = {}
 				b_covert_NY = {}
 				b_ovid_NY = {}
+			}
+			c_tripolis = {
+				color={ 198 220 39 }
+				color2={ 220 220 0 }
+
+				b_binghamton_NY = {}
+				b_endicott_NY = {}
+				b_johnson_city_NY = {}
+				b_conklin_NY = {}
+				b_susquehanna_PA = {}
+				b_montrose_PA = {}
+				b_vestal_NY = {}
+				b_friendsville_PA = {}
 			}
 		}
 		d_mohawk_valley = {
@@ -860,78 +888,6 @@ e_columbia = {
 
 		capital = 27 # Philadelphia
 		
-		d_east_susquehanna = {
-			color={ 162 181 30 }
-			color2={ 220 220 0 }
-
-			capital = 85
-
-			c_chemung = {
-				color={ 123 137 22 }
-				color2={ 220 220 0 }
-
-				b_elmira_NY = {}
-				b_horseheads_NY = {}
-				b_southport_NY = {}
-				b_waverly_NY = {}
-				b_sayre_PA = {}
-				b_athens_PA = {}
-				b_owego_NY = {}
-				b_gillett_PA = {}
-			}
-			c_tripolis = {
-				color={ 198 220 39 }
-				color2={ 220 220 0 }
-
-				b_binghamton_NY = {}
-				b_endicott_NY = {}
-				b_johnson_city_NY = {}
-				b_conklin_NY = {}
-				b_susquehanna_PA = {}
-				b_montrose_PA = {}
-				b_vestal_NY = {}
-				b_friendsville_PA = {}
-			}
-			c_williamsport = {
-				color={ 139 157 36 }
-				color2={ 220 220 0 }
-
-				b_williamsport_PA = {}
-				b_lock_haven_PA = {}
-				b_selinsgrove_PA = {}
-				b_sunbury_PA = {}
-				b_lewisburg_PA = {}
-				b_middleburg_PA = {}
-				b_dornsife_PA = {}
-				b_northumberland_PA = {}
-				b_montoursville_PA = {}
-				b_watsontown_PA = {}
-			}
-			c_ricketts = {
-				color={ 198 220 39 }
-				color2={ 220 220 0 }
-
-				b_dushore_PA = {}
-				b_tunkhannock_PA = {}
-				b_eagles_mere_PA = {}
-				b_forksville_PA = {}
-				b_meshoppen_PA = {}
-				b_harveys_lake_PA = {}
-				b_aldovin_PA = {}
-			}
-			c_bradford = {
-				color={ 198 220 39 }
-				color2={ 220 220 0 }
-
-				b_wyalusing_PA = {}
-				b_montrose_PA = {}
-				b_new_milford_PA = {}
-				b_hailstead_PA = {}
-				b_rome_PA = {}
-				b_friendsville_PA = {}
-				b_little_meadows_PA = {}
-			}
-		}
 		d_three_mile_island = {
 			color={ 134 153 121 }
 			color2={ 220 220 0 }
@@ -1035,12 +991,129 @@ e_columbia = {
 				b_west_grove_PA = {}
 			}
 		}
-		d_coalland = {
+		d_poconos = {
 			color={ 173 113 213 }
 			color2={ 220 220 0 }
 
-			capital = 51
+			capital = 49
 
+			c_pocono = {
+				color={ 159 168 142 }
+				color2={ 220 220 0 }
+
+				b_scranton_PA = {}
+				b_wilkesbarre_PA = {}
+				b_carbondale_PA = {}
+				b_stroudsburg_PA = {}
+				b_honesdale_PA = {}
+				b_pittston_PA = {}
+				b_barryville_PA = {}
+				b_moosic_PA = {}
+			}
+			c_pike = {
+				color={ 90 92 67 }
+				color2={ 220 220 0 }
+
+				b_hemlock_farms_PA = {}
+				b_birchwood_PA = {}
+				b_skytop_PA = {}
+				b_lackawaxen_PA = {}
+				b_tafton_PA = {}
+				b_greeley_PA = {}
+				b_dingmans_ferry_PA = {}
+			}
+			c_chemung = {
+				color={ 123 137 22 }
+				color2={ 220 220 0 }
+
+				b_elmira_NY = {}
+				b_horseheads_NY = {}
+				b_southport_NY = {}
+				b_waverly_NY = {}
+				b_sayre_PA = {}
+				b_athens_PA = {}
+				b_owego_NY = {}
+				b_gillett_PA = {}
+			}
+			c_ricketts = {
+				color={ 198 220 39 }
+				color2={ 220 220 0 }
+
+				b_dushore_PA = {}
+				b_tunkhannock_PA = {}
+				b_eagles_mere_PA = {}
+				b_forksville_PA = {}
+				b_meshoppen_PA = {}
+				b_harveys_lake_PA = {}
+				b_aldovin_PA = {}
+			}
+			c_bradford = {
+				color={ 198 220 39 }
+				color2={ 220 220 0 }
+
+				b_wyalusing_PA = {}
+				b_montrose_PA = {}
+				b_new_milford_PA = {}
+				b_hailstead_PA = {}
+				b_rome_PA = {}
+				b_friendsville_PA = {}
+				b_little_meadows_PA = {}
+			}
+		}
+		d_charrland = {
+			color = { 81 79 81 }
+			color_2 = { 220 220 0 }
+			
+			capital = 51 #c_schuylkill
+			
+			c_schuylkill = {
+				color={ 114 115 100 }
+				color2={ 220 220 0 }
+				holy_site = consumerist # closest I could find to King of Prussia Mall
+				holy_site = anabaptist
+
+				b_reading_PA = {
+					deitsch = "Reddin"
+				}
+				b_lancaster_PA = {
+					deitsch = "Lengeschder"
+				}
+				b_pottstown_PA = {}
+				b_reamstown_PA = {
+					deitsch = "Reimeschteddel"
+				}
+				b_mohnton_PA = {}
+				b_pottsgrove_PA = {}
+				b_reiffton_PA = {}
+				b_birdsboro_PA = {}
+			}
+			c_luzerne = {
+				color={ 90 92 67 }
+				color2={ 220 220 0 }
+
+				b_wilkes_barre_PA = {}
+				b_mountain_top_PA = {}
+				b_nanticoke_PA = {}
+				b_dallas_PA = {}
+				b_dushore_PA = {}
+				b_east_berwick_PA = {}
+				b_pittston_PA = {}
+			}
+			c_pottsville = {
+				color={ 90 92 67 }
+				color2={ 220 220 0 }
+
+				b_pottsville_PA = {}
+				b_coaldale_PA = {}
+				b_orwigsburg_PA = {}
+				b_frackville_PA = {}
+				b_tamaqua_PA = {}
+				b_minersville_PA = {}
+				b_forrestville_PA = {}
+				b_renningers_PA = {}
+				b_locustdale_PA = {}
+				b_branchdale_PA = {}
+			}
 			c_lehigh = {
 				color={ 146 147 130 }
 				color2={ 220 220 0 }
@@ -1065,79 +1138,6 @@ e_columbia = {
 				b_kutztown_PA = {
 					deitsch = "Kutzeschtettel"
 				}		
-			}
-			c_pocono = {
-				color={ 159 168 142 }
-				color2={ 220 220 0 }
-
-				b_scranton_PA = {}
-				b_wilkesbarre_PA = {}
-				b_carbondale_PA = {}
-				b_stroudsburg_PA = {}
-				b_honesdale_PA = {}
-				b_pittston_PA = {}
-				b_barryville_PA = {}
-				b_moosic_PA = {}
-			}
-			c_schuylkill = {
-				color={ 114 115 100 }
-				color2={ 220 220 0 }
-				holy_site = consumerist # closest I could find to King of Prussia Mall
-				holy_site = anabaptist
-
-				b_reading_PA = {
-					deitsch = "Reddin"
-				}
-				b_lancaster_PA = {
-					deitsch = "Lengeschder"
-				}
-				b_pottstown_PA = {}
-				b_reamstown_PA = {
-					deitsch = "Reimeschteddel"
-				}
-				b_mohnton_PA = {}
-				b_pottsgrove_PA = {}
-				b_reiffton_PA = {}
-				b_birdsboro_PA = {}
-			}
-			c_pottsville = {
-				color={ 90 92 67 }
-				color2={ 220 220 0 }
-
-				b_pottsville_PA = {}
-				b_coaldale_PA = {}
-				b_orwigsburg_PA = {}
-				b_frackville_PA = {}
-				b_tamaqua_PA = {}
-				b_minersville_PA = {}
-				b_forrestville_PA = {}
-				b_renningers_PA = {}
-				b_locustdale_PA = {}
-				b_branchdale_PA = {}
-			}
-			c_pike = {
-				color={ 90 92 67 }
-				color2={ 220 220 0 }
-
-				b_hemlock_farms_PA = {}
-				b_birchwood_PA = {}
-				b_skytop_PA = {}
-				b_lackawaxen_PA = {}
-				b_tafton_PA = {}
-				b_greeley_PA = {}
-				b_dingmans_ferry_PA = {}
-			}
-			c_luzerne = {
-				color={ 90 92 67 }
-				color2={ 220 220 0 }
-
-				b_wilkes_barre_PA = {}
-				b_mountain_top_PA = {}
-				b_nanticoke_PA = {}
-				b_dallas_PA = {}
-				b_dushore_PA = {}
-				b_east_berwick_PA = {}
-				b_pittston_PA = {}
 			}
 		}
 	}
