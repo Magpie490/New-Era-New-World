@@ -222,26 +222,6 @@ e_acadien = {
 }
 
 
-e_appalachia = {
-	color={ 110 167 28 }
-	color2={ 210 50 20 }
-	capital = 151 # Knox
-	
-	culture = appalachian
-	allow = {
-		war = no
-		not = { tier = emperor }
-		culture = appalachian
-		OR = {
-			realm_size = 100
-			e_appalachia = { OR = { is_titular = no has_holder = yes } }
-		}
-	}
-	short_name = yes
-	
-	creation_requires_capital = no	
-}
-
 e_melungeon = {
 	color={ 210 57 28 }
 	color2={ 210 50 20 }
