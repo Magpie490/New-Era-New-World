@@ -1356,11 +1356,15 @@ character_event = {
 	trigger = { 
 		OR = { 
 			has_religion_feature = religion_haruspicy
+			religion = sanamahist
+			religion = kalikula
+			religion = koyapunem
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan
 			has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
+			has_religion_feature = religion_feature_shindo
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
@@ -1369,6 +1373,7 @@ character_event = {
 			religion = buddhoshinto
 			religion = ainushinto
 			religion = shindo
+			religion = shindo_reformed
 			religion = shinko
 		} 
 		NOR = {
@@ -1440,11 +1445,15 @@ character_event = {
 	trigger = { 
 		OR = { 
 			has_religion_feature = religion_haruspicy 
+			religion = sanamahist
+			religion = kalikula
+			religion = koyapunem
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan			
 			has_religion_feature = religion_feature_celtic		
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
+			has_religion_feature = religion_feature_shindo
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
@@ -1453,6 +1462,7 @@ character_event = {
 			religion = buddhoshinto
 			religion = ainushinto
 			religion = shindo
+			religion = shindo_reformed
 			religion = shinko
 		} 
 		NOR = {
@@ -1494,11 +1504,15 @@ character_event = {
 		war = yes
 		OR = { 
 			has_religion_feature = religion_haruspicy
+			religion = sanamahist
+			religion = kalikula
+			religion = koyapunem
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan		
 			has_religion_feature = religion_feature_celtic	
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
+			has_religion_feature = religion_feature_shindo
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = poseidonian
@@ -1507,6 +1521,7 @@ character_event = {
 			religion = buddhoshinto
 			religion = ainushinto
 			religion = shindo
+			religion = shindo_reformed
 			religion = shinko
 		} 
 		NOR = {
@@ -2619,6 +2634,7 @@ character_event = {
 		OR = {
 			religion = thelemic_reformed
 			religion = summer_queen
+			religion = theosophy
 			religion = thelemic
 			religion = orange_king
 			religion = nousthreskeia_reformed
@@ -2838,6 +2854,7 @@ character_event = {
 			NOR = {
 				religion = thelemic_reformed
 				religion = summer_queen
+				religion = theosophy
 				religion = thelemic
 				religion = orange_king
 				religion = nousthreskeia_reformed
@@ -2957,6 +2974,7 @@ character_event = {
 			OR = {
 				religion = thelemic_reformed
 				religion = summer_queen
+				religion = theosophy
 				religion = thelemic
 				religion = orange_king
 				religion = nousthreskeia_reformed
@@ -3093,6 +3111,7 @@ character_event = {
 			OR = {
 				religion = thelemic_reformed
 				religion = summer_queen
+				religion = theosophy
 				religion = thelemic
 				religion = orange_king
 				religion = nousthreskeia_reformed
@@ -7796,10 +7815,12 @@ character_event = {
 			}
 			OR = {
 				has_religion_feature = religion_feature_folklorist_2
+				religion = sanamahist
 				has_religion_feature = religion_feature_lakefolk_pagan			
 				has_religion_feature = religion_feature_celtic			
 				has_religion_feature = religion_haruspicy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				has_religion_feature = religion_feature_sarna
 				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
@@ -14441,10 +14462,13 @@ character_event = {
 			}
 			OR = { 
 				has_religion_feature = religion_animistic
+				religion = kiratist
+				religion = koyapunem
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_feature_neoncult
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14454,10 +14478,13 @@ character_event = {
 			NOT = { has_dlc = "Mystics" } 
 			OR = { 
 				has_religion_feature = religion_animistic
+				religion = kiratist
+				religion = koyapunem
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_feature_neoncult
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -14476,10 +14503,13 @@ character_event = {
 			religion = west_african_pagan
 			religion = west_african_pagan_reformed
 			has_religion_feature = religion_animistic 
+			religion = kiratist
+				religion = koyapunem
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_neoncult
 		}
 	}
 	
@@ -14644,10 +14674,13 @@ character_event = {
 			} 
 			OR = { 
 				has_religion_feature = religion_animistic
+				religion = kiratist
+				religion = koyapunem
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_feature_neoncult
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14657,10 +14690,13 @@ character_event = {
 			NOT = { has_dlc = "Mystics" } 
 			OR = { 
 				has_religion_feature = religion_animistic
+				religion = kiratist
+				religion = koyapunem
 				has_religion_feature = religion_feature_maunaxite
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_sarna
+				has_religion_feature = religion_feature_neoncult
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -15035,10 +15071,13 @@ character_event = {
 			religion = west_african_pagan
 			religion = west_african_pagan_reformed
 			has_religion_feature = religion_animistic 
+			religion = kiratist
+				religion = koyapunem
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_neoncult
 		}
 	}
 	
@@ -15065,10 +15104,13 @@ character_event = {
 			religion = west_african_pagan
 			religion = west_african_pagan_reformed
 			has_religion_feature = religion_animistic
+			religion = kiratist
+				religion = koyapunem
 			has_religion_feature = religion_feature_maunaxite
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_sarna
+			has_religion_feature = religion_feature_neoncult
 		}
 	}
 	immediate = { 

@@ -3476,92 +3476,92 @@ character_event = {
 # ROOT is employer
 # FROM is employers "employee"
 # new_character is the other spouse.
-character_event = {
-	id = 502
-	desc = EVTDESC502
-	picture = GFX_evt_marriage
+# character_event = {
+	# id = 502
+	# desc = EVTDESC502
+	# picture = GFX_evt_marriage
 
-	is_triggered_only = yes # on_marriage
+	# is_triggered_only = yes # on_marriage
 
-	religion = messalian
+	# religion = messalian
 
-	trigger = {
-		new_character = {
-			is_close_relative = FROM
-		}
+	# trigger = {
+		# new_character = {
+			# is_close_relative = FROM
+		# }
 
-		OR = {
-			character = FROM
+		# OR = {
+			# character = FROM
 
-			AND = {
-				FROM = {
-					dynasty = ROOT
-					is_primary_heir = ROOT
-				}
+			# AND = {
+				# FROM = {
+					# dynasty = ROOT
+					# is_primary_heir = ROOT
+				# }
 
-				NOT = { character = new_character }
-			}
-		}
-	}
+				# NOT = { character = new_character }
+			# }
+		# }
+	# }
 
-	option = {
-		name = EVTOPTA500
+	# option = {
+		# name = EVTOPTA500
 
-		scaled_wealth = {
-			value = 0.5
-			min = 10
-		}
+		# scaled_wealth = {
+			# value = 0.5
+			# min = 10
+		# }
 
-		trigger_switch = {
-			on_trigger = real_tier
+		# trigger_switch = {
+			# on_trigger = real_tier
 
-			BARON   = { piety =  25 }
-			COUNT   = { piety =  50 }
-			DUKE    = { piety = 100 }
-			KING    = { piety = 200 }
-			EMPEROR = { piety = 300 }
-		}
-	}
+			# BARON   = { piety =  25 }
+			# COUNT   = { piety =  50 }
+			# DUKE    = { piety = 100 }
+			# KING    = { piety = 200 }
+			# EMPEROR = { piety = 300 }
+		# }
+	# }
 
-	option = {
-		name = EVTOPTB500
+	# option = {
+		# name = EVTOPTB500
 
-		if = {
-			limit = { yearly_income < 50 }
+		# if = {
+			# limit = { yearly_income < 50 }
 
-			trigger_switch = {
-				on_trigger = real_tier
+			# trigger_switch = {
+				# on_trigger = real_tier
 
-				BARON   = { prestige =   6 }
-				COUNT   = { prestige =  13 }
-				DUKE    = { prestige =  25 }
-				KING    = { prestige =  50 }
-				EMPEROR = { prestige = 150 }
-			}
-		}
-		else = {
-			trigger_switch = {
-				on_trigger = real_tier
+				# BARON   = { prestige =   6 }
+				# COUNT   = { prestige =  13 }
+				# DUKE    = { prestige =  25 }
+				# KING    = { prestige =  50 }
+				# EMPEROR = { prestige = 150 }
+			# }
+		# }
+		# else = {
+			# trigger_switch = {
+				# on_trigger = real_tier
 
-				BARON   = { prestige =  25 }
-				COUNT   = { prestige =  50 }
-				DUKE    = { prestige = 100 }
-				KING    = { prestige = 200 }
-				EMPEROR = { prestige = 300 }
-			}
-		}
+				# BARON   = { prestige =  25 }
+				# COUNT   = { prestige =  50 }
+				# DUKE    = { prestige = 100 }
+				# KING    = { prestige = 200 }
+				# EMPEROR = { prestige = 300 }
+			# }
+		# }
 
-		trigger_switch = {
-			on_trigger = real_tier
+		# trigger_switch = {
+			# on_trigger = real_tier
 
-			BARON   = { piety =  25 }
-			COUNT   = { piety =  50 }
-			DUKE    = { piety = 100 }
-			KING    = { piety = 200 }
-			EMPEROR = { piety = 300 }
-		}
-	}
-}
+			# BARON   = { piety =  25 }
+			# COUNT   = { piety =  50 }
+			# DUKE    = { piety = 100 }
+			# KING    = { piety = 200 }
+			# EMPEROR = { piety = 300 }
+		# }
+	# }
+# }
 
 
 # Approve or disapprove of de facto Law Change
@@ -4468,7 +4468,7 @@ narrative_event = {
 
 			# If hellenic reformer owns Constantinople, Orthodox faith loses MA.
 			if = {
-				limit = { completely_controls = c_constantinopolis }
+				limit = { completely_controls = c_byzantion }
 
 				orthodox = {
 					religion_authority = {
@@ -4518,6 +4518,9 @@ narrative_event = {
 				remove_intermarry = baptist
 				remove_intermarry = oldbeliever
 				remove_intermarry = calvinist
+				remove_intermarry = girondist
+				remove_intermarry = genevist
+				remove_intermarry = neohuguenot
 				remove_intermarry = jugoslavist
 				remove_intermarry = chaldean
 				remove_intermarry = nasrini
@@ -4532,6 +4535,7 @@ narrative_event = {
 				remove_intermarry = sunni
 				remove_intermarry = shiite
 				remove_intermarry = wahhabi
+				remove_intermarry = deobandi
 				remove_intermarry = malikite
 				remove_intermarry = druze
 				remove_intermarry = ibadi
@@ -4543,6 +4547,7 @@ narrative_event = {
 				remove_intermarry = ironist
 				remove_intermarry = zarist
 				remove_intermarry = katerinist
+				remove_intermarry = orleanist
 				remove_intermarry = petrist
 				remove_intermarry = stalinist
 				remove_intermarry = trotskyite
@@ -4558,7 +4563,10 @@ narrative_event = {
 				remove_intermarry = karmapa
 				remove_intermarry = sikh
 				remove_intermarry = parabrahmanist
+				remove_intermarry = kalikula
+				remove_intermarry = shaivasiddhanta
 				remove_intermarry = neovedantic
+				remove_intermarry = sarvodaya
 				remove_intermarry = jain
 				remove_intermarry = zoroastrian
 				remove_intermarry = pagan
@@ -4897,6 +4905,13 @@ narrative_event = {
 				}
 			}
 		}
+		if = {
+			limit = { 
+				religion = finnish_pagan_reformed 
+
+			}
+			add_artifact = sampo
+		}
 
 		# Achievement Flags
 		if = {
@@ -5043,7 +5058,7 @@ narrative_event = {
 		if = {
 			limit = { religion = nousthreskeia_reformed }
 			d_nousthreskeia_order = {
-				religion = hellenic_pagan_reformed # This Holy Order now changes religion
+				religion = nousthreskeia_reformed # This Holy Order now changes religion
 				holder_scope = {
 					religion = nousthreskeia_reformed
 					any_realm_character = {
@@ -6620,6 +6635,413 @@ narrative_event = {
 	
 	option = {
 		name = "EVTOPTA_324" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+# Dharmic CRUSADE AGAINST CHRISTIAN
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.10
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo5"
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = indian_group }
+		new_character = {
+			religion_group = christian
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_324" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+# Dharmic CRUSADE AGAINST MUSLIM
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.11
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo6"
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { 
+			religion_group = indian_group 
+			}
+		new_character = {
+			religion_group = muslim
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_324" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+# Dharmic CRUSADE AGAINST EVERYTHING ELSE
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.12
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo7"
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = indian_group }
+		new_character = {
+			NOR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_324" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+# CHRISTIAN CRUSADE AGAINST Shinto
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.13
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo13"
+	picture = GFX_evt_crusaders
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = christian }
+		new_character = {
+			religion_group = shintoist_group
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+# MUSLIM JIHAD AGAINST shinto
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.14
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo14"
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = muslim }
+		new_character = {
+			religion_group = shintoist_group
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA320" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+# CHRISTIAN CRUSADE AGAINST chinese
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.15
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo15"
+	picture = GFX_evt_crusaders
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = christian }
+		new_character = {
+			religion_group = chinese_traditional_group
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200" # Deus Vult!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = "EVTOPTB200" # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD200" # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE200" # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+# MUSLIM JIHAD AGAINST chinese
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = diploresponse.16
+	title = "EVTNAME200"
+	desc = "EVTDESCdiplo16"
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion_group = muslim }
+		new_character = {
+			religion_group = chinese_traditional_group
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA320" # Deus Vult!
 		trigger = { religion = ROOT }
 	}
 	option = {

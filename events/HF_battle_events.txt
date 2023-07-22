@@ -136,13 +136,6 @@ character_event = {
     }
 
     immediate = {
-    	if = { #Quick fix to reduce the amount of time the AI gets the events
-    		limit = { ai = yes }
-    		random = {
-    			chance = 75
-    			break = yes
-    		}
-    	}
 
     	disallow_new_battle_events_effect = yes #to keep the tombola from spamming you...
 
@@ -1209,6 +1202,71 @@ character_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 		ai_chance = {
             factor = 10
             modifier = {
@@ -1272,7 +1330,72 @@ character_event = {
 	option = { #I won't steal from the dead
 		name = EVTOPTC_HFP_10003
 		piety = 30
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 10
             modifier = {
@@ -1342,6 +1465,71 @@ character_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 		ai_chance = {
             factor = 10
             modifier = {
@@ -1367,6 +1555,71 @@ character_event = {
 	option = { #I won't steal from the dead
 		name = EVTOPTC_HFP_10003
 		piety = 30
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 10
             modifier = {
@@ -1530,7 +1783,72 @@ character_event = {
 
 		duel_enemy_commander_effect = yes
 		pacifists_lose_piety_effect = yes
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 50
             modifier = {
@@ -1564,7 +1882,72 @@ character_event = {
 		else = {
 			add_trait = brave
 		}
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 50
             modifier = {
@@ -1593,7 +1976,72 @@ character_event = {
 		
 		add_trait_silently_brave_effect = yes
 		remove_trait_silently_craven_effect = yes
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 50
             modifier = {
@@ -1661,6 +2109,72 @@ character_event = {
 	}
 
 	option = { #I will do nothing/escape somehow (lose brave/gain craven)
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 		name = {
 			text = EVTOPT_HFP_11010_B_1 #hide
 			trigger = { has_character_flag = desc_A }
@@ -1848,7 +2362,72 @@ character_event = {
 		name = EVTOPT_HFP_11011_A
 		apply_duel_wounded_effect = yes  #Milder than other options
 		add_blood_splatter_effect = yes
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 300
         }
@@ -1862,7 +2441,72 @@ character_event = {
 		name = EVTOPT_HFP_11011_C
 		duel_enemy_commander_effect = yes
 		pacifists_lose_piety_effect = yes
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
         ai_chance = {
             factor = 50
             modifier = {
@@ -1889,6 +2533,71 @@ character_event = {
 		duel_enemy_commander_effect = yes
 		pacifists_lose_piety_effect = yes
 		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		if = {
 			limit = { trait = craven }
 			remove_trait = craven
@@ -1925,7 +2634,72 @@ character_event = {
 		
 		add_trait_silently_brave_effect = yes
 		remove_trait_silently_craven_effect = yes
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		ai_chance = {
             factor = 50
             modifier = {
@@ -1987,7 +2761,72 @@ character_event = {
 	option = { #Special option: if has an equipped artifact
 		tooltip_info_custom = reason_has_equipped_artifact
 		name = EVTOPT_HFP_11011_B #Wait, take this artifact and spare me!
-
+		
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 		#You throw the [equipped_artifact] to the ground...
 		if = {
 			limit = {
@@ -3066,12 +3905,142 @@ character_event = {
 		remove_trait = cruel
 		allow_new_battle_events_effect = yes
 		prestige = -20
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_bad_honour
+				}
+				remove_trait = summer_queen_bad_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 	}
 	option = {
 		name = EVTOPTA_HFP_11023_B #You're just a tool for my enemy
 		prestige = 20
 		piety = -20
 		allow_new_battle_events_effect = yes
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 
 		hidden_tooltip = {
 			liege = {
@@ -3106,6 +4075,65 @@ character_event = {
 
 	option = {
 		name = EVTOPTB_HFP_11024 #Disapprove of his conduct
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+				add_trait = summer_queen_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_3_honour
+			}
+			else = {
+				add_trait = summer_queen_1_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+				add_trait = japanese_2_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_3_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_bad_honour
+				}
+				remove_trait = japanese_bad_honour
+			}
+			else = {
+				add_trait = japanese_1_honour
+			}
+		}
 		opinion = {
 			modifier = opinion_disapprove
 			who = FROM
@@ -3123,6 +4151,71 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTC_HFP_11024 #He's right, we should terrorise our enemy
+		if = {
+			limit = {
+				religion = orleanist
+				religion = novelist
+				religion = novelist_reformed
+				religion = summer_queen
+			}
+			if = {
+				limit = {
+					trait = summer_queen_1_honour
+				}
+				remove_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_2_honour
+				}
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = summer_queen_3_honour
+				}
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+			}
+			else = {
+				add_trait = summer_queen_bad_honour
+			}
+		}
+		if = {
+			limit = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+			}
+			if = {
+				limit = {
+					trait = japanese_1_honour
+				}
+				remove_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_2_honour
+				}
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+			}
+			else_if = {
+				limit = {
+					trait = japanese_3_honour
+				}
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+			}
+			else = {
+				add_trait = japanese_bad_honour
+			}
+		}
 		opinion = {
 			modifier = opinion_approves
 			who = FROM

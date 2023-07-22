@@ -35,6 +35,9 @@ decisions = {
 			k_bakufu = {
 				holder_scope = {
 					narrative_event = { id = japan.4 }
+					any_tributary = {
+						remove_tributary = PREV
+					}
 				}
 			}
 			destroy_landed_title = k_pretender_bakufu
@@ -60,6 +63,7 @@ decisions = {
 					region = world_north_japan
 				}
 			}
+			NOT = { is_tributary = yes }
 			k_bakufu = {
 				has_holder = yes
 			}
@@ -108,6 +112,7 @@ decisions = {
 					region = world_north_japan
 				}
 			}
+			NOT = { is_tributary = yes }
 			prisoner = no
 			has_regent = no
 			is_adult = yes
@@ -675,6 +680,7 @@ targeted_decisions = {
 				}
 				any_title = {
 					limit = {
+						holder = ROOT
 						tier = KING
 					}
 					destroy_landed_title = THIS
@@ -734,6 +740,7 @@ targeted_decisions = {
 				}
 				any_title = {
 					limit = {
+						holder = ROOT
 						tier = KING
 					}
 					destroy_landed_title = THIS

@@ -1364,7 +1364,8 @@ defined_text = {
 			OR = {
 				culture_group = byzantine
 				culture_group = brittannic
-				culture_group = celtic
+				culture_group = goidelic
+				culture_group = brythonic
 			}
 		}
 		localisation_key = random_mythological_creature_dryad
@@ -1594,7 +1595,10 @@ defined_text = {
 	text = {
 		trigger = {
 			event_target:target_ruler = {
-				religion = khanist
+				OR = {
+					religion = khanist
+					religion = akjang
+				}
 			}
 		}
 		localisation_key = bhutan_sky
@@ -1646,7 +1650,8 @@ defined_text = {
 					culture_group = tibetan_group
 					culture_group = chinese_group
 					culture_group = south_chinese_group
-					culture_group = celtic
+					culture_group = goidelic
+					culture_group = brythonic
 					culture_group = japan_group
 				}
 			}
@@ -1831,7 +1836,8 @@ defined_text = {
 				OR = {
 					culture_group = byzantine
 					culture_group = brittannic
-					culture_group = celtic
+					culture_group = goidelic
+					culture_group = brythonic
 				}
 			}
 		}
@@ -1842,6 +1848,7 @@ defined_text = {
 			event_target:target_ruler = {
 				OR = {
 					culture_group = niger_congolese
+					culture_group = chadic
 					culture_group = high_american
 					culture_group = low_american
 					culture_group = afroatlantic

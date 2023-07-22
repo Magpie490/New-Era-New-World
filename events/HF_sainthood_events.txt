@@ -17,6 +17,7 @@ character_event = {
 		death_no_trace_trigger = no
 		OR = {
 			religion_group = christian
+			religion = orleanist
 			religion = jugoslavist
 		}
 		NOR = {
@@ -29,8 +30,9 @@ character_event = {
             religion = prussianist
             religion = hussite
             religion = baptist
-            religion = xinjiao
             religion = calvinist
+            religion = neohuguenot
+            religion = genevist
             is_any_kinslayer_trigger = yes
             has_character_modifier = voice_of_satan
             has_character_modifier = known_satanist
@@ -106,6 +108,7 @@ character_event = {
             limit = {
                 OR = {
 					religion_group = christian
+					religion = orleanist
 					religion = jugoslavist
 				}
             }
@@ -444,13 +447,16 @@ character_event = {
 						OR = {
 							has_religion_feature = religion_feature_sarna
 							has_religion_feature = religion_feature_wuist
+							has_religion_feature = religion_feature_shindo
 							religion = finnish_pagan
+							religion = akjang
 							religion = finnish_pagan_reformed
+							religion = donyipolo
+							religion = kiratist
 							religion = baltic_pagan
 							religion = baltic_pagan_reformed
 							religion = ovlatii
 							religion = voodun
-							religion = xinjiao
 							religion = zoroastrian
 							religion = neo_zorvanite
 							religion = red_cult
@@ -464,6 +470,7 @@ character_event = {
 							religion = shindo
 							religion = shinko
 							has_religion_feature = religion_beatification
+							religion = sanamahist
 							has_religion_feature = religion_feature_novelist
 						}
                     }
@@ -496,12 +503,14 @@ province_event = {
             OR = {
                 trait = beatified
 				religion = finnish_pagan
+				religion = akjang
 				religion = finnish_pagan_reformed
+				religion = donyipolo
+				religion = kiratist
 				religion = baltic_pagan
 				religion = baltic_pagan_reformed
 				religion = ovlatii
 				religion = voodun
-				religion = xinjiao
 				religion = zoroastrian
 				religion = neo_zorvanite
 				religion = red_cult
@@ -515,7 +524,9 @@ province_event = {
 				religion = shindo
 				religion = shinko
                 has_religion_feature = religion_beatification
+				religion = sanamahist
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				has_religion_feature = religion_feature_novelist
             }
             NOT = {
@@ -559,6 +570,7 @@ character_event = {
             event_target:saint_person = {
                 OR = {
 					religion_group = christian
+					religion = orleanist
 					religion = jugoslavist
 				}
             }
@@ -588,6 +600,7 @@ character_event = {
             limit = {
                 OR = {
 					religion_group = christian
+					religion = orleanist
 					religion = jugoslavist
 				}
             }
@@ -611,6 +624,7 @@ character_event = {
                     event_target:saint_person = {
                         OR = {
 							religion_group = christian
+							religion = orleanist
 							religion = jugoslavist
 						}
                     }
@@ -890,6 +904,7 @@ character_event = {
                     limit = {
                         OR = {
 							religion_group = christian
+							religion = orleanist
 							religion = jugoslavist
 						}
                     }
@@ -919,6 +934,7 @@ character_event = {
                     event_target:saint_person = {
                         OR = {
 							religion_group = christian
+							religion = orleanist
 							religion = jugoslavist
 						}
                     }
@@ -1173,6 +1189,7 @@ character_event = {
                                 event_target:saint_person = {
                                     OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -1213,6 +1230,7 @@ character_event = {
                             event_target:saint_person = {
                                 OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                             }
@@ -1273,6 +1291,7 @@ character_event = {
                                 event_target:saint_person = {
 									OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -1453,6 +1472,7 @@ character_event = {
                                 event_target:saint_person = {
                                     OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -1647,6 +1667,7 @@ character_event = {
                                 event_target:saint_person = {
                                     OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -1835,6 +1856,7 @@ character_event = {
                                 event_target:saint_person = {
                                     OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -1997,6 +2019,7 @@ character_event = {
                                 event_target:saint_person = {
                                     OR = {
 										religion_group = christian
+										religion = orleanist
 										religion = jugoslavist
 									}
                                 }
@@ -2072,6 +2095,7 @@ narrative_event = {
             event_target:saint_person = {
                 OR = {
 						religion_group = christian
+						religion = orleanist
 						religion = jugoslavist
 					}
             }
@@ -2101,6 +2125,7 @@ narrative_event = {
                 event_target:saint_person = {
                     OR = {
 						religion_group = christian
+						religion = orleanist
 						religion = jugoslavist
 					}
                 }
@@ -2128,6 +2153,7 @@ narrative_event = {
                 limit = {
 					OR = {
 						religion_group = christian
+						religion = orleanist
 						religion = jugoslavist
 					}
                 }

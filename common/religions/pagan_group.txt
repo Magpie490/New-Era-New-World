@@ -59,7 +59,6 @@ pagan_group = {
 		dynamic_cult = no
 		secret_religion = no
 	}
-	
 	highmount = {
 		graphical_culture = pagangfx
 
@@ -134,7 +133,7 @@ pagan_group = {
 		secondary_event_pictures = tengri_pagan
 		interface_skin = { bon_interface taoist_interface indian_interface muslim_interface }
 
-		icon = 57
+		icon = 55
 		heresy_icon = 56
 		
 		color = { 8 150 131 }
@@ -201,6 +200,9 @@ pagan_group = {
 		intermarry = buddhist_group
 		intermarry = nasrini
 		#intermarry = bon_reformed
+		intermarry = agamatirta
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = white_lotus
 		
@@ -274,6 +276,9 @@ pagan_group = {
 		intermarry = buddhist_group
 		intermarry = nasrini
 		intermarry = bon_reformed
+		intermarry = agamatirta
+		intermarry = donyipolo
+		intermarry = kiratist
 		#intermarry = bon
 		intermarry = white_lotus
 
@@ -287,10 +292,10 @@ pagan_group = {
 		secondary_event_pictures = sunni
 		interface_skin = { buddhist_interface indian_interface muslim_interface }
 
-		icon = 174
-		heresy_icon = 175
+		icon = 173
+		heresy_icon = 174
 		
-		color = { 185 230 5 }
+		color = { 194 235 30 }
 		alternate_start = { always = no }
 		
 		scripture_name = THE_LEGENDS
@@ -354,6 +359,9 @@ pagan_group = {
 		intermarry = buddhist_group
 		intermarry = nasrini
 		intermarry = bon_reformed
+		intermarry = koyapunem
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		
 		dislike_tribal_organization = yes
@@ -366,9 +374,9 @@ pagan_group = {
 		interface_skin = { buddhist_interface indian_interface muslim_interface }
 
 		icon = 173
-		heresy_icon = 175
+		heresy_icon = 174
 		
-		color = { 194 235 30 }
+		color = { 185 230 5 }
 		
 		scripture_name = THE_LEGENDS
 		priest_title = PAHAN
@@ -427,6 +435,9 @@ pagan_group = {
 		intermarry = buddhist_group
 		intermarry = nasrini
 		intermarry = bon_reformed
+		intermarry = koyapunem
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 
 		reformed = sarna_pagan_reformed
@@ -434,13 +445,236 @@ pagan_group = {
 		dislike_tribal_organization = yes
 		can_demand_religious_conversion = no
 	}
+	sanamahist = {
+		graphical_culture = hindugfx
+		has_coa_on_barony_only = yes
+		secondary_event_pictures = sunni
+		interface_skin = { indian_interface muslim_interface }
+
+		icon = 161
+		heresy_icon = 161
+		
+		color = { 156 20 214 }
+		
+		ai_convert_same_group = 2
+		ai_convert_other_group = 2
+		scripture_name = PUYA
+		priest_title = AMAIBA
+		piety_name = KARMA
+		crusade_name = GREAT_HOLY_WAR
+		
+		high_god_name = GOD_SANAMAHI_LAINING
+		
+		god_names = {
+			GOD_SANAMAHI_LAINING GOD_YAIBREL_SIDABA GOD_LEIMAREL_SIDABI GOD_ASHEEBA GOD_ATINGAA_KOILOU_SITAPA GOD_APANBA GOD_APOKPA
+		}
+		
+		evil_god_names = {
+			GOD_THE_EVIL_ONES ADHARMA
+		}
+		
+		unit_modifier = {
+			light_infantry_offensive = 0.1
+			light_cavalry_offensive = 0.1 
+			pikemen_offensive = 0.1 
+			archers_offensive = 0.1
+		}
+		
+		aggression = 1.5
+		can_demand_religious_conversion = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		defensive_attrition = yes
+		feminist = no # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		can_retire_to_monastery = yes
+		matrilineal_marriages = no
+		men_can_take_consorts = no
+		women_can_take_consorts = no
+		psc_marriage = no
+		allow_looting = yes
+		peace_piety_gain = 0
+		uses_jizya_tax = yes
+		allow_rivermovement = yes
+		raised_vassal_opinion_loss = no
+		attacking_same_religion_piety_loss = yes
+		peace_prestige_loss = yes
+		ignores_defensive_attrition = yes
+		autocephaly = yes
+		can_grant_divorce = yes
+		can_excommunicate = yes
+
+		hard_to_convert = yes
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		
+		intermarry = indian_group
+		intermarry = zoroastrian_group
+		intermarry = buddhist_group
+		intermarry = kalikula
+		intermarry = nasrini
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		#intermarry = kiratist
+		intermarry = bon
+		
+		dislike_tribal_organization = yes
+	}
+	kiratist = {
+		graphical_culture = bongfx
+		secondary_event_pictures = tengri_pagan
+		interface_skin = { bon_interface taoist_interface indian_interface muslim_interface }
+
+		icon = 169
+		heresy_icon = 169
+		
+		color = { 166 191 226 }
+		
+		scripture_name = MUNDUM
+		priest_title = NAKCHONG
+		piety_name = KARMA
+		crusade_name = GREAT_HOLY_WAR
+		
+		high_god_name = GOD_TAGERA_NINGWAPHUMA
+		
+		god_names = {
+			GOD_TAGERA_NINGWAPHUMA GOD_YUMA_SAMMANG GOD_THEBA_SAMMANG GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		
+		evil_god_names = {
+			GOD_THE_EVIL_ONES ADHARMA
+		}
+		
+		character_modifier = {
+			land_organisation = 0.1
+			vassal_opinion = 5
+			global_tax_modifier = -0.05
+			levy_size = 0.05
+		}
+		unit_modifier = {
+			land_morale = 0.05
+		}
+
+		aggression = 0.75
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		defensive_attrition = yes
+		feminist = no # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = no
+		can_retire_to_monastery = yes
+		matrilineal_marriages = no
+		psc_marriage = no
+		short_reign_opinion_year_mult = 3
+		max_consorts = 3
+		women_can_take_consorts = no
+		allow_looting = yes
+		allow_rivermovement = yes
+		raised_vassal_opinion_loss = no
+		peace_piety_gain = 1.0
+		autocephaly = yes
+		can_grant_divorce = yes
+		can_excommunicate = yes
+
+		hard_to_convert = yes
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		
+		intermarry = indian_group
+		intermarry = zoroastrian_group
+		intermarry = buddhist_group
+		intermarry = kalikula
+		intermarry = nasrini
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		#intermarry = kiratist
+		intermarry = bon
+		
+		dislike_tribal_organization = yes
+	}
+	donyipolo = {
+		graphical_culture = bongfx
+		secondary_event_pictures = tengri_pagan
+		interface_skin = { bon_interface taoist_interface indian_interface muslim_interface }
+
+		icon = 175
+		heresy_icon = 175
+		
+		color = { 204 20 51 }
+		
+		scripture_name = LYAMBOPE
+		priest_title = NYIBU
+		piety_name = KARMA
+		crusade_name = GREAT_HOLY_WAR
+		
+		high_god_name = GOD_SEDI
+		
+		god_names = {
+			GOD_SEDI GOD_DONYI GOD_POLO GOD_MELO GOD_SIDI GOD_KEYUM GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		
+		evil_god_names = {
+			GOD_THE_EVIL_ONES ADHARMA
+		}
+		
+		character_modifier = {
+			attrition = -0.1
+			days_of_supply = 15
+			land_organisation = 0.1
+			build_cost_modifier = 0.15
+		}
+		unit_modifier = {
+			land_morale = 0.05
+		}
+		
+		aggression = 1.2
+		has_heir_designation = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		defensive_attrition = yes
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		can_retire_to_monastery = yes
+		psc_marriage = no
+		short_reign_opinion_year_mult = 3
+		max_consorts = 3
+		women_can_take_consorts = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		raised_vassal_opinion_loss = no
+		autocephaly = yes
+		can_grant_divorce = yes
+		can_excommunicate = yes
+
+		hard_to_convert = yes
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		
+		intermarry = indian_group
+		intermarry = zoroastrian_group
+		intermarry = buddhist_group
+		intermarry = kalikula
+		intermarry = nasrini
+		intermarry = bon_reformed
+		#intermarry = donyipolo
+		intermarry = kiratist
+		intermarry = bon
+		intermarry = white_lotus
+		
+		dislike_tribal_organization = yes
+	}
 	
 	mo_pagan_reformed = {
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
 
-		icon = 209
-		heresy_icon = 210
+		icon = 208
+		heresy_icon = 209
 		
 		color = { 91 67 196 }
 		alternate_start = { always = no }
@@ -506,6 +740,7 @@ pagan_group = {
 		intermarry = wuxia
 		intermarry = nasrini
 		intermarry = bon_reformed
+		intermarry = donyipolo
 		intermarry = bon
 		intermarry = chinese_traditional_group
 		
@@ -518,7 +753,7 @@ pagan_group = {
 		secondary_event_pictures = sunni
 
 		icon = 208
-		heresy_icon = 210
+		heresy_icon = 209
 		
 		color = { 45 20 156 }
 		
@@ -578,6 +813,7 @@ pagan_group = {
 		intermarry = taoist
 		intermarry = wuxia
 		intermarry = bon_reformed
+		intermarry = donyipolo
 		intermarry = bon
 		intermarry = chinese_traditional_group
 
@@ -593,8 +829,8 @@ pagan_group = {
 		
 		secondary_event_pictures = tengri_pagan
 
-		icon = 204
-		heresy_icon = 205
+		icon = 203
+		heresy_icon = 204
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -649,7 +885,7 @@ pagan_group = {
 		graphical_culture = mongolgfx
 
 		icon = 203
-		heresy_icon = 205
+		heresy_icon = 204
 		
 		color = { 0.0 0.2 0.8 }
 		
@@ -707,12 +943,12 @@ pagan_group = {
 		
 		secondary_event_pictures = baltic_pagan
 
-		icon = 32
-		heresy_icon = 33
+		icon = 31
+		heresy_icon = 32
 		
 		ai_convert_other_group = 2 # always try to convert
 		
-		color = { 0.75 0.5 0.35 }
+		color = { 62 165 64 }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = VOLHV
@@ -773,9 +1009,9 @@ pagan_group = {
 		graphical_culture = pagangfx
 
 		icon = 31
-		heresy_icon = 33
+		heresy_icon = 32
 		
-		color = { 0.6 0.4 0.3 }
+		color = { 48 127 49 }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = VOLHV
@@ -842,8 +1078,8 @@ pagan_group = {
 		graphical_culture = reformednorsegfx
 		alternate_start = { always = no }
 
-		icon = 20
-		heresy_icon = 21
+		icon = 19
+		heresy_icon = 20
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
@@ -902,7 +1138,7 @@ pagan_group = {
 		graphical_culture = norsegfx
 
 		icon = 19
-		heresy_icon = 21
+		heresy_icon = 20
 		
 		color = { 0.14 0.36 0.16 }
 		
@@ -962,13 +1198,13 @@ pagan_group = {
 		graphical_culture = reformednorsegfx
 		alternate_start = { always = no }
 
-		icon = 150
-		heresy_icon = 151
+		icon = 149
+		heresy_icon = 150
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
 
-		color = { 107 230 255 }
+		color = { 156 238 255 }
 		
 		interface_skin = { pagan_interface }
 		
@@ -1024,9 +1260,9 @@ pagan_group = {
 		graphical_culture = norsegfx
 
 		icon = 149
-		heresy_icon = 151
+		heresy_icon = 150
 		
-		color = { 156 238 255 }
+		color = { 107 230 255 }
 		
 		interface_skin = { pagan_interface }
 		
@@ -1084,13 +1320,13 @@ pagan_group = {
 		graphical_culture = reformednorsegfx
 		alternate_start = { always = no }
 
-		icon = 17
+		icon = 15
 		heresy_icon = 16
 		
 		ai_convert_other_group = 2 # always try to convert
 		ai_convert_same_group = 2 # always try to convert
 
-		color = { 144 20 20 }
+		color = { 180 20 20 }
 		
 		interface_skin = { pagan_interface }
 		
@@ -1144,7 +1380,7 @@ pagan_group = {
 		icon = 15
 		heresy_icon = 16
 		
-		color = { 160 20 20 }
+		color = { 144 20 20 }
 		
 		interface_skin = { pagan_interface }
 		
@@ -1204,21 +1440,24 @@ pagan_group = {
 	novelist_reformed = { # Like books
 		graphical_culture = nobeliangfx
 		secondary_event_pictures = novelist
-		icon = 29
-		heresy_icon = 30
+		icon = 28
+		heresy_icon = 29
 		alternate_start = { always = no }
 		
-		color = { 0.75 0.55 0.4 }
+		color = { 229 176 78 }
 		
-		interface_skin = { pagan_interface }
+		interface_skin = { novelist_interface pagan_interface }
 
 		high_god_name = GOD_ERU_LAUTEUR
 
 		god_names = {
-			GOD_ERU_LAUTEUR GOD_ARSLAN GOD_THE_VALAR GOD_QUASIMODO GOD_DARTAGNAN GOD_VALJEAN GOD_THE_STAR_PRINCE GOD_NEMO
+			GOD_ERU_LAUTEUR GOD_ARSLAN GOD_THE_VALAR GOD_QUASIMODO GOD_DARTAGNAN GOD_VALJEAN GOD_THE_STAR_PRINCE GOD_NEMO GOD_CHARLEMAGNE GOD_ARTHUR GOD_ROLAND GOD_SUN_KING GOD_NAPOLEON
 		}
 		evil_god_names = {
 			GOD_SAURON GOD_DRACULA GOD_FRANKENSTEIN GOD_JADIS_THE_WHITE_WITCH GOD_FROLLO GOD_RICHELIEU GOD_JAVERT GOD_PHANTOM_OF_OPERA
+		}
+		character_modifier = {
+			girondist_opinion = 5
 		}
 		crusade_name = CHANSON_DE_GESTE
 		scripture_name = THE_GREAT_NOVEL
@@ -1241,6 +1480,7 @@ pagan_group = {
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
+		intermarry = girondist
 		intermarry = inuit_pagan_reformed
 		intermarry = summer_queen
 	}
@@ -1249,19 +1489,22 @@ pagan_group = {
 		graphical_culture = nobeliangfx
 
 		icon = 28
-		heresy_icon = 30
+		heresy_icon = 29
 		
-		color = { 0.6 0.4 0.3 }
+		color = { 175 135 59 }
 		
-		interface_skin = { pagan_interface }
+		interface_skin = { novelist_interface pagan_interface }
 
 		high_god_name = GOD_ERU_LAUTEUR
 
 		god_names = {
-			GOD_ERU_LAUTEUR GOD_ARSLAN GOD_THE_VALAR GOD_QUASIMODO GOD_DARTAGNAN GOD_VALJEAN GOD_THE_STAR_PRINCE GOD_NEMO
+			GOD_ERU_LAUTEUR GOD_ARSLAN GOD_THE_VALAR GOD_QUASIMODO GOD_DARTAGNAN GOD_VALJEAN GOD_THE_STAR_PRINCE GOD_NEMO GOD_CHARLEMAGNE GOD_ARTHUR GOD_ROLAND GOD_SUN_KING GOD_NAPOLEON
 		}
 		evil_god_names = {
 			GOD_SAURON GOD_DRACULA GOD_FRANKENSTEIN GOD_JADIS_THE_WHITE_WITCH GOD_FROLLO GOD_RICHELIEU GOD_JAVERT GOD_PHANTOM_OF_OPERA
+		}
+		character_modifier = {
+			girondist_opinion = 5
 		}
 		crusade_name = CHANSON_DE_GESTE
 		scripture_name = THE_NOVEL
@@ -1297,12 +1540,12 @@ pagan_group = {
 		graphical_culture = reformedpagangfx
 		alternate_start = { always = no }
 
-		icon = 71
-		heresy_icon = 72
+		icon = 70
+		heresy_icon = 71
 		
 		color = { 0.3 0.5 0.7 }
 		
-		interface_skin = { zun_interface pagan_interface }
+		interface_skin = { pagan_interface }
 
 		high_god_name = GOD_MOTHER_RUSSIA
 
@@ -1344,11 +1587,11 @@ pagan_group = {
 		graphical_culture = pagangfx
 
 		icon = 70
-		heresy_icon = 72
+		heresy_icon = 71
 		
 		color = { 0.2 0.4 0.6 }
 		
-		interface_skin = { zun_interface pagan_interface }
+		interface_skin = { pagan_interface }
 
 		high_god_name = GOD_MOTHER_RUSSIA
 
@@ -1394,8 +1637,8 @@ pagan_group = {
 		
 		secondary_event_pictures = finnish_pagan
 
-		icon = 26
-		heresy_icon = 27
+		icon = 25
+		heresy_icon = 26
 		
 		ai_convert_other_group = 2 # always try to convert
 		
@@ -1456,6 +1699,9 @@ pagan_group = {
 		intermarry = baltic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
+		intermarry = starist_pagan_reformed
+		intermarry = starist_pagan
+		intermarry = sisukkuus
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
 		allow_in_ruler_designer = no
@@ -1465,7 +1711,7 @@ pagan_group = {
 		graphical_culture = pagangfx
 
 		icon = 25
-		heresy_icon = 27
+		heresy_icon = 26
 		
 		color = { 0.5 0.5 0.0 }
 		crusade_name = GREAT_HOLY_WAR
@@ -1524,6 +1770,9 @@ pagan_group = {
 		intermarry = baltic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
+		intermarry = starist_pagan_reformed
+		intermarry = starist_pagan
+		intermarry = sisukkuus
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
 		dislike_tribal_organization = yes
@@ -1536,7 +1785,7 @@ pagan_group = {
 		secondary_event_pictures = hellenic_pagan
 		interface_skin = { hellenic_interface }
 
-		icon = 58
+		icon = 37
 		heresy_icon = 59
 		
 		color = { 0.4 0.2 0.6 }
@@ -1544,7 +1793,7 @@ pagan_group = {
 		high_god_name = GOD_ANAXORGI
 		
 		god_names = {
-			GOD_ARES GOD_TRITON GOD_HADES GOD_ATHENA GOD_PHILOMELUS GOD_PERSEPHONE GOD_HEPHAESTUS GOD_APHRODITE GOD_APOLLO GOD_ARTEMIS GOD_HESTIA GOD_DIONYSUS 
+			GOD_ARES GOD_TRITON GOD_HADES GOD_ATHENA GOD_PHILOMELUS GOD_PERSEPHONE GOD_HEPHAESTUS GOD_APHRODITE GOD_URANIA GOD_APOLLO GOD_ARTEMIS GOD_HESTIA GOD_DIONYSUS 
 		}
 		evil_god_names = {
 			GOD_ZEUS GOD_POSEIDON GOD_DIONYSUS GOD_HERMES GOD_ANGELOS GOD_TYPHON  
@@ -1586,14 +1835,14 @@ pagan_group = {
 		reformed = hellenic_pagan_reformed
 
 		icon = 37
-		heresy_icon = 14
+		heresy_icon = 59
 		
 		color = { 0.6 0.2 0.1 }
 		
 		high_god_name = GOD_ANAXORGI
 		
 		god_names = {
-			GOD_ARES GOD_TRITON GOD_HADES GOD_ATHENA GOD_PHILOMELUS GOD_PERSEPHONE GOD_HEPHAESTUS GOD_APHRODITE GOD_APOLLO GOD_ARTEMIS GOD_HESTIA GOD_DIONYSUS 
+			GOD_ARES GOD_TRITON GOD_HADES GOD_ATHENA GOD_PHILOMELUS GOD_PERSEPHONE GOD_HEPHAESTUS GOD_APHRODITE GOD_URANIA GOD_APOLLO GOD_ARTEMIS GOD_HESTIA GOD_DIONYSUS 
 		}
 		evil_god_names = {
 			GOD_ZEUS GOD_POSEIDON GOD_DIONYSUS GOD_HERMES GOD_ANGELOS GOD_TYPHON
@@ -1631,10 +1880,10 @@ pagan_group = {
 		secondary_event_pictures = finnish_pagan
 		interface_skin = { pagan_interface }
 
-		icon = 163
-		heresy_icon = 164
+		icon = 162
+		heresy_icon = 163
 		
-		color = { 86 86 86 }
+		color = { 96 96 116 }
 		
 		high_god_name = GOD_ZVEZD
 		
@@ -1669,6 +1918,9 @@ pagan_group = {
 		intermarry = folklorist_reformed
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = sisukkuus
 		intermarry = brethren
 		intermarry = poseidonian
 		
@@ -1682,7 +1934,7 @@ pagan_group = {
 		reformed = starist_pagan_reformed
 
 		icon = 162
-		heresy_icon = 164
+		heresy_icon = 163
 		
 		color = { 86 86 86 }
 		
@@ -1718,6 +1970,9 @@ pagan_group = {
 		intermarry = folklorist_reformed
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = sisukkuus
 		intermarry = brethren
 		intermarry = poseidonian
 		
@@ -1729,18 +1984,18 @@ pagan_group = {
 		secondary_event_pictures = finnish_pagan
 		interface_skin = { pagan_interface }
 
-		icon = 177
-		heresy_icon = 178
+		icon = 176
+		heresy_icon = 177
 		
-		color = { 172 181 45 }
+		color = { 255 255 119 }
 		
 		high_god_name = GOD_BALI_PENYALONG
 		
 		god_names = {
-			GOD_JOK_APOI GOD_DOH_TENANGAN GOD_LAKI_TENANGAN GOD_TOKONG GOD_BALI_ATAP GOD_BALI_URIP
+			GOD_PESALONG GOD_BUNGAN GOD_JOK_APOI GOD_DOH_TENANGAN GOD_LAKI_TENANGAN GOD_TOKONG GOD_BALI_ATAP GOD_BALI_URIP
 		}
 		evil_god_names = {
-			GOD_TOH GOD_PA_BALAN GOD_BALI_FLAKI
+			GOD_TOH GOD_PA_BALAN
 		}
 
 		crusade_name = GREAT_HOLY_WAR
@@ -1774,17 +2029,17 @@ pagan_group = {
 		reformed = bungan_pagan_reformed 
 
 		icon = 176
-		heresy_icon = 178
+		heresy_icon = 177
 		
 		color = { 243 255 64 }
 		
 		high_god_name = GOD_BALI_PENYALONG
 		
 		god_names = {
-			GOD_JOK_APOI GOD_DOH_TENANGAN GOD_LAKI_TENANGAN GOD_TOKONG GOD_BALI_ATAP GOD_BALI_URIP
+			GOD_PESALONG GOD_BUNGAN GOD_JOK_APOI GOD_DOH_TENANGAN GOD_LAKI_TENANGAN GOD_TOKONG GOD_BALI_ATAP GOD_BALI_URIP
 		}
 		evil_god_names = {
-			GOD_TOH GOD_PA_BALAN GOD_BALI_FLAKI
+			GOD_TOH GOD_PA_BALAN
 		}
 
 		crusade_name = GREAT_HOLY_WAR
@@ -1814,10 +2069,10 @@ pagan_group = {
 		secondary_event_pictures = finnish_pagan
 		interface_skin = { pagan_interface }
 
-		icon = 181
+		icon = 179
 		heresy_icon = 180
 		
-		color = { 168 42 101 }
+		color = { 255 104 167 }
 		
 		high_god_name = GOD_HATALLA
 		
@@ -1899,8 +2154,8 @@ pagan_group = {
 		secondary_event_pictures = finnish_pagan
 		interface_skin = { pagan_interface }
 
-		icon = 185
-		heresy_icon = 186
+		icon = 184
+		heresy_icon = 185
 		
 		color = { 252 125 180 }
 		
@@ -1970,7 +2225,7 @@ pagan_group = {
 		reformed = thuyhoa_pagan_reformed 
 
 		icon = 184
-		heresy_icon = 187
+		heresy_icon = 185
 		
 		color = { 255 64 180 }
 		
@@ -2036,8 +2291,8 @@ pagan_group = {
 		secondary_event_pictures = finnish_pagan
 		interface_skin = { pagan_interface }
 
-		icon = 194
-		heresy_icon = 195
+		icon = 193
+		heresy_icon = 194
 		
 		color = { 60 60 60 }
 		
@@ -2097,7 +2352,7 @@ pagan_group = {
 		reformed = satsana_pi_pagan_reformed 
 
 		icon = 193
-		heresy_icon = 195
+		heresy_icon = 194
 		
 		color = { 30 30 30 }
 		

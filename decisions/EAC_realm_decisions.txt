@@ -49,6 +49,171 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_balhae = {
+		is_high_prio = yes
+		only_playable = no
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			culture_group = korean_group
+			
+			k_balhae= {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_kingdom_allow = yes
+			
+			d_pulandian = { show_scope_change = no province_completely_controls_trigger = yes }
+			d_donggang = { show_scope_change = no province_completely_controls_trigger = yes }
+			d_tonghua = { show_scope_change = no province_completely_controls_trigger = yes }
+			d_baishan = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_balhae_tt 
+				k_balhae = {
+					gain_title_effect = yes
+				}
+			}
+			
+
+			hidden_tooltip = {
+				d_pulandian = { de_jure_liege = k_balhae }
+				d_donggang = { de_jure_liege = k_balhae }
+				d_tonghua = { de_jure_liege = k_balhae }
+				d_baishan = { de_jure_liege = k_balhae }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_jomon = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture = ainu
+			e_jomon = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			k_chubu = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_kanto = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_tohoku = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_hokkaido = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_jomon_tt
+				e_jomon = {
+					gain_empire_effect = yes					
+				}
+			}
+			hidden_tooltip = {
+				k_chubu = { de_jure_liege = e_jomon }
+				k_kanto = { de_jure_liege = e_jomon }
+				k_tohoku = { de_jure_liege = e_jomon }
+				k_hokkaido = { de_jure_liege = e_jomon }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_hfe = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture_group = austronesian
+				culture_group = asian_anglophone
+				culture_group = aeta_group
+				culture_group = hispano_austronesian
+			}
+			OR = {
+				religion = catholic
+				religion = cadaverist
+				religion = hussite
+				religion = fraticelli
+				religion = katoliko
+				religion = aglipayan
+				religion = el_shaddai
+			}
+			e_hfe = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			k_sabah = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_palawan = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_sulu = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_zamboanga = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_visayas = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_luzon = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_ilocos = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_taiwan = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_hfe_tt
+				e_hfe = {
+					gain_empire_effect = yes					
+				}
+			}
+			hidden_tooltip = {
+				k_sabah = { de_jure_liege = e_hfe }
+				k_palawan = { de_jure_liege = e_hfe }
+				k_sulu = { de_jure_liege = e_hfe }
+				k_zamboanga = { de_jure_liege = e_hfe }
+				k_visayas = { de_jure_liege = e_hfe }
+				k_luzon = { de_jure_liege = e_hfe }
+				k_ilocos = { de_jure_liege = e_hfe }
+				k_taiwan = { de_jure_liege = e_hfe }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	form_burma_lame = {
 		is_high_prio = yes
@@ -197,6 +362,7 @@ decisions = {
 				culture = mon
 				culture = karen
 				culture = chin
+				culture = kachin
 			}
 			
 			e_panglong = {
@@ -493,6 +659,9 @@ decisions = {
 				is_titular = yes
 				has_holder = no
 			}
+			NOT = {
+				religion = pancasila
+			}
 			prisoner = no
 			has_regent = no
 		}
@@ -503,9 +672,22 @@ decisions = {
 			}
 			form_kingdom_allow = yes
 			#Controls those kingdoms
-				e_sumatra = { show_scope_change = no province_completely_controls_trigger = yes }
-				e_malaysia = { show_scope_change = no province_completely_controls_trigger = yes }	
-				e_indonesia = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_aceh = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_bengkulu = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_riau = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_kedah = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_pahang = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_malaca = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_paktai = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_malaca = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_bali = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_sunda = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_majapahit = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_west_kalimantan = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_kalimantan = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_sarawak = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_sabah = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_borneo = { show_scope_change = no province_completely_controls_trigger = yes }	
 		}
 
 		effect = {
@@ -526,7 +708,9 @@ decisions = {
 				k_malaca = { de_jure_liege = e_nusantara }	
 				k_paktai = { de_jure_liege = e_nusantara }	
 				k_malaca = { de_jure_liege = e_nusantara }	
-				k_java = { de_jure_liege = e_nusantara }	
+				k_majapahit = { de_jure_liege = e_nusantara }	
+				k_sunda = { de_jure_liege = e_nusantara }	
+				k_bali = { de_jure_liege = e_nusantara }	
 				k_west_kalimantan = { de_jure_liege = e_nusantara }	
 				k_kalimantan = { de_jure_liege = e_nusantara }	
 				k_sarawak = { de_jure_liege = e_nusantara }	
@@ -541,5 +725,79 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	form_indonesia = { #Sri Vijaya
+		is_high_prio = yes
+		only_playable = no
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			e_indonesia = {
+				is_titular = yes
+				has_holder = no
+			}
+			religion = pancasila
+			prisoner = no
+			has_regent = no
+		}
 
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_kingdom_allow = yes
+			#Controls those kingdoms
+				k_aceh = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_bengkulu = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_riau = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_kedah = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_pahang = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_malaca = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_paktai = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_malaca = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_bali = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_sunda = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_majapahit = { show_scope_change = no province_completely_controls_trigger = yes }		
+				k_west_kalimantan = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_kalimantan = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_sarawak = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_sabah = { show_scope_change = no province_completely_controls_trigger = yes }	
+				k_borneo = { show_scope_change = no province_completely_controls_trigger = yes }	
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_indonesia_tt
+				e_indonesia = {
+					gain_title_effect = yes
+				}
+			}
+			
+
+			hidden_tooltip = {
+				k_aceh = { de_jure_liege = e_indonesia }
+				k_bengkulu = { de_jure_liege = e_indonesia }
+				k_riau = { de_jure_liege = e_indonesia }
+				k_kedah = { de_jure_liege = e_indonesia }		
+				k_pahang = { de_jure_liege = e_indonesia }	
+				k_malaca = { de_jure_liege = e_indonesia }	
+				k_paktai = { de_jure_liege = e_indonesia }	
+				k_malaca = { de_jure_liege = e_indonesia }	
+				k_majapahit = { de_jure_liege = e_indonesia }	
+				k_sunda = { de_jure_liege = e_indonesia }	
+				k_bali = { de_jure_liege = e_indonesia }	
+				k_west_kalimantan = { de_jure_liege = e_indonesia }	
+				k_kalimantan = { de_jure_liege = e_indonesia }	
+				k_sarawak = { de_jure_liege = e_indonesia }	
+				k_sabah = { de_jure_liege = e_indonesia }
+				k_borneo = { de_jure_liege = e_indonesia }	
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

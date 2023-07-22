@@ -409,7 +409,7 @@ pneumonic = {
 syphilitic = {
 	is_health = yes
 	is_illness = yes
-	inherit_chance = 10
+	inherit_chance = 15
 	
 	sex_appeal_opinion = -10
 	general_opinion = -5
@@ -772,8 +772,8 @@ homosexual = {
 	child_insult_adj = INSULT_CRAZY
 }
 bisexual = {
-	sex_appeal_opinion = 5 # Only to those of the same sex
-	vassal_opinion = -5
+	male_opinion = 5 
+	female_opinion = 5
 	same_opinion = 5
 	thelemic_reformed_opinion = 5
 	summer_queen_opinion = 5
@@ -791,13 +791,41 @@ bisexual = {
 	child_insult = INSULT_PEABRAIN
 	child_insult_adj = INSULT_CRAZY
 }
+androgynous = {
+	birth = 800
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 50
+	male_opinion = 5 
+	female_opinion = 5
+	hellenic_pagan_opinion = 5
+	hellenic_pagan_reformed_opinion = 5
+	thelemic_reformed_opinion = 5
+	thelemic_opinion = 5
+	summer_queen_opinion = 5
+	orange_king_opinion = 5
+	theosophy_opinion = 5
+	
+	ruler_designer_cost = 0
+	
+	female_compliment = COMPL_BEAUTY
+	female_compliment_adj = COMPL_FAIR
+	male_compliment = COMPL_CHARMER
+	male_compliment_adj = COMPL_HANDSOME
+	child_compliment_adj = COMPL_PRETTY
+	male_insult = INSULT_SODOMITE
+	male_insult_adj = INSULT_EFFEMINATE
+	female_insult = INSULT_LESBIAN
+	female_insult_adj = INSULT_SAPPHIC
+	child_insult = INSULT_PEABRAIN
+	child_insult_adj = INSULT_CRAZY
+}
 
 #####################
 # POSSIBLY CONGENITAL
 #####################
 
 clubfooted = {
-	birth = 50
+	birth = 20
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	combat_rating = -5 #old value: -1
@@ -813,7 +841,7 @@ clubfooted = {
 	female_insult_adj = INSULT_LIMPING
 }
 harelip = {
-	birth = 50
+	birth = 10
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	sex_appeal_opinion = -10
@@ -846,7 +874,7 @@ hunchback = {
 	female_insult_adj = INSULT_CROOKED
 }
 lisp = {
-	birth = 50
+	birth = 1500
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	same_opinion = 5
@@ -861,7 +889,7 @@ lisp = {
 	child_insult_adj = INSULT_STUPID
 }
 stutter = {
-	birth = 50
+	birth = 500
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	same_opinion = 5
@@ -875,7 +903,7 @@ stutter = {
 	child_insult_adj = INSULT_STUPID
 }
 fair = {
-	birth = 100
+	birth = 1000
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	sex_appeal_opinion = 30
@@ -893,9 +921,9 @@ fair = {
 	child_compliment_adj = COMPL_PRETTY
 }
 ugly = {
-	birth = 100
-	inherit_chance = 10
-	both_parent_has_trait_inherit_chance = 30
+	birth = 1000
+	inherit_chance = 15
+	both_parent_has_trait_inherit_chance = 40
 	sex_appeal_opinion = -20
 	
 	opposites =  {
@@ -911,11 +939,13 @@ ugly = {
 	child_insult_adj = INSULT_UGLY
 }
 dwarf = {
-	birth = 25
-	inherit_chance = 25
-	both_parent_has_trait_inherit_chance = 50
+	birth = 5
+	inherit_chance = 30
+	both_parent_has_trait_inherit_chance = 60
 
 	sex_appeal_opinion = -30
+	tribal_opinion = -5
+	vassal_opinion = -5
 	same_opinion = 5
 	novelist_opinion = 5
 	novelist_reformed_opinion = 5
@@ -965,7 +995,7 @@ genius = {
 }
 
 quick = {
-	birth = 100
+	birth = 200
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	opposites =  {
@@ -983,8 +1013,50 @@ quick = {
 	
 	ai_rationality = 15
 }
-slow = {
+eccentric = {
+	birth = 200
+	inherit_chance = 15
+	both_parent_has_trait_inherit_chance = 40
+
+	diplomacy = -2
+	intrigue = -1
+	stewardship = 1
+	martial = 1
+	learning = 1
+	
+	ai_rationality = 25
+	ai_honor = 40
+	ai_ambition = -10
+	ai_greed = -10
+}
+fecund = {
+	birth = 900
+	inherit_chance = 15
+	both_parent_has_trait_inherit_chance = 40
+	opposites =  {
+		barren
+	}
+	fertility = 0.4
+}
+barren = {
+	birth = 900
+	inherit_chance = 15
+	both_parent_has_trait_inherit_chance = 40
+	opposites =  {
+		fecund
+	}
+	fertility = -0.4
+}
+haemophiliac = {
 	birth = 100
+	inherit_chance = 15
+	both_parent_has_trait_inherit_chance = 40
+	health = -1.5
+	combat_rating = -10
+	vassal_opinion = -10
+}
+slow = {
+	birth = 200
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	opposites =  {
@@ -1067,7 +1139,7 @@ inbred = {
 	child_insult_adj = INSULT_UGLY
 }
 strong = {
-	birth = 100
+	birth = 800
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	opposites =  {
@@ -1089,7 +1161,7 @@ strong = {
 	male_compliment_adj = COMPL_STRONG
 }
 weak = {
-	birth = 100
+	birth = 800
 	inherit_chance = 15
 	both_parent_has_trait_inherit_chance = 40
 	opposites =  {
@@ -1157,7 +1229,7 @@ hedonist = {
 	christian_church_opinion = -5
 	
 	ai_zeal = -30
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	
 	male_insult = INSULT_DEBAUCHER
 	female_insult = INSULT_DEBAUCHER
@@ -1180,7 +1252,7 @@ scholar = {
 	
 	same_opinion = 10
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	
 	male_compliment = COMPL_SCHOLAR
 	female_compliment = COMPL_SCHOLAR
@@ -1202,7 +1274,7 @@ gardener = {
 	
 	same_opinion = 10
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	
 	male_insult = INSULT_TREEHUGGER
 	female_insult = INSULT_TREEHUGGER
@@ -1222,7 +1294,7 @@ mystic = {
 	male_compliment = COMPL_MYSTIC
 	female_compliment = COMPL_MYSTIC
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	
 	child_compliment = COMPL_SMARTY
 	male_compliment_adj = COMPL_LEARNED
@@ -1261,17 +1333,17 @@ impaler = {
 	female_insult_adj = INSULT_EVIL
 	child_insult_adj = INSULT_WICKED
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 }
 duelist = {
 	lifestyle = yes
 	
-	martial = 3
-	combat_rating = 30 #old value: 5
+	martial = 2
+	combat_rating = 40 #old value: 5
 	
 	same_opinion = 10
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	health = 2
 	male_compliment = COMPL_BLADEMASTER
 	female_compliment = COMPL_CHAMPION
@@ -1294,7 +1366,7 @@ hunter = {
 	
 	same_opinion = 10
 	health = 2
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	
 	male_compliment = COMPL_HUNTMASTER
 }
@@ -1314,7 +1386,7 @@ poet = {
 	male_compliment = COMPL_POET
 	female_compliment = COMPL_POET
 	
-	ruler_designer_cost = 4
+	ruler_designer_cost = 0
 }
 
 # Way of Life DLC: No longer a lifestyle trait
@@ -1330,7 +1402,7 @@ falconer = {
 	health = 1
 	same_opinion = 10
 	
-	ruler_designer_cost = 4
+	ruler_designer_cost = 0
 }
 
 #################################################################
@@ -1804,6 +1876,7 @@ ambitious = {
 	personality = yes
 	opposites =  {
 		content
+		communed_with_shadow
 	}
 	
 	intrigue = 2
@@ -1827,6 +1900,7 @@ content = {
 	personality = yes
 	opposites =  {
 		ambitious
+		communed_with_shadow
 	}
 	
 	intrigue = -1

@@ -116,6 +116,657 @@
 
 
 
+# The relationship THIS has to event_target_1 [target_courtier.GetEventTarget1Relation]
+defined_text = {
+	name = GetEventTarget1Relation
+	use_first_valid = yes
+
+	# War enemies and concubine/consort have highest priority
+	text = {
+		localisation_key = GetRelation_enemy
+		trigger = { war_with = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetConcubineConsortKey
+		trigger = { is_consort = event_target:event_target_1 }
+	}
+
+	# Then spouses
+	text = {
+		localisation_key = GetSpouseEventTarget1Key
+		trigger = { is_married = event_target:event_target_1 }
+	}
+
+	# Then some close relatives
+	text = {
+		localisation_key = GetParentKey
+		trigger = { is_parent_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetGrandParentKey
+		trigger = { is_grandparent_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetChildKey
+		trigger = { is_child_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetGrandChildKey
+		trigger = { is_grandchild_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetSiblingKey
+		trigger = { sibling = event_target:event_target_1 }
+	}
+
+	# Followed by Rivals, Friends and Lovers
+	text = {
+		localisation_key = GetRivalKey
+		trigger = { is_rival = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetFriendKey
+		trigger = { is_friend = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetLoverKey
+		trigger = { is_lover = event_target:event_target_1 }
+	}
+
+	# Then the other close relatives and other family ties
+	text = {
+		localisation_key = GetNiblingKey
+		trigger = { is_nibling_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetAuntUncleKey
+		trigger = { is_aunt_uncle_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetCousinKey
+		trigger = { is_cousin_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetSiblingInLawKey
+		trigger = { sibling_in_law_of_event_target_1_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetParentInLawKey
+		trigger = { relative_in_law_of_event_target_1_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetKinKey
+
+		trigger = {
+			dynasty = event_target:event_target_1
+			is_lowborn = no
+		}
+	}
+
+	# And then some generic relations
+	text = {
+		localisation_key = GetLiegeKey
+		trigger = { is_liege_of = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetVassalKey
+
+		trigger = {
+			vassal_of = event_target:event_target_1
+			is_ruler = yes
+		}
+	}
+
+	text = {
+		localisation_key = GetCourtierKey
+
+		trigger = {
+			vassal_of = event_target:event_target_1
+			is_ruler = no
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_fellow_member
+		trigger = { same_society_as = event_target:event_target_1 }
+	}
+
+	text = {
+		localisation_key = GetRelation_sway_target
+
+		trigger = {
+			event_target:event_target_1 = {
+				persistent_event_target:sway_target = {
+					character = PREVPREV
+				}
+			}
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_antagonist
+
+		trigger = {
+			OR = {
+				event_target:event_target_1 = {
+					persistent_event_target:antagonize_target = {
+						character = PREVPREV
+					}
+				}
+
+				persistent_event_target:antagonize_target = {
+					character = event_target:event_target_1
+				}
+			}
+		}
+	}
+
+	fallback_text = {
+		localisation_key = String_root_relation_fallback
+	}
+}
+
+# The relationship THIS has to event_target_2
+defined_text = {
+	name = GetEventTarget2Relation
+	use_first_valid = yes
+
+	# War enemies and concubine/consort have highest priority
+	text = {
+		localisation_key = GetRelation_enemy
+		trigger = { war_with = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetConcubineConsortKey
+		trigger = { is_consort = event_target:event_target_2 }
+	}
+
+	# Then spouses
+	text = {
+		localisation_key = GetSpouseEventTarget2Key
+		trigger = { is_married = event_target:event_target_2 }
+	}
+
+	# Then some close relatives
+	text = {
+		localisation_key = GetParentKey
+		trigger = { is_parent_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetGrandParentKey
+		trigger = { is_grandparent_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetChildKey
+		trigger = { is_child_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetGrandChildKey
+		trigger = { is_grandchild_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetSiblingKey
+		trigger = { sibling = event_target:event_target_2 }
+	}
+
+	# Followed by Rivals, Friends and Lovers
+	text = {
+		localisation_key = GetRivalKey
+		trigger = { is_rival = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetFriendKey
+		trigger = { is_friend = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetLoverKey
+		trigger = { is_lover = event_target:event_target_2 }
+	}
+
+	# Then the other close relatives and other family ties
+	text = {
+		localisation_key = GetNiblingKey
+		trigger = { is_nibling_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetAuntUncleKey
+		trigger = { is_aunt_uncle_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetCousinKey
+		trigger = { is_cousin_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetSiblingInLawKey
+		trigger = { sibling_in_law_of_event_target_2_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetParentInLawKey
+		trigger = { relative_in_law_of_event_target_2_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetKinKey
+
+		trigger = {
+			dynasty = event_target:event_target_2
+			is_lowborn = no
+		}
+	}
+
+	# And then some generic relations
+	text = {
+		localisation_key = GetLiegeKey
+		trigger = { is_liege_of = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetVassalKey
+
+		trigger = {
+			vassal_of = event_target:event_target_2
+			is_ruler = yes
+		}
+	}
+
+	text = {
+		localisation_key = GetCourtierKey
+
+		trigger = {
+			vassal_of = event_target:event_target_2
+			is_ruler = no
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_fellow_member
+		trigger = { same_society_as = event_target:event_target_2 }
+	}
+
+	text = {
+		localisation_key = GetRelation_sway_target
+
+		trigger = {
+			event_target:event_target_2 = {
+				persistent_event_target:sway_target = {
+					character = PREVPREV
+				}
+			}
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_antagonist
+
+		trigger = {
+			OR = {
+				event_target:event_target_2 = {
+					persistent_event_target:antagonize_target = {
+						character = PREVPREV
+					}
+				}
+
+				persistent_event_target:antagonize_target = {
+					character = event_target:event_target_2
+				}
+			}
+		}
+	}
+
+	fallback_text = {
+		localisation_key = String_root_relation_fallback
+	}
+}
+
+# The relationship THIS has to event_target_3
+defined_text = {
+	name = GetEventTarget3Relation
+	use_first_valid = yes
+
+	# War enemies and concubine/consort have highest priority
+	text = {
+		localisation_key = GetRelation_enemy
+		trigger = { war_with = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetConcubineConsortKey
+		trigger = { is_consort = event_target:event_target_3 }
+	}
+
+	# Then spouses
+	text = {
+		localisation_key = GetSpouseEventTarget3Key
+		trigger = { is_married = event_target:event_target_3 }
+	}
+
+	# Then some close relatives
+	text = {
+		localisation_key = GetParentKey
+		trigger = { is_parent_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetGrandParentKey
+		trigger = { is_grandparent_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetChildKey
+		trigger = { is_child_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetGrandChildKey
+		trigger = { is_grandchild_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetSiblingKey
+		trigger = { sibling = event_target:event_target_3 }
+	}
+
+	# Followed by Rivals, Friends and Lovers
+	text = {
+		localisation_key = GetRivalKey
+		trigger = { is_rival = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetFriendKey
+		trigger = { is_friend = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetLoverKey
+		trigger = { is_lover = event_target:event_target_3 }
+	}
+
+	# Then the other close relatives and other family ties
+	text = {
+		localisation_key = GetNiblingKey
+		trigger = { is_nibling_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetAuntUncleKey
+		trigger = { is_aunt_uncle_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetCousinKey
+		trigger = { is_cousin_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetSiblingInLawKey
+		trigger = { sibling_in_law_of_event_target_3_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetParentInLawKey
+		trigger = { relative_in_law_of_event_target_3_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetKinKey
+
+		trigger = {
+			dynasty = event_target:event_target_3
+			is_lowborn = no
+		}
+	}
+
+	# And then some generic relations
+	text = {
+		localisation_key = GetLiegeKey
+		trigger = { is_liege_of = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetVassalKey
+
+		trigger = {
+			vassal_of = event_target:event_target_3
+			is_ruler = yes
+		}
+	}
+
+	text = {
+		localisation_key = GetCourtierKey
+
+		trigger = {
+			vassal_of = event_target:event_target_3
+			is_ruler = no
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_fellow_member
+		trigger = { same_society_as = event_target:event_target_3 }
+	}
+
+	text = {
+		localisation_key = GetRelation_sway_target
+
+		trigger = {
+			event_target:event_target_3 = {
+				persistent_event_target:sway_target = {
+					character = PREVPREV
+				}
+			}
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_antagonist
+
+		trigger = {
+			OR = {
+				event_target:event_target_3 = {
+					persistent_event_target:antagonize_target = {
+						character = PREVPREV
+					}
+				}
+
+				persistent_event_target:antagonize_target = {
+					character = event_target:event_target_3
+				}
+			}
+		}
+	}
+
+	fallback_text = {
+		localisation_key = String_root_relation_fallback
+	}
+}
+
+# The relationship THIS has to event_target_4
+defined_text = {
+	name = GetEventTarget4Relation
+	use_first_valid = yes
+
+	# War enemies and concubine/consort have highest priority
+	text = {
+		localisation_key = GetRelation_enemy
+		trigger = { war_with = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetConcubineConsortKey
+		trigger = { is_consort = event_target:event_target_4 }
+	}
+
+	# Then spouses
+	text = {
+		localisation_key = GetSpouseEventTarget4Key
+		trigger = { is_married = event_target:event_target_4 }
+	}
+
+	# Then some close relatives
+	text = {
+		localisation_key = GetParentKey
+		trigger = { is_parent_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetGrandParentKey
+		trigger = { is_grandparent_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetChildKey
+		trigger = { is_child_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetGrandChildKey
+		trigger = { is_grandchild_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetSiblingKey
+		trigger = { sibling = event_target:event_target_4 }
+	}
+
+	# Followed by Rivals, Friends and Lovers
+	text = {
+		localisation_key = GetRivalKey
+		trigger = { is_rival = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetFriendKey
+		trigger = { is_friend = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetLoverKey
+		trigger = { is_lover = event_target:event_target_4 }
+	}
+
+	# Then the other close relatives and other family ties
+	text = {
+		localisation_key = GetNiblingKey
+		trigger = { is_nibling_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetAuntUncleKey
+		trigger = { is_aunt_uncle_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetCousinKey
+		trigger = { is_cousin_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetSiblingInLawKey
+		trigger = { sibling_in_law_of_event_target_4_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetParentInLawKey
+		trigger = { relative_in_law_of_event_target_4_trigger = yes }
+	}
+
+	text = {
+		localisation_key = GetKinKey
+
+		trigger = {
+			dynasty = event_target:event_target_4
+			is_lowborn = no
+		}
+	}
+
+	# And then some generic relations
+	text = {
+		localisation_key = GetLiegeKey
+		trigger = { is_liege_of = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetVassalKey
+
+		trigger = {
+			vassal_of = event_target:event_target_4
+			is_ruler = yes
+		}
+	}
+
+	text = {
+		localisation_key = GetCourtierKey
+
+		trigger = {
+			vassal_of = event_target:event_target_4
+			is_ruler = no
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_fellow_member
+		trigger = { same_society_as = event_target:event_target_4 }
+	}
+
+	text = {
+		localisation_key = GetRelation_sway_target
+
+		trigger = {
+			event_target:event_target_4 = {
+				persistent_event_target:sway_target = {
+					character = PREVPREV
+				}
+			}
+		}
+	}
+
+	text = {
+		localisation_key = GetRelation_antagonist
+
+		trigger = {
+			OR = {
+				event_target:event_target_4 = {
+					persistent_event_target:antagonize_target = {
+						character = PREVPREV
+					}
+				}
+
+				persistent_event_target:antagonize_target = {
+					character = event_target:event_target_4
+				}
+			}
+		}
+	}
+
+	fallback_text = {
+		localisation_key = String_root_relation_fallback
+	}
+}
 ###RELATIONSHIPS###
 defined_text = {
 	name = GetRootRelation
@@ -4150,6 +4801,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Genevist
+		trigger = { true_religion_genevist_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_Syriac_Chaldean
 		trigger = { true_religion_chaldean_trigger = yes 
 			NOT = {
@@ -4286,6 +4945,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Shaivasiddhanta
+		trigger = { true_religion_shaivasiddhanta_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_neo_vedantic
 		trigger = { true_religion_neovedantic_trigger = yes 
 			NOT = {
@@ -4400,6 +5067,14 @@ defined_text = {
 	text = { 
 		localisation_key = String_Sufi
 		trigger = { true_religion_sufi_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
+		localisation_key = String_alevi
+		trigger = { true_religion_alevi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -5182,6 +5857,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Genevist
+		trigger = { true_religion_genevist_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_Syriac_Chaldean
 		trigger = { true_religion_chaldean_trigger = yes 
 			NOT = {
@@ -5318,6 +6001,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Shaivasiddhanta
+		trigger = { true_religion_shaivasiddhanta_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_neo_vedantic
 		trigger = { true_religion_neovedantic_trigger = yes 
 			NOT = {
@@ -5432,6 +6123,14 @@ defined_text = {
 	text = { 
 		localisation_key = String_Sufi
 		trigger = { true_religion_sufi_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
+		localisation_key = String_Alevi
+		trigger = { true_religion_alevi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -6447,6 +7146,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Genevist
+		trigger = { true_religion_genevist_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_Syriac_Chaldean
 		trigger = { true_religion_chaldean_trigger = yes 
 			NOT = {
@@ -6583,6 +7290,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Shaivasiddhanta
+		trigger = { true_religion_shaivasiddhanta_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_neo_vedantic
 		trigger = { true_religion_neovedantic_trigger = yes 
 			NOT = {
@@ -6697,6 +7412,14 @@ defined_text = {
 	text = { 
 		localisation_key = String_Sufi
 		trigger = { true_religion_sufi_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
+		localisation_key = String_Alevi
+		trigger = { true_religion_alevi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -7479,6 +8202,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Genevist
+		trigger = { true_religion_genevist_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_Syriac_Chaldean
 		trigger = { true_religion_chaldean_trigger = yes 
 			NOT = {
@@ -7615,6 +8346,14 @@ defined_text = {
 		}
 	}
 	text = { 
+		localisation_key = String_Shaivasiddhanta
+		trigger = { true_religion_shaivasiddhanta_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
 		localisation_key = String_neo_vedantic
 		trigger = { true_religion_neovedantic_trigger = yes 
 			NOT = {
@@ -7729,6 +8468,14 @@ defined_text = {
 	text = { 
 		localisation_key = String_Sufi
 		trigger = { true_religion_sufi_trigger = yes 
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	text = { 
+		localisation_key = String_Alevi
+		trigger = { true_religion_alevi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -20566,6 +21313,9 @@ defined_text = {
 		trigger = { has_character_flag = white_elephant }
 		localisation_key = String_elephant
 	}
+	fallback_text = {
+		localisation_key = String_animal_fallback #Beast
+	}
 }
 
 defined_text = {
@@ -20591,6 +21341,9 @@ defined_text = {
 	text = {
 		trigger = { has_character_flag = white_elephant }
 		localisation_key = String_Elephant
+	}
+	fallback_text = {
+		localisation_key = String_animal_fallback #Beast
 	}
 }
 
@@ -22240,7 +22993,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			religion_group = muslim
+		}
+		localisation_key = string_wali_in_heaven
+	}
+	text = {
+		trigger = {
+			NOR = { religion_group = christian religion_group = muslim }
 		}
 		localisation_key = string_blessed_ancestor
 	}

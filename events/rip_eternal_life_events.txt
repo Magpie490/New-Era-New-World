@@ -53,6 +53,9 @@ narrative_event = {
 		factor = 1
 
 		mult_modifier = {
+			factor = 0.4
+		}
+		mult_modifier = {
 			factor = 1.25
 
 			health < 2
@@ -1022,7 +1025,6 @@ narrative_event = {
 					age = 9
 					health = 15
 					add_trait = mystic
-					add_trait = brahmin
 					add_trait = quick
 					add_trait = fussy
 					add_trait = conscientious
@@ -1342,7 +1344,6 @@ narrative_event = {
 					age = 9
 					health = 15
 					add_trait = mystic
-					add_trait = brahmin
 					add_trait = quick
 					add_trait = fussy
 					add_trait = conscientious
@@ -6859,6 +6860,7 @@ narrative_event = {
 		# Send various events
 		character_event = { id = CM.10011 } # Chronicle event
 		character_event = { id = TOG.6001 } # Saoshyant descendant trait
+		character_event = { id = ariyamaitre.6001 } # Dhamma-raja descendant trait
 		character_event = { id = RIP.11064 } # Babies born in seclusion gain seclusion
 		character_event = { id = HFP.30030 } # Event to better tie freckles trait inheritance to graphical culture and avoid weird spawns
 		character_event = { id = HF.23750 } # Stability doctrine flavour: primary Heir is born, decide what to do with him.

@@ -68,6 +68,7 @@ is_anti_caliph = {
 	OR = {
 		has_claim = d_sunni
 		has_claim = d_wahhabi
+		has_claim = d_deobandi
 		has_claim = d_maliki
 		has_claim = d_mesopotamian
 		has_claim = d_ismaili
@@ -81,6 +82,7 @@ uses_agrarian_feudal = {
 		culture = moravian
 		culture = slovak
 		culture = polish
+		culture = yola
 		culture = greater_polish
 		culture = mazovian
 		culture = gorale
@@ -120,6 +122,7 @@ uses_agrarian_feudal = {
 		culture = gourma
 		culture = nigeren
 		culture = icelander
+		culture = munda
 		culture = traveller
 		culture = manx
 		culture = aeslabh
@@ -144,8 +147,6 @@ uses_agrarian_feudal = {
 		culture = aramaic
 		culture = mandaeans
 		culture = babylonian
-		culture = ainu
-		culture = hokkaido
 		culture = hiligaynon
 		culture = cebuano
 		culture = ilocano
@@ -154,7 +155,6 @@ uses_agrarian_feudal = {
 		culture = tausug
 		culture = yakan
 		culture = tagalog
-		culture = tohoku
 		culture_group = maghreb_arabic
 		culture_group = mande
 		culture_group = far_east_slavic
@@ -167,6 +167,10 @@ uses_agrarian_feudal = {
 		culture_group = arghu
 		culture_group = baltic
 		culture_group = berber
+		culture_group = salic
+		culture_group = tanic
+		culture_group = digaric
+		culture_group = manipuric
 		culture_group = cushitic
 		culture_group = eastern_dravidian_group
 		culture_group = eastern_sudanic
@@ -189,17 +193,77 @@ uses_agrarian_feudal = {
 uses_theocratic_feudal = {
 	OR={
 		religion = insular
+		religion = highmount
+		AND = {
+			OR = {
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture = nepali
+			}
+			religion_group = buddhist_group
+		}
+		has_religion_feature = religion_monastic
+		has_religion_feature = religion_feature_neoncult
 		religion = celtic_pagan
 		religion = celtic_pagan_reformed
+		religion = donyipolo
+		religion = kiratist
 		religion = druze
 		religion = alawite
 		religion = quaker
 		religion = bon
+		religion = mattaism
 		religion = bon_reformed
+		religion = shaivasiddhanta
 		religion = haymanot
 		religion = neodonatists
+		religion = osvicenism
 		religion = neoncult
-		religion = highmount
+		religion = neoncult_reformed
+		AND = {
+			primary_title = {
+				OR = {
+					title = k_athos		
+					title = d_athos
+				}				
+			}
+			OR = {
+				religion = orthodox
+				religion = marblists
+				any_owned_bloodline = {
+					has_bloodline_flag = athos_blood
+				}
+			}
+		}
+		AND = {
+			top_liege = {
+				primary_title = {
+					OR = {
+						title = k_athos
+						title = d_athos
+					}
+				}
+				OR = {
+					religion = orthodox
+					religion = marblists
+					any_owned_bloodline = {
+						has_bloodline_flag = athos_blood
+					}
+				}
+			}
+			OR = {
+				religion = orthodox
+				religion = marblists
+				any_owned_bloodline = {
+					has_bloodline_flag = athos_blood
+				}
+			}
+		}
+	}
+	NOR = {
+		has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_satsana_phi
 	}
 }
 uses_zodiacs = {
@@ -210,6 +274,7 @@ uses_zodiacs = {
 		religion = hellenic_pagan_reformed
 		has_religion_feature = religion_astrology
 		religion = thelemic_reformed
+		religion = theosophy
 		religion = summer_queen
 		religion = thelemic
 		religion = orange_king
@@ -289,7 +354,6 @@ doesnt_holds_special_empire = {
 					title = e_taoist
 					title = e_white_lotus
 					title = e_tridemism
-					title = e_ramadi
 					title = e_dvipantara
 					title = e_wuxia
 					title = e_legalist
@@ -437,7 +501,6 @@ should_have_byz_elective_trigger = {
 		title = e_ruthenia
 		title = e_marblists
 		title = e_bengal
-		#title = e_columbia
 		AND = {
 			title = k_britannia
 			holder_scope = {
@@ -445,8 +508,10 @@ should_have_byz_elective_trigger = {
 			}
 		}
 		AND = {
-			has_landed_title = e_great_russia
-			has_landed_title = d_petrist
+			OR = {
+				title = e_great_russia
+				title = d_petrist
+			}
 		}
 	}
 }
@@ -1122,6 +1187,7 @@ uses_mandala_government_trigger = {
 		culture_group = khmer_group
 		culture_group = chamic
 		culture_group = mon_group
+		culture_group = mokenic
 		culture_group = bahnaric
 		culture_group = malay_group
 		culture_group = sumatric
@@ -1129,7 +1195,10 @@ uses_mandala_government_trigger = {
 		culture_group = iban_dayakic
 		culture_group = aslian
 		culture = myanmarese
+		culture = chin
+		culture = kachin
 		culture = karen
+		culture = kayah
 		culture = rakhine
 		culture = kuy
 		culture = khmu
@@ -1164,6 +1233,17 @@ uses_eastern_feudal_trigger = {
 		has_religion_feature = religion_feature_satsana_phi
 	}
 }
+uses_japanese_feudal_trigger = {
+	OR = {
+		culture_group = japan_group
+		religion = shinto
+		religion = bushinto
+		religion = buddhoshinto
+		religion = ainushinto
+		religion = shinko
+		religion = amidism
+	}
+}
 uses_phonocracy_trigger = {
 	OR = {
 		religion = jacobinist	
@@ -1174,12 +1254,16 @@ uses_phonocracy_trigger = {
 		has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_satsana_phi
 	}
+	NOT = {
+		has_religion_feature = religion_monastic
+	}
 }
 
 is_feminist_culture = {
 	OR = {
 		culture_group = anglo_frisian
-		culture_group = celtic
+		culture_group = goidelic
+		culture_group = brythonic
 		culture_group = francophone
 		culture_group = lusophone
 		culture_group = hispanophone
@@ -1198,6 +1282,7 @@ is_feminist_culture = {
 		culture = lichtensteiner
 		culture = austrian
 		culture = swiss
+		culture = patoues
 		culture = bavarian
 		culture = rheinlander
 		culture = brandenburger
@@ -1439,7 +1524,6 @@ oligarchy_title_trigger = {
 		title = e_russian_republic
 		title = e_hellenic_republic
 		title = e_turkish_republic
-		#title = d_boston_republic
 	}
 }
 

@@ -134,7 +134,14 @@ novelist_star_child = {
 	customizer = no
 	random = no
 }
-
+adult_baptized = {
+    same_opinion = 5
+    church_opinion = 15
+    monthly_character_piety = 0.05
+    random = no
+    religious = yes
+    ruler_designer_cost = 0
+}
 novelist_reformed_kings_man = {
 	martial = 1
 	monthly_character_piety = 0.75
@@ -270,10 +277,176 @@ novelist_reformed_star_child = {
 }
 ###
 
+summer_queen_bad_honour = {
+	vassal_opinion = -5
+	general_opinion = -5
+	sex_appeal_opinion = -5
+	global_tax_modifier = -0.05
+	
+	potential =  {
+		OR = {
+			religion = orleanist
+			religion = novelist
+			religion = novelist_reformed
+			religion = summer_queen
+		}
+	}
+	ai_honor = -20
+
+	customizer = no
+	random = no
+}
+summer_queen_1_honour = {
+	vassal_opinion = 5
+	general_opinion = 5
+	sex_appeal_opinion = 5
+	
+	potential =  {
+		OR = {
+			religion = orleanist
+			religion = novelist
+			religion = novelist_reformed
+			religion = summer_queen
+		}
+	}
+	ai_honor = 10
+
+	customizer = no
+	random = no
+}
+summer_queen_2_honour = {
+	vassal_opinion = 10
+	general_opinion = 10
+	sex_appeal_opinion = 10
+	global_tax_modifier = 0.05
+	
+	potential =  {
+		OR = {
+			religion = orleanist
+			religion = novelist
+			religion = novelist_reformed
+			religion = summer_queen
+		}
+	}
+	ai_honor = 20
+
+	customizer = no
+	random = no
+}
+summer_queen_3_honour = {
+	vassal_opinion = 15
+	general_opinion = 15
+	sex_appeal_opinion = 15
+	global_tax_modifier = 0.1
+	global_revolt_risk = -0.01
+	threat_decay_speed = 0.05
+	
+	potential =  {
+		OR = {
+			religion = orleanist
+			religion = novelist
+			religion = novelist_reformed
+			religion = summer_queen
+		}
+	}
+	ai_honor = 30
+
+	customizer = no
+	random = no
+}
+japanese_bad_honour = {
+	vassal_opinion = -5
+	general_opinion = -5
+	sex_appeal_opinion = -5
+	global_tax_modifier = -0.05
+	
+	potential =  {
+		OR = {
+			culture_group = japan_group
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shinko
+			religion = amidism
+		}
+	}
+	ai_honor = -20
+
+	customizer = no
+	random = no
+}
+japanese_1_honour = {
+	vassal_opinion = 5
+	general_opinion = 5
+	sex_appeal_opinion = 5
+	
+	potential =  {
+		OR = {
+			culture_group = japan_group
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shinko
+			religion = amidism
+		}
+	}
+	ai_honor = 10
+
+	customizer = no
+	random = no
+}
+japanese_2_honour = {
+	vassal_opinion = 10
+	general_opinion = 10
+	sex_appeal_opinion = 10
+	global_tax_modifier = 0.05
+	
+	potential =  {
+		OR = {
+			culture_group = japan_group
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shinko
+			religion = amidism
+		}
+	}
+	ai_honor = 20
+
+	customizer = no
+	random = no
+}
+japanese_3_honour = {
+	vassal_opinion = 15
+	general_opinion = 15
+	sex_appeal_opinion = 15
+	global_tax_modifier = 0.1
+	global_revolt_risk = -0.01
+	threat_decay_speed = 0.05
+	
+	potential =  {
+		OR = {
+			culture_group = japan_group
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shinko
+			religion = amidism
+		}
+	}
+	ai_honor = 30
+
+	customizer = no
+	random = no
+}
 trimurti_cult = {
-	martial = 1
-	monthly_character_piety = 0.75
-	monthly_character_prestige = 0.75
+	diplomacy = 1
+	vassal_opinion = 5
+	global_garrison_size = 0.05
 	
 	religious_branch = maunaxite
 	religious = yes # Lost immediately on religion change
@@ -340,9 +513,9 @@ minor_devi_cult = {
 }
 
 krishna_cult = {
-	diplomacy = 1
-	vassal_opinion = 5
-	global_garrison_size = 0.05
+	martial = 1
+	monthly_character_piety = 0.75
+	monthly_character_prestige = 0.75
 	
 	religious_branch = maunaxite
 	religious = yes # Lost immediately on religion change
@@ -384,12 +557,140 @@ lakshmi_cult = {
 	customizer = no
 	random = no
 }
+####
+ascension_1 = {
+	learning = 2
+	same_opinion = 5
+	monthly_character_piety = 0.25
+	religious = yes
+	opposites = {
+		ascension_2
+		ascension_3
+		#ascension_1
+	}
+	random = no
+}
+ascension_2 = {
+	learning = 4
+	stewardship = 1
+	diplomacy = 1
+	same_opinion = 5
+	same_religion_opinion = 5
+	monthly_character_piety = 0.5
+	religious = yes
+	opposites = {
+		#ascension_2
+		ascension_3
+		ascension_1
+	}
+	random = no
+}
+ascension_3 = {
+	learning = 6
+	stewardship = 1
+	diplomacy = 1
+	same_opinion = 5
+	same_religion_opinion = 10
+	monthly_character_piety = 1
+	religious = yes
+	opposites = {
+		ascension_2
+		#ascension_3
+		ascension_1
+	}
+	random = no
+}
+hermeticist = {
+	learning = 2
+	same_opinion = 5
+	vagarna_opinion = 5
+	health = 0.5
+	religious = yes
+	opposites = {
+		freemason
+		rosicrucian
+		theosophist
+		neoplatonist
+		#hermeticist
+	}
+	religious_branch = gnostic
+	random = no
+}
+neoplatonist = {
+	diplomacy = 2
+	hellenic_pagan_opinion = 5
+	hellenic_pagan_reformed_opinion = 5
+	druze_opinion = 5
+	alawite_opinion = 5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		freemason
+		rosicrucian
+		theosophist
+		#neoplatonist
+		hermeticist
+	}
+	religious_branch = gnostic
+	random = no
+}
+theosophist = {
+	martial = 2
+	thelemic_reformed_opinion = 5
+	summer_queen_opinion = 5
+	thelemic_opinion = 5
+	orange_king_opinion = 5
+	theosophy_opinion = 7
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		freemason
+		rosicrucian
+		#theosophist
+		neoplatonist
+		hermeticist
+	}
+	religious_branch = gnostic
+	random = no
+}
+freemason = {
+	stewardship = 1
+	intrigue = 1
+	sevillian_opinion = -10
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		#freemason
+		rosicrucian
+		theosophist
+		neoplatonist
+		hermeticist
+	}
+	religious_branch = gnostic
+	random = no
+}
+rosicrucian = {
+	stewardship = 1
+	diplomacy = 1
+	lutheran_opinion = 5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		freemason
+		#rosicrucian
+		theosophist
+		neoplatonist
+		hermeticist
+	}
+	religious_branch = gnostic
+	random = no
+}
 ###
 
 trimurti_cult_reformed = {
-	martial = 1
-	monthly_character_piety = 0.75
-	monthly_character_prestige = 0.75
+	diplomacy = 1
+	vassal_opinion = 5
+	global_garrison_size = 0.05
 	
 	religious_branch = maunaxite_reformed
 	religious = yes # Lost immediately on religion change
@@ -465,9 +766,9 @@ minor_devi_cult_reformed = {
 }
 
 krishna_cult_reformed = {
-	diplomacy = 1
-	vassal_opinion = 5
-	global_garrison_size = 0.05
+	martial = 1
+	monthly_character_piety = 0.75
+	monthly_character_prestige = 0.75
 	
 	religious_branch = maunaxite_reformed
 	religious = yes # Lost immediately on religion change
@@ -516,7 +817,551 @@ lakshmi_cult_reformed = {
 	customizer = no
 	random = no
 }
+####
+theravada_mahabodhi = {
+	
+	diplomacy = 2
+	same_opinion = 10
+	opposite_opinion = 10
+	monthly_character_prestige = 0.1
+	religious = yes
+	opposites = {
+		theravada_vispassana
+		theravada_bodhidharma
+		#theravada_mahabodhi
+	}
+	ai_honor = 20
+	religious_branch = theravada
+	random = no
+}
+theravada_bodhidharma = {
+	martial = 1
+	stewardship = 1
+	same_opinion = 10
+	land_morale = 0.05
+	religious = yes
+	opposites = {
+		theravada_vispassana
+		#theravada_bodhidharma
+		theravada_mahabodhi
+	}
+	ai_zeal = 20
+	ai_honor = 10
+	religious_branch = theravada
+	random = no
+}
+theravada_vispassana = {
+	learning = 1
+	monthly_character_piety = 0.1
+	plot_discovery_chance = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#theravada_vispassana
+		theravada_bodhidharma
+		theravada_mahabodhi
+	}
+	ai_ambition = -10
+	ai_greed = -10
+	ai_rationality = 15
+	religious_branch = theravada
+	random = no
+}
+####
+osvicenism_virgin_mary = {
+	
+	diplomacy = 1
+	same_opinion = 10
+	opposite_opinion = 5
+	fertility = 0.15
+	religious = yes
+	opposites = {
+		osvicenism_jesus
+		osvicenism_lord_buddha
+		#osvicenism_virgin_mary
+	}
+	ai_honor = 20
+	ai_rationality = 20
+	religious_branch = osvicenism
+	random = no
+}
+osvicenism_lord_buddha = {
+	intrigue = -1
+	stewardship = 1
+	same_opinion = 10
+	global_revolt_risk = 0.01
+	monthly_character_piety = 0.1
+	religious = yes
+	opposites = {
+		osvicenism_jesus
+		#osvicenism_lord_buddha
+		osvicenism_virgin_mary
+	}
+	ai_zeal = 10
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = osvicenism
+	random = no
+}
+osvicenism_jesus = {
+	learning = 1
+	monthly_character_prestige = 0.1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#osvicenism_jesus
+		osvicenism_lord_buddha
+		osvicenism_virgin_mary
+	}
+	ai_ambition = -10
+	ai_greed = -10
+	ai_rationality = 10
+	ai_zeal = 20
+	ai_honor = 10
+	religious_branch = osvicenism
+	random = no
+}
+####
+phi_bun = {
+	
+	diplomacy = 1
+	stewardship = 1
+	intrigue = -2
+	global_revolt_risk = -0.01
+	same_opinion = 5
+	opposite_opinion = 5
+	religious = yes
+	opposites = {
+		kammathan
+		phloeng_padevat
+		#phi_bun
+	}
+	ai_rationality = -10
+	ai_ambition = 10
+	religious_branch = combuddhist
+	random = no
+}
+phloeng_padevat = {
+	martial = 1
+	learning = 1
+	same_opinion = 5
+	land_morale = 0.1
+	religious = yes
+	opposites = {
+		kammathan
+		#phloeng_padevat
+		phi_bun
+	}
+	ai_rationality = -10
+	ai_ambition = 10
+	ai_honor = 10
+	religious_branch = combuddhist
+	random = no
+}
+kammathan = {
+	stewardship = 2
+	diplomacy = -2
+	monthly_character_prestige = 0.1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#kammathan
+		phloeng_padevat
+		phi_bun
+	}
+	ai_ambition = -10
+	ai_greed = -10
+	ai_rationality = 15
+	religious_branch = combuddhist
+	random = no
+}
+####
+amidism_pureland = {
+	
+	diplomacy = 2
+	same_opinion = 10
+	opposite_opinion = 10
+	monthly_character_prestige = 0.1
+	religious = yes
+	opposites = {
+		amidism_tendai
+		amidism_lotus
+		#amidism_pureland
+		amidism_zen
+	}
+	ai_rationality = 10
+	ai_ambition = -10
+	religious_branch = amidism
+	random = no
+}
+amidism_lotus = {
+	martial = 1
+	learning = 1
+	same_opinion = 5
+	land_morale = 0.1
+	religious = yes
+	opposites = {
+		amidism_tendai
+		#amidism_lotus
+		amidism_pureland
+		amidism_zen
+	}
+	ai_rationality = -10
+	ai_ambition = 10
+	ai_zeal = 10
+	religious_branch = amidism
+	random = no
+}
+amidism_tendai = {
+	diplomacy = 1
+	stewardship = 1
+	monthly_character_prestige = 0.1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#amidism_tendai
+		amidism_lotus
+		amidism_pureland
+		amidism_zen
+	}
+	ai_ambition = 10
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = amidism
+	random = no
+}
+amidism_zen = {
+	learning = 2
+	intrigue = -1
+	monthly_character_piety = 0.1
+	same_opinion = 15
+	religious = yes
+	opposites = {
+		amidism_tendai
+		#amidism_zen
+		amidism_lotus
+		amidism_pureland
+	}
+	ai_ambition = -10
+	ai_greed = -10
+	ai_rationality = 15
+	religious_branch = amidism
+	random = no
+}
+####
+mahayana_pureland = {
+	
+	diplomacy = 2
+	same_opinion = 10
+	opposite_opinion = 10
+	monthly_character_prestige = 0.1
+	religious = yes
+	opposites = {
+		mahayana_tientai
+		mahayana_flower_garland
+		#mahayana_pureland
+		mahayana_zen
+	}
+	ai_rationality = 10
+	ai_ambition = -10
+	religious_branch = mahayana
+	random = no
+}
+mahayana_flower_garland = {
+	
+	stewardship = 2
+	same_opinion = 5
+	global_revolt_risk = -0.01
+	religious = yes
+	opposites = {
+		mahayana_tientai
+		#mahayana_flower_garland
+		mahayana_pureland
+		mahayana_zen
+	}
+	ai_honor = 10
+	religious_branch = mahayana
+	random = no
+}
+mahayana_tientai = {
+	diplomacy = 1
+	stewardship = 1
+	monthly_character_prestige = 0.1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#mahayana_tientai
+		mahayana_flower_garland
+		mahayana_pureland
+		mahayana_zen
+	}
+	ai_ambition = 10
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = mahayana
+	random = no
+}
+mahayana_zen = {
+	learning = 2
+	intrigue = -1
+	monthly_character_piety = 0.1
+	same_opinion = 15
+	religious = yes
+	opposites = {
+		mahayana_tientai
+		#mahayana_zen
+		mahayana_flower_garland
+		mahayana_pureland
+	}
+	ai_ambition = -10
+	ai_zeal = 10
+	ai_greed = -10
+	ai_rationality = 15
+	religious_branch = amidism
+	random = no
+}
+####
+budaist_skyfather = {
+	
+	diplomacy = 1
+	stewardship = 1
+	intrigue = -2
+	same_opinion = 5
+	opposite_opinion = -10
+	global_revolt_risk = -0.01
+	religious = yes
+	opposites = {
+		budaist_arhat_budai
+		budaist_savaka_stallion
+		#budaist_skyfather
+	}
+	ai_ambition = 10
+	ai_rationality = -10
+	religious_branch = budaism
+	random = no
+}
+budaist_savaka_stallion = {
+	martial = 1
+	learning = 1
+	same_opinion = 5
+	global_levy_size = 0.05
+	global_movement_speed = 0.1
+	religious = yes
+	opposites = {
+		budaist_arhat_budai
+		#budaist_savaka_stallion
+		budaist_skyfather
+	}
+	ai_honor = 10
+	ai_ambition = 10
+	ai_rationality = -10
+	religious_branch = budaism
+	random = no
+}
+budaist_arhat_budai = {
+	learning = 2
+	monthly_character_piety = 0.1
+	same_opinion = 5
+	church_opinion = 5
+	religious = yes
+	opposites = {
+		#budaist_arhat_budai
+		budaist_savaka_stallion
+		budaist_skyfather
+	}
+	ai_zeal = 10
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = budaism
+	random = no
+}
+####Vajrayana
+
+vajra_vajra = {
+	martial = 1
+	learning = 1
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		#vajra_vajra
+		vajra_acharya
+		vajra_gelug
+	}
+	ai_zeal = 10
+	ai_honor = 10
+	health = 0.5
+	religious_branch = vajrayana
+	random = no
+}
+vajra_acharya = {
+	stewardship = 1
+	same_opinion = 5
+	mahayana_opinion = 10
+	global_revolt_risk = -0.02
+	fertility = 0.1
+	religious = yes
+	opposites = {
+		vajra_vajra
+		#vajra_acharya
+		vajra_gelug
+	}
+	ai_rationality = -10
+	ai_greed = 10
+	religious_branch = vajrayana
+	random = no
+}
+vajra_gelug = {
+	diplomacy = 1
+	same_opinion = 5
+	gelugpa_opinion = 10
+	monthly_character_piety = 0.1
+	religious = yes
+	opposites = {
+		vajra_vajra
+		vajra_acharya
+		#vajra_gelug
+	}
+	ai_zeal = 10
+	ai_honor = 10
+	religious_branch = vajrayana
+	random = no
+}
+####Thammayut
+
+tham_siam = {
+	martial = 2
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		#tham_siam
+		tham_ksat
+		tham_khru
+	}
+	ai_zeal = 20
+	ai_honor = 10
+	health = -0.2
+	religious_branch = thaislam
+	random = no
+}
+tham_ksat = {
+	stewardship = 1
+	same_opinion = 5
+	liege_opinion = 15
+	global_revolt_risk = -0.02
+	fertility = 0.1
+	religious = yes
+	opposites = {
+		tham_siam
+		#tham_ksat
+		tham_khru
+	}
+	ai_rationality = -10
+	ai_ambition = -10
+	religious_branch = thaislam
+	random = no
+}
+tham_khru = {
+	learning = 1
+	same_opinion = 5
+	buddhist_group_opinion = 15
+	opposite_opinion = -10
+	monthly_character_piety = 0.1
+	religious = yes
+	opposites = {
+		tham_siam
+		tham_ksat
+		#tham_khru
+	}
+	ai_rationality = -10
+	ai_honor = 10
+	religious_branch = thaislam
+	random = no
+}
 ###
+the_minor_deities = {
+	
+	diplomacy = 1
+	same_opinion = 10
+	global_revolt_risk = -0.01
+	religious = yes
+	opposites = {
+		#the_minor_deities
+		the_luther
+		the_marshal
+		the_founder
+		the_white_death
+	}
+	religious_branch = sisukkuus
+	random = no
+}
+the_luther = {
+	learning = 1
+	same_opinion = 10
+	monthly_character_piety = 0.1
+	lutheran_opinion = 5
+	gnostic_opinion = 5
+	religious = yes
+	opposites = {
+		the_minor_deities
+		#the_luther
+		the_marshal
+		the_founder
+		the_white_death
+	}
+	religious_branch = sisukkuus
+	random = no
+}
+the_marshal = {
+	martial = 1
+	land_morale = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		the_minor_deities
+		the_luther
+		#the_marshal
+		the_founder
+		the_white_death
+	}
+	religious_branch = sisukkuus
+	random = no
+}
+the_founder = {
+	stewardship = 1
+	build_cost_modifier = -0.1
+	global_tax_modifier = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		the_minor_deities
+		the_luther
+		the_marshal
+		#the_founder
+		the_white_death
+	}
+	religious_branch = sisukkuus
+	random = no
+}
+the_white_death = {
+	intrigue = 1
+	combat_rating = 10
+	same_opinion = 10
+	stalinist_opinion = -10
+	religious = yes
+	command_modifier = {
+		winter_combat = 0.05
+	}
+	opposites = {
+		the_minor_deities
+		the_luther
+		the_marshal
+		the_founder
+		#the_white_death
+	}
+	religious_branch = sisukkuus
+	random = no
+}
+####
 guillotine_master_1 = {
 	general_opinion = -10
 	same_religion_opinion = 15
@@ -589,6 +1434,1220 @@ guillotine_master_3 = {
 	ai_rationality = -75
 	ai_zeal = 100
 }
+####
+anaxorgos_cult = {
+	martial = 2
+	monthly_character_prestige = 0.05
+	same_opinion = 10
+	combat_rating = 5
+	religious = yes
+	opposites = {
+		#anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	ai_ambition = 10
+	ai_honor = 10
+	religious_branch = hellenic_pagan
+	random = no
+}
+athena_cult = {
+	martial = 1
+	same_opinion = 5
+	combat_rating = 5
+	opinion_of_strategist = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		#athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		random = 0.15
+		defence = 0.1
+		damage = -0.05
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan
+	random = no
+}
+ares_cult = {
+	martial = 1
+	same_opinion = 2
+	combat_rating = 10
+	opinion_of_duelist = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		#ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		damage = 0.1
+		defence = -0.1
+	}
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = hellenic_pagan
+	random = no
+}
+artemis_cult = {
+	martial = 1
+	same_opinion = 10
+	combat_rating = 5
+	hunter_opinion = 5
+	opinion_of_hunter = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		#artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		pursue = 0.15
+		flank = 0.1
+	}
+	ai_rationality = 10
+	religious_branch = hellenic_pagan
+	random = no
+}
+persephone_cult = {
+	stewardship = 1
+	demesne_size = 1
+	plot_discovery_chance = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		#persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_greed = -10
+	religious_branch = hellenic_pagan
+	random = no
+}
+hades_cult = {
+	stewardship = 1
+	global_tax_modifier = 0.05
+	combat_rating = 5
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		#hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_greed = -10
+	religious_branch = hellenic_pagan
+	random = no
+}
+hephaestus_cult = {
+	stewardship = 1
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
+	opinion_of_architect = 5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		#hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan
+	random = no
+}
+philomelus_cult = {
+	stewardship = 1
+	global_revolt_risk = -0.01
+	health = 0.5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		#philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan
+	random = no
+}
+triton_cult = {
+	stewardship = 1
+	tradevalue = 2
+	days_of_supply = 10
+	galleys_perc = 0.05
+	same_opinion = 5
+	oceanic_opinion = -5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		#triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	religious_branch = hellenic_pagan
+	random = no
+}
+aphrodite_cult = {
+	intrigue = 1
+	plot_power_modifier = 0.05
+	fertility = 0.2
+	sex_appeal_opinion = 5
+	lustful_opinion = 5
+	opinion_of_lustful = 5
+	opinion_of_seducer = 5
+	opinion_of_seductress = 5
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		#aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_ambition = 20
+	ai_rationality = -20
+	religious_branch = hellenic_pagan
+	random = no
+}
+hestia_cult = {
+	learning = 2
+	dynasty_opinion = 10
+	monthly_character_piety = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		#hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_ambition = -10
+	ai_zeal = -10
+	religious_branch = hellenic_pagan
+	random = no
+}
+dionysus_cult = {
+	diplomacy = 1
+	general_opinion = 5
+	levy_size = 0.05
+	same_opinion = 10
+	hedonist_opinion = 5
+	opinion_of_hedonist = 5
+	drunkard_opinion = 5
+	opinion_of_drunkard = 5
+	opinion_of_lunatic = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		#dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_zeal = -10
+	religious_branch = hellenic_pagan
+	random = no
+}
+apollo_cult = {
+	diplomacy = 1
+	culture_flex = -0.25
+	threat_decay_speed = 0.075
+	same_opinion = 10
+	opinion_of_poet = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		#apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		speed = 0.1
+	}
+	ai_honor = 15
+	ai_zeal = -15
+	religious_branch = hellenic_pagan
+	random = no
+}
+urania_cult = {
+	diplomacy = 1
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+	threat_decay_speed = 0.05
+	global_revolt_risk = -0.01
+	same_opinion = 15
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		#urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 30
+	ai_zeal = -20
+	religious_branch = hellenic_pagan
+	random = no
+}
+#####
+reformed_anaxorgos_cult = {
+	martial = 2
+	monthly_character_prestige = 0.05
+	same_opinion = 10
+	combat_rating = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		#reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	ai_ambition = 10
+	ai_honor = 10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_athena_cult = {
+	martial = 1
+	same_opinion = 5
+	combat_rating = 5
+	opinion_of_strategist = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		#reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		random = 0.15
+		defence = 0.1
+		damage = -0.05
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_ares_cult = {
+	martial = 1
+	same_opinion = 2
+	combat_rating = 10
+	opinion_of_duelist = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		#reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		damage = 0.1
+		defence = -0.1
+	}
+	ai_honor = 10
+	ai_rationality = -10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_artemis_cult = {
+	martial = 1
+	same_opinion = 10
+	combat_rating = 5
+	hunter_opinion = 5
+	opinion_of_hunter = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		#reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	command_modifier = {
+		pursue = 0.15
+		flank = 0.1
+	}
+	ai_rationality = 10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_persephone_cult = {
+	stewardship = 1
+	demesne_size = 1
+	plot_discovery_chance = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		#reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_greed = -10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_hades_cult = {
+	stewardship = 1
+	global_tax_modifier = 0.05
+	combat_rating = 5
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		#reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_greed = -10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_hephaestus_cult = {
+	stewardship = 1
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
+	opinion_of_architect = 5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		#reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_philomelus_cult = {
+	stewardship = 1
+	global_revolt_risk = -0.01
+	health = 0.5
+	same_opinion = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		#reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 10
+	ai_rationality = 10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_triton_cult = {
+	stewardship = 1
+	tradevalue = 2
+	days_of_supply = 10
+	galleys_perc = 0.05
+	same_opinion = 5
+	oceanic_opinion = -5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		#reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_aphrodite_cult = {
+	intrigue = 1
+	plot_power_modifier = 0.05
+	fertility = 0.2
+	sex_appeal_opinion = 5
+	lustful_opinion = 5
+	opinion_of_lustful = 5
+	opinion_of_seducer = 5
+	opinion_of_seductress = 5
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		#reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_ambition = 20
+	ai_rationality = -20
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_hestia_cult = {
+	learning = 2
+	dynasty_opinion = 10
+	monthly_character_piety = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		#reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_ambition = -10
+	ai_zeal = -10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_dionysus_cult = {
+	diplomacy = 1
+	general_opinion = 5
+	levy_size = 0.05
+	same_opinion = 10
+	hedonist_opinion = 5
+	opinion_of_hedonist = 5
+	drunkard_opinion = 5
+	opinion_of_drunkard = 5
+	opinion_of_lunatic = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		#reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_zeal = -10
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+reformed_apollo_cult = {
+	diplomacy = 1
+	culture_flex = -0.25
+	threat_decay_speed = 0.075
+	same_opinion = 10
+	opinion_of_poet = 5
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		#reformed_apollo_cult
+	}
+	command_modifier = {
+		speed = 0.1
+	}
+	ai_honor = 15
+	ai_zeal = -15
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+
+reformed_urania_cult = {
+	diplomacy = 1
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+	threat_decay_speed = 0.05
+	global_revolt_risk = -0.01
+	same_opinion = 15
+	religious = yes
+	opposites = {
+		anaxorgos_cult
+		athena_cult
+		ares_cult
+		artemis_cult
+		persephone_cult
+		hades_cult
+		hephaestus_cult
+		philomelus_cult
+		triton_cult
+		aphrodite_cult
+		hestia_cult
+		dionysus_cult
+		apollo_cult
+		urania_cult
+		#reformed_urania_cult
+		reformed_anaxorgos_cult
+		reformed_athena_cult
+		reformed_ares_cult
+		reformed_artemis_cult
+		reformed_persephone_cult
+		reformed_hades_cult
+		reformed_hephaestus_cult
+		reformed_philomelus_cult
+		reformed_triton_cult
+		reformed_aphrodite_cult
+		reformed_hestia_cult
+		reformed_dionysus_cult
+		reformed_apollo_cult
+	}
+	ai_honor = 30
+	ai_zeal = -20
+	religious_branch = hellenic_pagan_reformed
+	random = no
+}
+#####
 tijaniyyah_school = {
 	learning = 1
 	stewardship = 1
@@ -655,6 +2714,167 @@ qadiriyyah_school = {
 	}
 	religious_branch = sufi
 }
+####
+theology_driven = {
+	
+	learning = 1
+	monthly_character_piety = 0.1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		sword_driven
+		mission_driven
+		#theology_driven
+	}
+	religious_branch = baptist
+	random = no
+}
+mission_driven = {
+	stewardship = 1
+	san_fermin_modifier = 1
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		sword_driven
+		#mission_driven
+		theology_driven
+	}
+	religious_branch = baptist
+	random = no
+}
+sword_driven = {
+	martial = 1
+	combat_rating = 10
+	land_morale = 0.05
+	same_opinion = 10
+	religious = yes
+	opposites = {
+		#sword_driven
+		mission_driven
+		theology_driven
+	}
+	religious_branch = baptist
+	random = no
+}
+#####
+san_isidoro_de_sevilla = {
+	learning = 2
+	culture_flex = -0.2
+	short_reign_length = -2
+	religious = yes
+	opposites = {
+		santiago_el_mayor
+		nuestra_senora_del_pilar
+		san_fermin
+		san_isidro_labrador
+		#san_isidoro_de_sevilla
+	}
+	religious_branch = sevillian
+	random = no
+}
+san_isidro_labrador = {
+	stewardship = 2
+	temple_opinion = 5
+	religious = yes
+	land_morale = 0.05
+	opposites = {
+		santiago_el_mayor
+		nuestra_senora_del_pilar
+		san_fermin
+		#san_isidro_labrador
+		san_isidoro_de_sevilla
+	}
+	religious_branch = sevillian
+	random = no
+}
+san_fermin = {
+	
+	learning = 1
+	basque_opinion = 5
+	san_fermin_modifier = 1
+	religious = yes
+	opposites = {
+		santiago_el_mayor
+		nuestra_senora_del_pilar
+		#san_fermin
+		san_isidro_labrador
+		san_isidoro_de_sevilla
+	}
+	religious_branch = sevillian
+	random = no
+}
+nuestra_senora_del_pilar = {
+	diplomacy = 2
+	global_revolt_risk = -0.01
+	threat_decay_speed = 0.05
+	religious = yes
+	opposites = {
+		santiago_el_mayor
+		#nuestra_senora_del_pilar
+		san_fermin
+		san_isidro_labrador
+		san_isidoro_de_sevilla
+	}
+	religious_branch = sevillian
+	random = no
+}
+santiago_el_mayor = {
+	martial = 2
+	christian_opinion = 5
+	combat_rating = 5
+	religious = yes
+	opposites = {
+		#santiago_el_mayor
+		nuestra_senora_del_pilar
+		san_fermin
+		san_isidro_labrador
+		san_isidoro_de_sevilla
+	}
+	religious_branch = sevillian
+	random = no
+}
+#####
+cheonjugyo_sect = {
+	
+	learning = 1
+	katoliko_opinion = 5
+	san_fermin_modifier = 1
+	religious = yes
+	opposites = {
+		#cheonjugyo_sect
+		jangnogyo_sect
+		gamingyo_sect
+	}
+	religious_branch = gidoggyo
+	random = no
+}
+gamingyo_sect = {
+	diplomacy = 1
+	threat_decay_speed = 0.05
+	kirishitan_opinion = 5
+	religious = yes
+	opposites = {
+		cheonjugyo_sect
+		jangnogyo_sect
+		#gamingyo_sect
+	}
+	religious_branch = gidoggyo
+	random = no
+}
+jangnogyo_sect = {
+	martial = 1
+	xinjiao_opinion = 5
+	combat_rating = 5
+	religious = yes
+	opposites = {
+		cheonjugyo_sect
+		#jangnogyo_sect
+		gamingyo_sect
+	}
+	religious_branch = gidoggyo
+	random = no
+}
+#####
 muwa_christian = {
 	stewardship = 2
 	christian_opinion = 10
@@ -721,6 +2941,12 @@ muwa_kneeler = {
 	religious_branch = muwahidunna
 }
 legendary = {
+	customizer = no
+	random = no
+}
+is_the_pope_or_cardinal = {
+	cannot_marry = yes
+	hidden = yes
 	customizer = no
 	random = no
 }
@@ -934,18 +3160,12 @@ dead_crown_napoleon = {
 	customizer = no
 }
 bard_sibir = {
-    potential = {
-		OR = { 
-		    religion = folklorist
-			religion = folklorist_reformed
-		}
-	}
 	opposites = {
 	    poet
+		baul
 	}
 	diplomacy = 2
 	learning = 2
-	stewardship = -3
 	
 	same_opinion = 15
 	opposite_opinion = 5
@@ -953,7 +3173,24 @@ bard_sibir = {
 	male_compliment = COMPL_POET
 	female_compliment = COMPL_POET
 	
-	ruler_designer_cost = 8
+	ruler_designer_cost = 0
+}
+baul = {
+	opposites = {
+	    poet
+		bard_sibir
+	}
+	diplomacy = 2
+	learning = 2
+	dehatatta_opinion = 5
+	
+	same_opinion = 15
+	opposite_opinion = 5
+	
+	male_compliment = COMPL_POET
+	female_compliment = COMPL_POET
+	
+	ruler_designer_cost = 0
 }
 leninov = {
 	agnatic = yes # Always inherited from fathers
@@ -961,7 +3198,18 @@ leninov = {
 	monthly_character_piety = 1.5
 	leninist_opinion = 15
 	stalinist_opinion = -15
-	ruler_designer_cost = 20
+	ruler_designer_cost = 0
+}
+achieved_sisu = {
+	monthly_character_piety = 1.5
+	diplomacy = 2
+	stewardship = 2
+	martial = 2
+	intrigue = 2
+	learning = 2
+	ai_ambition = 50
+	religious = yes
+	ruler_designer_cost = 0
 }
 israeli_messiah = {
 	agnatic = yes # Always inherited from fathers
@@ -973,7 +3221,7 @@ israeli_messiah = {
 	monthly_character_piety = 3.0
 	jewish_opinion = 15
 	mikraist_opinion = -100
-	ruler_designer_cost = 20
+	ruler_designer_cost = 0
 }
 mikraist_messiah = {
 	agnatic = yes # Always inherited from fathers
@@ -985,7 +3233,7 @@ mikraist_messiah = {
 	monthly_character_piety = 3.0
 	jewish_opinion = -100
 	mikraist_opinion = 15
-	ruler_designer_cost = 20
+	ruler_designer_cost = 0
 }
 literally_heartless = {
 	general_opinion = -100
@@ -1041,7 +3289,7 @@ emul_ashurbanipal = {
 	emul_ashurbanipal_modifier = 1
 }
 emul_nabuchadnezzar = {
-	stewardship = 2
+	stewardship = 1
 	religious = yes
 	random = no
 	customizer = no
@@ -1083,7 +3331,7 @@ emul_nimrod = {
 	emul_nimrod_modifier = 1
 }
 emul_gilgamesh = {
-	learning = 3
+	learning = 1
 	combat_rating = 5
 	religious = yes
 	random = no
@@ -1415,6 +3663,34 @@ spd_mp = {
 	customizer = no
 	random = no
 }
+centralist_mp = {
+	learning = 1
+	martial = 1
+	
+	opposites =  {
+		federalist_mp
+	}
+	monthly_character_prestige = 0.1
+	opposite_opinion = -15
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+federalist_mp = {
+	diplomacy = 1
+	stewardship = 1
+	
+	opposites =  {
+		centralist_mp
+	}
+	monthly_character_prestige = 0.1
+	opposite_opinion = -15
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
 oktyabristy_mp = {
 	learning = 1
 	martial = 1
@@ -1580,7 +3856,7 @@ true_christian_knight_hospitaller = {
 	female_compliment_adj = COMPL_RIGHTEOUS
 	child_compliment_adj = COMPL_GOOD
 
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	random = no
 }
 defender_faith = {
@@ -1603,7 +3879,7 @@ defender_faith = {
 	female_compliment_adj = COMPL_RIGHTEOUS
 	child_compliment_adj = COMPL_GOOD
 
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	random = no
 }
 celtic_rite = {
@@ -1619,8 +3895,10 @@ celtic_rite = {
 		#celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1637,8 +3915,9 @@ maronite_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1655,8 +3934,10 @@ indian_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1673,8 +3954,10 @@ iberian_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1691,8 +3974,10 @@ latin_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1709,8 +3994,10 @@ byzantine_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1727,8 +4014,10 @@ armenian_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1745,8 +4034,10 @@ aremaic_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1763,8 +4054,10 @@ slavic_rite = {
 		celtic_rite
 		alexandrian_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1780,8 +4073,10 @@ alexandrian_rite = {
 		maronite_rite
 		celtic_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1790,8 +4085,10 @@ west_syriac_rite = {
 		east_syriac_rite
 		high_syriac_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1800,8 +4097,10 @@ east_syriac_rite = {
 		west_syriac_rite
 		high_syriac_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1810,8 +4109,10 @@ high_syriac_rite = {
 		east_syriac_rite
 		west_syriac_rite
 	}
-	same_opinion = 10
-	ruler_designer_cost = 10
+	same_opinion = 7
+	opposite_opinion = -5
+	religious = yes
+	ruler_designer_cost = 0
 	customizer = no
 	random = no
 }
@@ -1823,7 +4124,7 @@ bhutanese_beuracrat = {
 	
 	same_opinion = 5
 	
-	ruler_designer_cost = 15
+	ruler_designer_cost = 0
 }
 lowborn = {
 	diplomacy = -3
@@ -1860,7 +4161,7 @@ peasant_noble = {
 	lowborn_opinion = 10
 	vassal_opinion = -5
 	jacobinist_opinion = 15
-	ruler_designer_cost = 2
+	ruler_designer_cost = 0
 	
 	male_insult = INSULT_PEASANT
 	male_insult_adj = INSULT_LOWBORN
@@ -2065,7 +4366,7 @@ gentleman_thief = {
 	female_insult_adj = INSULT_SCHEMING
 	child_insult_adj = INSULT_STUPID
 	
-	ruler_designer_cost = 10
+	ruler_designer_cost = 0
 	random = no
 }
 
@@ -2476,7 +4777,6 @@ mainline_presbyterian = {
 }
 calvinist_damned = {
 	calvinist_opinion = -10
-	religious_branch = calvinist
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -2491,9 +4791,39 @@ calvinist_damned = {
 }
 calvinist_blessed = {
 	calvinist_opinion = 10
-	religious_branch = calvinist
 	prevent_decadence = yes
 	religious = yes # Lost immediately on religion change
+	
+	opposites =  {
+		calvinist_damned
+	}
+
+	same_opinion = 5
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.05
+	customizer = no
+	random = no
+}
+tyrant = {
+	girondist_opinion = -10
+	religious = yes # Lost immediately on religion change
+	global_revolt_risk = 0.01
+	
+	opposites =  {
+		calvinist_blessed
+	}
+	
+	same_opinion = 5
+	monthly_character_piety = -0.05
+	monthly_character_prestige = -0.05
+	customizer = no
+	random = no
+}
+just_ruler = {
+	girondist_opinion = 10
+	prevent_decadence = yes
+	religious = yes # Lost immediately on religion change
+	global_tax_modifier = 0.05
 	
 	opposites =  {
 		calvinist_damned
@@ -2753,6 +5083,24 @@ jew_haredi = {
 	customizer = no
 	random = no
 }
+communed_with_shadow = {
+	opposites =  {
+		content
+		ambitious
+	}
+	
+	intrigue = 3
+	stewardship = 3
+	diplomacy = 3
+	martial = 3
+	learning = 3
+	combat_rating = 10 #new value!
+
+	opposite_opinion = -10 # Against those they want something from
+	
+	ai_ambition = 50
+	ai_zeal = 25
+}
 
 child_of_death = {
 	health = 5
@@ -2779,5 +5127,5 @@ noahide = {
 	
 	customizer = yes
 	random = no
-	ruler_designer_cost = 1
+	ruler_designer_cost = 0
 }

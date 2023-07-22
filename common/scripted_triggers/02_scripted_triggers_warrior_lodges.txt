@@ -36,6 +36,7 @@ is_member_of_any_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_starist
 			society_member_of = warrior_lodge_iranian
 			society_member_of = warrior_lodge_bon
+			society_member_of = warrior_lodge_jacobinist
 			society_member_of = warrior_lodge_sea_creed
 			society_member_of = warrior_lodge_poseidonian
 			society_member_of = warrior_lodge_wokou
@@ -70,6 +71,7 @@ has_any_warrior_lodge_training_trait_trigger = {
 		trait = razumist_leader
 		trait = starist_leader
 		trait = bon_leader
+		trait = jacobinist_leader
 		trait = sea_creed_leader
 		trait = poseidonian_leader
 		trait = wokou_leader
@@ -162,6 +164,10 @@ has_current_warrior_lodge_leader_trait_trigger = {
 			trait = starist_leader
 		}
 		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_jacobinist }
+			trait = jacobinist_leader
+		}
+		trigger_else_if = {
 			limit = { society_member_of = warrior_lodge_sea_creed }
 			trait = sea_creed_leader
 		}
@@ -228,7 +234,7 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_baltic
 		}
 		trigger_else_if = {
-			limit = { religion_openly_finnish_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus }}
 			society_member_of = warrior_lodge_finnish
 		}
 		trigger_else_if = {
@@ -236,11 +242,11 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_folklorist
 		}
 		trigger_else_if = {
-			limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 			society_member_of = warrior_lodge_maunaxite
 		}
 		trigger_else_if = {
-			limit = { religion_openly_bon_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 			society_member_of = warrior_lodge_bon
 		}
 		trigger_else_if = {
@@ -252,7 +258,7 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_sikh
 		}
 		trigger_else_if = {
-			limit = { religion_openly_novelist_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 			society_member_of = warrior_lodge_novelist
 		}
 		trigger_else_if = {
@@ -260,7 +266,27 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_zarist
 		}
 		trigger_else_if = {
-			limit = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+			limit = { 
+				OR = { 
+					religion_openly_celtic_pagan_or_reformed_trigger = yes
+					any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
+					AND = {
+						culture_group = goidelic
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+							}
+							AND = {
+								trait = zealous
+								religion_openly_celtic_pagan_or_reformed_trigger = yes
+							}
+						}
+					}
+				} 
+			}
 			society_member_of = warrior_lodge_celtic_pagan
 		}
 		trigger_else_if = {
@@ -276,27 +302,103 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_starist
 		}
 		trigger_else_if = {
+			limit = { is_jacobinist_religion_trigger = yes }
+			society_member_of = warrior_lodge_jacobinist
+		}
+		trigger_else_if = {
 			limit = { 
-			OR = {
-				true_religion_group_zoroastrian_group_trigger = yes
-				culture_group = iranian
-			} }
+				OR = { 
+					true_religion_group_zoroastrian_group_trigger = yes
+					any_vassal = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_liege = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_neighbor_independent_ruler = { true_religion_group_zoroastrian_group_trigger = yes } 
+					AND = {
+						culture_group = iranian
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { true_religion_group_zoroastrian_group_trigger = yes }
+							}
+							AND = {
+								trait = zealous
+								true_religion_group_zoroastrian_group_trigger = yes
+							}
+						}
+					}
+				} 
+			}
 			society_member_of = warrior_lodge_iranian
 		}
 		trigger_else_if = {
 			limit = {
-			OR = {
-				true_religion_group_shinto_trigger = yes
-				culture_group = japan_group
-			} }
+				OR = { 
+					religion_group = shintoist_group
+					any_vassal = { religion_group = shintoist_group }
+					any_liege = { religion_group = shintoist_group }
+					any_neighbor_independent_ruler = { religion_group = shintoist_group } 
+					AND = {
+						culture_group = japan_group
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion_group = shintoist_group }
+							}
+							AND = {
+								trait = zealous
+								religion_group = shintoist_group
+							}
+						}
+					}
+				} 
+			}
 			society_member_of = warrior_lodge_shinto
 		}
 		trigger_else_if = {
-			limit = { religion = brethren }
+			limit = { 
+				OR = { 
+					religion = brethren
+					any_vassal = { religion = brethren }
+					any_liege = { religion = brethren }
+					any_neighbor_independent_ruler = { religion = brethren } 
+					AND = {
+						culture = doggerlander
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = brethren }
+							}
+							AND = {
+								trait = zealous
+								religion = brethren
+							}
+						}
+					}
+				} 
+			}
 			society_member_of = warrior_lodge_sea_creed
 		}
 		trigger_else_if = {
-			limit = { religion = poseidonian }
+			limit = { 
+				OR = { 
+					religion = poseidonian
+					any_vassal = { religion = poseidonian }
+					any_liege = { religion = poseidonian }
+					any_neighbor_independent_ruler = { religion = poseidonian } 
+					AND = {
+						culture = doggerlander
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = poseidonian }
+							}
+							AND = {
+								trait = zealous
+								religion = poseidonian
+							}
+						}
+					}
+				} 
+			}
 			society_member_of = warrior_lodge_poseidonian
 		}
 		trigger_else_if = {
@@ -352,7 +454,7 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_baltic = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { OR = {religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus}}
 		warrior_lodge_finnish = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -360,11 +462,11 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_folklorist = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 		warrior_lodge_maunaxite = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist }}
 		warrior_lodge_bon = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -376,7 +478,7 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_sikh = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_novelist_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 		warrior_lodge_novelist = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -384,7 +486,27 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_zarist = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+		limit = { 
+			OR = { 
+				religion_openly_celtic_pagan_or_reformed_trigger = yes
+				any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+				any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+				any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
+				AND = {
+					culture_group = goidelic
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							religion_openly_celtic_pagan_or_reformed_trigger = no 
+						}
+						AND = {
+							trait = zealous
+							religion_openly_celtic_pagan_or_reformed_trigger = yes
+						}
+					}
+				}
+			} 
+		}
 		warrior_lodge_celtic_pagan = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -400,26 +522,105 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_starist = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		
-			OR = {
+		limit = { is_jacobinist_religion_trigger = yes }
+		warrior_lodge_jacobinist = { society_has_members = yes }
+	}
+
+	trigger_else_if = {
+		limit = { 
+			OR = { 
 				true_religion_group_zoroastrian_group_trigger = yes
 				culture_group = iranian
+				any_vassal = { true_religion_group_zoroastrian_group_trigger = yes }
+				any_liege = { true_religion_group_zoroastrian_group_trigger = yes }
+				any_neighbor_independent_ruler = { true_religion_group_zoroastrian_group_trigger = yes } 
+				AND = {
+					culture_group = iranian
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							true_religion_group_zoroastrian_group_trigger = no
+						}
+						AND = {
+							trait = zealous
+							true_religion_group_zoroastrian_group_trigger = yes
+						}
+					}
+				}
 			} 
+		}
 		warrior_lodge_iranian = { society_has_members = yes }
 	}
 	trigger_else_if = {
-			OR = {
-				true_religion_group_shinto_trigger = yes
-				culture_group = japan_group
+		limit = { 
+			OR = { 
+				religion_group = shintoist_group
+				any_vassal = { religion_group = shintoist_group }
+				any_liege = { religion_group = shintoist_group }
+				any_neighbor_independent_ruler = { religion_group = shintoist_group } 
+				AND = {
+					culture_group = japan_group
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion_group = shintoist_group }
+						}
+						AND = {
+							trait = zealous
+							religion_group = shintoist_group
+						}
+					}
+				}
 			} 
+		}
 		warrior_lodge_shinto = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion = brethren }
+		limit = { 
+				OR = { 
+					religion = brethren
+					any_vassal = { religion = brethren }
+					any_liege = { religion = brethren }
+					any_neighbor_independent_ruler = { religion = brethren } 
+					AND = {
+						culture = doggerlander
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = brethren }
+							}
+							AND = {
+								trait = zealous
+								religion = brethren
+							}
+						}
+					}
+				} 
+			}
 		warrior_lodge_sea_creed = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion = poseidonian }
+		limit = { 
+				OR = { 
+					religion = poseidonian
+					any_vassal = { religion = poseidonian }
+					any_liege = { religion = poseidonian }
+					any_neighbor_independent_ruler = { religion = poseidonian } 
+					AND = {
+						culture = doggerlander
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = poseidonian }
+							}
+							AND = {
+								trait = zealous
+								religion = poseidonian
+							}
+						}
+					}
+				} 
+			}
 		warrior_lodge_poseidonian = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -471,7 +672,7 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_baltic = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_finnish_or_reformed_trigger = yes }
+			limit = { OR = {religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus}}
 			warrior_lodge_finnish = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -479,11 +680,11 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_folklorist = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 			warrior_lodge_maunaxite = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_bon_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 			warrior_lodge_bon = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -495,7 +696,7 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_sikh = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_novelist_or_reformed_trigger = yes }
+			limit = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 			warrior_lodge_novelist = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -519,25 +720,103 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_starist = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			OR = {
-				true_religion_group_zoroastrian_group_trigger = yes
-				culture_group = iranian
+			limit = { is_jacobinist_religion_trigger = yes }
+			warrior_lodge_jacobinist = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { 
+				OR = { 
+					true_religion_group_zoroastrian_group_trigger = yes
+					any_vassal = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_liege = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_neighbor_independent_ruler = { true_religion_group_zoroastrian_group_trigger = yes } 
+					AND = {
+						culture_group = iranian
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { true_religion_group_zoroastrian_group_trigger = yes }
+							}
+							AND = {
+								trait = zealous
+								true_religion_group_zoroastrian_group_trigger = yes
+							}
+						}
+					}
+				} 
 			}
 			warrior_lodge_iranian = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			OR = {
-				true_religion_group_shinto_trigger = yes
-				culture_group = japan_group
+			limit = { 
+				OR = { 
+					religion_group = shintoist_group
+					any_vassal = { religion_group = shintoist_group }
+					any_liege = { religion_group = shintoist_group }
+					any_neighbor_independent_ruler = { religion_group = shintoist_group } 
+					AND = {
+						culture_group = japan_group
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion_group = shintoist_group }
+							}
+							AND = {
+								trait = zealous
+								religion_group = shintoist_group
+							}
+						}
+					}
+				} 
 			}
 			warrior_lodge_shinto = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion = brethren }
+			limit = { 
+				OR = { 
+					religion = brethren
+					any_vassal = { religion = brethren }
+					any_liege = { religion = brethren }
+					any_neighbor_independent_ruler = { religion = brethren } 
+					AND = {
+						culture = doggerlander
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = brethren }
+							}
+							AND = {
+								trait = zealous
+								religion = brethren
+							}
+						}
+					}
+				} 
+			}
 			warrior_lodge_sea_creed = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion = poseidonian }
+			limit = { 
+				OR = { 
+					religion = poseidonian
+					any_vassal = { religion = poseidonian }
+					any_liege = { religion = poseidonian }
+					any_neighbor_independent_ruler = { religion = poseidonian } 
+					AND = {
+						culture_group = byzantine
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion = poseidonian }
+							}
+							AND = {
+								trait = zealous
+								religion = poseidonian
+							}
+						}
+					}
+				} 
+			}
 			warrior_lodge_poseidonian = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -596,7 +875,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_baltic = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { OR = {religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus}}
 		NOT = { warrior_lodge_finnish = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -604,11 +883,11 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_folklorist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 		NOT = { warrior_lodge_maunaxite = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 		NOT = { warrior_lodge_bon = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -620,7 +899,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_sikh = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_novelist_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 		NOT = { warrior_lodge_novelist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -628,7 +907,27 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_zarist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+		limit = { 
+				OR = { 
+					religion_openly_celtic_pagan_or_reformed_trigger = yes
+					any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
+					AND = {
+						culture_group = goidelic
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								religion_openly_celtic_pagan_or_reformed_trigger = no
+							}
+							AND = {
+								trait = zealous
+								religion_openly_celtic_pagan_or_reformed_trigger = yes
+							}
+						}
+					}
+				} 
+			}
 		NOT = { warrior_lodge_celtic_pagan = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -644,25 +943,104 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_starist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		OR = {
-			true_religion_group_zoroastrian_group_trigger = yes
-			culture_group = iranian
+		limit = { is_jacobinist_religion_trigger = yes }
+		NOT = { warrior_lodge_jacobinist = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { 
+			OR = { 
+				true_religion_group_zoroastrian_group_trigger = yes
+				culture_group = iranian
+				any_vassal = { true_religion_group_zoroastrian_group_trigger = yes }
+				any_liege = { true_religion_group_zoroastrian_group_trigger = yes }
+				any_neighbor_independent_ruler = { true_religion_group_zoroastrian_group_trigger = yes } 
+				AND = {
+					culture_group = iranian
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							true_religion_group_zoroastrian_group_trigger = no
+						}
+						AND = {
+							trait = zealous
+							true_religion_group_zoroastrian_group_trigger = yes
+						}
+					}
+				}
+			} 
 		}
 		NOT = { warrior_lodge_iranian = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		OR = {
-			true_religion_group_shinto_trigger = yes
-			culture_group = japan_group
+		limit = { 
+			OR = { 
+				religion_group = shintoist_group
+				any_vassal = { religion_group = shintoist_group }
+				any_liege = { religion_group = shintoist_group }
+				any_neighbor_independent_ruler = { religion_group = shintoist_group } 
+				AND = {
+					culture_group = japan_group
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion_group = shintoist_group }
+						}
+						AND = {
+							trait = zealous
+							religion_group = shintoist_group
+						}
+					}
+				}
+			} 
 		}
 		NOT = { warrior_lodge_shinto = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion = brethren }
+		limit = { 
+			OR = { 
+				religion = brethren
+				any_vassal = { religion = brethren }
+				any_liege = { religion = brethren }
+				any_neighbor_independent_ruler = { religion = brethren } 
+				AND = {
+					culture_group = doggerlander
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = brethren }
+						}
+						AND = {
+							trait = zealous
+							religion = brethren
+						}
+					}
+				}
+			} 
+		}
 		NOT = { warrior_lodge_sea_creed = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion = poseidonian }
+		limit = { 
+			OR = { 
+				religion = poseidonian
+				any_vassal = { religion = poseidonian }
+				any_liege = { religion = poseidonian }
+				any_neighbor_independent_ruler = { religion = poseidonian } 
+				AND = {
+					culture_group = byzantine
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = poseidonian }
+						}
+						AND = {
+							trait = zealous
+							religion = poseidonian
+						}
+					}
+				}
+			} 
+		}
 		NOT = { warrior_lodge_poseidonian = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -713,6 +1091,7 @@ this_society_is_a_warrior_lodge_trigger = {
 		is_society = warrior_lodge_nousthreskeia
 		is_society = warrior_lodge_starist
 		is_society = warrior_lodge_iranian
+		is_society = warrior_lodge_jacobinist
 		is_society = warrior_lodge_sea_creed
 		is_society = warrior_lodge_poseidonian
 		is_society = warrior_lodge_wokou
@@ -734,16 +1113,17 @@ has_religion_matching_any_warrior_lodge_trigger = {
 		religion_openly_baltic_or_reformed_trigger = yes
 		religion_openly_finnish_or_reformed_trigger = yes
 		religion_openly_folklorist_or_reformed_trigger = yes
-		religion_openly_maunaxite_or_reformed_trigger = yes
-		religion_openly_bon_or_reformed_trigger = yes
+		OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula }
+		OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist }
 		religion_openly_hellenic_or_reformed_trigger = yes
 		is_sikh_religion_trigger = yes
-		religion_openly_novelist_or_reformed_trigger = yes
+		OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist }
 		is_zarist_religion_trigger = yes
 		religion_openly_celtic_pagan_or_reformed_trigger = yes
 		is_mesopotamian_religion_trigger = yes
 		religion_openly_nousthreskeia_or_reformed_trigger = yes
 		religion_openly_starist_pagan_or_reformed_trigger = yes
+		is_jacobinist_religion_trigger = yes
 		true_religion_group_zoroastrian_group_trigger = yes
 		true_religion_group_shinto_trigger = yes
 		religion_group = oceanic
@@ -781,7 +1161,7 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_baltic }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { OR = {religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus}}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_finnish }
 	}
 	trigger_else_if = {
@@ -789,11 +1169,11 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_folklorist }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_maunaxite }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_bon }
 	}
 	trigger_else_if = {
@@ -805,7 +1185,7 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_sikh }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_novelist_or_reformed_trigger = yes }
+		limit = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_novelist }
 	}
 	trigger_else_if = {
@@ -813,7 +1193,27 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_zarist }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+		limit = { 
+				OR = { 
+					religion_openly_celtic_pagan_or_reformed_trigger = yes
+					any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
+					AND = {
+						culture_group = goidelic
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								religion_openly_celtic_pagan_or_reformed_trigger = no
+							}
+							AND = {
+								trait = zealous
+								religion_openly_celtic_pagan_or_reformed_trigger = yes
+							}
+						}
+					}
+				} 
+			}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_celtic_pagan }
 	}
 	trigger_else_if = {
@@ -825,21 +1225,55 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_starist }
 	}
 	trigger_else_if = {
+		limit = { is_jacobinist_religion_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_jacobinist }
+	}
+	trigger_else_if = {
 		limit = { 
-			OR = {
-				true_religion_group_zoroastrian_group_trigger = yes
-				culture_group = iranian
-			} 
-		}
+				OR = { 
+					true_religion_group_zoroastrian_group_trigger = yes
+					any_vassal = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_liege = { true_religion_group_zoroastrian_group_trigger = yes }
+					any_neighbor_independent_ruler = { true_religion_group_zoroastrian_group_trigger = yes } 
+					AND = {
+						culture_group = iranian
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { true_religion_group_zoroastrian_group_trigger = yes }
+							}
+							AND = {
+								trait = zealous
+								true_religion_group_zoroastrian_group_trigger = yes
+							}
+						}
+					}
+				} 
+			}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_iranian }
 	}
 	trigger_else_if = {
 		limit = { 
-			OR = {
-				true_religion_group_shinto_trigger = yes
-				culture_group = japan_group
-			} 
-		}
+				OR = { 
+					religion_group = shintoist_group
+					any_vassal = { religion_group = shintoist_group }
+					any_liege = { religion_group = shintoist_group }
+					any_neighbor_independent_ruler = { religion_group = shintoist_group } 
+					AND = {
+						culture_group = japan_group
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								NOT = { religion_group = shintoist_group }
+							}
+							AND = {
+								trait = zealous
+								religion_group = shintoist_group
+							}
+						}
+					}
+				} 
+			}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_shinto }
 	}
 	trigger_else_if = {
@@ -847,11 +1281,51 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_mesopotamian }
 	}
 	trigger_else_if = {
-		limit = { religion = brethren }
+		limit = { 
+			OR = { 
+				religion = brethren
+				any_vassal = { religion = brethren }
+				any_liege = { religion = brethren }
+				any_neighbor_independent_ruler = { religion = brethren } 
+				AND = {
+					culture_group = doggerlander
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = brethren }
+						}
+						AND = {
+							trait = zealous
+							religion = brethren
+						}
+					}
+				}
+			} 
+		}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_sea_creed }
 	}
 	trigger_else_if = {
-		limit = { religion = poseidonian }
+		limit = { 
+			OR = { 
+				religion = poseidonian
+				any_vassal = { religion = poseidonian }
+				any_liege = { religion = poseidonian }
+				any_neighbor_independent_ruler = { religion = poseidonian } 
+				AND = {
+					culture_group = byzantine
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = poseidonian }
+						}
+						AND = {
+							trait = zealous
+							religion = poseidonian
+						}
+					}
+				}
+			} 
+		}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_poseidonian }
 	}
 	trigger_else_if = {
@@ -967,9 +1441,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_finnish_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_finnish_or_reformed_trigger = yes }
-						any_liege = { religion_openly_finnish_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_finnish_or_reformed_trigger = yes }
+						any_vassal = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus }}
+						any_liege = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus }}
+						any_neighbor_independent_ruler = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus }}
 					}
 				}
 			}
@@ -1006,21 +1480,24 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_iranyasna_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { 
+						any_vassal = {
 							OR = {
 								true_religion_group_zoroastrian_group_trigger = yes
 								culture_group = iranian
-							}  }
+							}
+						}
 						any_liege = { 
-			OR = {
-				true_religion_group_zoroastrian_group_trigger = yes
-				culture_group = iranian
-			}  }
+							OR = {
+								true_religion_group_zoroastrian_group_trigger = yes
+								culture_group = iranian
+							}
+						}
 						any_neighbor_independent_ruler = { 
-			OR = {
-				true_religion_group_zoroastrian_group_trigger = yes
-				culture_group = iranian
-			}  }
+							OR = {
+								true_religion_group_zoroastrian_group_trigger = yes
+								culture_group = iranian
+							}
+						}
 					}
 				}
 			}
@@ -1056,9 +1533,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_maunaxite_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_maunaxite_or_reformed_trigger = yes }
-						any_liege = { religion_openly_maunaxite_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_maunaxite_or_reformed_trigger = yes }
+						any_vassal = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
+						any_liege = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
+						any_neighbor_independent_ruler = { OR = { religion_openly_maunaxite_or_reformed_trigger = yes religion = kalikula } }
 					}
 				}
 			}
@@ -1069,9 +1546,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_bon_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_bon_or_reformed_trigger = yes }
-						any_liege = { religion_openly_bon_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_bon_or_reformed_trigger = yes }
+						any_vassal = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
+						any_liege = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
+						any_neighbor_independent_ruler = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 					}
 				}
 			}
@@ -1108,9 +1585,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_novelist_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_novelist_or_reformed_trigger = yes }
-						any_liege = { religion_openly_novelist_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_novelist_or_reformed_trigger = yes }
+						any_vassal = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
+						any_liege = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
+						any_neighbor_independent_ruler = { OR = { religion_openly_novelist_or_reformed_trigger = yes religion = orleanist religion = girondist } }
 					}
 				}
 			}
@@ -1134,9 +1611,21 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_celtic_pagan_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
-						any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
+						any_vassal = { 
+							OR = {
+								religion_openly_celtic_pagan_or_reformed_trigger = yes
+								culture_group = goidelic
+							}  }
+						any_liege = { 
+			OR = {
+				religion_openly_celtic_pagan_or_reformed_trigger = yes
+				culture_group = goidelic
+			}  }
+						any_neighbor_independent_ruler = { 
+			OR = {
+				religion_openly_celtic_pagan_or_reformed_trigger = yes
+				culture_group = goidelic
+			}  }
 					}
 				}
 			}
@@ -1168,14 +1657,42 @@ special_join_warrior_lodge_trigger = {
 			}
 		}
 		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_jacobinist } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_jacobinist_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { is_jacobinist_religion_trigger = yes }
+						any_liege = { is_jacobinist_religion_trigger = yes }
+						any_neighbor_independent_ruler = { is_jacobinist_religion_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
 			limit = { FROM = { is_society = warrior_lodge_sea_creed } }
 			custom_tooltip = {
 				text = has_liege_vassal_or_neighbor_of_sea_creed_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion = brethren }
-						any_liege = { religion = brethren }
-						any_neighbor_independent_ruler = { religion = brethren }
+						any_vassal = { 
+							OR = {
+								religion = brethren
+								culture = doggerlander
+							}
+						}
+						any_liege = { 
+							OR = {
+								religion = brethren
+								culture = doggerlander
+							}  
+						}
+						any_neighbor_independent_ruler = { 
+							OR = {
+								religion = brethren
+								culture = doggerlander
+							}  
+						}
 					}
 				}
 			}
@@ -1186,9 +1703,24 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_poseidonian_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion = poseidonian }
-						any_liege = { religion = poseidonian }
-						any_neighbor_independent_ruler = { religion = poseidonian }
+						any_vassal = { 
+							OR = {
+								religion = poseidonian
+								culture_group = byzantine
+							}  
+						}
+						any_liege = { 
+							OR = {
+								religion = poseidonian
+								culture_group = byzantine
+							}
+						}
+						any_neighbor_independent_ruler = { 
+							OR = {
+								religion = poseidonian
+								culture_group = byzantine
+							}
+						}
 					}
 				}
 			}

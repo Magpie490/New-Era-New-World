@@ -1066,6 +1066,51 @@ character_event = {
 		}
 	}
 }
+province_event = {
+	id = jacobinists.8
+	hide_window = yes	
+	
+	trigger = {
+		religion = jacobinist
+		owner = {
+			NOT = {
+				religion = jacobinist
+			}
+		}
+		NOT = {
+			has_province_modifier = jacobinist_peasant_unrest
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		add_province_modifier = {
+			name = jacobinist_peasant_unrest
+			duration = -1
+		}
+	}
+}
+province_event = {
+	id = jacobinists.9
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			owner = {
+				religion = jacobinist
+			}
+			NOT = { religion = jacobinist }
+		}
+		has_province_modifier = jacobinist_peasant_unrest
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = jacobinist_peasant_unrest
+	}
+}
 character_event = {
 	id = jacobinists.200
 	picture = GFX_evt_beheading
@@ -1265,7 +1310,7 @@ narrative_event = {
 					set_character_flag = jacobinist_leader
 					save_global_event_target_as = jacobin_invasion_leader
 					add_trait = peasant_noble
-					#add_trait = jacobinist_leader
+					add_trait = jacobinist_leader
 					remove_trait = slow
 					remove_trait = imbecile
 					remove_trait = dull
@@ -1289,6 +1334,8 @@ narrative_event = {
 					remove_trait = cynical
 					remove_trait = content
 					remove_trait = fair
+					remove_trait = barren
+					remove_trait = haemophiliac
 					random_list = {
 						1 = { change_learning = 2 }
 						1 = { change_diplomacy = 2 }

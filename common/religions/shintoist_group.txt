@@ -26,6 +26,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_AMATERASU
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_KAMI GOD_INARI GOD_IZANAGI GOD_KOTOAMATSUKAMI GOD_SUSANOO GOD_TSUKUYOMI GOD_EBISU GOD_KAGUYA
 		}
@@ -74,6 +75,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_AMATERASU
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_KAMI GOD_KOTOAMATSUKAMI GOD_BISHAMONTEN GOD_HACHIMAN GOD_SUSANOO GOD_TSUKUYOMI GOD_FUJIN GOD_RAIJIN GOD_SEIRYU
 		}
@@ -122,6 +124,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_AMIDA
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_KAMI GOD_KOTOAMATSUKAMI GOD_BISHAMONTEN GOD_SUSANOO GOD_FUJIN GOD_RAIJIN
 		}
@@ -170,6 +173,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_AMATERASU
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_KAMUI GOD_AMATERASU GOD_AMIDA GOD_APE_KAMUI GOD_SUSANOO GOD_FUJIN GOD_RAIJIN
 		}
@@ -220,6 +224,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_THE_ULIMATE_ANCESTORS
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_UTIN GOD_JIICHI GOD_RYUGU GOD_HINUKAN GOD_FUURU_NU_KAMI GOD_AMAMIKYU GOD_KIJIMUNAA GOD_THE_BUDDHA GOD_THE_SPIRITS GOD_THE_ANCESTORS
 		}
@@ -256,13 +261,13 @@ shintoist_group = {
 		intermarry = brethren
 		intermarry = poseidonian
 	}
-	shindo = { 
+	shindo_reformed = { 
 		graphical_culture = pagangfx
 
-		icon = 227
+		icon = 114
 		heresy_icon = 228
 		
-		color = { 0.45 0.3 0.5 }
+		color = { 0.49 0.39 0.59 }
 		
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
@@ -272,6 +277,7 @@ shintoist_group = {
 		
 		high_god_name = GOD_MIREUK
 		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
 		god_names = {
 			GOD_MIREUK GOD_SAMSIN GOD_PRINCESS_BARI GOD_SUNGMO GOD_DANGUN GOD_THE_BUDDHA THE_ANCESTORS GOD_THE_SPIRITS
 		}
@@ -304,5 +310,58 @@ shintoist_group = {
 		intermarry = east_brethren
 		intermarry = brethren
 		intermarry = poseidonian
+		intermarry = shindo
+	}
+	shindo = { 
+		graphical_culture = pagangfx
+
+		icon = 227
+		heresy_icon = 228
+		
+		color = { 0.45 0.3 0.5 }
+		
+		crusade_name = GREAT_HOLY_WAR
+		can_call_crusade = no
+		crusade_cb = new_crusade
+		scripture_name = THE_NARRATIVES
+		priest_title = MU
+		
+		high_god_name = GOD_MIREUK
+		
+		interface_skin = { taoist_interface indian_interface muslim_interface }
+		god_names = {
+			GOD_MIREUK GOD_SAMSIN GOD_PRINCESS_BARI GOD_SUNGMO GOD_DANGUN GOD_THE_BUDDHA THE_ANCESTORS GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			MARA GOD_SEOKGA GOD_TYRANNICAL_RUBY_CHAIRMAN GOD_GREEDY_DRAGON_KING_OF_THE_EAST
+		}
+		character_modifier = {
+		}
+		
+		reformed = shindo_reformed
+		aggression = 0.9
+		allow_rivermovement = yes
+		can_retire_to_monastery = yes
+		has_heir_designation = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		
+		intermarry = bushinto
+		intermarry = buddhoshinto
+		intermarry = ainushinto
+		intermarry = zoroastrian_group
+		intermarry = theravada
+		intermarry = gelugpa
+		intermarry = budaism
+		intermarry = karmapa
+		intermarry = vajrayana
+		intermarry = navayana
+		intermarry = amidism
+		intermarry = east_brethren
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = shindo_reformed
 	}
 }

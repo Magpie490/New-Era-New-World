@@ -1,5 +1,7 @@
 namespace=cleanup
 namespace=celtic
+namespace=razumist
+namespace=sufist
 
 character_event = { # Give Indian characters appropriate schools at game start
 	id = cleanup.1
@@ -22,7 +24,6 @@ character_event = { # Give Indian characters appropriate schools at game start
 			trait = ramakrishna_hindu
 			trait = bhagavanist_gandhi
 			trait = bhagavanist_shivaji
-			trait = bhagavanist_rama
 			trait = bhagavanist_akbar
 			trait = bhagavanist_jagadisha
 			trait = bhagavanist_rajaraja
@@ -30,6 +31,589 @@ character_event = { # Give Indian characters appropriate schools at game start
 	}
 	immediate = {
 		character_event = { id = RoI.30120 }
+	}
+}
+character_event = { 
+	id = cleanup.9999
+	hide_window = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_realm_province = {
+			OR = {
+				climate = mild_winter
+				climate = normal_winter
+				climate = severe_winter
+			}
+			NOT = {
+				has_province_modifier = summerautumnbonus_modif
+			}
+		}
+		month == 3
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		any_realm_province = {
+			add_province_modifier = {
+				name = summerautumnbonus_modif
+				hidden = yes
+				stacking = no
+				duration = 142
+			}
+		}
+		character_event = {
+			id = cleanup.9998	days = 142
+		}
+	}
+}
+character_event = { 
+	id = cleanup.9998
+	hide_window = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_realm_province = {
+			OR = {
+				climate = mild_winter
+				climate = normal_winter
+				climate = severe_winter
+			}
+			NOT = {
+				has_province_modifier = septemberbonus_modif
+			}
+		}
+		month == 8
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		any_realm_province = {
+			add_province_modifier = {
+				name = septemberbonus_modif
+				hidden = yes
+				stacking = no
+				duration = 31
+			}
+		}
+	}
+}
+character_event = { 
+	id = cleanup.9997
+	hide_window = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_realm_province = {
+			OR = {
+				has_province_modifier = summerautumnbonus_modif
+				has_province_modifier = septemberbonus_modif
+			}
+		}
+		OR = {
+			month == 9
+			month == 10
+			month == 11
+			month == 0
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		remove_province_modifier = summerautumnbonus_modif
+		remove_province_modifier = septemberbonus_modif
+	}
+}
+character_event = { 
+	id = cleanup.9996
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_virtous = yes
+		religion = girondist
+	}
+	immediate = {
+		add_trait = just_ruler
+		remove_trait = tyrant
+	}
+}
+character_event = { 
+	id = cleanup.9995
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_wicked = yes
+		religion = girondist
+	}
+	immediate = {
+		remove_trait = just_ruler
+		add_trait = tyrant
+	}
+}
+character_event = { 
+	id = cleanup.9994
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_neutral = yes
+		religion = girondist
+	}
+	immediate = {
+		remove_trait = just_ruler
+		remove_trait = tyrant
+	}
+}
+character_event = {
+	id = cleanup.9993
+	desc = "replacegrandmistress"
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = d_orleanist_order
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 30
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 35
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 40
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 45
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 50
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 55
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = orleanist
+				culture = french
+				female = yes
+				age = 60
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
+
+character_event = { 
+	id = cleanup.8888
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			culture_group = japan_group
+			religion = shinto
+			religion = bushinto
+			religion = buddhoshinto
+			religion = ainushinto
+			religion = shinko
+			religion = amidism
+		}
+		OR = {
+			trait = japanese_bad_honour
+			trait = japanese_1_honour
+			trait = japanese_2_honour
+			trait = japanese_3_honour
+		}
+	}
+	immediate = {
+		remove_trait = japanese_bad_honour
+		remove_trait = japanese_1_honour
+		remove_trait = japanese_2_honour
+		remove_trait = japanese_2_honour
+	}
+}
+character_event = { 
+	id = cleanup.9992
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			religion = orleanist
+			religion = novelist
+			religion = novelist_reformed
+			religion = summer_queen
+		}
+		OR = {
+			trait = summer_queen_bad_honour
+			trait = summer_queen_1_honour
+			trait = summer_queen_2_honour
+			trait = summer_queen_3_honour
+		}
+	}
+	immediate = {
+		remove_trait = summer_queen_bad_honour
+		remove_trait = summer_queen_1_honour
+		remove_trait = summer_queen_2_honour
+		remove_trait = summer_queen_2_honour
+	}
+}
+character_event = {
+	id = cleanup.9991
+	hide_window = yes
+ 
+	trigger = {
+		OR = {
+			has_landed_title = k_papacy
+			has_minor_title = title_cardinal
+		}
+		NOT = { trait = is_the_pope_or_cardinal }
+		is_alternate_start = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		add_trait = is_the_pope_or_cardinal
+	}
+}
+character_event = {
+	id = cleanup.9990
+	hide_window = yes
+	only_rulers = yes
+	only_independent = yes
+	trigger = {
+		real_tier = KING
+		NOT = {
+			has_character_modifier = moral_author_timer
+		}
+		NOT = {
+			primary_title = {
+				is_titular = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		add_character_modifier = { 
+			name = moral_author_timer 
+			duration = 1825 
+			hidden = yes
+			inherit = yes
+		} 
+		religion_authority = {
+			modifier = king_follows_faith
+			years = 5
+		}
+	}
+}
+character_event = {
+	id = cleanup.9989
+	hide_window = yes
+	only_rulers = yes
+	only_independent = yes
+	trigger = {
+		real_tier = EMPEROR
+		NOT = {
+			has_character_modifier = moral_author_timer
+		}
+		NOT = {
+			primary_title = {
+				is_titular = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		add_character_modifier = { 
+			name = moral_author_timer 
+			duration = 1825 
+			hidden = yes
+			inherit = yes
+		} 
+		religion_authority = {
+			modifier = emperor_follows_faith
+			years = 5
+		}
+	}
+}
+character_event = { 
+	id = cleanup.505
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			religion = old_hindu
+			religion = parabrahmanist
+			religion = kalikula
+			religion = shaivasiddhanta
+			religion = jain
+			religion = maunaxite_reformed
+			religion = maunaxite
+			religion = agamatirta
+		}
+		OR = {
+			trait = pyir
+			trait = shaykh
+			trait = murid
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	immediate = {
+		if = {
+			limit = {
+				trait = pyir
+			}
+			remove_trait = pyir
+			add_trait = brahmin
+		}
+		else_if = {
+			limit = {
+				trait = shaykh
+			}
+			remove_trait = shaykh
+			add_trait = kshatriya
+		}
+		else = {
+			limit = {
+				trait = murid
+			}
+			remove_trait = murid
+			add_trait = vaishya
+		}
+	}
+}
+character_event = { 
+	id = cleanup.506
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			religion = yazidi
+			religion = yersenism
+			religion = mandaeanism
+			religion = ahlehaqq
+		}
+		OR = {
+			trait = brahmin
+			trait = kshatriya
+			trait = vaishya
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		if = {
+			limit = {
+				trait = brahmin
+			}
+			remove_trait = brahmin
+			add_trait = pyir
+		}
+		else_if = {
+			limit = {
+				trait = kshatriya
+			}
+			remove_trait = kshatriya
+			add_trait = shaykh
+		}
+		else = {
+			limit = {
+				trait = vaishya
+			}
+			remove_trait = vaishya
+			add_trait = murid
+		}
+	}
+}
+character_event = { 
+	id = cleanup.507
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			religion = yazidi
+			religion = yersenism
+			religion = mandaeanism
+			religion = ahlehaqq
+		}
+		NOR = {
+			trait = pyir
+			trait = shaykh
+			trait = murid
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_theocracy = yes
+					government = theocratic_feudal_government
+				}
+			}
+			remove_trait = brahmin
+			remove_trait = vaishya
+			remove_trait = kshatriya
+			add_trait = pyir
+		}
+		else_if = {
+			limit = {
+				OR = {
+					government = feudal_government
+					government = agrarian_feudal_government
+					government = japanese_feudal
+					government = indian_feudal
+					government = phonocratic_government
+					government = eastern_feudal
+					government = chinese_imperial_government
+					government = order_government
+					government = roman_imperial_government
+					government = confederation_government
+					government = bhutanese_decayed_government
+					government = bhutanese_restored_government
+					government = mandala_government
+				}
+			}
+			remove_trait = brahmin
+			remove_trait = vaishya
+			remove_trait = kshatriya
+			add_trait = shaykh
+		}
+		else = {
+			limit = {
+				OR = {
+					is_republic = yes
+					government = oligarchic_republic
+				}
+			}
+			remove_trait = brahmin
+			remove_trait = vaishya
+			remove_trait = kshatriya
+			add_trait = murid
+		}
+	}
+}
+character_event = { 
+	id = cleanup.508
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			religion = old_hindu
+			religion = parabrahmanist
+			religion = kalikula
+			religion = shaivasiddhanta
+			religion = jain
+			religion = agamatirta
+			religion = maunaxite_reformed
+			religion = maunaxite
+		}
+		NOR = {
+			trait = brahmin
+			trait = kshatriya
+			trait = vaishya
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_theocracy = yes
+					government = theocratic_feudal_government
+				}
+			}
+			remove_trait = pyir
+			remove_trait = murid
+			remove_trait = shaykh
+			add_trait = brahmin
+		}
+		else_if = {
+			limit = {
+				OR = {
+					government = feudal_government
+					government = agrarian_feudal_government
+					government = japanese_feudal
+					government = indian_feudal
+					government = phonocratic_government
+					government = eastern_feudal
+					government = chinese_imperial_government
+					government = order_government
+					government = roman_imperial_government
+					government = confederation_government
+					government = bhutanese_decayed_government
+					government = bhutanese_restored_government
+					government = mandala_government
+				}
+			}
+			remove_trait = pyir
+			remove_trait = murid
+			remove_trait = shaykh
+			add_trait = kshatriya
+		}
+		else = {
+			limit = {
+				OR = {
+					is_republic = yes
+					government = oligarchic_republic
+				}
+			}
+			remove_trait = pyir
+			remove_trait = murid
+			remove_trait = shaykh
+			add_trait = vaishya
+		}
 	}
 }
 character_event = {
@@ -206,7 +790,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 7
 	}
 	immediate = {
 		primary_title = {
@@ -275,7 +859,7 @@ character_event = {
 	}
 }
 character_event = {
-	id = cleanup.2224
+	id = cleanup.3224
 	hide_window = yes
 	trigger = {
 		is_tribal = no
@@ -298,6 +882,892 @@ character_event = {
 	immediate = {
 		primary_title = {
 			add_law = investiture_law_0
+		}
+	}
+}
+narrative_event = {
+	id = cleanup.2225
+    title = cleanup.2225.title
+    desc = cleanup.2225.desc
+    picture = GFX_evt_burning_house
+    border = GFX_event_narrative_frame_war
+	trigger = {
+		has_game_rule = {
+			name = fitna_fracture
+			value = on
+		} 
+		independent = yes
+		OR = {
+			NOT = { prestige = 1000 } 
+			AND = {
+				prestige = 1000 
+				has_character_modifier = burned_government_documents
+			}
+		}
+		NOR = {
+			has_landed_title = e_rebels
+			has_landed_title = e_pirates
+		}
+		real_tier = KING
+		NOT = {
+			has_landed_title = e_tokyo
+		}
+		OR = {
+			government = feudal_government
+			government = agrarian_feudal_government
+			government = japanese_feudal
+			government = indian_feudal
+			government = hellenic_government
+			government = muslim_government
+			government = nomadtribal_government
+			government = makhzen_government
+			government = phonocratic_government
+			government = ghazwa_government
+			government = theocratic_feudal_government
+			government = calvinist_government
+			government = tribal_government
+		}
+		NOR = {
+			trait = fair
+			trait = genius
+			trait = quick
+			trait = strong
+			trait = just
+			trait = shrewd
+			trait = gregarious
+			trait = ambitious
+			trait = diligent
+		}
+		OR = {
+			trait = incapable
+			trait = possessed
+			trait = infirm
+			trait = lunatic
+			trait = imbecile
+			trait = slow
+			trait = dwarf
+			trait = inbred
+			trait = decadent
+			trait = familial_kinslayer
+			trait = dynastic_kinslayer
+			trait = kinslayer
+			trait = tribal_kinslayer
+			has_character_modifier = burned_government_documents
+		}
+		primary_title = {
+			OR = {
+				has_law = crown_authority_0
+				has_law = crown_authority_1
+				has_law = centralization_0
+				has_law = centralization_1
+				has_law = tribal_organization_0
+				has_law = tribal_organization_1
+			}
+		}
+		mercenary = no
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.9
+			trait = incapable
+		}
+		modifier = {
+			factor = 0.9
+			trait = possessed
+		}
+		modifier = {
+			factor = 0.9
+			trait = infirm
+		}
+		modifier = {
+			factor = 0.9
+			trait = lunatic
+		}
+		modifier = {
+			factor = 1.1
+			trait = fair
+		}
+		modifier = {
+			factor = 1.1
+			trait = genius
+		}
+		modifier = {
+			factor = 1.1
+			trait = quick
+		}
+		modifier = {
+			factor = 1.1
+			trait = strong
+		}
+		modifier = {
+			factor = 0.9
+			trait = clubfooted
+		}
+		modifier = {
+			factor = 0.9
+			trait = dwarf
+		}
+		modifier = {
+			factor = 0.9
+			trait = hunchback
+		}
+		modifier = {
+			factor = 0.8
+			trait = imbecile
+		}
+		modifier = {
+			factor = 0.8
+			trait = inbred
+		}
+		modifier = {
+			factor = 0.8
+			trait = slow
+		}
+		modifier = {
+			factor = 0.95
+			trait = lisp
+		}
+		modifier = {
+			factor = 0.95
+			trait = harelip
+		}
+		modifier = {
+			factor = 0.95
+			trait = stutter
+		}
+		modifier = {
+			factor = 0.95
+			trait = weak
+		}
+		modifier = {
+			factor = 0.95
+			trait = ugly
+		}
+		modifier = {
+			factor = 0.8
+			trait = dull
+		}
+		modifier = {
+			factor = 0.95
+			trait = feeble
+		}
+		modifier = {
+			factor = 1.1
+			trait = sturdy
+		}
+		modifier = {
+			factor = 1.1
+			trait = robust
+		}
+		modifier = {
+			factor = 1.1
+			trait = shrewd
+		}
+		modifier = {
+			factor = 1.1
+			trait = ambitious
+		}
+		modifier = {
+			factor = 1.1
+			trait = brave
+		}
+		modifier = {
+			factor = 1.1
+			trait = gregarious
+		}
+		modifier = {
+			factor = 1.1
+			trait = just
+		}
+		modifier = {
+			factor = 1.1
+			trait = honest
+		}
+		modifier = {
+			factor = 1.1
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.9
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.9
+			trait = craven
+		}
+		modifier = {
+			factor = 0.9
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.9
+			trait = decadent
+		}
+		modifier = {
+			factor = 0.9
+			trait = kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = familial_kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = dynastic_kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = tribal_kinslayer
+		}
+		modifier = {
+			factor = 0.6
+			trait = lowborn
+		}
+		modifier = {
+			factor = 0.7
+			trait = peasant_leader
+		}
+		modifier = {
+			factor = 0.7
+			trait = heresiarch
+		}
+		modifier = {
+			factor = 0.75
+			trait = peasant_noble
+		}
+	}
+	immediate = {
+        primary_title = {
+            save_event_target_as = dissolved_title
+		}
+        any_player = {
+            limit = {
+                NOT = { character = ROOT }
+            }
+            narrative_event = { id = cleanup.22251 }
+        }
+		any_vassal = {
+			any_demesne_title = {
+				limit = {
+					higher_tier_than = BARON
+					temporary = no
+				}
+				add_pressed_claim = ROOT
+			}
+		}
+        any_demesne_title = {
+            limit = {
+                higher_tier_than = DUKE
+                temporary = no
+            }
+            destroy_landed_title = THIS
+            add_pressed_claim = PREV
+        }
+	}
+    option = {
+        name = cleanup.2225.opt1
+	}
+}
+
+character_event = {
+	id = cleanup.2224
+	hide_window = yes
+	trigger = {
+		NOR = {
+			government = eastern_feudal
+			government = chinese_imperial_government
+			government = bhutanese_decayed_government
+			government = bhutanese_restored_government
+			government = roman_imperial_government
+			government = neoziamet_government
+			government = oligarchic_republic
+			government = merchant_republic_government
+			government = mandala_government
+		}
+		OR = {
+			has_character_modifier = government_corruption_0
+			has_character_modifier = government_corruption_1
+			has_character_modifier = government_corruption_2
+			has_character_modifier = government_corruption_3
+			has_character_modifier = government_corruption_4
+			has_character_modifier = government_corruption_5
+			has_character_modifier = government_corruption_6
+			has_character_modifier = government_corruption_7
+			has_character_modifier = government_corruption_8
+			has_character_modifier = government_corruption_9
+			has_character_modifier = government_corruption_10
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 21
+	}
+	immediate = {
+		remove_character_modifier = government_corruption_0
+		remove_character_modifier = government_corruption_1
+		remove_character_modifier = government_corruption_2
+		remove_character_modifier = government_corruption_3
+		remove_character_modifier = government_corruption_4
+		remove_character_modifier = government_corruption_5
+		remove_character_modifier = government_corruption_6
+		remove_character_modifier = government_corruption_7
+		remove_character_modifier = government_corruption_8
+		remove_character_modifier = government_corruption_9
+		remove_character_modifier = government_corruption_10
+	}
+}
+character_event = {
+	id = cleanup.3225
+	hide_window = yes
+	trigger = {
+		is_tributary = yes
+		suzerain = {
+			independent = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	immediate = {
+		suzerain = {
+			any_tributary = {
+				remove_tributary = ROOT
+			}
+		}
+	}
+}
+narrative_event = {
+	id = cleanup.22251
+    title = cleanup.22251.title
+    desc = cleanup.22251.desc
+    picture = GFX_evt_burning_house
+    border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+    option = {
+        name = cleanup.22251.opt1
+	}
+}
+
+narrative_event = {
+	id = cleanup.2226
+    title = cleanup.2226.title
+    desc = cleanup.2226.desc
+    picture = GFX_evt_burning_house
+    border = GFX_event_narrative_frame_war
+	trigger = {
+		has_game_rule = {
+			name = fitna_fracture
+			value = on
+		} 
+		independent = yes
+		OR = {
+			NOT = { prestige = 2500 } 
+			AND = {
+				prestige = 2500 
+				has_character_modifier = burned_government_documents
+			}
+		}
+		NOR = {
+			has_landed_title = e_rebels
+			has_landed_title = e_pirates
+		}
+		real_tier = EMPEROR
+		NOT = {
+			has_landed_title = e_tokyo
+		}
+		OR = {
+			government = feudal_government
+			government = agrarian_feudal_government
+			government = japanese_feudal
+			government = indian_feudal
+			government = hellenic_government
+			government = muslim_government
+			government = nomadtribal_government
+			government = makhzen_government
+			government = phonocratic_government
+			government = ghazwa_government
+			government = theocratic_feudal_government
+			government = calvinist_government
+			government = tribal_government
+		}
+		NOR = {
+			trait = fair
+			trait = genius
+			trait = quick
+			trait = strong
+			trait = just
+			trait = shrewd
+			trait = gregarious
+			trait = ambitious
+			trait = diligent
+		}
+		OR = {
+			trait = incapable
+			trait = possessed
+			trait = infirm
+			trait = lunatic
+			trait = imbecile
+			trait = slow
+			trait = dwarf
+			trait = inbred
+			trait = decadent
+			trait = familial_kinslayer
+			trait = dynastic_kinslayer
+			trait = kinslayer
+			trait = tribal_kinslayer
+			has_character_modifier = burned_government_documents
+		}
+		primary_title = {
+			OR = {
+				has_law = crown_authority_0
+				has_law = crown_authority_1
+				has_law = centralization_0
+				has_law = centralization_1
+				has_law = tribal_organization_0
+				has_law = tribal_organization_1
+			}
+		}
+		mercenary = no
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.9
+			trait = incapable
+		}
+		modifier = {
+			factor = 0.9
+			trait = possessed
+		}
+		modifier = {
+			factor = 0.9
+			trait = infirm
+		}
+		modifier = {
+			factor = 0.9
+			trait = lunatic
+		}
+		modifier = {
+			factor = 1.1
+			trait = fair
+		}
+		modifier = {
+			factor = 1.1
+			trait = genius
+		}
+		modifier = {
+			factor = 1.1
+			trait = quick
+		}
+		modifier = {
+			factor = 1.1
+			trait = strong
+		}
+		modifier = {
+			factor = 0.9
+			trait = clubfooted
+		}
+		modifier = {
+			factor = 0.9
+			trait = dwarf
+		}
+		modifier = {
+			factor = 0.9
+			trait = hunchback
+		}
+		modifier = {
+			factor = 0.8
+			trait = imbecile
+		}
+		modifier = {
+			factor = 0.8
+			trait = inbred
+		}
+		modifier = {
+			factor = 0.8
+			trait = slow
+		}
+		modifier = {
+			factor = 0.95
+			trait = lisp
+		}
+		modifier = {
+			factor = 0.95
+			trait = harelip
+		}
+		modifier = {
+			factor = 0.95
+			trait = stutter
+		}
+		modifier = {
+			factor = 0.95
+			trait = weak
+		}
+		modifier = {
+			factor = 0.95
+			trait = ugly
+		}
+		modifier = {
+			factor = 0.8
+			trait = dull
+		}
+		modifier = {
+			factor = 0.95
+			trait = feeble
+		}
+		modifier = {
+			factor = 1.1
+			trait = sturdy
+		}
+		modifier = {
+			factor = 1.1
+			trait = robust
+		}
+		modifier = {
+			factor = 1.1
+			trait = shrewd
+		}
+		modifier = {
+			factor = 1.1
+			trait = ambitious
+		}
+		modifier = {
+			factor = 1.1
+			trait = brave
+		}
+		modifier = {
+			factor = 1.1
+			trait = gregarious
+		}
+		modifier = {
+			factor = 1.1
+			trait = just
+		}
+		modifier = {
+			factor = 1.1
+			trait = honest
+		}
+		modifier = {
+			factor = 1.1
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.9
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.9
+			trait = craven
+		}
+		modifier = {
+			factor = 0.9
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.9
+			trait = decadent
+		}
+		modifier = {
+			factor = 0.9
+			trait = kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = familial_kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = dynastic_kinslayer
+		}
+		modifier = {
+			factor = 0.9
+			trait = tribal_kinslayer
+		}
+		modifier = {
+			factor = 0.6
+			trait = lowborn
+		}
+		modifier = {
+			factor = 0.7
+			trait = peasant_leader
+		}
+		modifier = {
+			factor = 0.7
+			trait = heresiarch
+		}
+		modifier = {
+			factor = 0.75
+			trait = peasant_noble
+		}
+	}
+	immediate = {
+        primary_title = {
+            save_event_target_as = dissolved_title
+		}
+        any_player = {
+            limit = {
+                NOT = { character = ROOT }
+            }
+            narrative_event = { id = cleanup.22261 }
+        }
+		any_vassal = {
+			any_demesne_title = {
+				limit = {
+					higher_tier_than = COUNT
+					temporary = no
+				}
+				add_pressed_claim = ROOT
+			}
+		}
+        any_demesne_title = {
+            limit = {
+                higher_tier_than = DUKE
+                temporary = no
+            }
+            destroy_landed_title = THIS
+            add_pressed_claim = PREV
+        }
+	}
+    option = {
+        name = cleanup.2226.opt1
+	}
+}
+narrative_event = {
+	id = cleanup.22261
+    title = cleanup.22261.title
+    desc = cleanup.22261.desc
+    picture = GFX_evt_burning_house
+    border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+    option = {
+        name = cleanup.22261.opt1
+	}
+}
+character_event = {
+	id = sufist.1
+	desc = sufist1desc
+	picture = GFX_evt_dark_prayer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sufist1opta
+		random_list = {
+			11 = {
+				add_trait = chaste
+				add_trait = zealous
+				remove_trait = lustful
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = temperate
+				add_trait = zealous
+				remove_trait = gluttonous
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = charitable
+				add_trait = zealous
+				remove_trait = greedy
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = diligent
+				add_trait = zealous
+				remove_trait = slothful
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = kind
+				add_trait = zealous
+				remove_trait = wroth
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = patient
+				add_trait = zealous
+				remove_trait = envious
+				character_event = { id = sufist.11 }
+			}
+			11 = {
+				add_trait = humble
+				add_trait = zealous
+				remove_trait = proud
+				character_event = { id = sufist.11 }
+			}
+			11 = {#8
+				add_trait = chaste
+				add_trait = temperate
+				add_trait = charitable
+				add_trait = diligent
+				add_trait = humble
+				add_trait = kind
+				add_trait = zealous
+				remove_trait = proud
+				remove_trait = envious
+				remove_trait = wroth
+				remove_trait = slothful
+				remove_trait = gluttonous
+				remove_trait = greedy
+				remove_trait = lustful
+				character_event = { id = sufist.12 }
+			}
+			11 = {
+				mult_modifier = {
+					factor = 0
+					OR = {
+						trait = mystic
+						trait = scholar
+					}
+				}
+				add_trait = proud
+				add_trait = envious
+				add_trait = wroth
+				add_trait = slothful
+				add_trait = gluttonous
+				add_trait = greedy
+				add_trait = lustful
+				add_trait = lunatic
+				add_trait = possessed
+				remove_trait = chaste
+				remove_trait = temperate
+				remove_trait = charitable
+				remove_trait = diligent
+				remove_trait = humble
+				remove_trait = kind
+				remove_trait = zealous
+				character_event = { id = sufist.13 }
+			}
+		}
+	}
+}
+character_event = {
+	id = sufist.11
+	desc = sufist11desc
+	picture = GFX_evt_dark_prayer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sufist11opta
+		piety = 100
+	}
+}
+character_event = {
+	id = sufist.12
+	desc = sufist12desc
+	picture = GFX_evt_religious_exultation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sufist12opta
+		piety = 250
+	}
+}
+character_event = {
+	id = sufist.13
+	desc = sufist13desc
+	picture = GFX_evt_impalement
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sufist13opta
+		piety = -100
+	}
+}
+character_event = {
+	id = razumist.1
+	desc = razumist1desc
+	picture = GFX_evt_magic_ritual
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = razumist1opta
+		random_list = {
+			50 = {
+				hidden_tooltip = {
+					character_event = { id = razumist.11 days = 5 }
+				}
+			}
+			20 = {
+				hidden_tooltip = {
+					character_event = { id = razumist.12 days = 5 }
+				}
+			}
+			20 = {
+				hidden_tooltip = {
+					character_event = { id = razumist.13 days = 5 }
+				}
+			}
+			10 = {
+				hidden_tooltip = {
+					character_event = { id = razumist.14 days = 5 }
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = razumist.11
+	desc = razumist11desc
+	picture = GFX_evt_magic_ritual
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = razumist11opta
+		remove_trait = lunatic
+		remove_trait = possessed
+		add_trait = communed_with_shadow
+		piety = 250
+	}
+}
+character_event = {
+	id = razumist.12
+	desc = razumist12desc
+	picture = GFX_evt_magic_ritual
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = razumist12opta
+		add_trait = possessed
+		piety = -100
+	}
+}
+character_event = {
+	id = razumist.13
+	desc = razumist13desc
+	picture = GFX_evt_magic_ritual
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = razumist13opta
+		add_trait = lunatic
+		piety = -100
+	}
+}
+character_event = {
+	id = razumist.14
+	desc = razumist14desc
+	picture = GFX_evt_magic_ritual
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = razumist14opta
+		death = {
+			death_reason = death_accident
 		}
 	}
 }
@@ -497,6 +1967,7 @@ character_event = {
 				culture_group = byzantine
 				culture_group = caucasian
 				culture_group = niger_congolese
+				culture_group = chadic
 				culture_group = senegambian
 				culture_group = mande
 				culture_group = francacfrique
@@ -512,6 +1983,7 @@ character_event = {
 				culture_group = viet
 				culture_group = thai
 				culture_group = burmic
+				culture_group = tanjia
 				culture = yoonaanee
 				culture = assyrian
 				culture = babylonian
@@ -561,6 +2033,7 @@ character_event = {
 				culture_group = viet
 				culture_group = thai
 				culture_group = burmic
+				culture_group = tanjia
 				culture = yoonaanee
 				culture = assyrian
 				culture = babylonian
@@ -962,6 +2435,43 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	}
 }
 character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
+	id = cleanup.777
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = sarvodaya
+		NOR = {
+			government = oligarchic_republic
+			is_republic = yes
+		}
+		any_demesne_title = {
+			NOT = {
+				has_law = succ_feudal_elective
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOT = {
+					has_law = succ_feudal_elective
+				}
+				NOR = {
+					holding_type = temple
+					holding_type = city
+				}
+			}
+			add_law = {
+				law = succ_feudal_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
 	id = cleanup.8
 	hide_window = yes
 	
@@ -1017,6 +2527,7 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 		any_demesne_title = {
 			limit = {
 				NOT = {
+					is_theocracy = no
 					has_law = succ_phonocratic_elective
 				}
 			}
@@ -1600,7 +3111,13 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	portrait = d_ibadi
 	major = yes
-	
+	major_trigger = {
+		OR = {
+			religion_group = muslim
+			has_landed_title = k_israel
+			has_landed_title = e_zion
+		}
+	}
 	trigger = {
 		has_global_flag = stage_of_zuhur_flag
 		NOT = { has_global_flag = stage_of_shira_flag }
@@ -1609,7 +3126,7 @@ narrative_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 90
+		days = 365
 	}
 	immediate = {
 		clr_global_flag = stage_of_zuhur_flag
@@ -1643,6 +3160,13 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	portrait = d_ibadi
 	major = yes
+	major_trigger = {
+		OR = {
+			religion_group = muslim
+			has_landed_title = k_israel
+			has_landed_title = e_zion
+		}
+	}
 	
 	trigger = {
 		has_global_flag = stage_of_shira_flag
@@ -1652,7 +3176,7 @@ narrative_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 90
+		days = 365
 	}
 	immediate = {
 		clr_global_flag = stage_of_shira_flag
@@ -1686,6 +3210,13 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	portrait = d_ibadi
 	major = yes
+	major_trigger = {
+		OR = {
+			religion_group = muslim
+			has_landed_title = k_israel
+			has_landed_title = e_zion
+		}
+	}
 	
 	trigger = {
 		has_global_flag = stage_of_zuhur_flag
@@ -1695,7 +3226,7 @@ narrative_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 90
+		days = 365
 	}
 	immediate = {
 		clr_global_flag = stage_of_zuhur_flag
@@ -1728,6 +3259,13 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	portrait = d_ibadi
 	major = yes
+	major_trigger = {
+		OR = {
+			religion_group = muslim
+			has_landed_title = k_israel
+			has_landed_title = e_zion
+		}
+	}
 	
 	trigger = {
 		has_global_flag = stage_of_difa_flag
@@ -1737,7 +3275,7 @@ narrative_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 90
+		days = 365
 	}
 	immediate = {
 		clr_global_flag = stage_of_difa_flag
@@ -2079,18 +3617,26 @@ character_event = {
 character_event = {
 	id = cleanup.17
 	hide_window = yes	
-	min_age = 16
+	min_age = 8
 	capable_only = yes
 	
 	trigger = {
 		religion = catholic
-		OR = {
-			government = theocracy_government
-			has_job_title = job_spiritual
+		NOR = {
+			trait = celtic_rite
+			trait = byzantine_rite
+			trait = iberian_rite
+			trait = maronite_rite
+			trait = indian_rite
+			trait = armenian_rite
+			trait = aremaic_rite
+			trait = slavic_rite
+			trait = latin_rite
+			trait = alexandrian_rite
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 21
 	}
 	
 	immediate={
@@ -2100,7 +3646,8 @@ character_event = {
 		if = {
 			limit = {
 				OR = {
-					culture_group = celtic
+					culture_group = goidelic
+					culture_group = brythonic
 					culture_group = brittannic
 					culture = westlander
 					culture = eastlander
@@ -2109,6 +3656,7 @@ character_event = {
 					culture = ulsterite
 					culture = scots
 					culture = new_english
+					culture = yola
 				}
 			}
 			add_trait = celtic_rite
@@ -2154,11 +3702,15 @@ character_event = {
 					culture_group = dardic
 					culture_group = central_indo_aryan_group
 					culture_group = eastern_indo_aryan_group
+					culture_group = salic
+					culture_group = manipuric
 					culture_group = north_west_indo_aryan_group
 					culture_group = northern_indo_aryan_group
 					culture_group = southern_indo_aryan_group
 					culture_group = west_indo_aryan_group
 					culture_group = tibetan_group
+					culture_group = tanic
+					culture_group = digaric
 					culture = angrezi
 				}
 			}
@@ -2370,7 +3922,6 @@ character_event = {
 			save_persistent_event_target = { name = non_jewish_title scope = k_palestine_history }
 			persistent_event_target:non_jewish_title = {
 				set_name = PREV
-				copy_title_history = PREV
 			}
 		}
 		k_jerusalem = {
@@ -2378,7 +3929,6 @@ character_event = {
 			save_persistent_event_target = { name = non_jewish_title scope = k_jerusalem_history }
 			persistent_event_target:non_jewish_title = {
 				set_name = PREV
-				copy_title_history = PREV
 			}
 		}
 	}
@@ -2438,7 +3988,6 @@ character_event = {
 			save_persistent_event_target = { name = non_christian_title scope = k_israel_history }
 			persistent_event_target:non_christian_title = {
 				set_name = PREV
-				copy_title_history = PREV
 			}
 		}
 		if = {
@@ -2451,7 +4000,6 @@ character_event = {
 			save_persistent_event_target = { name = non_christian_title scope = k_palestine_history }
 			persistent_event_target:non_christian_title = {
 				set_name = PREV
-				copy_title_history = PREV
 			}
 		}
 	}
@@ -2507,6 +4055,84 @@ character_event = {
 	
 	immediate = {
 		give_nickname = nick_hereward
+	}
+}
+character_event = {
+	id = cleanup.9910
+	is_triggered_only = yes
+	hide_window = yes
+	hide_from = yes
+
+	religion = catholic
+	only_playable = yes
+	min_age = 16
+
+	trigger = {
+		controls_religion = yes
+	}
+	immediate = {
+		k_scotland = {
+			save_persistent_event_target = { name = christian_title scope = k_scotland_true }
+			save_persistent_event_target = { name = non_christian_title scope = k_scotland_history }
+			persistent_event_target:non_christian_title = {
+				set_name = PREV
+			}
+		}
+		k_ireland = {
+			save_persistent_event_target = { name = christian_title scope = k_ireland_true }
+			save_persistent_event_target = { name = non_christian_title scope = k_ireland_history }
+			persistent_event_target:non_christian_title = {
+				set_name = PREV
+			}
+		}
+		k_wales = {
+			save_persistent_event_target = { name = christian_title scope = k_wales_true }
+			save_persistent_event_target = { name = non_christian_title scope = k_wales_history }
+			persistent_event_target:non_christian_title = {
+				set_name = PREV
+			}
+		}
+		k_england = {
+			save_persistent_event_target = { name = christian_title scope = k_england_true }
+			save_persistent_event_target = { name = non_christian_title scope = k_england_history }
+			persistent_event_target:non_christian_title = {
+				set_name = PREV
+			}
+		}
+	}
+}
+character_event = {
+	id = cleanup.9911
+	is_triggered_only = yes
+	hide_window = yes
+	hide_from = yes
+	
+	trigger = {
+		FROM = { christian_switch_trigger = yes }
+	}
+	
+	immediate = {
+		FROM = { christian_switch_effect = yes }
+	}
+}
+
+character_event = {
+	id = cleanup.9912
+	is_triggered_only = yes
+	hide_window = yes
+	hide_from = yes
+	only_playable = yes
+	
+	trigger = {
+		any_demesne_title = {
+			christian_switch_trigger = yes
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			christian_switch_effect = yes
+		}
 	}
 }
 
@@ -4396,18 +6022,19 @@ character_event = {
 character_event = {
 	id = cleanup.24
 	hide_window = yes	
-	min_age = 16
+	min_age = 8
 	capable_only = yes
 	
 	trigger = {
 		religion = chaldean
-		OR = {
-			government = theocracy_government
-			has_job_title = job_spiritual
+		NOR = {
+			trait = west_syriac_rite
+			trait = east_syriac_rite
+			trait = high_syriac_rite
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 21
 	}
 	
 	immediate={
@@ -4437,6 +6064,28 @@ character_event = {
 		else = { # happens if all of the statements before are fails
 			add_trait = high_syriac_rite
 		}
+	}
+}
+character_event = {
+	id = cleanup.241
+	hide_window = yes	
+	min_age = 16
+	
+	trigger = {
+		NOT = { religion = chaldean }
+		NOR = {
+			trait = west_syriac_rite
+			trait = east_syriac_rite
+			trait = high_syriac_rite
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_trait = west_syriac_rite
+		remove_trait = east_syriac_rite
+		remove_trait = high_syriac_rite
 	}
 }
 
@@ -4527,6 +6176,57 @@ province_event = {
 	}
 	immediate={
 		remove_province_modifier = thelemic_peasant_unrest
+	}
+}
+province_event = {
+	id = cleanup.2226
+	hide_window = yes	
+	
+	trigger = {
+		religion = orleanist
+		owner = {
+			OR = {
+				religion = thelemic_reformed
+				religion = orange_king
+				religion = summer_queen
+			}
+		}
+		NOT = {
+			has_province_modifier = orleanist_peasant_unrest
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		add_province_modifier = {
+			name = orleanist_peasant_unrest
+			duration = -1
+		}
+	}
+}
+province_event = {
+	id = cleanup.2227
+	hide_window = yes	
+	
+	trigger = {
+		owner = {
+			OR = {
+				NOR = {
+					religion = thelemic_reformed
+					religion = orange_king
+					religion = summer_queen
+				}
+				NOT = { religion = orleanist }
+			}
+		}
+		has_province_modifier = orleanist_peasant_unrest
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = orleanist_peasant_unrest
 	}
 }
 province_event = {
@@ -5111,7 +6811,10 @@ province_event = {
 		owner = {
 			NOT = { has_character_modifier = cruelly_drove_out_minority }
 		}
-		region = world_europe_west_brittania
+		OR = {
+			region = world_europe_west_brittania
+			region = world_europe_west_francia
+		}
 		NOR = {
 			has_province_modifier = ashkenazi_minority
 			culture = ashkenazi
@@ -5252,6 +6955,315 @@ province_event = {
 	}
 	option = {
 		name = "EVTOPTACU43"
+	}
+}
+
+province_event = {
+	id = cleanup.241
+	desc = EVTDESC_CU_241
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		owner = {
+			NOT = { has_character_modifier = cruelly_drove_out_minority }
+		}
+		region = world_europe_west_francia
+		NOR = {
+			has_province_modifier = sephardi_minority
+			culture = sephardi
+			is_looting_in = ROOT
+			is_occupied = yes
+			units_in_province = 1
+			has_disease = yes
+		}
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			has_province_modifier = prosperity_modifier_1 
+		}
+		modifier = {
+			factor = 0.90
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 0.85
+			has_province_modifier = prosperity_modifier_3
+		}
+	}
+	option = {
+		name = "EVTOPTACU241"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = just }
+			}
+		}
+		add_province_modifier = {
+			name = sephardi_minority
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBCU241"
+		trigger = {
+			NOT = { 
+				culture = sephardi 
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = charitable }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+		}
+		wealth = 25
+		owner = {
+			add_character_modifier = {
+				name = cruelly_drove_out_minority
+				duration = 90
+			}
+		}
+	}
+}
+province_event = {
+	id = cleanup.242
+	desc = EVTDESC_CU_242
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = sephardi_minority
+		culture = sephardi
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = sephardi_minority
+	}
+	option = {
+		name = "EVTOPTACU42"
+	}
+}
+province_event = {
+	id = cleanup.243
+	desc = EVTDESC_CU_243
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = sephardi_minority
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			is_looting_in = ROOT
+		}
+		modifier = {
+			factor = 0.95
+			is_occupied = yes
+		}
+		modifier = {
+			factor = 0.95
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.95
+			has_disease = yes
+		}
+	}
+	immediate={
+		remove_province_modifier = sephardi_minority
+	}
+	option = {
+		name = "EVTOPTACU243"
+	}
+}
+province_event = {
+	id = cleanup.241
+	desc = EVTDESC_CU_241
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		owner = {
+			NOT = { has_character_modifier = cruelly_drove_out_minority }
+		}
+		region = world_europe_west_francia
+		NOR = {
+			has_province_modifier = marocain_minority
+			culture = marocain
+			is_looting_in = ROOT
+			is_occupied = yes
+			units_in_province = 1
+			has_disease = yes
+		}
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			has_province_modifier = prosperity_modifier_1 
+		}
+		modifier = {
+			factor = 0.90
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 0.85
+			has_province_modifier = prosperity_modifier_3
+		}
+	}
+	option = {
+		name = "EVTOPTACU241"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = just }
+			}
+		}
+		add_province_modifier = {
+			name = marocain_minority
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBCU241"
+		trigger = {
+			NOT = { 
+				culture = marocain 
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = charitable }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+		}
+		wealth = 25
+		owner = {
+			add_character_modifier = {
+				name = cruelly_drove_out_minority
+				duration = 90
+			}
+		}
+	}
+}
+province_event = {
+	id = cleanup.242
+	desc = EVTDESC_CU_242
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = marocain_minority
+		culture = marocain
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = marocain_minority
+	}
+	option = {
+		name = "EVTOPTACU42"
+	}
+}
+province_event = {
+	id = cleanup.243
+	desc = EVTDESC_CU_243
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = marocain_minority
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			is_looting_in = ROOT
+		}
+		modifier = {
+			factor = 0.95
+			is_occupied = yes
+		}
+		modifier = {
+			factor = 0.95
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.95
+			has_disease = yes
+		}
+	}
+	immediate={
+		remove_province_modifier = marocain_minority
+	}
+	option = {
+		name = "EVTOPTACU243"
 	}
 }
 character_event = {

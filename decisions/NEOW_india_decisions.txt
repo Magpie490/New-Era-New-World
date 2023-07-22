@@ -7,6 +7,8 @@ decisions = {
 		    OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -109,7 +111,11 @@ decisions = {
 			wealth = 1000
 			custom_tooltip = {
 				text = unite_the_ganges_TOOLTIP
-				e_bengal = { province_completely_controls_trigger = yes }
+				k_delhi = { province_completely_controls_trigger = yes }
+				k_bengal = { province_completely_controls_trigger = yes }
+				k_kamarupa = { province_completely_controls_trigger = yes }
+				k_bihar = { province_completely_controls_trigger = yes }
+				k_jharkand = { province_completely_controls_trigger = yes }
 			}
 		}
 
@@ -203,6 +209,9 @@ decisions = {
 				de_jure_liege = e_mughalstan
 			}
 			k_bihar = {
+				de_jure_liege = e_mughalstan
+			}
+			k_jharkand = {
 				de_jure_liege = e_mughalstan
 			}
 			k_bengal = {
@@ -570,6 +579,10 @@ decisions = {
 				k_bihar = { show_scope_change = no province_completely_controls_trigger = yes }
 			}
 			OR = {
+				has_landed_title = k_jharkand
+				k_jharkand = { show_scope_change = no province_completely_controls_trigger = yes }
+			}
+			OR = {
 				has_landed_title = k_bengal
 				k_bengal = { show_scope_change = no province_completely_controls_trigger = yes }
 			}
@@ -596,6 +609,9 @@ decisions = {
 			k_bihar = {
 				de_jure_liege = e_delhi
 			}
+			k_jharkand = {
+				de_jure_liege = e_delhi
+			}
 			k_bengal = {
 				de_jure_liege = e_delhi
 			}
@@ -617,118 +633,6 @@ decisions = {
 			factor = 1
 		}
 	}
-	form_indian_empire = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			NOR = { 
-				culture_group = central_indo_aryan_group
-				culture_group = eastern_indo_aryan_group
-				culture_group = north_west_indo_aryan_group
-				culture_group = northern_indo_aryan_group
-				culture_group = southern_indo_aryan_group
-				culture_group = west_indo_aryan_group 
-				culture_group = dardic
-			}
-			NOR = { 
-					culture_group = northern_dravidian_group
-					culture_group = eastern_dravidian_group
-					culture_group = southern_dravidian_group 
-				}
-			NOT = { culture_group = anglo_frisian }
-			NOT = { culture_group = brittannic }
-			NOT = { culture = yoonaanee }
-			capital_scope = {
-			    region = world_india
-			}
-			e_india = {
-				has_holder = no
-			}
-			e_indian_empire = {
-				has_holder = no
-			}
-			e_british_india = {
-				has_holder = no
-			}
-		}
-		allow = {
-			form_title_allow = yes
-			wealth = 1000
-			completely_controls_region = world_india
-		}
-		effect = {
-			wealth = -1000
-			prestige = 1000
-			activate_title = { title = e_indian_empire status = yes }
-			e_indian_empire = {
-				gain_empire_effect = yes
-			}
-			hidden_tooltip = { e_indian_empire = { make_primary_title = yes }
-				#ROOT = {
-				#	narrative_event = { id = parabrahmanist.3 }
-				#}
-			}
-			if = {
-				limit = {
-					OR = {
-						has_landed_title = e_rajastan
-						e_rajastan = { has_holder = no }
-					}
-				}
-				e_rajastan = { destroy_landed_title = THIS }
-				activate_title = { title = e_rajastan status = no }
-			}
-			if = {
-				limit = {
-					OR = {
-						has_landed_title = e_bengal
-						e_bengal = { has_holder = no }
-					}
-				}
-				e_bengal = { destroy_landed_title = THIS }
-				activate_title = { title = e_bengal status = no }
-			}
-			if = {
-				limit = {
-					OR = {
-						has_landed_title = e_deccan
-						e_deccan = { has_holder = no }
-					}
-				}
-				e_deccan = { destroy_landed_title = THIS }
-				activate_title = { title = e_deccan status = no }
-			}
-			if = {
-				limit = { has_nickname = no }
-				give_nickname = nick_the_magnificent
-			}
-			if = {
-				limit = { ai = no NOT = { has_global_flag = achievement_my_very_own_subcontinent } }
-				achievement_my_very_own_subcontinent_done_effect = yes
-			}
-			hidden_tooltip = {
-				any_title = {
-					limit = {
-						tier = KING
-						OR = {
-							de_jure_liege = e_rajastan
-							de_jure_liege = e_deccan
-							de_jure_liege = e_bengal
-						}
-					}
-					de_jure_liege = e_indian_empire
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	form_bharat = {
 		is_high_prio = yes
 		only_playable = yes
@@ -738,6 +642,8 @@ decisions = {
 			OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -751,9 +657,6 @@ decisions = {
 				religion_group = muslim
 			}
 			e_india = {
-				has_holder = no
-			}
-			e_indian_empire = {
 				has_holder = no
 			}
 			e_british_india = {
@@ -1002,7 +905,36 @@ decisions = {
 		}
 
 		allow = {
-		    wealth = 400
+			conditional_tooltip = {
+				trigger = { 
+					real_tier = BARON 
+				}
+				wealth = 25
+			} 
+			conditional_tooltip = {
+				trigger = { 
+					real_tier = COUNT 
+				}
+				wealth = 50
+			} 
+			conditional_tooltip = {
+				trigger = { 
+					real_tier = DUKE 
+				}
+				wealth = 100
+			} 
+			conditional_tooltip = {
+				trigger = { 
+					real_tier = KING 
+				}
+				wealth = 200
+			} 
+			conditional_tooltip = {
+				trigger = { 
+					real_tier = EMPEROR 
+				}
+				wealth = 400
+			} 
 			age = 21
             war = no
 			in_command = no
@@ -1021,7 +953,36 @@ decisions = {
 		}
 
 		effect = {
-		    wealth = -400
+			if = {
+				limit = {
+					real_tier = BARON 
+				}
+				wealth = -25
+			}
+			if = {
+				limit = {
+					real_tier = COUNT 
+				}
+				wealth = -50
+			}
+			if = {
+				limit = {
+					real_tier = DUKE 
+				}
+				wealth = -100
+			}
+			if = {
+				limit = {
+					real_tier = KING 
+				}
+				wealth = -200
+			}
+			if = {
+				limit = {
+					real_tier = EMPEROR 
+				}
+				wealth = -400
+			}
 			custom_tooltip = {
 				text = TOOLTIP_indian_feudal_coronation
 				ROOT = {
@@ -1112,6 +1073,7 @@ decisions = {
 				k_bengal = { show_scope_change = no province_completely_controls_trigger = yes }
 				k_kamarupa = { show_scope_change = no province_completely_controls_trigger = yes }
 				k_bihar = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_jharkand = { show_scope_change = no province_completely_controls_trigger = yes }
 		}
 
 		effect = {
@@ -1138,7 +1100,8 @@ decisions = {
 				###Unite the kingdoms and own stuff
 				k_bengal = { de_jure_liege = e_great_bengal }
 				k_kamarupa = { de_jure_liege = e_great_bengal }
-				k_bihar = { de_jure_liege = e_great_bengal }								
+				k_bihar = { de_jure_liege = e_great_bengal }	
+				k_jharkand = { de_jure_liege = e_great_bengal }
 			}
 		}
 		revoke_allowed = {
@@ -1155,7 +1118,16 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			culture = assamese
+			OR = {
+				culture = assamese
+				culture = adi
+				culture = mishmi
+				culture = nishi
+				culture = naga
+				culture = garo
+				culture = khasic
+				culture = meitei
+			}
 			e_assam = {
 				is_titular = yes
 				has_holder = no

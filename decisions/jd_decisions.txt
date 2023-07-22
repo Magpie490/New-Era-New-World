@@ -14,6 +14,7 @@ decisions = {
 		potential = {
 			OR = {
 				culture_group = niger_congolese
+				culture_group = chadic
 				culture_group = senegambian
 				culture_group = mande
 				culture_group = francacfrique
@@ -478,6 +479,18 @@ decisions = {
 				is_tributary = {
 					type = corsair
 				}
+				is_tributary = {
+					type = march
+				}
+				is_tributary = {
+					type = emperor_japan
+				}
+				is_tributary = {
+					type = shogun_kashin
+				}
+				is_tributary = {
+					type = anti_shogun_kashin
+				}
 			}
 		}
 		allow = {
@@ -486,6 +499,46 @@ decisions = {
 				trigger = { 
 					is_tributary = {
 						type = default
+					}
+				}
+				suzerain = {
+					independent = no
+				}
+			}
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = march
+					}
+				}
+				suzerain = {
+					independent = no
+				}
+			}
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = emperor_japan
+					}
+				}
+				suzerain = {
+					independent = no
+				}
+			}
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = shogun_kashin
+					}
+				}
+				suzerain = {
+					independent = no
+				}
+			}
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = anti_shogun_kashin
 					}
 				}
 				suzerain = {

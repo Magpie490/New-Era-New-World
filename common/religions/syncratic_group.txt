@@ -25,48 +25,6 @@ syncratic_group = {
 		Ayesha Abrar Afifah Anabia Hijrah Hind Hareem Iqra Judi Karida Khadijah Khalidah Khawlah Madeeha Maryam Mariyah Maymunah Mariam Mina Nuwwarrah Qismah Ruqayyah Saba Safaa Safiyyah Salma Shahrazad Sirin Sumaiyah Thuwaibah Umamah Zainab Zubaidah 
 	}
 	
-	puritan = {
-		graphical_culture = westerngfx
-		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 5
-		
-		color = { 0.1 0.8 0.5 }
-		
-		crusade_name = CRUSADE
-		use_new_crusade = no
-		crusade_cb = crusade
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_THE_LIGHT GOD_THE_PATH
-		}
-		
-		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL THE_ONES_FROM_BEYOND THE_DARKNESS THE_POWERS
-		}
-		character_modifier = {
-			christian_opinion = 5
-		}
-
-		aggression = 0.8
-		allow_rivermovement = yes
-		investiture = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		can_call_crusade = yes
-		can_retire_to_monastery = yes
-		priests_can_inherit = no
-		rel_head_defense = yes
-		
-		religious_clothing_head = 2
-		religious_clothing_priest = 2
-	}
 	voodun = {
 		graphical_culture = africangfx
 
@@ -123,6 +81,7 @@ syncratic_group = {
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
 		intermarry = islamity
 		intermarry = muwahidunna
@@ -168,7 +127,7 @@ syncratic_group = {
 		attacking_same_religion_piety_loss = no
 		#peace_prestige_loss = yes
 		allow_looting = yes
-		#uses_decadence = yes
+		uses_decadence = yes
 		uses_jizya_tax = yes #bumiputera
 		#allow_viking_invasion = yes
 		features = { religion_haruspicy }
@@ -198,8 +157,227 @@ syncratic_group = {
 		intermarry = agamatirta
 	}
 	
+	orleanist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		icon = 21
+		heresy_icon = 21
+		
+		color = { 255 190 0 }
+		
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PRIESTESS
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_CREATOR GOD_ERU_LAUTEUR GOD_THE_SON GOD_THE_BLESSED_VIRGIN GOD_JEANNE GOD_FRATERNITY GOD_EQUALITY GOD_MARIANNE GOD_CHARLEMAGNE GOD_ROLAND
+		}
+		
+		evil_god_names = {
+			SATAN GOD_BRITAIN GOD_THE_QUEEN
+		}
+		character_modifier = {
+			martial = 1
+			catholic_opinion = -5 #"Hey if you could tone down on your Jeanne worship it would be cool thanks"
+			sevillian_opinion = -10 #"You're no better than those Catholics"
+			thelemic_reformed_opinion = -15 #Of course they would hate Thelema
+			orange_king_opinion = -15 #Same reason as above
+		}
+	
+		aggression = 1.3
+		can_call_crusade = yes
+		can_excommunicate = yes
+		can_have_antipopes = no
+		can_grant_invasion_cb = yes
+		can_grant_divorce = yes
+		priests_can_inherit = yes
+		allow_rivermovement = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_looting = yes
+		ignores_defensive_attrition = yes
+		defensive_attrition = yes
+		priests_can_marry = yes
+		feminist = yes
+		hard_to_convert = yes
+		female_temple_holders = yes
+		male_temple_holders = no
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
+	
+		intermarry = armenianapostolic
+		intermarry = orthodox
+		intermarry = lutheran
+		intermarry = sevillian
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = cadaverist
+		intermarry = prussianist
+		intermarry = vagarna
+		intermarry = transatlantic
+		intermarry = baptist
+		intermarry = jugoslavist
+		intermarry = islamity
+		intermarry = nasrini
+		intermarry = koptic
+		intermarry = mattaism
+		intermarry = xinjiao
+		
+		intermarry = evangelical
+		intermarry = sedevacantist
+		intermarry = highchurch
+		intermarry = easternprotestant
+		intermarry = fraticelli
+		intermarry = hussite
+		intermarry = anglican
+		intermarry = brethren
+		intermarry = chaldean
+		intermarry = yersenism
+		intermarry = apostolic
+		intermarry = charismatic
+		intermarry = quaker
+		intermarry = marblists
+		intermarry = columbian
+		intermarry = congregationist
+		intermarry = osvicenism
+		#intermarry = kirishitan
+		#intermarry = isukirian
+		#intermarry = eastern_lightning
+		#intermarry = gidoggyo
+	}
+	dahatatta = {
+		graphical_culture = othermuslimgfx
+		interface_skin = { muslim_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 18
+		heresy_icon = 18
+
+		color = { 75 242 128 }
+
+		crusade_name = JIHAD
+		scripture_name = THE_SONGS
+		priest_title = IMAM_PRIEST
+				
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST GOD_GOD
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		aggression = 0.8
+		autocephaly = yes
+		priests_can_marry = yes
+		psc_marriage = no
+		can_call_crusade = yes
+		max_wives = 1
+		men_can_take_consorts = yes
+		max_consorts = 2
+		matrilineal_marriages = no
+		peace_piety_gain = 1.0
+		allow_rivermovement = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		can_grant_divorce = yes
+		character_modifier = {
+			indian_group_opinion = 5
+			muslim_opinion = 5
+			diplomacy = 1
+			religion_flex = -0.5
+		}
+		unit_home_modifier = {
+			land_morale = 0.2
+		}
+		intermarry = syncratic_group
+		intermarry = indian_group
+		intermarry = sunni
+		intermarry = wahhabi
+		intermarry = malikite
+		intermarry = agamatirta
+		intermarry = sufi
+		intermarry = barelvi
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = druze
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = alevi
+		intermarry = mesopotamian
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = jadidist
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = ismaili
+		intermarry = ahlehaqq
+		intermarry = koranist
+	}
+	akjang = { 
+	
+		graphical_culture = mongolgfx
+
+		icon = 30
+		heresy_icon = 30
+		
+		color = { 0.1 0.3 0.6 }
+		
+		high_god_name = GOD_UCH_KURBUSTAN
+		
+		god_names = {
+			GOD_UCH_KURBUSTAN GOD_TENGRI GOD_GALDEN_OIRAT GOD_AMURSANA GOD_SHUNU GOD_AK_BURKHAN GOD_JAJYK GOD_UMAI GOD_OT_ENE
+		}
+		evil_god_names = {
+			ERLIK KOMUR_HAN
+		}
+		
+		unit_modifier = {
+			levy_size = 0.1
+			
+			light_cavalry_offensive = 0.3
+			light_cavalry_defensive = 0.3
+		}
+	
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = YARLIKCHI
+		
+		allow_rivermovement = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		autocephaly = yes
+		can_grant_divorce = yes
+		can_excommunicate = yes
+		priests_can_marry = yes
+		allow_looting = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		hard_to_convert = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 4
+		
+		
+		intermarry = buddhist
+		intermarry = zoroastrian_group
+		can_demand_religious_conversion = no
+	}
 	islamity = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 		interface_skin = { muslim_interface }
 		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
@@ -251,20 +429,23 @@ syncratic_group = {
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
+		intermarry = dahatatta
 		#intermarry = islamity
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
 		intermarry = brethren
 		intermarry = poseidonian
+		intermarry = orleanist
 		intermarry = ismaili
 		intermarry = ahlehaqq
 		intermarry = koranist
 	}
 
 	muwahidunna = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 		interface_skin = { muslim_interface }
 		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
@@ -318,13 +499,16 @@ syncratic_group = {
 		intermarry = wahhabi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		#intermarry = muwahidunna
 		intermarry = apostolic
 		intermarry = jadidist
@@ -396,12 +580,15 @@ syncratic_group = {
 		intermarry = sevillian
 		intermarry = lutheran
 		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		#intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism
@@ -424,7 +611,7 @@ syncratic_group = {
 	}
 	
 	bahai = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 124
@@ -466,6 +653,7 @@ syncratic_group = {
 		intermarry = wahhabi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -473,6 +661,7 @@ syncratic_group = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -497,24 +686,23 @@ syncratic_group = {
 		crusade_name = CRUSADE
 		use_new_crusade = no
 		crusade_cb = crusade
-		scripture_name = THE_TALES 
+		scripture_name = THE_BIBLE
 		priest_title = ELDER
 		
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GRANDFATHER_YULE THE_PATH ARMINIUS THE_OLD_WAYS GOD_LION_MIDNIGHT THE_LORE
+			GOD_GOD GOD_THE_LORD GOD_JESUS THE_HIDDEN_FOLK GRANDFATHER_YULE OLAF_PROTECTOR THE_KONGEFAMILIEN HERMANN GOD_STORM_BROTHERS GOD_ONE_EYED_RAVEN GOD_THE_SEIDHR_WITCH GOD_BALDUR_ANNOINTED GOD_VIDHARR GOD_THRUDH
 		}
 		
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			SATAN LUCIFER THE_DEVIL THE_HIDDEN_FOLK GOD_VIDHARR GOD_THE_ENTANGLER GOD_THE_SEIDHR_WITCH
 		}
 		
 		character_modifier = {
 			lutheran_opinion = 15
 			gnostic_opinion = 15
-			hussite_opinion = 15
-			diplomacy = 2
+			hussite_opinion = 15			
 		}
 
 		aggression = 0.7
@@ -540,14 +728,18 @@ syncratic_group = {
 		intermarry = orthodox
 		intermarry = catholic
 		intermarry = syncratic_group
+		intermarry = sisukkuus
 		intermarry = lutheran
 		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism
@@ -623,12 +815,14 @@ syncratic_group = {
 		intermarry = sevillian
 		intermarry = lutheran
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism

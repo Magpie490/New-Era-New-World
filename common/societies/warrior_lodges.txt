@@ -52,6 +52,9 @@ warrior_lodge_bon = {
 			prisoner = no
 		}
 		OR = {
+			religion = donyipolo
+			religion = kiratist
+			religion = sanamahist
 			religion_openly_bon_or_reformed_trigger = yes
 			AND = {
 				custom_tooltip = {
@@ -72,15 +75,18 @@ warrior_lodge_bon = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion_openly_bon_or_reformed_trigger = yes	
+			religion = donyipolo
+			religion = kiratist
+			religion = sanamahist
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion_openly_bon_or_reformed_trigger = yes }
-					any_liege = { religion_openly_bon_or_reformed_trigger = yes }
-					any_neighbor_independent_ruler = { religion_openly_bon_or_reformed_trigger = yes }
+					any_vassal = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
+					any_liege = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
+					any_neighbor_independent_ruler = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
@@ -94,10 +100,10 @@ warrior_lodge_bon = {
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
-			religion_openly_bon_or_reformed_trigger = yes
+			OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist }
 			AND = {
-				NOT = { religion_openly_bon_or_reformed_trigger = yes }
-				NOT = { religion_openly_bon_or_reformed_trigger = yes }
+				NOT = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
+				NOT = { OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist } }
 			}
 		}
 	}
@@ -340,6 +346,10 @@ warrior_lodge_bon = {
 			trait = tengri_warrior
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -522,6 +532,10 @@ warrior_lodge_bon = {
 			trait = legatian
 			factor = 1.1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -561,7 +575,7 @@ warrior_lodge_bon = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_openly_bon_or_reformed_trigger = yes
+		   	OR = { religion_openly_bon_or_reformed_trigger = yes religion = donyipolo religion = kiratist religion = sanamahist }
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -869,6 +883,10 @@ warrior_lodge_esoteric = {
 		}
 		has_trait = {
 			trait = legatian
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -1805,6 +1823,10 @@ warrior_lodge_khanist = { # Also generally for Nomads
 			trait = khanist_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -2168,6 +2190,10 @@ warrior_lodge_ironist = { # Also generally for Nomads
 			trait = legatian
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -2524,6 +2550,10 @@ warrior_lodge_muwa = { # desert bois
 		}
 		has_trait = {
 			trait = legatian
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -2891,6 +2921,10 @@ warrior_lodge_baltic = {
 			trait = romuvas_own
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -3001,6 +3035,7 @@ warrior_lodge_finnish = {
 		}
 		OR = {
 			religion_openly_finnish_or_reformed_trigger = yes
+			religion = sisukkuus
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -3022,7 +3057,8 @@ warrior_lodge_finnish = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_finnish_or_reformed_trigger = yes	
+			religion_openly_finnish_or_reformed_trigger = yes
+			religion = sisukkuus	
 			
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
@@ -3030,9 +3066,9 @@ warrior_lodge_finnish = {
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion_openly_finnish_or_reformed_trigger = yes }
-					any_liege = { religion_openly_finnish_or_reformed_trigger = yes }
-					any_neighbor_independent_ruler = { religion_openly_finnish_or_reformed_trigger = yes }
+					any_vassal = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus } }
+					any_liege = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus } }
+					any_neighbor_independent_ruler = { OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus } }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
@@ -3260,6 +3296,10 @@ warrior_lodge_finnish = {
 			trait = ukkos_shield
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -3311,7 +3351,10 @@ warrior_lodge_finnish = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_openly_finnish_or_reformed_trigger = yes
+			OR = {
+				religion_openly_finnish_or_reformed_trigger = yes
+				religion = sisukkuus
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -3624,6 +3667,10 @@ warrior_lodge_folklorist = {
 		}
 		has_trait = {
 			trait = folklorist_crusader
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -3992,6 +4039,10 @@ warrior_lodge_starist = {
 			trait = starist_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -4102,6 +4153,7 @@ warrior_lodge_maunaxite = {
 		}
 		OR = {
 			religion_openly_maunaxite_or_reformed_trigger = yes
+			religion = kalikula
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -4121,6 +4173,7 @@ warrior_lodge_maunaxite = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion_openly_maunaxite_or_reformed_trigger = yes	
+			religion = kalikula
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -4130,6 +4183,9 @@ warrior_lodge_maunaxite = {
 					any_vassal = { religion_openly_maunaxite_or_reformed_trigger = yes }
 					any_liege = { religion_openly_maunaxite_or_reformed_trigger = yes }
 					any_neighbor_independent_ruler = { religion_openly_maunaxite_or_reformed_trigger = yes }
+					any_vassal = { religion = kalikula }
+					any_liege = { religion = kalikula }
+					any_neighbor_independent_ruler = { religion = kalikula }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
@@ -4144,6 +4200,7 @@ warrior_lodge_maunaxite = {
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
+			religion = kalikula
 			religion_openly_maunaxite_or_reformed_trigger = yes
 			AND = {
 				religion_openly_maunaxite_or_reformed_trigger = no
@@ -4362,6 +4419,10 @@ warrior_lodge_maunaxite = {
 			trait = maunaxite_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -4413,7 +4474,10 @@ warrior_lodge_maunaxite = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
+			OR = {
+			religion = kalikula
 		   	religion_openly_maunaxite_or_reformed_trigger = yes
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -4727,6 +4791,10 @@ warrior_lodge_hellenic = {
 		}
 		has_trait = {
 			trait = ares_own
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -5062,6 +5130,10 @@ warrior_lodge_sikh = {
 			trait = khalsa_baptism
 			value = 3
 		}		
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -5196,6 +5268,8 @@ warrior_lodge_novelist = {
 		}
 		OR = {
 			religion_openly_novelist_or_reformed_trigger = yes
+			religion = girondist
+			religion = orleanist
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -5215,6 +5289,8 @@ warrior_lodge_novelist = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion_openly_novelist_or_reformed_trigger = yes	
+			religion = girondist
+			religion = orleanist
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -5224,6 +5300,12 @@ warrior_lodge_novelist = {
 					any_vassal = { religion_openly_novelist_or_reformed_trigger = yes }
 					any_liege = { religion_openly_novelist_or_reformed_trigger = yes }
 					any_neighbor_independent_ruler = { religion_openly_novelist_or_reformed_trigger = yes }
+					any_vassal = { religion = girondist }
+					any_liege = { religion = girondist }
+					any_neighbor_independent_ruler = { religion = girondist }
+					any_vassal = { religion = orleanist }
+					any_liege = { religion = orleanist }
+					any_neighbor_independent_ruler = { religion = orleanist }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
@@ -5237,6 +5319,8 @@ warrior_lodge_novelist = {
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
+			religion = girondist
+			religion = orleanist
 			religion_openly_novelist_or_reformed_trigger = yes
 			AND = {
 				religion_openly_novelist_or_reformed_trigger = no
@@ -5360,6 +5444,18 @@ warrior_lodge_novelist = {
 			value = 3
 		}
 		has_trait = {
+			trait = summer_queen_1_honour
+			value = 3
+		}
+		has_trait = {
+			trait = summer_queen_2_honour
+			value = 4
+		}
+		has_trait = {
+			trait = summer_queen_3_honour
+			value = 5
+		}
+		has_trait = {
 			trait = robust
 			value = 2
 		}
@@ -5451,6 +5547,10 @@ warrior_lodge_novelist = {
 			trait = novelist_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -5502,7 +5602,11 @@ warrior_lodge_novelist = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
+			OR = {
 		   	religion_openly_novelist_or_reformed_trigger = yes
+			religion = girondist
+			religion = orleanist
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -5816,6 +5920,10 @@ warrior_lodge_zarist = {
 			trait = zarist_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -5927,6 +6035,19 @@ warrior_lodge_celtic_pagan = {
 		OR = {
 			religion_openly_celtic_pagan_or_reformed_trigger = yes
 			AND = {
+				culture_group = goidelic
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						religion_openly_celtic_pagan_or_reformed_trigger = no 
+					}
+					AND = {
+						trait = zealous
+						religion_openly_celtic_pagan_or_reformed_trigger = yes
+					}
+				}
+			}
+			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
 					FROM = { num_of_society_members >= 10 }
@@ -5957,6 +6078,19 @@ warrior_lodge_celtic_pagan = {
 					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
 				}
 			}
+			AND = {
+				culture_group = goidelic
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						religion_openly_celtic_pagan_or_reformed_trigger = no 
+					}
+					AND = {
+						trait = zealous
+						religion_openly_celtic_pagan_or_reformed_trigger = yes
+					}
+				}
+			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
 				religion_openly_celtic_pagan_or_reformed_trigger = no
 				has_religion_matching_available_warrior_lodge_trigger = yes
@@ -5972,6 +6106,19 @@ warrior_lodge_celtic_pagan = {
 			AND = {
 				religion_openly_celtic_pagan_or_reformed_trigger = no
 				NOT = { trait = zealous }
+			}
+			AND = {
+				culture_group = goidelic
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						religion_openly_celtic_pagan_or_reformed_trigger = no 
+					}
+					AND = {
+						trait = zealous
+						religion_openly_celtic_pagan_or_reformed_trigger = yes
+					}
+				}
 			}
 		}
 	}
@@ -6202,6 +6349,10 @@ warrior_lodge_celtic_pagan = {
 			trait = wolf
 			value = 2
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -6253,7 +6404,22 @@ warrior_lodge_celtic_pagan = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_openly_celtic_pagan_or_reformed_trigger = yes
+			OR = {
+				religion_openly_celtic_pagan_or_reformed_trigger = yes
+				AND = {
+						culture_group = goidelic
+						OR = {
+							AND = {
+								NOT = { trait = zealous }
+								religion_openly_celtic_pagan_or_reformed_trigger = no 
+							}
+							AND = {
+								trait = zealous
+								religion_openly_celtic_pagan_or_reformed_trigger = yes
+							}
+						}
+					}
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -6565,6 +6731,10 @@ warrior_lodge_mesopotamian = {
 		}
 		has_trait = {
 			trait = mujahid
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -6933,6 +7103,10 @@ warrior_lodge_nousthreskeia = {
 			trait = esoteric_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -7215,6 +7389,10 @@ order_st_george = { #society code name
 			trait = honest
 		}
 		has_trait = {
+			trait = tall
+			value = 1
+		}
+		has_trait = {
 			value = -1
 			trait = cruel
 		}
@@ -7381,7 +7559,7 @@ warrior_lodge_iranian = {
 			limit = { prisoner = yes }
 			prisoner = no
 		}
-		OR = {	
+		OR = {
 			OR = {
 				religion_group = zoroastrian_group
 				culture_group = iranian
@@ -7639,6 +7817,10 @@ warrior_lodge_iranian = {
 			rank = 4
 			value = 5
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = drunkard
@@ -7804,6 +7986,10 @@ warrior_lodge_iranian = {
 			trait = pilgrim
 			factor = 1.1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -7863,6 +8049,395 @@ warrior_lodge_iranian = {
 	}
 }
 
+warrior_lodge_jacobinist = {
+	primary_attribute = martial
+	opinion_to_other_members = +10
+	opinion_per_rank_above = +5
+	sound = warrior_lodge_ambient_01
+	society_ranks_gfx = warriors_ranks
+	society_influence = no
+	
+	non_interference = {
+		always = yes
+	}
+    
+	active = {
+		has_dlc = "Holy Fury"
+		has_global_flag = flag_created_warrior_lodge_jacobinist
+	}
+	indestructible = yes
+	
+	can_join_society = {
+		hidden_trigger = {
+			NAND = {
+				ai = yes
+				is_society_rank_full = {
+					society = warrior_lodge_jacobinist
+					rank = 1
+				}
+			}
+		}
+		is_adult = yes
+		custom_tooltip = {
+			text = has_not_angered_society_tt
+			hidden_trigger = { NOT = { has_character_modifier = warrior_lodge_failed_joining_cd } }
+		}
+		NOT = { has_character_modifier = warrior_lodge_failed_joining_cd }
+		hidden_trigger = {
+			NOT = { has_character_flag = society_join_block }
+		}
+		trigger_if = {
+			limit = { prisoner = yes }
+			prisoner = no
+		}
+		OR = {
+			religion = jacobinist
+			AND = {
+				custom_tooltip = {
+					text = society_has_at_least_10_members_tt
+					FROM = { num_of_society_members >= 10 }
+				}
+				OR = {
+					has_tribal_or_nomadic_government_trigger = yes
+					government = phonocratic_government
+				}
+				custom_tooltip = {
+					text = special_join_warrior_lodge_trigger_tt
+					special_join_warrior_lodge_trigger = yes
+				}
+				NOT = { trait = zealous }
+			}
+		}
+	}
+
+	show_society = {
+		OR = {
+			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
+			religion = jacobinist
+			AND = {
+				#You are of a religion that doesn't match *any* warrior lodge
+				has_religion_matching_available_warrior_lodge_trigger = no
+				
+				OR = {
+					#You have neighbors, etc, of the correct religion...
+					any_vassal = { religion = jacobinist }
+					any_liege = { religion = jacobinist }
+					any_neighbor_independent_ruler = { religion = jacobinist }
+				}
+			}
+			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
+				is_jacibinist_religion_trigger = no
+				has_religion_matching_available_warrior_lodge_trigger = yes
+			}
+			#Always show if: You are already a member. Duh.
+			society_member_of = warrior_lodge_jacobinist
+		}
+	}
+
+
+	potential = { #if you change religion or become zealous while NOT jacobinist, you are kicked out
+		OR = {
+			religion = jacobinist
+			AND = {
+				NOT = { religion = jacobinist }
+				NOT = { trait = zealous }
+			}
+		}
+	}
+
+	society_rank = { #"Fledgling"
+		level = 1
+		limit = 50 
+		startup_limit = 10
+		modifier = {
+			monthly_character_prestige = 0.25
+		}
+		powers = {
+			warrior_lodge_duel #Passive Power: Unlocks Duel
+			warrior_lodge_shieldmaiden #Passive Power: Unlocks Shieldmaidens
+			warrior_lodge_survivor #Passive Power: Survivor
+			warrior_lodge_lifetime_of_war #Passive Power: A Lifetime of War
+		}
+	}
+	
+	society_rank = { #"Warrior"
+		level = 2
+		limit = 20
+		startup_limit = 6
+		modifier = {
+			monthly_character_prestige = 0.5
+			combat_rating = 5
+			martial = 1
+		}		
+		powers = {
+			warrior_lodge_reaver #Passive Power: Reaver
+			warrior_lodge_warrior_training #Power: Warrior Training
+			warrior_lodge_summon_commander #Power: Summon Commander
+		}
+	}
+	
+	society_rank = { #"Veteran"
+		level = 3
+		limit = 10 
+		startup_limit = 4
+		modifier = {
+			monthly_character_prestige = 0.75
+			combat_rating = 10
+			martial = 2
+		}
+		powers = {
+			warrior_lodge_inspire_warriors #Power: Inspire Warriors
+			warrior_lodge_war_sacrifice #Power: War Sacrifice
+		}
+	}
+
+	society_rank = { #"Hero"
+		level = 4
+		limit = 4
+		startup_limit = 3
+		modifier = { 
+			monthly_character_prestige = 1
+			combat_rating = 15
+			martial = 3
+		}
+		powers = {
+			warrior_lodge_indomitable #Passive Power: Indomitable
+			warrior_lodge_call_to_glory #Power: Call to Glory
+			warrior_lodge_choose_military_aspect #Power: Choose Military Aspect
+		}
+	}
+
+	plots = {
+	
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_warrior_lodge_norse
+    	
+		per_attribute = {
+    		name = martial
+    		value = 0.25
+    	}
+    	has_trait = {
+			trait = hunter
+			value = 1
+		}
+		has_trait = {
+			trait = strategist
+			value = 1
+		}
+		has_trait = {
+			trait = duelist
+			value = 1
+		}
+		has_trait = {
+			trait = scarred
+			value = 1
+		}
+		has_trait = {
+			trait = scarred_mid
+			value = 2
+		}
+		has_trait = {
+			trait = scarred_high
+			value = 3
+		}
+		has_trait = {
+			trait = genius
+			value = 1
+		}
+		has_trait = {
+			trait = quick
+			value = 1
+		}
+		has_trait = {
+			trait = shrewd
+			value = 1
+		}
+		has_trait = {
+			trait = strong
+			value = 3
+		}
+		has_trait = {
+			trait = robust
+			value = 2
+		}
+		has_trait = {
+			trait = giant
+			value = 2
+		}
+		has_trait = {
+			trait = impaler
+			value = 1
+		}
+		has_trait = {
+			trait = falconer
+			value = 1
+		}
+		has_trait = {
+			trait = wroth
+			value = 1
+		}
+		has_trait = {
+			trait = proud
+			value = 1
+		}
+		has_trait = {
+			trait = patient
+			value = 1
+		}
+		has_trait = {
+			trait = diligent
+			value = 1
+		}
+		has_trait = {
+			trait = humble
+			value = 1
+		}
+		has_trait = {
+			trait = brave
+			value = 2
+		}
+		has_trait = {
+			trait = ambitious
+			value = 1
+		}
+		has_trait = {
+			trait = cruel
+			value = 1
+		}
+		has_trait = {
+			trait = stubborn
+			value = 1
+		}
+		has_trait = {
+			trait = adventurer
+			value = 1
+		}
+		has_trait = {
+			trait = viking
+			value = 1
+		}
+		has_trait = {
+			trait = pirate
+			value = 1
+		}
+		has_trait = {
+			trait = ravager
+			value = 2
+		}
+		has_trait = {
+			trait = seaking
+			value = 3
+		}
+		has_trait = {
+			trait = guillotine_master_1
+			value = 1
+		}
+		has_trait = {
+			trait = guillotine_master_2
+			value = 2
+		}
+		has_trait = {
+			trait = guillotine_master_3
+			value = 3
+		}
+		has_trait = {
+			trait = bloodthirsty_gods_1
+			value = 1
+		}
+		has_trait = {
+			trait = bloodthirsty_gods_2
+			value = 2
+		}
+		has_trait = {
+			trait = bloodthirsty_gods_3
+			value = 3
+		}
+		has_trait = {
+			trait = shieldmaiden
+			value = 1
+		}
+		has_trait = {
+			trait = berserker
+			value = 1
+		}
+		has_trait = {
+			trait = legatian
+			value = 1
+		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
+		#NEGATIVE modifiers
+		has_trait = {
+			trait = craven
+			value = -3
+		}
+		has_trait = {
+			trait = weak
+			value = -2
+		}
+		has_trait = {
+			trait = feeble
+			value = -1
+		}
+		has_trait = {
+			trait = slothful
+			value = -1
+		}
+		has_trait = {
+			trait = content
+			value = -1
+		}
+		has_trait = {
+			trait = dwarf
+			value = -1
+		}
+		has_trait = {
+			trait = clubfooted
+			value = -1
+		}
+		has_trait = {
+			trait = hunchback
+			value = -1
+		}
+	}
+	
+	member_score_per_attribute = 3
+	member_score_per_rank = 100
+
+	member_score = {
+		value = 10
+		warrior_lodges_member_score = yes
+		modifier = {
+			trait = guillotine_master_3
+			factor = 1.1
+		}
+	}	
+
+	startup_populate = {
+	    trigger = {
+			ai = yes
+	    	controls_religion = no
+		   	religion = jacobinist
+			is_adult = yes
+			is_in_society = no
+			OR = {
+				trait = zealous
+				martial = 12
+				has_lifestyle_martial_trigger = yes
+				has_education_martial_trigger = yes
+				OR = {
+					duelist_skill_is_medium_group_trigger = yes
+					duelist_skill_is_high_group_trigger = yes
+				}
+			}
+		}
+	}
+}
+
 warrior_lodge_sea_creed = {
 	primary_attribute = martial
 	opinion_to_other_members = +10
@@ -7884,7 +8459,7 @@ warrior_lodge_sea_creed = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_sea_creed
 					rank = 1
 				}
@@ -7905,6 +8480,19 @@ warrior_lodge_sea_creed = {
 		}
 		OR = {
 			religion = brethren
+			AND = {
+				culture = doggerlander
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = brethren }
+					}
+					AND = {
+						trait = zealous
+						religion = brethren
+					}
+				}
+			}
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -7931,6 +8519,19 @@ warrior_lodge_sea_creed = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion = brethren
 			AND = {
+				culture = doggerlander
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = brethren }
+					}
+					AND = {
+						trait = zealous
+						religion = brethren
+					}
+				}
+			}
+			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
 				
@@ -7956,6 +8557,19 @@ warrior_lodge_sea_creed = {
 			AND = {
 				NOT = { religion = brethren }
 				NOT = { trait = zealous }
+			}
+			AND = {
+				culture = doggerlander
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = brethren }
+					}
+					AND = {
+						trait = zealous
+						religion = brethren
+					}
+				}
 			}
 		}
 	}
@@ -8166,6 +8780,10 @@ warrior_lodge_sea_creed = {
 			trait = oceanic_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -8217,7 +8835,22 @@ warrior_lodge_sea_creed = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = brethren
+			OR = {
+				religion = brethren
+				AND = {
+					culture = doggerlander
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = brethren }
+						}
+						AND = {
+							trait = zealous
+							religion = brethren
+						}
+					}
+				}
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -8277,6 +8910,19 @@ warrior_lodge_poseidonian = {
 		OR = {
 			religion = poseidonian
 			AND = {
+				culture_group = byzantine
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = poseidonian }
+					}
+					AND = {
+						trait = zealous
+						religion = poseidonian
+					}
+				}
+			}
+			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
 					FROM = { num_of_society_members >= 10 }
@@ -8286,7 +8932,6 @@ warrior_lodge_poseidonian = {
 					has_religion_feature = religion_seafaring
 					has_religion_feature = religion_feature_celtic
 					has_religion_feature = religion_feature_finnish
-					culture_group = byzantine
 				}
 				custom_tooltip = {
 					text = special_join_warrior_lodge_trigger_tt
@@ -8328,6 +8973,19 @@ warrior_lodge_poseidonian = {
 			AND = {
 				NOT = { religion = poseidonian }
 				NOT = { trait = zealous }
+			}
+			AND = {
+				culture_group = byzantine
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = poseidonian }
+					}
+					AND = {
+						trait = zealous
+						religion = poseidonian
+					}
+				}
 			}
 		}
 	}
@@ -8538,6 +9196,10 @@ warrior_lodge_poseidonian = {
 			trait = oceanic_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -8589,7 +9251,22 @@ warrior_lodge_poseidonian = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = poseidonian
+			OR = {
+				religion = poseidonian
+				AND = {
+					culture_group = byzantine
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = poseidonian }
+						}
+						AND = {
+							trait = zealous
+							religion = poseidonian
+						}
+					}
+				}
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -8908,6 +9585,10 @@ warrior_lodge_wokou = {
 			trait = oceanic_crusader
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -9018,9 +9699,19 @@ warrior_lodge_shinto = {
 			prisoner = no
 		}
 		OR = {	
-			OR = {
-				religion_group = shintoist_group
+			religion_group = shintoist_group
+			AND = {
 				culture_group = japan_group
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion_group = shintoist_group }
+					}
+					AND = {
+						trait = zealous
+						religion_group = shintoist_group
+					}
+				}
 			}
 			AND = {
 				custom_tooltip = {
@@ -9040,9 +9731,20 @@ warrior_lodge_shinto = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			OR = {
-				religion_group = shintoist_group
+			
+			religion_group = shintoist_group
+			AND = {
 				culture_group = japan_group
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion_group = shintoist_group }
+					}
+					AND = {
+						trait = zealous
+						religion_group = shintoist_group
+					}
+				}
 			}
 			AND = {
 				OR = {
@@ -9065,9 +9767,19 @@ warrior_lodge_shinto = {
 	
 	potential = { #if you change religion or become zealous while NOT Mazdan, you are kicked out
 		OR = {
-			OR = {
-				religion_group = shintoist_group
+			religion_group = shintoist_group
+			AND = {
 				culture_group = japan_group
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion_group = shintoist_group }
+					}
+					AND = {
+						trait = zealous
+						religion_group = shintoist_group
+					}
+				}
 			}
 			AND = {
 				NOR = { 
@@ -9224,6 +9936,18 @@ warrior_lodge_shinto = {
 			value = 3
 		}
 		has_trait = {
+			trait = japanese_1_honour
+			value = 3
+		}
+		has_trait = {
+			trait = japanese_2_honour
+			value = 4
+		}
+		has_trait = {
+			trait = japanese_3_honour
+			value = 5
+		}
+		has_trait = {
 			trait = robust
 			value = 2
 		}
@@ -9266,6 +9990,10 @@ warrior_lodge_shinto = {
 		society_rank = {
 			rank = 4
 			value = 5
+		}
+		has_trait = {
+			trait = tall
+			value = 1
 		}
 		#NEGATIVE modifiers
 		has_trait = {
@@ -9412,6 +10140,10 @@ warrior_lodge_shinto = {
 			trait = pilgrim
 			factor = 1.1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -9449,7 +10181,19 @@ warrior_lodge_shinto = {
 	    	controls_religion = no
 		   	OR = {
 				religion_group = shintoist_group
-				culture_group = japan_group
+				AND = {
+					culture_group = japan_group
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion_group = shintoist_group }
+						}
+						AND = {
+							trait = zealous
+							religion_group = shintoist_group
+						}
+					}
+				}
 			}
 			is_adult = yes
 			is_in_society = no
@@ -9767,6 +10511,10 @@ warrior_lodge_mo = {
 		}
 		has_trait = {
 			trait = ukkos_shield
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -10134,6 +10882,10 @@ warrior_lodge_bungan = {
 			trait = ukkos_shield
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -10497,6 +11249,10 @@ warrior_lodge_kaharingan = {
 		}
 		has_trait = {
 			trait = ukkos_shield
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -10864,6 +11620,10 @@ warrior_lodge_thuyhoa = {
 			trait = ukkos_shield
 			value = 1
 		}
+		has_trait = {
+			trait = tall
+			value = 1
+		}
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -11227,6 +11987,10 @@ warrior_lodge_satsana_pi = {
 		}
 		has_trait = {
 			trait = ukkos_shield
+			value = 1
+		}
+		has_trait = {
+			trait = tall
 			value = 1
 		}
 		#NEGATIVE modifiers

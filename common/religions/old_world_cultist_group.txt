@@ -87,7 +87,6 @@ old_world_cultist_group = {
 		max_wives = 3
 		landed_kin_prestige_bonus = yes
 		attacking_same_religion_piety_loss = yes
-		defensive_attrition = yes
 		hard_to_convert = yes
 		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
 		short_reign_opinion_year_mult = 0 # No short reign penalty
@@ -96,13 +95,148 @@ old_world_cultist_group = {
 			muslim_opinion = 5
 			buddhist_group_opinion = 5
 			indian_group_opinion = 5
-			stewardship = 1
 		}
 		intermarry = christian
 		intermarry = muslim
+		intermarry = agamatirta
 		intermarry = buddhist_group
 		intermarry = indian_group
 		
+	}
+	sisukkuus = {
+		graphical_culture = nobeliangfx
+
+		icon = 40
+		heresy_icon = 41
+		
+		color = { 183 195 214 }
+
+		scripture_name = PYHAT_KIRJOITUKSET
+		
+		high_god_name = GOD_GOD
+		
+		priest_title = ELDER
+		
+		interface_skin = { OWC_interface pagan_interface }
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_UKKO GOD_THE_SAINTS GOD_LUTHER GOD_MANNERHEIM GOD_KEKKONEN
+		}
+		
+		evil_god_names = {
+			GOD_LION_MIDNIGHT LUCIFER GOD_STALIN GOD_PAHOLAINEN GOD_THE_PUNISHED GOD_ROMANOV GOD_VEDMAK_KOROL
+		}
+		piety_name = SISU
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		allow_looting = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		female_temple_holders = yes		
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		hard_to_convert = yes
+		landed_kin_prestige_bonus = yes
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+		pacifist = yes
+		attacking_same_religion_piety_loss = yes
+		character_modifier = {
+			martial = 1
+			lutheran_opinion = 5
+			vagarna_opinion = 5
+			folklorist_opinion = -10
+			stalinist_opinion = -10
+			zarist_opinion = -10 
+			katerinist_opinion = -10
+			petrist_opinion = -10
+		}
+		unit_modifier = {
+			archers_offensive = 0.25
+			archers_defensive = 0.25
+		}
+		
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = vagarna
+		intermarry = lutheran
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = starist_pagan_reformed
+		intermarry = starist_pagan
+	}
+	
+	sarvodaya = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 90
+        heresy_icon = 90
+
+		color = { 135 206 235 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_PARABRAHMAN
+		
+		god_names = {
+			GOD_PARABRAHMAN GOD_BHAGAVAN MAHATMA GOD_VINOBA_BHAVE GOD_NEHRU
+		}
+		
+		evil_god_names = {
+			GOD_ASURAS ADHARMA
+		}
+		character_modifier = {
+			jain_opinion = 10
+			learning = 2#for tech boost
+		}
+		
+		crusade_name = DHARMAYUDDHA
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 0.75
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		allow_looting = no
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+		pacifist = yes # Makes the AI less likely to start wars, plots and factions
+		attacking_same_religion_piety_loss = yes
+		defensive_attrition = yes
+		has_heir_designation = yes
+		max_consorts = 3
+		
+		unit_modifier = {
+			land_morale = 0.3
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = BHAGAVAD_GITA
+		priest_title = PUJARI
+		piety_name = KARMA
+
+		intermarry = sikh
+		intermarry = jain
+		intermarry = buddhist_group
+		intermarry = maunaxite
+		intermarry = neovedantic
+		intermarry = kalikula
+		intermarry = shaivasiddhanta
+		intermarry = maunaxite_reformed
+		intermarry = dahatatta
+		intermarry = koyapunem
+		intermarry = old_hindu
+		#intermarry = sarvodaya
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
+		intermarry = bon
 	}
 	
 	zarist = {
@@ -493,10 +627,69 @@ old_world_cultist_group = {
 		intermarry = leninist
 	}		
 
-	jacobinist = {
+	girondist = {
 		graphical_culture = muslimgfx
 
 		icon = 60
+		heresy_icon = 62
+		
+		color = { 93 93 194 }
+
+		interface_skin = { jacobinist_interface OWC_interface pagan_interface }		
+		
+		crusade_name = THE_REVOLUTION
+		scripture_name = THE_DECLARATION
+		priest_title = PROCLAMATOR
+		piety_name = FREEDOM
+		
+		high_god_name = GOD_THE_CREATOR
+		god_names = {
+			GOD_THE_CREATOR GOD_REPUBLIC GOD_DEMOCRACY GOD_GOD GOD_THE_LORD GOD_JESUS GOD_LIBERTY GOD_EQUALITY GOD_FRATERNITY GOD_VOLTAIRE GOD_GUILLOTINE GOD_HIGHER_BEING GOD_SAINT_JUST GOD_ERU_LAUTEUR GOD_CHARLEMAGNE GOD_NAPOLEON 
+		}
+		
+		evil_god_names = {
+			GOD_ANCIEN_REGIME GOD_ABSOLUTISM GOD_SUN_KING GOD_SAURON GOD_RICHELIEU
+		}
+		character_modifier = {
+			novelist_opinion = 5
+			novelist_reformed_opinion = 5
+		}
+		aggression = 1.0 # AI aggression factor
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		peace_piety_gain = 1.0
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		max_consorts = 3
+		matrilineal_marriages = yes
+		priests_can_inherit = no
+		defensive_attrition = yes
+		hard_to_convert = yes
+		ignores_defensive_attrition = yes
+		female_temple_holders = yes
+		feminist = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		
+		religious_clothing_head = 20
+		religious_clothing_priest = 20
+		
+		intermarry = constitutional
+		intermarry = fraticelli
+		intermarry = catholic
+		intermarry = cadaverist
+		intermarry = novelist
+		intermarry = novelist_reformed
+		intermarry = neohuguenot
+		intermarry = jacobinist
+	}
+	jacobinist = {
+		graphical_culture = muslimgfx
+		parent = girondist
+		icon = 60
+		heresy_icon = 62
 		
 		color = { 0.5 0.5 1 }
 
@@ -529,6 +722,8 @@ old_world_cultist_group = {
 		religious_clothing_priest = 20
 		
 		intermarry = constitutional
+		intermarry = neohuguenot
+		intermarry = girondist
 	}
 	khanist = { # Idolatry of Genghis Khan/Mongolian Nationalism
 	
@@ -628,10 +823,11 @@ old_world_cultist_group = {
 		
 		aggression = 1.1
 		allow_rivermovement = yes
-		has_heir_designation = yes
+		female_temple_holders = yes
+		feminist = yes
+		can_excommunicate = yes
 		priests_can_inherit = no
 		can_call_crusade = yes
-		max_consorts = 5
 		allow_looting = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
@@ -682,7 +878,7 @@ old_world_cultist_group = {
 		piety_name = PROGRESS
 
 		character_modifier = {
-			intrigue = 2
+			intrigue = 1
 			fertility = -0.15
 			plot_power_modifier = 0.05
 			plot_discovery_chance = 0.05
@@ -694,14 +890,15 @@ old_world_cultist_group = {
 		
 		aggression = 1.4
 		allow_rivermovement = yes
-		has_heir_designation = yes
+		female_temple_holders = yes
+		feminist = yes
 		can_excommunicate = yes
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		rel_head_defense = yes
 		priests_can_inherit = no
 		can_call_crusade = yes
-		#max_consorts = 5
+		allow_viking_invasion = yes
 		allow_looting = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
@@ -744,6 +941,7 @@ old_world_cultist_group = {
 
 		character_modifier = {
 			martial = 1
+			christian_opinion = 5
 			trained_republican_law_opinion = 5
 		}
 		
@@ -773,6 +971,9 @@ old_world_cultist_group = {
 		intermarry = legalist
 		intermarry = white_lotus
 		intermarry = neoncult
+		intermarry = baptist
+		intermarry = katoliko
+		intermarry = eastern_lightning
 	}
 	constitutional = {
 		graphical_culture = westerngfx
@@ -873,7 +1074,7 @@ old_world_cultist_group = {
 		piety_name = PROGRESS
 
 		character_modifier = {
-			stewardship = 2
+			stewardship = 1
 		}
 		
 		unit_modifier = {
@@ -908,6 +1109,50 @@ old_world_cultist_group = {
 		intermarry = christian
 		intermarry = juche
 	}
+	neoncult_reformed = {
+		graphical_culture = chinesegfx
+
+		icon = 198
+		heresy_icon = 199
+		
+		color = { 196 58 255 }
+
+		scripture_name = NEON_EVANGELION
+		
+		high_god_name = GOD_NEON_GODDESS
+		
+		priest_title = ENLIGHTEND_ONE
+		
+		interface_skin = { buddhist_interface taoist_interface indian_interface muslim_interface }
+		
+		god_names = {
+			GOD_XIHE GOD_TEN_SUNS GOD_LIGHT GOD_XENON GOD_ARGON GOD_KRYPTON 
+		}
+		
+		evil_god_names = {
+			GOD_CHANGE GOD_SHEN_YI GOD_DARKNESS
+		}
+		
+		aggression = 1.8
+		allow_rivermovement = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
+		priests_can_marry = yes
+		max_consorts = 3
+		priests_can_inherit = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		has_heir_designation = yes
+		
+		intermarry = east_brethren
+		intermarry = maoist
+		intermarry = taoist
+		intermarry = shintoist_group
+		intermarry = white_lotus
+		intermarry = tridemism
+
+	}
 	neoncult = {
 		graphical_culture = chinesegfx
 
@@ -932,6 +1177,7 @@ old_world_cultist_group = {
 			GOD_CHANGE GOD_SHEN_YI GOD_DARKNESS
 		}
 		
+		reformed = neoncult_reformed
 		aggression = 1.8
 		allow_rivermovement = yes
 		allow_viking_invasion = yes

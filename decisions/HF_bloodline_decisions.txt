@@ -802,6 +802,7 @@ targetted_decisions = {
 				religion = taoist
 				religion = tridemism
 				religion = gidoggyo
+				religion = mattaism
 			}
 		}
 	
@@ -1109,6 +1110,7 @@ targetted_decisions = {
 					has_bloodline_flag = bloodline_drill 
 					bloodline_is_active_for = PREV
 				}
+				religion = sisukkuus
 				religion = tridemism
 				religion = bushinto
 				religion = ho_cult
@@ -1169,9 +1171,12 @@ targetted_decisions = {
 			is_landed = yes
 			is_adult = yes
 			higher_tier_than = BARON
-			any_owned_bloodline = {
-				has_bloodline_flag = bloodline_endearing 
-				bloodline_is_active_for = PREV
+			OR = {
+				religion = mattaism
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_endearing 
+					bloodline_is_active_for = PREV
+				}
 			}
 		}
 		
@@ -1234,13 +1239,20 @@ targetted_decisions = {
 					has_bloodline_flag = bloodline_dismantle_factions 
 					bloodline_is_active_for = PREV
 				}
+				religion = donyipolo
+				religion = mattaism
 				religion = ho_cult
+				religion = girondist
 			}
 		}
 		
 		allow = {
 			prestige = 500
 			piety = 250
+			conditional_tooltip = {
+				trigger = { religion = girondist }
+				trait = just_ruler
+			}
 			custom_tooltip = {
 				text = tooltip_dismantle_factions_cooldown
 				NOT = { has_character_modifier = dismantle_factions_cooldown }

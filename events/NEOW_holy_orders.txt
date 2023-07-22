@@ -537,7 +537,10 @@ character_event = {
 				}
 				modifier = {
 					factor = 5
-					culture_group = celtic
+					OR = {
+					culture_group = goidelic
+					culture_group = brythonic
+					}
 				}
 				d_legion_of_mary = { save_event_target_as = holy_order_to_join }
 			}
@@ -772,12 +775,13 @@ character_event = {
 		thelemic_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
 		summer_queen = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
 		thelemic = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		theosophy = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
 		orange_king = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
 		stalinist = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
 		trotskyite = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
 		titoist = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
 		sunni = { save_persistent_event_target = { name = one_holy_order scope = d_bektashi } }
-		wahhabi = { save_persistent_event_target = { name = one_holy_order scope = d_bektashi } }
+		wahhabi = { save_persistent_event_target = { name = one_holy_order scope = d_ikhwan } }
 		sufi = { save_persistent_event_target = { name = one_holy_order scope = d_tijani_order } }
 		mesopotamian = { save_persistent_event_target = { name = one_holy_order scope = d_naqshbandi } }
 		ibadi = { save_persistent_event_target = { name = one_holy_order scope = d_haruriyyah } }
@@ -794,7 +798,11 @@ character_event = {
 		hellenic_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_myrmidons } }
 		anglican = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
 		quaker = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
+		orleanist = { save_persistent_event_target = { name = one_holy_order scope = d_orleanist_order } }
+		girondist = { save_persistent_event_target = { name = one_holy_order scope = d_girondist_order } }
 		calvinist = { save_persistent_event_target = { name = one_holy_order scope = d_huguenots } }
+		genevist = { save_persistent_event_target = { name = one_holy_order scope = d_huguenots } }
+		neohuguenot = { save_persistent_event_target = { name = one_holy_order scope = d_huguenots } }
 		lutheran = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
 		prussianist = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
 		hussite = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
@@ -811,7 +819,6 @@ character_event = {
 		summer_queen = { save_persistent_event_target = { name = one_holy_order scope = d_excalibur } }
 		ovlatii = { save_persistent_event_target = { name = one_holy_order scope = d_ovlatii_order } }
 		shiite = { save_persistent_event_target = { name = one_holy_order scope = d_shahrbani } }
-		charismatic = { save_persistent_event_target = { name = one_holy_order scope = d_kadena } }
 		bushism = { save_persistent_event_target = { name = one_holy_order scope = d_liberian_order } }
 		highchurch = { save_persistent_event_target = { name = one_holy_order scope = d_lawrence_order } }
 		nousthreskeia = { save_persistent_event_target = { name = one_holy_order scope = d_nousthreskeia_order } }
@@ -820,6 +827,11 @@ character_event = {
 		jadidist = { save_persistent_event_target = { name = one_holy_order scope = d_jadid } }
 		bon = { save_persistent_event_target = { name = one_holy_order scope = d_dralhas_children } }
 		bon_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_dralhas_children } }
+		starist_pagan = { save_persistent_event_target = { name = one_holy_order scope = d_stargazers } }
+		starist_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_stargazers } }
+		oldbeliever = { save_persistent_event_target = { name = one_holy_order scope = d_nekrasovtsy } }
+		sisukkuus = { save_persistent_event_target = { name = one_holy_order scope = d_puolustusvoimat } }
+		chaldean = { save_persistent_event_target = { name = one_holy_order scope = d_knights_of_saint_charbel } }
 		celtic_pagan = { save_persistent_event_target = { name = one_holy_order scope = d_fianna } }
 		celtic_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_fianna } }
 		congregationist = { save_persistent_event_target = { name = one_holy_order scope = d_shomrim } }
@@ -827,16 +839,29 @@ character_event = {
 		apostolic = { save_persistent_event_target = { name = one_holy_order scope = d_ignatius_knights } }
 		katoliko = { save_persistent_event_target = { name = one_holy_order scope = d_spears_of_longinus } }
 		red_cult = { save_persistent_event_target = { name = one_holy_order scope = d_mss } }
+		white_lotus = { save_persistent_event_target = { name = one_holy_order scope = d_order_of_white_lotus } }
+		hmongism = { save_persistent_event_target = { name = one_holy_order scope = d_hmongism_order } }
+		mahayana = { save_persistent_event_target = { name = one_holy_order scope = d_mahayana_order } }
+		thaislam = { save_persistent_event_target = { name = one_holy_order scope = d_thaislam_order } }
+		combuddhist = { save_persistent_event_target = { name = one_holy_order scope = d_combuddhist_order } }
+		juche = { save_persistent_event_target = { name = one_holy_order scope = d_kpa } }
+		taoist = { save_persistent_event_target = { name = one_holy_order scope = d_taoist_order } }
+		wuist = { save_persistent_event_target = { name = one_holy_order scope = d_wuist_order } }
+		wuist_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_wuist_order } }
+		kirishitan = { save_persistent_event_target = { name = one_holy_order scope = d_kirishitan_order } }
+		eastern_lightning = { save_persistent_event_target = { name = one_holy_order scope = d_easternlightning_order } }
+		syafi = { save_persistent_event_target = { name = one_holy_order scope = d_syafi_order } }
 		
 		# Second ones
 		sevillian = { save_persistent_event_target = { name = two_holy_order scope = d_carmelites } }
 		hussite = { save_persistent_event_target = { name = two_holy_order scope = d_hussite_order } }
 		transatlantic = { save_persistent_event_target = { name = two_holy_order scope = d_carmelites } }
 		sunni = { save_persistent_event_target = { name = two_holy_order scope = d_egyptian_brotherhood } }
-		wahhabi = { save_persistent_event_target = { name = two_holy_order scope = d_ikhwan } }
 		anglican = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_1 } }
 		quaker = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_1 } }
 		calvinist = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_2 } }
+		genevist = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_2 } }
+		neohuguenot = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_2 } }
 		orthodox = { save_persistent_event_target = { name = two_holy_order scope = d_saint_basil } }
 	}
 }

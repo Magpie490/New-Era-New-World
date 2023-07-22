@@ -44,7 +44,7 @@ indian_group = {
 		
 		aggression = 1.3
 		allow_rivermovement = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = yes
 		matrilineal_marriages = yes
@@ -59,6 +59,7 @@ indian_group = {
 			martial = 2
 			health = 0.5
 		}
+		crusade_name = GREAT_HOLY_WAR
 		
 		religious_clothing_head = 8
 		religious_clothing_priest = 8
@@ -68,13 +69,19 @@ indian_group = {
 		piety_name = KARMA
 		
 		intermarry = muslim
+		intermarry = agamatirta
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = brethren
 		intermarry = east_brethren
 		intermarry = poseidonian
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 	}	
 
@@ -84,10 +91,10 @@ indian_group = {
 		secondary_event_pictures = sunni
 		alternate_start = { always = no }
 
-		icon = 89
-		heresy_icon = 90
+		icon = 88
+		heresy_icon = 89
 		
-		color = { 0 1 0.8 }
+		color = { 0 0.8 0.8 }
 		
 		interface_skin = { indian_interface muslim_interface }		
 
@@ -96,14 +103,14 @@ indian_group = {
 		priest_title = PUJARI
 		piety_name = KARMA
 		
-		high_god_name = GOD_KALKI
+		high_god_name = GOD_SHIVA
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_BRAHMA GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH GOD_KALKI
+			GOD_SHIVA GOD_SHAKTI GOD_UMA GOD_DURVA GOD_KALI GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_JAGANNATH
 		}
 		
 		evil_god_names = {
-			GOD_CORRUPTION THE_ASURAS
+			THE_ASURAS ADHARMA
 		}
 		
 		can_call_crusade = yes
@@ -111,7 +118,7 @@ indian_group = {
 		
 		allow_rivermovement = yes
 		can_grant_divorce = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = yes
 		max_consorts = 3
@@ -120,6 +127,9 @@ indian_group = {
 		
 		religious_clothing_head = 8
 		religious_clothing_priest = 8		
+		intermarry = maunaxite
+		intermarry = parabrahmanist
+		intermarry = kalikula	
 
 		allow_in_ruler_designer = no		
 	}
@@ -132,7 +142,7 @@ indian_group = {
 		icon = 88
 		heresy_icon = 89
 		
-		color = { 0.2 1 0.8 }
+		color = { 0.3 1 0.8 }
 		
 		interface_skin = { indian_interface muslim_interface }		
 
@@ -141,14 +151,14 @@ indian_group = {
 		priest_title = PUJARI
 		piety_name = KARMA
 		
-		high_god_name = GOD_DEVAS
+		high_god_name = GOD_SHIVA
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_BRAHMA GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_AGNI GOD_SURYA GOD_VARUNA GOD_JAGANNATH
+			GOD_SHIVA GOD_SHAKTI GOD_UMA GOD_DURVA GOD_KALI GOD_LAKSHMI GOD_SARASWATI GOD_KARTIKEYA GOD_JAGANNATH
 		}
-		
+
 		evil_god_names = {
-			THE_ASURAS
+			THE_ASURAS ADHARMA
 		}
 		unit_modifier = {		
 			garrison_size = 0.4
@@ -175,7 +185,7 @@ indian_group = {
 		aggression = 1.3
 		allow_rivermovement = yes
 		can_grant_divorce = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = yes
 		max_consorts = 3
@@ -190,7 +200,10 @@ indian_group = {
 		religious_clothing_priest = 8
 		
 		dislike_tribal_organization = yes
-		can_demand_religious_conversion = no		
+		can_demand_religious_conversion = no
+		intermarry = maunaxite_reformed
+		intermarry = parabrahmanist
+		intermarry = kalikula		
 	}
 
 
@@ -204,19 +217,20 @@ indian_group = {
 		icon = 80
         heresy_icon = 134
 
-		color = { 0 0.5 0.4 }
+		color = { 89 56 255 }
 		
 		interface_skin = { indian_interface muslim_interface }
 		
-		high_god_name = GOD_BHAGAVAN
+		high_god_name = GOD_PARABRAHMAN
 		
 		god_names = {
-			GOD_VISHNU GOD_SHIVA GOD_SHAKTI
+			GOD_SHIVA GOD_VISHNU GOD_GANESHA GOD_SHAKTI GOD_SURYA
 		}
 		
 		evil_god_names = {
 			GOD_ASURAS ADHARMA
 		}
+		
 		
 		crusade_name = DHARMAYUDDHA
 		use_new_crusade = no
@@ -227,17 +241,18 @@ indian_group = {
 		can_call_crusade = yes
 		can_grant_claim = yes
 		can_grant_divorce = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = no
 		max_consorts = 3
 		caste_opinions = yes
 		castes = yes
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
 		
 		unit_modifier = {
 			land_morale = 0.3
 
-			key = "OFF_RELIGION"
 		}
 		
 		religious_clothing_head = 8
@@ -249,11 +264,196 @@ indian_group = {
 
 		intermarry = sikh
 		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = agamatirta
+		intermarry = buddhist_group
+		intermarry = maunaxite
+		intermarry = neovedantic
+		intermarry = kalikula
+		intermarry = shaivasiddhanta
+		intermarry = maunaxite_reformed
+		intermarry = dahatatta
+		intermarry = koyapunem
+		intermarry = old_hindu
+		#intermarry = zoroastrian_group
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
+		intermarry = bon
+	}
+	kalikula = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 27
+        heresy_icon = 27
+
+		color = { 255 30 79 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_KALI
+		
+		god_names = {
+			GOD_KALI GOD_MAHAVIDYAS GOD_KAUMARI GOD_CHANDI GOD_DURGA GOD_BHIMA
+		}
+		
+		evil_god_names = {
+			GOD_ASURAS ADHARMA
+		}
+		character_modifier = {
+			maunaxite_reformed_opinion = 10
+			maunaxite_opinion = 10
+		}
+		
+		unit_modifier = {		
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		crusade_name = DHARMAYUDDHA
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 1.8
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		feminist = yes
+		defensive_attrition = yes
+		female_temple_holders = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		allow_looting = yes
+		max_consorts = 3
+		caste_opinions = yes
+		castes = yes
+		can_demand_religious_conversion = no
+		
+		unit_modifier = {
+			land_morale = 0.2
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = VEDAS
+		priest_title = PUJARI
+		piety_name = KARMA
+
+		intermarry = sikh
+		intermarry = kalikula
+		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = neovedantic
+		intermarry = parabrahmanist
+		intermarry = maunaxite
+		intermarry = maunaxite_reformed
 		intermarry = buddhist_group
 		intermarry = old_hindu
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = agamatirta
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
+		intermarry = bon
+	}
+	shaivasiddhanta = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 144
+        heresy_icon = 134
+
+		color = { 255 100 50 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_SHIVA
+		
+		god_names = {
+			GOD_SHIVA GOD_PARVATI GOD_GANESHA GOD_MURUGA GOD_NAYANMARS GOD_KANNAKI_AMMAN GOD_AYYAPAN GOD_AIYANAR GOD_AGASTYA GOD_SIDDHARS
+		}
+		
+		evil_god_names = {
+			GOD_ASURAS ADHARMA
+		}
+		character_modifier = {
+			learning = 2
+			maunaxite_reformed_opinion = 10
+			maunaxite_opinion = 10
+		}
+		unit_modifier = {
+			morale_defence = 0.15
+			morale_offence = 0.15
+			damage = 0.1
+			defence = 0.1
+		}
+		crusade_name = DHARMAYUDDHA
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 1.0
+		allow_rivermovement = yes
+		can_call_crusade = no
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		can_retire_to_monastery = yes
+		hard_to_convert = yes
+		attacking_same_religion_piety_loss = yes
+		autocephaly = yes
+		allow_looting = no
+		max_consorts = 3
+		caste_opinions = yes
+		castes = yes
+		defensive_attrition = yes
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = TIRUMURAI
+		priest_title = PUJARI
+		piety_name = KARMA
+
+		intermarry = sikh
+		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = buddhist_group
+		intermarry = neovedantic
+		intermarry = agamatirta
+		intermarry = parabrahmanist
+		intermarry = old_hindu
+		intermarry = dahatatta
+		intermarry = koyapunem
+		#intermarry = zoroastrian_group
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 	}
 	neovedantic = {
@@ -263,23 +463,24 @@ indian_group = {
 		icon = 45
 		heresy_icon = 157
 		
-		color = { 1 0.6 0.7 }
+		color = { 255 212 0 }
 		
 		interface_skin = { indian_interface muslim_interface }
 		
-		high_god_name = GOD_TRIMURTI
+		high_god_name = GOD_BHAGAVAN
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_SHAKTI GOD_KUBERA GOD_LAKSHMI
+			BHAGAVAN_KRISHNA BALA_KRISHNA GOPALA_KRISHNA VASUDEVA_KRISHNA RADHA_KRISHNA
 		}
 		
 		evil_god_names = {
 			GOD_ASURAS ADHARMA
 		}
+		crusade_name = GREAT_HOLY_WAR
 		
 		aggression = 0.8
 		allow_rivermovement = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = no
 		max_consorts = 3
@@ -294,42 +495,124 @@ indian_group = {
 
 		intermarry = sikh
 		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = agamatirta
 		intermarry = buddhist_group
+		intermarry = kalikula
+		intermarry = parabrahmanist
 		intermarry = old_hindu
 		intermarry = agamatirta
 		intermarry = brethren
 		intermarry = east_brethren
 		intermarry = poseidonian
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = ahmadiyya
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		
 		can_demand_religious_conversion = no
+	}
+	koyapunem = {
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 17
+		heresy_icon = 17
+		
+		color = { 179 75 5 }
+		interface_skin = { indian_interface muslim_interface }
+		high_god_name = GOD_BARADEO
+		
+		god_names = {
+			GOD_BARADEO GOD_BHAGAVAN GOD_KUPAR_LINGO GOD_BADADEO GOD_PERSA_PEN GOD_RAVANA GOD_MATA_KALI_KANKALI GOD_GANSAM GOD_BHIMSEN GOD_NAT_AWAL GOD_BHUMI GOD_AKI_PEN GOD_ANWAL 
+		}
+		
+		evil_god_names = {
+			GOD_ASURAS GOD_MAITYA_PEN
+		}
+		
+		character_modifier = {
+			attrition = -0.1
+			days_of_supply = 15
+			land_organisation = 0.1
+			build_cost_modifier = 0.15
+		}
+		unit_home_modifier = {
+			land_morale = 0.05
+		}
+		crusade_name = GREAT_HOLY_WAR
+		
+		aggression = 0.5
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		pacifist = yes
+		defensive_attrition = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		raised_vassal_opinion_loss = no
+		has_heir_designation = yes
+		allow_looting = yes
+		max_consorts = 3
+		peace_piety_gain = 1.0
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = PAVITRA_GRANTHAM
+		priest_title = BHUMKA
+		piety_name = SALLA
+
+		intermarry = sikh
+		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = agamatirta
+		intermarry = buddhist_group
+		intermarry = neovedantic
+		intermarry = kalikula
+		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
+		intermarry = brethren
+		intermarry = dahatatta
+		intermarry = east_brethren
+		intermarry = poseidonian
+		#intermarry = zoroastrian_group
+		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
+		intermarry = bon
 	}
 	old_hindu = {
 		graphical_culture = hindugfx
 		secondary_event_pictures = sunni
 
-		icon = 45
-		heresy_icon = 157
+		icon = 35
+		heresy_icon = 36
 		parent = neovedantic
 		
-		color = { 1 0.3 0.4 }
-		
-		high_god_name = GOD_DEVAS
+		color = { 255 38 38 }
+		interface_skin = { indian_interface muslim_interface }
+		high_god_name = GOD_VISHNU
 		
 		god_names = {
-			GOD_SHIVA GOD_VISHNU GOD_SHAKTI GOD_GANDHI GOD_LAKSHMI GOD_SURYA
+			GOD_VISHNU GOD_MATSYA GOD_KURMA GOD_VARAHA GOD_NARASIMHA GOD_VAMANA GOD_PARASHURAMA GOD_RAMA GOD_MAHATMA GOD_JAGANNATH GOD_THE_BUDDHA GOD_KALKI GOD_LAKSHMI
 		}
 		
 		evil_god_names = {
 			GOD_ASURAS ADHARMA
 		}
 		
+		crusade_name = GREAT_HOLY_WAR
+		
 		aggression = 1
 		allow_rivermovement = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_looting = yes
 		max_consorts = 3
@@ -346,14 +629,21 @@ indian_group = {
 
 		intermarry = sikh
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = buddhist_group
 		intermarry = neovedantic
+		intermarry = agamatirta
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = brethren
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = east_brethren
 		intermarry = poseidonian
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 	}
 	agamatirta = {
@@ -374,6 +664,7 @@ indian_group = {
 		evil_god_names = {
 			GOD_ASURAS ADHARMA
 		}
+		crusade_name = GREAT_HOLY_WAR
 		
 		aggression = 1
 		allow_rivermovement = yes
@@ -401,15 +692,18 @@ indian_group = {
 		}
 		unit_modifier = {
 			land_morale = 0.1
-
-			key = "OFF_RELIGION"
 		}
 		intermarry = sikh
 		intermarry = jain
+		intermarry = sarvodaya
+		intermarry = old_hindu
 		intermarry = buddhist_group
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = brethren
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = east_brethren
 		intermarry = poseidonian
 		#intermarry = zoroastrian_group
@@ -438,10 +732,12 @@ indian_group = {
 			THE_PUNISHERS
 		}
 		
+		crusade_name = GREAT_HOLY_WAR
+		
 		aggression = 0.5
 		allow_rivermovement = yes
 		has_heir_designation = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
 		max_consorts = 3
 		attacking_same_religion_piety_loss = yes
@@ -459,14 +755,21 @@ indian_group = {
 		piety_name = PURITY
 		
 		intermarry = buddhist_group
+		intermarry = sarvodaya
+		intermarry = agamatirta
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = neovedantic
 		intermarry = sikh
+		intermarry = dahatatta
+		intermarry = koyapunem
 		intermarry = brethren
 		intermarry = east_brethren
 		intermarry = poseidonian
 		#intermarry = zoroastrian_group
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 	}
 }

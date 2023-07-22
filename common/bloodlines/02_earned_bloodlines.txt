@@ -71,6 +71,7 @@ roman_emperor_male = {
 	active = {
 		OR = {
 			religion_group = christian
+			religion_group = muslim
 			religion_group = syncratic_group
 			religion_openly_hellenic_or_reformed_trigger = yes
 			religion = poseidonian
@@ -101,6 +102,7 @@ roman_emperor_female = {
 	active = {
 		OR = {
 			religion_group = christian
+			religion_group = muslim
 			religion_group = syncratic_group
 			religion_openly_hellenic_or_reformed_trigger = yes
 			religion = poseidonian
@@ -460,17 +462,17 @@ crusader_kid_bloodline = {
 	flags = { crusade_lord_bloodline crusader_kid_bloodline created_bloodline }
 }
 
-destroyer_of_byzantium = {
-	monthly_character_prestige = 0.2
+latin_empire_blood = {
+	monthly_character_prestige = 1
 	apeninian_opinion = 5
 	west_germanic_opinion = 5
 	central_germanic_opinion = 5
-	byzantine_opinion = -5
+	christian_opinion = 10
 	bloodline_effect_castration = 1
 	bloodline_effect_blinding = 1
 	inheritance = patrilineal
 	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	picture = GFX_bloodlines_symbol_cross_crusader
 	flags = { bloodline_blinding bloodline_castration created_bloodline crusader_bloodline }
 }
 
@@ -547,7 +549,7 @@ reconquista_cid_bloodline = {
 #earned by a female celtic ruler who successfully gains e_britannia
 boudica = {
 	combat_rating = 5
-	celtic_opinion = 5
+	brythonic_opinion = 5
 	light_infantry_morale = 0.05
 	monthly_character_prestige = 0.1
 	inheritance = matrilineal
@@ -1243,4 +1245,31 @@ chinese_imperial_bloodline_01 = {
 	tech_growth_modifier_culture = 0.02
 	monthly_character_prestige = 0.2
 	flags = { created_bloodline }
+}
+
+ascended_master_male = {
+	monthly_character_piety = 0.1
+	church_opinion = 5
+	bloodline_effect_easy_vows = 1
+	saintly_theologians_bloodline = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion = theosophy
+	}
+	picture = GFX_bloodlines_symbol_bon_candle
+	flags = { bloodline_ascended_master theologian_saintly_bloodline }
+}
+ascended_master_female = {
+	monthly_character_piety = 0.1
+	church_opinion = 5
+	bloodline_effect_easy_vows = 1
+	saintly_theologians_bloodline = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	active = {
+		religion = theosophy
+	}
+	picture = GFX_bloodlines_symbol_bon_candle
+	flags = { bloodline_ascended_master theologian_saintly_bloodline }
 }

@@ -206,12 +206,21 @@ title_commander = {
 					NOR = {
 						religion = old_hindu
 						religion = parabrahmanist
+						religion = kalikula
+						religion = shaivasiddhanta
 						religion = agamatirta
 						religion = jain
 						religion = maunaxite_reformed
 						religion = maunaxite
+						religion = yazidi
+						religion = yersenism
+						religion = mandaeanism
+						religion = ahlehaqq
 					}
-					trait = kshatriya
+					OR = {
+						trait = kshatriya
+						trait = shaykh
+					}
 				}
 				is_adult = yes
 			}
@@ -245,12 +254,21 @@ title_commander = {
 										NOR = {
 											religion = old_hindu
 											religion = parabrahmanist
+											religion = kalikula
+											religion = shaivasiddhanta
 											religion = agamatirta
 											religion = jain
 											religion = maunaxite_reformed
 											religion = maunaxite
+											religion = yazidi
+											religion = yersenism
+											religion = mandaeanism
+											religion = ahlehaqq
 										}
-										trait = kshatriya
+										OR = {
+											trait = kshatriya
+											trait = shaykh
+										}
 									}
 									is_adult = yes
 								}
@@ -1453,6 +1471,7 @@ title_baghatur = {
 				culture_group = mongolic
 			}
 			is_khanist_religion_trigger = yes
+			religion = akjang
 		}
 	}
 	
@@ -1490,6 +1509,7 @@ title_cherbi = {
 				culture_group = mongolic
 			}
 			is_khanist_religion_trigger = yes
+			religion = akjang
 		}
 	}
 	
@@ -1527,6 +1547,7 @@ title_darkhan = {
 				culture_group = mongolic
 			}
 			is_khanist_religion_trigger = yes
+			religion = akjang
 		}
 	}
 	
@@ -1564,6 +1585,7 @@ title_noyan = {
 		OR = {
 			culture_group = mongolic
 			is_khanist_religion_trigger = yes
+			religion = akjang
 		}
 	}
 	
@@ -1601,6 +1623,7 @@ title_behi = {
 				culture_group = mongolic
 			}
 			is_khanist_religion_trigger = yes
+			religion = akjang
 		}
 	}
 	
@@ -2455,6 +2478,40 @@ title_councilmember_king = {
 				religion_group = jewish_group
 			}
 			AND = {
+				has_landed_title = e_vladivostok 
+				culture_group = far_east_slavic
+			}
+			AND = {
+				OR = {
+					religion = constitutional
+					religion = sarvodaya
+					religion = girondist
+					religion = ho_cult
+					religion = pancasila
+				}
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+				}
+				OR = {
+					real_tier = KING
+					real_tier = EMPEROR
+				}
+				NOR = {
+					has_landed_title = e_hre
+					has_landed_title = e_german_confederation
+					has_landed_title = e_britannia
+					has_landed_title = e_bhutan
+					has_landed_title = e_senegal
+					has_landed_title = k_senegal
+					has_landed_title = k_israel
+					has_landed_title = e_zion
+					has_landed_title = e_russian_republic
+					has_landed_title = e_european_union
+					has_landed_title = e_vladivostok 
+				}
+			}
+			AND = {
 				has_landed_title = e_britannia
 				OR = {
 					culture = british
@@ -2590,6 +2647,35 @@ title_councilmember_emperor = {
 				has_landed_title = e_zion
 				}
 				religion_group = jewish_group
+			}
+			AND = {
+				OR = {
+					religion = constitutional
+					religion = sarvodaya
+					religion = girondist
+					religion = ho_cult
+					religion = pancasila
+				}
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+				}
+				OR = {
+					real_tier = KING
+					real_tier = EMPEROR
+				}
+				NOR = {
+					has_landed_title = e_hre
+					has_landed_title = e_german_confederation
+					has_landed_title = e_britannia
+					has_landed_title = e_bhutan
+					has_landed_title = e_senegal
+					has_landed_title = k_senegal
+					has_landed_title = k_israel
+					has_landed_title = e_zion
+					has_landed_title = e_russian_republic
+					has_landed_title = e_european_union
+				}
 			}
 			AND = {
 				has_landed_title = e_vladivostok 
@@ -2738,6 +2824,7 @@ title_chouri_duke = {
 		NOR = { 
 			religion = koranist 
 			religion = wahhabi
+			religion = deobandi
 			religion = mesopotamian
 		}
 	}
@@ -2836,6 +2923,7 @@ title_chouri_king = {
 		NOR = { 
 			religion = koranist 
 			religion = wahhabi
+			religion = deobandi
 			religion = mesopotamian
 		}
 	}
@@ -2935,6 +3023,7 @@ title_chouri_emperor = {
 		NOR = { 
 			religion = koranist 
 			religion = wahhabi
+			religion = deobandi
 			religion = mesopotamian
 		}
 	}
@@ -3040,6 +3129,7 @@ title_court_architect = {
 			religion = maoist
 			religion = tridemism
 			religion = red_cult
+			religion = mahayana
 			religion_group = chinese_traditional_group
 		}
 	}
@@ -3084,6 +3174,7 @@ title_zhangshi = {
 			religion = maoist
 			religion = tridemism
 			religion = red_cult
+			religion = mahayana
 			religion_group = chinese_traditional_group
 		}
 	}
@@ -3128,6 +3219,7 @@ title_canjun = {
 			religion = maoist
 			religion = tridemism
 			religion = red_cult
+			religion = mahayana
 			religion_group = chinese_traditional_group
 		}
 	}
@@ -3172,6 +3264,7 @@ title_yuhou = {
 			religion = maoist
 			religion = tridemism
 			religion = red_cult
+			religion = mahayana
 			religion_group = chinese_traditional_group
 		}
 	}
@@ -3217,6 +3310,7 @@ title_historiographer = {
 			religion = maoist
 			religion = tridemism
 			religion = red_cult
+			religion = mahayana
 			religion_group = chinese_traditional_group
 		}
 	}
@@ -3285,12 +3379,21 @@ title_court_physician = {
 			NOR = {
 				religion = old_hindu
 				religion = parabrahmanist
+				religion = kalikula
+				religion = shaivasiddhanta
 				religion = agamatirta
 				religion = jain
 				religion = maunaxite_reformed
 				religion = maunaxite
+				religion = yazidi
+				religion = yersenism
+				religion = mandaeanism
+				religion = ahlehaqq
 			}
-			trait = brahmin
+			OR = {
+				trait = brahmin
+				trait = pyir
+			}
 		}
 		is_adult = yes
 
@@ -3339,6 +3442,14 @@ title_hermetics_apprentice = {
 			religion = el_shaddai
 			religion = thuyhoa_pagan
 			religion = thuyhoa_pagan_reformed
+			AND = {
+				OR = {
+					religion_group = muslim
+					religion = yazidi
+					religion = yersenism
+				}
+				trait = mystic
+			}
 		}
 	}
 	
@@ -3359,6 +3470,9 @@ title_hermetics_apprentice = {
 			religion = el_shaddai
 			religion = thuyhoa_pagan
 			religion = thuyhoa_pagan_reformed
+			religion_group = muslim
+			religion = yazidi
+			religion = yersenism
 		}
 
 		NOT = { trait = in_hiding }
@@ -3366,7 +3480,20 @@ title_hermetics_apprentice = {
 		prisoner = no
 		
 		hidden_trigger = {
-			liege = { OR = { society_member_of = hermetics religion = taoist } }
+			liege = { 
+				OR = { 
+					society_member_of = hermetics 
+					religion = taoist 
+					has_religion_feature = religion_alchemy 
+					has_religion_feature = religion_feature_wuist
+					religion = el_shaddai
+					religion = thuyhoa_pagan
+					religion = thuyhoa_pagan_reformed
+					religion_group = muslim
+					religion = yazidi
+					religion = yersenism
+				} 
+			}
 			NOT = { has_character_flag = completed_apprenticeship }
 			OR = {
 				FROM = { ai = no }
@@ -3403,6 +3530,9 @@ title_hermetics_apprentice = {
 					religion = poseidonian
 					has_landed_title = e_bhutan
 					top_liege = { has_landed_title = e_bhutan }
+				}
+				FROM = {
+					society_member_of = hermetics
 				}
 			}
 			join_society = hermetics

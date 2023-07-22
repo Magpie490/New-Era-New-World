@@ -49,6 +49,8 @@ is_equalist_religion = {
 		has_religion_feature = religion_equal
 		religion = bahai
 		religion = katerinist
+		religion = kalikula
+		religion = orleanist
 		religion = hussite
 		religion = sikh
 		religion = gidoggyo
@@ -75,6 +77,28 @@ religion_openly_folklorist_or_reformed_trigger = {
 			OR = {
 				religion = folklorist
 				religion = folklorist_reformed
+			}
+		}
+	}
+}
+religion_openly_neoncult_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_neoncult_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = neoncult
+				religion = neoncult_reformed
+			}
+		}
+	}
+}
+religion_openly_shindo_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_shindo_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = shindo
+				religion = shindo_reformed
 			}
 		}
 	}
@@ -271,6 +295,7 @@ is_sikh_religion_trigger = {
 is_esoteric_religion_trigger = {
 	OR = {
 		religion = thelemic_reformed
+		religion = theosophy
 		religion = summer_queen
 		religion = thelemic
 		religion = orange_king
@@ -351,6 +376,8 @@ is_protestant_religion_trigger = {
 		religion = xinjiao
 		religion = easternprotestant
 		religion = calvinist
+		religion = genevist
+		religion = neohuguenot
 		religion = evangelical
 		religion = prussianist
 		religion = anglican
@@ -368,6 +395,7 @@ christian_syncretic_religion = {
 		religion = muwahidunna
 		religion = bushism
 		religion = bahai
+		religion = orleanist
 	}
 }
 
@@ -378,6 +406,7 @@ muslim_syncretic_religion = {
 		religion = islamity
 		religion = muwahidunna
 		religion = bahai
+		religion = dahatatta
 	}
 }
 
@@ -543,11 +572,9 @@ safe_has_heresies = {
 	NOR = {
 		religion = theravada
 		religion = thaislam
-		religion = calvinist
 		religion = jugoslavist
 		religion = chaldean
 		religion = nasrini
-		religion = anglican
 		religion = highchurch
 		religion = ursuline
 		religion = evangelical
@@ -561,7 +588,6 @@ safe_has_heresies = {
 		religion = muwahidunna
 		religion = ironist
 		religion = jadidist
-		religion = jacobinist
 		religion = khanist
 		religion = maoist
 		religion = red_cult
@@ -700,11 +726,18 @@ can_use_muslim_stuff_trigger = {
 		religion_group = muslim
 		religion_group = syncratic_group
 	}
+	NOR = {
+		religion = vagarna
+		religion = orleanist
+	}
 }
 can_use_christian_stuff_trigger = {
 	OR = {
 		religion_group = christian
 		religion_group = syncratic_group
+	}
+	NOT = {
+		religion = dahatatta
 	}
 }
 abrahamic_religion_trigger = {
@@ -819,6 +852,7 @@ should_switch_to_non_christian_trigger = {
 allowed_to_use_stele_trigger = {
 	OR = {
 		religion = thelemic_reformed
+		religion = summer_queen
 		religion = thelemic
 		religion = orange_king
 	}
@@ -950,7 +984,9 @@ jacobinist_revolution_trigger = {
 		OR = {#For now they can only spawn in France, Germany, Russia, and Eastern Europe
 			region = world_europe_west_germania
 			region = world_europe_west_francia
-			region = world_europe_east
+			region = world_europe_west_iberia
+			region = world_europe_west_iberia
+			region = world_europe_south_italy
 			region = world_europe_west_low_countries
 		}
 	}	
@@ -1003,6 +1039,7 @@ hellenic_government_trigger = {
 ghazwa_government_trigger = {
 	OR = {
 		religion = wahhabi
+		religion = deobandi
 		religion = mesopotamian
 	}
 }
@@ -1019,6 +1056,7 @@ neoziamet_government_trigger = {
 		culture = kapadokyali
 		culture = karadenizci
 		culture = azerbaijani
+		culture = crimean_tatar
 		culture = greek
 		culture = makedonas
 		culture = aigionoi
@@ -1068,7 +1106,6 @@ iqta_religion_trigger = {
 		religion = koranist 
 		religion = wahhabi
 		religion = mesopotamian
-		religion = syafi
-		religion = ramadi
+		uses_mandala_government_trigger = yes
 	}
 }

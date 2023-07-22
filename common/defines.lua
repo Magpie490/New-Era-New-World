@@ -10,7 +10,7 @@ NDiplomacy = {
 	SUZERAIN_DEFENDER_CALL_DECLINE_COST = 150,	-- Prestige cost for a suzerain refusing to join a defensive war, when they are supposed to alway accept
 	ALLIED_CALL_DECLINE_COST = 200,
 
-	TRIBAL_VASSAL_CALL_DECLINE_COST_FACTOR = 3.0, -- Prestige cost multiplier for tribal vassals
+	TRIBAL_VASSAL_CALL_DECLINE_COST_FACTOR = 2.0, -- Prestige cost multiplier for tribal vassals
 	PAPAL_INVEST_PIETY_COST_MULT = 0.5, 		-- The effect of Papal investiture on the piety cost of the special Papal actions
 	SHORT_REIGN_YEARS_END = 9,
 	LONG_REIGN_YEARS_START = 10,
@@ -94,10 +94,10 @@ NDiplomacy = {
 	BASE_REVOLT_CHANCE_MOD = 250,								-- Pre Old Gods rebel spawn chance modifier (fires on_rebel_revolt) : lower means fewer revolts. MUST NOT BE ZERO.
 	TOG_REVOLT_CHANCE_MOD = 100,								-- Old Gods rebel spawn chance modifier (fires on_rebel_revolt) : lower means fewer revolts. MUST NOT BE ZERO.
 	JAIN_LIEGE_OPINION_BONUS = 15,								-- Jain Lieges Get Vassal Opinion Bonus
-	MAX_DIPLO_DISTANCE = 700,									-- Most diplomacy is disallowed if two rulers are too distant
-	MAX_DIPLO_DISTANCE_SAME_RELIGION = 100,						-- Bonus to max diplo distance for being of the same religion
-	MAX_DIPLO_DISTANCE_SAME_RELIGION_GROUP = 0, 				-- Bonus to max diplo distance for being of the same religion group
-	MAX_DIPLO_DISTANCE_SAME_CULTURE = 100, 						-- Bonus to max diplo distance for being of the same culture
+	MAX_DIPLO_DISTANCE = 800,									-- Most diplomacy is disallowed if two rulers are too distant
+	MAX_DIPLO_DISTANCE_SAME_RELIGION = 150,						-- Bonus to max diplo distance for being of the same religion
+	MAX_DIPLO_DISTANCE_SAME_RELIGION_GROUP = 100, 				-- Bonus to max diplo distance for being of the same religion group
+	MAX_DIPLO_DISTANCE_SAME_CULTURE = 150, 						-- Bonus to max diplo distance for being of the same culture
 	MAX_DIPLO_DISTANCE_SAME_CULTURE_GROUP = 100,				-- Bonus to max diplo distance for being of the same culture group
 	MAX_DISTANCE_HOLY_WAR_JOIN = 200,							-- How far away people are willing to join in defense against a holy war (capital to capital. Direct neighbors considered distance 0)
 	MAX_DISTANCE_REL_HEAD_DEFENSE_JOIN = 600,					-- How far away people are willing to join in defense of their rel head (capital to capital. Direct neighbors considered distance 0)
@@ -108,7 +108,7 @@ NDiplomacy = {
 
 	DUKE_POWERFUL_VASSAL_COUNT = 4,				-- The x most powerful vassal will expect a seat in the council
 	KING_POWERFUL_VASSAL_COUNT = 5,				-- The x most powerful vassal will expect a seat in the council
-	EMPEROR_POWERFUL_VASSAL_COUNT = 6,			-- The x most powerful vassal will expect a seat in the council
+	EMPEROR_POWERFUL_VASSAL_COUNT = 7,			-- The x most powerful vassal will expect a seat in the council
 
 	IMPRISON_CHARACTER_INTERACTION_MONEY = 0,
 	IMPRISON_CHARACTER_INTERACTION_PIETY = 10,
@@ -151,7 +151,7 @@ NDiplomacy = {
 	RETIRE_TO_MONASTERY_INTERACTION_ENABLED = 0,						-- Should this action be used at all?
 
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_MONEY = 0,
-	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PIETY = 200,
+	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PIETY = 150,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PRESTIGE = 0,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_THRESHOLD_FOR_NO = 25,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_THRESHOLD_FOR_YES = 25,
@@ -892,7 +892,7 @@ NCharacter = {
 	NOT_SPOUSE_FERTILITY_MULT = 0.50,				-- Applied to fertility when two lovers are not married
 	MARRIED_LOVERS_FERTILITY_MULT = 1.5,			-- Applied to fertility when lovers are married
 	INFANT_DEATH_CHANCE = 0.0,						-- Chance of stillbirth / death at birth
-	EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2400,		-- Before this date, early versions of Units and Portraits will be used if available
+	EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2550,		-- Before this date, early versions of Units and Portraits will be used if available
 	LATE_PORTRAIT_AND_UNIT_AFTER_YEAR = 2555,		-- After this date, late versions of Units and Portraits will be used if available
 	TRIBAL_EMPTY_HOLDING_LEVY_MULTIPLIER = 0.5,
 	TRIBAL_EMPTY_HOLDING_GARRISON_MULTIPLIER = 0.5,
@@ -1036,13 +1036,13 @@ NTitle = {
 	TITULAR_TITLE_CREATION_COST_MULT = 2,		-- Titular titles are more expensive to create
 	BECOME_KING_TITLE_GOLD_CREATION_COST_MULT = 0.5,	-- The de-jure kingdom of your capital is cheaper to create with the become king ambition
 	BECOME_KING_TITLE_PIETY_CREATION_COST_MULT = 0.5,	-- The de-jure kingdom of your capital is cheaper to create with the become king ambition
-	ENFORCE_ONE_OF_EACH_HOLDING = 1,			-- Require players to build at least one City, Temple and Castle in each province
+	ENFORCE_ONE_OF_EACH_HOLDING = 0,			-- Require players to build at least one City, Temple and Castle in each province
 	MAX_REPUBLIC_COUNTIES_IN_REALM = 0.15,		-- 15% of a feudal realm is allowed to be under vassal republics (affects title grants)
 	MAX_THEOCRACY_COUNTIES_IN_REALM = 0.15,		-- 15% of a feudal realm is allowed to be under vassal theocracies/bishoprics (affects title grants)
 	THEOCRACY_COUNTIES_CAN_BORDER = 1,			-- Can feudal lords create neighboring theocracy counties?
 	REPUBLIC_COUNTIES_CAN_BORDER = 1,				-- Can feudal lords create neighboring republic counties?
 	MIN_REVOKE_MONTHS_AFTER_GRANT = 12,			-- Months that must pass before you can revoke the title off someone you granted it to
-	MILITARY_GOV_CREATE_KINGDOMS = 0,		-- If Mercenaries and holy orders are allowed to create kingdom titles
+	MILITARY_GOV_CREATE_KINGDOMS = 1,		-- If Mercenaries and holy orders are allowed to create kingdom titles
 
 -- Title creation and usurpation requirements
 	DEJURE_COUNTY_LIMIT_TO_CREATE = 0.51,			-- Fraction of de jure counties that you must control to create a non-imperial title
@@ -1107,7 +1107,7 @@ NEconomy = {
 	PATRICIAN_PRESTIGE_RESPECT_FACTOR = 2,			-- The effect of Prestige on the Respect value for Doge elections (prestige * factor)
 	PATRICIAN_AGE_RESPECT_FACTOR = 1,				-- The effect of Age on the Respect value for Doge elections (age * age * factor)
 	DOGE_SUCC_RANDOM_FACTOR = 500,					-- The random Respect factor on actual Doge succession
-	MERCHANT_REPUBLIC_SALARY_MULT = 3,				-- Councillor salaries in Merchant Republics are multiplied by this
+	MERCHANT_REPUBLIC_SALARY_MULT = 4,				-- Councillor salaries in Merchant Republics are multiplied by this
 	TRADE_POST_RAISE_LOOT_MULT = 5.0,
 	PATRICIAN_FAMILY_SHARES_HEAD = 50,				-- Monthly Patrician Income, number of shares for the Patrician himself
 	PATRICIAN_FAMILY_SHARES_REST = 5,				-- Monthly Patrician Income, number of shares for adult male dynasty members in the Patrician's court
@@ -1213,12 +1213,12 @@ NMilitary = {
 	HOLDING_LEVY_SIZE_OWNER_MARTIAL_BASE = 0.50,
 	HOLDING_LEVY_SIZE_OWNER_MARTIAL_MULT = 0.05,	-- Levy size modifier: Each point of the holding owner's Martial skill is multiplied with this and added to HOLDING_LEVY_SIZE_OWNER_MARTIAL_BASE
 	MERCENARY_MAINTENANCE_FACTOR = 3.0,				-- Maintenance factor for NORMAL mercenary units
-	MERCENARY_VASSAL_MAINTENANCE_FACTOR = 0.5,		-- Maintenance factor for VASSALIZED mercenary units
+	MERCENARY_VASSAL_MAINTENANCE_FACTOR = 0.75,		-- Maintenance factor for VASSALIZED mercenary units
 	MERCENARY_HIRE_COST_FACTOR = 0.1,				-- Hire cost factor for mercenary units
 	HOLY_ORDER_HIRE_COST_FACTOR = 0.25,				-- Conversion of nominal gold cost to piety cost when hiring Holy Orders
 	HOLY_ORDER_DYNASTY_HIRE_COST_FACTOR = 0.25,		-- Reduction of cost if the Holy Order is controlled by a dynasty member
-	VASSAL_MERC_HIRE_COST_FACTOR = 0.125,			-- Fraction of nominal hire cost when hiring vassal mercenaries OR Holy Orders
-	MERCENARY_HIRE_DISTANCE_THRESHOLD = 600,		-- Mercs will not be available if the province of origin is more distant from your capital
+	VASSAL_MERC_HIRE_COST_FACTOR = 0.15,			-- Fraction of nominal hire cost when hiring vassal mercenaries OR Holy Orders
+	MERCENARY_HIRE_DISTANCE_THRESHOLD = 700,		-- Mercs will not be available if the province of origin is more distant from your capital
 	OPINION_WHEN_MARSHAL_INSTEAD_OF_SELF = 25,		-- Below this opinion value a vassal tends to use his marshal instead of himself when someone asks to raise his troops
 	OPINION_WHEN_NO_LEADER = 0,						-- Below this opinion a vassal will not supply a leader for subunits at all
 	BATTLE_WARSCORE_WORTH = 75,						-- Warscore from battles are multiplied with this value
@@ -1279,7 +1279,7 @@ NMilitary = {
 	ATTRITION_LEVEL_FACTOR_100_OVER = 2.0,			-- A general "attrition per month" multiplier when 100% over the supply limit
 	COASTAL_SUPPLY_BONUS = 0.5,						-- Supply bonus in coastal provinces
 	PAGAN_HOME_SUPPLY_MOD = 0.12,					-- Non Pagans suffer extreme attrition in some Pagan homelands (based on province religion)
-	NAVAL_ATTRITION = 0.0,							-- Attrition taken monthly by units loaded on ships
+	NAVAL_ATTRITION = 0.02,							-- Attrition taken monthly by units loaded on ships
 	ARMY_MOVEMENT_SPEED = 3,						-- Base movement speed of land units
 	NAVY_MOVEMENT_SPEED = 15,						-- Base movement speed of naval units
 	ARMY_LOAD_MOVE_COST = 20.0,						-- Movement cost for moving armies onto fleets at sea.
@@ -1428,7 +1428,7 @@ NMilitary = {
 
 	MAX_RIVER_MOVEMENT_FORT_LEVEL = 10.0,
 	BOTTLENECK_SIZE_MODIFIER = 1.0,
-	BOTTLENECK_DEFENDER_MARTIAL_MODIFIER = 1.0,
+	BOTTLENECK_DEFENDER_MARTIAL_MODIFIER = 1.5,
 	BOTTLENECK_ATTACKER_MARTIAL_MODIFIER = 1.0,
 	BOTTLENECK_CHANCE_LEADER_CAP = 95,
 	BOTTLENECK_CHANCE_MAX = 100,
@@ -1509,7 +1509,7 @@ NMilitary = {
 },
 
 NTechnology = {
-	DONT_EXECUTE_TECH_BEFORE = 2325,				-- Set this to your earliest starting year
+	DONT_EXECUTE_TECH_BEFORE = 2555,				-- Set this to your earliest starting year
 	POINTS_PER_ATTRIBUTE = 0.04,
 
 	BASE_NEIGHBOUR_SPREAD_BONUS = 0.03, 		-- bonus for each neighbour with the tech
@@ -1519,7 +1519,7 @@ NTechnology = {
 	TRADEPOST_SPREAD_BONUS = 0.002, 			-- Spread from trade posts
 	SPYACTION_SPREAD_BONUS = 0.006,				-- Spread from the target of the study technology spymaster action
 
-	IDEAL_YEAR_LEVEL_0 = 2200, 					-- the chance to get a progress to this level will increase after this date and decrease before it
+	IDEAL_YEAR_LEVEL_0 = 2400, 					-- the chance to get a progress to this level will increase after this date and decrease before it
 	IDEAL_YEAR_LEVEL_8 = 3075,
 	IDEAL_YEAR_AHEAD_PENALTY_INVEST = 0.6,		-- Percent increase in cost pre level ahead of ideal date
 
@@ -1578,13 +1578,13 @@ NGraphics = {
 
 NEngine = {
 	EVENT_PROCESS_OFFSET = 55, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
-	COURTIER_EVENT_PROCESS_OFFSET = 110, 	 -- Events are checked every X day for courtiers. Max value of 255
+	COURTIER_EVENT_PROCESS_OFFSET = 125, 	 -- Events are checked every X day for courtiers. Max value of 255
 	COURTIERS_MTTTH_EVENTS = 1,  -- Toggles if courtiers are allowed to run MTTH events or not
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066, -- The missing scripted successor error will not be shown before this date
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_MONTH = 8,
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_DAY = 16,
 	COURT_PRUNE_SIZE = 13, 				-- Courts larger than this will be checked for pruning each month
-	PRUNE_MINIMAL_AGE = 37,				-- Minimum age for a courtier to be prunable if considered irrelevant
+	PRUNE_MINIMAL_AGE = 35,				-- Minimum age for a courtier to be prunable if considered irrelevant
 	HEALTH_IMMUNITY_TO_PRUNING = 7,		-- If a character has that much health, they won't be pruned
 },
 

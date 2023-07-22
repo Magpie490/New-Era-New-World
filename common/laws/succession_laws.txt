@@ -99,6 +99,7 @@ succession_laws = {
 				}
 				NOR = { 
 					religion = jacobinist
+					religion = sarvodaya
 					religion_group = muslim	
 					religion = titoist	
 					religion = stalinist
@@ -215,6 +216,7 @@ succession_laws = {
 				NOR = { 
 						religion = jacobinist
 						religion_group = muslim 
+					religion = sarvodaya
 					religion = titoist	
 					religion = stalinist
 					religion = trotskyite	
@@ -326,6 +328,8 @@ succession_laws = {
 					}
 					religion = finnish_pagan
 					religion = finnish_pagan_reformed
+					religion = donyipolo
+					religion = kiratist
 					religion = baltic_pagan
 					religion = baltic_pagan_reformed
 					religion = maoist
@@ -337,6 +341,7 @@ succession_laws = {
 					religion = taoist
 					religion = white_lotus
 					has_religion_feature = religion_beatification
+					religion = sanamahist
 					has_religion_feature = religion_feature_baltic
 					has_religion_feature = religion_feature_folklorist
 					has_religion_feature = religion_feature_folklorist_2
@@ -358,6 +363,7 @@ succession_laws = {
 				NOR = { 
 					religion_group = muslim 
 					religion = jacobinist
+					religion = sarvodaya
 					religion = titoist	
 					religion = stalinist
 					religion = trotskyite	
@@ -412,6 +418,8 @@ succession_laws = {
 						}
 						religion = finnish_pagan
 						religion = finnish_pagan_reformed
+						religion = kiratist
+						religion = donyipolo
 						religion = baltic_pagan
 						religion = baltic_pagan_reformed
 						religion = maoist
@@ -423,6 +431,7 @@ succession_laws = {
 						religion = taoist
 						religion = white_lotus
 						has_religion_feature = religion_beatification
+						religion = sanamahist
 						has_religion_feature = religion_feature_baltic
 						has_religion_feature = religion_feature_folklorist
 						has_religion_feature = religion_feature_folklorist_2
@@ -490,6 +499,7 @@ succession_laws = {
                     NOR = {
 						religion_group = muslim
 						religion = jacobinist
+					religion = sarvodaya
 					religion = titoist	
 					religion = stalinist
 					religion = trotskyite	
@@ -655,6 +665,7 @@ succession_laws = {
 						religion = jacobinist
 					religion = titoist	
 					religion = stalinist
+					religion = sarvodaya
 					religion = trotskyite	
 					religion = red_cult
 						religion_group = muslim 
@@ -956,6 +967,7 @@ succession_laws = {
 						religion_group = muslim
 						religion = jacobinist
 					religion = titoist	
+					religion = sarvodaya
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
@@ -1057,10 +1069,30 @@ succession_laws = {
 					should_have_byz_elective_trigger = yes
 					government = blorg_government
 					government = hellenic_government
+					AND = {
+						higher_real_tier_than = KING
+						NOR = {
+							government = eastern_feudal
+							government = chinese_imperial_government
+							government = bhutanese_decayed_government
+							government = bhutanese_restored_government
+							government = neoziamet_government
+							government = oligarchic_republic
+							government = merchant_republic_government
+						}
+						has_law = ze_administration_laws_2
+						OR = {
+							has_law = crown_authority_3
+							has_law = crown_authority_4
+							has_law = centralization_3
+							has_law = centralization_4
+						}
+					}
 				}
 				NOR = { religion_group = muslim
 						religion = jacobinist
 					religion = titoist	
+					religion = sarvodaya
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult 
@@ -1130,6 +1162,7 @@ succession_laws = {
 				NOR = { religion_group = muslim
 						religion = jacobinist
 					religion = titoist	
+					religion = sarvodaya
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
@@ -1138,7 +1171,10 @@ succession_laws = {
 				is_merchant_republic = no					
 				is_patrician = no
 				OR = {
-					culture_group = celtic
+					OR = {
+					culture_group = goidelic
+					culture_group = brythonic
+					}
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
 					}
@@ -1168,7 +1204,10 @@ succession_laws = {
 			OR = {
 				holder_scope = {
 					OR = {
-						culture_group = celtic
+						OR = {
+						culture_group = goidelic
+						culture_group = brythonic
+						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_tanistry
 						}
@@ -1280,6 +1319,7 @@ succession_laws = {
 				NOR = { religion_group = muslim
 						religion = jacobinist
 					religion = titoist	
+					religion = sarvodaya
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
@@ -1424,6 +1464,7 @@ succession_laws = {
 						religion_group = muslim
 						NOR = {
 							religion = wahhabi
+							religion = deobandi
 							religion = mesopotamian
 						}
 						OR = {
@@ -1592,6 +1633,7 @@ succession_laws = {
 					AND = {
 						OR = {
 							religion = wahhabi
+							religion = deobandi
 							religion = mesopotamian
 						}
 						is_theocracy = no
@@ -1657,6 +1699,7 @@ succession_laws = {
 						religion_group = muslim
 						NOR = {
 							religion = wahhabi
+							religion = deobandi
 							religion = mesopotamian
 						}
 						is_theocracy = no
@@ -1800,6 +1843,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = feudal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
+			NOT = { holder_scope = { government = japanese_feudal } }
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
@@ -1885,7 +1929,10 @@ succession_laws = {
 					has_investiture_trigger = no
 					NAND = {
 						higher_tier_than = BARON
+						OR = {
 						religion = calvinist
+						religion = neohuguenot
+						}
 					}
 				}
 			}
@@ -2025,6 +2072,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = feudal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
+			NOT = { holder_scope = { government = japanese_feudal } }
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -2282,7 +2330,11 @@ gender_laws = {
 				factor = 0
 				holder_scope = {
 					OR = {
-						religion = katerinist
+						OR = {
+							religion = katerinist
+							religion = kalikula
+							religion = orleanist
+						}
 						AND = {
 							religion = bahai
 							controls_religion = no
@@ -2335,7 +2387,11 @@ gender_laws = {
 						}
 						has_religion_feature = religion_equal
 						AND = {
-							religion = katerinist
+							OR = {
+								religion = katerinist
+								religion = kalikula
+								religion = orleanist
+							}
 							controls_religion = no
 						}
 						religion = bahai
@@ -2400,7 +2456,11 @@ gender_laws = {
 					OR = {
 						has_religion_feature = religion_equal
 						AND = {
-							religion = katerinist
+							OR = {
+								religion = katerinist
+								religion = kalikula
+								religion = orleanist
+							}
 							controls_religion = no
 						}
 						religion = bahai
@@ -2468,6 +2528,8 @@ gender_laws = {
 				OR = {
 					has_religion_feature = religion_matriarchal
 					religion = katerinist
+					religion = kalikula
+					religion = orleanist
 				}
 			}
 		}
@@ -2486,7 +2548,11 @@ gender_laws = {
 				factor = 100
 				holder_scope = {
 					AND = {
-						religion = katerinist
+						OR = {
+							religion = katerinist
+							religion = kalikula
+							religion = orleanist
+						}
 						controls_religion = yes
 					}
 				}
@@ -2506,7 +2572,11 @@ gender_laws = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}
 					AND = {
-						religion = katerinist
+						OR = {
+							religion = katerinist
+							religion = kalikula
+							religion = orleanist
+						}
 						controls_religion = no
 					}
 				}
@@ -2534,7 +2604,11 @@ gender_laws = {
 								has_bloodline_flag = bloodline_enatic_cognatic 
 							}
 							AND = {
-								religion = katerinist
+								OR = {
+									religion = katerinist
+									religion = kalikula
+									religion = orleanist
+								}
 								controls_religion = no
 							}
 						}
@@ -2551,7 +2625,11 @@ gender_laws = {
 							has_bloodline_flag = bloodline_enatic_cognatic 
 						}
 						AND = {
-							religion = katerinist
+							OR = {
+								religion = katerinist
+								religion = kalikula
+								religion = orleanist
+							}
 							controls_religion = no
 						}
 					}

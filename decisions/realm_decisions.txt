@@ -142,7 +142,12 @@ decisions = {
 		}
 
 		allow = {
-			is_heretic = no
+			OR = {
+				is_heretic = no
+				rightful_religious_head_scope = {
+					is_heretic = yes
+				}
+			}	
 
 			custom_tooltip = {
 				text = tooltip_issued_decla_repentance_recently
@@ -290,6 +295,174 @@ decisions = {
 		}
 	}
 
+	introduce_additional_oversight_martial  = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = {
+				has_character_modifier = government_corruption_4
+				has_character_modifier = government_corruption_5
+				has_character_modifier = government_corruption_6
+				has_character_modifier = government_corruption_7
+				has_character_modifier = government_corruption_8
+				has_character_modifier = government_corruption_9
+				has_character_modifier = government_corruption_10
+			}
+			NOT = {
+				has_character_modifier = additional_martial_oversight
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			prisoner = no
+			realm_martial = 35
+			NOT = { is_inaccessible_trigger = yes }
+			age = 16
+			scaled_wealth = { value = 0.5 }
+		}
+		effect = {
+			scaled_wealth = { value = -0.5 }
+
+			add_character_modifier = {
+				name = additional_martial_oversight
+				years = 5
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						wealth = 200
+						scaled_wealth = 2.0
+					}
+				}
+			}
+		}
+	}
+	introduce_additional_oversight_stewardship  = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = {
+				has_character_modifier = government_corruption_4
+				has_character_modifier = government_corruption_5
+				has_character_modifier = government_corruption_6
+				has_character_modifier = government_corruption_7
+				has_character_modifier = government_corruption_8
+				has_character_modifier = government_corruption_9
+				has_character_modifier = government_corruption_10
+			}
+			NOT = {
+				has_character_modifier = additional_stewardship_oversight
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			prisoner = no
+			realm_stewardship = 35
+			NOT = { is_inaccessible_trigger = yes }
+			age = 16
+			scaled_wealth = { value = 0.5 }
+		}
+		effect = {
+			scaled_wealth = { value = -0.5 }
+
+			add_character_modifier = {
+				name = additional_stewardship_oversight
+				years = 5
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						wealth = 200
+						scaled_wealth = 2.0
+					}
+				}
+			}
+		}
+	}
+	introduce_additional_oversight_intrigue  = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = {
+				has_character_modifier = government_corruption_4
+				has_character_modifier = government_corruption_5
+				has_character_modifier = government_corruption_6
+				has_character_modifier = government_corruption_7
+				has_character_modifier = government_corruption_8
+				has_character_modifier = government_corruption_9
+				has_character_modifier = government_corruption_10
+			}
+			NOT = {
+				has_character_modifier = additional_intrigue_oversight
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			prisoner = no
+			realm_intrigue = 35
+			NOT = { is_inaccessible_trigger = yes }
+			age = 16
+			scaled_wealth = { value = 0.5 }
+		}
+		effect = {
+			scaled_wealth = { value = -0.5 }
+
+			add_character_modifier = {
+				name = additional_intrigue_oversight
+				years = 5
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						wealth = 200
+						scaled_wealth = 2.0
+					}
+				}
+			}
+		}
+	}
 	hold_a_furusiyya  = {
 		only_independent = yes
 		is_high_prio = yes
@@ -1231,7 +1404,7 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			is_tribal = yes
+			government = tribal_government
 			independent = yes
 		}
 		allow = {
@@ -1400,7 +1573,7 @@ decisions = {
 		
 		potential = {
 			is_ruler = yes
-			is_tribal = yes
+			government = tribal_government
 			independent = no
 		}
 		allow = {
@@ -1641,7 +1814,7 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			is_tribal = yes
+			government = tribal_government
 			independent = yes
 			has_dlc = "The Republic"
 		}
@@ -2013,6 +2186,143 @@ decisions = {
 			wealth = -100
 			hidden_tooltip = {
 				d_shinsengumi = {
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_the_five_great_armies = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR = {
+				has_landed_title = e_ming
+				has_landed_title = e_qing
+				has_landed_title = e_katoliko_china
+				has_landed_title = e_yuan
+				has_landed_title = e_maoist
+				has_landed_title = e_legalist
+				has_landed_title = e_taoist
+				has_landed_title = e_sui
+				has_landed_title = e_white_lotus
+				has_landed_title = e_tridemism
+				has_landed_title = e_wuxia
+				has_landed_title = e_xianxia
+				has_landed_title = e_heavenly
+				has_landed_title = e_manchuria
+				has_landed_title = e_taiwan
+				has_landed_title = e_han
+				has_landed_title = e_qin
+				has_landed_title = e_hui
+				has_landed_title = e_jin
+				has_landed_title = e_neonchina
+				has_landed_title = e_tibet
+				has_landed_title = e_yangtze
+				has_landed_title = e_zhujiang
+				has_landed_title = e_minyue
+				has_landed_title = e_druze
+			}
+			has_character_flag = cancreatethefivearmies_flag
+			NOT = { has_global_flag = five_great_armies_founded }
+		}
+		allow = {
+			prestige = 3000
+			wealth = 7500
+		}
+		effect = {
+			set_global_flag = five_great_armies_founded
+			prestige = -3000
+			wealth = -7500
+			activate_title = { title = k_northern_army status = yes }
+			activate_title = { title = k_western_army status = yes }
+			activate_title = { title = k_central_army status = yes }
+			activate_title = { title = k_eastern_army status = yes }
+			activate_title = { title = k_southern_army status = yes }
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					female = no
+					age = 31
+					trait = skilled_tactician
+				}
+				new_character = {
+					k_northern_army = {
+						grant_title = PREV
+						culture = PREV
+						religion = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					female = no
+					age = 32
+					trait = skilled_tactician
+				}
+				new_character = {
+					k_western_army = {
+						grant_title = PREV
+						culture = PREV
+						religion = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					female = no
+					age = 35
+					trait = skilled_tactician
+				}
+				new_character = {
+					k_central_army = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					female = no
+					age = 32
+					trait = skilled_tactician
+				}
+				new_character = {
+					k_eastern_army = {
+						grant_title = PREV
+						culture = PREV
+						religion = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					female = no
+					age = 36
+					trait = skilled_tactician
+				}
+				new_character = {
+					k_southern_army = {
+						grant_title = PREV
+						culture = PREV
+						religion = PREV
+					}
 					set_defacto_liege = ROOT
 				}
 			}

@@ -87,8 +87,10 @@ muslim = {
 
 		#intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -96,6 +98,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -111,7 +115,7 @@ muslim = {
 	}
 
 	wahhabi = {
-		graphical_culture = muslimgfx
+		graphical_culture = xtremuslimgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 3
@@ -157,8 +161,10 @@ muslim = {
 		
 		intermarry = sunni
 		#intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -166,6 +172,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -179,13 +187,76 @@ muslim = {
 		intermarry = syafi
 		
 	}
+	alevi = {
+		graphical_culture = muslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 3
+		heresy_icon = 8
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = DEDE_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+
+		color = { 0.1 0.6 0.3 }
+		parent = sunni
+		
+		aggression = 1.1
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		can_have_antipopes = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		matrilineal_marriages = no
+		
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+
+		#intermarry = sunni
+		intermarry = wahhabi
+		intermarry = deobandi
+		intermarry = malikite
+		intermarry = sufi
+		intermarry = barelvi
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = druze
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = mesopotamian
+		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = muwahidunna
+		intermarry = jadidist
+		intermarry = sikh
+		intermarry = brethren
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = ahlehaqq
+		intermarry = zaydi
+		intermarry = ovlatii
+		intermarry = koranist
+	}
 	
 	malikite = {
 		graphical_culture = muslimgfx
 
 		icon = 92
 		heresy_icon = 112
-		parent = sunni
 		color = { 0.8 0.3 0.2 }
 		
 		crusade_name = JIHAD
@@ -217,8 +288,10 @@ muslim = {
 		
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		#intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -226,6 +299,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -270,18 +345,22 @@ muslim = {
 		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
 		max_wives = 4
 		
-		matrilineal_marriages = no
+		matrilineal_marriages = yes
+		feminist = yes
 		raised_vassal_opinion_loss = no
 		uses_decadence = no
 		uses_jizya_tax = no
+		pacifist = yes # Makes the AI less likely to start wars, plots and factions
 		religious_clothing_priest = 23
 		religious_clothing_head = 23
 						
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		#intermarry = koranist
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -289,6 +368,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -303,7 +384,7 @@ muslim = {
 		intermarry = syafi
 	}
 	jadidist = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 		secondary_event_pictures = sunni
 		icon = 97
 		
@@ -343,8 +424,10 @@ muslim = {
 		
 		intermarry = sunni
 		intermarry = shiite
+		intermarry = alevi
 		intermarry = druze
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ironist
 		intermarry = brethren
 		intermarry = yersenism
@@ -356,7 +439,7 @@ muslim = {
 		intermarry = syafi
 	}
 	ovlatii = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 
 		icon = 129
 		heresy_icon = 130
@@ -393,8 +476,10 @@ muslim = {
 
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -402,6 +487,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -416,7 +503,7 @@ muslim = {
 	}
 	
 	sufi = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 
 		icon = 93
 		heresy_icon = 93
@@ -454,8 +541,10 @@ muslim = {
 
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		#intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -463,6 +552,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -477,8 +568,145 @@ muslim = {
 		intermarry = pusaka
 		intermarry = syafi
 	}	
+	
+	barelvi = {
+		graphical_culture = othermuslimgfx
+
+		icon = 57
+		heresy_icon = 58
+		
+		color = { 148 255 0 }
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		aggression = 0.9
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		max_wives = 4
+		matrilineal_marriages = no
+		
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		autocephaly = yes
+		can_excommunicate = yes
+		uses_jizya_tax = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+
+		intermarry = sunni
+		intermarry = wahhabi
+		intermarry = deobandi
+		intermarry = malikite
+		intermarry = sufi
+		#intermarry = barelvi
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = druze
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = mesopotamian
+		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
+		intermarry = muwahidunna
+		intermarry = jadidist
+		intermarry = sikh
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = ahlehaqq
+		intermarry = zaydi
+		intermarry = ovlatii
+		intermarry = koranist
+	}	
+	deobandi = {
+		graphical_culture = xtremuslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 57
+		heresy_icon = 58
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		character_modifier = {
+			religion_flex = 0.25
+		}
+
+		color = { 41 51 41 }
+		parent = barelvi
+		
+		aggression = 1.5
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		can_have_antipopes = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		max_wives = 4
+		matrilineal_marriages = no
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = no
+		#peace_prestige_loss = yes
+		allow_looting = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		allow_viking_invasion = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		intermarry = sunni
+		intermarry = wahhabi
+		intermarry = deobandi
+		#intermarry = deobandi
+		intermarry = malikite
+		intermarry = sufi
+		intermarry = barelvi
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = druze
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = mesopotamian
+		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
+		intermarry = muwahidunna
+		intermarry = jadidist
+		intermarry = sikh
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = ahlehaqq
+		intermarry = zaydi
+		intermarry = ovlatii
+		intermarry = koranist
+	}
 	ibadi = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 
 		icon = 51
 		heresy_icon = 52
@@ -513,8 +741,10 @@ muslim = {
 		
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		#intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
@@ -522,6 +752,8 @@ muslim = {
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = alevi
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -575,15 +807,19 @@ muslim = {
 		
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		#intermarry = shiite
+		intermarry = alevi
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -611,30 +847,43 @@ muslim = {
 		color = { 0.35 0.9 0 }
 		parent = shiite
 		
+		character_modifier = {
+			intrigue = 1			
+		}
+		
+		aggression = 0.8
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		psc_marriage = no
-		max_wives = 4
-		matrilineal_marriages = no
+		max_wives = 1
+		matrilineal_marriages = yes
 		landed_kin_prestige_bonus = yes
 		attacking_same_religion_piety_loss = yes
 		uses_decadence = yes
 		can_excommunicate = yes
 		can_grant_claim = yes
+		peace_piety_gain = 1.0
+		defensive_attrition = yes
+		pacifist = yes
+		short_reign_opinion_year_mult = 0.5
 		religious_clothing_priest = 23
 		religious_clothing_head = 23
 		
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -685,15 +934,19 @@ muslim = {
 		}
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh
@@ -708,7 +961,7 @@ muslim = {
 		intermarry = syafi
 	}
 	ahmadiyya = {
-		graphical_culture = muslimgfx
+		graphical_culture = othermuslimgfx
 		secondary_event_pictures = sunni
 		
 		pacifist = yes # Makes the AI less likely to start wars, plots and factions
@@ -729,7 +982,6 @@ muslim = {
 		}
 		
 		character_modifier = {
-			learning = 1
 			diplomacy = 1
 		}
 		
@@ -747,19 +999,24 @@ muslim = {
 		
 		intermarry = buddhist_group
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = neovedantic
 		intermarry = sikh
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
 		intermarry = bahai
 		#intermarry = ahmadiyya
+		intermarry = alevi
 		intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = brethren
@@ -807,7 +1064,7 @@ muslim = {
 		attacking_same_religion_piety_loss = no
 		#peace_prestige_loss = yes
 		#allow_looting = yes
-		#uses_decadence = yes
+		uses_decadence = yes
 		uses_jizya_tax = yes 
 		#allow_viking_invasion = yes
 		features = { religion_haruspicy }
@@ -856,8 +1113,9 @@ muslim = {
 		}
 		
 		character_modifier = {
-			learning = 2
-			osvicenism_opinion = 10
+			learning = 1
+			osvicenism_opinion = 5
+			buddhist_group_opinion = 5
 		}
 
 		color = { 0 0.5 0.1 }
@@ -866,11 +1124,10 @@ muslim = {
 		aggression = 0.8
 		allow_rivermovement = yes
 		max_wives = 4
-		has_heir_designation = yes
 		can_excommunicate = yes
-		can_grant_divorce = yes
 		can_grant_claim = yes
 		can_retire_to_monastery = yes
+		uses_decadence = yes
 		can_call_crusade = yes
 		uses_jizya_tax = yes 
 		priests_can_inherit = no
@@ -906,7 +1163,7 @@ muslim = {
 		#intermarry = syafi
 	}
 	mesopotamian = {
-		graphical_culture = muslimgfx
+		graphical_culture = xtremuslimgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 76
@@ -925,7 +1182,7 @@ muslim = {
 		}
 		
 		evil_god_names = {
-			IBLIS SHAYTAN GOD_THE_QUEEN HASHEM
+			IBLIS SHAYTAN GOD_THE_QUEEN
 		}
 		
 		aggression = 1.4
@@ -952,15 +1209,19 @@ muslim = {
 		intermarry = zoroastrian_group
 		intermarry = sunni
 		intermarry = wahhabi
+		intermarry = deobandi
 		intermarry = malikite
 		intermarry = sufi
+		intermarry = barelvi
 		intermarry = ibadi
 		intermarry = shiite
 		intermarry = druze
 		intermarry = bahai
 		intermarry = ahmadiyya
+		intermarry = alevi
 		#intermarry = mesopotamian
 		intermarry = islamity
+		intermarry = dahatatta
 		intermarry = muwahidunna
 		intermarry = jadidist
 		intermarry = sikh

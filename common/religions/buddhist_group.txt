@@ -41,7 +41,7 @@ buddhist_group = {
 		}
 		
 		character_modifier = {
-			martial = 2
+			khanist_opinion = 5
 		}
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
@@ -66,12 +66,15 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada
@@ -142,12 +145,15 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		#intermarry = budaism
 		intermarry = theravada
@@ -183,9 +189,6 @@ buddhist_group = {
 			MARA
 		}
 		
-		character_modifier = {
-			learning = 2
-		}
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
 		
@@ -210,12 +213,15 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		#intermarry = theravada
@@ -252,6 +258,24 @@ buddhist_group = {
 		character_modifier = {
 			stewardship = 2
 		}
+		
+		unit_modifier = {
+			garrison_size = 0.4
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.1
+			heavy_infantry_defensive = 0.1
+			pikemen_defensive = 0.1
+			light_cavalry_defensive = 0.1
+			knights_defensive = 0.1
+			archers_defensive = 0.1
+			horse_archers_defensive = 0.1
+			camel_cavalry_defensive = 0.1
+			war_elephants_defensive = 0.1
+			
+			garrison_size = 0.4
+		}
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
 		
@@ -261,6 +285,7 @@ buddhist_group = {
 		can_grant_divorce = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		defensive_attrition = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
 		max_consorts = 3
@@ -276,12 +301,15 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada
@@ -316,8 +344,6 @@ buddhist_group = {
 		}
 
 		character_modifier = {
-			learning = 1
-			martial = 1
 			muslim_opinion = 5	#Barely tolerate them
 			same_religion_opinion = 20 #National Unity 
 			buddhist_group_opinion = -15 #Excommunicated by every other Sangha
@@ -336,7 +362,6 @@ buddhist_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
 		landed_kin_prestige_bonus = yes
-		hard_to_convert = yes
 		max_wives = 3
 		uses_jizya_tax = yes
 		attacking_same_religion_piety_loss = yes 
@@ -381,8 +406,6 @@ buddhist_group = {
 		}
 
 		character_modifier = {
-			stewardship = 1
-			martial = 1
 			maoist_opinion = 10
 		}
 		crusade_name = GREAT_HOLY_WAR
@@ -471,12 +494,16 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada
@@ -513,7 +540,8 @@ buddhist_group = {
 		}
 		
 		character_modifier = {
-			learning = 2
+			learning = 1
+			maoist_opinion = 5
 		}
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
@@ -540,12 +568,16 @@ buddhist_group = {
 		
 		intermarry = xinjiao
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada
@@ -560,9 +592,9 @@ buddhist_group = {
 		intermarry = juche
 		intermarry = white_lotus
 	}
-	amidism = { #Pure Land Buddhism
+	amidism = { #Japanese Pure Land Buddhism
 		has_coa_on_barony_only = yes
-		graphical_culture = chinesegfx
+		graphical_culture = japanesegfx
 		secondary_event_pictures = sunni
 
 		icon = 229
@@ -583,7 +615,7 @@ buddhist_group = {
 		}
 		
 		character_modifier = {
-			martial = 2
+			japan_group_opinion = 5
 		}
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
@@ -608,12 +640,16 @@ buddhist_group = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = maoist
 		intermarry = zoroastrian_group
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada
@@ -650,9 +686,7 @@ buddhist_group = {
 			MARA
 		}
 		
-		character_modifier = {
-			learning = 2
-		}
+		
 		crusade_name = GREAT_HOLY_WAR
 		can_call_crusade = no
 		
@@ -677,10 +711,14 @@ buddhist_group = {
 		
 		intermarry = caodai
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = neovedantic
 		intermarry = parabrahmanist
+		intermarry = shaivasiddhanta
 		intermarry = khanist
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = budaism
 		intermarry = theravada

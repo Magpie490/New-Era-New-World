@@ -1379,6 +1379,7 @@ targeted_decisions = {
 			has_artifact = durandal_blade
 		}
 		effect = {
+			set_global_flag = durandal_reforged
 			add_artifact = sword_durandal
 			destroy_artifact = durandal_sheath
 			destroy_artifact = durandal_pommel
@@ -1432,13 +1433,16 @@ targeted_decisions = {
 			is_inaccessible_or_incapable_trigger = no
 			has_regent = no
 			age = 16
-			piety = 200
+			piety = 150
 			OR = {
 				religion = bezpopotvsy
 				religion = prussianist
 				has_religion_feature = religion_self_immolate
 				religion = red_cult
 			}
+			
+		}
+		allow = {
 			OR = {
 				trait = slothful
 				trait = proud
@@ -2045,8 +2049,8 @@ targeted_decisions = {
 						AND = {
 							ai = no
 							government = mandala_government
-							TECH_MAJESTY = 2
-							TECH_RECRUITMENT = 2
+							TECH_MAJESTY = 3
+							TECH_RECRUITMENT = 3
 							prestige = 750
 							PREV = {
 								OR = {
@@ -2077,8 +2081,8 @@ targeted_decisions = {
 									trait = brilliant_strategist
 								}
 							}
-							TECH_MAJESTY = 3
-							TECH_RECRUITMENT = 3
+							TECH_MAJESTY = 4
+							TECH_RECRUITMENT = 4
 							prestige = 750
 							NOT = { government = confederation_government }
 						}
@@ -2089,13 +2093,14 @@ targeted_decisions = {
 							NOT = { government = mandala_government }
 							TECH_MAJESTY = 3
 							TECH_RECRUITMENT = 3
-							prestige = 1000
+							prestige = 750
 							PREV = {
 								OR = {
 									trait = misguided_warrior
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									martial = 10
 								}
 							}
 						}
@@ -2117,11 +2122,12 @@ targeted_decisions = {
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									martial = 10
 								}
 							}
-							TECH_MAJESTY = 4
-							TECH_RECRUITMENT = 4
-							prestige = 1000
+						TECH_MAJESTY = 4
+						TECH_RECRUITMENT = 5
+						prestige = 750
 							NOT = { government = confederation_government }
 						}
 					}
@@ -2137,10 +2143,10 @@ targeted_decisions = {
 				}
 				if = {
 					trigger = { government = mandala_government }
-					prestige = -750
+					prestige = -500
 				}
 				else = {
-					prestige = -1000
+					prestige = -750
 				}
 			}
 			opinion = { modifier = opinion_released_tributary who = FROM }
@@ -2152,7 +2158,7 @@ targeted_decisions = {
 			factor = 1
 			
 			modifier = { 
-				factor = 0.01
+				factor = 0.1
 			}
 			modifier = {
 				factor = 0.25
@@ -2420,169 +2426,6 @@ title_decisions = {
 				factor = 0.05
 				FROM = {
 					trait = greedy
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					trait = ambitious
-				}
-			}
-			modifier = {
-				factor = 0.1
-				FROM = {
-					trait = content
-				}
-			}
-			modifier = {
-				factor = 2
-				has_province_modifier = prosperity_modifier_1 
-			}
-			modifier = {
-				factor = 2.25
-				has_province_modifier = prosperity_modifier_2
-			}
-			modifier = {
-				factor = 2.5
-				has_province_modifier = prosperity_modifier_3
-			}
-		}
-	}
-	requisition_citizens = {
-		only_playable = yes
-		filter = owned
-		ai_target_filter = owned
-		ai_check_interval = 12
-		from_potential = {
-			religion = red_cult
-			OR = {
-				AND = {
-					ai = yes
-					piety = 600
-					higher_tier_than = baron
-					war = no
-					OR = {
-						is_feudal = yes
-						is_republic = yes
-						is_theocracy = yes
-					}
-				}
-				AND = {
-					ai = no 
-					piety = 250
-					higher_tier_than = baron
-					war = no
-					OR = {
-						is_feudal = yes
-						is_republic = yes
-						is_theocracy = yes
-					}
-				}
-			}
-		}
-		potential = {
-			tier = COUNT
-			holder_scope = {
-				character = FROM
-			}
-		}
-		
-		allow = {
-			OR = {
-				AND = {
-					location = {
-						has_province_modifier = prosperity_modifier_1 
-					}
-					FROM = {
-						ai = yes
-						piety = 400
-					}
-				}
-				AND = {
-					FROM ={
-						ai = no 
-						piety = 400
-					}
-				}
-			}
-			location = {
-				NOT = {
-					has_province_modifier = requisition_citizens_modifier
-				}
-			}
-		}
-		
-		effect = {
-			location = {
-				add_province_modifier = {
-					name = requisition_citizens_modifier
-					duration = 270
-				}
-			}
-			FROM = {
-				piety = -400
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { 
-				factor = 0.15
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					trait = diligent
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					trait = cruel
-				}
-			}
-			modifier = {
-				factor = 0.95
-				FROM = {
-					trait = patient
-				}
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {
-					trait = greedy
-				}
-			}
-			modifier = {
-				factor = 0.25
-				FROM = {
-					trait = kind
-				}
-			}
-			modifier = {
-				factor = 0.1
-				FROM = {
-					trait = slothful
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					trait = humble
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					trait = proud
-				}
-			}
-			modifier = {
-				factor = 0.05
-				FROM = {
-					trait = charitable
 				}
 			}
 			modifier = {

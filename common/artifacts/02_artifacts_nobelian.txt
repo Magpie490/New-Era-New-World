@@ -116,26 +116,10 @@ storm_drum = {
 	stacking = no
 	slot = ceremonial_weapon
 }
-lightning_gun = {
-	monthly_character_prestige = 2
-	martial = 3
-	combat_rating = 60
-	command_modifier = {
-		morale_offence = 0.5
-	}
-	quality = 5
-	active = {
-		is_adult = yes
-	}
-	flags = { alien salvage combat_weapon gun }
-	stacking = no
-	picture = "GFX_alien_gun"
-	slot = weapon
-}
 ate_firearm = {
 	monthly_character_prestige = 1
 	martial = 3
-	combat_rating = 40
+	combat_rating = 50
 	command_modifier = {
 		morale_offence = 0.15
 	}
@@ -528,7 +512,7 @@ reconstructed_masterpiece={
 	picture = "GFX_book_red"
 }
 guillotines_for_a_humane_society={
-	learning=4
+	learning=2
 	jacobinist_opinion = 10
 	command_modifier = {
 		morale_offence = 0.15
@@ -551,7 +535,7 @@ guillotines_for_a_humane_society={
 	picture = "GFX_book_jacobinist"
 }
 the_jungle_book={
-	learning=4
+	learning=2
 	monthly_character_prestige = 0.50
 	thelemic_reformed_opinion = 10
 	scholar_opinion = 5
@@ -573,7 +557,7 @@ the_jungle_book={
 	picture = "GFX_book_red"
 }
 the_divine_comedy={
-	learning=4
+	learning=2
 	monthly_character_prestige = 0.25
 	monthly_character_piety = 0.25
 	christian_opinion = 10
@@ -595,7 +579,7 @@ the_divine_comedy={
 	picture = "GFX_book_divine_comedy"
 }
 plato={
-	learning=6
+	learning=2
 	monthly_character_prestige = 0.5
 	byzantine_opinion = 5
 	scholar_opinion = 5
@@ -624,7 +608,7 @@ plato={
 	picture = "GFX_book_red"
 }
 masterwork_artifact={
-	learning=4
+	learning=2
 	quality=4
 	flags = { nobelart mystical nonlootable nonphysical }
 	active = {
@@ -641,7 +625,7 @@ masterwork_artifact={
 	picture = "GFX_book_red"
 }
 esoteric_literature={
-	learning=4
+	learning=2
 	quality=4
 	flags = { nobelart mystical book }
 	active = {
@@ -671,7 +655,7 @@ penicillin={
 	picture = "GFX_penicillin"
 }
 nitroglycerine={
-	martial = 3
+	martial = 2
 	command_modifier = {
 		morale_offence = 0.10
 		siege = 0.10
@@ -699,7 +683,7 @@ morphine={
 	picture = "GFX_penicillin"
 }
 germ_theory={
-	learning=5
+	learning=2
 	old_lore_opinion = 10
 	health = 0.5
 	monthly_character_piety = 0.5
@@ -719,9 +703,8 @@ germ_theory={
 	picture = "GFX_book_red"
 }
 atomic_theory={
-	learning=5
+	learning=2
 	old_lore_opinion = 10
-	atomicist_opinion = 10
 	monthly_character_piety = 0.5
 	quality=5
 	flags = { nobelart mystical discovery book }
@@ -740,8 +723,8 @@ atomic_theory={
 	picture = "GFX_book_red"
 }
 electrical_theory={
-	learning=5
-	stewardship=2
+	learning=2
+	stewardship=1
 	old_lore_opinion = 10
 	monthly_character_piety = 0.5
 	global_tax_modifier = 0.1

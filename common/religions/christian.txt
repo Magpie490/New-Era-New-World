@@ -51,7 +51,6 @@ christian = {
 			orange_king_opinion = -50 #Being a member of the Orange Order IRL earns automatic excommunication
 			gnostic_opinion = -30
 		}
-		
 		aggression = 0.9
 		allow_rivermovement = yes		
 		investiture = yes
@@ -63,6 +62,7 @@ christian = {
 		can_call_crusade = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		priests_can_marry = yes
 		rel_head_defense = yes
 		
 		religious_clothing_head = 0
@@ -72,13 +72,16 @@ christian = {
 		intermarry = lutheran
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
+		intermarry = girondist
 		intermarry = vagarna
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = orleanist
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism
@@ -157,7 +160,9 @@ christian = {
 		intermarry = sevillian
 		intermarry = lutheran
 		intermarry = vagarna
+		intermarry = orleanist
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -239,8 +244,11 @@ christian = {
 		intermarry = catholic
 		intermarry = sevillian
 		intermarry = lutheran
+		intermarry = girondist
 		intermarry = vagarna
+		intermarry = orleanist
 		intermarry = calvinist
+		intermarry = genevist
 		#intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -322,6 +330,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = girondist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -402,6 +413,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -412,6 +424,7 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
+		intermarry = orleanist
 		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -483,7 +496,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		intermarry = prussianist
 		#intermarry = transatlantic
 		intermarry = baptist
@@ -536,7 +551,6 @@ christian = {
 		}
 		
 		character_modifier = {
-			learning = 2
 			buddhist_group_opinion = 10
 		}
 		crusade_name = GREAT_HOLY_WAR
@@ -562,6 +576,7 @@ christian = {
 		piety_name = KARMA
 		
 		intermarry = jain
+		intermarry = sarvodaya
 		intermarry = zoroastrian_group
 		intermarry = budaism
 		intermarry = theravada
@@ -574,8 +589,10 @@ christian = {
 		intermarry = orthodox
 		intermarry = lutheran
 		intermarry = vagarna
+		intermarry = orleanist
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -656,11 +673,14 @@ christian = {
 		intermarry = armenianapostolic
 		intermarry = orthodox
 		intermarry = sevillian
+		intermarry = sisukkuus
 		#intermarry = lutheran
 		intermarry = vagarna
 		intermarry = catholic
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
@@ -741,7 +761,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		#intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
@@ -796,7 +818,7 @@ christian = {
 		}
 		
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			SATAN THE_DEVIL
 		}
 		
 		character_modifier = {
@@ -812,8 +834,6 @@ christian = {
 		hard_to_convert = yes #Buffing em
 		has_heir_designation = yes #Buffing em		
 		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
 		intermarry = armenianapostolic		
 		intermarry = orthodox
 		intermarry = catholic
@@ -821,8 +841,10 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
+		intermarry = orleanist
 		intermarry = transatlantic
 		#intermarry = baptist
 		intermarry = jugoslavist
@@ -831,6 +853,7 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
+		intermarry = tridemism
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -877,11 +900,11 @@ christian = {
 		
 		evil_god_names = {
 			SATAN GOD_EIGHT_ARMIES THE_DEVIL
-		}
+		}	
 		
 		character_modifier = {
-			diplomacy = 1
 			martial = 1
+			trained_imperial_law_opinion = 5
 		}
 
 		piety_name = DIGNITY
@@ -899,8 +922,6 @@ christian = {
 		
 		short_reign_opinion_year_mult = 0
 		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
 		intermarry = armenianapostolic		
 		intermarry = orthodox
 		intermarry = catholic
@@ -908,7 +929,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
@@ -1010,10 +1033,12 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
+		intermarry = orleanist
 		intermarry = jugoslavist
 		intermarry = islamity
 		intermarry = nasrini
@@ -1096,11 +1121,13 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
+		intermarry = orleanist
 		intermarry = islamity
 		intermarry = nasrini
 		intermarry = koptic
@@ -1187,6 +1214,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -1208,6 +1236,7 @@ christian = {
 		intermarry = brethren
 		intermarry = poseidonian
 		intermarry = chaldean
+		intermarry = orleanist
 		intermarry = yersenism
 		intermarry = apostolic
 		intermarry = charismatic
@@ -1334,12 +1363,14 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = orleanist
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism
@@ -1536,6 +1567,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		#intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -1543,6 +1575,7 @@ christian = {
 		intermarry = jugoslavist
 		intermarry = islamity
 		intermarry = nasrini
+		intermarry = orleanist
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
@@ -1568,6 +1601,136 @@ christian = {
 		intermarry = isukirian
 		intermarry = eastern_lightning
 		intermarry = gidoggyo
+		intermarry = neohuguenot
+	}
+	neohuguenot = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		parent=calvinist
+		icon = 10
+		heresy_icon = 12		
+		color = { 0.6 0.55 0.94 }
+		
+		scripture_name = THE_BIBLE
+		use_new_crusade = yes
+		crusade_cb = new_crusade
+		priest_title = PRIEST
+		crusade_name = TYRANNICIDE
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_JURY GOD_TYRANNICIDE
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_POPE THE_SUN_KING GOD_ERU_LAUTEUR GOD_THE_QUEEN
+		}
+		character_modifier = {
+			jacobinist_opinion = 5
+			same_religion_opinion = 15
+			christian_opinion = -10
+			novelist_opinion = -30
+			novelist_reformed_opinion = -30
+			thelemic_reformed_opinion = -30
+		}
+
+		aggression = 1.75
+		allow_rivermovement = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_excommunicate = yes
+        can_grant_divorce = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		rel_head_defense = yes
+		uses_decadence = yes
+		peace_prestige_loss = yes
+		allow_looting = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		intermarry = calvinist
+		intermarry = girondist
+		intermarry = jacobinist
+	}
+	genevist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		parent=calvinist
+		icon = 10
+		heresy_icon = 12		
+		color = { 0.8 0.8 0.9 }
+		
+		scripture_name = THE_BIBLE
+		use_new_crusade = yes
+		crusade_cb = new_crusade
+		priest_title = PRIEST
+		crusade_name = CRUSADE
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_POPE
+		}
+		character_modifier = {
+			religion_flex = -0.5
+		}
+
+		aggression = 0.5
+		allow_rivermovement = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		pacifist = yes
+		uses_decadence = yes
+		short_reign_opinion_year_mult = 0 # No short reign penalty
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		intermarry = armenianapostolic
+		intermarry = orthodox
+		intermarry = catholic
+		intermarry = sevillian
+		intermarry = lutheran
+		intermarry = vagarna
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = cadaverist
+		intermarry = prussianist
+		intermarry = transatlantic
+		intermarry = baptist
+		intermarry = orleanist
+		intermarry = jugoslavist
+		intermarry = islamity
+		intermarry = nasrini
+		intermarry = koptic
+		intermarry = mattaism
+		intermarry = xinjiao
+		intermarry = easternprotestant
+		intermarry = evangelical
+		intermarry = sedevacantist
+		intermarry = highchurch
+		intermarry = fraticelli
+		intermarry = hussite
+		intermarry = anglican
+		intermarry = brethren
+		intermarry = poseidonian
+		intermarry = chaldean
+		intermarry = yersenism
+		intermarry = apostolic
+		intermarry = charismatic
+		intermarry = quaker
+		intermarry = columbian
+		intermarry = marblists
+		intermarry = osvicenism
+		intermarry = neohuguenot
 	}
 
 	chaldean = {
@@ -1617,6 +1780,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -1626,6 +1790,7 @@ christian = {
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = mattaism
+		intermarry = orleanist
 		intermarry = xinjiao
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -1699,6 +1864,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -1726,9 +1892,12 @@ christian = {
 		intermarry = apostolic
 		intermarry = charismatic
 		intermarry = quaker
+		intermarry = orleanist
 		intermarry = marblists
 		intermarry = columbian
 		intermarry = bon_reformed
+		intermarry = donyipolo
+		intermarry = kiratist
 		intermarry = bon
 		intermarry = constitutional	
 		intermarry = osvicenism	
@@ -1770,7 +1939,6 @@ christian = {
 		aggression = 0.9
 		allow_rivermovement = yes
 		autocephaly = yes
-		can_have_antipopes = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
@@ -1791,6 +1959,7 @@ christian = {
 		intermarry = sevillian
 		intermarry = lutheran
 		intermarry = vagarna
+		intermarry = genevist
 		intermarry = calvinist
 		intermarry = cadaverist
 		intermarry = prussianist
@@ -1801,6 +1970,7 @@ christian = {
 		intermarry = nasrini
 		#intermarry = koptic
 		intermarry = xinjiao
+		intermarry = orleanist
 		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -1833,7 +2003,7 @@ christian = {
 		icon = 11
 		heresy_icon = 13
 		
-		color = { 0.8 0.4 0.1 }
+		color = { 0.9 0.45 0.21 }
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
@@ -1868,12 +2038,14 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
 		intermarry = islamity
+		intermarry = orleanist
 		intermarry = nasrini
 		intermarry = koptic
 		intermarry = xinjiao
@@ -1948,6 +2120,8 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = orleanist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2029,10 +2203,12 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
+		intermarry = orleanist
 		intermarry = jugoslavist
 		intermarry = islamity
 		intermarry = nasrini
@@ -2106,7 +2282,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
@@ -2179,6 +2357,8 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2214,7 +2394,7 @@ christian = {
 		intermarry = eastern_lightning
 		intermarry = gidoggyo
 	}
-	charismatic = { #Okinawan Christianity
+	charismatic = { #Baptist heresy
 		graphical_culture = westerngfx
 
 		icon = 87
@@ -2246,8 +2426,6 @@ christian = {
 		hard_to_convert = yes
 		has_heir_designation = yes		
 		
-		religious_clothing_head = 0
-		religious_clothing_priest = 2
 		intermarry = armenianapostolic		
 		intermarry = orthodox
 		intermarry = catholic
@@ -2255,6 +2433,8 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2330,6 +2510,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2340,6 +2521,7 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
+		intermarry = orleanist
 		intermarry = easternprotestant
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -2409,7 +2591,9 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
+		intermarry = orleanist
 		intermarry = prussianist
 		intermarry = transatlantic
 		intermarry = baptist
@@ -2487,8 +2671,10 @@ christian = {
 		intermarry = catholic
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = lutheran
+		intermarry = orleanist
 		intermarry = vagarna
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2565,8 +2751,10 @@ christian = {
 		intermarry = vagarna
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
+		intermarry = orleanist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
@@ -2620,11 +2808,7 @@ christian = {
 		}
 		evil_god_names = {
 			SATAN THE_DEVIL
-		}
-		
-		character_modifier = {
-			diplomacy = 1			
-		}
+		}		
 		
 		can_excommunicate = yes
 		can_grant_claim = yes
@@ -2650,6 +2834,8 @@ christian = {
 		intermarry = vagarna
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2683,7 +2869,7 @@ christian = {
 		intermarry = eastern_lightning
 	}
 	kirishitan = { #Japanese Christians
-		graphical_culture = buddhistgfx
+		graphical_culture = japanesegfx
 
 		icon = 219
 		heresy_icon = 220
@@ -2698,10 +2884,13 @@ christian = {
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_AMIDA GOD_THE_SAINTS
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_AMIDA GOD_THE_SAINTS
 		}
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			SATAN THE_DEVIL
+		}		
+		character_modifier = {
+			japan_group_opinion = 5
 		}
 		
 		aggression = 0.9
@@ -2731,6 +2920,8 @@ christian = {
 		intermarry = vagarna
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = orleanist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2764,13 +2955,13 @@ christian = {
 		intermarry = eastern_lightning
 		intermarry = gidoggyo
 	}
-	isukirian = { #Japanese Christians
-		graphical_culture = buddhistgfx
+	isukirian = { #Very very very Japanese Christians
+		graphical_culture = japanesegfx
 
 		icon = 220
 		heresy_icon = 219
 		
-		color = { 73 120 160 }
+		color = { 20 127 209 }
 		parent = kirishitan
 		
 		crusade_name = CRUSADE
@@ -2781,26 +2972,25 @@ christian = {
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_AMIDA GOD_THE_SAINTS GOD_ISUKIRI
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_AMIDA GOD_THE_SAINTS GOD_ISUKIRI
 		}
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			SATAN THE_DEVIL
+		}
+		character_modifier = {
+			martial = 1
+			japan_group_opinion = 5
 		}
 		
-		aggression = 0.9
+		aggression = 1.5
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
-		can_excommunicate = yes
-		can_grant_claim = yes
-		rel_head_defense = yes
-		autocephaly = yes
 		feminist = yes
 		allow_looting = yes
 		seafarer = yes
 		short_reign_opinion_year_mult = 0
 		has_heir_designation = yes
-		peace_prestige_loss = yes
 		uses_jizya_tax = yes
 		attacking_same_religion_piety_loss = yes
 		hard_to_convert = yes
@@ -2812,8 +3002,10 @@ christian = {
 		intermarry = catholic
 		intermarry = lutheran
 		intermarry = vagarna
+		intermarry = orleanist
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -2855,8 +3047,8 @@ christian = {
 		color = { 0.825 0.7 0.7 }
 		
 		crusade_name = CRUSADE
-		use_new_crusade = yes
-		crusade_cb = new_crusade
+		use_new_crusade = no
+		crusade_cb = crusade
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -2872,6 +3064,7 @@ christian = {
 		aggression = 0.9
 		allow_rivermovement = yes		
 		autocephaly = yes
+		pentarchy = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
@@ -2880,6 +3073,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -2888,6 +3082,8 @@ christian = {
 		intermarry = lutheran
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = orleanist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = vagarna
@@ -2899,6 +3095,7 @@ christian = {
 		intermarry = koptic
 		intermarry = mattaism
 		intermarry = xinjiao
+		intermarry = tridemism
 		
 		intermarry = evangelical
 		intermarry = sedevacantist
@@ -2932,8 +3129,8 @@ christian = {
 		parent = katoliko
 		
 		crusade_name = CRUSADE
-		use_new_crusade = yes
-		crusade_cb = new_crusade
+		use_new_crusade = no
+		crusade_cb = crusade
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -2958,6 +3155,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -2966,9 +3164,11 @@ christian = {
 		intermarry = lutheran
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = vagarna
+		intermarry = orleanist
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
@@ -3042,12 +3242,14 @@ christian = {
 		intermarry = lutheran
 		intermarry = sevillian
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = vagarna
 		intermarry = transatlantic
 		intermarry = baptist
 		intermarry = jugoslavist
+		intermarry = orleanist
 		intermarry = islamity
 		intermarry = nasrini
 		intermarry = koptic
@@ -3098,11 +3300,13 @@ christian = {
 		evil_god_names = {
 			SATAN GOD_EIGHT_ARMIES THE_DEVIL GOD_RED_DRAGON
 		}
-		
+
 		character_modifier = {
 			diplomacy = 1
-			learning = 1
+			maoist_opinion = -30 #They hate them since they are associated with the Red Dragon
+			red_cult_opinion = -30 #They hate them since they are associated with the Red Dragon
 		}
+		
 
 		piety_name = DIGNITY
 
@@ -3110,17 +3314,16 @@ christian = {
 		allow_rivermovement = yes
 		can_grant_claim = yes
 		can_excommunicate = yes
-		can_call_crusade = no
+		can_call_crusade = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
+		join_crusade_if_bordering_hostile = yes
 		
 		short_reign_opinion_year_mult = 0
 		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
 		intermarry = armenianapostolic		
 		intermarry = orthodox
 		intermarry = catholic
@@ -3128,6 +3331,7 @@ christian = {
 		intermarry = lutheran
 		intermarry = vagarna
 		intermarry = calvinist
+		intermarry = genevist
 		intermarry = cadaverist
 		intermarry = prussianist
 		intermarry = transatlantic
@@ -3136,8 +3340,10 @@ christian = {
 		intermarry = islamity
 		intermarry = nasrini
 		intermarry = koptic
+		intermarry = orleanist
 		intermarry = mattaism
 		intermarry = xinjiao
+		intermarry = tridemism
 		
 		intermarry = evangelical
 		intermarry = sedevacantist

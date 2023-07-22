@@ -810,6 +810,21 @@ character_event = {
 		}
 		else_if = {
 			limit = {
+				OR = {
+					religion = kirishitan
+					religion = katoliko
+					religion = isukirian 
+					religion = aglipayan
+				}
+			}
+			join_society = monastic_order_kirishitan
+			change_society_currency = {
+				society = monastic_order_kirishitan
+				value = 350
+			}
+		}
+		else_if = {
+			limit = {
 				religion = baptist
 			}
 			join_society = monastic_order_baptist
@@ -820,7 +835,11 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				religion = calvinist
+				OR = {
+					religion = calvinist
+					religion = genevist
+					religion = neohuguenot
+				}
 			}
 			join_society = monastic_order_baptist
 			change_society_currency = {

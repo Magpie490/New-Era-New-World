@@ -129,9 +129,18 @@ targeted_decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 			wealth = 100
 		}
@@ -298,9 +307,18 @@ targeted_decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 			wealth = 100
 		}
@@ -443,9 +461,18 @@ targeted_decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 			wealth = 100
 		}
@@ -605,9 +632,18 @@ targeted_decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 			wealth = 100
 		}
@@ -749,6 +785,7 @@ targeted_decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
@@ -881,6 +918,146 @@ targeted_decisions = {
 					who = FROM
 					value = 30
 				}
+			}
+		}
+	}
+	brew_gender_potion = {
+		filter = realm_including_me
+		ai_target_filter = realm_including_me
+		ai_check_interval = 24
+	    diplomacy_icon = GFX_gender_potion
+
+		from_potential = {
+			OR = {
+				religion = taoist
+				has_religion_feature = religion_alchemy
+				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
+				religion = el_shaddai
+				religion = thuyhoa_pagan
+				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
+			}
+			wealth = 100
+		}
+
+		potential = {
+			OR = {
+				liege = {
+					character = FROM
+				}
+				character = FROM
+			}
+			OR = {
+				FROM = { ai = no }
+				character = FROM
+				is_close_relative = FROM
+				is_friend = FROM
+				is_lover = FROM
+			}
+		}
+
+		allow = {
+			FROM = { wealth = 250 }
+			custom_tooltip = {
+				text = must_have_ingredients_5_tt
+				hidden_tooltip = {
+					FROM = {
+						any_artifact = {
+							count = 5
+							has_artifact_flag = ingredient
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			FROM = { wealth = -250 }
+			FROM = {
+				random_artifact = { 
+					limit = {
+						has_artifact_flag = ingredient
+					}
+					destroy_artifact = yes
+				}
+				random_artifact = { 
+					limit = {
+						has_artifact_flag = ingredient
+					}
+					destroy_artifact = yes
+				}	
+				random_artifact = { 
+					limit = {
+						has_artifact_flag = ingredient
+					}
+					destroy_artifact = yes
+				}	
+				random_artifact = { 
+					limit = {
+						has_artifact_flag = ingredient
+					}
+					destroy_artifact = yes
+				}	
+				random_artifact = { 
+					limit = {
+						has_artifact_flag = ingredient
+					}
+					destroy_artifact = yes
+				}	
+			}
+			if = {
+				limit = { FROM = { learning = 30 } }
+				random_list = {
+					60 = {
+						add_character_modifier = {
+							name = potion_bad_health_modifier
+							duration = 182
+							stacking = yes
+						}	
+					}
+					30 = {	
+						add_trait = androgynous
+					}
+					10 = {	
+						set_gender = opposite
+					}
+				}
+			}
+			else = {
+				random_list = {
+					75 = {
+						add_character_modifier = {
+						name = potion_bad_health_modifier
+						duration = 182
+						stacking = yes
+						}	
+					}
+					24 = {	
+						add_trait = androgynous
+					}
+					1 = {
+						set_gender = opposite
+					}
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+
+			factor = 1
+			modifier = {	
+				factor = 0
+				ai = yes
 			}
 		}
 	}
@@ -1266,10 +1443,19 @@ decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				society_member_of = hermetics
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 			NOT = { 
 				any_courtier = {
@@ -1285,9 +1471,13 @@ decisions = {
 						religion = taoist
 						has_religion_feature = religion_alchemy
 						has_religion_feature = religion_feature_wuist
+						has_religion_feature = religion_feature_shindo
 						religion = el_shaddai
 						religion = thuyhoa_pagan
 						religion = thuyhoa_pagan_reformed
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
 					}
 					OR = {
 						learning = 10
@@ -1310,9 +1500,13 @@ decisions = {
 						religion = taoist
 						has_religion_feature = religion_alchemy
 						has_religion_feature = religion_feature_wuist
+						has_religion_feature = religion_feature_shindo
 						religion = el_shaddai
 						religion = thuyhoa_pagan
 						religion = thuyhoa_pagan_reformed
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
 					}
 					OR = {
 						learning = 10
@@ -1337,94 +1531,6 @@ decisions = {
 			}
 		}
 	}
-	taoist_acquire_ingredients_decision_ai = {
-		ai_check_interval = 6
-
-		potential = {
-			ai = yes
-			OR = {
-				religion = taoist
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
-			}
-		}
-		
-		allow = {
-			wealth = 150
-			NOT = {
-				has_character_modifier = acquire_ingredients_decision_cooldown_timer
-			}
-		}
-		
-		effect = {
-			wealth = -50
-			add_character_modifier = {
-				modifier = acquire_ingredients_decision_cooldown_timer
-				years = 1
-				hidden = yes
-			}
-			random_list = {
-				10 = {
-					add_artifact = ingredient_herb1
-					add_artifact = ingredient_herb3
-				}
-				10 = {
-					add_artifact = ingredient_herb4
-					add_artifact = ingredient_herb5
-				}
-				10 = {
-					add_artifact = ingredient_herb8
-					add_artifact = ingredient_herb9
-				}
-				10 = {
-					add_artifact = ingredient_herb5
-					add_artifact = ingredient_animal1
-				}
-				10 = {
-					add_artifact = ingredient_herb7
-					add_artifact = ingredient_animal2
-				}
-				10 = {
-					add_artifact = ingredient_animal8
-					add_artifact = ingredient_herb4
-				}
-				10 = {
-					add_artifact = ingredient_metal_exotic1
-					add_artifact = ingredient_animal7
-				}
-				10 = {
-					add_artifact = ingredient_metal_exotic7
-					add_artifact = ingredient_animal9
-				}
-				10 = {
-					add_artifact = ingredient_metal_exotic3
-					add_artifact = ingredient_herb1
-				}
-				10 = {
-					add_artifact = ingredient_metal_exotic2
-					add_artifact = ingredient_herb5
-				}
-			}
-		}
-		
-		revoke_allowed = { always = no }
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.95 # Slow down
-			}
-			modifier = {
-				factor = 0.5 # Already have ingredients
-				any_artifact = {
-					has_artifact_flag = ingredient
-				}
-			}
-		}
-	}
 	hermetics_acquire_ingredients_decision = {
 		ai_check_interval = 24
 
@@ -1433,10 +1539,19 @@ decisions = {
 				religion = taoist
 				has_religion_feature = religion_alchemy
 				has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_shindo
 				society_member_of = hermetics
 				religion = el_shaddai
 				religion = thuyhoa_pagan
 				religion = thuyhoa_pagan_reformed
+				AND = {
+					OR = {
+						religion_group = muslim
+						religion = yazidi
+						religion = yersenism
+					}
+					trait = mystic
+				}
 			}
 		}
 		
@@ -1494,7 +1609,7 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.75 # Slow down
+				factor = 0.66 # Slow down
 			}
 			modifier = {
 				factor = 0.5 # Already have ingredients
