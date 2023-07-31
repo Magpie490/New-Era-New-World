@@ -287,4 +287,89 @@ decisions = {
 			}
 		}
 	}
+	form_magna_virginia = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = southron
+				culture = federalist
+			}
+			e_magna_virginia = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_old_dominion
+			completely_controls = k_appalachia
+			completely_controls = d_clinch
+		}
+		effect = {
+			e_magna_virginia = { gain_empire_effect = yes }
+			k_old_dominion = { de_jure_liege = e_magna_virginia }
+			k_appalachia = { de_jure_liege = e_magna_virginia }
+			d_clinch = { de_jure_liege = k_old_dominion }
+			if = {
+				limit = {
+					completely_controls = d_cumberland
+					completely_controls = d_bluegrass
+					completely_controls = d_pennyrile
+				}
+				d_cumberland = { de_jure_liege = k_kentucky }
+				d_bluegrass = { de_jure_liege = k_kentucky }
+				d_pennyrile = { de_jure_liege = k_kentucky }
+				k_kentucky = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_ohio
+				}
+				k_ohio = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_wabash
+				}
+				k_wabash = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_illinois
+				}
+				k_illinois = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_michigan
+				}
+				k_michigan = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_superior
+				}
+				k_superior = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_wisconsin
+				}
+				k_wisconsin = { de_jure_liege = e_magna_virginia }
+			}
+			if = {
+				limit = {
+					completely_controls = k_wisconsin
+					completely_controls = d_arrowhead
+				}
+				d_arrowhead = { de_jure_liege = k_wisconsin }
+				k_wisconsin = { de_jure_liege = e_magna_virginia }
+			}
+		}
+	}
 }

@@ -2189,7 +2189,6 @@ e_columbia = {
 		}
 	}
 	
-
 	k_grand_bermuda = {
 		color={ 200 25 45 }
 		color2={ 220 220 0 }
@@ -2725,8 +2724,6 @@ e_columbia = {
 		}
 	}
 	
-	
-	
 	k_old_dominion = {
 		color={ 182 89 84 }
 		color2={ 220 220 20 }
@@ -2742,24 +2739,25 @@ e_columbia = {
 		puritan = 20
 		thelemic_reformed = 200
 
-			capital = 75
-
+		capital = 75
 		
 		d_piedmont = {
 			color={ 220 120 150 }
 			color2={ 220 220 20 }
 
-			capital = 75
+			capital = 76
 
-			c_rappahannock = {
+			c_rappahannock = { 
 				color={ 230 150 170 }
 				color2={ 220 220 20 }
 
-				b_fredericksburg_VA = {}
-				b_stafford_VA = {}
+				#b_fredericksburg_VA = {}
+				#b_stafford_VA = {}
 				b_olney_corner_VA = {}
+				b_washington_VA = {}
 				b_spotsylvania_VA = {}
-				b_falmouth_VA = {}
+				b_madison_VA = {}
+				#b_falmouth_VA = {}
 				b_chancellorsville_VA = {}
 				b_brokenburg_VA = {}
 				b_massaponax_VA = {}				
@@ -2777,45 +2775,54 @@ e_columbia = {
 				b_mitchells_VA = {}
 				b_locust_dale_VA = {}
 			}
-			c_james = {
-				color={ 200 80 105 }
-				color2={ 220 220 20 }
-
-				b_richmond_VA = {}
-				b_petersburg_VA = {}
-				b_henrico_VA = {}
-				b_mechanicsville_VA = {}
-				b_montrose_VA = {}
-				b_midlothian_VA = {}
-				b_tuckahoe_VA = {}
-				b_disputanta_VA = {}
-			}
-			c_bull_run = {
-				color={ 170 95 115 }
-				color2={ 220 220 20 }
-
-				b_manassas_VA = {}
-				b_gainesville_VA = {}
-				b_warrenton_VA = {}
-				b_bristow_VA = {}
-				b_haymarket_VA = {}
-				b_woodbridge_VA = {}
-				b_centreville_VA = {}
-				b_nokesville_VA = {}
-				b_langley_VA = {}
-			}
+			
 			c_charlottesville = {
 				color={ 215 95 130 }
 				color2={ 220 220 20 }
 
 				b_charlottesville_VA = {}
-				b_palmyra_VA = {}
 				b_commonwealth_VA = {}
 				b_gordonsville_VA = {}
 				b_ruckersville_VA = {}
 				b_crozet_VA = {}
 				b_covesville_VA = {}
 				b_bentivar_VA = {}
+			}
+			c_nelson = {
+				color = { 200 150 100 }
+				color2 = { 220 220 20 }
+				
+				b_lovingston_VA = {}
+				b_amherst_VA = {}
+				b_madison_heights_VA = {}
+				b_shipman_VA = {}
+				b_nellysford_VA = {}
+				b_arrington_VA = {}
+				b_schuyler_VA = {}
+			}
+			c_goochland = {
+				color = { 250 100 100 }
+				color2 = { 220 220 20 }
+				
+				b_goochland_VA = {}
+				b_lake_monticello_VA = {}
+				b_louisa_VA = {}
+				b_mineral_VA = {}
+				b_blue_rige_shores_VA = {}
+				b_palmyra_VA = {}
+				b_bremo_bluff_VA = {}
+			}
+			c_buckingham_VA = {
+				color = { 150 50 50 }
+				color2 = { 220 220 20 }
+				
+				b_dilwyn_VA = {}
+				b_buckingham_VA = {}
+				b_yogaville_VA = {}
+				b_cartersville_VA = {}
+				b_cumberland_VA = {}
+				b_tamworth_VA = {}
+				b_union_hill_VA = {}
 			}
 		}
 		d_tidewater = {
@@ -2828,17 +2835,17 @@ e_columbia = {
 				color={ 80 150 190 }
 				color2={ 220 220 20 }
 
-				b_newport_news_VA = {}
-				b_hampton_VA = {}
+				#b_newport_news_VA = {}
+				#b_hampton_VA = {}
 				b_heathsville_VA = {}
 				b_mathews_VA = {}
 				b_farnham_VA = {}
 				b_kinsale_VA = {}
-				b_lancaster_VA = {}
+				#b_lancaster_VA = {}
 				b_burgess_VA = {}
 				b_tappahannock_VA = {}
 				b_hartfield_VA = {}
-				b_poquoson_VA = {}	
+				#b_poquoson_VA = {}	
 			}
 
 			c_hampton_roads = {
@@ -2855,6 +2862,18 @@ e_columbia = {
 				b_lynnhaven_VA = {}
 				b_the_great_dismal_VA = {}
 			}
+			c_newport_news = {
+				color = { 150 220 170 }
+				color2 = { 220 220 0 }
+				
+				b_newport_news_VA = {}
+				b_hampton_VA = {}
+				b_poquoson_VA = {}
+				b_williamsburg_VA = {}
+				b_yorktown_VA = {}
+				b_jamestown_VA = {}
+				b_bethel_manor_VA = {}
+			}
 		}
 		d_southside = {
 			color={ 210 195 160 }
@@ -2862,44 +2881,234 @@ e_columbia = {
 
 			capital = 78
 
-			c_lynchburg = {
+			c_lynchburg = { 
 				color={ 190 170 115 }
 				color2={ 220 220 0 }
 
 				b_lynchburg_VA = {}
-				b_appomattox_VA = {}
-				b_rustburg_VA = {}
-				b_altavista_VA = {}
-				b_timberlake_VA = {}
-				b_forest_VA = {}
+				#b_appomattox_VA = {}
+				#b_rustburg_VA = {}
+				#b_altavista_VA = {}
+				#b_timberlake_VA = {}
+				#b_forest_VA = {}
 				b_gladys_VA = {}
 				b_bedford_VA = {}
+				b_big_island_VA = {}
+				b_moneta_VA = {}
+				b_stewartsville_VA = {}
+				b_montvale_VA = {}
+				
 			}
-			c_emporia = {
-				color={ 230 220 200 }
-				color2={ 220 220 0 }
-
-				b_emporia_VA = {}
-				b_bracey_VA = {}
-				b_blackstone_VA = {}
-				b_dinwiddie_VA = {}
-				b_lunenburg_VA = {}
-				b_gasburg_VA = {}
-				b_lawrenceville_VA = {}
-				b_brodnax_VA = {}
-			}
+			
 			c_danville = {
 				color={ 200 180 120 }
 				color2={ 220 220 0 }
 
-				b_danville_VA = {}
+				#b_danville_VA = {}
+				b_rocky_mount_VA = {}
 				b_martinsville_VA = {}
 				b_axton_VA = {}
 				b_blairs_VA = {}
 				b_collinsville_VA = {}
 				b_ridgeway_VA = {}
-				b_chatham_VA = {}
+				#b_chatham_VA = {}
 				b_callands_VA = {}
+			}
+			c_pittsylvania = {
+				color = { 30 50 40 }
+				color2 = { 220 220 0 }
+				
+				b_danville_VA = {}
+				b_chatham_VA = {}
+				b_hurt_VA = {}
+				b_south_boston_VA = {}
+				b_gretna_VA = {}
+				b_halifax_VA = {}
+				b_virgilina_VA = {}
+			}
+			c_rustburg = {
+				color = { 60 20 20 }
+				color2 = { 220 220 0 }
+				
+				b_rustburg_VA = {}
+				b_altavista_VA = {}
+				b_timberlake_VA = {}
+				b_forest_VA = {}
+				b_appomattox_VA = {}
+				b_phenix_VA = {} 
+				b_pamplin_city_VA = {} 
+			}
+			c_brunswick = {
+				color = { 111 85 52 }
+				color2 = { 220 220 0 }
+				
+				b_emporia_VA = {}
+				b_alberta_VA = {}
+				b_jarratt_VA = {}
+				b_lawrenceville_VA = {}
+				b_brodnax_VA = {}
+				b_ebony_VA = {}
+				b_gasburg_VA = {}
+			}
+			c_meklenburg = {
+				color = { 241 241 75 }
+				color2 = { 220 220 0 }
+				
+				b_boydton_VA = {}
+				b_lunenburg_VA = {}
+				b_bracey_VA = {}
+				b_victoria_VA = {}
+				b_kenbridge_VA = {}
+				b_clarksville_VA = {}
+				b_la_crosse_VA = {}
+			}
+		}
+		d_nova = {
+			color = { 120 140 200 }
+			color2 = { 220 220 20 }
+			
+			capital = 93
+		
+			c_loudoun = {
+				color = { 100 200 100 }
+				color2 = { 220 220 20 }
+				
+				b_leesburg_VA = {}
+				b_hamilton_VA = {}
+				b_hillsborough_VA = {}
+				b_purcellville_VA = {}
+				b_middleburg_VA = {}
+				b_round_hill_VA = {}
+				b_lovettsville_VA = {}
+			}
+			c_fauquier = {
+				color = { 130 50 50 }
+				color2 = { 220 220 20 }
+				
+				b_warrenton_VA = {}
+				b_the_planes_VA = {}
+				b_remington_VA = {}
+				b_midland_VA = {}
+				b_opal_VA = {}
+				b_new_baltimore_VA = {}
+				b_bealeton_VA = {}
+			}
+			c_king_george = {
+				color = { 210 90 170 }
+				color2 = { 220 220 20 }
+				
+				b_king_george_VA = {}
+				b_stafford_VA = {}
+				b_camp_barrett_VA = {}
+				b_aquia_harbor_VA = {}
+				b_dahlgren_VA = {}
+				b_passapatanzy_VA = {}
+				b_falmouth_VA = {}
+			}
+			c_bull_run = {
+				color={ 170 95 115 }
+				color2={ 220 220 20 }
+
+				b_manassas_VA = {}
+				b_gainesville_VA = {}
+				#b_warrenton_VA = {}
+				b_bristow_VA = {}
+				b_haymarket_VA = {}
+				b_woodbridge_VA = {}
+				b_centreville_VA = {}
+				b_nokesville_VA = {}
+				b_langley_VA = {}
+			}
+			c_westmoreland = {
+				color = { 200 250 200 }
+				color2 = { 220 220 0}
+				
+				b_colonial_beach_VA = {}
+				b_warsaw_VA = {}
+				b_kilmarnock_VA = {}
+				b_irvington_VA = {}
+				b_kilmarnock_VA = {}
+				b_white_stone_VA = {}
+				b_montross_VA = {}
+			}
+		}
+		d_richmond = {
+			color = { 200 130 140 }
+			color2 = { 220 220 20 }
+			
+			capital = 75
+			
+			c_james = {
+				color={ 200 80 105 }
+				color2={ 220 220 20 }
+
+				b_richmond_VA = {}
+				b_petersburg_VA = {}
+				b_charles_city_VA = {}
+				b_new_kent_VA = {}
+				b_sandton_VA = {}
+				b_midlothian_VA = {}
+				b_disputanta_VA = {}
+			}
+			c_emporia = {
+				color={ 230 220 200 }
+				color2={ 220 220 0 }
+				
+				b_blackstone_VA = {}
+				b_franklin_VA = {}
+				b_boykins_VA = {}
+				b_waverly_VA = {}
+				b_surry_VA = {}
+				b_ivor_VA = {}
+				b_dendron_VA = {}
+			}
+			c_dinwiddie = {
+				color = { 90 30 30 }
+				color2 = { 220 220 20 }
+				
+				b_harrisonburg_VA = {}
+				b_colonial_heights_VA = {}
+				b_mckenny_VA = {}
+				b_prince_george_VA = {}
+				b_dinwiddie_VA = {}
+				b_templeton_VA = {}
+				b_fort_lee_VA = {}
+			}
+			c_amelia = { 
+				color = { 170 85 127 }
+				color2 = { 220 220 20 }
+				
+				b_amelia_VA = {}
+				b_powhatan_VA = {}
+				b_chester_VA = {}
+				b_bon_air_VA = {}
+				b_woodlake_VA = {}
+				b_bellwood_VA = {}
+				b_enon_VA = {}
+			}
+			c_hanover = {
+				color = { 150 0 0 }
+				color2 = { 220 220 20 }
+				
+				b_ashland_VA = {}
+				b_hanover_VA = {}
+				b_mechanicsville_VA = {}
+				b_tuckahoe_VA = {}
+				b_henrico_VA = {}
+				b_montrose_VA = {}
+				b_laurel_VA = {}
+			}
+			c_caroline = {
+				color = { 60 160 20 }
+				color2 = { 220 220 20 }
+				
+				b_port_royal_VA = {}
+				b_bowling_green_VA = {}
+				b_lake_caroline_VA = {}
+				b_lake_landor_VA = {}
+				b_bagdad_VA = {}
+				b_liberty_VA = {}
+				b_tignor_VA = {}
 			}
 		}
 	}
