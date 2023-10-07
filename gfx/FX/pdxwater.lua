@@ -188,7 +188,7 @@ float3 CalcWaterNormal( float2 uv, float vTimeSpeed )
 float4 ApplyIce( float4 vColor, float2 vPos, inout float3 vNormal, float4 vFoWColor, float2 vIceUV, out float vIceFade )
 {
 	float vSnow = saturate( GetSnow(vFoWColor) - 0.2f ); 
-	vIceFade = vSnow*8.0f;
+	vIceFade = vSnow*2.0f;
 	float vIceNoise = tex2D( FoWDiffuse, ( vPos + 0.5f ) / 64.0f  ).r;
 	vIceFade *= vIceNoise;
 	float vMapLimitFade = saturate( saturate( (vPos.y/MAP_SIZE_Y) - 0.74f )*800.0f );
