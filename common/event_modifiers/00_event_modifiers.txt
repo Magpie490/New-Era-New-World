@@ -96,6 +96,19 @@ morphine_active = {
 morphine_safety_timer = {
 	icon = 51
 	}
+assassin_safety_timer = {
+	icon = 51
+	}
+laureate_safety_timer = {
+	icon = 51
+	}
+	
+questing_timer = {
+	icon = 51
+	}
+moral_author_timer = {
+	icon = 51
+	}
 requested_military_aid = {
     monthly_character_prestige = -0.5
     icon = 31
@@ -119,6 +132,56 @@ morphine_addiction = {
 	health = -1
 	combat_rating = -15
 }	
+poor_credit = {
+	general_opinion = -5
+	icon = 24
+}
+
+weak_banker = {
+	monthly_character_prestige = -0.2
+	icon = 24
+}
+
+strong_banker = {
+	monthly_character_prestige = 0.2
+	icon = 4
+}
+
+shares_sold = {
+	icon = 4
+}
+
+building_subsidies = {
+	local_build_cost_modifier = -0.1
+	icon = 4
+}
+
+invested_research = {
+	icon = 4
+}
+
+increased_prosperity = {
+	icon = 4
+}
+
+banking_results = {
+	icon = 4
+}
+# Bank loan system
+recent_loan_request = {
+	#hidden = yes
+	icon = 24
+}
+loan_timer = {
+	icon = 24
+	monthly_character_piety = -0.25
+	#inherit = yes
+}
+defaulted_on_loan = {
+	monthly_character_piety = -0.5
+	#inherit = yes 
+	icon = 24
+}
 
 used_great_book_timer = {
 	icon = 4
@@ -130,6 +193,58 @@ took_penicillin_timer = {
 mystic_insight_modifier = { #When Nobelians get an insight
 	learning = 1
 	icon = 25
+}
+burned_christian_city = { 
+	christian_opinion = -5
+	icon = 106
+}
+burned_muslim_city = { 
+	muslim_opinion = -5
+	icon = 106
+}
+burned_jewish_city = { 
+	jewish_group_opinion = -5
+	icon = 106
+}
+burned_buddhist_city = { 
+	buddhist_group_opinion = -5
+	icon = 106
+}
+burned_esoteric_city = { 
+	esoteric_opinion = -5
+	icon = 106
+}
+burned_dharmic_city = { 
+	indian_group_opinion = -5
+	icon = 106
+}
+burned_oceanic_city = { 
+	oceanic_opinion = -5
+	icon = 106
+}
+burned_antediluvianist_city = { 
+	old_world_cultist_group_opinion = -5
+	icon = 106
+}
+burned_pagan_city = { 
+	pagan_group_opinion = -5
+	icon = 106
+}
+burned_syncretic_city = { 
+	syncratic_group_opinion = -5
+	icon = 106
+}
+burned_iranyasna_city = { 
+	zoroastrian_group_opinion = -5
+	icon = 106
+}
+burned_shintoist_city = { 
+	shintoist_group_opinion = -5
+	icon = 106
+}
+burned_chinese_traditionalist_city = { 
+	chinese_traditional_group_opinion = -5
+	icon = 106
 }
 
 # HARD CODED - DO NOT REMOVE
@@ -327,6 +442,22 @@ martial_advice = {
 stewardship_advice = {
 	local_tax_modifier = 0.05
 	icon = 6
+}
+scrapyard_modifier = {
+	local_tax_modifier = 0.05
+	tech_growth_modifier_military = 0.1
+	icon = 12
+}
+ancient_war_hulk = {
+	general_opinion = 5
+	monthly_character_prestige = 0.5
+	icon = 12
+}
+watchers_in_the_snow = {
+	local_tax_modifier = 0.1
+	tech_growth_modifier_military = 0.25
+	add_prestige_modifier = 0.05
+	icon = 81
 }
 intrigue_advice = {
 	intrigue = 2
@@ -1032,7 +1163,34 @@ maze_fountain_extravagant = {
 
 business_contacts = {
 	town_opinion = 10
-	icon = 4
+	icon = 2
+}
+emulating_devotion = {
+	same_religion_opinion = 10
+	monthly_character_piety = 0.5
+	icon = 2
+}
+emulating_humanity = {
+	diplomacy = 2
+	general_opinion = 10
+	icon = 2
+}
+emulating_unity = {
+	martial = 1
+	land_morale = 0.1
+	global_revolt_risk = -0.01
+	icon = 2
+}
+emulating_democracy = {
+	diplomacy = 1
+	stewardship = 1
+	monthly_character_prestige = 0.5
+	icon = 2
+}
+emulating_justice = {
+	stewardship = 2
+	just_opinion = 10
+	icon = 2
 }
 
 # Timers
@@ -1064,6 +1222,10 @@ suspected_of_incest_timer = { icon = 1 }
 dabble_dark_arts_timer = { icon = 1 }
 
 taken_by_rebels_timer = { icon = 1 }	# Not used anymore
+
+sisu_change_cooldown = { icon = 1 }
+
+pancasila_change_cooldown = { icon = 1 }
 
 compliment_food_timer = { icon = 1 }
 
@@ -5981,6 +6143,9 @@ province_for_sketes = {
 province_for_benedictines = {
 	icon = 17
 }
+province_for_imf = {
+	icon = 17
+}
 province_for_ignatians = {
 	icon = 17
 }
@@ -7723,7 +7888,7 @@ the_hanged_man_modif = {
 	icon = 80
 }
 the_death_modif = {
-	health = -6.6
+	health = -3.5
 	fertility = -0.15
 	icon = 42
 }

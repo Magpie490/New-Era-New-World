@@ -18,18 +18,18 @@ old_world_cultist_group = {
 
 		scripture_name = THE_WAY_OF_STEEL
 		
-		high_god_name = GOD_STEEL
+		high_god_name = GOD_STEEL_ALLAH
 		
 		priest_title = SMITH
 		
 		interface_skin = { ironist_interface OWC_interface pagan_interface }
 		
 		god_names = {
-			GOD_STEEL GODDES_ARAL GOD_GVOZDIKA GOD_KATYUSHA GOD_KALASHNIKOV GOD_UDARNIK GODDES_TSELINA
+			GOD_STEEL_ALLAH GODDES_ARAL GOD_ASENA GOD_OGUZ_KAGAN GOD_GVOZDIKA GOD_KATYUSHA GOD_KALASHNIKOV GOD_ZIMIRAN GODDES_TSELINA
 		}
 		
 		evil_god_names = {
-			GOD_PANZER GOD_STAHLHELM GOD_DIKE_KOKARAL GOD_KUKURUZNIK
+			GOD_ERLIK GOD_IBILIS GOD_DIKE_KOKARAL GOD_KUKURUZNIK GOD_ALBASTY
 		}
 		
 		aggression = 1.1
@@ -256,11 +256,11 @@ old_world_cultist_group = {
 		high_god_name = GOD_HOLY_SPIRIT
 		
 		god_names = {
-			GOD_THE_TZAR GOD_ROMANOV GOD_RURIKOVICH GOD_THE_SAINTS GOD_MOTHER_RUSSIA
+			GOD_HOLY_SPIRIT GOD_THE_LORD GOD_THE_TZAR GOD_IVAN GOD_NICHOLAS GOD_PETER GOD_KATERIN GOD_THE_SAINTS GOD_MOTHER_RUSSIA
 		}
 		
 		evil_god_names = {
-			GOD_BEZBOZHNIK GOD_RASPUTIN GOD_STALIN
+			GOD_DYAVOL GOD_BEZBOZHNIK GOD_RASPUTIN GOD_STALIN_BAD
 		}
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -298,18 +298,18 @@ old_world_cultist_group = {
 		
 		scripture_name = THE_CHRONICLE_OF_DAYS_PAST
 		
-		high_god_name = GOD_KATERIN
+		high_god_name = GOD_MOTHER_RUSSIA
 		
 		priest_title = POPADYA
 		
 		interface_skin = { OWC_interface pagan_interface }
 		
 		god_names = {
-			GOD_HOLY_SPIRIT GOD_MOTHER_RUSSIA GOD_THE_TZAR GOD_ROMANOV GOD_RURIKOVICH GOD_THE_BLESSED_VIRGIN
+			GOD_MOTHER_RUSSIA GOD_HOLY_SPIRIT GOD_KATERIN GOD_OLGA GOD_THE_TZAR GOD_THE_SAINTS GOD_BOGORODITSA
 		}
 		
 		evil_god_names = {
-			GOD_BEZBOZHNIK GOD_RASPUTIN GOD_STALIN
+			GOD_DYAVOL GOD_BEZBOZHNIK GOD_RASPUTIN GOD_STALIN_BAD
 		}
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -348,14 +348,14 @@ old_world_cultist_group = {
 		
 		scripture_name = THE_CHRONICLE_OF_DAYS_PAST
 		
-		high_god_name = GOD_PETER
+		high_god_name = GOD_HOLY_SPIRIT
 		
 		god_names = {
-			GOD_PETER GOD_HOLY_SPIRIT
+			GOD_HOLY_SPIRIT GOD_PETER GOD_THE_TZAR GOD_THE_SAINTS
 		}
 		
 		evil_god_names = {
-			GOD_BEZBOZHNIK GOD_RASPUTIN GOD_STALIN GOD_ROMANOV GOD_RURIKOVICH
+			GOD_DYAVOL GOD_BEZBOZHNIK GOD_RASPUTIN GOD_NICHOLAS_BAD GOD_STALIN_BAD
 		}
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -680,6 +680,7 @@ old_world_cultist_group = {
 		intermarry = fraticelli
 		intermarry = catholic
 		intermarry = cadaverist
+		intermarry = raelian
 		intermarry = novelist
 		intermarry = novelist_reformed
 		intermarry = neohuguenot
@@ -795,7 +796,7 @@ old_world_cultist_group = {
 		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 101
-		heresy_icon = 23
+		heresy_icon = 100
 		
 		color = { 155 17 30 }
 		
@@ -1122,6 +1123,7 @@ old_world_cultist_group = {
 		high_god_name = GOD_NEON_GODDESS
 		
 		priest_title = ENLIGHTEND_ONE
+		crusade_name = GREAT_HOLY_WAR
 		
 		interface_skin = { buddhist_interface taoist_interface indian_interface muslim_interface }
 		
@@ -1134,6 +1136,8 @@ old_world_cultist_group = {
 		}
 		
 		aggression = 1.8
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
 		allow_rivermovement = yes
 		allow_viking_invasion = yes
 		allow_looting = yes
@@ -1148,6 +1152,7 @@ old_world_cultist_group = {
 		intermarry = east_brethren
 		intermarry = maoist
 		intermarry = taoist
+		intermarry = qingzhen
 		intermarry = shintoist_group
 		intermarry = white_lotus
 		intermarry = tridemism
@@ -1193,6 +1198,7 @@ old_world_cultist_group = {
 		intermarry = east_brethren
 		intermarry = maoist
 		intermarry = taoist
+		intermarry = qingzhen
 		intermarry = shintoist_group
 		intermarry = white_lotus
 		intermarry = tridemism

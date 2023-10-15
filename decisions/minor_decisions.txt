@@ -946,9 +946,11 @@ decisions = {
 			is_playable = yes
 			age = 16
 			prisoner = no
-			religion_group = oceanic
+			OR = {
+				religion_group = oceanic
+				religion = aurorean
+			}
 			NOT = {	has_character_flag = commissioned_runestone }
-			NOT = { year = 2765 }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -1105,6 +1107,7 @@ decisions = {
 				religion = tengri_pagan_reformed
 				religion = maoist
 				religion = sufi
+				religion = qingzhen
 				religion = barelvi
 				religion = alevi
 				religion = yazidi
@@ -1771,6 +1774,7 @@ decisions = {
 				government = indian_feudal
 				government = phonocratic_government
 				government = eastern_feudal
+				government = mandate_heaven
 				government = chinese_imperial_government
 				government = order_government
 				government = roman_imperial_government
@@ -2009,6 +2013,7 @@ decisions = {
 				government = indian_feudal
 				government = phonocratic_government
 				government = eastern_feudal
+				government = mandate_heaven
 				government = chinese_imperial_government
 				government = order_government
 				government = roman_imperial_government

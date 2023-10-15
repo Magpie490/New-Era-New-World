@@ -33,6 +33,8 @@ traveller_FEATURES;§Y*§! Characters of this culture will not live under the fore
 aeslabh_FEATURES;§Y*§! Characters of this culture will not live under the foreign yolk, they are more likely to start and join §Yindependence factions§! if liege is not of the same culture group;;;;;;;;;x
 irish_FEATURES;§Y*§! Characters of this culture will not live under the foreign yolk, they are more likely to start and join §Yindependence factions§! if liege is not of the same culture group;;;;;;;;;x
 high_irish_FEATURES;§Y*§! Characters of this culture will not live under the foreign yolk, they are more likely to start and join §Yindependence factions§! if liege is not of the same culture group;;;;;;;;;x
+munsterian_FEATURES;§Y*§! Characters of this culture will not live under the foreign yolk, they are more likely to start and join §Yindependence factions§! if liege is not of the same culture group;;;;;;;;;x
+ulsterian_FEATURES;§Y*§! Characters of this culture will not live under the foreign yolk, they are more likely to start and join §Yindependence factions§! if liege is not of the same culture group;;;;;;;;;x
 ,,,,,,,,,,,,,,,,,,,;;;;;;;;;;;;;;;;;;;
 ##########################################
 EVTDESC_CU_32;A community of Romani has become established within your province, will you allow them to remain?;;;;;;;;;;x
@@ -88,18 +90,39 @@ invite_local_ashkenazi_desc;Invite an Ashkenazi man from your local Ashkenazi co
 invite_local_ashkenazi_woman_desc;Invite an Ashkenazi woman from your local Ashkenazi community.;;;;;;;;;;x
 ashkenazi_minority;Ashkenazi Minority;;;;;;;;;;x
 ########
-EVTDESC_CU_241;A community of sephardis has become established within your province, will you allow them to remain?;;;;;;;;;;x
+yutawhin;Yutawhin;;;;;;;;;;x
+EVTDESC_CU_841;A community of Mormons has become established within your province, will you allow them to remain?;;;;;;;;;;x
+EVTOPTACU841;They may stay.;;;;;;;;;;x
+EVTOPTBCU841;Drive them from their homes!;;;;;;;;;;x
+EVTDESC_CU_842;As the population of the province has become majority Mormon, the minority community has melded into the wider population.;;;;;;;;;;x
+EVTOPTACU842;Okay.;;;;;;;;;;x
+EVTDESC_CU_843;The minority Mormon population of your province has declined to the point it is no longer of note, some day the mormon may resettle in your province.;;;;;;;;;;x
+EVTOPTACU843;Okay.;;;;;;;;;;x
+invite_local_mormon;Invite local Mormon Man;;;;;;;;;;x
+invite_local_mormon_woman;Invite local Mormon woman;;;;;;;;;;x
+invite_local_mormon_desc;Invite an mormon man from your local Mormon community.;;;;;;;;;;x
+invite_local_mormon_woman_desc;Invite an Mormon woman from your local Mormon community.;;;;;;;;;;x
+mormon_minority;Mormon Minority;;;;;;;;;;x
+########
+EVTDESC_CU_24100;A community of beurs has become established within your province, will you allow them to remain?;;;;;;;;;;x
+EVTOPTACU24100;They may stay.;;;;;;;;;;x
+EVTOPTBCU24100;Drive them from their homes!;;;;;;;;;;x
+EVTDESC_CU_24200;As the population of the province has become majority beurs, the minority community has melded into the wider population.;;;;;;;;;;x
+EVTOPTACU24200;Okay.;;;;;;;;;;x
+EVTDESC_CU_24300;The minority beurs population of your province has declined to the point it is no longer of note, some day the beurs may resettle in your province.;;;;;;;;;;x
+EVTOPTACU24300;Okay.;;;;;;;;;;x
+EVTDESC_CU_241;A community of Sephardis has become established within your province, will you allow them to remain?;;;;;;;;;;x
 EVTOPTACU241;They may stay.;;;;;;;;;;x
 EVTOPTBCU241;Drive them from their homes!;;;;;;;;;;x
-EVTDESC_CU_242;As the population of the province has become majority sephardi, the minority community has melded into the wider population.;;;;;;;;;;x
+EVTDESC_CU_242;As the population of the province has become majority Sephardi, the minority community has melded into the wider population.;;;;;;;;;;x
 EVTOPTACU242;Okay.;;;;;;;;;;x
-EVTDESC_CU_243;The minority sephardi population of your province has declined to the point it is no longer of note, some day the sephardi may resettle in your province.;;;;;;;;;;x
+EVTDESC_CU_243;The minority Sephardi population of your province has declined to the point it is no longer of note, some day the sephardi may resettle in your province.;;;;;;;;;;x
 EVTOPTACU243;Okay.;;;;;;;;;;x
-invite_local_sephardi;Invite local sephardi Man;;;;;;;;;;x
-invite_local_sephardi_woman;Invite local sephardi woman;;;;;;;;;;x
-invite_local_sephardi_desc;Invite an sephardi man from your local sephardi community.;;;;;;;;;;x
-invite_local_sephardi_woman_desc;Invite an sephardi woman from your local sephardi community.;;;;;;;;;;x
-sephardi_minority;sephardi Minority;;;;;;;;;;x
+invite_local_sephardi;Invite local Sephardi Man;;;;;;;;;;x
+invite_local_sephardi_woman;Invite local Sephardi woman;;;;;;;;;;x
+invite_local_sephardi_desc;Invite a Sephardi man from your local Sephardi community.;;;;;;;;;;x
+invite_local_sephardi_woman_desc;Invite a Sephardi woman from your local Sephardi community.;;;;;;;;;;x
+sephardi_minority;Sephardi Minority;;;;;;;;;;x
 ########
 EVTDESC_CU_341;A community of Beurs has become established within your province, will you allow them to remain?;;;;;;;;;;x
 EVTOPTACU341;They may stay.;;;;;;;;;;x
@@ -110,8 +133,8 @@ EVTDESC_CU_343;The minority Beur population of your province has declined to the
 EVTOPTACU343;Okay.;;;;;;;;;;x
 invite_local_marocain;Invite local Beur Man;;;;;;;;;;x
 invite_local_marocain_woman;Invite local Beur woman;;;;;;;;;;x
-invite_local_marocain_desc;Invite an Beur man from your local Beur community.;;;;;;;;;;x
-invite_local_marocain_woman_desc;Invite an Beur woman from your local Beur community.;;;;;;;;;;x
+invite_local_marocain_desc;Invite a Beur man from your local Beur community.;;;;;;;;;;x
+invite_local_marocain_woman_desc;Invite a Beur woman from your local Beur community.;;;;;;;;;;x
 marocain_minority;Beur Minority;;;;;;;;;;x
 ########
 EVTDESC_CU_45;A community of Israelis has become established within your province, will you allow them to remain?;;;;;;;;;;x
@@ -230,7 +253,25 @@ westlander_opinion;[westlander.GetName] Opinion;;;;;;;;;x
 northlander_opinion;[northlander.GetName] Opinion;;;;;;;;;x
 anglican_opinion;[anglican.GetName] Opinion;;;;;;;;;x
 novelist_reformed_opinion;[novelist_reformed.GetName] Opinion;;;;;;;;;x
+EVTNAME_orleanist_300;Choosing a cult
+EVTDESC_orleanist_300;Arcenists tend to venerate one of several saints within organised cults, which will you join?;;;;;;;;;x
+EVTOPTA_orleanist_300;I will join the Cult of Marianne;;;;;;;;;x
+EVTOPTB_orleanist_300;I will join the Cult of Jeanne;;;;;;;;;x
+EVTOPTC_orleanist_300;I will join the Cult of Charlemagne;;;;;;;;;x
+EVTOPTD_orleanist_300;I will join the Cult of Michael;;;;;;;;;x
+choose_orleanist_cult;Choose an Orleanist Cult;;;;;;;;;x
+choose_orleanist_cult_desc;As an Arcenciste I must choose one of the venerated saints to who's cults I shall join.;;;;;;;;;x
+cult_marianne;Cult of Marianne;;;;;;;;;x
+cult_marianne_desc;This character's patron saint is Marianne, the guardian angel of France. She represents liberty, equality, and fraternity, the three founding principles of France, which Arcencists still adhere to. Marianne is said to have appeared before Jeanne before her death in order to give her the legendary sword Joyeuse. Sevillians claim this to be a Marian apparition, with Marianne herself being a perversion of the Blessed Virgin.;;;;;;;;x
+cult_michael;Cult of Michael;;;;;;;;;x
+cult_michael_desc;This character's patron saint is the archangel Michael. The Prince of the Heavenly Host, Arcencists believe that Michael is the one prophesied to slay the beast Therion, summoned forth by the demonic Queen, and from there slay the Queen herself. Arcencists strongly adhere to this prophecy and pray to Michael, believing that just as Michael's duty is to slay the Queen, it is their duty to slay her followers on Earth.;;;;;;;;x
+cult_charlemagne;Cult of Charlemagne;;;;;;;;;x
+cult_charlemagne_desc;This character's patron saint is Charlemagne. Just like in Novelist theology, Arcencists believe that Charlemagne was the first emperor of mankind before the Event. They believe that Charlemagne, as the most virtuous ruler of all time, ascended to Heaven and became a saint. Though the Catholic Church considers Charlemagne a beatus, the Papacy insists that veneration of him as a saint is heresy - one of the most important factors that led to the Arcencists' eventual excommunication.;;;;;;;x
+cult_jeanne;Cult of Jeanne;;;;;;;;;x
+cult_jeanne_desc;This character's patron saint is Jeanne d'Arc. The namesake of the Arcencist religion, the faithful vigorously pray to the Maid of Orleans, asking for her support in their tireless crusade against the worshippers of the Queen. A saint venerated by Catholics as well as Arcencists, her intercession is the most commonly sought out by the many warriors who fight against the Thelemites in France.;;;;;;;;x
 danish_opinion;[danish.GetName] Opinion;;;;;;;;;x
+claim_israeli_throne;Claim Israeli Throne;;;;;;;;;x
+claim_israeli_throne_desc;As a carrier of the blood of the messiah i must claim my birthright and take the holyland;;;;;;;;;x
 claim_dragon_throne;Claim Dragon Throne;;;;;;;;;x
 claim_dragon_throne_desc;As a relative of the House Wangchuk who holds my own significant power is it not right and just for I to rule the Thunder Dragon Empire as its Emperor?;;;;;;;;;x
 siam_scion;Ratchasakun;;;;;;;;;x
@@ -1630,6 +1671,7 @@ aromanian_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y
 alan_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y*§! Can prepare campaigns to §YReconquer Anatolia, Georgia, Armenia, and Azerbaijan§! if Orthodox;;;;;;;;;x
 scythian_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y*§! Can prepare campaigns to §YReconquer Anatolia, Georgia, Armenia, and Azerbaijan§! if Orthodox\n§Y*§! Can appoint §YShieldmaidens§!;;;;;;;;;x
 eastern_feudal_FEATURES;§Y*§! Rulers of this government type can castrate prisoners\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
+mandate_heaven;§Y*§! Rulers of this government type can castrate prisoners\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 chinese_imperial_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 roman_imperial_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 neoziamet_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
@@ -1672,7 +1714,7 @@ ezidi_FEATURES;§Y*§! More susceptible to conversion by Yazidism.;;;;;;;;;x
 sarna_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare Holy Wars.;;;;;;;;;x
 celtic_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare Holy Wars.\n§Y*§! Rulers get a decision to remove characters Nipples.\n§Y*§! Can Build Cairns in Temple Holdings;;;;;;;;;x
 celtic_pagan_reformed_FEATURES;§Y*§! Rulers get a decision to remove characters Nipples.\n§Y*§! Can Build Cairns in Temple Holdings;;;;;;;;;x
-inuit_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare Holy Wars\n§Y*§! Rulers can gain sympathy towards another religious group;;;;;;;;;x
+inuit_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare Holy Wars\n§Y*§! Rulers can gain sympathy towards another religious group\n§Y*§! Can Build Cairns in Temple Holdings;;;;;;;;;x
 inuit_pagan_reformed_FEATURES;§Y*§! Rulers can gain sympathy towards another religious group;;;;;;;;;x
 lakefolk_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare Holy Wars.;;;;;;;;;x
 novelist_FEATURES;§Y*§! Is excluded from standard pagan inferiority at conversion\n§Y*§! Rulers cannot declare Holy Wars.\n§Y*§! This religion deeply believes in the concept of honour on the battlefield and obtained through questing;;;;;;;;;x
@@ -1682,7 +1724,7 @@ starist_pagan_FEATURES;§Y*§! Inferior at conversion\n§Y*§! Rulers cannot declare
 thelemic_reformed_FEATURES;§Y*§! Followers of this religion can erect steles.\n§Y*§! Followers of this religion have a higher chance to produce bastards by random event. \n§Y*§! Followers of this religion can use the Tarot to divine their future. \n§Y*§! Followers of this religion can build Pyramids. \n§Y*§! Followers of this religion recieve a piety bonus for each lover they have up to 3.\n§Y*§! Characters are born under specific Zodiac signs;;;;;;;;;x
 thelemic_FEATURES;§Y*§! Followers of this religion can erect steles.\n§Y*§! Followers of this religion have a higher chance to produce bastards by random event. \n§Y*§! Followers of this religion can use the Tarot to divine their future. \n§Y*§! Followers of this religion can build Pyramids. \n§Y*§! Followers of this religion recieve a piety bonus for each lover they have up to 3. \n§Y*§! Provinces of this religion will undergo extreme unrest if ruled by a non-Old Thelemite. \n§Y*§! Followers of this religion are more likely to start and join independence revolts.\n§Y*§! Characters are born under specific Zodiac signs;;;;;;;;;x
 orange_king_FEATURES;§Y*§! Followers of this religion can erect steles.\n§Y*§! Followers of this religion have a higher chance to produce bastards by random event. \n§Y*§! Followers of this religion can use the Tarot to divine their future. \n§Y*§! Followers of this religion can build Pyramids. \n§Y*§! Followers of this religion recieve a piety bonus for each lover they have up to 3.\n§Y*§! Characters are born under specific Zodiac signs;;;;;;;;;x
-summer_queen_FEATURES;§Y*§! Followers of this religion can erect steles.\n§Y*§! Followers of this religion have a higher chance to produce bastards by random event. \n§Y*§! Followers of this religion can use the Tarot to divine their future. \n§Y*§! Followers of this religion can build Pyramids. \n§Y*§! Followers of this religion recieve a piety bonus for each lover they have up to 3.\n§Y*§! Characters are born under specific Zodiac signs\n§Y*§! Can Build Cairns in Temple Holdings\n§Y*§! Rulers cannot declare Holy Wars.\n§Y*§! This religion deeply believes in the concept of honour on the battlefield and obtained through questing;;;;;;;;;x
+summer_queen_FEATURES;§Y*§! Followers of this religion can erect steles.\n§Y*§! Followers of this religion have a higher chance to produce bastards by random event. \n§Y*§! Followers of this religion can use the Tarot to divine their future. \n§Y*§! Followers of this religion can build Pyramids. \n§Y*§! Followers of this religion recieve a piety bonus for each lover they have up to 3.\n§Y*§! Characters are born under specific Zodiac signs\n§Y*§! Can Build Cairns in Temple Holdings\n§Y*§! This religion deeply believes in the concept of honour on the battlefield and obtained through questing;;;;;;;;;x
 zarist_opinion;[zarist.GetName] Opinion;;;;;;;;;x
 e_nusantara;Nusantara;;;;;;;;;x
 e_nusantara_adj;Nusantari;;;;;;;;;x
@@ -2484,6 +2526,11 @@ ca_culture_francafrique_2;Tirailleur Barracks;;;;;;;;;;;;;x
 ca_culture_francafrique_3;Tirailleur Barracks;;;;;;;;;;;;;x
 ca_culture_francafrique_4;Tirailleur Barracks;;;;;;;;;;;;;x
 ca_culture_francafrique_1_desc;These barracks house the Tirailleurs, fearsome warriors whose marksmanship is said to come from an antediluvian corps used by the Republique.;;;;;;;;;;;;;x
+ca_culture_cushitic_1;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
+ca_culture_cushitic_2;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
+ca_culture_cushitic_3;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
+ca_culture_cushitic_4;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
+ca_culture_cushitic_1_desc;These barracks house infantry drilled in Cushite traditional drilling methods.;;;;;;;;;;;;;x
 title_ninja_desc;A ninja, also known as shinobi, serves under a ruler in a variety of roles, ranging from infiltration and bodyguarding to assassination. Some of them serve as mercenaries, while others remain loyal to individual rulers.;;;;;;;;;;;;;x
 title_court_poet_japan;Court Poet;;;;;;;;;;;;;x
 title_court_poet_japan_desc;Poetry has always been an highly regarded form of art in Japan. A skilled poet is often present in a Japanese Court, a sign of prestige for both the ruler and the poet himself.;;;;;;;;;;;;;x
@@ -2507,3 +2554,5 @@ title_chief_shipwright;Chief Shipwright;;;;;;;;;;;;;x
 title_chief_shipwright_desc;The Chief Shipwright is in charge of overseeing the repairs and construction of ships of the fleet. It's a very important position, given the state of the fleet is crucial for succesful raids.;;;;;;;;;;;;;x
 title_onmyoji;Onmyoji;;;;;;;;;;;;;x
 title_onmyoji_desc;The Onmyoji is a japanese court official who is in charge of astronomical observation, divining and prayer, to protect the ruler from evil spirits and to ensure he is offered sage advice.;;;;;;;;;;;;;x
+e_balikatan;Balikatan;;;;;;;;;;;;;x
+e_balikatan_adj;Balikatenyo;;;;;;;;;;;;;x

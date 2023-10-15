@@ -439,6 +439,102 @@ volley_tactic = {
 		factor = 1
 	}
 }
+flanking_volley_retreat_tactic = {
+	days = 18
+	sprite = 6
+	group = volley
+
+	trigger = {
+		phase = skirmish  
+		OR = {
+			AND = {
+				archers = 0.01
+				NOT = { archers = 0.4 }
+			}
+			AND = {
+				gunmen = 0.01
+				NOT = { gunmen = 0.4 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 10
+			}
+			light_troops = { 
+				who = archers
+				value = 0.1
+			}
+		}
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 10
+			}
+			light_troops = { 
+				who = gunmen
+				value = 0.1
+			}
+		}
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 14
+			}
+			light_troops = { 
+				who = archers
+				value = 0.2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 14
+			}
+			light_troops = { 
+				who = gunmen
+				value = 0.2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 18
+			}
+			light_troops = { 
+				who = archers
+				value = 0.3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			flank_has_leader = yes
+			leader = {
+				martial = 18
+			}
+			light_troops = { 
+				who = gunmen
+				value = 0.3
+			}
+		}
+	}
+
+	archers_offensive = 2.75
+	gunmen_offensive = 2.75
+	enemy = {
+		group = harass
+		factor = 1
+	}
+}
 
 swarm_volley_tactic = {
 	days = 18
@@ -3382,7 +3478,8 @@ massive_longbow_volley_tactic = {
 		leader = {
 			OR = {
 				culture_group = brittannic
-				culture_group = celtic
+				culture_group = goidelic
+				culture_group = brythonic
 				culture_group = anglo_frisian
 			}
 		}
@@ -3517,6 +3614,8 @@ mountain_ambush_tactic = {
 			martial = 9
 			NOR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
 				culture_group = armenian_group
 				culture_group = caucasian
 				culture_group = iranian
@@ -3696,6 +3795,8 @@ improved_mountain_ambush_tactic = {
 			martial = 9
 			OR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
 				culture_group = armenian_group
 				culture_group = caucasian
 				culture_group = iranian

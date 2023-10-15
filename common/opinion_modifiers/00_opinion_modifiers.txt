@@ -3215,6 +3215,19 @@ opinion_charge_dw = {
 	execute_reason = yes
 	months = 24
 }
+opinion_charge_corrupt = {
+	opinion = -20
+	prison_reason = yes
+	months = 24
+}
+opinion_charged_corrupt = {
+	opinion = -20
+	months = 24
+}
+opinion_accepted_corruption = {
+	opinion = 20
+	months = 24
+}
 opinion_charge_traitor = {
 	opinion = -50
 	prison_reason = yes
@@ -4289,6 +4302,9 @@ opinion_hermetic_apprentice = {
 opinion_my_chinese_pet = { #Checks on death of chinese courtier to determine if his original liege was his killer.
 	inherit = yes
 }
+opinion_documents_burned = {
+	inherit = yes
+}
 
 opinion_scared_into_submission = {
 	opinion = 20
@@ -4400,6 +4416,32 @@ opinion_selfish_crusader = {
 	opinion = -20
 }
 
+# Banking stuff
+owes_me_money = {
+	opinion = 1
+	inherit = yes
+}
+lent_me_money = {
+	opinion = 1
+	inherit = yes
+}
+refused_loan = {
+	opinion = -1
+	months = 12
+}
+defaulted = {
+	opinion = -15
+	inherit = yes
+}
+defaulted_other = {
+	opinion = -15
+	inherit = yes
+}
+
+forgave_debts = {
+	opinion = 20
+	months = 240
+}
 opinion_coronation_money_refund = {
 }
 opinion_requested_excommunication = {

@@ -376,6 +376,7 @@ targetted_decisions = {
 			OR = {
 				religion_group = muslim
 				religion = calvinist
+				religion = penitente
 				religion = girondist
 				religion = genevist
 				religion = neohuguenot
@@ -457,6 +458,10 @@ targetted_decisions = {
 					is_alternate_start = no
 				}
 				AND = { 
+					religion_group = muslim
+					is_alternate_start = no
+				}
+				AND = { 
 					religion_group = syncratic_group
 					is_alternate_start = no
 				}
@@ -481,6 +486,7 @@ targetted_decisions = {
 			NOR = { 
 				trait = incapable 
 				trait = monk
+				trait = dervish
 				trait = nun
 				trait = muni
 				trait = aryika
@@ -653,6 +659,20 @@ targetted_decisions = {
 			if = {
 				limit = { 
 					has_dlc = "Mystics" 
+					is_in_society = no		
+					OR = {
+						religion = koranist
+						religion = alevi
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_qurani
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
 					is_in_society = no
 					OR = {
 						religion = koptic
@@ -676,6 +696,7 @@ targetted_decisions = {
 						religion = maunaxite_reformed 
 						religion = koyapunem
 						religion = maunaxite 
+						religion = sarvodaya
 						religion = parabrahmanist 
 						religion = kalikula
 						religion = shaivasiddhanta

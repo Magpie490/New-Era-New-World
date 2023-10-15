@@ -10314,6 +10314,10 @@ add_ascetic_trait_effect = {
 			add_trait = aryika
 		}
 		if = {
+			limit = { OR = { religion_group = muslim religion = islamity religion = muwahidunna} }
+			add_trait = dervish
+		}
+		if = {
 			limit = { religion_group = buddhist_group }
 			add_trait = bhikkhuni
 		}
@@ -10343,6 +10347,10 @@ add_ascetic_trait_effect = {
 		if = {
 			limit = { religion = jain }
 			add_trait = muni
+		}
+		if = {
+			limit = { OR = { religion_group = muslim religion = islamity religion = muwahidunna} }
+			add_trait = dervish
 		}
 		if = {
 			limit = { religion_group = buddhist_group }
@@ -12762,10 +12770,25 @@ spawn_good_commander_effect = {
 		if = {
 			limit = {
 				OR = {
-					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed
-					has_religion_feature = religion_astrology
-					has_religion_feature = religion_feature_folklorist			
+					religion = thelemic_reformed
+			religion = summer_queen
+			religion = theosophy
+			religion = thelemic
+			religion = orange_king
+			religion = nousthreskeia_reformed
+			religion = nousthreskeia
+			religion = druze
+			religion = alawite
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = starist_pagan
+			religion = starist_pagan_reformed
+			religion = neo_zorvanite
+			religion = poseidonian
+			religion = raelian
+			has_religion_feature = religion_astrology
+			has_religion_feature = religion_feature_folklorist_2
+			religion = mandaeanism			
 				}
 			}
 			add_western_zodiac_trait_effect = yes
@@ -12916,10 +12939,25 @@ spawn_great_commander_effect = {
 		if = {
 			limit = {
 				OR = {
-					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed
-					has_religion_feature = religion_astrology
-					has_religion_feature = religion_feature_folklorist			
+					religion = thelemic_reformed
+			religion = summer_queen
+			religion = theosophy
+			religion = thelemic
+			religion = orange_king
+			religion = nousthreskeia_reformed
+			religion = nousthreskeia
+			religion = druze
+			religion = alawite
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = starist_pagan
+			religion = starist_pagan_reformed
+			religion = neo_zorvanite
+			religion = poseidonian
+			religion = raelian
+			has_religion_feature = religion_astrology
+			has_religion_feature = religion_feature_folklorist_2
+			religion = mandaeanism				
 				}
 			}
 
@@ -13219,10 +13257,25 @@ spawn_fantastic_commander_effect = {
 		if = {
 			limit = {
 				OR = {
-					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed
-					has_religion_feature = religion_astrology
-					has_religion_feature = religion_feature_folklorist			
+					religion = thelemic_reformed
+			religion = summer_queen
+			religion = theosophy
+			religion = thelemic
+			religion = orange_king
+			religion = nousthreskeia_reformed
+			religion = nousthreskeia
+			religion = druze
+			religion = alawite
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = starist_pagan
+			religion = starist_pagan_reformed
+			religion = neo_zorvanite
+			religion = poseidonian
+			religion = raelian
+			has_religion_feature = religion_astrology
+			has_religion_feature = religion_feature_folklorist_2
+			religion = mandaeanism			
 				}
 			}
 
@@ -20936,6 +20989,7 @@ fire_haruspicy_event_effect = {
 					OR = { 
 						has_religion_feature = religion_haruspicy
 						religion = sanamahist
+						religion = raelian
 						has_religion_feature = religion_feature_folklorist_2
 						has_religion_feature = religion_feature_lakefolk_pagan
 						has_religion_feature = religion_feature_celtic
@@ -20966,6 +21020,7 @@ fire_haruspicy_event_effect = {
 					OR = { 
 						has_religion_feature = religion_haruspicy
 						religion = sanamahist
+						religion = raelian
 						has_religion_feature = religion_feature_folklorist_2
 						has_religion_feature = religion_feature_lakefolk_pagan
 						has_religion_feature = religion_feature_celtic
@@ -21825,10 +21880,25 @@ spawn_debutante_effect = {
 		if = {
 			limit = {
 				OR = {
-					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed
-					has_religion_feature = religion_astrology
-					has_religion_feature = religion_feature_folklorist			
+					religion = thelemic_reformed
+			religion = summer_queen
+			religion = theosophy
+			religion = thelemic
+			religion = orange_king
+			religion = nousthreskeia_reformed
+			religion = nousthreskeia
+			religion = druze
+			religion = alawite
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = starist_pagan
+			religion = starist_pagan_reformed
+			religion = neo_zorvanite
+			religion = poseidonian
+			religion = raelian
+			has_religion_feature = religion_astrology
+			has_religion_feature = religion_feature_folklorist_2
+			religion = mandaeanism			
 				}
 			}
 

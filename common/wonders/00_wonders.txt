@@ -248,6 +248,7 @@ wonder_mosque = {
 			religion = muwahidunna
 			religion = jugoslavist
 			religion = bahai
+			muslim_syncretic_religion = yes
 		}
 	}
 	active = {
@@ -258,6 +259,7 @@ wonder_mosque = {
 				religion = muwahidunna
 				religion = jugoslavist
 				religion = bahai
+				muslim_syncretic_religion = yes
 			}
 		}
 	}
@@ -2047,7 +2049,13 @@ wonder_university = {
 		is_nomadic = no
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				AND = {
+					religion_group = pagan_group
+					NOR = {
+						religion = hellenic_pagan
+						religion = novelist
+					}
+				}
 			}
 			is_reformed_religion = yes
 		}
@@ -2055,7 +2063,13 @@ wonder_university = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				AND = {
+					religion_group = pagan_group
+					NOR = {
+						religion = hellenic_pagan
+						religion = novelist
+					}
+				}
 			}
 			ROOT = {
 				is_reformed_religion = yes
@@ -2190,7 +2204,13 @@ wonder_library = {
 		is_nomadic = no
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				AND = {
+					religion_group = pagan_group
+					NOR = {
+						religion = hellenic_pagan
+						religion = novelist
+					}
+				}
 			}
 			ROOT = {
 				is_reformed_religion = yes
@@ -2200,7 +2220,13 @@ wonder_library = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				AND = {
+					religion_group = pagan_group
+					NOR = {
+						religion = hellenic_pagan
+						religion = novelist
+					}
+				}
 			}
 			ROOT = {
 				is_reformed_religion = yes
@@ -2432,7 +2458,6 @@ wonder_pyramid = {
 		OR = {
 			culture = misri
 			culture = coptic
-			culture = zabbalin
 			trait = lunatic
 			has_religion_feature = religion_feature_pyramids
 			religion = thelemic_reformed
@@ -2446,7 +2471,6 @@ wonder_pyramid = {
 			OR = {
 				culture = misri
 				culture = coptic
-				culture = zabbalin
 				trait = lunatic
 				has_religion_feature = religion_feature_pyramids
 				religion = thelemic_reformed
@@ -2801,7 +2825,6 @@ wonder_pyramid_giza = {
 			OR = {
 				culture = misri
 				culture = coptic
-				culture = zabbalin
 				trait = lunatic
 				has_religion_feature = religion_feature_pyramids
 				religion = thelemic_reformed

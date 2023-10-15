@@ -28,6 +28,7 @@ TRIBAL_PIETY_RET_1 = {
 			religion = celtic_pagan
 			religion = inuit_pagan_reformed
 			religion = inuit_pagan
+			religion = aurorean
 			religion = lakefolk_pagan_reformed
 			religion = lakefolk_pagan
 			religion = folklorist_reformed
@@ -84,6 +85,7 @@ TRIBAL_PIETY_RET_2 = {
 			religion = celtic_pagan
 			religion = inuit_pagan_reformed
 			religion = inuit_pagan
+			religion = aurorean
 			religion = lakefolk_pagan_reformed
 			religion = lakefolk_pagan
 			religion = folklorist_reformed
@@ -1511,6 +1513,50 @@ RETTYPE_TECTONIC =
 		gunmen_morale = 0.25
 	}
 }
+RETTYPE_DEBTCOLLECTORS = 
+{
+	first_type = 1
+	first_amount = 200
+	
+	second_type = 5
+	second_amount = 100
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		society_member_of = banking_society
+	}
+	maintenance_multiplier = 1.75
+	
+	modifier = {
+		heavy_infantry_defensive = 0.35
+		heavy_infantry_offensive = 0.25
+		archers_offensive = 0.25
+	}
+}
+RETTYPE_KGB_AGENTS = 
+{
+	first_type = 0
+	first_amount = 250
+	
+	second_type = 5
+	second_amount = 100
+
+	special_troops = gunmen
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		society_member_of = the_assassins
+	}
+	maintenance_multiplier = 1.75
+	
+	modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_morale = 0.35
+		archers_offensive = 0.25
+	}
+}
 RETTYPE_CUL_ROMANIAN = 
 {
 	first_type = 1
@@ -2425,6 +2471,8 @@ RETTYPE_CUL_ARAB =
 			culture_group = eastern_sudanic
 			culture_group = abbala_arabic
 			culture_group = saharan
+			culture = bole
+			culture = kotoko
 		}
 		NOT = {culture = amriqi}
 	}
@@ -2529,6 +2577,8 @@ RETTYPE_CUL_IRISH =
 		OR = {
 			culture = irish
 			culture = high_irish
+			culture = munsterian
+			culture = ulsterian
 			culture = yola
 			culture = ulsterite
 			culture = aeslabh
@@ -2594,8 +2644,11 @@ RETTYPE_CUL_W_AFR =
 			culture_group = mande
 			culture_group = senegambian
 			culture_group = niger_congolese
-			culture_group = chadic
-			
+		}
+		NOR = {
+			culture = igbo
+			culture = yoruba
+			culture = nigerian
 		}
 	}
 	
@@ -2609,6 +2662,11 @@ RETTYPE_CUL_ORIGINAIRES = {
 	first_type = 5
 	first_amount = 250
 	
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = gunmen
+	
 	potential = {
 		higher_tier_than = BARON
 		is_nomadic = no
@@ -2620,6 +2678,8 @@ RETTYPE_CUL_ORIGINAIRES = {
 	modifier = {
 		archers_offensive = 0.3
 		archers_defensive = 0.3
+		gunmen_offensive = 0.3
+		gunmen_defensive = 0.3
 	}
 }
 RETTYPE_CUL_BEUR = {
@@ -2636,6 +2696,76 @@ RETTYPE_CUL_BEUR = {
 	modifier = {
 		light_infantry_offensive = 0.45
 		light_infantry_morale = 0.35
+	}
+}
+RETTYPE_CUL_IGBO = {
+	first_type = 0
+	first_amount = 150
+	
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = gunmen
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = igbo
+		}
+	}
+	modifier = {
+		light_infantry_defensive = 0.25
+		light_infantry_offensive = 0.25
+		gunmen_defensive = 0.2
+		gunmen_offensive = 0.2
+	}
+}
+RETTYPE_CUL_NIGERIAN = {
+	first_type = 4
+	first_amount = 200
+	
+	second_type = 6 
+	second_amount = 50
+	
+	special_troops = gunmen
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = nigerian
+			culture = yoruba
+		}
+	}
+	modifier = {
+		knights_defensive = 0.25
+		knights_offensive = 0.25
+		gunmen_defensive = 0.2
+		gunmen_offensive = 0.2
+	}
+}
+RETTYPE_CUL_HAUSA = {
+	first_type = 3
+	first_amount = 250
+	
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = gunmen
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = hausa
+		}
+	}
+	modifier = {
+		light_cavalry_defensive = 0.25
+		light_cavalry_offensive = 0.25
+		gunmen_defensive = 0.2
+		gunmen_offensive = 0.2
 	}
 }
 
@@ -3319,7 +3449,7 @@ RETTYPE_CUL_GAN =
 
 RETTYPE_CUL_HK = 
 {
-	first_type = 4
+	first_type = 5
 	first_amount = 200
 
 	potential = {
@@ -3541,6 +3671,8 @@ RETTYPE_CUL_IRISH2 =
 		OR = {
 			culture = irish
 			culture = high_irish
+			culture = munsterian
+			culture = ulsterian
 			culture = aeslabh
 		}
 	}
@@ -3586,12 +3718,13 @@ RETTYPE_CUL_OLDANGLO =
 		OR = {
 			culture = westlander
 			culture = northlander
+			culture = eastlander
 		}
 	}
 	
 	modifier = {
-		archers_defensive = 0.15
-		archers_offensive = 0.15
+		knights_defensive = 0.15
+		knights_offensive = 0.15
 	}
 }
 RETTYPE_CUL_BRETON = 
@@ -4056,24 +4189,6 @@ RETTYPE_CUL_MUSLIMPH =
 	modifier = {
 		heavy_infantry_defensive = 0.2
 		heavy_infantry_morale = 0.15
-	}
-}
-RETTYPE_CUL_AETA =
-{
-	first_type = 0
-	first_amount = 300
-	
-	potential = {
-		higher_tier_than = BARON
-		is_nomadic = no
-		OR = {
-		culture_group = aeta_group
-		}
-	}
-	
-	modifier = {
-		light_infantry_offensive = 0.3
-		light_infantry_morale = 0.15
 	}
 }
 RETTYPE_CUL_CHAVACANO=

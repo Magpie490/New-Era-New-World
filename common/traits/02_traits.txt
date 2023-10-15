@@ -266,6 +266,22 @@ viking = {
 	
 }
 
+dervish = {
+	potential = {
+		is_ruler = no
+		religion_group = muslim
+	}
+	
+	monthly_character_piety = 0.3
+	same_religion_opinion = 5
+	
+	religious = yes # Lost immediately on religion change
+	cannot_inherit = yes
+	customizer = no
+	random = no
+	
+	male_compliment = COMPL_MONK
+}
 monk = {
 	potential = {
 		is_ruler = no
@@ -328,36 +344,6 @@ sickly = {
 	}
 	
 	health = -2.5
-	
-	customizer = no
-	random = no
-}
-
-mutazilite = {
-	learning = 5
-	
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		ashari
-	}
-	
-	opposite_opinion = -30
-	
-	customizer = no
-	random = no
-}
-
-ashari = {
-	monthly_character_piety = 1
-	
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		mutazilite
-	}
-	
-	opposite_opinion = -30
 	
 	customizer = no
 	random = no
@@ -1360,9 +1346,9 @@ adventurer = {
 
 	ai_ambition = 40
 	
-	customizer = no
+	customizer = yes
 	random = no
-
+	ruler_designer_cost = 0
 	male_insult = INSULT_UPSTART
 	female_insult = INSULT_UPSTART
 	child_insult = INSULT_PEABRAIN

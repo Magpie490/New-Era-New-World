@@ -21,6 +21,9 @@ republic_governments = {
 			japanese_feudal
 			colonial_government
 		}
+		vassal_call_to_arms = {
+			nomadtribal_government
+		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
@@ -95,7 +98,7 @@ republic_governments = {
 					title = k_byzantium
 					title = k_turkey
 					title = k_laconia
-					title = d_bremen
+					title = d_bremenn
 					title = d_saxon
 					title = d_engria
 					title = d_munster_deutschland
@@ -118,8 +121,77 @@ republic_governments = {
 					has_title_flag = cypriote_member_state
 					has_title_flag = new_oligarchic_state
 					has_title_flag = established_oligarchic_state
-					has_character_flag = established_oligarchic_ruler
+					title = e_ming
+					title = e_qi_wuist
+					title = e_qing
+					title = e_katoliko_china
+					title = e_yuan
+					title = e_maoist
+					title = e_legalist
+					title = e_taoist
+					title = e_sui
+					title = e_white_lotus
+					title = e_tridemism
+					title = e_wuxia
+					title = e_xianxia
+					title = e_heavenly
+					title = e_han
+					title = e_qin
+					title = e_hui
+					title = e_jin
+					title = e_yangtze
+					title = e_zhujiang
+					title = e_minyue
 				}
+			}
+			any_demesne_title = {
+				NOR = {
+					title = k_san_marino
+					title = k_gujarat
+					title = d_toscana
+					title = d_lombardia
+                    title = d_adessida
+					title = d_latium
+					title = d_umbria
+					title = d_abruzzo
+					title = d_romagna
+					title = d_emilia
+					title = d_piemonte
+					title = k_italy
+					title = k_tuscany
+					title = k_lombardo-veneto
+					title = d_sudtirol
+					title = d_friuli
+					title = d_saurashtra
+					title = d_anartta
+					title = d_krete
+					title = d_peloponnese
+					title = d_attika
+					title = d_cephalonia
+					title = d_marmara
+					title = k_byzantium
+					title = k_turkey
+					title = k_laconia
+					title = d_bremenn
+					title = d_saxon
+					title = d_engria
+					title = d_munster_deutschland
+					title = k_saxon
+					title = k_prussia
+					title = k_hessia
+					title = k_saxony
+					title = d_abydos
+					title = d_nikaea
+					title = d_moskva
+					title = d_tver
+					title = e_roman_republic
+					title = e_russian_republic
+					title = e_hellenic_republic
+					title = e_turkish_republic
+					has_title_flag = established_oligarchic_state
+					has_title_flag = cypriote_member_state
+					has_title_flag = new_oligarchic_state
+				}	
 			}
 			has_oligarchy_title_trigger = no
 			NOT = { has_character_flag = cypriote_member_state_turning }

@@ -799,6 +799,8 @@ character_event = {
 		anglican = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
 		quaker = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
 		orleanist = { save_persistent_event_target = { name = one_holy_order scope = d_orleanist_order } }
+		raelian = { save_persistent_event_target = { name = one_holy_order scope = d_raelian_order } }
+		mormon = { save_persistent_event_target = { name = one_holy_order scope = d_mormon_order } }
 		girondist = { save_persistent_event_target = { name = one_holy_order scope = d_girondist_order } }
 		calvinist = { save_persistent_event_target = { name = one_holy_order scope = d_huguenots } }
 		genevist = { save_persistent_event_target = { name = one_holy_order scope = d_huguenots } }
@@ -851,6 +853,7 @@ character_event = {
 		kirishitan = { save_persistent_event_target = { name = one_holy_order scope = d_kirishitan_order } }
 		eastern_lightning = { save_persistent_event_target = { name = one_holy_order scope = d_easternlightning_order } }
 		syafi = { save_persistent_event_target = { name = one_holy_order scope = d_syafi_order } }
+		qingzhen = { save_persistent_event_target = { name = one_holy_order scope = d_qingzhen_order } }
 		
 		# Second ones
 		sevillian = { save_persistent_event_target = { name = two_holy_order scope = d_carmelites } }
@@ -2143,45 +2146,7 @@ narrative_event = {#The Formation of the Egyptian Brotherhood in response to the
 		
 		NOT = { is_title_active = d_egyptian_brotherhood }
 		OR = {
-			AND = {
-				785 = {#Farrama
-					NOR = { 
-						owner = { top_liege = { religion_group = muslim } }
-						owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-					}
-				}
-				788 = {#Sinai
-					NOR = { 
-						owner = { top_liege = { religion_group = muslim } }
-						owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-					}
-				}
-			}
 			802 = {#Alexandria
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			799 = {#Rasheed/Gabiyaha
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			798 = {#Damietta
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			789 = {#Pelusia
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			788 = {#Sinai
 				NOR = { 
 					owner = { top_liege = { religion_group = muslim } }
 					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
@@ -2199,19 +2164,7 @@ narrative_event = {#The Formation of the Egyptian Brotherhood in response to the
 					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
 				}
 			}
-			797 = {#Manupura/El-Malhalla
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
 			800 = {#Giza
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			790 = {#Bilbays
 				NOR = { 
 					owner = { top_liege = { religion_group = muslim } }
 					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						

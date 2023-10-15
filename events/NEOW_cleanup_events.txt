@@ -2,6 +2,7 @@ namespace=cleanup
 namespace=celtic
 namespace=razumist
 namespace=sufist
+namespace=gods
 
 character_event = { # Give Indian characters appropriate schools at game start
 	id = cleanup.1
@@ -265,7 +266,7 @@ character_event = {
 		remove_trait = japanese_bad_honour
 		remove_trait = japanese_1_honour
 		remove_trait = japanese_2_honour
-		remove_trait = japanese_2_honour
+		remove_trait = japanese_3_honour
 	}
 }
 character_event = { 
@@ -291,7 +292,7 @@ character_event = {
 		remove_trait = summer_queen_bad_honour
 		remove_trait = summer_queen_1_honour
 		remove_trait = summer_queen_2_honour
-		remove_trait = summer_queen_2_honour
+		remove_trait = summer_queen_3_honour
 	}
 }
 character_event = {
@@ -378,6 +379,73 @@ character_event = {
 			modifier = emperor_follows_faith
 			years = 5
 		}
+	}
+}
+
+character_event = {
+	id = cleanup.9988
+	desc = "replacegrandmistress"
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = d_raelian_order
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 30
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 35
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 40
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 45
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 50
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 55
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = raelian
+				culture = french
+				female = yes
+				age = 60
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
 	}
 }
 character_event = { 
@@ -514,6 +582,7 @@ character_event = {
 					government = indian_feudal
 					government = phonocratic_government
 					government = eastern_feudal
+					government = mandate_heaven
 					government = chinese_imperial_government
 					government = order_government
 					government = roman_imperial_government
@@ -588,6 +657,7 @@ character_event = {
 					government = indian_feudal
 					government = phonocratic_government
 					government = eastern_feudal
+					government = mandate_heaven
 					government = chinese_imperial_government
 					government = order_government
 					government = roman_imperial_government
@@ -1177,6 +1247,7 @@ character_event = {
 	trigger = {
 		NOR = {
 			government = eastern_feudal
+			government = mandate_heaven
 			government = chinese_imperial_government
 			government = bhutanese_decayed_government
 			government = bhutanese_restored_government
@@ -1781,7 +1852,11 @@ character_event = {
 	
 	option = {
 		name = celtic.248.a
-		scaled_wealth = -0.25
+		scaled_wealth = {
+			value = -0.15
+			min = -5
+			max = -75
+		}
 		hidden_tooltip = {
 			character_event = { id = celtic.253 days = 5 }
 		}
@@ -1790,12 +1865,24 @@ character_event = {
 		name = celtic.248.b
 		trigger = {
 			OR = {
-				trait = poet
-				any_vassal = {
+				OR = {
 					trait = poet
+					trait = bard_sibir
+					trait = baul
+				}
+				any_vassal = {
+					OR = {
+						trait = poet
+						trait = bard_sibir
+						trait = baul
+					}
 				}
 				any_courtier = {
-					trait = poet
+					OR = {
+						trait = poet
+						trait = bard_sibir
+						trait = baul
+					}
 				}
 			}
 		}
@@ -1817,7 +1904,7 @@ character_event = {
 		name = celtic.249.a
 		if = {
 			limit = {
-				NOT = { learning = 8 }
+				NOT = { diplomacy = 8 }
 			}
 			random_list = {
 				35 = { character_event = { id = celtic.250 days = 2 tooltip = "celtic.250.tooltip" } } #bad
@@ -1827,8 +1914,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				learning = 8
-				NOT = { learning = 16 }
+				diplomacy = 8
+				NOT = { diplomacy = 16 }
 			}
 			random_list = {
 				25 = { character_event = { id = celtic.250 days = 2 tooltip = "celtic.250.tooltip" } } #bad
@@ -1838,7 +1925,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				learning = 16
+				diplomacy = 16
 			}
 			random_list = {
 				15 = { character_event = { id = celtic.250 days = 2 tooltip = "celtic.250.tooltip" } } #bad
@@ -1947,6 +2034,202 @@ character_event = {
 				15 = { character_event = { id = celtic.250 days = 2 tooltip = "celtic.250.tooltip" } } #bad
 				50 = { character_event = { id = celtic.251 days = 2 tooltip = "celtic.251.tooltip" } } #neutral
 				35 = { character_event = { id = celtic.252 days = 2 tooltip = "celtic.252.tooltip" } } #good
+			}
+		}
+	}
+}
+#Offerings start
+character_event = {
+	id = gods.248
+	desc = gods.248.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.248.a
+		scaled_wealth = {
+			value = -0.15
+			min = -5
+			max = -75
+		}
+		hidden_tooltip = {
+			character_event = { id = gods.253 days = 5 }
+		}
+	}
+	option = {
+		name = gods.248.b
+		trigger = {
+			OR = {
+				OR = {
+					trait = poet
+					trait = bard_sibir
+					trait = baul
+				}
+				any_vassal = {
+					OR = {
+						trait = poet
+						trait = bard_sibir
+						trait = baul
+					}
+				}
+				any_courtier = {
+					OR = {
+						trait = poet
+						trait = bard_sibir
+						trait = baul
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = gods.249 days = 5 }
+		}
+	}
+}
+
+#Offerings middle (Poem)
+character_event = {
+	id = gods.249
+	desc = gods.249.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.249.a
+		if = {
+			limit = {
+				NOT = { diplomacy = 8 }
+			}
+			random_list = {
+				35 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				15 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
+			}
+		}
+		if = {
+			limit = {
+				diplomacy = 8
+				NOT = { diplomacy = 16 }
+			}
+			random_list = {
+				25 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				25 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
+			}
+		}
+		if = {
+			limit = {
+				diplomacy = 16
+			}
+			random_list = {
+				15 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				35 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
+			}
+		}
+	}
+}
+
+#Offerings bad
+character_event = {
+	id = gods.250
+	desc = gods.250.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.250.a
+		prestige = -25
+		piety = -15
+		clr_character_flag = gods_offerings_giving
+		add_character_modifier = {
+			name = gods_offerings_bad
+			duration = 730
+		}
+	}
+}
+
+#Offerings neutral
+character_event = {
+	id = gods.251
+	desc = gods.251.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.251.a
+		piety = 5
+		clr_character_flag = gods_offerings_giving
+		add_character_modifier = {
+			name = gods_offerings_neutral
+			duration = 730
+		}
+	}
+}
+
+#Offerings good
+character_event = {
+	id = gods.252
+	desc = gods.252.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.252.a
+		prestige = 25
+		piety = 15
+		clr_character_flag = gods_offerings_giving
+		add_character_modifier = {
+			name = gods_offerings_good
+			duration = 730
+		}
+	}
+}
+
+#Offerings middle (Gold)
+character_event = {
+	id = gods.253
+	desc = gods.253.desc
+	picture = GFX_evt_Pagan_dolmen
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gods.253.a
+		if = {
+			limit = {
+				NOT = { stewardship = 8 }
+			}
+			random_list = {
+				35 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				15 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
+			}
+		}
+		if = {
+			limit = {
+				stewardship = 8
+				NOT = { stewardship = 16 }
+			}
+			random_list = {
+				25 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				25 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
+			}
+		}
+		if = {
+			limit = {
+				stewardship = 16
+			}
+			random_list = {
+				15 = { character_event = { id = gods.250 days = 2 tooltip = "gods.250.tooltip" } } #bad
+				50 = { character_event = { id = gods.251 days = 2 tooltip = "gods.251.tooltip" } } #neutral
+				35 = { character_event = { id = gods.252 days = 2 tooltip = "gods.252.tooltip" } } #good
 			}
 		}
 	}
@@ -2527,8 +2810,11 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 		any_demesne_title = {
 			limit = {
 				NOT = {
-					is_theocracy = no
 					has_law = succ_phonocratic_elective
+				}
+				NOR = {
+					holding_type = temple
+					holding_type = city
 				}
 			}
 			add_law = {
@@ -3465,28 +3751,6 @@ character_event = {
 	}
 }
 character_event = {
-	id = cleanup.131
-	
-	hide_window = yes
-	
-	ai = no
-	
-	trigger = {
-		primary_title = {
-			NOT = { has_title_flag = established_oligarchic_state }
-		}
-		government = oligarchic_republic
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate = {
-		primary_title = {
-			set_title_flag = established_oligarchic_state
-		}
-	}
-}
-character_event = {
 	id = cleanup.132
 	
 	hide_window = yes
@@ -3501,8 +3765,9 @@ character_event = {
 		days = 1
 	}
 	immediate = {
+		set_character_flag = established_oligarchic_ruler
 		primary_title = {
-			set_character_flag = established_oligarchic_ruler
+			set_title_flag = established_oligarchic_state
 		}
 	}
 }
@@ -6067,7 +6332,7 @@ character_event = {
 	}
 }
 character_event = {
-	id = cleanup.241
+	id = cleanup.29100
 	hide_window = yes	
 	min_age = 16
 	
@@ -6179,7 +6444,7 @@ province_event = {
 	}
 }
 province_event = {
-	id = cleanup.2226
+	id = cleanup.22269
 	hide_window = yes	
 	
 	trigger = {
@@ -6801,6 +7066,159 @@ province_event = {
 	}
 }
 province_event = {
+	id = cleanup.841
+	desc = EVTDESC_CU_841
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		owner = {
+			NOT = { has_character_modifier = cruelly_drove_out_minority }
+		}
+		NOR = {
+			has_province_modifier = mormon_minority
+			religion = mormon
+			is_looting_in = ROOT
+			is_occupied = yes
+			units_in_province = 1
+			has_disease = yes
+		}
+	}
+	mean_time_to_happen = {
+		months = 1080
+		modifier = {
+			factor = 0.95
+			has_province_modifier = prosperity_modifier_1 
+		}
+		modifier = {
+			factor = 0.90
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 0.85
+			has_province_modifier = prosperity_modifier_3
+		}
+	}
+	option = {
+		name = "EVTOPTACU841"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = just }
+			}
+		}
+		add_province_modifier = {
+			name = mormon_minority
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBCU841"
+		trigger = {
+			NOT = { 
+				culture = mormon 
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = charitable }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+		}
+		wealth = 25
+		owner = {
+			add_character_modifier = {
+				name = cruelly_drove_out_minority
+				duration = 90
+			}
+		}
+	}
+}
+province_event = {
+	id = cleanup.842
+	desc = EVTDESC_CU_842
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = mormon_minority
+		religion = mormon
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = mormon_minority
+	}
+	option = {
+		name = "EVTOPTACU42"
+	}
+}
+province_event = {
+	id = cleanup.843
+	desc = EVTDESC_CU_843
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = mormon_minority
+	}
+	mean_time_to_happen = {
+		months = 960
+		modifier = {
+			factor = 0.95
+			is_looting_in = ROOT
+		}
+		modifier = {
+			factor = 0.95
+			is_occupied = yes
+		}
+		modifier = {
+			factor = 0.95
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.95
+			has_disease = yes
+		}
+	}
+	immediate={
+		remove_province_modifier = mormon_minority
+	}
+	option = {
+		name = "EVTOPTACU843"
+	}
+}
+province_event = {
 	id = cleanup.41
 	desc = EVTDESC_CU_41
 	
@@ -6814,6 +7232,7 @@ province_event = {
 		OR = {
 			region = world_europe_west_brittania
 			region = world_europe_west_francia
+			region = custom_russia
 		}
 		NOR = {
 			has_province_modifier = ashkenazi_minority
@@ -7113,8 +7532,8 @@ province_event = {
 	}
 }
 province_event = {
-	id = cleanup.241
-	desc = EVTDESC_CU_241
+	id = cleanup.24100
+	desc = EVTDESC_CU_24100
 	
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_diplomacy
@@ -7149,7 +7568,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTACU241"
+		name = "EVTOPTACU24100"
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -7175,7 +7594,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTBCU241"
+		name = "EVTOPTBCU24100"
 		trigger = {
 			NOT = { 
 				culture = marocain 
@@ -7210,8 +7629,8 @@ province_event = {
 	}
 }
 province_event = {
-	id = cleanup.242
-	desc = EVTDESC_CU_242
+	id = cleanup.24200
+	desc = EVTDESC_CU_24200
 	
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_diplomacy
@@ -7227,12 +7646,12 @@ province_event = {
 		remove_province_modifier = marocain_minority
 	}
 	option = {
-		name = "EVTOPTACU42"
+		name = "EVTOPTACU4200"
 	}
 }
 province_event = {
-	id = cleanup.243
-	desc = EVTDESC_CU_243
+	id = cleanup.24300
+	desc = EVTDESC_CU_24300
 	
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_diplomacy
@@ -7263,7 +7682,7 @@ province_event = {
 		remove_province_modifier = marocain_minority
 	}
 	option = {
-		name = "EVTOPTACU243"
+		name = "EVTOPTACU24300"
 	}
 }
 character_event = {
@@ -7285,6 +7704,15 @@ character_event = {
 			add_province_modifier = { name = ashkenazi_minority duration = -1 }
 		}
 		57 = {
+			add_province_modifier = { name = ashkenazi_minority duration = -1 }
+		}
+		575 = {
+			add_province_modifier = { name = ashkenazi_minority duration = -1 }
+		}
+		547 = {
+			add_province_modifier = { name = ashkenazi_minority duration = -1 }
+		}
+		411 = {
 			add_province_modifier = { name = ashkenazi_minority duration = -1 }
 		}
 		22 = {
@@ -7366,6 +7794,24 @@ character_event = {
 			add_province_modifier = { name = cina_minority duration = -1 }
 		}
 		set_global_flag = minority_settlements_set
+	}
+}
+character_event = {
+	id = cleanup.444
+	hide_window = yes
+	is_triggered_only = yes
+	religion = catholic
+	
+	only_rulers = yes
+ 	trigger = {
+		has_landed_title = k_papacy
+		is_alternate_start = no
+	}
+	immediate = {
+		any_spouse = {
+			add_trait = nun
+		}
+		remove_spouse = yes
 	}
 }
 province_event = {

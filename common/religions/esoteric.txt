@@ -57,8 +57,8 @@ esoteric = {
 		
 		aggression = 1.2 # AI aggression factor
 		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
 		intermarry = summer_queen
 		intermarry = thelemic
 		intermarry = theosophy
@@ -108,8 +108,8 @@ esoteric = {
 		
 		aggression = 1.2 # AI aggression factor
 		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
 		intermarry = thelemic_reformed
 		intermarry = thelemic
 		intermarry = orange_king
@@ -127,7 +127,7 @@ esoteric = {
 		graphical_culture = thelemagfx
 		secondary_event_pictures = thelemic_reformed
 		icon = 14
-		heresy_icon = 64
+		heresy_icon = 48
 		parent = thelemic_reformed
 
 		ai_convert_same_group = 1
@@ -170,8 +170,8 @@ esoteric = {
 
 		aggression = 1 # AI aggression factor
 
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
 		intermarry = thelemic_reformed
 		intermarry = thelemic
 		intermarry = summer_queen
@@ -225,8 +225,8 @@ esoteric = {
 		
 		aggression = 1.2 # AI aggression factor
 		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
 		intermarry = thelemic_reformed
 		intermarry = summer_queen
 		intermarry = orange_king
@@ -283,8 +283,8 @@ esoteric = {
 		attacking_same_religion_piety_loss = yes
 		aggression = 1.2 # AI aggression factor
 		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
         piety_name = HONOUR
 		intermarry = summer_queen
 		intermarry = theosophy
@@ -383,6 +383,90 @@ esoteric = {
 		intermarry = poseidonian
 		intermarry = starist_pagan
 		intermarry = starist_pagan_reformed
+	}
+	raelian = {
+		graphical_culture = thelemagfx
+		interface_skin = { esoteric_interface zun_interface zoroastrian_interface muslim_interface }
+		icon = 33
+		heresy_icon = 33
+		
+		crusade_name = CHANSON_DE_GESTE
+		scripture_name = INTELLIGENT_DESIGN_MESSAGE_FROM_THE_DESIGNER
+		priest_title = PRIEST
+		
+		color = { 6 21 140 }
+		
+		high_god_name = GOD_ERU_LAUTEUR
+		
+		god_names = {
+			GOD_ERU_LAUTEUR GOD_THE_ELOHIM GOD_JESUS GOD_MOHAMMED GOD_THE_BUDDHA GOD_LIBERTY GOD_EQUALITY GOD_FRATERNITY GOD_CHARLEMAGNE GOD_NAPOLEON
+		}
+		
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		piety_name = ENLIGHTENMENT
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		has_heir_designation = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		female_temple_holders = yes
+		psc_marriage = no
+		cousin_marriage = no
+		max_consorts = 4
+		women_can_take_consorts = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		character_modifier={
+			fertility = 0.2
+			jewish_group_opinion = 5
+			christian_opinion = 5
+			muslim_opinion = 5
+			buddhist_group_opinion = 5
+			religion_flex = -0.5
+		}
+		
+		intermarry = orleanist
+		intermarry = catholic
+		intermarry = girondist
+		intermarry = novelist_reformed
+		intermarry = novelist
+		intermarry = jewish
+		intermarry = mikraist
+		intermarry = sevillian
+		intermarry = lutheran
+		intermarry = prussianist
+		intermarry = orthodox
+		intermarry = marblists
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = osvicenism
+		intermarry = chaldean
+		intermarry = anglican
+		intermarry = sunni
+		intermarry = malikite
+		intermarry = koranist
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = ismaili
+		intermarry = muwahidunna
+		intermarry = jugoslavist
+		intermarry = bahai
+		intermarry = vagarna
+		intermarry = brethren
+		intermarry = poseidonian
+		
 	}
 	druze = {
 		graphical_culture = reformedzunistgfx
@@ -617,6 +701,7 @@ esoteric = {
 		intermarry = vagarna
 		intermarry = hussite
 		
+		
 	}
 	white_lotus = {
 		graphical_culture = chinesegfx
@@ -685,6 +770,7 @@ esoteric = {
 		intermarry = osvicenism
 		intermarry = buddhist_group
 		intermarry = taoist
+		intermarry = qingzhen
 		intermarry = wuxia
 		intermarry = xianxia
 		intermarry = wuist_reformed

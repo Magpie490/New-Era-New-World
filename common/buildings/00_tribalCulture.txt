@@ -456,7 +456,7 @@ tribal = {
 		knights = 15
 		archers = 25
 		knights_offensive = 0.15
-		archers_defensive = 0.15
+		archers_defensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -506,7 +506,7 @@ tribal = {
 		knights = 20
 		archers = 30
 		knights_offensive = 0.15
-		archers_defensive = 0.15
+		archers_defensive = 0.05
 		ai_creation_factor = 101
 		
 		convert_to_castle = tb_culture_prussian_knights_1
@@ -559,7 +559,7 @@ tribal = {
 		knights = 25
 		archers = 35
 		knights_offensive = 0.15
-		archers_defensive = 0.15
+		archers_defensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -613,10 +613,138 @@ tribal = {
 		knights = 30
 		archers = 40
 		knights_offensive = 0.15
-		archers_defensive = 0.15
+		archers_defensive = 0.05
 		ai_creation_factor = 101
 		
 		convert_to_castle = tb_culture_prussian_knights_2
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kuhjung_1 = {
+		desc = tb_culture_kuhjung_1_desc
+			potential = {
+				OR = {
+					culture = kuhjungs
+					has_building = tb_culture_kuhjung_1
+				}
+			}
+		is_active_trigger = {
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		horse_archers = 5
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kuhjung_2 = {
+		desc = tb_culture_kuhjung_1_desc
+			potential = {
+				OR = {
+					culture = kuhjungs
+					has_building = tb_culture_kuhjung_1
+					has_building = tb_culture_kuhjung_2
+				}
+			}
+		is_active_trigger = {
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		
+		prestige_cost = 200
+		build_time = 547
+		horse_archers = 10
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.15
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_kuhjung_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kuhjung_3 = {
+		desc = tb_culture_kuhjung_1_desc
+			potential = {
+				OR = {
+					culture = kuhjungs
+					has_building = tb_culture_kuhjung_1
+					has_building = tb_culture_kuhjung_2
+					has_building = tb_culture_kuhjung_3
+				}
+			}
+		is_active_trigger = {
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		
+		prestige_cost = 300
+		build_time = 730
+		horse_archers = 10
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_kuhjung_2
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kuhjung_4 = {
+		desc = tb_culture_kuhjung_1_desc
+			potential = {
+				OR = {
+					culture = kuhjungs
+					has_building = tb_culture_kuhjung_1
+					has_building = tb_culture_kuhjung_2
+					has_building = tb_culture_kuhjung_3
+					has_building = tb_culture_kuhjung_4
+				}
+			}
+		is_active_trigger = {
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture = kuhjungs
+			}
+		}
+		
+		prestige_cost = 400
+		build_time = 1095
+		horse_archers = 10
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_kuhjung_2
 		
 		extra_tech_building_start = 0.8
 	}
@@ -817,6 +945,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -832,6 +961,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -848,6 +978,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -874,6 +1005,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -889,6 +1021,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -905,6 +1038,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -934,6 +1068,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -949,6 +1084,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -965,6 +1101,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -993,6 +1130,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -1008,6 +1146,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -1024,6 +1163,7 @@ tribal = {
 			NOT = {
 				OR = {
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture = lytsvin
 				}	
@@ -1057,6 +1197,7 @@ tribal = {
 			}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1075,6 +1216,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1095,6 +1237,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1128,6 +1271,7 @@ tribal = {
 			}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1146,6 +1290,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1166,6 +1311,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1202,6 +1348,7 @@ tribal = {
 			}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1220,6 +1367,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1240,6 +1388,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1293,6 +1442,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1313,6 +1463,7 @@ tribal = {
 				}
 			NOR = {
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				culture = balkar
 				culture = moghol
@@ -1577,6 +1728,7 @@ tribal = {
 				culture = adessite
 				culture = gottonsk
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				has_building = tb_culture_russian_1
 			}
@@ -1595,6 +1747,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1614,6 +1767,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1642,6 +1796,7 @@ tribal = {
 				culture = adessite
 				culture = gottonsk
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				has_building = tb_culture_russian_1
 				has_building = tb_culture_russian_2
@@ -1661,6 +1816,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1680,6 +1836,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1710,6 +1867,7 @@ tribal = {
 				culture = adessite
 				culture = gottonsk
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir 
 				has_building = tb_culture_russian_1
 				has_building = tb_culture_russian_2
@@ -1730,6 +1888,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1749,6 +1908,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1777,6 +1937,7 @@ tribal = {
 				culture = adessite
 				culture = gottonsk
 				culture = tatarian
+				culture = crimean_tatar
 				culture = bashkir
 				has_building = tb_culture_russian_1
 				has_building = tb_culture_russian_2
@@ -1798,6 +1959,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -1817,6 +1979,7 @@ tribal = {
 					culture = adessite
 					culture = gottonsk
 					culture = tatarian
+				culture = crimean_tatar
 					culture = bashkir
 				}
 				NOR = {
@@ -2006,7 +2169,11 @@ tribal = {
 		desc = ca_culture_hungarian_1_desc
 		potential = {
 			OR = {
-				culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 				culture_group = west_slavic
 				culture = romani
 				culture = wallachian
@@ -2018,7 +2185,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2030,7 +2201,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2050,7 +2225,11 @@ tribal = {
 		desc = ca_culture_hungarian_1_desc
 		potential = {
 			OR = {
-				culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 				culture_group = west_slavic
 				culture = romani
 				culture = wallachian
@@ -2063,7 +2242,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2075,7 +2258,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2097,7 +2284,11 @@ tribal = {
 		desc = ca_culture_hungarian_1_desc
 		potential = {
 			OR = {
-				culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 				culture_group = west_slavic
 				culture = romani
 				culture = wallachian
@@ -2111,7 +2302,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2123,7 +2318,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2143,7 +2342,11 @@ tribal = {
 		desc = ca_culture_hungarian_1_desc
 		potential = {
 			OR = {
-				culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 				culture_group = west_slavic
 				culture = romani
 				culture = wallachian
@@ -2158,7 +2361,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -2170,7 +2377,11 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_slavic
-					culture = hungarian
+			culture = hungarian
+			culture = tot
+			culture = ruten
+			culture = csangok
+			culture = szekely	
 					culture = romani
 					culture = wallachian
 					culture = transylvanian
@@ -3063,6 +3274,7 @@ tribal = {
 				culture_group = mande
 				culture_group = senegambian
 				culture_group = niger_congolese
+				culture_group = chadic
 				has_building = tb_culture_west_african_1
 			}
 		}
@@ -3072,6 +3284,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3082,6 +3295,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3102,6 +3316,7 @@ tribal = {
 				culture_group = mande
 				culture_group = senegambian
 				culture_group = niger_congolese
+				culture_group = chadic
 				has_building = tb_culture_west_african_1
 				has_building = tb_culture_west_african_2
 			}
@@ -3112,6 +3327,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3122,6 +3338,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3144,6 +3361,7 @@ tribal = {
 				culture_group = mande
 				culture_group = senegambian
 				culture_group = niger_congolese
+				culture_group = chadic
 				has_building = tb_culture_west_african_1
 				has_building = tb_culture_west_african_2
 				has_building = tb_culture_west_african_3
@@ -3155,6 +3373,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3165,6 +3384,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3185,6 +3405,7 @@ tribal = {
 				culture_group = mande
 				culture_group = senegambian
 				culture_group = niger_congolese
+				culture_group = chadic
 				has_building = tb_culture_west_african_1
 				has_building = tb_culture_west_african_2
 				has_building = tb_culture_west_african_3
@@ -3197,6 +3418,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3207,6 +3429,7 @@ tribal = {
 					culture_group = mande
 					culture_group = senegambian
 					culture_group = niger_congolese
+				culture_group = chadic
 				}
 			}
 		}
@@ -3732,6 +3955,8 @@ tribal = {
 			OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3750,6 +3975,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3769,6 +3996,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3797,6 +4026,8 @@ tribal = {
 			OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3816,6 +4047,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3835,6 +4068,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3866,6 +4101,8 @@ tribal = {
 			OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3886,6 +4123,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3905,6 +4144,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3934,6 +4175,8 @@ tribal = {
 			OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3955,6 +4198,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -3974,6 +4219,8 @@ tribal = {
 				OR = {
 				culture_group = central_indo_aryan_group
 				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
 				culture_group = north_west_indo_aryan_group
 				culture_group = northern_indo_aryan_group
 				culture_group = southern_indo_aryan_group
@@ -4117,7 +4364,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_han_2
@@ -4131,6 +4378,9 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
 				culture_group = dardic
@@ -4146,10 +4396,13 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = tibetan_group
-					culture = sinoshan		
-					culture_group = northern_indo_aryan_group	
-					culture_group = dardic				
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
+				culture = sinoshan		
+				culture_group = northern_indo_aryan_group	
+				culture_group = dardic			
 				}
 			}
 			NOT = {
@@ -4164,9 +4417,12 @@ tribal = {
 			ROOT = {
 				OR = { 
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
-				culture_group = dardic	
+				culture_group = dardic
 				}
 				NOT = {
 					OR  = {
@@ -4195,6 +4451,9 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
 				culture_group = dardic
@@ -4211,10 +4470,13 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = tibetan_group
-					culture = sinoshan		
-					culture_group = northern_indo_aryan_group	
-					culture_group = dardic				
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
+				culture = sinoshan		
+				culture_group = northern_indo_aryan_group	
+				culture_group = dardic			
 				}
 			}
 			NOT = {
@@ -4229,9 +4491,12 @@ tribal = {
 			ROOT = {
 				OR = { 
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
-				culture_group = dardic	
+				culture_group = dardic
 				}
 				NOT = {
 					OR = {
@@ -4262,6 +4527,9 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
 				culture_group = dardic
@@ -4279,10 +4547,13 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = tibetan_group
-					culture = sinoshan		
-					culture_group = northern_indo_aryan_group	
-					culture_group = dardic				
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
+				culture = sinoshan		
+				culture_group = northern_indo_aryan_group	
+				culture_group = dardic			
 				}
 			}
 			NOT = {
@@ -4297,9 +4568,12 @@ tribal = {
 			ROOT = {
 				OR = { 
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
-				culture_group = dardic	
+				culture_group = dardic
 				}
 				NOT = {
 					OR = {
@@ -4328,6 +4602,9 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
 				culture_group = dardic
@@ -4346,10 +4623,13 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = tibetan_group
-					culture = sinoshan		
-					culture_group = northern_indo_aryan_group	
-					culture_group = dardic				
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
+				culture = sinoshan		
+				culture_group = northern_indo_aryan_group	
+				culture_group = dardic			
 				}
 			}
 			NOT = {
@@ -4364,9 +4644,12 @@ tribal = {
 			ROOT = {
 				OR = { 
 				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = qiangic
 				culture = sinoshan		
 				culture_group = northern_indo_aryan_group	
-				culture_group = dardic	
+				culture_group = dardic
 				}
 				NOT = {
 					OR = {
@@ -4523,6 +4806,7 @@ tribal = {
 				culture = selkup
 				culture_group = arghu
 				culture = khanty
+				culture = mansi
 				culture = komi
 				culture_group = yenisean
 				has_building = tb_culture_siberian_1
@@ -4537,6 +4821,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4552,6 +4837,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4575,6 +4861,7 @@ tribal = {
 				culture = selkup
 				culture_group = arghu
 				culture = khanty
+				culture = mansi
 				culture = komi
 				culture_group = yenisean
 				has_building = tb_culture_siberian_1
@@ -4590,6 +4877,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4605,6 +4893,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4631,6 +4920,7 @@ tribal = {
 				culture = selkup
 				culture_group = arghu
 				culture = khanty
+				culture = mansi
 				culture = komi
 				culture_group = yenisean
 				has_building = tb_culture_siberian_1
@@ -4647,6 +4937,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4662,6 +4953,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4686,6 +4978,7 @@ tribal = {
 				culture = selkup
 				culture_group = arghu
 				culture = khanty
+				culture = mansi
 				culture = komi
 				culture_group = yenisean
 				has_building = tb_culture_siberian_1
@@ -4703,6 +4996,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4718,6 +5012,7 @@ tribal = {
 					culture = selkup
 					culture_group = arghu
 					culture = khanty
+					culture = mansi
 					culture = komi
 					culture_group = yenisean
 				}
@@ -4770,7 +5065,7 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		light_infantry = 15
-		light_infantry_defensive = 0.3
+		light_infantry_defensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -4812,7 +5107,7 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		light_infantry = 20
-		light_infantry_defensive = 0.3
+		light_infantry_defensive = 0.15
 		ai_creation_factor = 100
 		
 		convert_to_castle = ca_culture_chechen_1
@@ -4857,7 +5152,7 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		light_infantry = 25
-		light_infantry_defensive = 0.3
+		light_infantry_defensive = 0.15
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
@@ -4901,7 +5196,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		light_infantry = 30
-		light_infantry_defensive = 0.3
+		light_infantry_defensive = 0.15
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chechen_2
@@ -5084,6 +5379,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				has_building = tb_culture_thai_1
 			}
 		}
@@ -5093,6 +5389,7 @@ tribal = {
 				culture = siamese
 				culture = old_thai
 				culture = south_thai
+				culture_group = mokenic
 				culture_group = mon_group
 				}
 			}
@@ -5104,6 +5401,7 @@ tribal = {
 				culture = siamese
 				culture = old_thai
 				culture = south_thai
+				culture_group = mokenic
 				culture_group = mon_group
 				}
 			}
@@ -5125,6 +5423,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				has_building = tb_culture_thai_1
 				has_building = tb_culture_thai_2
 			}
@@ -5135,6 +5434,7 @@ tribal = {
 				culture = siamese
 				culture = old_thai
 				culture = south_thai
+				culture_group = mokenic
 				culture_group = mon_group
 				}
 			}
@@ -5146,6 +5446,7 @@ tribal = {
 				culture = siamese
 				culture = old_thai
 				culture = south_thai
+				culture_group = mokenic
 				culture_group = mon_group
 				}
 			}
@@ -5169,6 +5470,7 @@ tribal = {
 				culture = siamese
 				culture = old_thai
 				culture = south_thai
+				culture_group = mokenic
 				culture_group = mon_group
 				has_building = tb_culture_thai_1
 				has_building = tb_culture_thai_2
@@ -5182,6 +5484,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				}
 			}
 		}
@@ -5193,6 +5496,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				}
 			}
 		}
@@ -5214,6 +5518,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				has_building = tb_culture_thai_1
 				has_building = tb_culture_thai_2
 				has_building = tb_culture_thai_3
@@ -5227,6 +5532,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				}
 			}
 		}
@@ -5238,6 +5544,7 @@ tribal = {
 				culture = old_thai
 				culture = south_thai
 				culture_group = mon_group
+				culture_group = mokenic
 				}
 			}
 		}
@@ -5262,7 +5569,6 @@ tribal = {
 			}
 			NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 			}
@@ -5274,7 +5580,6 @@ tribal = {
 					}
 				NOR = {
 					culture = ifugao
-					culture = ivatan
 					culture = tausug
 					culture = yakan
 				}
@@ -5288,7 +5593,6 @@ tribal = {
 					}
 				NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 				}
@@ -5296,8 +5600,8 @@ tribal = {
 		}
 		prestige_cost = 100
 		build_time = 365
-		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 		light_infantry = 25
 		
 		ai_creation_factor = 101
@@ -5314,7 +5618,6 @@ tribal = {
 			}
 			NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 			}
@@ -5326,7 +5629,6 @@ tribal = {
 					}
 				NOR = {
 					culture = ifugao
-					culture = ivatan
 					culture = tausug
 					culture = yakan
 				}
@@ -5340,17 +5642,16 @@ tribal = {
 					}
 				NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 				}
 			}
 		}
-		upgrades_from = ca_culture_austronesian_1
+		upgrades_from = tb_culture_austronesian_1
 		prestige_cost = 200
 		build_time = 547
-		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 		light_infantry = 25
 		
 		ai_creation_factor = 101
@@ -5368,7 +5669,6 @@ tribal = {
 			}
 			NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 			}
@@ -5380,31 +5680,29 @@ tribal = {
 					}
 				NOR = {
 					culture = ifugao
-					culture = ivatan
 					culture = tausug
 					culture = yakan
 				}
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 					ROOT = {
 						OR = {
 					culture_group = austronesian
 					}
 				NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 				}
 			}
 		}
-		upgrades_from = ca_culture_austronesian_2
+		upgrades_from = tb_culture_austronesian_2
 		prestige_cost = 300
 		build_time = 730
-		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 		light_infantry = 35
 		
 		ai_creation_factor = 101
@@ -5423,7 +5721,6 @@ tribal = {
 			}
 			NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 			}
@@ -5435,21 +5732,19 @@ tribal = {
 					}
 				NOR = {
 					culture = ifugao
-					culture = ivatan
 					culture = tausug
 					culture = yakan
 				}
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 					ROOT = {
 						OR = {
 					culture_group = austronesian
 					}
 				NOR = {
 				culture = ifugao
-				culture = ivatan
 				culture = tausug
 				culture = yakan
 				}
@@ -5458,8 +5753,8 @@ tribal = {
 		upgrades_from = tb_culture_austronesian_3
 		prestige_cost = 400
 		build_time = 1095
-		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 		light_infantry = 40
 		
 		convert_to_castle = ca_culture_austronesian_2
@@ -5497,7 +5792,7 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		heavy_infantry_morale = 0.15
-		heavy_infantry_defensive = 0.3
+		heavy_infantry_defensive = 0.1
 		heavy_infantry = 25
 		
 		ai_creation_factor = 101
@@ -5534,8 +5829,8 @@ tribal = {
 			upgrades_from = tb_culture_muslimph_1
 			prestige_cost = 200
 			build_time = 547
-			heavy_infantry_morale = 0.15
-			heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.15
+		heavy_infantry_defensive = 0.05
 			heavy_infantry = 25
 		
 			ai_creation_factor = 101
@@ -5562,7 +5857,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = yakan
@@ -5573,8 +5868,8 @@ tribal = {
 			upgrades_from = tb_culture_muslimph_2
 			prestige_cost = 300
 			build_time = 730
-			heavy_infantry_morale = 0.5
-			heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.15
+		heavy_infantry_defensive = 0.05
 			heavy_infantry = 35
 		
 			ai_creation_factor = 101
@@ -5602,7 +5897,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = yakan
@@ -5613,8 +5908,8 @@ tribal = {
 			upgrades_from = tb_culture_muslimph_3
 			prestige_cost = 400
 			build_time = 1095
-			heavy_infantry_morale = 0.15
-			heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.15
+		heavy_infantry_defensive = 0.05
 			heavy_infantry = 40
 			
 			convert_to_castle = ca_culture_muslimph_2
@@ -5623,161 +5918,6 @@ tribal = {
 		
 			extra_tech_building_start = 0.8
 		}
-	tb_culture_aeta_1 = {
-	desc = tb_culture_aeta_1_desc
-		potential = {
-			OR = {
-				culture = ifugao
-				culture = ivatan
-				has_building = tb_culture_aeta_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				OR = {
-				culture = ifugao
-				culture = ivatan
-				}	
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
-				ROOT = {
-					OR = {
-					culture = ifugao
-					culture = ivatan
-				}
-			}
-		}
-		prestige_cost = 100
-		build_time = 365
-		light_infantry_offensive = 0.3
-		light_infantry_morale = 0.15
-		light_infantry = 25
-		
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	tb_culture_aeta_2 = {
-	desc = tb_culture_aeta_1_desc
-		potential = {
-			OR = {
-				culture = ifugao
-				culture = ivatan
-				has_building = tb_culture_aeta_1
-				has_building = tb_culture_aeta_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				OR = {
-				culture = ifugao
-				culture = ivatan
-				}	
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
-				ROOT = {
-					OR = {
-					culture = ifugao
-					culture = ivatan
-				}
-			}
-		}
-		upgrades_from = tb_culture_aeta_1
-		prestige_cost = 200
-		build_time = 547
-		light_infantry_offensive = 0.3
-		light_infantry_morale = 0.15
-		light_infantry = 25
-		
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	tb_culture_aeta_3 = {
-	desc = tb_culture_aeta_1_desc
-		potential = {
-			OR = {
-				culture = ifugao
-				culture = ivatan
-				has_building = tb_culture_aeta_1
-				has_building = tb_culture_aeta_2
-				has_building = tb_culture_aeta_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				OR = {
-				culture = ifugao
-				culture = ivatan
-				}	
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
-				ROOT = {
-					OR = {
-					culture = ifugao
-					culture = ivatan
-				}
-			}
-		}
-		upgrades_from = tb_culture_aeta_2
-		prestige_cost = 300
-		build_time = 730
-		light_infantry_offensive = 0.3
-		light_infantry_morale = 0.15
-		light_infantry = 35
-		
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	tb_culture_aeta_4 = {
-	desc = tb_culture_aeta_1_desc
-		potential = {
-			OR = {
-				culture = ifugao
-				culture = ivatan
-				has_building = tb_culture_aeta_1
-				has_building = tb_culture_aeta_2
-				has_building = tb_culture_aeta_3
-				has_building = tb_culture_aeta_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				OR = {
-				culture = ifugao
-				culture = ivatan
-				}	
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
-				ROOT = {
-					OR = {
-					culture = ifugao
-					culture = ivatan
-				}
-			}
-		}
-		upgrades_from = tb_culture_aeta_3
-		prestige_cost = 400
-		build_time = 1095
-		light_infantry_offensive = 0.3
-		light_infantry_morale = 0.15
-		light_infantry = 40
-		
-		convert_to_castle = ca_culture_aeta_2
-		
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
 	tb_culture_chavacano_1= {
 	desc = tb_culture_chavacano_1_desc
 		potential = {
@@ -5803,8 +5943,8 @@ tribal = {
 		}
 		prestige_cost = 100
 		build_time = 365
-		light_infantry_offensive = 0.3
-		light_infantry_defensive = 0.15
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.05
 		light_infantry = 25
 		
 		ai_creation_factor = 101
@@ -5838,8 +5978,8 @@ tribal = {
 		upgrades_from = tb_culture_chavacano_1
 		prestige_cost = 200
 		build_time = 547
-		light_infantry_offensive = 0.3
-		light_infantry_defensive = 0.15
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.05
 		light_infantry = 25
 		
 		ai_creation_factor = 101
@@ -5864,7 +6004,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = chavacano
@@ -5874,9 +6014,11 @@ tribal = {
 		upgrades_from = tb_culture_chavacano_2
 		prestige_cost = 300
 		build_time = 730
-		light_infantry_offensive = 0.3
-		light_infantry_defensive = 0.15
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.05
 		light_infantry = 35
+		
+		convert_to_castle = ca_culture_chavacano_1
 		
 		ai_creation_factor = 101
 		
@@ -5901,7 +6043,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = chavacano
@@ -5911,8 +6053,8 @@ tribal = {
 		upgrades_from = tb_culture_chavacano_3
 		prestige_cost = 400
 		build_time = 1095
-		light_infantry_offensive = 0.3
-		light_infantry_defensive = 0.15
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.05
 		light_infantry = 45
 		
 		convert_to_castle = ca_culture_chavacano_2
@@ -5946,8 +6088,8 @@ tribal = {
 		}
 		prestige_cost = 100
 		build_time = 365
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.3
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.1
 		pikemen = 20
 		
 		ai_creation_factor = 101
@@ -5981,8 +6123,8 @@ tribal = {
 		upgrades_from = tb_culture_amerikano_1
 		prestige_cost = 200
 		build_time = 547
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.3
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.1
 		pikemen = 25
 		
 		ai_creation_factor = 101
@@ -6007,7 +6149,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = amerikano
@@ -6017,8 +6159,8 @@ tribal = {
 		upgrades_from = tb_culture_amerikano_2
 		prestige_cost = 300
 		build_time = 730
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.3
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.1
 		pikemen = 35
 		
 		ai_creation_factor = 101
@@ -6044,7 +6186,7 @@ tribal = {
 			}
 		}
 		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
+			TECH_CASTLE_CONSTRUCTION = 1
 				ROOT = {
 					OR = {
 					culture = amerikano
@@ -6054,8 +6196,8 @@ tribal = {
 		upgrades_from = tb_culture_amerikano_3
 		prestige_cost = 400
 		build_time = 1095
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.3
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.1
 		pikemen = 45
 		
 		convert_to_castle = ca_culture_amerikano_2
@@ -6087,11 +6229,8 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.2
-		light_infantry_morale = 0.15
-		archers_offensive = 0.2
-		archers_defensive = 0.1
-		archers_morale = 0.1
+		light_infantry_defensive = 0.1
+		archers_offensive = 0.1
 		archers = 14
 		heavy_infantry = 50
 		
@@ -6124,11 +6263,8 @@ tribal = {
 			upgrades_from = tb_culture_ibandayak_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.2
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.1
-			archers_morale = 0.1
+		light_infantry_defensive = 0.1
+		archers_offensive = 0.1
 			archers = 20
 			heavy_infantry = 55
 		
@@ -6162,11 +6298,8 @@ tribal = {
 			upgrades_from = tb_culture_ibandayak_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.2
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.1
-			archers_morale = 0.1
+		light_infantry_defensive = 0.1
+		archers_offensive = 0.1
 			archers = 20
 			heavy_infantry = 60
 		
@@ -6201,11 +6334,8 @@ tribal = {
 			upgrades_from = tb_culture_ibandayak_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.2
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.1
-			archers_morale = 0.1
+		light_infantry_defensive = 0.1
+		archers_offensive = 0.1
 			archers = 30
 			heavy_infantry = 65
 		
@@ -6235,10 +6365,7 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.3
-		light_infantry_morale = 0.15
-		archers_offensive = 0.2
-		archers_defensive = 0.2
+		heavy_infantry_morale = 0.05
 		archers_morale = 0.1
 		archers = 14
 		heavy_infantry = 50
@@ -6272,11 +6399,8 @@ tribal = {
 			upgrades_from = tb_culture_aslian_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+		heavy_infantry_morale = 0.05
+		archers_morale = 0.1
 			archers = 20
 			heavy_infantry = 55
 		
@@ -6310,11 +6434,8 @@ tribal = {
 			upgrades_from = tb_culture_aslian_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+		heavy_infantry_morale = 0.05
+		archers_morale = 0.1
 			archers = 20
 			heavy_infantry = 60
 		
@@ -6349,11 +6470,8 @@ tribal = {
 			upgrades_from = tb_culture_aslian_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+		heavy_infantry_morale = 0.05
+		archers_morale = 0.1
 			archers = 30
 			heavy_infantry = 65
 		
@@ -6383,13 +6501,9 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.3
-		light_infantry_morale = 0.15
-		archers_offensive = 0.2
-		archers_defensive = 0.2
-		archers_morale = 0.1
+			archers_offensive = 0.15
 		archers = 14
-		heavy_infantry = 50
+		light_infantry = 50
 		
 		ai_creation_factor = 101
 		
@@ -6420,13 +6534,9 @@ tribal = {
 			upgrades_from = tb_culture_borneonic_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			archers_offensive = 0.15
 			archers = 20
-			heavy_infantry = 55
+			light_infantry = 55
 		
 			ai_creation_factor = 101
 		
@@ -6458,13 +6568,9 @@ tribal = {
 			upgrades_from = tb_culture_borneonic_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			archers_offensive = 0.15
 			archers = 35
-			heavy_infantry = 60
+			light_infantry = 60
 		
 			ai_creation_factor = 101
 		
@@ -6497,13 +6603,9 @@ tribal = {
 			upgrades_from = tb_culture_borneonic_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			archers_offensive = 0.15
 			archers = 50
-			heavy_infantry = 60
+			light_infantry = 60
 		
 			ai_creation_factor = 101
 		
@@ -6540,11 +6642,7 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.3
-		light_infantry_morale = 0.15
-		archers_offensive = 0.2
-		archers_defensive = 0.2
-		archers_morale = 0.1
+			heavy_infantry_morale = 0.15
 		archers = 14
 		heavy_infantry = 50
 		
@@ -6584,11 +6682,7 @@ tribal = {
 			upgrades_from = tb_culture_malay_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			heavy_infantry_morale = 0.15
 			archers = 20
 			heavy_infantry = 55
 		
@@ -6629,11 +6723,7 @@ tribal = {
 			upgrades_from = tb_culture_malay_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			heavy_infantry_morale = 0.15
 			archers = 35
 			heavy_infantry = 60
 		
@@ -6675,11 +6765,7 @@ tribal = {
 			upgrades_from = tb_culture_malay_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			archers_offensive = 0.2
-			archers_defensive = 0.2
-			archers_morale = 0.1
+			heavy_infantry_morale = 0.15
 			archers = 40
 			heavy_infantry = 60
 		
@@ -6718,8 +6804,8 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.1
-		light_infantry_offensive= 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 		light_infantry = 45
 		
 		ai_creation_factor = 101
@@ -6758,8 +6844,8 @@ tribal = {
 			upgrades_from = tb_culture_java_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.1
-			light_infantry_offensive= 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 			light_infantry = 50
 		
 			ai_creation_factor = 101
@@ -6799,8 +6885,8 @@ tribal = {
 			upgrades_from = tb_culture_java_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.1
-			light_infantry_offensive= 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 			light_infantry = 55
 		
 			ai_creation_factor = 101
@@ -6841,8 +6927,8 @@ tribal = {
 			upgrades_from = tb_culture_java_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.1
-			light_infantry_offensive= 0.2
+		light_infantry_defensive = 0.05
+		light_infantry_offensive= 0.15
 			light_infantry = 55
 		
 			ai_creation_factor = 101
@@ -6880,11 +6966,8 @@ tribal = {
 
 		prestige_cost = 200
 		build_time = 730
-		light_infantry_defensive = 0.3
-		light_infantry_morale = 0.15
-		pikemen_offensive = 0.2
-		pikemen_defensive = 0.2
-		pikemen_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.05
 		pikemen = 14
 		heavy_infantry = 50
 		
@@ -6924,11 +7007,8 @@ tribal = {
 			upgrades_from = tb_culture_sinomalay_1
 			prestige_cost = 300
 			build_time = 1095
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			pikemen_offensive = 0.2
-			pikemen_defensive = 0.2
-			pikemen_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.05
 			pikemen = 20
 			heavy_infantry = 55
 		
@@ -6969,11 +7049,8 @@ tribal = {
 			upgrades_from = tb_culture_sinomalay_2
 			prestige_cost = 400
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			pikemen_offensive = 0.2
-			pikemen_defensive = 0.2
-			pikemen_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.05
 			pikemen = 35
 			heavy_infantry = 60
 		
@@ -7015,11 +7092,8 @@ tribal = {
 			upgrades_from = tb_culture_sinomalay_3
 			prestige_cost = 500
 			build_time = 2190
-			light_infantry_defensive = 0.3
-			light_infantry_morale = 0.15
-			pikemen_offensive = 0.2
-			pikemen_defensive = 0.2
-			pikemen_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.05
 			pikemen = 50
 			heavy_infantry = 60
 		
@@ -7181,9 +7255,9 @@ tribal = {
 		build_time = 730
 		light_cavalry = 10
 		light_infantry = 50
-		light_infantry_offensive = 0.15
-		light_infantry_defensive = 0.15
-		light_infantry_morale = 0.15
+		light_infantry_offensive = 0.05
+		light_infantry_defensive = 0.05
+		light_infantry_morale = 0.05
 		
 		extra_tech_building_start = 0.8
 		
@@ -7213,9 +7287,9 @@ tribal = {
 		build_time = 1095
 		light_cavalry = 15
 		light_infantry = 55
-		light_infantry_offensive = 0.15
-		light_infantry_defensive = 0.15
-		light_infantry_morale = 0.15
+		light_infantry_offensive = 0.05
+		light_infantry_defensive = 0.05
+		light_infantry_morale = 0.05
 		
 		extra_tech_building_start = 0.8
 		
@@ -7246,9 +7320,9 @@ tribal = {
 		build_time = 2190
 		light_cavalry = 20
 		light_infantry = 60
-		light_infantry_offensive = 0.15
-		light_infantry_defensive = 0.15
-		light_infantry_morale = 0.15
+		light_infantry_offensive = 0.05
+		light_infantry_defensive = 0.05
+		light_infantry_morale = 0.05
 		
 		extra_tech_building_start = 0.8
 		
@@ -7280,9 +7354,9 @@ tribal = {
 		build_time = 2190
 		light_cavalry = 25
 		light_infantry = 65
-		light_infantry_offensive = 0.15
-		light_infantry_defensive = 0.15
-		light_infantry_morale = 0.15
+		light_infantry_offensive = 0.05
+		light_infantry_defensive = 0.05
+		light_infantry_morale = 0.05
 		
 		extra_tech_building_start = 0.8
 		
@@ -7336,7 +7410,6 @@ tribal = {
 		build_time = 730
 		light_infantry = 20
 		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.1
 		light_infantry_morale = 0.1
 		ai_creation_factor = 101
 		
@@ -7393,7 +7466,6 @@ tribal = {
 		build_time = 1095
 		light_infantry = 40
 		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.1
 		light_infantry_morale = 0.1
 		ai_creation_factor = 101
 		
@@ -7451,7 +7523,6 @@ tribal = {
 		build_time = 2190
 		light_infantry = 80
 		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.1
 		light_infantry_morale = 0.1
 		ai_creation_factor = 101
 		
@@ -7510,7 +7581,6 @@ tribal = {
 		build_time = 2190
 		light_infantry = 80
 		light_infantry_defensive = 0.1
-		light_infantry_offensive = 0.1
 		light_infantry_morale = 0.1
 		ai_creation_factor = 101
 		
@@ -7520,7 +7590,7 @@ tribal = {
 
 	#Lan-Yin Garrisons
 	tb_culture_chinese_lanyin_1 = {
-		desc = ca_culture_chinese_lanyin_1_desc
+		desc = tb_culture_chinese_lanyin_1_desc
 		potential = {
 			OR = {
 				culture = lan_yin
@@ -7548,7 +7618,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_lanyin_2 = {
-		desc = ca_culture_chinese_lanyin_1_desc
+		desc = tb_culture_chinese_lanyin_1_desc
 		potential = {
 			OR = {
 				culture = lan_yin
@@ -7579,7 +7649,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_lanyin_3 = {
-		desc = ca_culture_chinese_lanyin_1_desc
+		desc = tb_culture_chinese_lanyin_1_desc
 		potential = {
 			OR = {
 				culture = lan_yin
@@ -7609,7 +7679,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_lanyin_4 = {
-		desc = ca_culture_chinese_lanyin_1_desc
+		desc = tb_culture_chinese_lanyin_1_desc
 		potential = {
 			OR = {
 				culture = lan_yin
@@ -7634,17 +7704,144 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_lanyin_2
 		
 		extra_tech_building_start = 0.8
 	}
-
+	
+	#Gaoshan Archer Range
+	tb_culture_chinese_gaoshan_1={
+		desc = tb_culture_chinese_gaoshan_1_desc
+		potential = {
+			OR = {
+				culture = gaoshan
+				has_building = tb_culture_chinese_gaoshan_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers = 40
+		archers_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		}
+	tb_culture_chinese_gaoshan_2={
+		desc = tb_culture_chinese_gaoshan_1_desc
+		potential = {
+			OR = {
+				culture = gaoshan
+				has_building = tb_culture_chinese_gaoshan_1
+				has_building = tb_culture_chinese_gaoshan_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		
+		upgrades_from = tb_culture_chinese_gaoshan_1
+		prestige_cost = 200
+		build_time = 547
+		archers = 40
+		archers_offensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		}
+	tb_culture_chinese_gaoshan_3={
+		desc = tb_culture_chinese_gaoshan_1_desc
+		potential = {
+			OR = {
+				culture = gaoshan
+				has_building = tb_culture_chinese_gaoshan_1
+				has_building = tb_culture_chinese_gaoshan_2
+				has_building = tb_culture_chinese_gaoshan_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		
+		upgrades_from = tb_culture_chinese_gaoshan_2
+		prestige_cost = 300
+		build_time = 1095
+		archers = 45
+		archers_offensive = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_chinese_gaoshan_1
+		
+		extra_tech_building_start = 0.8
+		}
+	tb_culture_chinese_gaoshan_4={
+		desc = tb_culture_chinese_gaoshan_1_desc
+		potential = {
+			OR = {
+				culture = gaoshan
+				has_building = tb_culture_chinese_gaoshan_1
+				has_building = tb_culture_chinese_gaoshan_2
+				has_building = tb_culture_chinese_gaoshan_3
+				has_building = tb_culture_chinese_gaoshan_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = gaoshan
+			}
+		}
+		
+		upgrades_from = tb_culture_chinese_gaoshan_3
+		prestige_cost = 400
+		build_time = 1095
+		archers = 45
+		archers_offensive = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_chinese_gaoshan_2
+		
+		extra_tech_building_start = 0.8
+		}
+	
 	#Shandong Crossbow Range
 	tb_culture_chinese_shandong_1 = {
-		desc = ca_culture_chinese_shandong_1_desc
+		desc = tb_culture_chinese_shandong_1_desc
 		potential = {
 			OR = {
 				culture = ji_lu
@@ -7672,14 +7869,14 @@ tribal = {
 		
 		prestige_cost = 100
 		build_time = 365
-		archers_offensive = 0.15
+		archers_defensive = 0.15
 		archers = 40
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shandong_2 = {
-		desc = ca_culture_chinese_shandong_1_desc
+		desc = tb_culture_chinese_shandong_1_desc
 		potential = {
 			OR = {
 				culture = ji_lu
@@ -7708,7 +7905,7 @@ tribal = {
 		upgrades_from = tb_culture_chinese_shandong_1
 		prestige_cost = 200
 		build_time = 547
-		archers_offensive = 0.15
+		archers_defensive = 0.15
 		archers = 50
 		ai_creation_factor = 100
 		
@@ -7717,7 +7914,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shandong_3 = {
-		desc = ca_culture_chinese_shandong_1_desc
+		desc = tb_culture_chinese_shandong_1_desc
 		potential = {
 			OR = {
 				culture = ji_lu
@@ -7747,14 +7944,14 @@ tribal = {
 		upgrades_from = tb_culture_chinese_shandong_2
 		prestige_cost = 300
 		build_time = 730
-		archers_offensive = 0.15
+		archers_defensive = 0.15
 		archers = 60
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shandong_4 = {
-		desc = ca_culture_chinese_shandong_1_desc
+		desc = tb_culture_chinese_shandong_1_desc
 		potential = {
 			OR = {
 				culture = ji_lu
@@ -7785,8 +7982,8 @@ tribal = {
 		upgrades_from = tb_culture_chinese_shandong_3
 		prestige_cost = 400
 		build_time = 1095
-		archers_offensive = 0.15
-		archers = 75
+		archers_defensive = 0.15
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_shandong_2
@@ -7796,7 +7993,7 @@ tribal = {
 	
 	#Shanxii Garrisons
 	tb_culture_chinese_shanxii_1 = {
-		desc = ca_culture_chinese_shanxii_1_desc
+		desc = tb_culture_chinese_shanxii_1_desc
 		potential = {
 			OR = {
 				culture = jin
@@ -7824,7 +8021,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shanxii_2 = {
-		desc = ca_culture_chinese_shanxii_1_desc
+		desc = tb_culture_chinese_shanxii_1_desc
 		potential = {
 			OR = {
 				culture = jin
@@ -7855,7 +8052,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shanxii_3 = {
-		desc = ca_culture_chinese_shanxii_1_desc
+		desc = tb_culture_chinese_shanxii_1_desc
 		potential = {
 			OR = {
 				culture = jin
@@ -7885,7 +8082,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_shanxii_4 = {
-		desc = ca_culture_chinese_shanxii_1_desc
+		desc = tb_culture_chinese_shanxii_1_desc
 		potential = {
 			OR = {
 				culture = jin
@@ -7910,7 +8107,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_shanxii_2
@@ -7920,7 +8117,7 @@ tribal = {
 	
 	#Dongbei Garrisons
 	tb_culture_chinese_dongbei_1 = {
-		desc = ca_culture_chinese_dongbei_1_desc
+		desc = tb_culture_chinese_dongbei_1_desc
 		potential = {
 			OR = {
 				culture = dongbei
@@ -7948,7 +8145,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_dongbei_2 = {
-		desc = ca_culture_chinese_dongbei_1_desc
+		desc = tb_culture_chinese_dongbei_1_desc
 		potential = {
 			OR = {
 				culture = dongbei
@@ -7979,7 +8176,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_dongbei_3 = {
-		desc = ca_culture_chinese_dongbei_1_desc
+		desc = tb_culture_chinese_dongbei_1_desc
 		potential = {
 			OR = {
 				culture = dongbei
@@ -8009,7 +8206,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_dongbei_4 = {
-		desc = ca_culture_chinese_dongbei_1_desc
+		desc = tb_culture_chinese_dongbei_1_desc
 		potential = {
 			OR = {
 				culture = dongbei
@@ -8034,7 +8231,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_dongbei_2
@@ -8044,7 +8241,7 @@ tribal = {
 
 	#Taiwanese Garrisons
 	tb_culture_taiwan_1 = {
-		desc = ca_culture_taiwan_1_desc
+		desc = tb_culture_taiwan_1_desc
 		potential = {
 			OR = {
 				culture = taiwanese
@@ -8072,7 +8269,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_taiwan_2 = {
-		desc = ca_culture_taiwan_1_desc
+		desc = tb_culture_taiwan_1_desc
 		potential = {
 			OR = {
 				culture = taiwanese
@@ -8103,7 +8300,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_taiwan_3 = {
-		desc = ca_culture_taiwan_1_desc
+		desc = tb_culture_taiwan_1_desc
 		potential = {
 			OR = {
 				culture = taiwanese
@@ -8133,7 +8330,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_taiwan_4 = {
-		desc = ca_culture_taiwan_1_desc
+		desc = tb_culture_taiwan_1_desc
 		potential = {
 			OR = {
 				culture = taiwanese
@@ -8158,7 +8355,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_taiwan_2
@@ -8168,7 +8365,7 @@ tribal = {
 
 	#Chungyangren Garrisons
 	tb_culture_chinese_mtaiwan_1 = {
-		desc = ca_culture_chinese_mtaiwan_1_desc
+		desc = tb_culture_chinese_mtaiwan_1_desc
 		potential = {
 			OR = {
 				culture = chungyangren
@@ -8196,7 +8393,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_mtaiwan_2 = {
-		desc = ca_culture_chinese_mtaiwan_1_desc
+		desc = tb_culture_chinese_mtaiwan_1_desc
 		potential = {
 			OR = {
 				culture = chungyangren
@@ -8227,7 +8424,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_mtaiwan_3 = {
-		desc = ca_culture_chinese_mtaiwan_1_desc
+		desc = tb_culture_chinese_mtaiwan_1_desc
 		potential = {
 			OR = {
 				culture = chungyangren
@@ -8257,7 +8454,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_mtaiwan_4 = {
-		desc = ca_culture_chinese_mtaiwan_1_desc
+		desc = tb_culture_chinese_mtaiwan_1_desc
 		potential = {
 			OR = {
 				culture = chungyangren
@@ -8282,7 +8479,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_mtaiwan_2
@@ -8292,7 +8489,7 @@ tribal = {
 	
 	#Huizi Garrisons
 	tb_culture_chinese_huizi_1 = {
-		desc = ca_culture_chinese_huizi_1_desc
+		desc = tb_culture_chinese_huizi_1_desc
 		potential = {
 			OR = {
 				culture = hui
@@ -8320,7 +8517,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_huizi_2 = {
-		desc = ca_culture_chinese_huizi_1_desc
+		desc = tb_culture_chinese_huizi_1_desc
 		potential = {
 			OR = {
 				culture = hui
@@ -8351,7 +8548,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_huizi_3 = {
-		desc = ca_culture_chinese_huizi_1_desc
+		desc = tb_culture_chinese_huizi_1_desc
 		potential = {
 			OR = {
 				culture = hui
@@ -8381,7 +8578,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_huizi_4 = {
-		desc = ca_culture_chinese_huizi_1_desc
+		desc = tb_culture_chinese_huizi_1_desc
 		potential = {
 			OR = {
 				culture = hui
@@ -8406,7 +8603,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_huizi_2
@@ -8416,7 +8613,7 @@ tribal = {
 	
 	#Beijing Garrisons
 	tb_culture_beijing_1 = {
-		desc = ca_culture_beijing_1_desc
+		desc = tb_culture_beijing_1_desc
 		potential = {
 			OR = {
 				culture = beijing
@@ -8444,7 +8641,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_beijing_2 = {
-		desc = ca_culture_beijing_1_desc
+		desc = tb_culture_beijing_1_desc
 		potential = {
 			OR = {
 				culture = beijing
@@ -8475,7 +8672,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_beijing_3 = {
-		desc = ca_culture_beijing_1_desc
+		desc = tb_culture_beijing_1_desc
 		potential = {
 			OR = {
 				culture = beijing
@@ -8505,7 +8702,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_beijing_4 = {
-		desc = ca_culture_beijing_1_desc
+		desc = tb_culture_beijing_1_desc
 		potential = {
 			OR = {
 				culture = beijing
@@ -8530,7 +8727,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_beijing_2
@@ -8540,7 +8737,7 @@ tribal = {
 
 	#Huang-He Crossbow Range
 	tb_culture_chinese_haunghe_1 = {
-		desc = ca_culture_chinese_haunghe_1_desc
+		desc = tb_culture_chinese_haunghe_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8575,7 +8772,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_haunghe_2 = {
-		desc = ca_culture_chinese_haunghe_1_desc
+		desc = tb_culture_chinese_haunghe_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8613,7 +8810,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_haunghe_3 = {
-		desc = ca_culture_chinese_haunghe_1_desc
+		desc = tb_culture_chinese_haunghe_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8650,7 +8847,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_haunghe_4 = {
-		desc = ca_culture_chinese_haunghe_1_desc
+		desc = tb_culture_chinese_haunghe_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8682,7 +8879,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_haunghe_2
@@ -8692,7 +8889,7 @@ tribal = {
 	
 	#Min-Yue Crossbow Range
 	tb_culture_chinese_minyue_1 = {
-		desc = ca_culture_chinese_minyue_1_desc
+		desc = tb_culture_chinese_minyue_1_desc
 		potential = {
 			OR = {
 				culture = huizhou		
@@ -8739,7 +8936,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_minyue_2 = {
-		desc = ca_culture_chinese_minyue_1_desc
+		desc = tb_culture_chinese_minyue_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8789,7 +8986,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_minyue_3 = {
-		desc = ca_culture_chinese_minyue_1_desc
+		desc = tb_culture_chinese_minyue_1_desc
 		potential = {
 			OR = {
 				culture = zhongyang
@@ -8838,7 +9035,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_minyue_4 = {
-		desc = ca_culture_chinese_minyue_1_desc
+		desc = tb_culture_chinese_minyue_1_desc
 		potential = {
 			OR = {
 				culture = huizhou		
@@ -8888,7 +9085,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_minyue_2
@@ -8898,7 +9095,7 @@ tribal = {
 	
 	#Gan Garrisons
 	tb_culture_chinese_gan_1 = {
-		desc = ca_culture_chinese_gan_1_desc
+		desc = tb_culture_chinese_gan_1_desc
 		potential = {
 			OR = {
 				culture = gan
@@ -8926,7 +9123,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_gan_2 = {
-		desc = ca_culture_chinese_gan_1_desc
+		desc = tb_culture_chinese_gan_1_desc
 		potential = {
 			OR = {
 				culture = gan
@@ -8957,7 +9154,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_gan_3 = {
-		desc = ca_culture_chinese_gan_1_desc
+		desc = tb_culture_chinese_gan_1_desc
 		potential = {
 			OR = {
 				culture = gan
@@ -8987,7 +9184,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_gan_4 = {
-		desc = ca_culture_chinese_gan_1_desc
+		desc = tb_culture_chinese_gan_1_desc
 		potential = {
 			OR = {
 				culture = gan
@@ -9012,7 +9209,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_gan_2
@@ -9022,7 +9219,7 @@ tribal = {
 
 	#Xinan Garrisons
 	tb_culture_chinese_xinan_1 = {
-		desc = ca_culture_chinese_xinan_1_desc
+		desc = tb_culture_chinese_xinan_1_desc
 		potential = {
 			OR = {
 				culture = xinan
@@ -9050,7 +9247,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xinan_2 = {
-		desc = ca_culture_chinese_xinan_1_desc
+		desc = tb_culture_chinese_xinan_1_desc
 		potential = {
 			OR = {
 				culture = xinan
@@ -9081,7 +9278,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xinan_3 = {
-		desc = ca_culture_chinese_xinan_1_desc
+		desc = tb_culture_chinese_xinan_1_desc
 		potential = {
 			OR = {
 				culture = xinan
@@ -9111,7 +9308,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xinan_4 = {
-		desc = ca_culture_chinese_xinan_1_desc
+		desc = tb_culture_chinese_xinan_1_desc
 		potential = {
 			OR = {
 				culture = xinan
@@ -9136,7 +9333,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_xinan_2
@@ -9146,7 +9343,7 @@ tribal = {
 
 	#Xiang Garrisons
 	tb_culture_chinese_xiang_1 = {
-		desc = ca_culture_chinese_xiang_1_desc
+		desc = tb_culture_chinese_xiang_1_desc
 		potential = {
 			OR = {
 				culture = xiang
@@ -9167,14 +9364,14 @@ tribal = {
 		
 		prestige_cost = 100
 		build_time = 365
-		archers_offensive = 0.15
-		archers = 40
+		pikemen_offensive = 0.15
+		pikemen = 30
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xiang_2 = {
-		desc = ca_culture_chinese_xiang_1_desc
+		desc = tb_culture_chinese_xiang_1_desc
 		potential = {
 			OR = {
 				culture = xiang
@@ -9196,8 +9393,8 @@ tribal = {
 		upgrades_from = tb_culture_chinese_xiang_1
 		prestige_cost = 200
 		build_time = 547
-		archers_offensive = 0.15
-		archers = 50
+		pikemen_offensive = 0.15
+		pikemen = 30
 		ai_creation_factor = 100
 		
 		convert_to_castle = ca_culture_chinese_xiang_1
@@ -9205,7 +9402,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xiang_3 = {
-		desc = ca_culture_chinese_xiang_1_desc
+		desc = tb_culture_chinese_xiang_1_desc
 		potential = {
 			OR = {
 				culture = xiang
@@ -9228,14 +9425,14 @@ tribal = {
 		upgrades_from = tb_culture_chinese_xiang_2
 		prestige_cost = 300
 		build_time = 730
-		archers_offensive = 0.15
-		archers = 60
+		pikemen_offensive = 0.15
+		pikemen = 35
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_xiang_4 = {
-		desc = ca_culture_chinese_xiang_1_desc
+		desc = tb_culture_chinese_xiang_1_desc
 		potential = {
 			OR = {
 				culture = xiang
@@ -9259,8 +9456,8 @@ tribal = {
 		upgrades_from = tb_culture_chinese_xiang_3
 		prestige_cost = 400
 		build_time = 1095
-		archers_offensive = 0.15
-		archers = 75
+		pikemen_offensive = 0.15
+		pikemen = 35
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_xiang_2
@@ -9270,7 +9467,7 @@ tribal = {
 	
 	#Wu Garrisons
 	tb_culture_chinese_wu_1 = {
-		desc = ca_culture_chinese_wu_1_desc
+		desc = tb_culture_chinese_wu_1_desc
 		potential = {
 			OR = {
 				culture = wu
@@ -9298,7 +9495,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_wu_2 = {
-		desc = ca_culture_chinese_wu_1_desc
+		desc = tb_culture_chinese_wu_1_desc
 		potential = {
 			OR = {
 				culture = wu
@@ -9329,7 +9526,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_wu_3 = {
-		desc = ca_culture_chinese_wu_1_desc
+		desc = tb_culture_chinese_wu_1_desc
 		potential = {
 			OR = {
 				culture = wu
@@ -9359,7 +9556,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_wu_4 = {
-		desc = ca_culture_chinese_wu_1_desc
+		desc = tb_culture_chinese_wu_1_desc
 		potential = {
 			OR = {
 				culture = wu
@@ -9384,7 +9581,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_wu_2
@@ -9394,7 +9591,7 @@ tribal = {
 
 	#Macanese Garrisons
 	tb_culture_chinese_macau_1 = {
-		desc = ca_culture_chinese_macau_1_desc
+		desc = tb_culture_chinese_macau_1_desc
 		potential = {
 			OR = {
 				culture = macanese
@@ -9422,7 +9619,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_macau_2 = {
-		desc = ca_culture_chinese_macau_1_desc
+		desc = tb_culture_chinese_macau_1_desc
 		potential = {
 			OR = {
 				culture = macanese
@@ -9453,7 +9650,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_macau_3 = {
-		desc = ca_culture_chinese_macau_1_desc
+		desc = tb_culture_chinese_macau_1_desc
 		potential = {
 			OR = {
 				culture = macanese
@@ -9483,7 +9680,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_chinese_macau_4 = {
-		desc = ca_culture_chinese_macau_1_desc
+		desc = tb_culture_chinese_macau_1_desc
 		potential = {
 			OR = {
 				culture = macanese
@@ -9508,7 +9705,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		archers_offensive = 0.15
-		archers = 75
+		archers = 50
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_chinese_macau_2
@@ -9639,7 +9836,1038 @@ tribal = {
 		
 		extra_tech_building_start = 0.8
 	}
-
+	
+	# Tanegashima Smithy
+	tb_culture_kyushu_1 = {
+		desc = tb_culture_kyushu_1_desc
+		potential = {
+			OR = {
+				culture = kyushu
+				has_building = tb_culture_kyushu_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		gunmen = 5
+		gunmen_offensive = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kyushu_2 = {
+		desc = tb_culture_kyushu_1_desc
+		potential = {
+			OR = {
+				culture = kyushu
+				has_building = tb_culture_kyushu_1
+				has_building = tb_culture_kyushu_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		
+		upgrades_from = tb_culture_kyushu_1
+		prestige_cost = 200
+		build_time = 547
+		gunmen = 5
+		gunmen_offensive = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kyushu_3 = {
+		desc = tb_culture_kyushu_1_desc
+		potential = {
+			OR = {
+				culture = kyushu
+				has_building = tb_culture_kyushu_1
+				has_building = tb_culture_kyushu_2
+				has_building = tb_culture_kyushu_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+					culture = kyushu
+				}
+			}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		
+		upgrades_from = tb_culture_kyushu_2
+		prestige_cost = 300
+		build_time = 730
+		gunmen = 5
+		gunmen_offensive = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_kyushu_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_kyushu_4 = {
+		desc = tb_culture_kyushu_1_desc
+		potential = {
+			OR = {
+				culture = kyushu
+				has_building = tb_culture_kyushu_1
+				has_building = tb_culture_kyushu_2
+				has_building = tb_culture_kyushu_3
+				has_building = tb_culture_kyushu_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = kyushu
+			}
+		}
+		
+		upgrades_from = tb_culture_kyushu_3
+		prestige_cost = 400
+		build_time = 1095
+		gunmen = 5
+		gunmen_offensive = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_kyushu_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Genpei Warrior Proving Grounds
+	tb_culture_shikoku_1 = {
+		desc = tb_culture_shikoku_1_desc
+		potential = {
+			OR = {
+				culture = shikoku
+				has_building = tb_culture_shikoku_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		light_infantry = 50
+		archers = 25
+		light_infantry_defensive = 0.15
+		archers_morale = 0.05
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_shikoku_2 = {
+		desc = tb_culture_shikoku_1_desc
+		potential = {
+			OR = {
+				culture = shikoku
+				has_building = tb_culture_shikoku_1
+				has_building = tb_culture_shikoku_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		
+		upgrades_from = tb_culture_shikoku_1
+		prestige_cost = 200
+		build_time = 547
+		light_infantry = 50
+		archers = 25
+		light_infantry_defensive = 0.15
+		archers_morale = 0.05
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_shikoku_3 = {
+		desc = tb_culture_shikoku_1_desc
+		potential = {
+			OR = {
+				culture = shikoku
+				has_building = tb_culture_shikoku_1
+				has_building = tb_culture_shikoku_2
+				has_building = tb_culture_shikoku_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		
+		upgrades_from = tb_culture_shikoku_2
+		prestige_cost = 300
+		build_time = 730
+		light_infantry = 50
+		archers = 50
+		light_infantry_defensive = 0.15
+		archers_morale = 0.05
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_shikoku_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_shikoku_4 = {
+		desc = tb_culture_shikoku_1_desc
+		potential = {
+			OR = {
+				culture = shikoku
+				has_building = tb_culture_shikoku_1
+				has_building = tb_culture_shikoku_2
+				has_building = tb_culture_shikoku_3
+				has_building = tb_culture_shikoku_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = shikoku
+			}
+		}
+		
+		upgrades_from = tb_culture_shikoku_3
+		prestige_cost = 400
+		build_time = 1095
+		light_infantry = 50
+		archers = 50
+		light_infantry_defensive = 0.15
+		archers_morale = 0.05
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_shikoku_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Kyoto Protector Outposts
+	tb_culture_west_honshu_1 = {
+		desc = tb_culture_west_honshu_1_desc
+		potential = {
+			OR = {
+				culture = chugoku
+				culture = kansai
+				has_building = tb_culture_west_honshu_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		light_infantry = 50
+		archers = 25
+		light_infantry_defensive = 0.05
+		archers_defensive = 0.05
+		archers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_west_honshu_2 = {
+		desc = tb_culture_west_honshu_1_desc
+		potential = {
+			OR = {
+				culture = chugoku
+				culture = kansai
+				has_building = tb_culture_west_honshu_1
+				has_building = tb_culture_west_honshu_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_west_honshu_1
+		prestige_cost = 200
+		build_time = 547
+		light_infantry = 50
+		archers = 25
+		light_infantry_defensive = 0.05
+		archers_defensive = 0.05
+		archers_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_west_honshu_3 = {
+		desc = tb_culture_west_honshu_1_desc
+		potential = {
+			OR = {
+				culture = chugoku
+				culture = kansai
+				has_building = tb_culture_west_honshu_1
+				has_building = tb_culture_west_honshu_2
+				has_building = tb_culture_west_honshu_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_west_honshu_2
+		prestige_cost = 300
+		build_time = 1095
+		light_infantry = 100
+		archers = 50
+		light_infantry_defensive = 0.05
+		archers_defensive = 0.05
+		archers_morale = 0.1
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_west_honshu_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_west_honshu_4 = {
+		desc = tb_culture_west_honshu_1_desc
+		potential = {
+			OR = {
+				culture = chugoku
+				culture = kansai
+				has_building = tb_culture_west_honshu_1
+				has_building = tb_culture_west_honshu_2
+				has_building = tb_culture_west_honshu_3
+				has_building = tb_culture_west_honshu_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = chugoku
+					culture = kansai
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_west_honshu_3
+		prestige_cost = 400
+		build_time = 1095
+		light_infantry = 100
+		archers = 50
+		light_infantry_defensive = 0.05
+		archers_defensive = 0.05
+		archers_morale = 0.1
+		ai_creation_factor = 101
+		
+		convert_to_castle = ca_culture_west_honshu_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Tokyo Defence Force Grounds
+	tb_culture_east_honshu_1 = {
+		desc = tb_culture_east_honshu_1_desc
+		potential= {
+			OR = {
+				culture = chubu
+				culture = kanto
+				has_building = tb_culture_east_honshu_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		heavy_infantry = 50
+		light_cavalry = 50
+		heavy_infantry_offensive = 0.05
+		heavy_infantry_morale = 0.05
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_east_honshu_2 = {
+		desc = tb_culture_east_honshu_1_desc
+		potential= {
+			OR = {
+				culture = chubu
+				culture = kanto
+				has_building = tb_culture_east_honshu_1
+				has_building = tb_culture_east_honshu_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_east_honshu_1
+		prestige_cost = 200
+		build_time = 547
+		heavy_infantry = 50
+		light_cavalry = 50
+		heavy_infantry_offensive = 0.05
+		heavy_infantry_morale = 0.05
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_east_honshu_3 = {
+		desc = tb_culture_east_honshu_1_desc
+		potential= {
+			OR = {
+				culture = chubu
+				culture = kanto
+				has_building = tb_culture_east_honshu_1
+				has_building = tb_culture_east_honshu_2
+				has_building = tb_culture_east_honshu_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_east_honshu_2
+		prestige_cost = 300
+		build_time = 1095
+		heavy_infantry = 100
+		light_cavalry = 50
+		heavy_infantry_offensive = 0.05
+		heavy_infantry_morale = 0.05
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_east_honshu_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_east_honshu_4 = {
+		desc = tb_culture_east_honshu_1_desc
+		potential= {
+			OR = {
+				culture = chubu
+				culture = kanto
+				has_building = tb_culture_east_honshu_1
+				has_building = tb_culture_east_honshu_2
+				has_building = tb_culture_east_honshu_3
+				has_building = tb_culture_east_honshu_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = chubu
+					culture = kanto
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_east_honshu_3
+		prestige_cost = 400
+		build_time = 1095
+		heavy_infantry = 100
+		light_cavalry = 50
+		heavy_infantry_offensive = 0.05
+		heavy_infantry_morale = 0.05
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_east_honshu_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Matangi Proving Grounds
+	tb_culture_tohoku_1 = {
+		desc = tb_culture_tohoku_1_desc
+		potential = {
+			OR = {
+				culture = tohoku
+				has_building = tb_culture_tohoku_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		light_infantry = 50
+		archers = 50
+		archers_morale = 0.1
+		light_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tohoku_2 = {
+		desc = tb_culture_tohoku_1_desc
+		potential = {
+			OR = {
+				culture = tohoku
+				has_building = tb_culture_tohoku_1
+				has_building = tb_culture_tohoku_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		
+		upgrades_from = tb_culture_tohoku_1
+		prestige_cost = 200
+		build_time = 547
+		light_infantry = 50
+		archers = 50
+		archers_morale = 0.1
+		light_infantry_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tohoku_3 = {
+		desc = tb_culture_tohoku_1_desc
+		potential = {
+			OR = {
+				culture = tohoku
+				has_building = tb_culture_tohoku_1
+				has_building = tb_culture_tohoku_2
+				has_building = tb_culture_tohoku_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		
+		upgrades_from = tb_culture_tohoku_2
+		prestige_cost = 300
+		build_time = 1095
+		light_infantry = 100
+		archers = 50
+		archers_morale = 0.1
+		light_infantry_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_tohoku_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tohoku_4 = {
+		desc = tb_culture_tohoku_1_desc
+		potential = {
+			OR = {
+				culture = tohoku
+				has_building = tb_culture_tohoku_1
+				has_building = tb_culture_tohoku_2
+				has_building = tb_culture_tohoku_3
+				has_building = tb_culture_tohoku_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = tohoku
+			}
+		}
+		
+		upgrades_from = tb_culture_tohoku_3
+		prestige_cost = 300
+		build_time = 1095
+		light_infantry = 100
+		archers = 50
+		archers_morale = 0.1
+		light_infantry_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_tohoku_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Wenkamui Hunter Proving Grounds
+	tb_culture_hokkaido_1 = {
+		desc = tb_culture_hokkaido_1_desc
+		potential = {
+			OR = {
+				culture = hokkaido
+				culture = ainu
+				has_building = tb_culture_hokkaido_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers = 50
+		light_cavalry = 50
+		archers_defensive = 0.1
+		archers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_hokkaido_2 = {
+		desc = tb_culture_hokkaido_1_desc
+		potential = {
+			OR = {
+				culture = hokkaido
+				culture = ainu
+				has_building = tb_culture_hokkaido_1
+				has_building = tb_culture_hokkaido_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_hokkaido_1
+		prestige_cost = 200
+		build_time = 547
+		archers = 50
+		light_cavalry = 50
+		archers_defensive = 0.1
+		archers_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_hokkaido_3 = {
+		desc = tb_culture_hokkaido_1_desc
+		potential = {
+			OR = {
+				culture = hokkaido
+				culture = ainu
+				has_building = tb_culture_hokkaido_1
+				has_building = tb_culture_hokkaido_2
+				has_building = tb_culture_hokkaido_3
+				
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_hokkaido_2
+		prestige_cost = 300
+		build_time = 1095
+		archers = 100
+		light_cavalry = 50
+		archers_defensive = 0.1
+		archers_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_hokkaido_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_hokkaido_4 = {
+		desc = tb_culture_hokkaido_1_desc
+		potential = {
+			OR = {
+				culture = hokkaido
+				culture = ainu
+				has_building = tb_culture_hokkaido_1
+				has_building = tb_culture_hokkaido_2
+				has_building = tb_culture_hokkaido_3
+				has_building = tb_culture_hokkaido_4
+				
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = hokkaido
+					culture = ainu
+				}
+			}
+		}
+		
+		upgrades_from = tb_culture_hokkaido_3
+		prestige_cost = 400
+		build_time = 1095
+		archers = 100
+		light_cavalry = 50
+		archers_defensive = 0.1
+		archers_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_hokkaido_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Ryukyu Coastal Patrol Docks
+	tb_culture_ryukyu_1 = {
+		desc = tb_culture_ryukyu_1_desc
+		potential = {
+			OR = {
+				culture = ryukyuan
+				has_building = tb_culture_ryukyu_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		heavy_infantry = 50
+		archers = 50
+		heavy_infantry_offensive = 0.05
+		archers_defensive = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_ryukyu_2 = {
+		desc = tb_culture_ryukyu_1_desc
+		potential = {
+			OR = {
+				culture = ryukyuan
+				has_building = tb_culture_ryukyu_1
+				has_building = tb_culture_ryukyu_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		
+		upgrades_from = tb_culture_ryukyu_1
+		prestige_cost = 200
+		build_time = 547
+		heavy_infantry = 50
+		archers = 50
+		heavy_infantry_offensive = 0.05
+		archers_defensive = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_ryukyu_3 = {
+		desc = tb_culture_ryukyu_1_desc
+		potential = {
+			OR = {
+				culture = ryukyuan
+				has_building = tb_culture_ryukyu_1
+				has_building = tb_culture_ryukyu_2
+				has_building = tb_culture_ryukyu_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		
+		upgrades_from = tb_culture_ryukyu_2
+		prestige_cost = 300
+		build_time = 1095
+		heavy_infantry = 100
+		archers = 50
+		heavy_infantry_offensive = 0.05
+		archers_defensive = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_ryukyu_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_ryukyu_4 = {
+		desc = tb_culture_ryukyu_1_desc
+		potential = {
+			OR = {
+				culture = ryukyuan
+				has_building = tb_culture_ryukyu_1
+				has_building = tb_culture_ryukyu_2
+				has_building = tb_culture_ryukyu_3
+				has_building = tb_culture_ryukyu_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = ryukyuan
+			}
+		}
+		
+		upgrades_from = tb_culture_ryukyu_3
+		prestige_cost = 400
+		build_time = 1095
+		heavy_infantry = 100
+		archers = 50
+		heavy_infantry_offensive = 0.05
+		archers_defensive = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_ryukyu_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
 	# Zomia Highland Grounds
 	tb_culture_zomia_1 = {
 		desc = ca_culture_zomia_1_desc
@@ -9648,15 +10876,31 @@ tribal = {
 				culture_group = northern_thai
 				culture_group = hmong_mien
 				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				has_building = tb_culture_zomia_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9664,9 +10908,17 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9687,6 +10939,14 @@ tribal = {
 				culture_group = northern_thai
 				culture_group = hmong_mien
 				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				has_building = tb_culture_zomia_1
 				has_building = tb_culture_zomia_2
 			}
@@ -9694,9 +10954,17 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9704,9 +10972,17 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9729,6 +11005,14 @@ tribal = {
 				culture_group = northern_thai
 				culture_group = hmong_mien
 				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				has_building = tb_culture_zomia_1
 				has_building = tb_culture_zomia_2
 				has_building = tb_culture_zomia_3
@@ -9737,9 +11021,17 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9747,9 +11039,17 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9770,6 +11070,14 @@ tribal = {
 				culture_group = northern_thai
 				culture_group = hmong_mien
 				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				has_building = tb_culture_zomia_1
 				has_building = tb_culture_zomia_2
 				has_building = tb_culture_zomia_3
@@ -9779,9 +11087,17 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -9789,9 +11105,17 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture_group = northern_thai
-					culture_group = hmong_mien
-					culture_group = khasi_palaung_khmuic
+				culture_group = northern_thai
+				culture_group = hmong_mien
+				culture_group = khasi_palaung_khmuic
+				culture = karen
+				culture = kayah
+				culture = chin
+				culture = naxi
+				culture = nisu
+				culture = nuosu
+				culture = kachin
+				culture = tai_shan
 				}
 			}
 		}
@@ -10079,13 +11403,13 @@ tribal = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		
@@ -10108,13 +11432,13 @@ tribal = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		upgrades_from = tb_culture_viet_1
@@ -10140,13 +11464,13 @@ tribal = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		upgrades_from = tb_culture_viet_2
@@ -10171,13 +11495,13 @@ tribal = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture = irish
+				culture = viet
 			}
 		}
 		upgrades_from = tb_culture_viet_3

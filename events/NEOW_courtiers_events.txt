@@ -217,8 +217,8 @@ character_event = {
 }
 # Jewish Diplomat Appears at Court (sephardi)
 character_event = {
-	id = COURTE.70
-	desc = EVTDESC_COURTE_70
+	id = COURTE.90
+	desc = EVTDESC_COURTE_90
 	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_religion
 	
@@ -289,8 +289,8 @@ character_event = {
 
 # Jewish Administrator Appears at Court (sephardi)
 character_event = {
-	id = COURTE.71
-	desc = EVTDESC_COURTE_71
+	id = COURTE.91
+	desc = EVTDESC_COURTE_91
 	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_religion
 	
@@ -361,8 +361,8 @@ character_event = {
 
 # Beur Spy Appears at Court (sephardi)
 character_event = {
-	id = COURTE.72
-	desc = EVTDESC_COURTE_72
+	id = COURTE.92
+	desc = EVTDESC_COURTE_92
 	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_religion
 	
@@ -685,6 +685,7 @@ character_event = {
 			OR = {
 				region = world_europe_west_brittania
 				region = world_europe_west_francia
+				region = custom_russia
 			}
 		}
 		NOT = { has_character_modifier = expelled_jewish }
@@ -760,6 +761,7 @@ character_event = {
 			OR = {
 				region = world_europe_west_brittania
 				region = world_europe_west_francia
+				region = custom_russia
 			}
 		}	
 		NOT = { has_character_modifier = expelled_jewish }
@@ -835,6 +837,7 @@ character_event = {
 			OR = {
 				region = world_europe_west_brittania
 				region = world_europe_west_francia
+				region = custom_russia
 			}
 		}
 		NOT = { has_character_modifier = expelled_jewish }
@@ -5771,8 +5774,8 @@ character_event = {
 }
 #Kristang Diplo
 character_event = {
-	id = COURTE.73
-	desc = EVTDESC_COURTE_73
+	id = COURTE.741
+	desc = EVTDESC_COURTE_74
 	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_religion
 	
@@ -6209,7 +6212,7 @@ narrative_event = {
 		OR = { 
 			religion = folklorist
 			religion = folklorist_reformed
-			religion = akjung
+			religion = akjang
 		    capital_scope = {
 			    region = world_siberia
 		    }
@@ -7001,7 +7004,7 @@ character_event = {
 		OR = { 
 			religion = folklorist
 			religion = folklorist_reformed
-			religion = akjung
+			religion = akjang
 		}
 		trait = poet
 	}
