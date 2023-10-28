@@ -1991,13 +1991,7 @@ feudal_governments = {
 					has_game_started = no
 					primary_title = {
 						OR = { 
-							title = e_byzantium
-							title = e_roman_empire
-							title = e_britannia
-							title = e_transnistria
-							title = e_ruthenia
-							title = e_marblists
-							title = e_bengal
+							title = e_columbia
 							AND = {
 								NOR = {
 									is_government_potential = eastern_feudal
@@ -2028,13 +2022,7 @@ feudal_governments = {
 				AND = { 
 					primary_title = { 
 						OR = { 
-							title = e_byzantium
-							title = e_roman_empire
-							title = e_britannia
-							title = e_transnistria
-							title = e_ruthenia
-							title = e_marblists
-							title = e_bengal
+							title = e_columbia
 							AND = {
 								NOR = {
 									is_government_potential = eastern_feudal
@@ -2062,20 +2050,29 @@ feudal_governments = {
 						has_law = succ_byzantine_elective
 					}
 				}
-				AND = {
-				    religion = marblists
-					has_law = succ_byzantine_elective
-					higher_tier_than = KING
-				}
-				AND = {
-				    has_landed_title = e_great_russia
-					has_landed_title = d_petrist
+				OR = {
+					AND = {
+						top_liege = {
+							government = roman_imperial_government
+						}
+						NOT = {
+							tier = BARON
+						}
+					}
+					AND = {
+						liege = {
+							government = roman_imperial_government
+						}
+						NOT = {
+							tier = BARON
+						}
+					}
 				}
 			}
 			is_patrician = no
 		}
 		
-		color = { 143 12 125 }
+		color = { 10 49 107 }
 
 		barons_need_dynasty = yes
 
