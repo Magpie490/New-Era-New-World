@@ -1,54 +1,270 @@
 appalachian_group = {
 	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
-	graphical_cultures = { croatsouthslavicgfx }
+	graphical_cultures = { westerngfx }
 
-	pittian = {
-		graphical_cultures = { croatsouthslavicgfx }
-		unit_graphical_cultures = { germangfx }
-		
-		color = { 167 184 189 }
+	vandalian = {#mix of irish/germans
+		graphical_cultures = { celticgfx westerngfx }
+
+		color = { 73 0 0 }
 
 		male_names = {
-			Abelino Adam Albert Albi Alen Aldo Aleks Alesandro Akine Amadeus Andrev Andria Angus Arkin Aron August Augustin Aurelian
-			Baldwin Bartolomeus Basil Belo Benjamin Boris Brian Calvin Casimir Caspar Clement Cornelius Cosmo
-			Daniel Deargo Dearo Defo Demetrius Dino Dragan Dujm Duncan Ed Eduard Elijah Elio Elvis Emanuel Emil Ethan Eugene Eid Ezio
-			Felicio Feliks Fin Firo Fodoprid Fortunato Francis Frank Fred Fredi
-			Gabriel Gabrino George Gilbert Gregori Guerino Han Harko Hrvoie Hubert Hugh Hupold
-			Igor Ingvar Ivanis Jacob Jack Jacki James Jesi John Johni Jordan Joseph Joshua Jitei Juri
-			Koloman Konrad Kormak Karles Kristopher Laurence Lambert Lazarus Leo Leonardo Leonid Leopold Liam Lidio Loris Lovi Luke
-			Malcom Marco Marius Martin Mason Mateo Mathew Mersed Mikael Milano Mislav Mitrofan Murkad Neno Nick Nighto Nikita Nikolas Noah Oliver Orlando Oscar
-			Patrik Paul Philip Pecevar Peter Prospero Poropat Radul Randolph Roman Rudolph Rulepece Rusti
-			Sandro Sergio Shaun Simon Slavi Srd Stephen Sulvan
-			Tajlor Taran Theodor Thieri Thomas Tom Toni Travis Ubaldo Ulf Valter Viktor Visho Vito Vukan Viliam Virgil Verner Zack Zackeri
+			Agustos_Augustus Albert_Albert Alestair_Alexander Andrue_Andrew Austin_Augustine
+			Benadict_Benedict Brian_Brian
+			Carter Chearls_Charles Ches Clyde
+			Danny_Daniel David_David Doug_Douglas Duff Dwight
+			Eddie_Edward
+			Fransis_Francis Freadrik_Frederick
+			Gilbart_Gilbert Gordun_Gordon
+			Hoyles Hugh_Hugh Humfry
+			James_James Joey_Joseph Jon_John
+			Kent Krosby
+			Len_Leonard Leo_Leo
+			MacDonal_Donald MacKenzay Mikael_Michael
+			Padrik_Patrick Paul_Paul Peater_Peter Philip_Phillip
+			Richar_Richard Robart_Robert Roger_Roger
+			Steave_Stephen
+			Thony_Anthony Tomas_Thomas
+			Walter_Walter Wilyam_William
 		}
+
 		female_names = {
-			Adela Adriana Aleks Alesandra Ambrosia Amelia Antonela Antonia Ana Ava Augusta Aurelina
-			Barbara Bela Belapece Benjamina Bone Borisa Briana Brigit Brunhild Calvina Casimira Catherine Cleara Clementina
-			Danica Dearana Dilva Dubrava Dubravka Dorothi Eda Edith Elenor Eli Elizabet Elvira Ema Emanuela Emili Emilia Eva Evelin
-			Felicia Feliksa Fine Fortuna Franka Freda Frida
-			Gabriela Gea Gordana Goldi Gormeli Hana Harper Hapira Hedviga Helena Helen Hope
-			Ida Iolanda Isabela Jackina Jadranka Jagoda Jane Jean Joan Jolanda Jordana Judit Josephina
-			Kamila Karla Karlote Karmela Kecilia Kera Keri Kisala Konstant Ksenia Ladika Laura Lea Leonida Lidia Livia Lightila Lili Lizi Lorna Lova Lucia
-			Madison Marca Margaret Maria Mare Martina Masonia Matea Mia Mikaela Mariana Mirena Mirna Muriel Natali Natalia Nikita Nives Nuala Olivia
-			Patrika Pauliana Pelina Petra Pita Rea Rebeka Redmila Rhonda River Romana Rubi Ruth
-			Sandra Sheri Sergia Sibila Silenta Silvia Sinek Sista Snovi Sophia Sunshina Susan
-			Tajlorina Tatiana Theodora Thomaslava Toma Tomasina Valeria Vanesa Veronika Viktoria Viliama Virgila Virginia Vishana Zackeria
+			Abi_Abigail Alexandra_Alexandra Alexis_Alexia Allison_Alice Alyssa_Alyssa Amanda_Amanda Angela_Angela Anna_Anna April_April Ashley Autumn
+			Bailey Belle_Elizabeth Beatrix_Beatrix Bethany Blair Blakely Breanna_Briana Brianna_Briana Brittany_Brittany Brooke
+			Caitlin_Caitlin Catherine_Catherine Caroline_Caroline Cassandra Cheyenne Chloe_Chloe Christina_Christina Claire_Clara Courtney
+			Dana Danica Danielle_Daniela
+			Elaine_Helen Elizabeth_Elizabeth Emily_Emily Emma_Emma Erin Esther_Esther
+			Faith
+			Grace
+			Hailey_Haley Haley_Haley Hannah_Hannah
+			Isabel_Elizabeth Isabella_Elizabeth
+			Jacqueline Jada Jane_Jane Jasmine_Jasmine Jennifer_Jennifer Jessica_Jessica Joanna_Jane Julia_Julia
+			Kaitlyn_Caitlin Katelyn_Caitlin Katherine_Catherine Kathryn_Catherine Katie_Catherine Kayla Kaylee Kelsey Kimberly_Kimberly
+			Laura_Laura Lauren_Laurentia Leah_Leah Leslie
+			Mackenzie Madeline_Madeline Madison_Matilda Makayla Maria_Mary Mariah_Mary Marissa Mary_Mary Megan_Margaret Melissa Mia Michelle Molly_mary Morgan
+			Natalie_Natalie Nicole_Nicole
+			Olive_Olivia
+			Paige
+			Rachel_Rachel Rebecca_Rebecca
+			Sabrina Sara_Sarah Sarah_Sarah Samantha_Samantha Savannah Shelby Sierra Sophia_Sophia Stephanie_Stephanie Sydney 
+			Taylor Trinity 
+			Vanessa Victoria_Victoria
+			Zoe_Zoe
 		}
-		
-		from_dynasty_prefix = "from "
-		
-		feminist = yes
+
+		from_dynasty_prefix = "of "
 
 		modifier = default_culture_modifier
-		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
-		pat_grf_name_chance = 35
-		mat_grf_name_chance = 35
+		feminist = yes
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
 		father_name_chance = 5
 		
-		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
-		pat_grm_name_chance = 35
-		mat_grm_name_chance = 35
-		mother_name_chance = 5
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		dukes_called_kings = yes
+		tribal_name = "TRIBAL_NAME_PROV_CLAN"
+	}		
+	hollerer = {#mix irish and scottish
+		graphical_cultures = { celticgfx westerngfx }
+
+		color = { 239 142 57 }
+
+		male_names = {
+			Adam_Adam Albert Alex_Alexander Alexander_Alexander Alfred Allan Ambrose Andrew_Andrew Anthony_Anthony Archibald Arthur Aedh Alastair Aiton 
+			Baxter Benjamin_Benjamin Bernard Bertram Balfour
+			Charles_Charles Chesley Christopher_Christopher Clarence Claude Clayton Cyril Connor Cormac Clyde Cluny Craig Campbell Clatney
+			Daniel_Daniel David_David Dennis Dorman Douglas Daire Dwight
+			Edgar Edmund Edward_Edward Edwin Eli_Elijah Elias Elijah_Elijah Eric Ernest_Ernest Eugene_Eugene
+			Francis_Francis Frank_Francis Fred_Frederick Frederick_Frederick Fearghus Fionn Forbes Fintan
+			Garland George_George Gerald Gilbert Gordon Gillespie Gerve
+			Harold_Harold Harry_Harold Harvey Hayward Heber Hedley Henry_Henry Herbert_Herbert Howard Hubert Hugh_Hugh Howley
+			Isaac_Isaac
+			Jack_John Jacob_Jacob James_James Jean_John Jeremiah Job John_John Joseph_Joseph Josiah
+			Kenneth Kevin
+			Lawrence Leo_Leo Leonard_Leo Leslie Levi Lewis_Louis Lloyd Lockie Loyola
+			Malcolm Mark_Mark Martin Matthew_Matthew Maurice Maxwell Michael_Michael Moses Manoah Murphy Marmaduke
+			Nathaniel_Nathan Nicholas_Nicholas Noah_Noah Norman Naboth 
+			Patrick Paul_Paul Peter_Peter Philip Pleaman Percy Pratt
+			Quinton_Quentin
+			Ralph Raymond_Raymond Reginald Reuben Richard_Richard Robert_Robert Roland Ronald Roy Rex Reid Rennie
+			Samuel_Samuel Setanta Sidney Simon_Simon Solomon Stanley Stephen_Stephen Stewart
+			Thomas_Thomas Timothy_Timothy Tasker Tulk
+			Victor Vincent Valence 
+			Wallace Walter_Walter Wilfred_Wilfred William_William Willis Wilson Woodley Walwyn Wolfrey
+		}
+		female_names = {
+			Ada Agnes Alfreda Alice_Alice Alma Amelia_Amelia Amy Anastatia Ann Annie Aubery Armine
+			Barbara_Barbara Beatrice Bertha Bessie Blanche Bride Bridget
+			Caroline_Carol Carrie Catherine_Catherine Cecilia Charlotte_Charlotte Clara
+			Daisy Dora Dorcas Doris Dorothy_Dorothea Deirdre
+			Edith Edna Effie Eileen Eleanor_Eleanor Eliza_Elizabeth Ella Ellen Elsie Emily Emma_Emma Esther Ethel Eva Evelyn
+			Fannie Fanny Flora Florence Frances
+			Georgina Gertrude Gladys Grace Gwynne Gudrid
+			Hannah Harriet Harriett Hazel Helen_Helen Hilda
+			Ida Irene Ivy
+			Jane_Jane Janet Jesse Joan Johanna Josephine_Josepha Julia
+			Katherine_Catherine Kathleen Katie_Catherine Kaetlyn_Caitlin 
+			Laura_Laura Leah Lillian Lily Louisa Lucy Lydia
+			Maeve Mabel Madeline Maggie Margaret_Margaret Maria_Mary Marion Marjorie Martha Mary_Mary Matilda Maude May Mildred Minnie_Wilhelmina Miriam_Mary Muriel Myrtle
+			Naomi Nellie Nora
+			Olive
+			Patience Pearl Phoebe Phyllis Priscilla
+			Rachel Rebecca_Rebecca Rita Rosanna_Rosaanne Rose_Rosa Ruby Ruth
+			Sadie Sarah_Sarah Selina Shirley Sophia Stella Susan_Susan Susannah_Susan Susie Siobhan Shannie Sheilagh_Sheila
+			Theresa_Theresa Tara
+			Vera Violet
+			Winnifred
+		}
+
+		from_dynasty_prefix = "of "
+
+		modifier = default_culture_modifier
+		feminist = yes
+
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
 		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		dukes_called_kings = yes
+		tribal_name = "TRIBAL_NAME_PROV_CLAN"
 	}
+	smokelander = {#Irish and english
+		graphical_cultures = { englishgfx westerngfx }
+
+		color = { 224 175 175 }
+
+		male_names = { #Southron and Black American names
+			Abram_Abraham Adam_Adam Ainsworth Alister_Alexander Allen_Alan Alonzo_Alphonse Anderson_Andrew Andre_Andrew Antoine_Anthony Archer Austin_Augustine
+			Bancroft Barrett Barton Blake Booker Brad_Bradley Brandon_Brandon Brent Brian_Brian Bridger			
+			Caleb_Caleb Calvin_Calvin Carl_Charles Carson Carter Cedric Chance Chandler Chase Christian_Christian Clarence Clark Cole Connor_Connor Cornel_Cornelius Craig Curtis Cyrus_Cyrus
+			Dalton Damian_Damian Daniel_Daniel Davis_David Deon_Dionysus Douglas_Douglas Dwayne_Duane
+			Edward_Edward Ellis_Elijah Erik_Erik Ezekiel_Ezekiel
+			Fernando_Ferdinand Field Fletcher Ford Forrest Franklin_Franklin Frederick_Frederick
+			Gabriel_Gabriel Garland Gavin_Gavin Gerard_Gerard Glenn Graham Grant
+			Hamilton Hendricks_Henry Howard Hugh_Hugh Hunter
+			Isaac_Isaac Isaiah_Isaiah
+			Jackson_John Jacob_Jacob Jalen James_James Jamal_Jamal Jason_Jason Jefferson_Geoffrey Jeremiah_Jeremiah Jermaine_German Jerome_Jerome John_John Johnson_John Jonathan_Jonathan Jordan_Jordan Joseph_Joseph Julian_Julian Julius_Julius Justin_Justin
+			Kendrick_Henry Keith Kenneth_Kenneth Kevin_Kevin Kyler
+			Lamar Lawrence_Lawrence Leonard_Leonard Lewis_Louis Levi Lincoln Lucas_Luke Lyndon
+			Malcolm_Malcolm Marcus_Mark Marquis Marshall Marvin Matthew_Matthew Maurice_Maruice Michael_Michael
+			Nelson_Neil Nicholas_Nicholas
+			Parker Philander Pierson_Peter Porter
+			Rhett Richard_Richard Robert_Robert Roderick_Roderick Rodney Ronald_Ronald Ross Ryan Ryder
+			Samuel_Samuel Sawyer Scott Shawn_John Spencer Stephan_Stephen Sullivan_Sullivan
+			Thaddeus_Thaddeus Theodore_Theodore Thomas_Thomas Timothy_Timothy Todrick Travis Trent Tyler Tyrik_Tariq
+			Ulysses_Odysseus
+			Vernon
+			Quincy_Quintus
+			Walker Walter_Walter Warren Washington Wilson_William Wyatt
+			Xavier_Xavier
+			Yancy_John
+			Zachary_Zachary
+		}
+
+		female_names = {
+			Alexandra_Alexandra Alexandria_Alexandra Alexis_Alexia Alicia_Alice Alyssa_Alyssa Amanda_Amanda Amber Amy Andrea_Andrea Angela_Angela Anna_Anna April_April Ashley Augusta Autumn
+			Bailey Belle_Elizabeth Beatrix_Beatrix Bethany Blair Blakely Breanna_Briana Brianna_Briana Brittany_Brittany Brooke
+			Caitlin_Caitlin Catherine_Catherine Caroline_Caroline Cassandra Cheyenne Chloe_Chloe Christina_Christina Claire_Clara Courtney
+			Danielle_Daniela Daphne Destiny Donna
+			Elaine_Helen Elizabeth_Elizabeth Emily_Emily Emma_Emma Erin Esther_Esther
+			Felicia_Felicia
+			Grace
+			Hailey_Haley Haley_Haley Hannah_Hannah
+			Imani Isabel_Elizabeth Isabella_Elizabeth Ivory
+			Jacqueline Jada Jane_Jane Jasmine_Jasmine Jennifer_Jennifer Jessica_Jessica Joanna_Jane Julia_Julia
+			Kaitlyn_Caitlin Katelyn_Caitlin Katherine_Catherine Kayla Keisha Kelsey Kimberly_Kimberly Kylee
+			Laura_Laura Lauren_Laurentia Leah_Leah Lorraine
+			Mackenzie Madeline_Madeline Madison_Matilda Makayla Maria_Mary Mariah_Mary Marissa Mary_Mary Megan_Margaret Melissa Mia Michelle Molly_mary Morgan
+			Natalie_Natalie Nicole_Nicole
+			Olivia_Olivia
+			Rachel_Rachel Rebecca_Rebecca
+			Sabrina Sara_Sarah Sarah_Sarah Samantha_Samantha Savannah Shelby Sierra Sophia_Sophia Stephanie_Stephanie Sydney 
+			Taylor Trinity 
+			Vanessa Victoria_Victoria
+			Zoe_Zoe
+		}
+
+		from_dynasty_prefix = "of "
+
+		modifier = default_culture_modifier
+		feminist = yes
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		dukes_called_kings = yes
+		tribal_name = "TRIBAL_NAME_PROV_CLAN"
+	}		
+	agrilachian = {#mix german and irish
+		graphical_cultures = { germangfx westerngfx }
+
+		color = { 168 83 52 }
+
+		male_names = {
+			Alexander_Alexander Alvin Anders_Andrew Abel_Abel Ahab Abram_Abraham
+			Burbot Benson Bollard
+			Clark Carl_Charles Cyrus Christian_Christian Cable Cyril
+			Dexter Davit_David Dodge Dromond Dale
+			Elmhart Edmund Elisha_Elijah Edsel Eric_Eric
+			Fitzgerald Fardage Frederick_Frederick Franklin_Franklin
+			Glenlyon Griffon George_George Gudgeon Gideon_Gideon Gybe Gordon Gregory_Gregory Guy_Guy
+			Hamilton Henry_Henry Hyac Hydrus Hackett Halyard Hannibal Hugh_Hugh
+			Isaac_Isaac Irvin Ishmail_Ishmael
+			Jeffrey_Geoffrey Jack_John James_James
+			Kedge
+			Lawrence_Lawrence Lewis_Louis Lazaret_Lazarus Lorne
+			Madison Martin_Martin Mather Michael_Michael Mark_Mark Marin Mammut
+			Ned_Edward
+			Owen Oakum Oliver_Oliver Odocoil
+			Pike Paul_Paul Peter_Peter Picton Pinus
+			Robert_Robert Richard_Richard Rogday Rubin_Ruben Roband Reeve Robin Roger_Roger
+			Sculpin Steffan_Stephen Scotiadoc Sullivan Stemson Stevedore_Stephen Seymour Spencer Salvelin
+			Tim_Timothy Theodore_Theodore Thaddeus Townsend
+			Will_William Walleye Wyandot Wyatt
+			Zachary_Zachary
+		}
+
+		female_names = {
+			Ann_Anna Arbora Alma Algoma Alyssa Acacia Aurora
+			Bee Barbara_Barbara Brook Blossom
+			Chelsea Chippewa Charlotte_Charlotte Columbia Cobia Casey Clair Crystal Cecilia
+			Doloma Dawn
+			Edna Edith
+			Gladys Georgia Genoa
+			Haida Hagar
+			Iris Isabelle_Elizabeth
+			Josephine
+			Marjorie Margaret_Margaret Marie_Mary Moira Marielle Melissa
+			Nancy Norgoma
+			Perch Petra
+			Rose_Rosa Rachel
+			Sylph Stephanie_Stephanie Sprite Sarnia Shanty
+			Vienna Vanessa Veronica
+		}
+
+		from_dynasty_prefix = "of "
+
+		modifier = default_culture_modifier
+		feminist = yes
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		dukes_called_kings = yes
+		tribal_name = "TRIBAL_NAME_PROV_CLAN"
+	}	
 }
