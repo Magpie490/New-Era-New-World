@@ -1008,6 +1008,125 @@ pagan_group = {
 
 	}	
 	
+	gator_pagan_reformed = {
+		graphical_culture = reformednorsegfx
+		alternate_start = { always = no }
+
+		icon = 31
+		heresy_icon = 32
+		
+		ai_convert_other_group = 2 # always try to convert
+		ai_convert_same_group = 2 # always try to convert
+
+		color = { 9 117 0 }
+		
+		interface_skin = { pagan_interface }
+		
+		high_god_name = GOD_CAIDOR
+		
+		god_names = {
+			GOD_CAIDOR GOD_THE_LORD GOD_THE_CREGATOR GOD_THE_EMPEROR_OF_THE_COSMOS
+		}
+		evil_god_names = {
+			GOD_THE_ARTIST GOD_THE_SINS_OF_MAN GOD_ARCHITECT
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			retinuesize_perc = 0.5
+			
+			key = "OFF_RELIGION"
+		}
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_CREATION
+		priest_title = SWAMPTENDER
+		can_call_crusade = yes
+		priests_can_marry = yes
+		allow_looting = yes
+		max_consorts = 3
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		feminist = yes
+		seafarer = yes
+		allow_in_ruler_designer = no
+		hard_to_convert = yes
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		intermarry = catholic
+		intermarry = novelist
+		intermarry = novelist_reformed
+		intermarry = celtic_pagan
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = summer_queen
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+	}
+
+	gator_pagan = {
+		graphical_culture = norsegfx
+
+		icon = 31
+		heresy_icon = 32
+		
+		color = { 5 68 0 }
+		
+		interface_skin = { pagan_interface }
+		
+		high_god_name = GOD_CAIDOR
+		
+		god_names = {
+			GOD_CAIDOR GOD_THE_LORD GOD_THE_CREGATOR GOD_THE_EMPEROR_OF_THE_COSMOS
+		}
+		evil_god_names = {
+			GOD_THE_ARTIST GOD_THE_SINS_OF_MAN GOD_ARCHITECT
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			retinuesize_perc = 0.5
+			
+			key = "OFF_RELIGION"
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_CREATION
+		priest_title = SWAMPTENDER
+		
+		aggression = 1.2
+		priests_can_marry = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		feminist = yes
+		seafarer = yes
+		raised_vassal_opinion_loss = no
+		allow_in_ruler_designer = yes
+		max_consorts = 3
+		reformed = celtic_pagan_reformed
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		can_demand_religious_conversion = no
+		hard_to_convert = yes
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		intermarry = catholic
+		intermarry = novelist
+		intermarry = novelist_reformed
+		intermarry = celtic_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = summer_queen
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+	}
+
 	celtic_pagan_reformed = {
 		graphical_culture = reformednorsegfx
 		alternate_start = { always = no }
