@@ -9,6 +9,41 @@ old_world_cultist_group = {
 	
 	color = { 0.3 0.3 1.0 }
 
+	antiquarianist = {
+		graphical_culture = muslimgfx
+
+		icon = 81
+		
+		color = { 255 106 0 }
+
+		scripture_name = THE_ANNALS_OF_INDUSTRY
+		
+		high_god_name = GOD_FATHER_INDUSTRY
+		
+		priest_title = SMITH
+		
+		interface_skin = { ironist_interface OWC_interface pagan_interface }
+		
+		god_names = {
+			GOD_FATHER_INDUSTRY GOD_TITANS_OF_PROGRESS GOD_FATHER_DODGE GOD_FATHER_LELAND GOD_FATHER_FORD GOD_FATHER_PROMETHEUS
+		}
+		
+		evil_god_names = {
+			GOD_MOTHER_GAIA GOD_NATURE_BAD
+		}
+		
+		aggression = 1.1
+		allow_rivermovement = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
+		priests_can_marry = yes
+		max_consorts = 3
+		priests_can_inherit = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+	}
 	ironist = {
 		graphical_culture = mongolgfx
 
