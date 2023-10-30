@@ -991,7 +991,10 @@ decisions = {
 			is_playable = yes
 			age = 16
 			prisoner = no
-			religion_group = oceanic
+			OR = {
+				religion_group = oceanic
+				religion = gibborim
+			}
 			NOT = { has_character_modifier = held_blot_timer }
 			NOT = {	has_character_flag = holding_blot }
 			NOT = {
@@ -1099,6 +1102,7 @@ decisions = {
 				has_religion_feature = religion_feature_shindo
 				religion = donyipolo
 				religion = kiratist
+				religion = gibborim
 				religion = finnish_pagan
 				religion = finnish_pagan_reformed
 				religion = baltic_pagan

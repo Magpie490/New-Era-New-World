@@ -67,7 +67,7 @@ post_christian_group = {
 	}
 	
 	marked = {
-		graphical_culture = westerngfx
+		graphical_culture = pagangfx
 		
 		icon = 22
 		heresy_icon = 22
@@ -88,27 +88,28 @@ post_christian_group = {
 			SATAN LUCIFER THE_DEVIL THE_DEMONS GOD_CAIN MOTHMAN
 		}
 		character_modifier = {
+			christian_opinion = -40
 		}
-		aggression = 0.9
+		aggression = 1.3
 		allow_rivermovement = yes		
-		investiture = yes
-		can_have_antipopes = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		can_call_crusade = yes
 		can_retire_to_monastery = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
+		allow_looting = yes
 		priests_can_marry = yes
-		rel_head_defense = yes
+		hard_to_convert = yes
+		ignores_defensive_attrition = yes
+		max_consorts = 3
+		women_can_take_consorts = yes
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
 	}
 	
 	gibborim = {
-		graphical_culture = westerngfx
+		graphical_culture = pagangfx
 		
 		icon = 25
 		heresy_icon = 25
@@ -129,20 +130,26 @@ post_christian_group = {
 			SATAN GOD_THE_PETTY GOD_THE_ENVIOUS
 		}
 		character_modifier = {
+			land_organisation = 0.1
+			vassal_opinion = 5
+			global_tax_modifier = -0.05
+			levy_size = 0.05
 		}
-		aggression = 0.9
-		allow_rivermovement = yes		
-		investiture = yes
-		can_have_antipopes = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		can_call_crusade = yes
-		can_retire_to_monastery = yes
-		priests_can_inherit = no
+		unit_modifier = {
+			land_morale = 0.05
+		}
+		aggression = 1.3
+		allow_rivermovement = yes	
+		priests_can_inherit = yes
 		priests_can_marry = yes
-		rel_head_defense = yes
+		allow_looting = yes
+		hard_to_convert = yes
+		ignores_defensive_attrition = yes
+		max_consorts = 3
+		women_can_take_consorts = yes
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
