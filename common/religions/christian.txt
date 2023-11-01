@@ -2333,7 +2333,7 @@ christian = {
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 
 		icon = 117
-		heresy_icon = 117
+		heresy_icon = 118
 		
 		color = { 0 0 255 }
 		
@@ -2364,49 +2364,47 @@ christian = {
 
 		religious_clothing_head = 12
 		religious_clothing_priest = 12
-		intermarry = armenianapostolic		
-		intermarry = orthodox
-		intermarry = catholic
-		intermarry = sevillian
-		intermarry = lutheran
-		intermarry = vagarna
-		intermarry = calvinist
-		intermarry = genevist
-		intermarry = cadaverist
-		intermarry = orleanist
-		intermarry = prussianist
-		intermarry = transatlantic
-		intermarry = baptist
-		intermarry = jugoslavist
-		intermarry = islamity
-		intermarry = nasrini
-		intermarry = koptic
-		intermarry = mattaism
-		intermarry = xinjiao
-		
-		intermarry = evangelical
-		#intermarry = sedevacantist
-		intermarry = highchurch
-		intermarry = easternprotestant
-		intermarry = fraticelli
-		intermarry = hussite
-		intermarry = anglican
-		intermarry = brethren
-		intermarry = poseidonian
-		intermarry = chaldean
-		intermarry = yersenism
-		intermarry = apostolic
-		intermarry = charismatic
-		intermarry = quaker
-		intermarry = columbian
-		intermarry = marblists
-		intermarry = osvicenism
-		intermarry = katoliko
-		intermarry = kirishitan
-		intermarry = isukirian
-		intermarry = eastern_lightning
-		intermarry = gidoggyo
 	}
+	ultramontain = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 117
+		heresy_icon = 118
+		
+		parent = sedevacantist
+		
+		color = { 63 63 255 }
+		
+		crusade_name = CRUSADE
+		crusade_cb = crusade
+		
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+
+		high_god_name = GOD_GOD
+
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		
+		aggression = 1.3
+		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = no
+		dislike_tribal_organization = yes
+		defensive_attrition = yes
+		allow_looting = no
+		can_demand_religious_conversion = yes
+		hard_to_convert = yes
+
+		religious_clothing_head = 12
+		religious_clothing_priest = 12
+	}
+
 	evangelical = {
 		graphical_culture = westerngfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
@@ -3609,6 +3607,40 @@ christian = {
 		heresy_icon = 36
 		
 		color = { 255 233 0 }
+		
+		crusade_name = CRUSADE
+		crusade_cb = crusade
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		character_modifier = {
+		}
+		
+		aggression = 0.9
+		allow_rivermovement = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+	}
+	adventist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 73
+		heresy_icon = 74
+		
+		color = { 0 153 84 }
 		
 		crusade_name = CRUSADE
 		crusade_cb = crusade
