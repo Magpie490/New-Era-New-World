@@ -754,6 +754,44 @@ old_world_cultist_group = {
 		intermarry = neohuguenot
 		intermarry = jacobinist
 	}
+	gridiron = {
+		graphical_culture = pagangfx
+		icon = 92
+		heresy_icon = 92
+		
+		color = { 114 43 0 }
+
+		interface_skin = { pagan_interface }		
+		
+		scripture_name = THE_GREAT_GAME
+		priest_title = COACH
+		piety_name = PIETY
+		
+		high_god_name = GOD_THE_GAME_OF_LIFE
+		
+		god_names = {
+			GOD_TOM_BRADY GOD_JOE_COOL GOD_SWEETNESS GOD_DON_SHULA GOD_THE_TRIPLETS GOD_VINCE_LOMBARDI GOD_JESUS
+		}
+		
+		evil_god_names = {
+			GOD_THE_REFS GOD_OBESITY 
+		}
+		aggression = 2.0 # AI aggression factor
+		allow_rivermovement = yes
+		allow_looting = yes
+		can_excommunicate = yes
+		priests_can_marry = yes
+		max_consorts = 3
+		priests_can_inherit = no
+		ignores_defensive_attrition = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		religious_clothing_head = 20
+		religious_clothing_priest = 20
+		
+		intermarry = constitutional
+		intermarry = neohuguenot
+		intermarry = girondist
+	}
 	jacobinist = {
 		graphical_culture = muslimgfx
 		parent = girondist
