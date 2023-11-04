@@ -287,6 +287,57 @@ decisions = {
 			}
 		}
 	}
+	form_pennsylvania = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = keystoner
+				culture = yitzer
+				culture = pennsilfaanisch
+			}
+			e_pennsylvania = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_eastsylvania
+			completely_controls = k_allegheny
+		}
+		effect = {
+			e_pennsylvania = { gain_empire_effect = yes }
+			k_eastsylvania = { de_jure_liege = e_pennsylvania }
+			k_allegheny = { de_jure_liege = e_pennsylvania } 
+			if = {
+				limit = { completely_controls = k_buffalo }
+				k_buffalo = { de_jure_liege = e_pennsylvania }
+			}
+			if = { 
+				limit = { completely_controls = d_maryland }
+				d_maryland = { de_jure_liege = k_eastsylvania }
+			}
+			if = {
+				limit = { completely_controls = d_delaware_valley }
+				d_delaware_valley = { de_jure_liege = k_eastsylvania }
+			}
+			if = {
+				limit = { 
+					completely_controls = c_rothrock
+					completely_controls = c_spring_hill
+					completely_controls = c_laurel_highlands
+				}
+				c_rothrock = { de_jure_liege = d_three_mile_island }
+				c_spring_hill = { de_jure_liege = d_three_mile_island }
+				c_laurel_highlands = { de_jure_liege = d_westsylvania }
+			}
+		}
+	}
 	form_magna_virginia = {
 		is_high_prio = yes
 		only_playable = yes

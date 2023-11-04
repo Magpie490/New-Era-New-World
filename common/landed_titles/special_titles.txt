@@ -101,6 +101,28 @@ e_magna_virginia = {
 		}
 	}
 }
+e_pennsylvania = {
+	color = { 75 75 150 }
+	color2 = { 255 255 255 }
+	
+	capital = 83
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_pennsylvania = {
+					is_titular = yes
+				}
+			}
+			e_pennsylvania = {
+				is_titular = no
+			}
+		}
+	}
+}
 
 # NEOW LEFTOVERS
 
