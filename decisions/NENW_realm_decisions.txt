@@ -146,18 +146,14 @@ decisions = {
 			has_regent = no 
 		}
 		allow = { 
-			completely_controls = d_maine
 			completely_controls = d_penobscot
 			completely_controls = d_aroostook
-			completely_controls = d_pennacook
 			prestige = 500
 		}
 		effect = {
 			k_new_acadia = { gain_title_effect = yes }
-			d_maine = { de_jure_liege = k_new_acadia }
 			d_penobscot = { de_jure_liege = k_new_acadia }
 			d_aroostook = { de_jure_liege = k_new_acadia }
-			d_pennacook = { de_jure_liege = k_new_acadia }
 		}
 	}
 	form_great_lakes = {
@@ -336,6 +332,106 @@ decisions = {
 				c_spring_hill = { de_jure_liege = d_three_mile_island }
 				c_laurel_highlands = { de_jure_liege = d_westsylvania }
 			}
+		}
+	}
+	form_maine = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = lobsterfolk
+				culture = mainer
+			}
+			k_maine = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_lobsterland
+			completely_controls = k_aroostook
+		}
+		effect = {
+			k_maine = { gain_empire_effect = yes }
+			k_lobsterland = { any_direct_de_jure_vassal_title = { de_jure_liege = k_maine } }
+			k_aroostook = { any_direct_de_jure_vassal_title = { de_jure_liege = k_maine } }
+		}
+	}
+	form_maritimes = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = wicker
+				culture = scotian
+			}
+			e_maritimes = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_new_brunswick
+			completely_controls = k_nova_scotia
+			completely_controls = k_prince_edward_island
+		}
+		effect = {
+			e_maritimes = { gain_empire_effect = yes }
+			k_prince_edward_island = { de_jure_liege = e_maritimes }
+			k_nova_scotia = { de_jure_liege = e_maritimes }
+			k_new_brunswick = { de_jure_liege = e_maritimes }
+		}
+	}
+	form_acadia = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = acadian
+			}
+			e_acadia = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			prestige = 5000
+			completely_controls = k_new_brunswick
+			completely_controls = k_prince_edward_island
+			completely_controls = k_nova_scotia
+			completely_controls = d_gaspesia
+			completely_controls = d_bas_st_laurent
+			completely_controls = d_penobscot
+			completely_controls = d_aroostook
+			completely_controls = d_machias
+			completely_controls = d_lincoln_ME
+		}
+		effect = {
+			e_acadia = { gain_empire_effect = yes }
+			k_new_brunswick = { de_jure_liege = e_acadia }
+			k_nova_scotia = { de_jure_liege = e_acadia }
+			k_prince_edward_island = { de_jure_liege = e_acadia }
+			k_new_acadia = { de_jure_liege = e_acadia }
+			d_penobscot = { de_jure_liege = k_new_acadia }
+			d_aroostook = { de_jure_liege = k_new_acadia }
+			d_machias = { de_jure_liege = k_new_acadia }
+			d_lincoln_ME = { de_jure_liege = k_new_acadia }
+			d_gaspesia = { de_jure_liege = k_new_acadia }
+			d_bas_st_laurent = { de_jure_liege = k_new_acadia }
 		}
 	}
 	form_magna_virginia = {

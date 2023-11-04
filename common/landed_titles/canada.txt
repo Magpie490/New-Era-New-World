@@ -1185,11 +1185,14 @@ e_canada = {
 			}
 		}
 	}	
-	k_maritimes = {
-		color = { 131 62 168 }
+	
+	k_new_brunswick = {
+		color = { 255 255 128 }
 		color2= { 220 220 0 }
 		
-		culture = maritimer
+		capital = 1162 # Aucpaque / Fredericton
+		
+		culture = wicker
 
 		# Crusade target weight
 		ursuline = 50
@@ -1198,10 +1201,7 @@ e_canada = {
 		thelemic_reformed = 5
 		norse_pagan_reformed = 5
 		
-		mikmaq = "Mi'kma'ki"
-
 		capital = 1165 # Moncton
-			
 		d_new_brunswick = {
 			color = { 232 180 0 }
 			color2= { 220 220 0 }
@@ -1442,26 +1442,6 @@ e_canada = {
 				b_clair_NB = {}
 			}
 		}
-		
-		d_madeleine_islands = {
-			color = { 70 180 50 }
-			color2= { 255 255 20 }
-			capital = 589 # Madeleine
-
-			c_madeleine = {
-				color = { 50 150 20 }
-				color2= { 255 255 20 }
-
-				b_cap_aux_meules_QC = {}
-				b_havre_aux_maisons_QC = {}
-				b_grande_entree_QC = {}
-				b_fatima_QC = {}
-				b_letang_du_nord_QC = {}
-				b_lile_du_havre_aubert_QC = {}
-				b_grosse_ile_QC = {}
-			}
-		}
-		
 		d_prince_edward_island = {
 			color = { 34 177 76 }
 			color2= { 255 255 20 }
@@ -1508,6 +1488,31 @@ e_canada = {
 				b_elmira_NSC = {}
 				b_belfast_NSC = {}
 				b_uigg_NSC = {}
+			}
+		}
+	}	
+	k_nova_scotia = {
+		color = { 100 235 255 }
+		color2 = { 255 255 255 }
+		
+		capital = 1260 # Halifax
+		
+		d_madeleine_islands = {
+			color = { 70 180 50 }
+			color2= { 255 255 20 }
+			capital = 589 # Madeleine
+
+			c_madeleine = {
+				color = { 50 150 20 }
+				color2= { 255 255 20 }
+
+				b_cap_aux_meules_QC = {}
+				b_havre_aux_maisons_QC = {}
+				b_grande_entree_QC = {}
+				b_fatima_QC = {}
+				b_letang_du_nord_QC = {}
+				b_lile_du_havre_aubert_QC = {}
+				b_grosse_ile_QC = {}
 			}
 		}
 		d_nova_scotia = {
@@ -1631,7 +1636,6 @@ e_canada = {
 				b_greenwood_NSC = {}
 			}
 		}
-		
 		d_cape_breton = {
 			color = { 100 80 162 }
 			capital = 1256 # Glace
@@ -1681,6 +1685,81 @@ e_canada = {
 			}
 		}
 	}
+	k_prince_edward_island = {
+		color = { 255 100 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 1213 # Epekwitk
+		
+		
+		d_prince_edward_island = {
+			color = { 34 177 76 }
+			color2= { 255 255 20 }
+			capital = 1213 # Epekwitk
+
+			quebecois = "Île-du-Prince-Édouard"
+			cajun = "Île-Saint-Jean"
+			haitian = "Île-du-Prince-Édouard"
+			maritimer = "Eilean a' Phrionnsa"
+			mikmaq = "Pigtogeoag"
+
+			c_epekwitk = {
+				color = { 36 187 82 }
+				color2= { 255 255 20 }
+
+				b_charlottetown_PEI = {}
+				b_cornwall_PEI = {}
+				b_montague_PEI = {}
+				b_york_PEI = {}
+				b_souris_PEI = {}
+				b_kensington_PEI = {}
+				b_rusticoville_PEI = {}
+			}
+			c_summerside = {
+				color = { 39 167 78 }
+				color2= { 255 255 20 }
+
+				b_summerside_PEI = {}
+				b_alberton_PEI = {}
+				b_tignish_PEI = {}
+				b_oleary_PEI = {}
+				b_ellerslie_PEI = {}
+				b_tyne_valley_PEI = {}
+				b_miscouche_PEI = {}
+			}
+			c_georgetown_NSC = {
+				color = { 39 167 78 }
+				color2= { 255 255 20 }
+
+				b_montague_NSC = {}
+				b_cardigan_NSC = {}
+				b_morell_NSC = {}
+				b_souris_NSC = {}
+				b_elmira_NSC = {}
+				b_belfast_NSC = {}
+				b_uigg_NSC = {}
+			}
+		}
+		d_madeleine_islands = {
+			color = { 70 180 50 }
+			color2= { 255 255 20 }
+			capital = 589 # Madeleine
+
+			c_madeleine = {
+				color = { 50 150 20 }
+				color2= { 255 255 20 }
+
+				b_cap_aux_meules_QC = {}
+				b_havre_aux_maisons_QC = {}
+				b_grande_entree_QC = {}
+				b_fatima_QC = {}
+				b_letang_du_nord_QC = {}
+				b_lile_du_havre_aubert_QC = {}
+				b_grosse_ile_QC = {}
+			}
+		}
+	}
+	
 	k_aurora = {
 		color = { 88 141 35 }
 		color2= { 255 255 255 }

@@ -123,7 +123,53 @@ e_pennsylvania = {
 		}
 	}
 }
+e_maritimes = {
+	color = { 131 62 168 }
+	color2= { 220 220 0 }
+		
+	mikmaq = "Mi'kma'ki"
 
+	capital = 1165 # Moncton
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_maritimes = {
+					is_titular = yes
+				}
+			}
+			e_maritimes = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_acadia = {
+	color = { 75 255 75 }
+	color2= { 220 220 0 }
+
+	capital = 128 # Kennebec 
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_acadia = {
+					is_titular = yes
+				}
+			}
+			e_acadia = {
+				is_titular = no
+			}
+		}
+	}
+}
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
