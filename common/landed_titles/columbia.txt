@@ -1811,10 +1811,10 @@ e_columbia = {
 		allow = { always = no }
 	}
 	
-
-	k_upper_connecticut = {
-		color = { 87 218 220 }
-		color2 = { 255 255 255 }
+	k_vermont = {
+		color={ 47 120 8 }
+		color2={ 220 220 0 }
+		capital = 43 # Montpelier
 		
 		d_east_champlain = {
 			color = { 57 200 20 }
@@ -1889,7 +1889,140 @@ e_columbia = {
 				b_swanton_VT = {}
 			}
 		}
-	
+		d_unity = {
+			color = { 50 200 60 }
+			color2 = { 255 255 255 }
+			capital = 44 # Burlington
+			c_bennington = {
+				color={ 53 217 102 }
+				color2={ 220 220 0 }
+
+				b_bennington_VT = {}
+				b_greenwich_NY = {}
+				b_dorset_VT = {}
+				b_shaftsbury_VT = {}
+				b_manchester_VT = {}
+				b_danby_VT = {}
+				b_pawlet_VT = {}
+			}
+
+			c_rutland = {
+				color={ 40 210 90 }
+				color2={ 220 220 0 }
+
+				b_rutland_VT = {}
+				b_pittsford_VT = {}
+				b_shoreham_VT = {}
+				b_castleton_VT = {}
+				b_poultney_VT = {}
+				b_fair_haven_VT = {}
+				b_bristol_VT = {}
+			}
+			
+			c_windham = {
+				color = { 28 130 31 }
+				color2 = { 255 255 255 }
+				
+				b_newfane_VT = {}
+				b_brattleboro_VT = {}
+				b_jamaica_VT = {}
+				b_athens_VT = {}
+				b_vernon_VT = {}
+				b_londonderry_VT = {}
+				b_grafton_VT = {}
+			}
+			c_windsor = {
+				color = { 15 200 180 }
+				color2 = { 255 255 255 }
+				
+				b_woodstock_VT = {}
+				b_hartford_VT = {}
+				b_bridgewater_VT = {}
+				b_hartland_VT = {}
+				b_reading_VT = {}
+				b_springfield_VT = {}
+				b_sharon_VT = {}
+			}
+		}
+		d_nek = {
+			color = { 30 150 28 }
+			color2 = { 255 255 255 }
+			capital = 43 # Montpelier
+			
+			c_newport = {
+				color={ 28 147 64 }
+				color2={ 220 220 0 }
+
+				b_newport_VT = {}
+				b_brighton_VT = {}
+				b_barton_VT = {}
+				b_orleans_VT = {}
+				b_brownington_VT = {}
+				b_coventry_VT = {}
+				b_charleston_VT = {}
+			}
+
+			c_montpelier = {
+				color={ 17 89 38 }
+				color2={ 220 220 0 }
+
+				b_montpelier_VT = {}
+				b_berlin_VT = {}
+				b_east_montpelier_VT = {}
+				b_plainfield_VT = {}
+				b_morristown_VT = {}
+				b_calais_VT = {}
+				b_stowe_VT = {}
+			}
+			
+			c_orleans = {
+				color={ 10 50 20 }
+				color2={ 0 255 0 }
+				
+				b_albany_VT = {}
+				b_greensboro_VT = {}
+				b_irasburg_VT = {}
+				b_jay_VT = {}
+				b_glover_VT = {}
+				b_craftsbury_VT = {}
+				b_derby_VT = {}
+			}
+			
+			c_barre = {
+				color={ 30 100 20 }
+				color2={ 0 255 0 }
+				
+				b_barre_VT = {}
+				b_cabot_VT = {}
+				b_duxbury_VT = {}
+				b_fayston_VT = {}
+				b_marshfield_VT = {}
+				b_moretown_VT = {}
+				b_middlesex_VT = {}
+			}
+			
+			c_chelsea = {
+				color={ 40 180 50 }
+				color2={ 0 255 0 }
+				
+				b_chelsea_VT = {}
+				b_randolph_VT = {}
+				b_orange_VT = {}
+				b_strafford_VT = {}
+				b_bradford_VT = {}
+				b_tunbridge_VT = {}
+				b_washington_VT = {}
+            }
+		}
+	}
+	k_new_hampshire = {
+		color = { 230 230 255 }
+		color2 = { 255 255 255 }
+		capital = 72 #Concord
+		
+		vermonter = "Albmont"
+		albmonter = "Albmont"
+		
 		d_pennacook = {
 			color={ 65 99 235 }
 			color2={ 220 220 20 }
@@ -1908,7 +2041,6 @@ e_columbia = {
 				b_barnstead_NH = {}
 				b_gilmanton_NH = {}
 			}
-			
 			c_white_mountain = {
 				color={ 95 135 200 }
 				color2={ 220 220 20 }
@@ -1922,7 +2054,6 @@ e_columbia = {
 				b_woodsville_NH = {}
 				b_franconia_NH = {}
 			}
-			
 			c_strafford = {
 				color={ 50 80 250 }
 				color2={ 0 0 255 }
@@ -1935,7 +2066,6 @@ e_columbia = {
 				b_farmington_NH = {}
 				b_lee_NH = {}
 			}
-			
 			c_coos = {
 				color={ 80 140 230 }
 				color2={ 220 220 20 }
@@ -1962,7 +2092,6 @@ e_columbia = {
 				b_wakefield_NH = {}
 				b_wolfeboro_NH = {}
 			}
-			
 		}
 		d_concordia = {
 			color = { 200 200 255 }
@@ -2047,133 +2176,8 @@ e_columbia = {
 				b_sunapee_NH = {}
 			}
 		}
-		d_bennington = {
-			color = { 50 200 60 }
-			color2 = { 255 255 255 }
-			capital = 44 # Burlington
-			c_bennington = {
-				color={ 53 217 102 }
-				color2={ 220 220 0 }
-
-				b_bennington_VT = {}
-				b_greenwich_NY = {}
-				b_dorset_VT = {}
-				b_shaftsbury_VT = {}
-				b_manchester_VT = {}
-				b_danby_VT = {}
-				b_pawlet_VT = {}
-			}
-
-			c_rutland = {
-				color={ 40 210 90 }
-				color2={ 220 220 0 }
-
-				b_rutland_VT = {}
-				b_pittsford_VT = {}
-				b_shoreham_VT = {}
-				b_castleton_VT = {}
-				b_poultney_VT = {}
-				b_fair_haven_VT = {}
-				b_bristol_VT = {}
-			}
-			
-			c_windham = {
-				color = { 28 130 31 }
-				color2 = { 255 255 255 }
-				
-				b_newfane_VT = {}
-				b_brattleboro_VT = {}
-				b_jamaica_VT = {}
-				b_athens_VT = {}
-				b_vernon_VT = {}
-				b_londonderry_VT = {}
-				b_grafton_VT = {}
-			}
-			c_windsor = {
-				color = { 15 200 180 }
-				color2 = { 255 255 255 }
-				
-				b_woodstock_VT = {}
-				b_hartford_VT = {}
-				b_bridgewater_VT = {}
-				b_hartland_VT = {}
-				b_reading_VT = {}
-				b_springfield_VT = {}
-				b_sharon_VT = {}
-			}
-		}
-		
-		d_unity = {
-			color = { 30 150 28 }
-			color2 = { 255 255 255 }
-			capital = 43 # Montpelier
-			
-			c_newport = {
-				color={ 28 147 64 }
-				color2={ 220 220 0 }
-
-				b_newport_VT = {}
-				b_brighton_VT = {}
-				b_barton_VT = {}
-				b_orleans_VT = {}
-				b_brownington_VT = {}
-				b_coventry_VT = {}
-				b_charleston_VT = {}
-			}
-
-			c_montpelier = {
-				color={ 17 89 38 }
-				color2={ 220 220 0 }
-
-				b_montpelier_VT = {}
-				b_berlin_VT = {}
-				b_east_montpelier_VT = {}
-				b_plainfield_VT = {}
-				b_morristown_VT = {}
-				b_calais_VT = {}
-				b_stowe_VT = {}
-			}
-			
-			c_orleans = {
-				color={ 10 50 20 }
-				color2={ 0 255 0 }
-				
-				b_albany_VT = {}
-				b_greensboro_VT = {}
-				b_irasburg_VT = {}
-				b_jay_VT = {}
-				b_glover_VT = {}
-				b_craftsbury_VT = {}
-				b_derby_VT = {}
-			}
-			
-			c_barre = {
-				color={ 30 100 20 }
-				color2={ 0 255 0 }
-				
-				b_barre_VT = {}
-				b_cabot_VT = {}
-				b_duxbury_VT = {}
-				b_fayston_VT = {}
-				b_marshfield_VT = {}
-				b_moretown_VT = {}
-				b_middlesex_VT = {}
-			}
-			
-			c_chelsea = {
-				color={ 40 180 50 }
-				color2={ 0 255 0 }
-				
-				b_chelsea_VT = {}
-				b_randolph_VT = {}
-				b_orange_VT = {}
-				b_strafford_VT = {}
-				b_bradford_VT = {}
-				b_tunbridge_VT = {}
-				b_washington_VT = {}
-            }
-		}
 	}
+	
 
 	k_lobsterland = {
 		color={ 255 0 0 }
@@ -3694,7 +3698,17 @@ e_columbia = {
 				b_tignor_VA = {}
 			}
 		}
-	}
+		d_shenandoah_res = {
+			color = { 140 140 140 }
+			color2 = { 255 255 255 }
+			
+			short_name = yes
+			
+			capital = 66
+			
+			allow = { always = no }
+		}
+	}	
 	k_jersey = {
 	color={ 136 30 85 }
 	color2={ 220 220 0 }
@@ -3807,45 +3821,7 @@ e_columbia = {
 			}
 		}
 	}
-	k_vermont = {
-		color={ 47 120 8 }
-		color2={ 220 220 0 }
-		capital = 43 # Montpelier
-		
-		allow = {
-			conditional_tooltip = {
-				trigger = {
-					k_vermont = {
-						is_titular = yes
-					}
-				}
-				k_vermont = {
-					is_titular = no
-				}
-			}
-		}
-	}
-	k_new_hampshire = {
-		color = { 230 230 255 }
-		color2 = { 255 255 255 }
-		capital = 72 #Concord
-		
-		vermonter = "Albmont"
-		albmonter = "Albmont"
-		
-		allow = {
-			conditional_tooltip = {
-				trigger = {
-					k_new_hampshire = {
-						is_titular = yes
-					}
-				}
-				k_new_hampshire = {
-					is_titular = no
-				}
-			}
-		}
-	}
+	
 	k_connecticut = {
 		color = { 255 255 172 }
 		color2 = { 255 255 255 }
@@ -3977,22 +3953,22 @@ e_columbia = {
 		}
 	}
 	k_maine = {
-	color = { 75 255 75 }
-	color2= { 220 220 0 }
+		color = { 75 255 75 }
+		color2= { 220 220 0 }
 
-	capital = 128 # Kennebec 
+		capital = 128 # Kennebec 
 		
-	allow = {
-		conditional_tooltip = {
-			trigger = {
-				k_maine = {
-					is_titular = yes
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_maine = {
+						is_titular = yes
+					}
 				}
-			}
-			k_maine = {
-				is_titular = no
+				k_maine = {
+					is_titular = no
+				}
 			}
 		}
 	}
-}
 }
