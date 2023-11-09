@@ -1126,11 +1126,14 @@
 	name = "Phoebe"
 	female = yes
 	religion = "celtic_pagan"
-	culture = "wampanoag"
+	culture = "mixe"
 	trait = "harelip"
 	trait = "uncouth"
 	2276.1.8 = {
 		birth = yes
+		effect = {
+		}
+		culture = lobsterfolk
 	}
 	2300.7.7={
 		add_spouse=700078
@@ -1200,7 +1203,7 @@
 }
 700083 = {
 	name = "Robert"
-	dynasty = 5000175
+	dynasty = 5000179
 	religion = "celtic_pagan"
 	culture = "lobsterfolk"
 	trait = "skilled_tactician"
@@ -1209,9 +1212,10 @@
 	trait = "greedy"
 	trait = "paranoid"
 	trait = "trickster"
-	father = 700082
+	trait = "adventurer"
+	father = 700084
 	mother = dummy_female
-	2301.3.6 = {
+	2299.3.6 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -1225,6 +1229,8 @@
 	culture = "lobsterfolk"
 	trait = "naive_appeaser"
 	trait = "harelip"
+	father = 700090
+	mother = dummy_female
 	2248.9.17 = {
 		birth = yes
 	}
@@ -1248,7 +1254,6 @@
 	trait = "chaste"
 	trait = "shy"
 	trait = "disfigured"
-	trait = "adventurer"
 	father = 700084
 	mother = dummy_female
 	2281.2.28 = {
@@ -1324,7 +1329,7 @@
 	name = "August"
 	dynasty = 5000177
 	religion = "celtic_pagan"
-	culture = "lobsterfolk"
+	culture = "mixe"
 	trait = "brilliant_strategist"
 	trait = "possessed"
 	trait = "strong"
@@ -1335,10 +1340,37 @@
 	trait = "siege_leader"
 	trait = "zealous"
 	trait = "lustful"
+	father = 700084
+	mother = dummy_female
 	2295.5.23 = {
 		birth = yes
+		effect = {
+		}
+		culture = lobsterfolk
 	}
 	2666.1.1 = {
 		death = yes
+	}
+}
+700090 = {
+	name = "Dagon"
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "brilliant_strategist"
+	trait = "strong"
+	trait = "harelip"
+	occluded=yes
+	trait = "giant"
+	2120.5.23 = {
+		birth = yes
+	2120.5.23 ={ 
+		create_bloodline = {
+			type = dagon_bloodline
+		}
+	}
+	2170.1.1 = {
+		death = {
+		death_reason = death_natural
 	}
 }
