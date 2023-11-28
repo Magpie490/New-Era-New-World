@@ -1,0 +1,496 @@
+namespace = MPE
+
+#Vinlander
+character_event = {
+	id = MPE.2333
+	desc = "EVTDESCMPE.2333"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = doggerlander
+		}
+		any_demesne_province = {
+			OR = {
+				culture = vinlander
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = vinlander
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = peasant_leader
+				trait = peasant_noble
+				trait = lowborn
+			}
+		}
+		modifier = {
+			factor = 0.85
+			trait = socializer
+		}
+		modifier = {
+			factor = 0.85
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.9
+			trait = poet
+		}
+		modifier = {
+			factor = 0.9
+			trait = kind
+		}
+		modifier = {
+			factor = 0.9
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { learning = 15 }
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.2333
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = doggerlander
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = vinlander
+		}
+	}
+}
+
+character_event = {
+	id = MPE.2334
+	desc = "EVTDESCMPE.2334"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = doggerlander
+		}
+		NOT = {
+			any_liege = {
+			OR = {
+			culture = newfindler
+			}
+			}
+		}
+		any_demesne_province = {
+			culture = vinlander
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = peasant_leader
+				trait = peasant_noble
+				trait = lowborn
+			}
+		}
+		modifier = {
+			factor = 0.85
+			trait = socializer
+		}
+		modifier = {
+			factor = 0.85
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.9
+			trait = poet
+		}
+		modifier = {
+			factor = 0.9
+			trait = kind
+		}
+		modifier = {
+			factor = 0.9
+			trait = humble
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.2334
+		culture = vinlander
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.2334
+		prestige = 5
+	}
+}
+
+#Vinlander
+character_event = {
+	id = MPE.2344
+	desc = "EVTDESCMPE.2344"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.2344"
+		culture = vinlander
+	}
+}
+
+#Marklander
+character_event = {
+	id = MPE.2444
+	desc = "EVTDESCMPE.2444"
+	picture = GFX_evt_emissary
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = doggerlander
+			culture = vinlander
+		}
+		any_demesne_province = {
+			OR = {
+				culture = marklander
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1300
+		modifier = {
+			factor = 0.5
+			culture = marklander
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = peasant_leader
+				trait = peasant_noble
+				trait = lowborn
+			}
+		}
+		modifier = {
+			factor = 0.85
+			trait = socializer
+		}
+		modifier = {
+			factor = 0.85
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.9
+			trait = poet
+		}
+		modifier = {
+			factor = 0.9
+			trait = kind
+		}
+		modifier = {
+			factor = 0.9
+			trait = humble
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { learning = 15 }
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.2444
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = doggerlander
+					culture = vinlander
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = marklander
+		}
+	}
+}
+
+character_event = {
+	id = MPE.2445
+	desc = "EVTDESCMPE.2445"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture = doggerlander
+			culture = vinlander
+		}
+		NOT = {
+			any_liege = {
+			OR = {
+			culture = nordien
+			culture = rivierois
+			culture = bucherons
+			}
+			}
+		}
+		any_demesne_province = {
+			culture = marklander
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { 
+			controls_religion = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = peasant_leader
+				trait = peasant_noble
+				trait = lowborn
+			}
+		}
+		modifier = {
+			factor = 0.85
+			trait = socializer
+		}
+		modifier = {
+			factor = 0.85
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.9
+			trait = poet
+		}
+		modifier = {
+			factor = 0.9
+			trait = kind
+		}
+		modifier = {
+			factor = 0.9
+			trait = humble
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAMPE.2445
+		culture = marklander
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBMPE.2445
+		prestige = 5
+	}
+}
+
+#Marklander
+character_event = {
+	id = MPE.2455
+	desc = "EVTDESCMPE.2455"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAMPE.2455"
+		culture = marklander
+	}
+}

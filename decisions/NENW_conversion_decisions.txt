@@ -1,0 +1,222 @@
+targeted_decisions = {
+	convert_to_vinlander = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = doggerlander
+			culture = marklander
+			}
+			capital_scope = {
+				culture = vinlander
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = doggerlander
+			culture = marklander
+			}
+			NOT = {
+				any_liege = {
+					culture = newfindler
+				}
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = vinlander
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = doggerlander
+					culture = marklander
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = vinlander
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = doggerlander
+								culture = marklander
+							}
+					}
+					NOT ={
+						capital_scope = { culture = vinlander }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = vinlander }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = vinlander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = vinlander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = vinlander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = vinlander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = vinlander
+				}
+			}
+		}
+	}
+	convert_to_marklander = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+			culture = doggerlander
+			culture = vinlander
+			}
+			capital_scope = {
+				culture = marklander
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+			culture = doggerlander
+			culture = vinlander
+			}
+			NOT = {
+				any_liege = {
+					culture = nordien
+					culture = rivierois
+					culture = bucherons
+				}
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = marklander
+			any_courtier = {
+				limit = {
+					OR ={
+					culture = doggerlander
+					culture = vinlander
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = marklander
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+							OR={
+								culture = doggerlander
+								culture = vinlander
+							}
+					}
+					NOT ={
+						capital_scope = { culture = marklander }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = marklander }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = marklander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = marklander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = marklander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = marklander
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = marklander
+				}
+			}
+		}
+	}
+}
