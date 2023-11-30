@@ -118,6 +118,8 @@ pragmatist_pattern_for = {
 	parliament_laws_bhutan_3 = { always = yes }
 	parliament_laws_roman_2 = { always = yes }
 	parliament_laws_roman_3 = { always = yes }
+	parliament_laws_generic_2 = { always = no }
+	parliament_laws_generic_3 = { always = no }
 	parliament_laws_EU_2 = { always = yes }
 	parliament_laws_EU_3 = { always = yes }
 	parliament_laws_vlad_2 = { always = yes }
@@ -183,6 +185,302 @@ pragmatist_pattern_for = {
 		opinion = {
 			who = liege 
 			value = 20
+		}
+	}
+	common_land_laws_0 = {
+		OR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = amateurish_plotter
+			trait = flamboyant_schemer
+			trait = intricate_webweaver
+			trait = elusive_shadow
+			diplomacy = 15
+			intrigue = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	common_land_laws_1 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			stewardship = 15
+			opinion = {
+				who = liege 
+				value = 15
+			}
+		}
+	}
+	common_land_laws_2 = {
+		OR = {
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			martial = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	common_land_laws_3 = {
+		OR = {
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			learning = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+		}
+	}
+	
+	forestry_laws_0 = {
+		OR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = amateurish_plotter
+			trait = flamboyant_schemer
+			trait = intricate_webweaver
+			trait = elusive_shadow
+			diplomacy = 15
+			intrigue = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	forestry_laws_1 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			stewardship = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	forestry_laws_2 = {
+		OR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			diplomacy = 15
+			opinion = {
+				who = liege 
+				value = 15
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	forestry_laws_3 = {
+		OR = {
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			learning = 15
+			opinion = {
+				who = liege 
+				value = 30
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+		}
+	}
+	judiciary_laws_0 = {
+		OR = {
+			trait = amateurish_plotter
+			trait = flamboyant_schemer
+			trait = intricate_webweaver
+			trait = elusive_shadow
+			intrigue = 15
+			opinion = {
+				who = liege 
+				value = 35
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+		}
+	}
+	judiciary_laws_1 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			stewardship = 15
+			diplomacy = 15
+			opinion = {
+				who = liege 
+				value = 15
+			}
+		}
+	}
+	judiciary_laws_2 = {
+		OR = {
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			martial = 15
+			opinion = {
+				who = liege 
+				value = 35
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+		}
+	}
+	judiciary_laws_3 = {
+		OR = {
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			learning = 15
+			opinion = {
+				who = liege 
+				value = 35
+			}
+		}
+		NOR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
 		}
 	}
 	vice_royalty_0 = {
@@ -458,6 +756,15 @@ pragmatist_pattern_for = {
 	revoke_title_law_2 = {
 		always = no
 	}
+	mil_train_0 = { 
+		always = no
+	}
+	mil_train_1 = {
+		always = yes
+	}
+	mil_train_2 = { 
+		always = no
+	}
 }
 
 
@@ -525,6 +832,8 @@ pragmatist_pattern_against = {
 	parliament_laws_bhutan_1 = { always = no }
 	parliament_laws_roman_0 = { always = no }
 	parliament_laws_roman_1 = { always = no }
+	parliament_laws_generic_0 = { always = no }
+	parliament_laws_generic_1 = { always = no }
 	parliament_laws_EU_0 = { always = no }
 	parliament_laws_EU_1 = { always = no }
 	parliament_laws_vlad_0 = { always = no }
@@ -563,6 +872,199 @@ pragmatist_pattern_against = {
 	centralization_2 = { always = no }
 	centralization_3 = { always = no }
 	centralization_4 = { always = no }
+	common_land_laws_0 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	common_land_laws_1 = {
+		OR = {
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	common_land_laws_2 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	common_land_laws_3 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	
+	forestry_laws_0 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	forestry_laws_1 = {
+		OR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	forestry_laws_2 = {
+		OR = {
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	forestry_laws_3 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	judiciary_laws_0 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	judiciary_laws_1 = {
+		OR = {
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	judiciary_laws_2 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
+	judiciary_laws_3 = {
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			opinion = {
+				who = liege 
+				value = -20
+			}
+		}
+	}
 	vice_royalty_0 = { always = no }
 	vice_royalty_1 = {
 		is_feudal = yes
@@ -834,6 +1336,15 @@ pragmatist_pattern_against = {
 	}
 	ze_administration_laws_2 = { always = yes }
 	
+	mil_train_0 = { 
+		always = yes
+	}
+	mil_train_1 = {
+		always = no
+	}
+	mil_train_2 = { 
+		always = yes
+	}
 	status_of_women_0 = { 
 		always = no
 	}
