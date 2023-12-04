@@ -1,0 +1,408 @@
+character_event = {
+	id = arboreal.1
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+
+	hide_from = yes
+
+	desc = {
+		text = arboreal1Desc ###
+
+	}
+	immediate = {
+		set_character_flag = picking_arboreal_patron ##
+	}
+	
+	option = {#School of the Mother
+		name = EVTOPTA_arboreal1 ###
+		if = {
+			limit = { religion = celtic_pagan }
+			add_trait = arboreal_gaian
+		}
+		else = {
+			add_trait = arboreal_reformed_gaian
+		}
+	}
+	
+	option = {#School of The Architect
+		name = EVTOPTB_arboreal1
+		if = {
+			limit = { religion = celtic_pagan }
+			add_trait = arboreal_architect
+		}
+		else = {
+			add_trait = arboreal_reformed_architect
+		}
+	}
+	
+	option = {#School of Lesser Gods
+		name = EVTOPTC_arboreal1
+		if = {
+			limit = { religion = celtic_pagan }
+			add_trait = arboreal_murican
+		}
+		else = {
+			add_trait = arboreal_reformed_murican
+		}
+	}
+	
+	option = {#School of Old Ones
+		name = EVTOPTD_arboreal1
+		if = {
+			limit = { religion = celtic_pagan }
+			add_trait = arboreal_old_ones
+		}
+		else = {
+			add_trait = arboreal_reformed_old_ones
+		}
+	}
+	
+	after = {
+		clr_character_flag = picking_arboreal_patron
+	}
+}
+
+#Scary giant letter event determining it for the AI.
+letter_event = {
+	id = arboreal.5
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = arboreal5Desc
+	option = {
+		name = EVTOPTA_arboreal5
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_gaian
+						}
+						mother_even_if_dead = {
+							trait = arboreal_gaian
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_gaian
+								}
+								mother_even_if_dead = {
+									trait = arboreal_gaian
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_gaian
+								}
+								mother_even_if_dead = {
+									trait = arboreal_gaian
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_reformed_gaian
+						}
+						mother_even_if_dead = {
+							trait = arboreal_reformed_gaian
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_gaian
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_gaian
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_gaian
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_gaian
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				if = {
+					limit = { religion = celtic_pagan }
+					add_trait = arboreal_gaian
+				}
+				else = {
+					add_trait = arboreal_reformed_gaian
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_architect
+						}
+						mother_even_if_dead = {
+							trait = arboreal_architect
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_architect
+								}
+								mother_even_if_dead = {
+									trait = arboreal_architect
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_architect
+								}
+								mother_even_if_dead = {
+									trait = arboreal_architect
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_reformed_architect
+						}
+						mother_even_if_dead = {
+							trait = arboreal_reformed_architect
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_architect
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_architect
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_architect
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_architect
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				if = {
+					limit = { religion = celtic_pagan }
+					add_trait = arboreal_architect
+				}
+				else = {
+					add_trait = arboreal_reformed_architect
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_murican
+						}
+						mother_even_if_dead = {
+							trait = arboreal_murican
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_murican
+								}
+								mother_even_if_dead = {
+									trait = arboreal_murican
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_murican
+								}
+								mother_even_if_dead = {
+									trait = arboreal_murican
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_reformed_murican
+						}
+						mother_even_if_dead = {
+							trait = arboreal_reformed_murican
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_murican
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_murican
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_murican
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_murican
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_stewardship_score = yes
+				if = {
+					limit = { religion = celtic_pagan }
+					add_trait = arboreal_murican
+				}
+				else = {
+					add_trait = arboreal_reformed_murican
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_old_ones
+						}
+						mother_even_if_dead = {
+							trait = arboreal_old_ones
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_old_ones
+								}
+								mother_even_if_dead = {
+									trait = arboreal_old_ones
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_old_ones
+								}
+								mother_even_if_dead = {
+									trait = arboreal_old_ones
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = arboreal_reformed_old_ones
+						}
+						mother_even_if_dead = {
+							trait = arboreal_reformed_old_ones
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_old_ones
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_old_ones
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = arboreal_reformed_old_ones
+								}
+								mother_even_if_dead = {
+									trait = arboreal_reformed_old_ones
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_intrigue_score = yes
+				if = {
+					limit = { religion = celtic_pagan }
+					add_trait = arboreal_old_ones
+				}
+				else = {
+					add_trait = arboreal_reformed_old_ones
+				}
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_novelist_patron
+	}
+}
