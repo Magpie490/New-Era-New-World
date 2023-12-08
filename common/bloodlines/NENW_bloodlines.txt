@@ -7,14 +7,28 @@ mayflower_bloodline = {
 	monthly_character_prestige = 5
 	flags = { historical_bloodline }
 }
-dagon_bloodline = { #Blood of the first King of Lobsterland, claiming descent from the Deep Ones. Description when NENW localisation is done.
+###dagon_bloodline = { #Blood of the first King of Lobsterland, claiming descent from the Deep Ones. Description when NENW localisation is done.
 	
 	inheritance = patrilineal
 	allow_bastards = yes
 	lobsterfolk_opinion = 10
-	harelip_opinion = 10
-	christian_opinion = -20
+	columbian_opinion = -20
 	monthly_character_prestige = 0.5
-	health = 2.5
+	health = 1.5
+	active = {
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+	}
+	flags = { historical_bloodline }
+}
+###van_buren_bloodline = { 
+	
+	inheritance = patrilineal
+	diplomacy = 2
+	constitutional_opinion = 10
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 2.5
 	flags = { historical_bloodline }
 }
