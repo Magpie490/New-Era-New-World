@@ -1,0 +1,1 @@
+NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE = 2325
