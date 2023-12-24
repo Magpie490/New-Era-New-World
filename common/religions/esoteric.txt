@@ -723,6 +723,134 @@ esoteric = {
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 	}
+	gaian = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 98
+        heresy_icon = 99
+
+		color = { 57 191 72 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_MOTHER_GAIA
+		
+		god_names = {
+			GOD_MOTHER_GAIA GOD_THE_EARTH_MOTHER GOD_THE_GREAT_GODDESS GOD_THE_SPIRITS GOD_HEIKKI_LUNTA GOD_PAUL_BUNYAN
+		}
+		
+		evil_god_names = {
+			GOD_FATHER_INDUSTRY GOD_GREED GOD_THE_WENDIGO GOD_THE_HODAG
+		}
+		character_modifier = {
+		}
+		
+		unit_modifier = {		
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		feminist = yes
+		female_temple_holders = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		can_demand_religious_conversion = no
+		
+		unit_modifier = {
+			land_morale = 0.2
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_GAIA_CODEX
+		priest_title = FATHER
+		piety_name = KARMA
+	}
+	luddite = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 98
+        heresy_icon = 99
+		parent = gaian
+		color = { 0 255 33 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_MOTHER_GAIA
+		
+		god_names = {
+			GOD_MOTHER_GAIA GOD_THE_EARTH_MOTHER GOD_THE_GREAT_GODDESS GOD_LUDD GOD_THE_BULL_MOOSE
+		}
+		
+		evil_god_names = {
+			GOD_FATHER_INDUSTRY GOD_GREED
+		}
+		character_modifier = {
+		}
+		
+
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 1.8
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		feminist = yes
+		female_temple_holders = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		can_demand_religious_conversion = no
+		
+		unit_modifier = {
+			land_morale = 0.2
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_BOOK_OF_LUDD
+		priest_title = FATHER
+		piety_name = KARMA
+	}
 	juggalo = {
 		graphical_culture = norsegfx
 		interface_skin = { esoteric_interface zun_interface pagan_interface }
