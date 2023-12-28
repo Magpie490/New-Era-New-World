@@ -6,6 +6,7 @@ targetted_decisions = {
 		ai_check_interval = 8 #check only once every 8 months.
 	    diplomacy_icon = GFX_sacrifice_decision
 	
+		filter = home_court				
 		ai_target_filter = home_court
 	
 		from_potential = {
@@ -17,7 +18,6 @@ targetted_decisions = {
 				religion = stalinist
 				religion = trotskyite
 				religion = titoist
-				religion = marked
 				religion = red_cult
 			}
 		}
@@ -225,15 +225,17 @@ targetted_decisions = {
 			OR = {
 				has_religion_feature = religion_stable
 				religion = akjang
+				religion = espiritista
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
 				has_religion_feature = religion_feature_moism
 				religion = nasrini
 				religion = sisukkuus
-				religion = watcher
+				religion = marapu
 				religion = malikite
 				religion = navayana
 				religion = white_lotus
+				religion = memorialist
 				religion = gidoggyo
 				religion = tridemism
 				religion = qingzhen
@@ -490,15 +492,17 @@ targetted_decisions = {
 			OR = {
 				has_religion_feature = religion_stable
 				religion = akjang
+				religion = espiritista
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
 				has_religion_feature = religion_feature_moism
 				religion = nasrini
 				religion = sisukkuus
-				religion = watcher
 				religion = malikite
 				religion = navayana
 				religion = white_lotus
+				religion = memorialist
+				religion = marapu
 				religion = tridemism
 				religion = gidoggyo
 				religion = qingzhen
@@ -616,6 +620,7 @@ decisions = {
 				trait = incapable
 				trait = sympathy_christendom
 				trait = sympathy_islam
+				trait = sympathy_mormon
 				trait = sympathy_pagans
 				trait = sympathy_zoroastrianism
 				trait = sympathy_judaism
@@ -639,6 +644,8 @@ decisions = {
 				has_religion_feature = religion_feature_thuyhoa
 				religion = celtic_pagan
 				religion = akjang
+				religion = espiritista
+				religion = marapu
 				religion = celtic_pagan_reformed
 				religion = alevi
 				religion = nasrini
@@ -682,6 +689,7 @@ decisions = {
 				has_religion_feature = religion_feature_thuyhoa
 				religion = celtic_pagan
 				religion = akjang
+				religion = marapu
 				religion = celtic_pagan_reformed
 				religion = alevi
 				religion = nasrini
@@ -850,6 +858,71 @@ decisions = {
 									}
 									any_demesne_province = {
 										religion_group = muslim
+									}
+								}
+							}
+						}
+						100 = {
+							add_trait = sympathy_mormon
+							
+							modifier = {
+								factor = 0
+								religion_group = mormonic
+							}
+							modifier = { # Prioritize getting a sympathy trait that is useful
+								factor = 100
+								OR = {
+									any_demesne_province = {
+										religion_group = mormonic
+									}
+									any_vassal = {
+										religion_group = mormonic
+									}
+								}
+							}
+							modifier = { # Otherwise try to emulate your liege
+								factor = 5
+								NOR = {
+									any_demesne_province = {
+										NOT = { religion_group = mormonic }
+									}
+									any_vassal = {
+										NOT = { religion_group = mormonic }
+									}
+								}
+								any_liege = {
+									OR = {
+										AND = {
+											trait = sympathy_mormon
+											religion = ROOT
+										}
+										religion_group = mormonic
+									}
+								}	
+							}
+							modifier = {
+								factor = 0
+								NOR = {
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_mormon
+												religion = ROOT
+											}
+											religion_group = mormonic
+										}
+									}
+									spouse = {
+										religion_group = mormonic
+									}
+									any_courtier_or_vassal = {
+										religion_group = mormonic
+									}
+									any_neighbor_independent_ruler = {
+										religion_group = mormonic
+									}
+									any_demesne_province = {
+										religion_group = mormonic
 									}
 								}
 							}
@@ -1896,7 +1969,6 @@ decisions = {
 				religion = trotskyite
 				religion = titoist
 				religion = red_cult
-				religion = marked
 			}
 		}
 		
@@ -1969,6 +2041,8 @@ title_decisions = {
 	stoic_order_culture_convert_county = {
 		only_playable = yes
 		ai_check_interval = 3
+		filter = owned				
+		ai_target_filter = owned
 		
 		from_potential = {
 			has_dlc = "Mystics"

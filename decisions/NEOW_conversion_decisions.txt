@@ -383,6 +383,400 @@ targeted_decisions = {
 			}
 		}
 	}
+	
+	convert_to_aquitano = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture = andalusian
+				culture = aragonese
+				culture = castilian
+				culture = morisco
+				culture = canarian
+				culture = asturian
+				culture = extrameduran
+				culture = spanish
+				culture = occitan
+				culture = gascon
+				culture = provencal
+			}
+			capital_scope = {
+				culture = aquitano
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture = andalusian
+				culture = aragonese
+				culture = castilian
+				culture = morisco
+				culture = canarian
+				culture = asturian
+				culture = extrameduran
+				culture = spanish
+				culture = occitan
+				culture = gascon
+				culture = provencal
+			}
+			NOT = {
+				any_liege = {
+					OR = {
+						culture = occitan
+						culture = gascon
+						culture = provencal
+					}
+				}
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = aquitano
+			any_courtier = {
+				limit = {
+					OR ={
+				culture = andalusian
+				culture = aragonese
+				culture = castilian
+				culture = morisco
+				culture = canarian
+				culture = asturian
+				culture = extrameduran
+				culture = spanish
+				culture = occitan
+				culture = gascon
+				culture = provencal
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = aquitano
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+						OR={
+				culture = andalusian
+				culture = aragonese
+				culture = castilian
+				culture = morisco
+				culture = canarian
+				culture = asturian
+				culture = extrameduran
+				culture = spanish
+				culture = occitan
+				culture = gascon
+				culture = provencal
+						}
+					}
+				NOT ={
+					capital_scope = { culture = aquitano }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = aquitano }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = aquitano
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = aquitano
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = aquitano
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = aquitano
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = aquitano
+				}
+			}
+		}
+	}
+	
+	convert_to_kitaiskiy = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture = kosak
+				culture = manchurian
+				culture = dongbei
+			}
+			capital_scope = {
+				culture = kitaiskiy
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture = kosak
+				culture = manchurian
+				culture = dongbei
+			}
+			NOT = {
+				any_liege = {
+					OR = {
+				culture = manchurian
+				culture = dongbei
+					}
+				}
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = kitaiskiy
+			any_courtier = {
+				limit = {
+					OR ={
+				culture = kosak
+				culture = manchurian
+				culture = dongbei
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = kitaiskiy
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+						OR={
+				culture = kosak
+				culture = manchurian
+				culture = dongbei
+						}
+					}
+				NOT ={
+					capital_scope = { culture = kitaiskiy }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = kitaiskiy }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = kitaiskiy
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = kitaiskiy
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = kitaiskiy
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = kitaiskiy
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = kitaiskiy
+				}
+			}
+		}
+	}
+	
+	convert_to_chosonskii = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture = novorusskiy
+				culture = yanbian
+				culture = yukchin
+				culture = hamgyong
+				culture = pyongyan
+			}
+			capital_scope = {
+				culture = chosonskii
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture = novorusskiy
+				culture = yanbian
+				culture = yukchin
+				culture = hamgyong
+				culture = pyongyan
+			}
+			NOT = {
+				any_liege = {
+					OR = {
+				culture = yanbian
+				culture = yukchin
+				culture = hamgyong
+				culture = pyongyan
+					}
+				}
+			}
+			NOT= { primary_title= {title = e_transnistria } }
+		}
+		effect = {
+			culture = chosonskii
+			any_courtier = {
+				limit = {
+					OR ={
+				culture = novorusskiy
+				culture = yanbian
+				culture = yukchin
+				culture = hamgyong
+				culture = pyongyan
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = chosonskii
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = { 	
+						OR={
+				culture = novorusskiy
+				culture = yanbian
+				culture = yukchin
+				culture = hamgyong
+				culture = pyongyan
+						}
+					}
+				NOT ={
+					capital_scope = { culture = chosonskii }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = chosonskii }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = chosonskii
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = chosonskii
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = chosonskii
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = chosonskii
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = chosonskii
+				}
+			}
+		}
+	}
 	convert_to_nemet = {
 		
 		filter = self
@@ -2351,6 +2745,105 @@ targeted_decisions = {
 			}
 		}
 	}
+	convert_to_maglish = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR ={
+				culture = darwinian
+				culture_group = malay_group
+			}
+			capital_scope = {
+				culture = maglish
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR ={
+				culture = darwinian
+				culture_group = malay_group
+			}
+			NOT = {
+				any_liege = {
+					OR = {
+				culture = darwinian
+				culture_group = malay_group
+					}
+				}
+			}
+		}
+		effect = {
+			culture = maglish
+			any_courtier = {
+				limit = {
+					OR ={
+				culture = darwinian
+				culture_group = malay_group
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = maglish
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = maglish }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = maglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = maglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = maglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = maglish
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = maglish
+				}
+			}
+		}
+	}
 	convert_to_rumeli = {
 		
 		filter = self
@@ -3482,6 +3975,15 @@ decisions = {
 				has_landed_title = e_qi_wuist
 				has_landed_title = e_jin
 				has_landed_title = e_neonchina
+				has_landed_title = e_manchuria
+				has_landed_title = e_taiwan
+				has_landed_title = e_han
+				has_landed_title = e_qin
+				has_landed_title = e_tibet
+				has_landed_title = e_yangtze
+				has_landed_title = e_zhujiang
+				has_landed_title = e_minyue
+				has_landed_title = e_druze
 			}
 			NOT = { government = chinese_imperial_government }
 			NOT = { has_global_flag = flag_started_han_renaissance }

@@ -12971,6 +12971,7 @@ character_event = {
 			culture_group = berber
 			culture_group = iranian
 			culture_group = near_eastern
+			culture_group = hebrewic
 			religion_group = christian
 			religion_group = muslim
 			religion_group = zoroastrian_group
@@ -18385,8 +18386,9 @@ character_event = {
 	#war = no
 	
 	trigger = {
-		NOT = {
-			culture_group = chinese_group
+		NOR = {
+			culture = bhutanese
+			culture = low_bhutanese
 		}
 		#in_command = no
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }

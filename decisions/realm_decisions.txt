@@ -910,11 +910,11 @@ decisions = {
 				}
 				AND = {
 					trait = ambitious
-					prestige = 2500
+					prestige = 2000
 				}
 				AND = {
 					government = tribal_government
-					prestige = 2500
+					prestige = 2000
 				}
 				AND = {
 					realm_size = 70
@@ -923,7 +923,7 @@ decisions = {
 						tier = DUKE
 					}
 				}
-				prestige = 7500
+				prestige = 4000
 				AND = {
 					is_alternate_start = yes
 					has_alternate_start_parameter = {
@@ -1404,7 +1404,10 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			government = tribal_government
+			OR = {
+				government = tribal_government
+				government = nomadtribal_government
+			}
 			independent = yes
 		}
 		allow = {
@@ -1450,13 +1453,26 @@ decisions = {
 					}
 				}
 			}
-			capital_holding = {
-				OR = {
-					AND = {
-						holding_type = tribal
-						has_building = tb_hillfort_4
+			OR = {
+				AND = {
+					government = tribal_government
+					capital_holding = {
+						OR = {
+							AND = {
+								holding_type = tribal
+								has_building = tb_hillfort_4
+							}
+							holding_type = castle
+						}
 					}
-					holding_type = castle
+				}
+				AND = {
+					government = nomadtribal_government
+					capital_holding = {
+						holding_type = castle
+					}
+					prestige = 2000
+					wealth = 250
 				}
 			}
 		}
@@ -1573,7 +1589,10 @@ decisions = {
 		
 		potential = {
 			is_ruler = yes
-			government = tribal_government
+			OR = {
+				government = tribal_government
+				government = nomadtribal_government
+			}
 			independent = no
 		}
 		allow = {
@@ -1610,13 +1629,26 @@ decisions = {
 				}
 			}
 			OR = {
-				capital_holding = {
-					OR = {
-						AND = {
-							holding_type = tribal
-							has_building = tb_hillfort_4
+				OR = {
+					AND = {
+						government = tribal_government
+						capital_holding = {
+							OR = {
+								AND = {
+									holding_type = tribal
+									has_building = tb_hillfort_4
+								}
+								holding_type = castle
+							}
 						}
-						holding_type = castle
+					}
+					AND = {
+						government = nomadtribal_government
+						capital_holding = {
+							holding_type = castle
+						}
+						prestige = 2000
+						wealth = 250
 					}
 				}
 				AND = {
@@ -1814,7 +1846,10 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			government = tribal_government
+			OR = {
+				government = tribal_government
+				government = nomadtribal_government
+			}
 			independent = yes
 			has_dlc = "The Republic"
 		}
@@ -1863,6 +1898,28 @@ decisions = {
 					holding_type = city
 				}
 			}
+			OR = {
+				AND = {
+					government = tribal_government
+					capital_holding = {
+						OR = {
+							AND = {
+								holding_type = tribal
+								has_building = tb_market_town_4
+							}
+							holding_type = city
+						}
+					}
+				}
+				AND = {
+					government = nomadtribal_government
+					capital_holding = {
+						holding_type = city
+					}
+					prestige = 2000
+					wealth = 250
+				}
+			}
 		}
 		
 		effect = {
@@ -1871,6 +1928,15 @@ decisions = {
 				
 				set_government_type = merchant_republic_government
 				
+				if = {
+					limit = {
+						ai = no
+					}
+					add_trait = merchant_ruler
+					current_heir = {
+						add_trait = merchant_ruler
+					}
+				}
 				if = {
 					limit = {
 						NOT = {
@@ -2231,6 +2297,8 @@ decisions = {
 				has_landed_title = e_zhujiang
 				has_landed_title = e_minyue
 				has_landed_title = e_druze
+				has_landed_title = e_qi_wuist
+				has_landed_title = e_red_cult
 			}
 			has_character_flag = cancreatethefivearmies_flag
 			NOT = { has_global_flag = five_great_armies_founded }

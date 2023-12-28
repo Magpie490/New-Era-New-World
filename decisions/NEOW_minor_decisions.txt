@@ -1,6 +1,6 @@
 decisions = {
 	take_bhutanese_exam = {
-		ai_check_interval = 3
+		ai_check_interval = 6
 		potential = {
 			top_liege = {
 				primary_title = { 
@@ -31,6 +31,219 @@ decisions = {
 		effect = {
 			add_trait = bhutanese_beuracrat
 			wealth = -25
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_mountain_terrain_leader = {
+		ai_check_interval = 36
+		potential = {
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+			NOT = {
+				trait = mountain_terrain_leader
+			}
+			OR = {
+				culture_group = tibetan_group
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = armenian_group
+				culture_group = caucasian
+				culture_group = iranian
+				culture_group = alpinian
+				culture_group = chamic
+				culture_group = tanic
+				culture_group = northern_thai
+				culture_group = khasi_palaung_khmuic
+				culture_group = katuic
+				culture_group = south_chinese_group
+				culture = austrian
+				culture_group = dardic
+				culture = nepali
+				culture = sinoshan
+				culture = andorran
+				culture_group = east_african
+			}
+			can_have_more_leadership_traits = yes
+			age = 25
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+		}
+		
+		allow = {
+			is_inaccessible_trigger = no
+			wealth = 25
+			prestige = 500
+			martial = 13
+			NOR = {
+				trait = desert_terrain_leader
+				trait = flat_terrain_leader
+				trait = jungle_terrain_leader
+				trait = mountain_terrain_leader
+				trait = rough_terrain_leader
+			}
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		
+		effect = {
+			add_trait = mountain_terrain_leader
+			wealth = -25
+			prestige = -500
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_desert_terrain_leader = {
+		ai_check_interval = 36
+		potential = {
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+			NOT = {
+				trait = desert_terrain_leader
+			}
+			OR = {
+				culture_group = arabic
+				culture_group = dhofaric
+				culture_group = cushitic
+				culture_group = saharan
+				culture_group = egyptian
+				culture_group = maghreb_arabic
+				culture_group = berber
+				culture_group = near_eastern
+				culture_group = hebrewic
+				culture = uyghur
+				culture = turkmen
+				culture = uzbek
+				culture = karakalpak
+			}
+			can_have_more_leadership_traits = yes
+			age = 25
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+		}
+		
+		allow = {
+			is_inaccessible_trigger = no
+			wealth = 25
+			prestige = 500
+			martial = 13
+			NOR = {
+				trait = desert_terrain_leader
+				trait = flat_terrain_leader
+				trait = jungle_terrain_leader
+				trait = mountain_terrain_leader
+				trait = rough_terrain_leader
+			}
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		
+		effect = {
+			add_trait = desert_terrain_leader
+			wealth = -25
+			prestige = -500
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_jungle_terrain_leader = {
+		ai_check_interval = 36
+		potential = {
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+			NOT = {
+				trait = jungle_terrain_leader
+			}
+			OR = {
+				culture_group = northern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = manipuric
+				culture_group = borneonic
+				culture_group = bali_sumbawa
+				culture_group = iban_dayakic
+				culture_group = mon_group
+				culture_group = mundic
+				culture_group = sumatric
+				culture_group = tanjia
+				culture_group = viet
+				culture_group = mokenic
+				culture_group = burmic
+				culture_group = malay_group
+				culture_group = aslian
+				culture_group = celebic
+				culture_group = papuan
+				culture_group = sulawesic
+			}
+			can_have_more_leadership_traits = yes
+			age = 25
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+		}
+		
+		allow = {
+			is_inaccessible_trigger = no
+			wealth = 25
+			prestige = 500
+			martial = 13
+			NOR = {
+				trait = desert_terrain_leader
+				trait = flat_terrain_leader
+				trait = jungle_terrain_leader
+				trait = mountain_terrain_leader
+				trait = rough_terrain_leader
+			}
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		
+		effect = {
+			add_trait = jungle_terrain_leader
+			wealth = -25
+			prestige = -500
 		}
 		
 		revoke_allowed = {
@@ -134,6 +347,9 @@ decisions = {
 			is_inaccessible_or_incapable_trigger = no
 			has_regent = no
 			age = 22
+			NOT = {
+				piety = 1500
+			}
 			OR = {
 				religion = penitente
 				religion = apostolic
@@ -143,9 +359,12 @@ decisions = {
 				trait = infection
 				trait = scarred_high
 			}
+			NOT = {
+				has_character_modifier = ai_objective_timer
+			}
 		}
 		allow = {
-			wealth = 25
+			wealth = 50
 			NOR = {
 				AND = {
 					trait = humble
@@ -231,7 +450,12 @@ decisions = {
 		}
 		effect = {
 			character_event = { id = IE.2 }
-			wealth = -25
+			wealth = -50
+			add_character_modifier = { 
+				modifier = ai_objective_timer 
+				months = 24 
+				hidden = yes
+			}
 		}
 		
 		revoke_allowed = {
@@ -473,6 +697,12 @@ decisions = {
 				capital_scope = {
 					region = custom_bhutan_region
 				}
+				any_realm_province = {
+					OR = {
+						culture = bhutanese
+						culture = low_bhutanese
+					}
+				}
 			}
 			is_lowborn = no
 			NOT = { any_artifact = { has_artifact_flag = gun } }
@@ -538,6 +768,13 @@ decisions = {
 				capital_scope = {
 					region = custom_afghan_region
 				}
+				any_realm_province = {
+					OR = {
+						culture = afghan
+						culture = baloch
+						culture = hazar
+					}
+				}
 			}
 			is_lowborn = no
 			NOT = { any_artifact = { has_artifact_flag = gun } }
@@ -600,15 +837,57 @@ decisions = {
 				culture = prussian
 				culture = danzigian
 				culture = southener
+				culture = kannada
 				culture = eastlander
 				culture = new_english
+				culture_group = francacfrique
+				culture = igbo
+				culture = nigerian
+				culture = yoruba
+				culture = hausa	
 				culture = westlander
+				culture = kuhjung
 				culture = scouse
 				culture = northlander
 				culture = british
 				culture = scots
+				culture = old_norman
+				culture = brytwysher
+				culture = ashkenazi
+				culture = han
+				culture = beijing
+				culture = taiwanese
+				culture = kyushu
 				capital_scope = {
 					region = custom_euro_gun_region
+				}
+				any_realm_province = {
+					OR = {
+					culture = prussian
+					culture = danzigian
+					culture = southener
+					culture = kannada
+					culture = eastlander
+					culture = new_english
+					culture_group = francacfrique
+					culture = igbo
+					culture = nigerian
+					culture = yoruba
+					culture = hausa	
+					culture = westlander
+					culture = kuhjung
+					culture = scouse
+					culture = northlander
+					culture = british
+					culture = scots
+					culture = old_norman
+					culture = brytwysher
+					culture = ashkenazi
+					culture = han
+					culture = beijing
+					culture = taiwanese
+					culture = kyushu
+					}
 				}
 				capital_scope = {
 					OR = {
@@ -1375,6 +1654,7 @@ targeted_decisions = {
 		
 		ai_check_interval = 12
 		filter = self
+		ai_target_filter = self
 	    diplomacy_icon = GFX_sell_gold
 
 		potential = { 
@@ -1456,6 +1736,7 @@ targeted_decisions = {
 		
 		ai_check_interval = 12
 		filter = self
+		ai_target_filter = self
 	    diplomacy_icon = GFX_sell_silver
 
 		potential = { 
@@ -1541,6 +1822,7 @@ targeted_decisions = {
 		
 		ai_check_interval = 12
 		filter = self
+		ai_target_filter = self
 	    diplomacy_icon = GFX_reforge_durandal
 
 		potential = { 
@@ -1601,6 +1883,7 @@ targeted_decisions = {
 	immolate_self = {
 		ai_check_interval = 12
 		filter = self
+		ai_target_filter = self
 
 		potential = {
 			is_inaccessible_or_incapable_trigger = no
@@ -1756,7 +2039,9 @@ targeted_decisions = {
 		
 		ai_check_interval = 18
 		filter = independent_rulers
+		ai_target_filter = independent_rulers
 		capable_only = yes
+	    diplomacy_icon = GFX_bhutan_icon
 		
 		from_potential = { 
 			primary_title = { 
@@ -1857,7 +2142,9 @@ targeted_decisions = {
 		
 		ai_check_interval = 18
 		filter = independent_rulers
+		ai_target_filter = independent_rulers
 		capable_only = yes
+	    diplomacy_icon = GFX_bhutan_icon
 		
 		from_potential = { 
 			primary_title = { 
@@ -1908,9 +2195,9 @@ targeted_decisions = {
                             province = PREV
                             home = PREV
                             troops = {
-                                light_cavalry = { 150 150 }
-                                pikemen = { 300 300 }
-                                gunmen = { 300 300 }
+                                light_cavalry = { 200 200 }
+                                pikemen = { 500 500 }
+                                gunmen = { 500 500 }
                             }
                             attrition = 0.5
                             maintenance = no
@@ -1977,7 +2264,9 @@ targeted_decisions = {
 		
 		ai_check_interval = 18
 		filter = independent_rulers
+		ai_target_filter = independent_rulers
 		capable_only = yes
+	    diplomacy_icon = GFX_bhutan_icon
 		
 		from_potential = { 
 			is_within_diplo_range = ROOT
@@ -2082,7 +2371,9 @@ targeted_decisions = {
 		
 		ai_check_interval = 18
 		filter = independent_rulers
+		ai_target_filter = independent_rulers
 		capable_only = yes
+	    diplomacy_icon = GFX_bhutan_icon
 		
 		from_potential = { 
 			war = yes
@@ -2133,9 +2424,9 @@ targeted_decisions = {
                             province = PREV
                             home = PREV
                             troops = {
-                                light_cavalry = { 150 150 }
-                                pikemen = { 300 300 }
-                                gunmen = { 300 300 }
+                                light_cavalry = { 200 200 }
+                                pikemen = { 500 500 }
+                                gunmen = { 500 500 }
                             }
                             attrition = 0.5
                             maintenance = no
@@ -2204,6 +2495,7 @@ targeted_decisions = {
 		filter = vassals
 		ai_target_filter = vassals
 		ai_check_interval = 36
+	    diplomacy_icon = GFX_march_icon
 
 		from_potential = {
 			is_playable = yes
@@ -2377,6 +2669,7 @@ targeted_decisions = {
 		filter = vassals
 		ai_target_filter = vassals
 		ai_check_interval = 36
+	    diplomacy_icon = GFX_tributary_icon
 
 		from_potential = {
 			is_playable = yes

@@ -236,11 +236,13 @@ decisions = {
 				religion = hmongism
 				religion = caodai
 				religion = red_cult
-				religion = marked
 				religion = tridemism
 				religion = ho_cult
 				religion = neoncult_reformed
 				religion = neoncult
+				religion = alukta_pagan_reformed
+				religion = alukta_pagan
+				religion = marapu
 				religion = juche
 				religion = thelemic_reformed
 				religion = summer_queen
@@ -392,6 +394,7 @@ decisions = {
 			OR = {
 				religion = sufi
 				religion = qingzhen
+				religion = marapu
 				religion = barelvi
 				religion = ramadi
 				religion = syafi
@@ -444,6 +447,7 @@ decisions = {
 			OR = {
 				religion = sufi
 				religion = qingzhen
+				religion = marapu
 				religion = barelvi
 				religion = alevi
 				religion = islamity
@@ -879,6 +883,7 @@ decisions = {
 				religion = bon_reformed
 				religion = donyipolo
 				religion = kiratist
+				religion = alukta_pagan_reformed
 				religion = baltic_pagan_reformed
 				religion = celtic_pagan_reformed
 				religion = inuit_pagan_reformed
@@ -1940,6 +1945,10 @@ decisions = {
 		
 		potential = {
 			has_character_flag = dreams_of_the_north
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
 		}
 		allow = {
 			NOT = {
@@ -1970,8 +1979,10 @@ decisions = {
 			NOT = {
 				has_character_modifier = laureate_safety_timer
 			}
+			war = no
+			in_command = no
 			prisoner = no
-			has_regent = no
+			is_incapable = no
 		}
 		allow = {
 			piety = 50
@@ -2032,8 +2043,10 @@ decisions = {
 					society_rank = 1
 				}
 			}
+			war = no
+			in_command = no
 			prisoner = no
-			has_regent = no
+			is_incapable = no
 		}
 		allow = {
 			NOT = {
@@ -2066,6 +2079,10 @@ decisions = {
 					society_rank = 1
 				}
 			}
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
 		}
 		allow = {
 			NOR = {
@@ -3811,6 +3828,78 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	choose_calvinist_sect = {
+		only_playable = yes
+		ai_check_interval = 48
+		is_high_prio = yes
+		
+		potential = {
+			OR = {
+				religion = calvinist
+			}
+			NOT = {
+				has_character_flag = picking_calvinist_sect
+			}
+			is_adult = yes
+			is_incapable = no
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			piety = 20
+		}
+		effect = {
+			set_character_flag = picking_calvinist_sect
+			if = {
+				limit = { ai = no }
+				hidden_tooltip = { character_event = { id = calvinist.300 } }
+			}
+			else = {
+				hidden_tooltip = { letter_event = { id = calvinist.302 } }
+			}
+			piety = -20	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	choose_genevist_sect = {
+		only_playable = yes
+		ai_check_interval = 48
+		is_high_prio = yes
+		
+		potential = {
+			OR = {
+				religion = genevist
+			}
+			NOT = {
+				has_character_flag = picking_genevist_sect
+			}
+			is_adult = yes
+			is_incapable = no
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			piety = 20
+		}
+		effect = {
+			set_character_flag = picking_genevist_cult
+			if = {
+				limit = { ai = no }
+				hidden_tooltip = { character_event = { id = genevist.300 } }
+			}
+			else = {
+				hidden_tooltip = { letter_event = { id = genevist.302 } }
+			}
+			piety = -20	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	choose_orleanist_cult = {
 		only_playable = yes
 		ai_check_interval = 48
@@ -4029,6 +4118,7 @@ decisions = {
 			OR = {
 				religion = thelemic_reformed
 				religion = theosophy
+				religion = espiritista
 				religion = summer_queen
 				religion = thelemic
 				religion = orange_king
@@ -4060,6 +4150,27 @@ decisions = {
 				has_character_modifier = the_sun_modif
 				has_character_modifier = the_judgement_modif
 				has_character_modifier = the_world_modif
+				has_character_modifier = the_magician_reversed_modif
+				has_character_modifier = the_high_priestess_reversed_modif
+				has_character_modifier = the_empress_reversed_modif
+				has_character_modifier = the_emperor_reversed_modif
+				has_character_modifier = the_hierophant_reversed_modif
+				has_character_modifier = the_lovers_reversed_modif
+				has_character_modifier = the_chariot_reversed_modif
+				has_character_modifier = the_strength_reversed_modif
+				has_character_modifier = the_hermit_reversed_modif
+				has_character_modifier = the_wheel_of_fortune_reversed_modif
+				has_character_modifier = the_justice_reversed_modif
+				has_character_modifier = the_hanged_man_reversed_modif
+				has_character_modifier = the_death_reversed_modif
+				has_character_modifier = the_temperance_reversed_modif
+				has_character_modifier = the_devil_reversed_modif
+				has_character_modifier = the_tower_reversed_modif
+				has_character_modifier = the_star_reversed_modif
+				has_character_modifier = the_moon_reversed_modif
+				has_character_modifier = the_sun_reversed_modif
+				has_character_modifier = the_judgement_reversed_modif
+				has_character_modifier = the_world_reversed_modif
 			}
 			prisoner = no
 			has_regent = no
@@ -4150,7 +4261,8 @@ decisions = {
 }
 targeted_decisions = {
 	get_khalsa_baptism = {
-			filter = self
+			filter = self		
+			ai_target_filter = self
 			only_playable = yes
 			ai_check_interval = 24
 			
@@ -4182,7 +4294,8 @@ targeted_decisions = {
 			}		
 		}
 	nobelian_sell_scrap = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4232,7 +4345,8 @@ targeted_decisions = {
 		}
 	}		
 	nobelian_study_scrap = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4282,7 +4396,8 @@ targeted_decisions = {
 		}
 	}		
 	nobelian_merge_insights = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4341,7 +4456,8 @@ targeted_decisions = {
 	}
 	
 	nobelian_repair_stuff= {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4400,7 +4516,8 @@ targeted_decisions = {
 	}	
 	
 	nobelian_merge_manuscript_fragments = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4459,7 +4576,8 @@ targeted_decisions = {
 	}
 	
 	nobelian_create_teaset = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4525,7 +4643,8 @@ targeted_decisions = {
 		}
 	}
 	nobelian_create_tesla_coil= {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4579,7 +4698,8 @@ targeted_decisions = {
 		}
 	}
 	nobelian_create_beer_recipe= {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4634,7 +4754,8 @@ targeted_decisions = {
 		}
 	}	
 	nobelian_create_artillery_book= {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4690,7 +4811,8 @@ targeted_decisions = {
 	}
 
 	take_morphine = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4825,7 +4947,8 @@ targeted_decisions = {
 	}
 	
 	lewis_conversion = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4873,7 +4996,8 @@ targeted_decisions = {
 	}
 	
 	jacobinist_conversion_book = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4910,7 +5034,8 @@ targeted_decisions = {
 	}
 	
 	kipling_morality_book = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -4993,7 +5118,8 @@ targeted_decisions = {
 	}
 
 	dante_morality_book = {
-		filter = self
+			filter = self		
+			ai_target_filter = self
 		ai_check_interval = 12
 		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
 		potential = {
@@ -5637,6 +5763,8 @@ targeted_decisions = {
 	}
 	create_noahides_decision = {
 		only_playable = yes
+			filter = realm		
+			ai_target_filter = realm
 		ai_check_interval = 12
 	    is_high_prio = yes
 	
@@ -5728,6 +5856,8 @@ targeted_decisions = {
 	}
 	suomi_singing_contest_decision = {
 		only_playable = yes
+			filter = realm		
+			ai_target_filter = realm
 		ai_check_interval = 10
 	    is_high_prio = yes
 	
@@ -5803,7 +5933,9 @@ targeted_decisions = {
 	
 	jacobinist_sacrifice_decision = {
 		only_playable = yes
-		ai_check_interval = 2
+			filter = realm		
+			ai_target_filter = realm
+		ai_check_interval = 9
 	    diplomacy_icon = GFX_sacrifice_decision
 	
 		ai_target_filter = home_court
@@ -5928,7 +6060,9 @@ targeted_decisions = {
 title_decisions = {
 	zoroastrian_help_the_poor = {
 		only_playable = yes
-		ai_check_interval = 3
+			filter = owned		
+			ai_target_filter = owned
+		ai_check_interval = 9
 		
 		from_potential = {
 			is_ruler = yes
@@ -6263,7 +6397,9 @@ title_decisions = {
 	}
 	mattaism_help_the_poor = {
 		only_playable = yes
-		ai_check_interval = 3
+			filter = owned		
+			ai_target_filter = owned
+		ai_check_interval = 9
 		
 		from_potential = {
 			is_ruler = yes
@@ -6357,7 +6493,9 @@ title_decisions = {
 	}
 	alevi_help_the_poor = {
 		only_playable = yes
-		ai_check_interval = 3
+			filter = owned		
+			ai_target_filter = owned
+		ai_check_interval = 9
 		
 		from_potential = {
 			is_ruler = yes
@@ -6443,7 +6581,9 @@ title_decisions = {
 	}
 	sikh_help_the_poor = {
 		only_playable = yes
-		ai_check_interval = 3
+			filter = owned		
+			ai_target_filter = owned
+		ai_check_interval = 9
 		
 		from_potential = {
 			is_ruler = yes
@@ -6532,7 +6672,9 @@ title_decisions = {
 	}
 	buddhist_help_the_poor = {
 		only_playable = yes
-		ai_check_interval = 3
+			filter = owned		
+			ai_target_filter = owned
+		ai_check_interval = 9
 		
 		from_potential = {
 			is_ruler = yes

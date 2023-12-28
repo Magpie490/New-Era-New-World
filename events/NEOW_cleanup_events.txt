@@ -313,6 +313,174 @@ character_event = {
 	}
 }
 character_event = { 
+	id = cleanup.99921
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_1_honour
+			}
+			AND = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_2_honour
+			}
+			AND = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_3_honour
+			}
+			AND = {
+				trait = summer_queen_2_honour
+				trait = summer_queen_1_honour
+			}
+			AND = {
+				trait = summer_queen_3_honour
+				trait = summer_queen_1_honour
+			}
+			AND = {
+				trait = summer_queen_2_honour
+				trait = summer_queen_1_honour
+			}
+			AND = {
+				trait = summer_queen_2_honour
+				trait = summer_queen_3_honour
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		if = {
+			limit = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_1_honour
+			}
+			remove_trait = summer_queen_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_2_honour
+			}
+			remove_trait = summer_queen_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = summer_queen_bad_honour
+				trait = summer_queen_3_honour
+			}
+			remove_trait = summer_queen_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = summer_queen_1_honour
+				trait = summer_queen_3_honour
+			}
+			remove_trait = summer_queen_1_honour
+		}
+		else_if = {
+			limit = {
+				trait = summer_queen_1_honour
+				trait = summer_queen_2_honour
+			}
+			remove_trait = summer_queen_1_honour
+		}
+		else_if = {
+			limit = {
+				trait = summer_queen_3_honour
+				trait = summer_queen_2_honour
+			}
+			remove_trait = summer_queen_2_honour
+		}
+	}
+}
+character_event = { 
+	id = cleanup.99922
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				trait = japanese_bad_honour
+				trait = japanese_1_honour
+			}
+			AND = {
+				trait = japanese_bad_honour
+				trait = japanese_2_honour
+			}
+			AND = {
+				trait = japanese_bad_honour
+				trait = japanese_3_honour
+			}
+			AND = {
+				trait = japanese_2_honour
+				trait = japanese_1_honour
+			}
+			AND = {
+				trait = japanese_3_honour
+				trait = japanese_1_honour
+			}
+			AND = {
+				trait = japanese_2_honour
+				trait = japanese_1_honour
+			}
+			AND = {
+				trait = japanese_2_honour
+				trait = japanese_3_honour
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		if = {
+			limit = {
+				trait = japanese_bad_honour
+				trait = japanese_1_honour
+			}
+			remove_trait = japanese_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = japanese_bad_honour
+				trait = japanese_2_honour
+			}
+			remove_trait = japanese_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = japanese_bad_honour
+				trait = japanese_3_honour
+			}
+			remove_trait = japanese_bad_honour
+		}
+		else_if = {
+			limit = {
+				trait = japanese_1_honour
+				trait = japanese_3_honour
+			}
+			remove_trait = japanese_1_honour
+		}
+		else_if = {
+			limit = {
+				trait = japanese_1_honour
+				trait = japanese_2_honour
+			}
+			remove_trait = japanese_1_honour
+		}
+		else_if = {
+			limit = {
+				trait = japanese_3_honour
+				trait = japanese_2_honour
+			}
+			remove_trait = japanese_2_honour
+		}
+	}
+}
+character_event = { 
 	id = cleanup.9992
 	hide_window = yes
 	is_triggered_only = yes
@@ -3060,6 +3228,80 @@ character_event = {
 	}
 }
 character_event = {
+	id = cleanup.9021
+	desc = EVTDESC_cleanup_9021
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9021ptA
+	}
+}
+character_event = {
+	id = cleanup.9022
+	desc = EVTDESC_cleanup_9022
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9022ptA
+	}
+}
+character_event = {
+	id = cleanup.9023
+	desc = EVTDESC_cleanup_9023
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#kill
+		name = cleanup9023ptA
+		death = {
+			death_reason = death_suicide
+		}
+	}
+	option = {#nuh uh
+		name = cleanup9023ptB
+		piety = -7500
+		prestige = -7500
+	}
+}
+character_event = {
+	id = cleanup.9024
+	desc = EVTDESC_cleanup_9024
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9024ptA
+	}
+}
+character_event = {
+	id = cleanup.9025
+	desc = EVTDESC_cleanup_9025
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9025ptA
+	}
+}
+character_event = {
+	id = cleanup.9026
+	desc = EVTDESC_cleanup_9026
+	picture = GFX_evt_japanese_emperor
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9026ptA
+	}
+}
+character_event = {
 	id = cleanup.902
 	desc = EVTDESC_cleanup_902
 	picture = GFX_evt_japanese_emperor
@@ -3844,6 +4086,50 @@ character_event = {
 		current_heir = {
 			ROOT = { set_player_character = PREV }
 		}
+	}
+}
+character_event = {
+	id = cleanup.7021
+	desc = EVTDESC_cleanup_7021
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9021ptA
+	}
+}
+character_event = {
+	id = cleanup.7024
+	desc = EVTDESC_cleanup_7024
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9024ptA
+	}
+}
+character_event = {
+	id = cleanup.7025
+	desc = EVTDESC_cleanup_7025
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9025ptA
+	}
+}
+character_event = {
+	id = cleanup.7026
+	desc = EVTDESC_cleanup_7026
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {#castles
+		name = cleanup9026ptA
 	}
 }
 character_event = {
@@ -7817,6 +8103,163 @@ province_event = {
 		name = "EVTOPTACU24300"
 	}
 }
+###
+
+province_event = {
+	id = cleanup.55100
+	desc = EVTDESC_CU_55100
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		owner = {
+			NOT = { has_character_modifier = cruelly_drove_out_minority }
+		}
+		region = world_europe_west_germania
+		NOR = {
+			has_province_modifier = turkisch_minority
+			culture = turkisch
+			is_looting_in = ROOT
+			is_occupied = yes
+			units_in_province = 1
+			has_disease = yes
+		}
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			has_province_modifier = prosperity_modifier_1 
+		}
+		modifier = {
+			factor = 0.90
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 0.85
+			has_province_modifier = prosperity_modifier_3
+		}
+	}
+	option = {
+		name = "EVTOPTACU55100"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = just }
+			}
+		}
+		add_province_modifier = {
+			name = turkisch_minority
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBCU55100"
+		trigger = {
+			NOT = { 
+				culture = turkisch 
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = charitable }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+		}
+		wealth = 55
+		owner = {
+			add_character_modifier = {
+				name = cruelly_drove_out_minority
+				duration = 90
+			}
+		}
+	}
+}
+province_event = {
+	id = cleanup.55200
+	desc = EVTDESC_CU_55200
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = turkisch_minority
+		culture = turkisch
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = turkisch_minority
+	}
+	option = {
+		name = "EVTOPTACU4200"
+	}
+}
+province_event = {
+	id = cleanup.55300
+	desc = EVTDESC_CU_55300
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = turkisch_minority
+	}
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.95
+			is_looting_in = ROOT
+		}
+		modifier = {
+			factor = 0.95
+			is_occupied = yes
+		}
+		modifier = {
+			factor = 0.95
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.95
+			has_disease = yes
+		}
+	}
+	immediate={
+		remove_province_modifier = turkisch_minority
+	}
+	option = {
+		name = "EVTOPTACU55300"
+	}
+}
+###
 character_event = {
 	id = cleanup.44
 	hide_window = yes
@@ -7858,6 +8301,15 @@ character_event = {
 		}
 		2035 = {
 			add_province_modifier = { name = traveller_minority duration = -1 }
+		}
+		307 = {
+			add_province_modifier = { name = turkisch_minority duration = -1 }
+		}
+		365 = {
+			add_province_modifier = { name = turkisch_minority duration = -1 }
+		}
+		261 = {
+			add_province_modifier = { name = turkisch_minority duration = -1 }
 		}
 		1645 = {
 			add_province_modifier = { name = romani_minority duration = -1 }
