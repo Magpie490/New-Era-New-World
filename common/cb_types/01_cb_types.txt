@@ -38,6 +38,19 @@ dejure_duchy_claim = { # New1
 			}
 		}
 	}
+	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
+	}
 	
 	on_add = {
 		ROOT = {
@@ -321,6 +334,19 @@ force_vassalization = { # New2
 		}
 	}
 	
+	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
+	}
 	on_add = {
 		FROM = {
 			if = {
@@ -2000,6 +2026,9 @@ unjust_conquest = { # New7
 	can_use_gui = {
 		check_if_crusader_trigger = yes
 		ROOT = {
+			NOR = {
+				trait = summer_queen_3_honour
+			}
 			show_scope_change = no
 			conditional_tooltip = { # Pagans have a much easier time using this CB in general
 				trigger = { 
@@ -2122,6 +2151,19 @@ unjust_conquest = { # New7
 		}
 	}
 	
+	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
+	}
 	on_add = {
 		ROOT = {
 			show_scope_change = no
@@ -2414,6 +2456,9 @@ unjust_conquest = { # New7
 					value = off
 				}
 			}
+			NOT = {
+				has_character_modifier = county_conquest_timer
+			}
 			#Bhutan can only use this if Expansionist
 			OR = {
 				NOT = {
@@ -2537,6 +2582,103 @@ unjust_conquest = { # New7
 
 		if = {
 			limit = {
+				ROOT = {
+					OR = {
+				culture_group = japan_group
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = shinko
+				religion = amidism
+					}
+				}
+			}
+			if = {
+				limit = {
+				ROOT = {
+					trait = japanese_1_honour
+				}
+				}
+				ROOT = {
+				remove_trait = japanese_1_honour
+				}
+			}
+			else_if = {
+				limit = {
+				ROOT = {
+					trait = japanese_2_honour
+				}
+				ROOT = {
+				remove_trait = japanese_2_honour
+				add_trait = japanese_1_honour
+				}
+			}
+			else_if = {
+				limit = {
+				ROOT = {
+					trait = japanese_3_honour
+				}
+				ROOT = {
+				remove_trait = japanese_3_honour
+				add_trait = japanese_2_honour
+				}
+			}
+			else = {
+				ROOT = {
+				add_trait = japanese_bad_honour
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					OR = {
+					religion = orleanist
+					religion = novelist
+					religion = novelist_reformed
+					religion = summer_queen
+					}
+				}
+			}
+			if = {
+				limit = {
+				ROOT = {
+					trait = summer_queen_1_honour
+				}
+				}
+				ROOT = {
+				remove_trait = summer_queen_1_honour
+				}
+			}
+			else_if = {
+				limit = {
+				ROOT = {
+					trait = summer_queen_2_honour
+				}
+				ROOT = {
+				remove_trait = summer_queen_2_honour
+				add_trait = summer_queen_1_honour
+				}
+			}
+			else_if = {
+				limit = {
+				ROOT = {
+					trait = summer_queen_3_honour
+				}
+				ROOT = {
+				remove_trait = summer_queen_3_honour
+				add_trait = summer_queen_2_honour
+				}
+			}
+			else = {
+				ROOT = {
+				add_trait = summer_queen_bad_honour
+				}
+			}
+		}
+		if = {
+			limit = {
 				holder_scope = {
 					OR = {
 						higher_tier_than = count
@@ -2567,6 +2709,11 @@ unjust_conquest = { # New7
 		ROOT = {
 			show_scope_change = no
 			participation_scaled_prestige = 100
+			add_character_modifier = {
+				name = county_conquest_timer
+				duration = 90
+				hidden = yes
+			}
 		}
 		any_attacker = {
 			limit = { NOT = { character = ROOT } }
@@ -2717,17 +2864,35 @@ tributary_permanent_cb = { # New8
 						}
 					}
 				}
-				prestige = 200
-				TECH_MAJESTY = 2
-			}
+				OR = {
+					AND = {
+						prestige = 200
+						TECH_MAJESTY = 2
+					}
+					custom_tooltip = {
+					text = HAS_SRIVIJAYA_BLOOD_CT
+					any_owned_bloodline = {has_bloodline_flag = cheaper_tributaries}
+					}
+			
+				}
+			}	
 			conditional_tooltip = {
 				trigger = {
 					capital_scope = {
 						region = world_europe
 					}
 				}
-				prestige = 200
-				TECH_MAJESTY = 4
+				OR = {
+					AND = {
+						prestige = 200
+						TECH_MAJESTY = 4
+					}
+					custom_tooltip = {
+					text = HAS_SRIVIJAYA_BLOOD_CT
+					any_owned_bloodline = {has_bloodline_flag = cheaper_tributaries}
+					}
+
+				}
 			}
 		}
 	}
@@ -3030,6 +3195,14 @@ tributary_permanent_cb = { # New8
 		modifier = { #Focus on Coronation first.
 			factor = 0.1
 			ROOT = { should_have_coronation = yes }
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_cheaper_tributaries
+				}
+			}
 		}
 	}
 }
@@ -5549,7 +5722,6 @@ flower_war_cb = {
 				religion = trotskyite
 				religion = titoist
 				religion = red_cult
-				religion = marked
 			}
 			NOT = { has_religion_feature = religion_peaceful } #Aztecs could reform as Peaceful.
 			NOT = { same_realm = FROM }
@@ -5562,7 +5734,6 @@ flower_war_cb = {
 				religion = trotskyite
 				religion = titoist
 				religion = red_cult
-				religion = marked
 			}	
 			bhutan_medium_cb = yes
 		}
@@ -5633,7 +5804,6 @@ flower_war_cb = {
 				religion = trotskyite
 				religion = titoist
 				religion = red_cult
-				religion = marked
 			}
 			OR = {
 				trait = bloodthirsty_gods_3
@@ -5642,7 +5812,6 @@ flower_war_cb = {
 				religion = trotskyite
 				religion = titoist
 				religion = red_cult
-				religion = marked
 			}	
 		}
 	}

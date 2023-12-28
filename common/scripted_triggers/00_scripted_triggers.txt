@@ -795,6 +795,14 @@ has_crusade_trait_trigger = {
 		trait = comet
 	}
 	trigger_else_if = {
+		limit = { OR = { religion = wunggur religion = wunggur_reformed } }
+		trait = wunggur_crusader
+	}
+	trigger_else_if = {
+		limit = { OR = { religion = alukta religion = alukta_reformed } }
+		trait = alukta_crusader
+	}
+	trigger_else_if = {
 		limit = { religion_openly_kaharingan_pagan_or_reformed_trigger = yes }
 		trait = sandung_guardian
 	}
@@ -3923,6 +3931,7 @@ has_any_sympathy_trait_trigger = {
 	OR = {
 		trait = sympathy_christendom
 		trait = sympathy_islam
+		trait = sympathy_mormon
 		trait = sympathy_pagans
 		trait = sympathy_zoroastrianism
 		trait = sympathy_judaism

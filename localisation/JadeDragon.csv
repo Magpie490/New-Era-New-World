@@ -787,6 +787,9 @@ SUZERAIN_NOMADIC_NAME;Nomad Suzerain;;;;;;;;;;;;;x
 offmap_submission_tip;§Y[Root.GetTitledFirstName]§! forces §Y[This.GetTitledName]§! to submit and become their subject.\n§Y[Root.GetTitledFirstName]§! will usurp §YCounties§! until [Root.GetHerHis] §YDemesne Limit§! is reached!\n;;;;;;;;;;;;;x
 CB_NAME_TRIBUTARY;Extort Tribute;;;;;;;;;;;;;x
 CB_NAME_PERMANENT_TRIBUTARY;Establish Tributary State;;;;;;;;;;;;;x
+CB_NAME_MARCH;Establish a Tributary March;;;;;;;;;;;;;x
+WAR_NAME_MARCH;$ORDER$$FIRST_ADJ$ War to force $DEFENDER$ into sphere pf influence;;;;;;;;;x
+march_cb_desc;§Y$TARGET$§! should be forced into your sphere of influence!;;;;;;;;;;;;;x
 WAR_NAME_PERMANENT_TRIBUTARY;$ORDER$$FIRST_ADJ$ War to Make $DEFENDER$ a Tributary State;;;;;;;;;;;;;x
 tributary_permanent_cb_desc;§Y$TARGET$§! is weak, but if they would just pay you tribute in the form of gold and soldiers you could protect them!\n\nThrough war you can force any realm that you or one of your §YTributary States§! border to pay you §Y20%§! of their income and §Y15%§! of their levy reinforcements as tribute.\nWill only break free if the §YSuzerain§! has §Rnegative§! §YPrestige§!, is §RNOT§! §YIndependent§!, has §Rless§! §YRealm Size§! than the §YTributary State§! or §Rdeclines a defensive§! §YCall to Arms§! from the §YTributary State§!.\nThis type of §YTributary§! can §RNOT§! be called to war.;;;;;;;;;;;;;x
 tributary_cb_desc;§Y$TARGET$§! is rich and should pay tribute to you!\n\nThrough war you can force any realm that you border to pay you §Y40%§! of their income as tribute.\nThis type of §YTributary§! will §Rbreak free§! upon the death of the §YSuzerain§!.\nThis type of §YTributary§! can be called to war.;;;;;;;;;;;;;x
@@ -940,10 +943,10 @@ INHERITANCE_LOST_ARTIFACTS_MULTIPLE_LOG;During the transfer of power, $CHARACTER
 CB_NAME_RELIGIOUS_MINOR;Minor Holy War for [Title.GetBaseName];;;;;;;;;;;;;x
 mountain_ambush_tactic;Mountain Ambush Tactic;;;;;;;;;;;;;x
 improved_mountain_ambush_tactic;Improved Mountain Ambush Tactic;;;;;;;;;;;;;x
-ca_culture_tibetan_1;Mountaineer Academy;;;;;;;;;;;;;x
-ca_culture_tibetan_2;Mountaineer Academy;;;;;;;;;;;;;x
-ca_culture_tibetan_3;Mountaineer Academy;;;;;;;;;;;;;x
-ca_culture_tibetan_4;Mountaineer Academy;;;;;;;;;;;;;x
+ca_culture_tibetan_1;Ghourka Academy;;;;;;;;;;;;;x
+ca_culture_tibetan_2;Ghourka Academy;;;;;;;;;;;;;x
+ca_culture_tibetan_3;Ghourka Academy;;;;;;;;;;;;;x
+ca_culture_tibetan_4;Ghourka Academy;;;;;;;;;;;;;x
 emperor_nepali;Samrata;;;;;;;;;;;;;x
 emperor_female_nepali;Maharani;;;;;;;;;;;;;x
 king_nepali;Raja;;;;;;;;;;;;;x
@@ -1728,119 +1731,6 @@ primary_defender_TT;Must be the Primary Defender in a war;Doit être le défenseur
 already_raised_TT;Must NOT already have raised a Nigerian Regiment;;;;;;;;;;;;;x
 raise_chinese_regiment_TT;Must NOT have raised a Nigerian Regiment in the last year;;;;;;;;;;;;;x
 china_famine_desc;A disastrous harvest has caused the Nigerian agriculture to buckle under the population. The calamity has caused most trade to cease, and even as their numbers dwindle, the [offmap_china.GetName]'s once-mighty armies have been burdened with relief efforts for the suffering.;;;;;;;;;;;;;x
-b_khara_khoto;Kara Khoto;Kara Khoto;Karakhoto;;Kara Khoto;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yezheguan;Yezheguan;Yezheguan;Yezheguan;;Yezheguan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_jizhuoguan;Jizhuoguan;Jizhuoguan;Jizhuoguan;;Jizhuoguan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_jiashi;Jiashi;Jiashi;Jiashi;;Jiashi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_biancheng;Biancheng;Biancheng;Biancheng;;Biancheng;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_qitun;Qitun;Qitun;Qitun;;Qitun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_chiting;Chiting;Chiting;Chiting;;Chiting;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_luohu;Luohu;Luohu;Luohu;;Luohu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_qiepantuo;Qiepantuo;Qiepantuo;Qiepantuo;;Qiepantuo;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_mingoi;Mingoi;Mingoi;Mingoi;;Mingoi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shikshin;Shikshin;Shikshin;Shikshin;;Shikshin;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shorshuq;Shorshuq;Shorshuq;Shorshuq;;Shorshuq;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_jiuquan;Jiuquan;Jiuquan;Jiuquan;;Jiuquan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_suzhou;Suzhou;Suzhou;Suzhou;;Suzhou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_kongtong;Kongtong;Kongtong;Kongtong;;Kongtong;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_fulu;Fulu;Fulu;Fulu;;Fulu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xianshi;Xianshi;Xianshi;Xianshi;;Xianshi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yungguan;Yangguan;Yangguan;Yangguan;;Yangguan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shouchang;Shouchang;Shouchang;Shouchang;;Shouchang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_ziting;Ziting;Ziting;Ziting;;Ziting;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-d_charkliq;Charkliq;Charkliq;Charkliq;;Charkliq;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_calmandana;Calmandana;Calmandana;Calmandana;;Calmandana;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pimo;Pimo;Pimo;Pimo;;Pimo;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_weiguan;Weiguan;Weiguan;Weiguan;;Weiguan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_bojiayi;Bojiayi;Bojiayi;Bojiayi;;Bojiayi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pishan;Pishan;Pishan;Pishan;;Pishan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_kubera;Kubera;Kubera;Kubera;;Kubera;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_axiyan;Axiyan;Axiyan;Axiyan;;Axiyan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_nanlizhuang;Nanlizhuang;Nanlizhuang;Nanlizhuang;;Nanlizhuang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_changcun;Changcun;Changcun;Changcun;;Changcun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_jijiagou;Jijiagou;Jijiagou;Jijiagou;;Jijiagou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yuhe;Yuhe;Yuhe;Yuhe;;Yuhe;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_hwantsaopa;Hwantsaopa;Hwantsaopa;Hwantsaopa;;Hwantsaopa;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhugentan;Zhugentan;Zhugentan;Zhugentan;;Zhugentan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_tongchongcha;Tongchongcha;Tongchongcha;Tongchongcha;;Tongchongcha;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhangpeng;Zhangpeng;Zhangpeng;Zhangpeng;;Zhangpeng;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xiaoguantian;Xiaoguantian;Xiaoguantian;Xiaoguantian;;Xiaoguantian;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_jiuxian;Jiuxian Zhen;Jiuxian Zhen;Jiuxian Zhen;;Jiuxian Zhen;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shiniu;Shiniu;Shiniu;Shiniu;;Shiniu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_tiantoucun;Tiantoucun;Tiantoucun;Tiantoucun;;Tiantoucun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_hengling;Hengling;Hengling;Hengling;;Hengling;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_dawuqiao;Dawuqiao;Dawuqiao;Dawuqiao;;Dawuqiao;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_majiajie;Majiajie;Majiajie;Majiajie;;Majiajie;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_lishan;Lishan;Lishan;Lishan;;Lishan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_liuwanxiang;Liuwanxiang;Liuwanxiang;Liuwanxiang;;Liuwanxiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pinghu;Pinghu;Pinghu;Pinghu;;Pinghu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_bashqorghan;Bashqorghan;Bashqorghan;Bashqorghan;;Bashqorghan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_longdi;Longdi;Longdi;Longdi;;Longdi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_guantou;Guantou;Guantou;Guantou;;Guantou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_tuotou;Tuotou;Tuotou;Tuotou;;Tuotou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_guihuayuan;Guihuayuan;Guihuayuan;Guihuayuan;;Guihuayuan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_nieercun;Nieercun;Nieercun;Nieercun;;Nieercun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pochao;Pochao;Pochao;Pochao;;Pochao;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_renhou;Renhou;Renhou;Renhou;;Renhou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_bukou;Bukou;Bukou;Bukou;;Bukou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_tsofa;Tsofa;Tsofa;Tsofa;;Tsofa;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_laofutian;Laofutian;Laofutian;Laofutian;;Laofutian;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_gaochetian;Gaochetian;Gaochetian;Gaochetian;;Gaochetian;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_tunglingching;Tunglingching;Tunglingching;Tunglingching;;Tunglingching;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yuyu;Yuyu;Yuyu;Yuyu;;Yuyu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhaojiazui;Zhaojiazui;Zhaojiazui;Zhaojiazui;;Zhaojiazui;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_dalihe;Dalihe;Dalihe;Dalihe;;Dalihe;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yanzi;Yanzi;Yanzi;Yanzi;;Yanzi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_hugou;Hugou;Hugou;Hugou;;Hugou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_changjiang;Changjiang;Changjiang;Changjiang;;Changjiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_cuocaogou;Cuocaogou;Cuocaogou;Cuocaogou;;Cuocaogou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_beijiang;Beijiang;Beijiang;Beijiang;;Beijiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_fanjiaxiaozhang;Fanjiaxiaozhang;Fanjiaxiaozhang;Fanjiaxiaozhang;;Fanjiaxiaozhang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_houshan;Houshan;Houshan;Houshan;;Houshan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_palichuang;Palichuang;Palichuang;Palichuang;;Palichuang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhehor;Zhehor;Zhehor;Zhehor;;Zhehor;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_maojiaxiang;Maojiaxiang;Maojiaxiang;Maojiaxiang;;Maojiaxiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_huxinba;Huxinba;Huxinba;Huxinba;;Huxinba;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_donghuamen;Donghuamen;Donghuamen;Donghuamen;;Donghuamen;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shikeng;Shikeng;Shikeng;Shikeng;;Shikeng;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_beilanzhuang;Beilanzhuang;Beilanzhuang;Beilanzhuang;;Beilanzhuang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xiafang;Xiafang;Xiafang;Xiafang;;Xiafang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pailouxia;Pailouxia;Pailouxia;Pailouxia;;Pailouxia;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_huachuantsun;Huachuantsun;Huachuantsun;Huachuantsun;;Huachuantsun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_dingjiazhai;Dingjiazhai;Dingjiazhai;Dingjiazhai;;Dingjiazhai;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_nantung;Nantung;Nantung;Nantung;;Nantung;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_nanhedong;Nanhedong;Nanhedong;Nanhedong;;Nanhedong;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_beidijiadun;Beidijiadun;Beidijiadun;Beidijiadun;;Beidijiadun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_bibian;Bibian;Bibian;Bibian;;Bibian;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xiaoguoyu;Xiaoguoyu;Xiaoguoyu;Xiaoguoyu;;Xiaoguoyu;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xiaojian;Xiaojian;Xiaojian;Xiaojian;;Xiaojian;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_dajin;Dajin;Dajin;Dajin;;Dajin;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_guojia;Guojia;Guojia;Guojia;;Guojia;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_gujiazhai;Gujiazhai;Gujiazhai;Gujiazhai;;Gujiazhai;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_kuqa;Kuqa;Kuqa;Kuqa;;Kuqa;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_baizhangzi;Baizhangzi;Baizhangzi;Baizhangzi;;Baizhangzi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_wogou;Wogou;Wogou;Wogou;;Wogou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xinjiancun;Xinjiancun;Xinjiancun;Xinjiancun;;Xinjiancun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_huangyangshan;Huangyangshan;Huangyangshan;Huangyangshan;;Huangyangshan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zengwujing;Zengwujing;Zengwujing;Zengwujing;;Zengwujing;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_guqintang;Guqintang;Guqintang;Guqintang;;Guqintang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_chejiang;Chejiang;Chejiang;Chejiang;;Chejiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_gaoyuanqiang;Gaoyuanqiang;Gaoyuanqiang;Gaoyuanqiang;;Gaoyuanqiang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhoucun;Zhoucun;Zhoucun;Zhoucun;;Zhoucun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yiyi;Yiyi;Yiyi;Yiyi;;Yiyi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_chishi;Chishi;Chishi;Chishi;;Chishi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhongqing;Zhongqing;Zhongqing;Zhongqing;;Zhongqing;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_xiachen;Xiachen;Xiachen;Xiachen;;Xiachen;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_dingkengkou;Dingkengkou;Dingkengkou;Dingkengkou;;Dingkengkou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhenzigou;Zhenzigou;Zhenzigou;Zhenzigou;;Zhenzigou;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_paohsinchi;Paohsinchi;Paohsinchi;Paohsinchi;;Paohsinchi;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_zhangjiawan;Zhangjiawan;Zhangjiawan;Zhangjiawan;;Zhangjiawan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yushe;Yushe;Yushe;Yushe;;Yushe;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_pingpo;Pingpo;Pingpo;Pingpo;;Pingpo;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_taibaiya;Taibaiya;Taibaiya;Taibaiya;;Taibaiya;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_gexianmiao;Gexianmiao;Gexianmiao;Gexianmiao;;Gexianmiao;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_yangtaoshan;Yangtaoshan;Yangtaoshan;Yangtaoshan;;Yangtaoshan;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-b_shitun;Shitun;Shitun;Shitun;;Shitun;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 b_dazhou_fenchang;Dazhou Fenchang;Dazhou Fenchang;Dazhou Fenchang;;Dazhou Fenchang;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 china_eunuch_cd;§YRecently Sent a Eunuch§!;§YA récemment envoyé un eunuque§!;§YAbklingzeit - Eunuch entsenden§!;;§YRecuperando enviar eunuco§!;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 china_eunuch_cd_desc;You have recently sent a Eunuch to Nigeria, you will be able to send another one on: §Y[Root.chinese_grace_send_eunuch_timer.GetExpiryDate]§!;;;;;;;;;x;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2758,169 +2648,6 @@ c_khojand_adj;Khojandian;khojand;Khojandisch;;;;;;;;;;;x
 c_khaylam_adj;Namangan;khaylam;Khaylamisch;;;;;;;;;;;x
 c_nakhshab_adj;Qarshian;nakhshab;Nakhshabisch;;;;;;;;;;;x
 c_jeddah_adj;Jeddahi;jeddah;Jeddahisch;;;;;;;;;;;x
-c_lut_adj;Mafazian;lut;Mafazisch;;;;;;;;;;;x
-c_sistan_adj;Jabal Qufian;sistan;Jabal Qufisch;;;;;;;;;;;x
-c_ladistan_adj;Bastaki;;;;;;;;;;;x
-c_fars_adj;Dashtestanian;fars;Dashtestanisch;;;;;;;;;;;x
-c_hendjan_adj;Arrajanian;hendjan;Arrajanisch;;;;;;;;;;;x
-c_damman_adj;Qatifian;damman;Qatifisch;;;;;;;;;;;x
-c_rummah_adj;Ain Saidian;rummah;Ain Saidisch;;;;;;;;;;;x
-c_tigris_adj;Súsian;tigris;Súsisch;;;;;;;;;;;x
-c_oromieh_adj;Irbilian;oromieh;Irbilisch;;;;;;;;;;;x
-c_istakhr_adj;Istakhian;istakhr;Istakhrisch;;;;;;;;;;;x
-c_al_jazira_adj;Hasakahn;al jazira;Hasakahnisch;;;;;;;;;;;x
-c_zanjan_abhar_adj;Zanjan-Abharian;zanjan-abhar;Zanjan-Abharisch;;;;;;;;;;;x
-c_hijaz_adj;Al 'Ulan;hijaz;Al 'Ulanisch;;;;;;;;;;;x
-c_hajar_adj;Suhárian;hajar;Suhárisch;;;;;;;;;;;x
-c_shahrazur_adj;Shahrazurian;shahrazur;Shahrazurisch;;;;;;;;;;;x
-c_zamindawar_adj;Zamindawarian;zamindawar;Zamindawarisch;;;;;;;;;;;x
-c_duqm_adj;Nizwian;duqm;Nizwaisch;;;;;;;;;;;x
-c_dhu_zabi_adj;Julfarian;dhuzabi;Julfarisch;;;;;;;;;;;x
-b_batn_ardasir;Batn Ardasir;;Batn Ardasir;;;;;;;;;;;x
-b_al_masqar;al-Masqar;;al-Masqar;;;;;;;;;;;x
-b_murwab;Murwab;;Murwab;;;;;;;;;;;x
-b_suhar;Suhár;;Suhár;;;;;;;;;;;x
-b_zubarah;Zubarah;;Zubarah;;;;;;;;;;;x
-b_al_naman;Al Naman;;Al Naman;;;;;;;;;;;x
-b_al_khuwayr;Al Khuwayr;;Al Khuwayr;;;;;;;;;;;x
-b_turaynah;Turaynah;;Turaynah;;;;;;;;;;;x
-b_dariya;Dariya;;Dariya;;;;;;;;;;;x
-b_fayd;Fayd;;Fayd;;;;;;;;;;;x
-b_al_ajfur;al-Ajfur;;al-Ajfur;;;;;;;;;;;x
-b_an_nibaj;an-Nibaj;;an-Nibaj;;;;;;;;;;;x
-b_al_qaryatan;al-Qaryatan;;al-Qaryatan;;;;;;;;;;;x
-b_at_talabiya;at-Ta'labiya;;at-Ta'labiya;;;;;;;;;;;x
-b_zubala;Zubala;;Zubala;;;;;;;;;;;x
-b_zabid;Zabid;;Zabid;;;;;;;;;;;x
-b_fasal;Fasal;;Fasal;;;;;;;;;;;x
-b_al_mahjam;al-Mahjam;;al-Mahjam;;;;;;;;;;;x
-b_mukha;Mukha;;Mukha;;;;;;;;;;;x
-b_mawr;Mawr;;Mawr;;;;;;;;;;;x
-b_ghalafiqa;Ghalafiqa;;Ghalafiqa;;;;;;;;;;;x
-b_hays;Hays;;Hays;;;;;;;;;;;x
-b_sada;Sa'da;;Sa'da;;;;;;;;;;;x
-b_al_abr;Hisn al-'Abr;;Hisn al-'Abr;;;;;;;;;;;x
-b_sabwa;Sabwa;;Sabwa;;;;;;;;;;;x
-b_badr;Badr;;Badr;;;;;;;;;;;x
-b_batn_nakhl;Batn Nakhl;;Batn Nakhl;;;;;;;;;;;x
-b_al_usayla;al-Usayla;;al-Usayla;;;;;;;;;;;x
-b_haura;Haura;;Haura;;;;;;;;;;;x
-b_soridan;Soridan;;Soridan;;;;;;;;;;;x
-b_algiar;Algiar;;Algiar;;;;;;;;;;;x
-b_khulays;Khulays;;Khulays;;;;;;;;;;;x
-b_as_sirrayn;as-Sirrayn;;as-Sirrayn;;;;;;;;;;;x
-b_al_ahqaf;al-Ahqaf;;al-Ahqaf;;;;;;;;;;;x
-b_kuthba;Kuthba;;Kuthba;;;;;;;;;;;x
-b_tabala;Tabala;;Tabala;;;;;;;;;;;x
-b_qarn;Qarn;;Qarn;;;;;;;;;;;x
-b_al_ukaz;al-Ukaz;;al-Ukaz;;;;;;;;;;;x
-b_bahrah;Bahrah;;Bahrah;;;;;;;;;;;x
-b_az_zaimah;Az Zaimah;;Az Zaimah;;;;;;;;;;;x
-b_dihnakhirjan;Dihnakhirjan;;Dihnakhirjan;;;;;;;;;;;x
-b_kursara;Kursara;;Kursara;;;;;;;;;;;x
-b_shahrazur;Shahrazur;;Shahrazur;;;;;;;;;;;x
-b_sanda;Sanda;;Sanda;;;;;;;;;;;x
-b_saqqez;Saqqez;;Saqqez;;;;;;;;;;;x
-b_istakhr;Istakhr;;Istakhr;;;;;;;;;;;x
-b_abadha;Abadha;;Abadha;;;;;;;;;;;x
-b_abarquh;Abarquh;;Abarquh;;;;;;;;;;;x
-b_sarmaq;Sarmaq;;Sarmaq;;;;;;;;;;;x
-b_iqlid;Iqlid;;Iqlid;;;;;;;;;;;x
-b_kamin;Kamin;;Kamin;;;;;;;;;;;x
-b_main;Ma'in;;Ma'in;;;;;;;;;;;x
-b_zahanj;Zahanj;;Zahanj;;;;;;;;;;;x
-b_wasamkuh;Wasamkuh;;Wasamkuh;;;;;;;;;;;x
-b_aba;Aba;;Aba;;;;;;;;;;;x
-b_zurabad;Zurabad;;Zurabad;;;;;;;;;;;x
-b_kusuya;Kusuya;;Kusuya;;;;;;;;;;;x
-b_buzgan;Buzgan;;Buzgan;;;;;;;;;;;x
-b_pushang;Pushang;;Pushang;;;;;;;;;;;x
-b_malin;Malin;;Malin;;;;;;;;;;;x
-b_jabal_al_adda;Jabal al-Adda;;Jabal al-Adda;;;;;;;;;;;x
-b_kuhsim;Kuhsim;;Kuhsim;;;;;;;;;;;x
-b_diza;Diza;;Diza;;;;;;;;;;;x
-b_baghsur;Baghsur;;Baghsur;;;;;;;;;;;x
-b_kusak;Kusak;;Kusak;;;;;;;;;;;x
-b_basin;Basin;;Basin;;;;;;;;;;;x
-b_dihekhala;Dih-e Khala;;Dih-e Khala;;;;;;;;;;;x
-b_talaqan;Talaqan;;Talaqan;;;;;;;;;;;x
-b_jahudan;Jahudan;;Jahudan;;;;;;;;;;;x
-b_faryab;Faryab;;Faryab;;;;;;;;;;;x
-b_andkhud;Andkhud;;Andkhud;;;;;;;;;;;x
-b_usbuman;Usbuman;;Usbuman;;;;;;;;;;;x
-b_naryan;Naryan;;Naryan;;;;;;;;;;;x
-b_qasrahnaf;Qasr Ahnaf;;Qasr Ahnaf;;;;;;;;;;;x
-b_zamm;Zamm;;Zamm;;;;;;;;;;;x
-b_akhsisak;Akhsisak;;Akhsisak;;;;;;;;;;;x
-b_mazduran;Mazduran;;Mazduran;;;;;;;;;;;x
-b_shiraz_merv;Shiraz;;Shiraz;;;;;;;;;;;x
-b_maihana;Maihana;;Maihana;;;;;;;;;;;x
-b_dandanqan;Dandanqan;;Dandanqan;;;;;;;;;;;x
-b_shamat;Shamat;;Shamat;;;;;;;;;;;x
-b_amul;Amul;;Amul;;;;;;;;;;;x
-b_khojand;Khojand;;Khojand;;;;;;;;;;;x
-b_vakhan;Vakhan;;Vakhan;;;;;;;;;;;x
-b_chaghaniyan;Termez;;Chaghaniyan;;;;;;;;;;;x
-b_badakhshan;Badakhshan;;Badakhshan;;;;;;;;;;;x
-b_khaylam;Namangan;;Khaylam;;;;;;;;;;;x
-b_akhsikath;Akhsikath;;Akhsikath;;;;;;;;;;;x
-b_kasan;Kasan;;Kasan;;;;;;;;;;;x
-b_nakhsab;Nakhsab;;Nakhsab;;;;;;;;;;;x
-b_paykand;Paykand;;Paykand;;;;;;;;;;;x
-b_firabr;Firabr;;Firabr;;;;;;;;;;;x
-b_bishlang;Bishlang;;Bishlang;;;;;;;;;;;x
-b_khalai;Khalai;;Khalai;;;;;;;;;;;x
-k_yemen;Yemen;Yémen;Jemen;;;;;;;;;;;x
-k_yemen_adj;Yemeni;yéménite;Jemenitisch;;;;;;;;;;;x
-d_taizz;Taizz;Taïz;Taizz;;;;;;;;;;;x
-d_taizz_adj;Taizzian;taïzienne;Taizzisch;;;;;;;;;;;x
-d_hadramut;Hadramut;Hadramaout;Hadramut;;;;;;;;;;;x
-d_hadramut_adj;Hadhrami;hadramaoute;Hadramutisch;;;;;;;;;;;x
-b_dam;Dam;;Dam;;;;;;;;;;;x
-b_hali;Hali;;Hali;;;;;;;;;;;x
-b_as_suqaiq;as-Suqaiq;;as-Suqaiq;;;;;;;;;;;x
-b_attar;Attar;;Attar;;;;;;;;;;;x
-b_bays;Bays;;Bays;;;;;;;;;;;x
-b_harad;Harad;;Harad;;;;;;;;;;;x
-k_iraq;Iraq;Irak;Irak;;;;;;;;;;;x
-k_iraq_adj;Iraqi;irakienne;Irakisch;;;;;;;;;;;x
-k_daylam;Daylam;Daylam;Daylam;;;;;;;;;;;x
-k_daylam_adj;Daylamian;daylamite;Daylamisch;;;;;;;;;;;x
-d_kurdistan;Kurdistan;Kurdistan;Kurdistan;;;;;;;;;;;x
-d_kurdistan_adj;Kurdistani;kurde;Kurdisch;;;;;;;;;;;x
-d_mudar;Mudar;Mudar;Mudar;;;;;;;;;;;x
-d_mudar_adj;Mudarian;mudarienne;Murdarisch;;;;;;;;;;;x
-d_samarra;Samarra;Samarra;Samarra;;;;;;;;;;;x
-d_samarra_adj;Samarrian;samarrienne;Samarraisch;;;;;;;;;;;x
-k_khorasan;Khorasan;Khorassan;Khorasan;;;;;;;;;;;x
-k_khorasan_adj;Khorasanian;khorassane;Khorasanisch;;;;;;;;;;;x
-d_herat;Herat;Hérat;Herat;;;;;;;;;;;x
-d_herat_adj;Heratian;hératie;Heratisch;;;;;;;;;;;x
-d_ferghana;Fergana;Ferghana;Fergana;;;;;;;;;;;x
-d_ferghana_adj;Ferganan;ferghana;Ferghanaisch;;;;;;;;;;;x
-d_balkh;Balkh;Balkh;Balkh;;;;;;;;;;;x
-d_balkh_adj;Balkhian;balkh;Balkhisch;;;;;;;;;;;x
-d_khuttal;Khuttal;Khuttal;Khuttal;;;;;;;;;;;x
-d_khuttal_adj;Khuttali;khuttale;Khuttalisch;;;;;;;;;;;x
-d_khozistan;Khozistan;Khouzistan;Khozistan;;;;;;;;;;;x
-d_khozistan_adj;Khozian;khouzistanaise;Khozistanisch;;;;;;;;;;;x
-d_jibal;Jibal;Jibâl;Jibal;;;;;;;;;;;x
-d_jibal_adj;Jibali;jibâle;Jibalisch;;;;;;;;;;;x
-d_mafaza;Mafaza;Mafaza;Mafaza;;;;;;;;;;;x
-d_mafaza_adj;Mafazian;mafaza;Mafazaisch;;;;;;;;;;;x
-k_khiva;Transoxiana;Transoxiane;Transoxiana;;;;;;;;;;;x
-k_khiva_adj;Transoxianan;transoxianienne;Transoxianisch;;;;;;;;;;;x
-k_mesopotamia;Al-Jazira;Al-Jazîra;Al-Jazira;;;;;;;;;;;x
-k_mesopotamia_adj;Al-Jaziran;aljazîra;Al-Jazirisch;;;;;;;;;;;x
-k_afghanistan;Afghanistan;Afghanistan;Afghanistan;;;;;;;;;;;x
-k_afghanistan_adj;Kabulian;kaboulistane;Kabulistanisch;;;;;;;;;;;x
-k_baluchistan;Balochistan;;;;;;;;;;;x
-k_baluchistan_adj;Balochistani;;;;;;;;;;;x
-d_baluchistan;Makran;Makran;Makran;;;;;;;;;;;x
-d_baluchistan_adj;Makranian;makranienne;Makranisch;;;;;;;;;;;x
-d_amman;Al Bahrein;Bahreïn;Al Bahrein;;;;;;;;;;;x
-d_amman_adj;Bahreinian;bahreïnienne;Bahreinisch;;;;;;;;;;;x
-d_medina;Hijaz;Hedjaz;Hijaz;;;;;;;;;;;x
 d_medina_adj;Hijazian;hedjaz;Hijazisch;;;;;;;;;;;x
 china_raid;Raid the [offmap_china.GetFullName];Piller l'[offmap_china.GetFullName];[offmap_china.GetFullName] überfallen;;Asalta el [offmap_china.GetFullName];;;;;;;;;x
 china_raid_desc;The §Y[Root.Offmap.GetFullName]§! is overburdened with riches - why should we vie for the Emperor's grace when we could just take whatever we want!\n\nTaking this decision will temporarily §Rdisable§! all §YPay Tribute§! and §YAsk for Boon§! interactions for as long as the raid persists, and then five years after that. While Raiding Nigeria you will lose Grace but gain loot and spoils every year, a portion of your soldiers will also be unavailable for the duration of the raid.;;;;;;;;;;;;;x
@@ -3653,76 +3380,6 @@ k_kham;Kham;Kham;Kham;;Kham;;;;;;;;;x
 k_sardinia;Sardinia and Corsica;Sardaigne et Corse;Sardinien und Korsika;;Cerdeña y Corsica;;;;;;;;;x
 k_sardinia_adj;Sardinian and Corsican;sardo-corse;Sardinischkorsisch;;Sarda y Corso;;;;;;;;;x
 k_yarlung;Ü-Tsang;Ü-Tsang;Ü-Tsang;;Ü-Tsang;;;;;;;;;x
-b_khunaj;Khunaj;;Khunaj;;;;;;;;;;;x
-b_khalkhal;Khalkhal;;Khalkhal;;;;;;;;;;;x
-b_takrit;Tikrit;;Tikrit;;;;;;;;;;;x
-b_katabiya;Katabiya;;Katabiya;;;;;;;;;;;x
-b_alan;Alan;;Alan;;;;;;;;;;;x
-b_al_jayat;Al Jay’at;;Al Jay’at;;;;;;;;;;;x
-b_bujan;Bu‘jan;;Bu‘jan;;;;;;;;;;;x
-b_ribakhah;Ribakhah;;Ribakhah;;;;;;;;;;;x
-b_hasakat;Hasakat;;Hasakat;;;;;;;;;;;x
-b_az_zawwah;Az Zawwah;;Az Zawwah;;;;;;;;;;;x
-b_dahal_jalal;Dahal Jalal;;Dahal Jalal;;;;;;;;;;;x
-b_ujan;Ujan;;Ujan;;;;;;;;;;;x
-b_bahaduran;Bahaduran;;Bahaduran;;;;;;;;;;;x
-b_kileh_shin;Kileh Shin;;Kileh Shin;;;;;;;;;;;x
-b_mansurlu;Mansurlu;;Mansurlu;;;;;;;;;;;x
-b_amkaleh;Amkaleh;;Amkaleh;;;;;;;;;;;x
-b_kavand;Kavand;;Kavand;;;;;;;;;;;x
-b_kabgan;Kabgan;;Kabgan;;;;;;;;;;;x
-b_eskelabad;Eskelabad;;Eskelabad;;;;;;;;;;;x
-b_suhraward;Suhraward;;Suhraward;;;;;;;;;;;x
-b_mozaffari;Mozaffari;;Mozaffari;;;;;;;;;;;x
-b_quzlucheh;Quzlucheh;;Quzlucheh;;;;;;;;;;;x
-b_aufah;Aufah;;Aufah;;;;;;;;;;;x
-b_nab;Nab;;Nab;;;;;;;;;;;x
-b_tajarg;Tajarg;;Tajarg;;;;;;;;;;;x
-b_fenesk;Fenesk;;Fenesk;;;;;;;;;;;x
-b_khulm;Khulm;;Khulm;;;;;;;;;;;x
-b_yuzlar;Yuzlar;;Yuzlar;;;;;;;;;;;x
-b_paxtachi;Paxtachi;;Paxtachi;;;;;;;;;;;x
-b_kenekesyr;Kënekesyr;;Kënekesyr;;;;;;;;;;;x
-b_mirzabek;Mirzabek;;Mirzabek;;;;;;;;;;;x
-b_dautly;Dautly;;Dautly;;;;;;;;;;;x
-b_megejik;Megejik;;Megejik;;;;;;;;;;;x
-b_ukrach;Ukrach;;Ukrach;;;;;;;;;;;x
-b_bozariq;Bo‘zariq;;Bo‘zariq;;;;;;;;;;;x
-b_qizilcha;Qizilcha;;Qizilcha;;;;;;;;;;;x
-b_mirzomomin;Mirzomo‘min;;Mirzomo‘min;;;;;;;;;;;x
-b_marginan;Marginan;Marginan;Marginan;;Marginan;;;;;;;;;x
-b_aval;Aval;Aval;Aval;;Aval;;;;;;;;;x
-b_nadaq;Nadaq;Nadaq;Nadaq;;Nadaq;;;;;;;;;x
-b_asht;Asht;Asht;Asht;;Asht;;;;;;;;;x
-b_sokh;Sokh;Sokh;Sokh;;Sokh;;;;;;;;;x
-b_kendibadam;Kend-i-Badam;Kend-i-Badam;Kend-i-Badam;;Kend-i-Badam;;;;;;;;;x
-b_tunket;Tunket;Tunket;Tunket;;Tunket;;;;;;;;;x
-b_ilaq;Ilaq;Ilaq;Ilaq;;Ilaq;;;;;;;;;x
-b_wankath;Wankath;Wankath;Wankath;;Wankath;;;;;;;;;x
-b_miyanrudhan;Miyan Rudhan;Miyan Rudhan;Miyan Rudhan;;Miyan Rudhan;;;;;;;;;x
-b_ardalankath;Ardalankath;Ardalankath;Ardalankath;;Ardalankath;;;;;;;;;x
-b_najm;Najm;Najm;Najm;;Najm;;;;;;;;;x
-b_halaward;Halaward;Halaward;Halaward;;Halaward;;;;;;;;;x
-b_washjird;Washjird;Washjird;Washjird;;Washjird;;;;;;;;;x
-b_qobadhiyan;Qobadhiyan;Qobadhiyan;Qobadhiyan;;Qobadhiyan;;;;;;;;;x
-b_munk;Munk;Munk;Munk;;Munk;;;;;;;;;x
-b_ishkashim;Ishkashim;Ishkashim;Ishkashim;;Ishkashim;;;;;;;;;x
-b_daritubat;Daritubat;Daritubat;Daritubat;;Daritubat;;;;;;;;;x
-b_sughnan;Sughnan;Sughnan;Sughnan;;Sughnan;;;;;;;;;x
-b_khorog;Khorog;Khorog;Khorog;;Khorog;;;;;;;;;x
-b_sast;Sast;Sast;Sast;;Sast;;;;;;;;;x
-b_kalif;Kalif;Kalif;Kalif;;Kalif;;;;;;;;;x
-b_shuman;Shuman;Shuman;Shuman;;Shuman;;;;;;;;;x
-b_di-l-kifl;Di-l-Kifl;Di-l-Kifl;Di-l-Kifl;;Di-l-Kifl;;;;;;;;;x
-b_di-l-qarnain;Di-l-Qarnain;Di-l-Qarnain;Di-l-Qarnain;;Di-l-Qarnain;;;;;;;;;x
-b_sapoltepa;Sapoltepa;Sapoltepa;Sapoltepa;;Sapoltepa;;;;;;;;;x
-b_jerm;Jerm;Jerm;Jerm;;Jerm;;;;;;;;;x
-b_kerran;Kerran;Kerran;Kerran;;Kerran;;;;;;;;;x
-b_panj;Panj;Panj;Panj;;Panj;;;;;;;;;x
-b_kamar;Kamar;Kamar;Kamar;;Kamar;;;;;;;;;x
-b_jarf;Jarf;Jarf;Jarf;;Jarf;;;;;;;;;x
-b_usfan;Usfan;Usfan;Usfan;;Usfan;;;;;;;;;x
-b_zamr_i_atish_parast;Zamr-i-Atish Parast;Zamr-i-Atish Parast;Zamr-i-Atish Parast;;Zamr-i-Atish Parast;;;;;;;;;x
 job_chancellor_female_bodpa;Lönchen;Lönchen;Lönchen;;Lönchen;;;;;;;;;x
 job_treasurer_female_bodpa;Gnyer;Gnyer;Gnyer;;Gnyer;;;;;;;;;x
 job_chancellor_female_tangut;Lönchen;Lönchen;Lönchen;;Lönchen;;;;;;;;;x

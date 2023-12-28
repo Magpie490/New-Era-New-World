@@ -3,6 +3,81 @@
 
 #### EMF CORE PROPERTIES TRIGGERS ####
 
+emf_pacifist_true_religion = {
+	custom_tooltip = {
+		text = TRUE_RELIGION_IS_PACIFIST
+		pacifist = yes
+	}
+}
+emf_not_pacifist_true_religion = {
+	custom_tooltip = {
+		text = TRUE_RELIGION_IS_PACIFIST_NOT
+		emf_pacifist_true_religion = no
+	}
+}
+
+emf_warlike_true_religion = {
+	custom_tooltip = {
+		text = TRUE_RELIGION_IS_WARLIKE
+		OR = {
+			has_religion_feature = religion_warlike
+			religion = marblists
+			religion = neodonatists
+			religion = neohuguenot
+			religion = espiritista
+			religion = thelemic
+			religion = thelemic_reformed
+			religion = summer_queen
+			religion = orange_king
+			religion = nousthreskeia
+			religion = alawite
+			religion = gnostic
+			religion = sikh
+			religion = maunaxite
+			religion = maunaxite_reformed
+			religion = kalikula
+			religion = koyapunem
+			religion = old_hindu
+			religion = wahhabi
+			religion = ovlatii
+			religion = deobandi
+			religion = zaydi
+			religion = mesopotamian
+			religion_group = oceanic
+			religion = ironist
+			religion = sisukkuus
+			religion = stalinist
+			religion = leninist
+			religion = trotskyite
+			religion = titoist
+			religion = jacobinist
+			religion = khanist
+			religion = maoist
+			religion_group = pagan_group
+			religion = orleanist
+			religion = akjang
+			religion = muwahidunna
+			religion = vagarna
+			#Asia
+			religion = thaislam
+			religion = wuxia
+			religion = xianxia
+			religion = wuist
+			religion = wuist_reformed
+			religion = kirishitan
+			religion = isukirian
+			religion = white_lotus
+			religion = agamatirta
+		}
+	}
+}
+emf_not_warlike_true_religion = {
+	custom_tooltip = {
+		text = TRUE_RELIGION_IS_WARLIKE_NOT
+		emf_warlike_true_religion = no
+	}
+}
+
 emf_has_primary_peace = {
 	OR = {
 		war = no
@@ -74,9 +149,12 @@ emf_can_inherit = {
 }
 
 emf_is_voter = {
-	OR = {
-		is_voter = yes
-		is_councillor = yes
+	custom_tooltip = {
+		text = EMF_IS_VOTER
+		OR = {
+			is_voter = yes
+			is_councillor = yes
+		}
 	}
 }
 
@@ -128,12 +206,12 @@ emf_hiprio_decision_basic_potential = {
 }
 
 emf_can_disturb = {
-	NOT = { has_character_flag = do_not_disturb }
+	NOT = { has_flag = do_not_disturb }
 }
 
 emf_ROOT_completely_controls_counties = {
 	custom_tooltip = {
-		text = emf_ctt_ROOT_completely_controls_counties_trigger
+		text = emf_ctt_ROOT_completely_controls_counties
 		hidden_tooltip = {
 			NOT = {
 				any_de_jure_vassal_title = {

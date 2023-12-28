@@ -14,8 +14,10 @@ isnt_forced_to_theocracy = {
 			religion = yersenism
 			religion = neodonatists
 			religion = prussianist
+			religion = sebastianist
 			religion = transatlantic
 			religion = theosophy
+			religion = anglican
 			religion = druze
 			religion = xinjiao
 			religion = summer_queen
@@ -23,6 +25,7 @@ isnt_forced_to_theocracy = {
 			religion = marblists
 			religion = highchurch
 			religion = alawite
+			religion = muwahidunna
 			religion = pashartist
 			religion = blorgist
 			religion = pusaka
@@ -32,6 +35,7 @@ isnt_forced_to_theocracy = {
 			religion = white_lotus
 			religion = east_brethren
 			religion = wuxia
+			religion = pancasila
 			religion = xianxia
 			religion = tridemism
 			religion = ho_cult
@@ -145,6 +149,17 @@ religion_openly_starist_pagan_or_reformed_trigger = {
 			OR = {
 				religion = starist_pagan
 				religion = starist_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_wunggur_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_wunggur_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = wunggur
+				religion = wunggur_reformed
 			}
 		}
 	}

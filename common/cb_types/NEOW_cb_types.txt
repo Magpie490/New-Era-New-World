@@ -739,7 +739,7 @@ choose_the_right_caliph = {
 					}
 					if = {
 						limit = { religion = sufi }
-						d_sufi = { usurp_title = ROOT }
+						e_sufi = { usurp_title = ROOT }
 					}
 					if = {
 						limit = { religion = ovlatii }
@@ -969,6 +969,9 @@ jacobinist_county_conquest = {
 			mercenary = no
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
 			bhutan_medium_cb = yes
+			NOT = {
+				has_character_modifier = county_conquest_timer
+			}
 		}
 	}
 
@@ -1085,6 +1088,13 @@ jacobinist_county_conquest = {
 					}
 				}
 				jacobinist_sacrifice_after_death_effect = yes
+			}
+		}
+		ROOT = {
+			add_character_modifier = {
+				name = county_conquest_timer
+				duration = 90
+				hidden = yes
 			}
 		}
 	}
@@ -1932,7 +1942,7 @@ jacobinist_start_of_revolution_invasion = {
 	}
 	
 	ai_will_do = { 
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 0
 			FROM = {
@@ -2258,7 +2268,7 @@ jacobinist_continue_revolution_invasion = {
 	}
 	
 	ai_will_do = { 
-		factor = 1
+		factor = 2
 		
 		modifier = {
 			factor = 0
@@ -2611,10 +2621,7 @@ jacobinist_restore_republic_boarders = {
 	}
 	
 	ai_will_do = { 
-		factor = 1
-		modifier = {
-			factor = 0.9
-		}
+		factor = 2
 		modifier = {
 			factor = 0
 			FROM = {
@@ -5089,6 +5096,7 @@ catholic_anti_sevillian_holy_war = {
 			OR = {
 				religion = catholic
 				religion = fraticelli
+				religion = apostolic
 			}
 			NOT = { government = confederation_government }
 			FROM = {
@@ -5429,6 +5437,7 @@ sevillian_anti_catholic_holy_war = {
 			OR = {
 				religion = sevillian
 				religion = transatlantic
+				religion = cruzadista
 			}
 			NOT = { government = confederation_government }
 			FROM = {
@@ -7901,20 +7910,38 @@ neodonatists_anti_christian_holy_war = {
 	can_use = {
 		ROOT = {
 			bhutan_major_cb = yes
-			religion = neodonatists
+			OR = {
+				religion = neodonatists
+				religion = sebastianist
+			}
 			NOT = { government = confederation_government }
 			FROM = {
 				religion_group = christian
-				NOR = {
-					religion = neodonatists
-					religion = orthodox
-					religion = marblists
-					religion = easternprotestant
+				NOT = {
+					same_realm = ROOT
 				}
 			}
 			OR = {
 				mercenary = no
 				holy_order = yes
+			}
+		}
+		NOR = {
+			AND = {
+				FROM = {
+					religion = neodonatists
+				}
+				ROOT = {
+					religion = neodonatists
+				}
+			}
+			AND = {
+				FROM = {
+					religion = sebastianist
+				}
+				ROOT = {
+					religion = sebastianist
+				}
 			}
 		}
 	}
@@ -7978,13 +8005,16 @@ neodonatists_anti_christian_holy_war = {
 	is_valid = {
 		ROOT = {
 			bhutan_major_cb = yes
-			religion = neodonatists
+			OR = {
+				religion = neodonatists
+				religion = sebastianist
+			}
 			NOT = { government = confederation_government }
 			FROM = {
 				religion_group = christian
 				NOR = {
 					religion = neodonatists
-					religion = orthodox
+					religion = sebastianist
 				}
 			}
 			OR = {
@@ -8789,6 +8819,7 @@ chinese_imperial_reconquest = {
 				religion = red_cult
 				religion = tridemism
 				religion = neoncult
+				religion = neoncult_reformed
 				religion = xinjiao
 				religion = mahayana
 				religion = eastern_lightning
@@ -9301,19 +9332,21 @@ japanese_emperor_killer_ruler = {
 		}
 		ROOT = {
 			NOT = { trait = japanese_emperor_killer_trait }
-			culture = kyushu
-			culture = shikoku
-			culture = chugoku
-			culture = kansai
-			culture = kanto
-			culture = tohoku
-			culture = chubu
-			culture = hokkaido
-			culture = ainu
-			religion = shinto
-			religion = bushinto
-			religion = buddhoshinto
-			religion = ainushinto
+			OR = {
+				culture = kyushu
+				culture = shikoku
+				culture = chugoku
+				culture = kansai
+				culture = kanto
+				culture = tohoku
+				culture = chubu
+				culture = hokkaido
+				culture = ainu
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+			}
 		}
 	}
 
@@ -9327,20 +9360,22 @@ japanese_emperor_killer_ruler = {
 		}
 		ROOT = { 
 			NOT = { trait = japanese_emperor_killer_trait } 
-			culture = kyushu
-			culture = shikoku
-			culture = chugoku
-			culture = kansai
-			culture = kanto
-			culture = tohoku
-			culture = chubu
-			culture = hokkaido
-			culture = ainu
-			religion = shinto
-			religion = bushinto
-			religion = buddhoshinto
-			religion = ainushinto
-			religion = amidism
+			OR = {
+				culture = kyushu
+				culture = shikoku
+				culture = chugoku
+				culture = kansai
+				culture = kanto
+				culture = tohoku
+				culture = chubu
+				culture = hokkaido
+				culture = ainu
+				religion = shinto
+				religion = bushinto
+				religion = buddhoshinto
+				religion = ainushinto
+				religion = amidism
+			}
 		}
 	}
 
@@ -9489,6 +9524,9 @@ japanese_emp_county_conquest = {
 		ROOT = {
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
+			NOT = {
+				has_character_modifier = county_conquest_timer
+			}
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
 			bhutan_medium_cb = yes
 		}
@@ -9939,6 +9977,11 @@ wuxia_county_conquest = {
 		ROOT = {
 			show_scope_change = no
 			participation_scaled_prestige = 100
+			add_character_modifier = {
+				name = county_conquest_timer
+				duration = 90
+				hidden = yes
+			}
 		}
 		any_attacker = {
 			limit = { NOT = { character = ROOT } }
@@ -10787,9 +10830,6 @@ ottoman_reconquest = {
 			religion_group = muslim
 			NOT = { same_realm = FROM }
 			mercenary = no
-		}
-		FROM = {
-			NOT = { religion_group = muslim }
 		}
 	}
 
@@ -11927,7 +11967,6 @@ dismantle_pretender_shogun_cb = {
 			custom_tooltip = { 
 				text = dismantle_pretender_success_tt
 				hidden_effect = {
-					any_courtier = { death = { death_reason = death_execution_beheading killer = ROOT } }
 					any_demesne_title = {
 						limit = {
 							higher_tier_than = COUNT
@@ -12292,7 +12331,6 @@ dismantle_shogun_cb = {
 			custom_tooltip = { 
 				text = dismantle_shogun_success_tt
 				hidden_effect = {
-					any_courtier = { death = { death_reason = death_execution_beheading killer = ROOT } }
 					any_demesne_title = {
 						limit = {
 							higher_tier_than = COUNT

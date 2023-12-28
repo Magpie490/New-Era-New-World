@@ -104,6 +104,19 @@ invite_local_mormon_desc;Invite an mormon man from your local Mormon community.;
 invite_local_mormon_woman_desc;Invite an Mormon woman from your local Mormon community.;;;;;;;;;;x
 mormon_minority;Mormon Minority;;;;;;;;;;x
 ########
+EVTDESC_CU_551;A community of Türkes has become established within your province, will you allow them to remain?;;;;;;;;;;x
+EVTOPTACU551;They may stay.;;;;;;;;;;x
+EVTOPTBCU551;Drive them from their homes!;;;;;;;;;;x
+EVTDESC_CU_552;As the population of the province has become majority Türkisch, the minority community has melded into the wider population.;;;;;;;;;;x
+EVTOPTACU552;Okay.;;;;;;;;;;x
+EVTDESC_CU_553;The minority Türkisch population of your province has declined to the point it is no longer of note, some day the Türkisch may resettle in your province.;;;;;;;;;;x
+EVTOPTACU553;Okay.;;;;;;;;;;x
+invite_local_turkisch;Invite local Türkisch Man;;;;;;;;;;x
+invite_local_turkisch_woman;Invite local Türkisch woman;;;;;;;;;;x
+invite_local_turkisch_desc;Invite a Türkisch man from your local Türkisch community.;;;;;;;;;;x
+invite_local_turkisch_woman_desc;Invite an Türkisch woman from your local Türkisch community.;;;;;;;;;;x
+turkisch_minority;Türkisch Minority;;;;;;;;;;x
+########
 EVTDESC_CU_24100;A community of beurs has become established within your province, will you allow them to remain?;;;;;;;;;;x
 EVTOPTACU24100;They may stay.;;;;;;;;;;x
 EVTOPTBCU24100;Drive them from their homes!;;;;;;;;;;x
@@ -252,7 +265,7 @@ eastlander_opinion;[eastlander.GetName] Opinion;;;;;;;;;x
 westlander_opinion;[westlander.GetName] Opinion;;;;;;;;;x
 northlander_opinion;[northlander.GetName] Opinion;;;;;;;;;x
 anglican_opinion;[anglican.GetName] Opinion;;;;;;;;;x
-novelist_reformed_opinion;[novelist_reformed.GetName] Opinion;;;;;;;;;x
+novelist_reformed_opinion;Reformed Novelist Opinion;;;;;;;;;x
 EVTNAME_orleanist_300;Choosing a cult
 EVTDESC_orleanist_300;Arcenists tend to venerate one of several saints within organised cults, which will you join?;;;;;;;;;x
 EVTOPTA_orleanist_300;I will join the Cult of Marianne;;;;;;;;;x
@@ -663,6 +676,11 @@ religion_openly_occultist_or_reformed_trigger;Publicly follows the §Y[occultist_
 religion_openly_americanist_or_reformed_trigger;Publicly follows the §Y[americanist_reformed.GetName]§! religion;Suit publiquement la religion §Y[americanist_reformed.GetName]§!;Befolgt ?ffentlich die §Y[americanist_reformed.GetName]e§! Religion;;Sigue p?blicamente el credo §Y[americanist_reformed.GetName]§!.;;;;;;;;;x
 religion_openly_starist_pagan_or_reformed_trigger;Publicly follows the §Y[starist_pagan_reformed.GetName]§! religion;Suit publiquement la religion §Y[starist_pagan_reformed.GetName]§!;Befolgt ?ffentlich die §Y[starist_pagan_reformed.GetName]e§! Religion;;Sigue p?blicamente el credo §Y[starist_pagan_reformed.GetName]§!.;;;;;;;;;x
 religion_openly_lakefolk_pagan_or_reformed_trigger;Publicly follows the §Y[lakefolk_pagan_reformed.GetName]§! religion;Suit publiquement la religion §Y[lakefolk_pagan_reformed.GetName]§!;Befolgt ?ffentlich die §Y[lakefolk_pagan_reformed.GetName]e§! Religion;;Sigue p?blicamente el credo §Y[lakefolk_pagan_reformed.GetName]§!.;;;;;;;;;x
+religion_openly_kaharingan_or_reformed_trigger;Publicly follows the §Y[kaharingan_reformed.GetName]§! religion;;;;;;;;;;;;x
+religion_openly_bungan_or_reformed_trigger;Publicly follows the §Y[bungan_reformed.GetName]§! religion;;;;;;;;;;;;x
+religion_openly_thuyhoa_or_reformed_trigger;Publicly follows the §Y[thuyhoa_reformed.GetName]§! religion;;;;;;;;;;;;;x
+religion_openly_mo_or_reformed_trigger;Publicly follows the §Y[mo_reformed.GetName]§! religion;;;;;;;;;;;;x
+religion_openly_satsana_pi_or_reformed_trigger;Publicly follows the §Y[satsana_pi_reformed.GetName]§! religion;;;;;;;;;;;;x
 religion_feature_novelist;Children of L'Auteur;;;;;;;;;x
 religion_feature_novelist_desc;As the people of the Great Book, we have always been a people of memory. We should venerate the memory of our holy ancestors, so that the patriarchs and Kings of old will be remembered forever, and our wise men will devote their lives to this recording!;;;;;;;;;x
 religion_feature_folklorist;Far-Travelled Witchers;;;;;;;;;x
@@ -693,8 +711,8 @@ religion_feature_thuyhoa_desc;As our shamans study and meditate, they say they h
 japanese_feudal;Buke Seiken;;;;;;;;;x
 japanese_feudal_desc;The Feudalism of Japan is unique in comparison to that of the west due to the utter destruction of the political power of the burgher class with Samurai holding complete control over both the Cities and full Castles.;;;;;;;;;x
 japanese_feudal_FEATURES;§Y*§! Titles of King and Emperor tier of this government type with low centralisation can §Rsponteneously disintegrate§! if the ruler is §Rdeemed weak or incapable§! by his vassals and has §Rlow prestige§!(if fitna fracture is enabled)\n§Y*§! City holdings of this government have access to a unique Keep building.;;;;;;;;;x
-eastern_feudal;Bureaucratic;;;;;;;;;x
-eastern_feudal_DESC;The old world bureaucracies of the New World have survive the Event in some areas, but not without loss, as they have slowly deterioriated over the centuries, closely resembling the feudal systems surrounding it. Unlike their feudal counterparts, bureaucracies put more focus on legalism and administration, and as such relies much more heavily on laws.;;;;;;;;;x
+eastern_feudal;Eastern Bureaucratic;;;;;;;;;x
+eastern_feudal_DESC;This style of Feudalism is practiced by cultures from East Asia and unlike its western counterpart puts more focus on to harmony with their vassals and as such relies much more heavily on laws.;;;;;;;;;x
 launch_invasion_of_america;Launch invasion of America;;;;;;;;;x
 launch_invasion_of_america_desc;Long ago, we ruled the distant land of America, but it has been lost since time out of mind, even before the Event. What glory and prestige it would bring to me if I could do what so many generations of Britons could not!;;;;;;;;;x
 occultist_opinion;Occultist Opinion;;;;;;;;;x
@@ -831,13 +849,13 @@ PROPHET_FOA;Enlightened One;;;;;;;;;;;;;x
 oligarchic_republic;Oligarchic Republic;;;;;;;;;;;;;x
 oligarchic_republic_desc;Under this system of government, a small group of the republic's citizens elect their leader from amongst themselves, with the leader ruling until their death. This system differs from the feudal system since it is not inherently hereditary. However, it often can become such due to corruption. It differs from a Merchant Republic since its main focus is not trade, however, it can partake in it..;;;;;;;;;;;;;x
 muwa_christian;School of the Diligent;;;;;;;;;;;;;x
-muwa_christian_desc;The School of the Diligent is a religious-philosophical branch of the Muwahidunna faith, focusing on hard work and the glorification of God through charity and almsgiving to one's neighbour. It focuses on the building up of God's people through love, and is most popular among Christians and those of a Christian heritage.;;;;;;;;;;;;;x
+muwa_christian_desc;The School of the Diligent is a religious-philosophical branch of the Muwahidunna faith, focusing on hard work and the glorification of God through charity and almsgiving to one's neighbour. It focuses on the building up of God's people through love.;;;;;;;;;;;;;x
 muwa_sunni;School of the Saber;;;;;;;;;;;;;x
-muwa_sunni_desc;The School of the Saber is a religious-philosophical branch of the Muwahidunna faith, focusing on the use of force in service to God against idolaters and unbelievers of all stripes. This school traditionally draws inspiration and followers from Sunni Islam, and was the one followed by Isma'il himself.;;;;;;;;;;;;;x
+muwa_sunni_desc;The School of the Saber is a religious-philosophical branch of the Muwahidunna faith, focusing on the use of force in service to God against idolaters and unbelievers of all stripes..;;;;;;;;;;;;;x
 muwa_shiite;School of Resistance;;;;;;;;;;;;;x
-muwa_shiite_desc;The School of Resistance is a religious-philosophical branch of the Muhawidunna faith, focusing on resistance against evil, both internally (through asceticism) and externally (through defensive warfare). This school traditionally draws support from Shia Islam.;;;;;;;;;;;;;x
+muwa_shiite_desc;The School of Resistance is a religious-philosophical branch of the Muhawidunna faith, focusing on resistance against evil, both internally (through asceticism) and externally (through defensive warfare).;;;;;;;;;;;;;x
 muwa_kneeler;School of Kneelers;;;;;;;;;;;;;x
-muwa_kneeler_desc;The School of the Kneelers is a religious-philosophical branch of the Muwahidunna faith, focusing on submission to God almost to the exclusion of all else. They read Scripture, pray twelve times a day, and tend to form monastic communities for mutual spiritual betterment. This School is the only one with roughly equal popularity among Christians, Jews, and Muslims.;;;;;;;;;;;;;x
+muwa_kneeler_desc;The School of the Kneelers is a religious-philosophical branch of the Muwahidunna faith, focusing on submission to God almost to the exclusion of all else. They read Scripture, pray twelve times a day, and tend to form monastic communities for mutual spiritual betterment.;;;;;;;;;;;;;x
 muwa1Desc;The Muwahidunna faith allows its adherents a wide (though not infinitely wide) berth in terms of religious belief and praxis. Thus, several schools have grown up, focusing around different aspects of traditional piety. You have chosen to associate yourself with a particular school, but which one?;;;;;;;;;;;;;x
 EVTOPTA_muwa1;The Diligent Ones' good works appeal to me;;;;;;;;;;;;;x
 EVTOPTB_muwa1;The Way of the Saber will slay my enemies;;;;;;;;;;;;;x
@@ -986,6 +1004,16 @@ EVTDESCMPU.1511;Recently I've found myself thinking in a language that is not my
 EVTOPTAMPU.1511;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
 convert_to_rumca;Convert to Rumi;;;;;;;;;;;;;x
 convert_to_rumca_desc;We will convert ourselves and our court to adopt this new hybrid culture, Rumi.;;;;;;;;;;;;;x
+#Maglish;;;;;;;;;;;;;;;;;;;
+EVTDESCMPEE.15;The people of our nation no longer speak the language of their Malay ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Maglish".;;;;;;;;;;;;;x
+EVTOPTAMPEE.15;These peasants are civilizing?;;;;;;;;;;;;;x
+EVTDESCMPEE.151;It seems that where once our two peoples were at odds, the Malay subjects have merged their language and customs with their [This.Culture.GetName] overlords'. I have even caught myself speaking this new tongue. Perhaps the peasantry are finally civilizing;;;;;;;;;;;;;x
+EVTOPTAMPEE.151;It seems we are all civilizing;;;;;;;;;;;;;x
+EVTOPTBMPEE.151;We are similar, but not the same;;;;;;;;;;;;;x
+EVTDESCMPEE.1511;Recently I've found myself thinking in a language that is not my own, but of a culture of conquerors and peasantry, Maglish. Perhaps converting to this hybrid culture will improve my social standing within our nation.;;;;;;;;;;;;;x
+EVTOPTAMPEE.1511;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
+convert_to_maglish;Convert to Maglish;;;;;;;;;;;;;x
+convert_to_maglish_desc;We will convert ourselves and our court to adopt this new hybrid culture, Maglish.;;;;;;;;;;;;;x
 #Rumeli;;;;;;;;;;;;;;;;;;;
 EVTDESCMPE.15;The people of our nation no longer speak the language of their greek ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Rumeli".;;;;;;;;;;;;;x
 EVTOPTAMPE.15;These peasants are civilizing?;;;;;;;;;;;;;x
@@ -1096,6 +1124,36 @@ EVTDESCMPE.2511;Recently I've found myself thinking in a language that is not my
 EVTOPTAMPE.2511;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
 convert_to_tot;Convert to Tót;;;;;;;;;;;;;x
 convert_to_tot_desc;We will convert ourselves and our court to adopt this new hybrid culture, Tót.;;;;;;;;;;;;;x
+#Aquitano;;;;;;;;;;;;;;;;;;;
+EVTDESCMPE.26;The people of our nation no longer speak the language of their Francophone ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Aquitano".;;;;;;;;;;;;;x
+EVTOPTAMPE.26;These peasants are civilizing?;;;;;;;;;;;;;x
+EVTDESCMPE.261;It seems that where once our two peoples were at odds, the Francophone subjects have merged their language and customs with their [This.Culture.GetName] overlords'. I have even caught myself speaking this new tongue. Perhaps the peasantry are finally civilizing;;;;;;;;;;;;;x
+EVTOPTAMPE.261;It seems we are all civilizing;;;;;;;;;;;;;x
+EVTOPTBMPE.261;We are similar, but not the same;;;;;;;;;;;;;x
+EVTDESCMPE.2611;Recently I've found myself thinking in a language that is not my own, but of a culture of conquerors and peasantry, Aquitano. Perhaps converting to this hybrid culture will improve my social standing within our nation.;;;;;;;;;;;;;x
+EVTOPTAMPE.2611;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
+convert_to_aquitano;Convert to Aquitano;;;;;;;;;;;;;x
+convert_to_aquitano_desc;We will convert ourselves and our court to adopt this new hybrid culture, Aquitano.;;;;;;;;;;;;;x
+#Kitaiskiy;;;;;;;;;;;;;;;;;;;
+EVTDESCMPE.27;The people of our nation no longer speak the language of their Chinese ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Kitaiskiy".;;;;;;;;;;;;;x
+EVTOPTAMPE.27;These peasants are civilizing?;;;;;;;;;;;;;x
+EVTDESCMPE.271;It seems that where once our two peoples were at odds, the Chinese subjects have merged their language and customs with their [This.Culture.GetName] overlords'. I have even caught myself speaking this new tongue. Perhaps the peasantry are finally civilizing;;;;;;;;;;;;;x
+EVTOPTAMPE.271;It seems we are all civilizing;;;;;;;;;;;;;x
+EVTOPTBMPE.271;We are similar, but not the same;;;;;;;;;;;;;x
+EVTDESCMPE.2711;Recently I've found myself thinking in a language that is not my own, but of a culture of conquerors and peasantry, Kitaiskiy. Perhaps converting to this hybrid culture will improve my social standing within our nation.;;;;;;;;;;;;;x
+EVTOPTAMPE.2711;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
+convert_to_kitaiskiy;Convert to Kitaiskiy;;;;;;;;;;;;;x
+convert_to_kitaiskiy_desc;We will convert ourselves and our court to adopt this new hybrid culture, Kitaiskiy.;;;;;;;;;;;;;x
+#Chosonskii;;;;;;;;;;;;;;;;;;;
+EVTDESCMPE.28;The people of our nation no longer speak the language of their Korean ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Chosonskii".;;;;;;;;;;;;;x
+EVTOPTAMPE.28;These peasants are civilizing?;;;;;;;;;;;;;x
+EVTDESCMPE.281;It seems that where once our two peoples were at odds, the Korean subjects have merged their language and customs with their [This.Culture.GetName] overlords'. I have even caught myself speaking this new tongue. Perhaps the peasantry are finally civilizing;;;;;;;;;;;;;x
+EVTOPTAMPE.281;It seems we are all civilizing;;;;;;;;;;;;;x
+EVTOPTBMPE.281;We are similar, but not the same;;;;;;;;;;;;;x
+EVTDESCMPE.2811;Recently I've found myself thinking in a language that is not my own, but of a culture of conquerors and peasantry, Chosonskii. Perhaps converting to this hybrid culture will improve my social standing within our nation.;;;;;;;;;;;;;x
+EVTOPTAMPE.2811;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
+convert_to_chosonskii;Convert to Chosonskii;;;;;;;;;;;;;x
+convert_to_chosonskii_desc;We will convert ourselves and our court to adopt this new hybrid culture, Chosonskii.;;;;;;;;;;;;;x
 #Anglische;;;;;;;;;;;;;;;;;;;
 EVTDESCMPU.16;The people of our nation no longer speak the language of their Celtic ancestors, nor do they communicate through the language of their [This.Culture.GetName] overlords, instead they have merged the two languages. We know them to be the "Anglische".;;;;;;;;;;;;;x
 EVTOPTAMPU.16;These peasants are civilizing?;;;;;;;;;;;;;x
@@ -1177,7 +1235,18 @@ EVTDESCMPU.2012;Recently I've found myself thinking in a language that is not my
 EVTOPTAMPU.2012;Indeed times are changing, and I must follow;;;;;;;;;;;;;x
 convert_to_deluzi;Convert to Deluzi;;;;;;;;;;;;;x
 convert_to_deluzi_desc;We will convert ourselves and our court to adopt this new hybrid culture, Deluzi.;;;;;;;;;;;;;x
-
+brooke_bloodline;Blood of the White Rajah;;;;;;;;;;;;;x
+brooke_bloodline_desc;The Brooke dynasty were famously the White Rajahs of Sarawak before the queen annexed them into her Empire. Incorperating local customs in their governance, their descendants can make use of the Mandala government, and are widely accepted by the natives in the region.;;;;;;;;;;;;;x
+uses_mandala_brooke;Rules with Mandala government;;;;;;;;;;;;;x
+malay_group_opinion;Malayic Opinion;;;;;;;;;;x
+borneonic_opinion;Borneonic Opinion;;;;;;;;;;x
+iban_dayakic_opinion;Iban-Dayakic Opinion;;;;;;;;;;x
+bali_sumbawa_opinion;Bali-Sumbawa Opinion;;;;;;;;;;x
+agamatirta_opinion;Agama Tirta Opinion;;;;;;;;;;x
+b_hotham2;Hotham;;;;;;;;;;x
+b_point_stuart2;Point Stuart;;;;;;;;;;x
+b_djukbinj2;Djukbin;;;;;;;;;;x
+b_marrakai2;Marrakai;;;;;;;;;;x
 #######;;;;;;;;;;;;;;;;;;;
 legendary_desc;This character is shrouded in myth and legend to such a great extent that very little about them can be known for certain.;;;;;;;;;;;;;x
 THE_TANAKH;The Tanakh;;;;;;;;;;;;;x
@@ -1386,7 +1455,7 @@ firearm_jazalier_desc;In Kybur pass firearms of relatively low quality are produ
 firearm_bhutan;Bhutanese Firearm;;;;;;;;;x
 firearm_bhutan_desc;The secret of firearm manufacture is still kept alive among the legendary Bhutanese smiths, while not as powerful as an antediluvian firearm it is still very deadly.;;;;;;;;;x
 ate_textbooks;Ancient Textbooks;;;;;;;;;x
-ate_textbooks_desc;These old books helped to learn incredible thing to people living before the event. Today it is only readable to the most learned in the old scripts such as Antediluvian-English and Antediluvian-French.;;;;;;;;;x
+ate_textbooks_desc;These old books helped to teach incredible thing to people living before the event. Today it is only readable to the most learned in the old scripts such as Antediluvian-English and Antediluvian-French.;;;;;;;;;x
 ate_firearm;Ancient Firearm;;;;;;;;;x
 ate_euro;Ancient European Coin;;;;;;;;;x
 ate_euro_desc;This ancient relic was used throughout antediluvian Europe to facilitate trade. It is strange that the ancients minted their coins out of base metals.;;;;;;;;;x
@@ -1632,9 +1701,12 @@ sevillian5Title;The Cruelty of Man;;;;;;;;;;x
 sevillian6Title;A Helper?;;;;;;;;;;x
 sevillian7Title;Gloria;;;;;;;;;;x
 sevillian8Title;End of the Crusade;;;;;;;;;;x
+kedang;Kedang;;;;;;;;;;x
 oceanic_opinion;[oceanic.GetGroupName] Opinion;Opinion sur 'oceanic';oceanicn Meinung;;Opinión pirata;;;;;;;;x
 CALC_TRUE_IF;At least $AMOUNT|Y$ of these must be true;$COMPARISON|U$ $AMOUNT|Y$ d'entre elles doivent etre vraies;$COMPARISON|U$ $AMOUNT|Y$ müssen erfüllt sein;;$COMPARISON|U$ $AMOUNT|Y$ de estos deben ser verdaderos;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
+EVTDESCATV.82;Now that the war has been ended a large number of Tiwi have settled several provinces in Sarawak as have a large number of Topenders mixing with the locals. We have also renounced our control over our australian territories due to the distances involved making it unfeasible.;;;;;;;;;x
+EVTOPTAATV.82;Glory to Sarawak!;;;;;;;;;x
 nick_storm_of_arabia;the Storm of Arabia;;;;;;;;;;x
 amriqi_opinion;[amriqi.GetName] opinion;;;;;;;;;;x
 caucasian_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.;;;;;;;;;x
@@ -1671,13 +1743,13 @@ aromanian_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y
 alan_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y*§! Can prepare campaigns to §YReconquer Anatolia, Georgia, Armenia, and Azerbaijan§! if Orthodox;;;;;;;;;x
 scythian_FEATURES;§Y*§! Can Blind prisoners.\n§Y*§! Can Castrate prisoners.\n§Y*§! Can prepare campaigns to §YReconquer Anatolia, Georgia, Armenia, and Azerbaijan§! if Orthodox\n§Y*§! Can appoint §YShieldmaidens§!;;;;;;;;;x
 eastern_feudal_FEATURES;§Y*§! Rulers of this government type can castrate prisoners\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
-mandate_heaven;§Y*§! Rulers of this government type can castrate prisoners\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
+mandate_heaven_FEATURES;§Y*§! Rulers of this government type can castrate prisoners\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 chinese_imperial_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 roman_imperial_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 neoziamet_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 oligarchic_republic_FEATURES;§Y*§! This government relies heavily on small professional armies to fight its wars \n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 merchant_republic_government_FEATURES;§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
-mandala_government_FEATURES;§Y*§! Receives earlier access to the release vassal as March decision.\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
+mandala_government_FEATURES;§Y*§! Receives earlier access to the release vassal as March decision\n§Y*§! Has a special CB to enforce March Status\n§Y*§! Has a special decision to annex Marches\n§Y*§! This government is §MBureaucratic§! and thus can either §Gbenefit from an efficient bureaucracy§! if the ruler and councillors are talented and virtuous or §Rsuffer from a corrupt bureaucracy§! if the ruler and councillors are inept and sinful(if fitna fracture is enabled);;;;;;;;;x
 feudal_government_FEATURES;§Y*§! Titles of King and Emperor tier of this government type with low centralisation can §Rsponteneously disintegrate§! if the ruler is §Rdeemed weak or incapable§! by his vassals and has §Rlow prestige§!(if fitna fracture is enabled);;;;;;;;;x
 agrarian_feudal_government_FEATURES;§Y*§! Titles of King and Emperor tier of this government type with low centralisation can §Rsponteneously disintegrate§! if the ruler is §Rdeemed weak or incapable§! by his vassals and has §Rlow prestige§!(if fitna fracture is enabled);;;;;;;;;x
 indian_feudal_FEATURES;§Y*§! Titles of King and Emperor tier of this government type with low centralisation can §Rsponteneously disintegrate§! if the ruler is §Rdeemed weak or incapable§! by his vassals and has §Rlow prestige§!(if fitna fracture is enabled);;;;;;;;;x
@@ -1828,31 +1900,35 @@ wonder_university_soroca;University of Soroca;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 wonder_university_soroca_desc;One of the greatest universities in modern europe, built during the peak of the transnistrian empire in the early 2400s and serving as a hub for post event knowledge since.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;;;;
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_CYPRUS_RECLAIMATION_CONFED;Reclaim the Kingdom of Cyprus;;;;;;;;;;;;;x
-WAR_NAME_CYPRUS_RECLAIMATION_CONFED;Cypriot Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_CYPRUS_RECLAIMATION_CONFED;Cypriot Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 cyprus_reclaimation_confed_desc;We can declare war on any territory de jure to Cyprus in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
+CB_NAME_KIMBERLIAN_RECLAIMATION_CONFED;Reclaim the Kingdom of Kimberly;;;;;;;;;;;;;x
+WAR_NAME_KIMBERLIAN_RECLAIMATION_CONFED;Kimberlian Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
+kimberlian_reclaimation_confed_desc;We can declare war on any territory de jure to Kimberly in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;;;;;
 CB_NAME_DECCAN_RECLAIMATION_CONFED;Reclaim the Deccan Plateau;;;;;;;;;;;;;x
-WAR_NAME_DECCAN_RECLAIMATION_CONFED;Deccan Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_DECCAN_RECLAIMATION_CONFED;Deccan Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 deccan_reclaimation_confed_desc;We can declare war on any territory dejure to Deccan in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_GERMANY_RECLAIMATION_CONFED;Reclaim Lost German Land;;;;;;;;;;;;;x
-WAR_NAME_GERMANY_RECLAIMATION_CONFED;Germany Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_GERMANY_RECLAIMATION_CONFED;Germany Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 germany_reclaimation_confed_desc;We can declare war on any territory dejure to Germany in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_KAREN_RECLAIMATION_CONFED;Reclaim Lost Karen Land;;;;;;;;;;;;;x
-WAR_NAME_KAREN_RECLAIMATION_CONFED;Kawthoolei Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_KAREN_RECLAIMATION_CONFED;Kawthoolei Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 karen_reclaimation_confed_desc;We can declare war on any territory dejure to Karen in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_MALAYSIAN_RECLAIMATION_CONFED;Reclaim Lost Malaysian Land;;;;;;;;;;;;;x
-WAR_NAME_MALAYSIAN_RECLAIMATION_CONFED;Kedah Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_MALAYSIAN_RECLAIMATION_CONFED;Kedah Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 malaysian_reclaimation_confed_desc;We can declare war on any territory dejure to Malaysia in order to maintain the integrity of the confederation in its stated region.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_PRUSSIANIST_RECLAIMATION;Reclaim Germany;;;;;;;;;;;;;x
-WAR_NAME_PRUSSIANIST_RECLAIMATION;Prussianist Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_PRUSSIANIST_RECLAIMATION;Prussianist Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 prussianist_reclaimation_desc;We can declare war on any territory dejure to Germany or Scandinavia not held by those of a similar faith.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 CB_NAME_LUTHERAN_RECLAIMATION;Reclaim Lost Lutheran Land;;;;;;;;;;;;;x
-WAR_NAME_LUTHERAN_RECLAIMATION;Lutheran Reclaimation War;;;;;;;;;;;;;x
+WAR_NAME_LUTHERAN_RECLAIMATION;Lutheran Reclaimation War for [Title.GetBaseName];;;;;;;;;;;;;x
 lutheran_reclaimation_desc;We can declare war on any territory dejure to Germany or Scandinavia not held by those of a similar faith.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;;;;;;
 defender_county_conquest;Liberation of [Root.GetReligion]s;;;;;;;;;;;;;x
@@ -2140,6 +2216,66 @@ tb_culture_amerikano_2;Glavemen Proving Grounds;;;;;;;;;;;;;x
 tb_culture_amerikano_3;Glavemen Proving Grounds;;;;;;;;;;;;;x
 tb_culture_amerikano_4;Glavemen Proving Grounds;;;;;;;;;;;;;x
 tb_culture_amerikano_1_desc;These proving grounds house Balikatenyo glavemen using the bayonets on their antediluvian rifles as spears. Although not using their antediluvian rifles for their intended purpose, these glavemen charge through the enemy with no mercy and no fear.;;;;;;;;;;;;;x
+ca_culture_timor_1;Cavaliero Stables;;;;;;;;;;;;;x
+ca_culture_timor_2;Cavaliero Stables;;;;;;;;;;;;;x
+ca_culture_timor_3;Cavaliero Stables;;;;;;;;;;;;;x
+ca_culture_timor_4;Cavaliero Stables;;;;;;;;;;;;;x
+ca_culture_timor_1_desc;These stables house the Cavalieros do Azul. Peacekeepers like their antediluvian ancestors, they fight to defend their realm from aggressive neighbors.;;;;;;;;;;;;;x
+tb_culture_timor_1;Cavaliero Grounds;;;;;;;;;;;;;x
+tb_culture_timor_2;Cavaliero Grounds;;;;;;;;;;;;;x
+tb_culture_timor_3;Cavaliero Grounds;;;;;;;;;;;;;x
+tb_culture_timor_4;Cavaliero Grounds;;;;;;;;;;;;;x
+tb_culture_timor_1_desc;These grounds house the Cavalieros do Azul. Peacekeepers like their antediluvian ancestors, they fight to defend their realm from aggressive neighbors.;;;;;;;;;;;;;x
+ca_culture_papuan_1;Papuan Spearmen Barracks;;;;;;;;;;;;;x
+ca_culture_papuan_2;Papuan Spearmen Barracks;;;;;;;;;;;;;x
+ca_culture_papuan_3;Papuan Spearmen Barracks;;;;;;;;;;;;;x
+ca_culture_papuan_4;Papuan Spearmen Barracks;;;;;;;;;;;;;x
+ca_culture_papuan_1_desc;These barracks house the spearmen of the various Papuan people, who are both a ceremonial and military force.;;;;;;;;;;;;;x
+tb_culture_papuan_1;Papuan Spearmen Drill Grounds;;;;;;;;;;;;;x
+tb_culture_papuan_2;Papuan Spearmen  Drill Grounds;;;;;;;;;;;;;x
+tb_culture_papuan_3;Papuan Spearmen  Drill Grounds;;;;;;;;;;;;;x
+tb_culture_papuan_4;Papuan Spearmen  Drill Grounds;;;;;;;;;;;;;x
+tb_culture_papuan_1_desc;These drill grounds house the spearmen of the various Papuan people, who are both a ceremonial and military force.;;;;;;;;;;;;;x
+ca_culture_malukic_1;Malukic Marine Port;;;;;;;;;;;;;x
+ca_culture_malukic_2;Malukic Marine Port;;;;;;;;;;;;;x
+ca_culture_malukic_3;Malukic Marine Port;;;;;;;;;;;;;x
+ca_culture_malukic_4;Malukic Marine Port;;;;;;;;;;;;;x
+ca_culture_malukic_1_desc;These ports house the Maluku Marines, experts in amphibian assault warfare, be it assaulting beaches or crossing rivers.;;;;;;;;;;;;;x
+tb_culture_malukic_1;Malukic Marine Dock;;;;;;;;;;;;;x
+tb_culture_malukic_2;Malukic Marine Dock;;;;;;;;;;;;;x
+tb_culture_malukic_3;Malukic Marine Dock;;;;;;;;;;;;;x
+tb_culture_malukic_4;Malukic Marine Dock;;;;;;;;;;;;;x
+tb_culture_malukic_1_desc;These docks house the Maluku Marines, experts in amphibian assault warfare, be it assaulting beaches or crossing rivers.;;;;;;;;;;;;;x
+ca_culture_celebic_1;Celebic Marine Port;;;;;;;;;;;;;x
+ca_culture_celebic_2;Celebic Marine Port;;;;;;;;;;;;;x
+ca_culture_celebic_3;Celebic Marine Port;;;;;;;;;;;;;x
+ca_culture_celebic_4;Celebic Marine Port;;;;;;;;;;;;;x
+ca_culture_celebic_1_desc;These ports house the Celebic Marines, experts in amphibian assault warfare, be it assaulting beaches or crossing rivers.;;;;;;;;;;;;;x
+tb_culture_celebic_1;Celebic Marine Dock;;;;;;;;;;;;;x
+tb_culture_celebic_2;Celebic Marine Dock;;;;;;;;;;;;;x
+tb_culture_celebic_3;Celebic Marine Dock;;;;;;;;;;;;;x
+tb_culture_celebic_4;Celebic Marine Dock;;;;;;;;;;;;;x
+tb_culture_celebic_1_desc;These ports house the Celebic Marines, experts in amphibian assault warfare, be it assaulting beaches or crossing rivers.;;;;;;;;;;;;;x
+ca_culture_sulawesic_1;Sulawesic Swordsmen Training Grounds;;;;;;;;;;;;;x
+ca_culture_sulawesic_2;Sulawesic Swordsmen Training Grounds;;;;;;;;;;;;;x
+ca_culture_sulawesic_3;Sulawesic Swordsmen Training Grounds;;;;;;;;;;;;;x
+ca_culture_sulawesic_4;Sulawesic Swordsmen Training Grounds;;;;;;;;;;;;;x
+ca_culture_sulawesic_1_desc;These training grounds house Sulawesi's elite swordsmen, who practice an all around strength in both attack and defense.;;;;;;;;;;;;;x
+tb_culture_sulawesic_1;Sulawesic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_sulawesic_2;Sulawesic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_sulawesic_3;Sulawesic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_sulawesic_4;Sulawesic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_sulawesic_1_desc;These proving grounds house Sulawesi's elite swordsmen, who practice an all around strength in both attack and defense.;;;;;;;;;;;;;x
+ca_culture_bandanic_1;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+ca_culture_bandanic_2;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+ca_culture_bandanic_3;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+ca_culture_bandanic_4;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+ca_culture_bandanic_1_desc;These training grounds house the elite swordsmen who hail from the Bandanic cultures, who practice an all around strength in both attack and defense.;;;;;;;;;;;;;x
+tb_culture_bandanic_1;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_bandanic_2;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_bandanic_3;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_bandanic_4;Bandanic Swordsmen Proving Grounds;;;;;;;;;;;;;x
+tb_culture_bandanic_1_desc;These training grounds house the elite swordsmen who hail from the Bandanic cultures, who practice an all around strength in both attack and defense.;;;;;;;;;;;;;x
 ca_culture_ibandayak_1;Mandau Training Ground;;;;;;;;;;;;;x
 ca_culture_ibandayak_2;Mandau Training Ground;;;;;;;;;;;;;x
 ca_culture_ibandayak_3;Mandau Training Ground;;;;;;;;;;;;;x
@@ -2330,7 +2466,18 @@ tb_culture_taiwan_1;Sons of Sapphire Grounds;;;;;;;;;;;;;x
 tb_culture_taiwan_2;Sons of Sapphire Grounds;;;;;;;;;;;;;x
 tb_culture_taiwan_3;Sons of Sapphire Grounds;;;;;;;;;;;;;x
 tb_culture_taiwan_4;Sons of Sapphire Grounds;;;;;;;;;;;;;x
-tb_culture_taiwan_1_desc;These grounds house infantry who are also zealots to the cause of the Heavenly Sapphire Didact. Combined with a tribalist view of realm conquering and their zealotry for the Sapphire Didact, these units are unyielding zealots loyal to their cause.;;;;;;;;;;;;;x
+tb_culture_taiwan_1_desc;These grounds house men who are also zealots to the cause of the Heavenly Sapphire Didact. Combined with a view of realm conquering and their zealotry for the Sapphire Didact, these units are unyielding zealots loyal to their cause.;;;;;;;;;;;;;x
+ca_culture_aussie_1;Light Horse Stables;;;;;;;;;;;;;x
+ca_culture_aussie_2;Light Horse Stables;;;;;;;;;;;;;x
+ca_culture_aussie_3;Light Horse Stables;;;;;;;;;;;;;x
+ca_culture_aussie_4;Light Horse Stables;;;;;;;;;;;;;x
+ca_culture_aussie_1_desc;These structures house and train the Light Horse Brigades of the Anglo-Australians, training in the use of their mounted Arquebus'.;;;;;;;;;;;;;x
+tb_culture_aussie_1;Light Horse Riding Grounds;;;;;;;;;;;;;x
+tb_culture_aussie_2;Light Horse Riding Grounds;;;;;;;;;;;;;x
+tb_culture_aussie_3;Light Horse Riding Grounds;;;;;;;;;;;;;x
+tb_culture_aussie_4;Light Horse Riding Grounds;;;;;;;;;;;;;x
+tb_culture_aussie_1_desc;These structures house and train the Light Horse Brigades of the Anglo-Australians, training in the use of their mounted Arquebus'.;;;;;;;;;;;;;x
+
 ca_culture_chinese_wu_1;Wu Watchmen Towers;;;;;;;;;;;;;x
 ca_culture_chinese_wu_2;Wu Watchmen Towers;;;;;;;;;;;;;x
 ca_culture_chinese_wu_3;Wu Watchmen Towers;;;;;;;;;;;;;x
@@ -2531,6 +2678,46 @@ ca_culture_cushitic_2;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
 ca_culture_cushitic_3;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
 ca_culture_cushitic_4;Cushite Light Infantry Barracks;;;;;;;;;;;;;x
 ca_culture_cushitic_1_desc;These barracks house infantry drilled in Cushite traditional drilling methods.;;;;;;;;;;;;;x
+ca_culture_igbo_1;Igbo Skirmisher Barracks;;;;;;;;;;;;;x
+ca_culture_igbo_2;Igbo Skirmisher Barracks;;;;;;;;;;;;;x
+ca_culture_igbo_3;Igbo Skirmisher Barracks;;;;;;;;;;;;;x
+ca_culture_igbo_4;Igbo Skirmisher Barracks;;;;;;;;;;;;;x
+ca_culture_igbo_1_desc;These barracks house ranks of Igbo skirmishers, one of Imperial Nigeria's rapid response units.;;;;;;;;;;;;;x
+tb_culture_igbo_1;Igbo Skirmisher Grounds;;;;;;;;;;;;;x
+tb_culture_igbo_2;Igbo Skirmisher Grounds;;;;;;;;;;;;;x
+tb_culture_igbo_3;Igbo Skirmisher Grounds;;;;;;;;;;;;;x
+tb_culture_igbo_4;Igbo Skirmisher Grounds;;;;;;;;;;;;;x
+tb_culture_igbo_1_desc;These grounds house ranks of Igbo skirmishers, one of Imperial Nigeria's rapid response units.;;;;;;;;;;;;;x
+ca_culture_hausa_1;Dawaki Stables;;;;;;;;;;;;;x
+ca_culture_hausa_2;Dawaki Stables;;;;;;;;;;;;;x
+ca_culture_hausa_3;Dawaki Stables;;;;;;;;;;;;;x
+ca_culture_hausa_4;Dawaki Stables;;;;;;;;;;;;;x
+ca_culture_hausa_1_desc;These stables house the Dawaki, traditional light cavalry used by the Hausa from even centuries past.;;;;;;;;;;;;;x
+tb_culture_hausa_1;Dawaki Grazing Grounds;;;;;;;;;;;;;x
+tb_culture_hausa_2;Dawaki Grazing Grounds;;;;;;;;;;;;;x
+tb_culture_hausa_3;Dawaki Grazing Grounds;;;;;;;;;;;;;x
+tb_culture_hausa_4;Dawaki Grazing Grounds;;;;;;;;;;;;;x
+tb_culture_hausa_1_desc;These grazing grounds house the Dawaki, traditional light cavalry used by the Hausa from even centuries past.;;;;;;;;;;;;;x
+ca_culture_nigerian_1;Brigade of Guards Armory;;;;;;;;;;;;;x
+ca_culture_nigerian_2;Brigade of Guards Armory;;;;;;;;;;;;;x
+ca_culture_nigerian_3;Brigade of Guards Armory;;;;;;;;;;;;;x
+ca_culture_nigerian_4;Brigade of Guards Armory;;;;;;;;;;;;;x
+ca_culture_nigerian_1_desc;These armories house Nigeria's finest men, the Brigade of Guards, men chosen by the Emperor himself to serve as his most prestigious guards.;;;;;;;;;;;;;x
+tb_culture_nigerian_1;Brigade of Guards Smithy;;;;;;;;;;;;;x
+tb_culture_nigerian_2;Brigade of Guards Smithy;;;;;;;;;;;;;x
+tb_culture_nigerian_3;Brigade of Guards Smithy;;;;;;;;;;;;;x
+tb_culture_nigerian_4;Brigade of Guards Smithy;;;;;;;;;;;;;x
+tb_culture_nigerian_1_desc;These smithies house Nigeria's finest men, the Brigade of Guards, men chosen by the Emperor himself to serve as his most prestigious guards.;;;;;;;;;;;;;x
+ca_culture_aboriginal_1;Aboriginal Hunter Range;;;;;;;;;;;;;x
+ca_culture_aboriginal_2;Aboriginal Hunter Range;;;;;;;;;;;;;x
+ca_culture_aboriginal_3;Aboriginal Hunter Range;;;;;;;;;;;;;x
+ca_culture_aboriginal_4;Aboriginal Hunter Range;;;;;;;;;;;;;x
+ca_culture_aboriginal_1_desc;These ranges house the Aboriginal Hunters, who hunt down their enemies like their prey.;;;;;;;;;;;;;x
+tb_culture_aboriginal_1;Aboriginal Hunter Lodge;;;;;;;;;;;;;x
+tb_culture_aboriginal_2;Aboriginal Hunter Lodge;;;;;;;;;;;;;x
+tb_culture_aboriginal_3;Aboriginal Hunter Lodge;;;;;;;;;;;;;x
+tb_culture_aboriginal_4;Aboriginal Hunter Lodge;;;;;;;;;;;;;x
+tb_culture_aboriginal_1_desc;These lodges house the Aboriginal Hunters, who hunt down their enemies like their prey.;;;;;;;;;;;;;x
 title_ninja_desc;A ninja, also known as shinobi, serves under a ruler in a variety of roles, ranging from infiltration and bodyguarding to assassination. Some of them serve as mercenaries, while others remain loyal to individual rulers.;;;;;;;;;;;;;x
 title_court_poet_japan;Court Poet;;;;;;;;;;;;;x
 title_court_poet_japan_desc;Poetry has always been an highly regarded form of art in Japan. A skilled poet is often present in a Japanese Court, a sign of prestige for both the ruler and the poet himself.;;;;;;;;;;;;;x

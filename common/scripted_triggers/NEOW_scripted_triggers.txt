@@ -73,7 +73,7 @@ is_anti_caliph = {
 		has_claim = d_mesopotamian
 		has_claim = d_ismaili
 		has_claim = d_ahmadiyya
-		has_claim = d_sufi
+		has_claim = e_sufi
 		has_claim = e_ovlatii
 	}
 }
@@ -100,6 +100,8 @@ uses_agrarian_feudal = {
 		culture = omani
 		culture = sudanese
 		culture = bedouin_arabic
+		culture = jibbali
+		culture = mehri
 		culture = hejazi
 		culture = khaliji
 		culture = greek
@@ -157,7 +159,29 @@ uses_agrarian_feudal = {
 		culture = tausug
 		culture = yakan
 		culture = tagalog
+		culture = waray
+		culture = dabaw
+		culture = kamayo
+		culture = kalagan
+		culture = manobo
+		culture = tandaganon
+		culture = butuan
+		culture = subanon
+		culture = talaud
+		culture = minhasa
+		culture = mongondow
+		culture = hulontalo
+		culture = bunda
+		culture = bintauna
+		culture = vuolo
+		culture = tausug
+		culture = yakan
+		culture = maranao
+		culture = maguindanao
+		culture = tboli
 		culture_group = maghreb_arabic
+		culture_group = timoric
+		culture_group = papuan
 		culture_group = mande
 		culture_group = chadic
 		culture_group = far_east_slavic
@@ -195,8 +219,6 @@ uses_agrarian_feudal = {
 }
 uses_theocratic_feudal = {
 	OR={
-		religion = insular
-		religion = highmount
 		AND = {
 			OR = {
 				culture_group = tibetan_group
@@ -208,6 +230,8 @@ uses_theocratic_feudal = {
 		}
 		has_religion_feature = religion_monastic
 		has_religion_feature = religion_feature_neoncult
+		religion = insular
+		religion = highmount
 		religion = donyipolo
 		religion = kiratist
 		religion = druze
@@ -274,6 +298,7 @@ uses_zodiacs = {
 		religion = hellenic_pagan
 		religion = hellenic_pagan_reformed
 		has_religion_feature = religion_astrology
+		religion = espiritista
 		religion = raelian
 		religion = thelemic_reformed
 		religion = theosophy
@@ -1175,6 +1200,7 @@ confederation_title_trigger = {
 		title = e_german_confederation
 		title = e_karnataka
 		title = k_cyprus_league
+		title = k_kimberlian_confederacy
 		title = e_aegean
 		title = e_kedah
 		title = k_kawthoolei
@@ -1184,6 +1210,7 @@ confederation_title_trigger = {
 
 uses_mandala_government_trigger = {
 	OR = {
+		OR = {
 		culture_group = thai
 		culture_group = bali_sumbawa
 		culture_group = khmer_group
@@ -1197,6 +1224,9 @@ uses_mandala_government_trigger = {
 		culture_group = iban_dayakic
 		culture_group = aslian
 		culture_group = bandanic
+		culture_group = celebic
+		culture_group = sulawesic
+		culture_group = malukic
 		culture = myanmarese
 		culture = chin
 		culture = kachin
@@ -1207,7 +1237,16 @@ uses_mandala_government_trigger = {
 		culture = khmu
 		culture = palaung
 		culture = wa
-	}
+		}
+        any_owned_bloodline = {
+            has_bloodline_flag = brooke_blood
+        }
+		top_liege = {
+			any_owned_bloodline = {
+				has_bloodline_flag = brooke_blood
+			}
+		}
+	}	
 }
 uses_eastern_feudal_trigger = {
 	OR = {

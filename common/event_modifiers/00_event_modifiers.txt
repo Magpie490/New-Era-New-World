@@ -422,6 +422,36 @@ mercy_to_sinners = {
 	icon = 17
 }
 
+mandate_taxes = {
+	opinion_of_japanese_emperor_trait = 10
+	japanese_emperor_trait_opinion = 5
+	global_tax_modifier = 0.1
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_levies = {
+	opinion_of_japanese_emperor_trait = 10
+	japanese_emperor_trait_opinion = 5
+	global_levy_size = 0.1
+	levy_reinforce_rate = 0.2
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_garrisons = {
+	opinion_of_japanese_emperor_trait = 10
+	japanese_emperor_trait_opinion = 5
+	global_garrison_size = 0.1
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_construction = {
+	opinion_of_japanese_emperor_trait = 10
+	japanese_emperor_trait_opinion = 5
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
+	global_revolt_risk = 0.01
+	icon = 4
+}
 #Married Life
 unrighteous_spouse = {
 	monthly_character_piety = -0.05
@@ -458,6 +488,33 @@ watchers_in_the_snow = {
 	tech_growth_modifier_military = 0.25
 	add_prestige_modifier = 0.05
 	icon = 81
+}
+
+mandate_taxes_norm = {
+	liege_opinion = 10
+	global_tax_modifier = 0.1
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_levies_norm = {
+	liege_opinion = 10
+	global_levy_size = 0.1
+	levy_reinforce_rate = 0.2
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_garrisons_norm = {
+	liege_opinion = 10
+	global_garrison_size = 0.1
+	global_revolt_risk = 0.01
+	icon = 4
+}
+mandate_construction_norm = {
+	liege_opinion = 10
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
+	global_revolt_risk = 0.01
+	icon = 4
 }
 intrigue_advice = {
 	intrigue = 2
@@ -1228,6 +1285,7 @@ sisu_change_cooldown = { icon = 1 }
 pancasila_change_cooldown = { icon = 1 }
 
 compliment_food_timer = { icon = 1 }
+county_conquest_timer = { icon = 1 }
 
 complain_food_timer = { icon = 1 }
 
@@ -7890,7 +7948,7 @@ the_hanged_man_modif = {
 the_death_modif = {
 	health = -3.5
 	fertility = -0.15
-	icon = 42
+	icon = 80
 }
 the_temperance_modif = {
 	stewardship = 1
@@ -7952,6 +8010,143 @@ the_world_modif = {
 	ai_ambition = 40
 	ai_zeal = 10
 	icon = 79
+}
+
+the_magician_reversed_modif = {
+	learning = -2
+	stewardship = -1
+	icon = 80
+}
+the_high_priestess_reversed_modif = {
+	learning = -2
+	monthly_character_piety = -0.1
+	icon = 80
+}
+the_empress_reversed_modif = {
+	sex_appeal_opinion = -15
+	monthly_character_prestige = -0.1
+	icon = 80
+}
+the_emperor_reversed_modif = {
+	stewardship = -1
+	vassal_opinion = -5
+	monthly_character_prestige = -0.2
+	icon = 80
+}
+the_hierophant_reversed_modif = {
+	learning = -3
+	monthly_character_piety = -0.1
+	fertility = 0.05
+	icon = 80
+}
+the_lovers_reversed_modif = {
+	sex_appeal_opinion = -20
+	fertility = -0.1
+	icon = 80
+}
+the_chariot_reversed_modif = {
+	martial = -1
+	combat_rating = -10
+	icon = 80
+}
+the_strength_reversed_modif = {
+	combat_rating = -20
+	icon = 80
+}
+the_hermit_reversed_modif = {
+	learning = -2
+	same_religion_opinion = -5
+	icon = 80
+}
+the_wheel_of_fortune_reversed_modif = {
+	global_tax_modifier = -0.1
+	ai_greed = -50
+	icon = 80
+}
+the_justice_reversed_modif = {
+	stewardship = -1
+	learning = -1
+	vassal_opinion = -2
+	ai_rationality = -10
+	ai_honor = -5
+	ai_zeal = -5
+	icon = 80
+}
+the_hanged_man_reversed_modif = {
+	vassal_opinion = 2
+	diplomacy = 1
+	intrigue = 1
+	stewardship = 1
+	martial = 1
+	learning = 1
+	combat_rating = 2
+	icon = 79
+}
+the_death_reversed_modif = {
+	health = 3.5
+	fertility = 0.15
+	icon = 79
+}
+the_temperance_reversed_modif = {
+	stewardship = -1
+	diplomacy = -1
+	intrigue = -1
+	ai_greed = 10
+	ai_zeal = -10
+	icon = 80
+}
+the_devil_reversed_modif = {
+	sex_appeal_opinion = -15
+	diplomacy = -2
+	icon = 80
+}
+the_tower_reversed_modif = {
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.1
+	global_tax_modifier = 0.1
+	icon = 79
+}
+the_star_reversed_modif = {
+	monthly_character_piety = -0.75
+	ai_ambition = 10
+	icon = 80
+}
+the_moon_reversed_modif = {
+	intrigue = -2
+	diplomacy = 1
+	ai_honor = 10
+	icon = 80
+}
+the_sun_reversed_modif = {
+	intrigue = 1
+	liege_opinion = -25
+	monthly_character_piety = -0.5
+	ai_ambition = 40
+	ai_zeal = 10
+	icon = 80
+}
+the_judgement_reversed_modif = {
+	vassal_opinion = -2
+	diplomacy = -1
+	intrigue = -1
+	stewardship = -1
+	martial = -1
+	learning = -1
+	ai_greed = 10
+	ai_zeal = -10
+	icon = 80
+}
+the_world_reversed_modif = {
+	intrigue = -2
+	stewardship = -2
+	diplomacy = -2
+	martial = -2
+	learning = -2
+	combat_rating = -5 
+	ambitious_opinion = 25 
+	ai_ambition = -40
+	ai_zeal = -10
+	icon = 80
 }
 hidden_timer_modif = {
 	is_visible = no

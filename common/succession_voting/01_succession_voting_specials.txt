@@ -3888,7 +3888,7 @@ byzantine_elective = {
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 				OR = {
-				title = e_columbia
+				title = e_byzantium
 				title = e_marblists
 				}
 			}
@@ -3900,7 +3900,8 @@ byzantine_elective = {
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 				OR = {
-				title = e_columbia
+				title = e_byzantium
+				title = e_marblists
 				}
 			}
 			is_adult = yes
@@ -3925,7 +3926,8 @@ byzantine_elective = {
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 				OR = {
-				title = e_columbia
+				title = e_byzantium
+				title = e_marblists
 				}
 			}
 			NOT = { is_adult = yes }
@@ -6326,7 +6328,7 @@ byzantine_elective = {
 			value = 25
 			localisation_key = tooltip_feudal_elector_vote_born_in_the_purple
 			NOT = { character = FROM } #Do not judge yourself.
-			FROMFROM = { OR = { title = e_columbia title = e_marblists } }
+			FROMFROM = { OR = { title = e_byzantium title = e_marblists } }
 			OR = {
 			culture_group = byzantine
 			religion = marblists
@@ -11641,7 +11643,7 @@ hre_feudal_elective = {
 			value = 25
 			localisation_key = tooltip_feudal_elector_vote_bloodline
 			NOT = { character = FROM } #Do not judge yourself.
-			FROMFROM = { OR = { title = e_columbia title = e_marblists } }
+			FROMFROM = { OR = { title = e_byzantium title = e_marblists } }
 			FROM = {
 				any_owned_bloodline = {
 					bloodline_is_active_for = PREV
