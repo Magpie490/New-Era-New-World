@@ -11,6 +11,109 @@ esoteric = {
 	color = { 0.6 0.0 0.0 }
 	
 	interface_skin = { pagan_interface }
+	
+	kemetic = {
+		graphical_culture = thelemagfx
+		icon = 68
+		heresy_icon = 69
+		
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 255 216 0 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+		high_god_name = GOD_OSIRIS
+		god_names = {
+			GOD_OSIRIS GOD_ISIS GOD_HORUS_RA GOD_LINKON GOD_THOTH GOD_HATHOR GOD_SEKHMET GOD_ANUBIS
+		}
+		evil_god_names = {
+			SATAN THE_DEVIL GOD_APOPHIS GOD_ISFET
+		}
+		
+		character_modifier = {
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOKS_OF_OSIRIS
+		priest_title = MAGE
+		piety_name = MAGICK
+		
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		
+		can_call_crusade = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_in_ruler_designer = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = theosophy
+		intermarry = orange_king
+		intermarry = congregationist
+		intermarry = ibadi
+	}
+	
+	solar = {
+		graphical_culture = thelemagfx
+		icon = 100
+		heresy_icon = 101
+		parent = kemetic
+
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 255 150 0 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+		high_god_name = GOD_HORUS_RA
+		god_names = {
+			GOD_HORUS_RA GOD_THE_SUN GOD_THE_PHARAOH GOD_HORUS_RA_CHOSEN
+		}
+		evil_god_names = {
+			GOD_APOPHIS GOD_ISFET GOD_THE_DARKNESS
+		}
+		
+		character_modifier = {
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_PHARAOHS_WRITINGS
+		priest_title = MAGE
+		piety_name = MAGICK
+		
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		
+		can_call_crusade = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_in_ruler_designer = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = theosophy
+		intermarry = orange_king
+		intermarry = congregationist
+		intermarry = ibadi
+	}
 	highmount = {
 		graphical_culture = pagangfx
 
