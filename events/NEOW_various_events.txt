@@ -237,7 +237,6 @@ character_event = {
 		NOR = {
 			culture_group = hispano_austronesian
 			culture_group = austronesian
-			culture_group = aeta_group
 			culture_group = asian_anglophone
 		}
 		NOR = {
@@ -402,6 +401,569 @@ character_event = {
 		any_child_even_if_dead = {
 			character_event = { id = ATV.8 }
 		}
+	}
+}
+narrative_event = {
+	id = ATV.9
+	title = EVTNAME_ATV_9
+	desc = EVTDESC_ATV_9
+	picture = GFX_evt_burning_castle_hf
+	border = GFX_event_narrative_frame_religion
+	major = yes
+	portrait = c_urgell
+	trigger = {
+		NOT = { 
+			k_andorra  = { 
+				holder_scope = { 
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				} 
+			} 
+		}
+		NOT = {
+			has_global_flag = andorra_fallen
+		}
+		is_alternate_start = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = andorra_fallen
+		if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = sevillian
+					}
+				}
+			}
+			sevillian = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = transatlantic
+					}
+				}
+			}
+			transatlantic = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = penitente
+					}
+				}
+			}
+			penitente = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = sunni
+					}
+				}
+			}
+			sunni = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = malikite
+					}
+				}
+			}
+			malikite = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = ibadi
+					}
+				}
+			}
+			ibadi = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = novelist_reformed
+					}
+				}
+			}
+			novelist_reformed = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = novelist
+					}
+				}
+			}
+			novelist = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = thelemic_reformed
+					}
+				}
+			}
+			thelemic_reformed = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = theosophy
+					}
+				}
+			}
+			theosophy = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = summer_queen
+					}
+				}
+			}
+			summer_queen = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = thelemic
+					}
+				}
+			}
+			thelemic = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else_if = {
+			limit = {
+				c_urgell = {
+					holder_scope = { 
+						religion = orange_king
+					}
+				}
+			}
+			orange_king = {
+				religion_authority = {
+                    modifier = andorra_fallen_good
+                    years = 20
+                }
+			}
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+		else = {
+			catholic = {
+				religion_authority = {
+                    modifier = andorra_fallen_bad
+                    years = 20
+                }
+			}
+		}
+	}
+	option = {
+		name = ATV_9A
+		trigger = {
+			religion = sevillian
+			c_urgell = {
+				holder_scope = { 
+					religion = sevillian
+				}
+			}
+		}
+	}
+	option = {
+		name = ATV_9B
+		trigger = {
+			OR = {
+				religion = transatlantic
+				religion = penitente
+			}
+			c_urgell = {
+				holder_scope = { 
+					OR = {
+						religion = transatlantic
+						religion = penitente
+					}
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9C
+		trigger = {
+			religion = sunni
+			c_urgell = {
+				holder_scope = { 
+					religion = sunni
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9D
+		trigger = {
+			religion = malikite
+			c_urgell = {
+				holder_scope = { 
+					religion = malikite
+				}
+			}
+		}		
+	}	
+	option = {
+		name = ATV_9E
+		trigger = {
+			religion = ibadi
+			c_urgell = {
+				holder_scope = { 
+					religion = ibadi
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9F
+		trigger = {
+			religion = novelist_reformed
+			c_urgell = {
+				holder_scope = { 
+					religion = novelist_reformed
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9G
+		trigger = {
+			religion = novelist
+			c_urgell = {
+				holder_scope = { 
+					religion = novelist
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9H
+		trigger = {
+			religion = thelemic_reformed
+			c_urgell = {
+				holder_scope = { 
+					religion = thelemic_reformed
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9H
+		trigger = {
+			religion = theosophy
+			c_urgell = {
+				holder_scope = { 
+					religion = theosophy
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9I
+		trigger = {
+			religion = thelemic
+			c_urgell = {
+				holder_scope = { 
+					religion = thelemic
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9J
+		trigger = {
+			religion = summer_queen
+			c_urgell = {
+				holder_scope = { 
+					religion = summer_queen
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9K
+		trigger = {
+			religion = orange_king
+			c_urgell = {
+				holder_scope = { 
+					religion = orange_king
+				}
+			}
+		}		
+	}
+	option = {
+		name = ATV_9L
+		trigger = {
+			religion = catholic
+		}		
+	}
+	option = {
+		name = ATV_9M
+		trigger = {
+			NOT = {
+				religion = orange_king
+				c_urgell = {
+					holder_scope = { 
+						religion = orange_king
+					}
+				}
+			}
+			NOT = {
+				religion = summer_queen
+				c_urgell = {
+					holder_scope = { 
+						religion = summer_queen
+					}
+				}
+			}
+			NOT = {
+				religion = thelemic
+				c_urgell = {
+					holder_scope = { 
+						religion = thelemic
+					}
+				}
+			}
+			NOT = {
+				religion = theosophy
+				c_urgell = {
+					holder_scope = { 
+						religion = theosophy
+					}
+				}
+			}
+			NOT = {
+				religion = thelemic_reformed
+				c_urgell = {
+					holder_scope = { 
+						religion = thelemic_reformed
+					}
+				}
+			}
+			NOT = {
+				religion = novelist
+				c_urgell = {
+					holder_scope = { 
+						religion = novelist
+					}
+				}
+			}
+			NOT = {
+				religion = novelist_reformed
+				c_urgell = {
+					holder_scope = { 
+						religion = novelist_reformed
+					}
+				}
+			}
+			NOT = {
+				religion = ibadi
+				c_urgell = {
+					holder_scope = { 
+						religion = ibadi
+					}
+				}
+			}
+			NOT = {
+				religion = malikite
+				c_urgell = {
+					holder_scope = { 
+						religion = malikite
+					}
+				}
+			}
+			NOT = {
+				religion = sunni
+				c_urgell = {
+					holder_scope = { 
+						religion = sunni
+					}
+				}
+			}
+			NOT = {
+				religion = transatlantic
+				c_urgell = {
+					holder_scope = { 
+						religion = transatlantic
+					}
+				}
+			}
+			NOT = {
+				religion = sevillian
+				c_urgell = {
+					holder_scope = { 
+						religion = sevillian
+					}
+				}
+			}
+			NOT = {
+				religion = catholic
+			}
+		}		
 	}
 }
 character_event = {
@@ -1519,7 +2081,7 @@ narrative_event = {
 		has_landed_title = k_papacy
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 0
 	}
 	immediate = {
 		343 = {
@@ -2106,59 +2668,45 @@ letter_event = {
         }
     }
 }
-province_event = {
+character_event = {
 	id = ATV.61
 	hide_window = yes
 	trigger = {
-		any_province_holding = {
-			OR = {
-				has_building = ca_dirt_road
-				has_building = ct_dirt_road
-				has_building = tp_dirt_road
+		any_demesne_province = {
+			hospital_has_building = ct_dirt_road
+			NOT = {
+				has_province_modifier = dirt_roads_modifier
 			}
 		}
-		NOT = {
-			has_province_modifier = dirt_roads_modifier
-		}
 	}
 	mean_time_to_happen = {
 		days = 1
 	}
 	immediate = {
-		add_province_modifier = { 
-			name = dirt_roads_modifier 
-			duration = 730 
-			hidden = yes
+		random_demesne_province = {
+			limit = {
+				hospital_has_building = ct_dirt_road
+				NOT = {
+					has_province_modifier = dirt_roads_modifier
+				}
+			}
+
+			add_province_modifier = { 
+				name = dirt_roads_modifier 
+				duration = 730 
+				hidden = yes
+			}
 		}
 	}
 }
-province_event = {
-	id = ATV.62
-	hide_window = yes
-	trigger = {
-		NOR = {
-			has_building = ca_dirt_road
-			has_building = ct_dirt_road
-			has_building = tp_dirt_road
-		}
-		has_province_modifier = dirt_roads_modifier
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate = {
-		remove_province_modifier = dirt_roads_modifier 
-	}
-}
-province_event = {
+character_event = {
 	id = ATV.63
 	hide_window = yes
 	trigger = {
-		any_province_holding = {
-			OR = {
-				has_building = ca_stone_road
-				has_building = ct_stone_road
-				has_building = tp_stone_road
+		any_demesne_province = {
+			hospital_has_building = ct_stone_road
+			NOT = {
+				has_province_modifier = stone_roads_modifier
 			}
 		}
 		NOT = {
@@ -2169,40 +2717,30 @@ province_event = {
 		days = 1
 	}
 	immediate = {
-		add_province_modifier = { 
-			name = stone_roads_modifier 
-			duration = 730
-			hidden = yes
+		random_demesne_province = {
+			limit = {
+				hospital_has_building = ct_stone_road
+				NOT = {
+					has_province_modifier = stone_roads_modifier
+				}
+			}
+
+			add_province_modifier = { 
+				name = stone_roads_modifier 
+				duration = 730 
+				hidden = yes
+			}
 		}
 	}
 }
-province_event = {
-	id = ATV.64
-	hide_window = yes
-	trigger = {
-		NOR = {
-			has_building = ca_stone_road
-			has_building = ct_stone_road
-			has_building = tp_stone_road
-		}
-		has_province_modifier = stone_roads_modifier
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate = {
-		remove_province_modifier = stone_roads_modifier 
-	}
-}
-province_event = {
+character_event = {
 	id = ATV.65
 	hide_window = yes
 	trigger = {
-		any_province_holding = {
-			OR = {
-				has_building = ca_stone_highway
-				has_building = ct_stone_highway
-				has_building = tp_stone_highway
+		any_demesne_province = {
+			hospital_has_building = ct_stone_highway
+			NOT = {
+				has_province_modifier = stone_highways_modifier
 			}
 		}
 		NOT = {
@@ -2213,29 +2751,20 @@ province_event = {
 		days = 1
 	}
 	immediate = {
-		add_province_modifier = { 
-			name = stone_highways_modifier 
-			duration = 730
-			hidden = yes
+		random_demesne_province = {
+			limit = {
+				hospital_has_building = ct_stone_highway
+				NOT = {
+					has_province_modifier = stone_highways_modifier
+				}
+			}
+
+			add_province_modifier = { 
+				name = stone_highways_modifier 
+				duration = 730 
+				hidden = yes
+			}
 		}
-	}
-}
-province_event = {
-	id = ATV.66
-	hide_window = yes
-	trigger = {
-		NOR = {
-			has_building = ca_stone_highway
-			has_building = ct_stone_highway
-			has_building = tp_stone_highway
-		}
-		has_province_modifier = stone_highways_modifier
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate = {
-		remove_province_modifier = stone_highways_modifier 
 	}
 }
 long_character_event = {

@@ -457,7 +457,22 @@ settlement_decisions = {
 				religion = red_cult
 				trait = cruel
 				trait = impaler
+				trait = aggressive_leader
+				trait = viking
+				trait = pirate
+				trait = ravager
+				trait = seaking
+				trait = sea_queen
+				trait = deceitful
+				trait = arbitrary
+				trait = greedy
+				trait = berserker
 				trait = wroth
+			}
+			NOR = {
+				trait = kind
+				trait = charitable
+				trait = just
 			}
 			has_dlc = "Horse Lords"
 		}
@@ -477,6 +492,7 @@ settlement_decisions = {
 					location = { NOT = { religion_group = FROM } }
 				}
 			}
+			has_siege = no
 			AND = {
 				location = { NOT = { religion_group = FROM } }
 				controller = { character = FROM }
@@ -751,7 +767,7 @@ settlement_decisions = {
 						add_character_modifier = {
 							modifier = pillage_cooldown
 							hidden = yes
-							months = 6
+							months = 5
 						}
 					}
 				}
@@ -759,9 +775,14 @@ settlement_decisions = {
 			
 			if = {
 				limit = {
-					NOT = { has_any_building = yes }
-					owner = {
-						character = FROM
+					ROOT = {
+						NOT = { has_any_building = yes }
+						owner = {
+							character = FROM
+						}
+						NOT = {
+							is_capital = yes
+						}
 					}
 				}
 				hidden_tooltip = {
@@ -770,7 +791,9 @@ settlement_decisions = {
 						province_event = { id = HL.4814 days = 2 random = 2 }
 					}
 				}
-				destroy_settlement = THIS
+				ROOT = {
+					destroy_settlement = yes
+				}
 			}
 			
 		}
@@ -1367,27 +1390,6 @@ settlement_decisions = {
 			
 				set_government_type = tribal_government
 				
-				if = {
-					limit = {
-						NOR = {
-							tier = KING
-							tier = EMPEROR
-						}
-					}
-					save_event_target_as = title_name_target
-					create_title = {
-						tier = KING
-						landless = no
-						temporary = no
-						custom_created = yes
-						culture = ROOT_FROM
-						holder = ROOT_FROM
-						name = "TRIBAL_CUSTOM"
-						base_title = event_target:primary_title
-						copy_title_laws = yes
-					}
-				}
-			
 				if = {
 					limit = {
 						higher_tier_than = count

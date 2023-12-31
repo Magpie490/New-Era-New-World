@@ -618,6 +618,7 @@ decisions = {
 			is_adult = yes
 			NOR = {
 				trait = incapable
+				AND = {
 				trait = sympathy_christendom
 				trait = sympathy_islam
 				trait = sympathy_mormon
@@ -632,7 +633,13 @@ decisions = {
 				trait = sympathy_oceanic
 				trait = sympathy_chinese
 				trait = sympathy_shinto
+				}
+				has_character_modifier = sympathy_timer
 				has_character_flag = flag_picking_sympathy
+			}
+			piety = 200
+			NOT = {
+				trait = zealous
 			}
 			OR = { 
 				has_religion_feature = religion_syncretic
@@ -655,6 +662,7 @@ decisions = {
 				religion = kalikula
 				religion = koyapunem
 				religion = maunaxite_reformed
+				religion = vostokist
 				religion = qingzhen
 				religion = jain
 				religion = aurorean
@@ -675,6 +683,7 @@ decisions = {
 				religion = caodai
 				religion = pancasila
 			}
+			piety = 200
 		}
 		
 		allow = {
@@ -699,6 +708,7 @@ decisions = {
 				religion = kalikula
 				religion = koyapunem
 				religion = maunaxite_reformed
+				religion = vostokist
 				religion = qingzhen
 				religion = jain
 				religion = aurorean
@@ -719,9 +729,16 @@ decisions = {
 				religion = caodai
 				religion = pancasila
 			}
+			piety = 300
 		}
 		
 		effect = {
+			add_character_modifier = {
+				name = sympathy_timer
+				duration = 1825
+				hidden = yes
+			}
+			piety = -300
 			hidden_tooltip = {
 				if = {
 					limit = {

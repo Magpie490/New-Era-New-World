@@ -105,7 +105,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult	
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice	
 					has_religion_feature = religion_feature_satsana_phi	
 				}
@@ -222,7 +221,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 						}
@@ -372,7 +370,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_matriarchal
@@ -511,7 +508,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 						religion_group = indian_group 
@@ -676,7 +672,6 @@ succession_laws = {
 					religion = sarvodaya
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 						}
@@ -722,6 +717,7 @@ succession_laws = {
 				}
 				has_title_flag = alternate_byz
 				title = d_yersenism
+				title = e_juche
 				title = k_bakufu
 				title = k_pretender_bakufu
 			}
@@ -780,6 +776,7 @@ succession_laws = {
 							has_law = crown_authority_4
 						}
 					}
+					title = e_juche
 				}
 			}
 			custom_tooltip = {
@@ -862,7 +859,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 						#religion_group = indian_group
@@ -980,7 +976,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 						religion_group = indian_group
@@ -1106,7 +1101,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult 
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi}
 				is_merchant_republic = no
@@ -1177,7 +1171,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi }
 				is_merchant_republic = no					
@@ -1335,7 +1328,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite	
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi }
 				is_merchant_republic = no						
@@ -1583,7 +1575,6 @@ succession_laws = {
 					religion = stalinist
 					religion = trotskyite
 					religion = red_cult
-					religion = marked
 					has_religion_feature = religion_ritual_sacrifice
 					has_religion_feature = religion_feature_satsana_phi
 				}
@@ -1912,6 +1903,7 @@ succession_laws = {
 				title = e_sufi
 				title = k_serbia_triumvirate
 				title = d_armenianapostolic
+				title = e_juche
 				title = d_cao_dai
 				title = k_katoliko
 				title = k_aglipayan
@@ -2018,6 +2010,7 @@ succession_laws = {
 					has_landed_title = e_aegean
 					has_landed_title = e_kedah
 					has_landed_title = k_kawthoolei
+					has_landed_title = k_kimberlian_confederacy
 				}
 				OR = {
 					NOR = { 
@@ -2027,7 +2020,6 @@ succession_laws = {
 						religion = stalinist
 						religion = trotskyite	
 						religion = red_cult
-						religion = marked
 						has_religion_feature = religion_ritual_sacrifice
 						has_religion_feature = religion_feature_satsana_phi
 						#religion_group = indian_group
@@ -2037,27 +2029,10 @@ succession_laws = {
 						has_law = succ_confederation_elective # Keep it even if you revoke Full Council Authority
 						has_law = succ_hre_elective
 					} 
-					ROOT = {
-						has_title_flag = alternate_hre
-					}
 				}
 				is_merchant_republic = no							
 				is_patrician = no
 				
-				OR = {
-					NOT = { religion_group = pagan_group }
-					is_reformed_religion = yes
-					religion = hellenic_pagan
-					religion = novelist
-					has_law = succession_voting_power_1
-					OR = { 
-						has_law = succ_confederation_elective # Keep it even if you revoke Full Council Authority
-						has_law = succ_hre_elective
-					} 
-					ROOT = {
-						has_title_flag = alternate_hre
-					}
-				}
 				OR = {
 					independent = yes
 					NOT = {
@@ -2067,26 +2042,8 @@ succession_laws = {
 					}
 				}
 			}
-			OR = {
-				is_landless_type_title = no
-				is_tribal_type_title = yes
-				temporary = yes
-			}
 			is_primary_type_title = no
 			NOT = { tier = baron }
-			holder_scope = {
-				OR = {
-					is_feudal = yes
-					has_law = succession_voting_power_1
-					OR = { 
-						has_law = succ_confederation_elective # Keep it even if you revoke Full Council Authority
-						has_law = succ_hre_elective
-					}
-					ROOT = {
-						has_title_flag = alternate_hre
-					}
-				}
-			}
 			NOT = { holder_scope = { government = feudal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = japanese_feudal } }
