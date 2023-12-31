@@ -242,8 +242,8 @@ e_north_mississippi = {
 			}
 		}
 	}
-	k_kentuckssee = {
-		color={ 0 191 255 }
+	k_kentucky = {
+		color={ 0 100 255 }
 		color2={ 220 220 20 }
 
 		# Crusade target weight
@@ -254,11 +254,11 @@ e_north_mississippi = {
 
 		capital = 1009
 
-		d_bluegrass = {
-			color = { 0 141 183 }
+		d_bourbon = {
+			color = { 0 100 255 }
 			color2={ 220 220 20 }
 
-			capital = 1009
+			capital = 1007 # Transylvania
 
 			c_blue_licks = {
 				color = { 21 99 162 }
@@ -271,18 +271,6 @@ e_north_mississippi = {
 				b_foster_KY = {}
 				b_dover_KY = {}
 				b_mayslick_KY = {}
-			}
-			c_carroll = {
-				color = { 21 119 162 }
-				color2={ 220 220 20 }
-
-				b_carrollton_KTY = {}
-				b_english_KTY = {}
-				b_easterday_KTY = {}
-				b_ghent_KTY = {}
-				b_wheatley_KTY = {}
-				b_providence_KTY = {}
-				b_sanders_KTY = {}
 			}
 			c_covington = {
 				color={ 242 124 14 }
@@ -320,6 +308,25 @@ e_north_mississippi = {
 				b_owingsville_KTY = {}
 				b_stanton_KTY = {}
 			}
+			c_carroll = {
+				color = { 21 119 162 }
+				color2={ 220 220 20 }
+
+				b_carrollton_KTY = {}
+				b_english_KTY = {}
+				b_easterday_KTY = {}
+				b_ghent_KTY = {}
+				b_wheatley_KTY = {}
+				b_providence_KTY = {}
+				b_sanders_KTY = {}
+			}
+		}
+		d_bluegrass = {
+			color = { 0 141 183 }
+			color2={ 220 220 20 }
+
+			capital = 1009 # Louisville
+
 			c_old_bourbon = {
 				color = { 16 153 182 }
 				color2={ 220 220 20 }
@@ -344,18 +351,6 @@ e_north_mississippi = {
 				b_buckner_KY = {}
 				b_campbellsburg_KY = {}
 			}
-			c_hodgen = {
-				color = { 50 148 229 }
-				color2={ 220 220 20 }
-
-				b_hodgenville_KTY = {}
-				b_tonieville_KTY = {}
-				b_magnolia_KTY = {}
-				b_aliendale_KTY = {}
-				b_saloma_KTY = {}
-				b_finley_KTY = {}
-				b_calvary_KTY = {}
-			}
 			c_bardstown = {
 				color = { 50 148 209 }
 				color2={ 220 220 20 }
@@ -367,92 +362,6 @@ e_north_mississippi = {
 				b_deatsville_KTY = {}
 				b_lenore_KTY = {}
 				b_balltown_KTY = {}
-			}
-		}
-		d_pennyrile = {
-			color={ 255 204 174 }
-			color2={ 220 220 0 }
-
-			capital = 1014
-
-			c_rough_river = {
-				color={ 233 209 183 }
-				color2={ 220 220 0 }
-
-				b_hardinsburg_KY = {}
-				b_brandenburg_KY = {}
-				b_battletown_KY = {}
-				b_irvington_KY = {}
-				b_cloverpot_KY = {}
-				b_guston_KY = {}
-				b_ekron_KY = {}
-			}
-			c_owensboro = {
-				color={ 244 200 199 }
-				color2={ 220 220 0 }
-
-				b_owensboro_KY = {}
-				b_henderson_KY = {}
-				b_morganfield_KY = {}
-				b_sturgis_KY = {}
-				b_uniontown_KY = {}
-				b_spottsville_KY = {}
-				b_sebree_KY = {}
-			}
-			c_mammoth = {
-				color={ 251 181 151 }
-				color2={ 220 220 0 }
-				
-				holy_site = revelationist
-				holy_site = revelationist_reformed
-
-				b_bowling_green_KY = {
-					used_for_dynasty_names = no
-				}
-				b_mammoth_caves_KY = {}
-				b_scottsville_KY = {}
-				b_alvaton_KY = {}
-				b_halfway_KY = {}
-				b_franklin_KY = {}
-				b_russellville_KY = {}
-			}
-			c_wolf_creek = {
-				color={ 255 227 210 }
-				color2={ 220 220 0 }
-
-				b_somerset_KY = {}
-				b_albany_KY = {}
-				b_columbia_KY = {}
-				b_tompkinsville_KY = {}
-				b_burkesville_KY = {}
-				b_russell_springs_KY = {
-					used_for_dynasty_names = no
-				}
-				b_jamestown_KY = {}
-			}
-			c_monticello = {
-				color={ 255 227 210 }
-				color2={ 220 220 0 }
-
-				b_monticello_KTY = {}
-				b_stop_KTY = {}
-				b_steubenville_KTY = {}
-				b_frisby_KTY = {}
-				b_slat_KTY = {}
-				b_barrier_KTY = {}
-				b_susie_KTY = {}
-			}
-			c_pulaski = {
-				color={ 255 207 210 }
-				color2={ 220 220 0 }
-
-				b_somerset_KTY = {}
-				b_nancy_KTY = {}
-				b_ruth_KTY = {}
-				b_shopville_KTY = {}
-				b_albia_KTY = {}
-				b_faubush_KTY = {}
-				b_keno_KTY = {}
 			}
 			c_madison2 = {
 				color={ 255 247 210 }
@@ -466,41 +375,24 @@ e_north_mississippi = {
 				b_bighill_KTY = {}
 				b_cartersville_KTY = {}
 			}
-			c_mineral_mound ={
-				color={ 255 227 150 }
+		}
+		d_shawnee = {
+			color={ 200 60 120 }
+			color2={ 220 220 0 }
+
+			capital = 1014 
+			
+			c_owensboro = {
+				color={ 244 200 199 }
 				color2={ 220 220 0 }
 
-				b_marion_KY = {}
-				b_princeton_KY = {}
-				b_fredonia_KY = {}
-				b_eddyville_KY = {}
-				b_kuttawa_KY = {}
-				b_burna_KY = {}
-				b_salem_KY = {}
-			}
-			c_calloway = {
-				color={ 251 181 210 }
-				color2={ 220 220 0 }
-
-				b_murray_KTY = {}
-				b_coldwater_KTY = {}
-				b_flint_KTY = {}
-				b_dexter_KTY = {}
-				b_faxon_KTY = {}
-				b_shiloh_KTY = {}
-				b_hardin_KTY = {}
-			}
-			c_cadiz = {
-				color={ 221 181 210 }
-				color2={ 220 220 0 }
-
-				b_cadiz_KTY = {}
-				b_canton_KTY = {}
-				b_linton_KTY = {}
-				b_gracey_KTY = {}
-				b_cerulean_KTY = {}
-				b_lamasco_KTY = {}
-				b_herndon_KTY = {}
+				b_owensboro_KY = {}
+				b_henderson_KY = {}
+				b_morganfield_KY = {}
+				b_sturgis_KY = {}
+				b_uniontown_KY = {}
+				b_spottsville_KY = {}
+				b_sebree_KY = {}
 			}
 			c_morganfield = {
 				color={ 241 161 210 }
@@ -526,6 +418,123 @@ e_north_mississippi = {
 				b_beulah_KTY = {}
 				b_nebo_KTY = {}
 			}
+			c_cadiz = {
+				color={ 221 181 210 }
+				color2={ 220 220 0 }
+
+				b_cadiz_KTY = {}
+				b_canton_KTY = {}
+				b_linton_KTY = {}
+				b_gracey_KTY = {}
+				b_cerulean_KTY = {}
+				b_lamasco_KTY = {}
+				b_herndon_KTY = {}
+			}
+			c_mineral_mound ={
+				color={ 255 227 150 }
+				color2={ 220 220 0 }
+
+				b_marion_KY = {}
+				b_princeton_KY = {}
+				b_fredonia_KY = {}
+				b_eddyville_KY = {}
+				b_kuttawa_KY = {}
+				b_burna_KY = {}
+				b_salem_KY = {}
+			}
+		}
+		d_knobs = {
+			color={ 255 0 170 }
+			color2={ 220 220 0 }
+			
+			capital = 734 # Pulaski
+			
+			c_pulaski = {
+				color={ 255 207 210 }
+				color2={ 220 220 0 }
+
+				b_somerset_KTY = {}
+				b_nancy_KTY = {}
+				b_ruth_KTY = {}
+				b_shopville_KTY = {}
+				b_albia_KTY = {}
+				b_faubush_KTY = {}
+				b_keno_KTY = {}
+			}
+			c_wolf_creek = {
+				color={ 255 227 210 }
+				color2={ 220 220 0 }
+
+				b_somerset_KY = {}
+				b_albany_KY = {}
+				b_columbia_KY = {}
+				b_tompkinsville_KY = {}
+				b_burkesville_KY = {}
+				b_russell_springs_KY = {
+					used_for_dynasty_names = no
+				}
+				b_jamestown_KY = {}
+			}
+			c_hodgen = {
+				color = { 50 148 229 }
+				color2={ 220 220 20 }
+
+				b_hodgenville_KTY = {}
+				b_tonieville_KTY = {}
+				b_magnolia_KTY = {}
+				b_aliendale_KTY = {}
+				b_saloma_KTY = {}
+				b_finley_KTY = {}
+				b_calvary_KTY = {}
+			}
+		}
+		d_pennyrile = {
+			color={ 255 204 174 }
+			color2={ 220 220 0 }
+
+			capital = 1015 # Mammoth
+
+			c_rough_river = {
+				color={ 233 209 183 }
+				color2={ 220 220 0 }
+
+				b_hardinsburg_KY = {}
+				b_brandenburg_KY = {}
+				b_battletown_KY = {}
+				b_irvington_KY = {}
+				b_cloverpot_KY = {}
+				b_guston_KY = {}
+				b_ekron_KY = {}
+			}
+			c_mammoth = {
+				color={ 251 181 151 }
+				color2={ 220 220 0 }
+				
+				holy_site = revelationist
+				holy_site = revelationist_reformed
+
+				b_bowling_green_KY = {
+					used_for_dynasty_names = no
+				}
+				b_mammoth_caves_KY = {}
+				b_scottsville_KY = {}
+				b_alvaton_KY = {}
+				b_halfway_KY = {}
+				b_franklin_KY = {}
+				b_russellville_KY = {}
+			}
+			c_monticello = {
+				color={ 255 227 210 }
+				color2={ 220 220 0 }
+
+				b_monticello_KTY = {}
+				b_stop_KTY = {}
+				b_steubenville_KTY = {}
+				b_frisby_KTY = {}
+				b_slat_KTY = {}
+				b_barrier_KTY = {}
+				b_susie_KTY = {}
+			}
 			c_russelville = {
 				color={ 221 171 240 }
 				color2={ 220 220 0 }
@@ -538,6 +547,20 @@ e_north_mississippi = {
 				b_daysville_KTY = {}
 				b_olmstead_KTY = {}
 			}
+		}
+	}
+	k_obion = {
+		color = { 0 0 90 } # color later
+		color2 = { 220 220 0 }
+
+		capital = 1024 #Memphis
+
+		d_jackson = {
+			color={ 120 60 200 }
+			color2={ 220 220 0 }
+
+			capital = 1018 # The Purchase
+			
 			c_the_purchase = {
 				color={ 251 181 210 }
 				color2={ 220 220 0 }
@@ -549,6 +572,148 @@ e_north_mississippi = {
 				b_massac_KY = {}
 				b_bandana_KY = {}
 				b_barlow_KY = {}
+			}
+			c_calloway = {
+				color={ 251 181 210 }
+				color2={ 220 220 0 }
+
+				b_murray_KTY = {}
+				b_coldwater_KTY = {}
+				b_flint_KTY = {}
+				b_dexter_KTY = {}
+				b_faxon_KTY = {}
+				b_shiloh_KTY = {}
+				b_hardin_KTY = {}
+			}
+		}
+		d_west_tennessee = {
+			color={ 168 167 2 }
+			color2={ 220 220 0 }
+
+			culture = riverlander
+			title_prefix = "GRAND_DIVISION_OF"
+
+			capital = 1024
+
+			c_reelfoot = {
+				color={ 199 204 70 }
+				color2={ 220 220 0 }
+
+				b_ridgely_TN = {}
+				b_obion_TN = {}
+				b_union_city_TN = {
+					used_for_dynasty_names = no
+				}
+				b_martin_TN = {}
+				b_dresden_TN = {}
+				b_palmersville_TN = {}
+				b_newbern_TN = {}
+			}
+			c_somerville = {
+				color={ 199 224 70 }
+				color2={ 220 220 0 }
+
+				b_somerville_TEN = {}
+				b_oakland_TEN = {}
+				b_whiteville_TEN = {}
+				b_bolivar_TEN = {}
+				b_mason_TEN = {}
+				b_stanton_TEN = {}
+				b_brownsville_TEN = {}
+			}
+			c_selmer = {
+				color={ 179 204 70 }
+				color2={ 220 220 0 }
+
+				b_selmer_TEN = {}
+				b_woodville_TEN = {}
+				b_ramer_TEN = {}
+				b_guys_TEN = {}
+				b_finger_TEN = {}
+				b_michie_TEN = {}
+				b_pocahontas_TEN = {}
+			}
+			c_lexington = {
+				color={ 199 224 90 }
+				color2={ 220 220 0 }
+
+				b_lexington_TEN = {}
+				b_chesterfield_TEN = {}
+				b_reagan_TEN = {}
+				b_wildersville_TEN = {}
+				b_huron_TEN = {}
+				b_yuma_TEN = {}
+				b_clarksburg_TEN = {}
+			}
+			c_dresden = {
+				color={ 199 224 110 }
+				color2={ 220 220 0 }
+
+				b_dresden_TEN = {}
+				b_gleason_TEN = {}
+				b_sharon_TEN = {}
+				b_greenfield_TEN = {}
+				b_martin_TEN = {}
+				b_palmersville_TEN = {}
+				b_como_TEN = {}
+			}
+			c_paris = {
+				color={ 179 224 110 }
+				color2={ 220 220 0 }
+
+				b_paris_TEN = {}
+				b_mansfield_TEN = {}
+				b_springville_TEN = {}
+				b_buchanan_TEN = {}
+				b_puryear_TEN = {}
+				b_bruceton_TEN = {}
+				b_camden_TEN = {}
+			}
+			c_memphis = {
+				color={ 204 194 11 }
+				color2={ 220 220 0 }
+				
+				holy_site = revelationist
+				holy_site = revelationist_reformed
+
+				b_memphis_TN = {}
+				b_germantown_TN = {}
+				b_cordova_TN = {}
+				b_whitehaven_TN = {}
+				b_covington_TN = {}
+				b_atoka_TN = {}
+				b_eads_TN = {}
+			}
+			c_dyersburg = { # 3318
+				color={ 242 140 111 }
+				color2={ 255 255 255 }
+				
+				b_dyersburg_app = {
+				}
+				b_okeena_app = {
+				}
+				b_fowlkes_app = {
+				}
+				b_mccoy_app = {
+				}
+				b_roellen_app = {
+				}
+				b_newbern_app = {
+				}
+				b_palmer_app = {
+				}
+			}			
+			c_forked_deer = {
+				color={ 179 162 67 }
+				color2={ 220 220 0 }
+
+				b_jackson_TN = {}
+				b_henderson_TN = {}
+				b_lexington_TN = {}
+				b_wildersville_TN = {}
+				b_savannah_TN = {}
+				b_selmer_TN = {}
+				b_adamsville_TN = {}
 			}
 		}
 	}
@@ -736,136 +901,7 @@ e_north_mississippi = {
 				b_huntland_TN = {}
 			}
 		}
-		d_west_tennessee = {
-			color={ 168 167 2 }
-			color2={ 220 220 0 }
-
-			culture = riverlander
-			title_prefix = "GRAND_DIVISION_OF"
-
-			capital = 1024
-
-			c_reelfoot = {
-				color={ 199 204 70 }
-				color2={ 220 220 0 }
-
-				b_ridgely_TN = {}
-				b_obion_TN = {}
-				b_union_city_TN = {
-					used_for_dynasty_names = no
-				}
-				b_martin_TN = {}
-				b_dresden_TN = {}
-				b_palmersville_TN = {}
-				b_newbern_TN = {}
-			}
-			c_somerville = {
-				color={ 199 224 70 }
-				color2={ 220 220 0 }
-
-				b_somerville_TEN = {}
-				b_oakland_TEN = {}
-				b_whiteville_TEN = {}
-				b_bolivar_TEN = {}
-				b_mason_TEN = {}
-				b_stanton_TEN = {}
-				b_brownsville_TEN = {}
-			}
-			c_selmer = {
-				color={ 179 204 70 }
-				color2={ 220 220 0 }
-
-				b_selmer_TEN = {}
-				b_woodville_TEN = {}
-				b_ramer_TEN = {}
-				b_guys_TEN = {}
-				b_finger_TEN = {}
-				b_michie_TEN = {}
-				b_pocahontas_TEN = {}
-			}
-			c_lexington = {
-				color={ 199 224 90 }
-				color2={ 220 220 0 }
-
-				b_lexington_TEN = {}
-				b_chesterfield_TEN = {}
-				b_reagan_TEN = {}
-				b_wildersville_TEN = {}
-				b_huron_TEN = {}
-				b_yuma_TEN = {}
-				b_clarksburg_TEN = {}
-			}
-			c_dresden = {
-				color={ 199 224 110 }
-				color2={ 220 220 0 }
-
-				b_dresden_TEN = {}
-				b_gleason_TEN = {}
-				b_sharon_TEN = {}
-				b_greenfield_TEN = {}
-				b_martin_TEN = {}
-				b_palmersville_TEN = {}
-				b_como_TEN = {}
-			}
-			c_paris = {
-				color={ 179 224 110 }
-				color2={ 220 220 0 }
-
-				b_paris_TEN = {}
-				b_mansfield_TEN = {}
-				b_springville_TEN = {}
-				b_buchanan_TEN = {}
-				b_puryear_TEN = {}
-				b_bruceton_TEN = {}
-				b_camden_TEN = {}
-			}
-			c_memphis = {
-				color={ 204 194 11 }
-				color2={ 220 220 0 }
-				
-				holy_site = revelationist
-				holy_site = revelationist_reformed
-
-				b_memphis_TN = {}
-				b_germantown_TN = {}
-				b_cordova_TN = {}
-				b_whitehaven_TN = {}
-				b_covington_TN = {}
-				b_atoka_TN = {}
-				b_eads_TN = {}
-			}
-			c_dyersburg = { # 3318
-				color={ 242 140 111 }
-				color2={ 255 255 255 }
-				
-				b_dyersburg_app = {
-				}
-				b_okeena_app = {
-				}
-				b_fowlkes_app = {
-				}
-				b_mccoy_app = {
-				}
-				b_roellen_app = {
-				}
-				b_newbern_app = {
-				}
-				b_palmer_app = {
-				}
-			}			
-			c_forked_deer = {
-				color={ 179 162 67 }
-				color2={ 220 220 0 }
-
-				b_jackson_TN = {}
-				b_henderson_TN = {}
-				b_lexington_TN = {}
-				b_wildersville_TN = {}
-				b_savannah_TN = {}
-				b_selmer_TN = {}
-				b_adamsville_TN = {}
-			}
-		}
+		
     }
 
 	k_st_louis = {
