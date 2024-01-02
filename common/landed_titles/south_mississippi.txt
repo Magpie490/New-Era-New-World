@@ -1054,10 +1054,10 @@ e_south_mississippi = {
 		constitutional = 5
 		revelationist_reformed = 20
 
-		quebecois = "Louisiane"
-		cajun = "Louisiane"
-		creole = "Lwizyàn"
-		haitian = "Louisiane"
+		cajun = "L'Acadiane"
+		creole = "L'Acadiane"
+		quebecois = "L'Acadiane"
+		haitian = "L'Acadiane"
 
 		capital = 1124 # New Orleans
 		
@@ -1503,6 +1503,30 @@ e_south_mississippi = {
 				b_geismar_LA = {}
 				b_central_LA = {}
 				b_prairieville_LA = {}
+			}
+		}
+	}
+	k_louisiana = {
+		color = { 23 45 128 }
+		color2= { 255 255 255 }
+
+		quebecois = "Louisiane"
+		cajun = "Louisiane"
+		creole = "Lwizyàn"
+		haitian = "Louisiane"
+
+		capital = 1252 # Lafayette
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_louisiana = {
+						is_titular = yes
+					}
+				}
+				k_louisiana = {
+					is_titular = no
+				}
 			}
 		}
 	}
