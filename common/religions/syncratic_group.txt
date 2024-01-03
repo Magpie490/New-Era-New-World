@@ -133,6 +133,55 @@ syncratic_group = {
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 
 	}
+	cowboy_buddhist = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 44
+        heresy_icon = 44
+
+		color = { 84 0 255 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_SKY_FATHER
+		
+		god_names = {
+			GOD_THE_SKY_FATHER GOD_THE_HONOURABLE_DEAD GOD_THE_ANCIENT_MASTERS GOD_THE_ENLIGHTENED_MONKS GOD_THE_PROUD_SOLDIERS GOD_THE_BUSHIDO_CODES GOD_THE_BOUNTY_OF_NATURE
+		}
+		
+		evil_god_names = {
+			GOD_THE_TREACHEROUS_DECEIVERS GOD_THE_SPIRIT_SICKENERS GOD_THE_IMPURITIES GOD_PAI_MEI GOD_THE_CORRUPT_GENERALS GOD_THE_SHOGUN_OF_SHADOWS GOD_THE_WENDIGO
+		}
+		
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 0.9
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		allow_looting = yes
+		max_consorts = 3
+		
+		unit_modifier = {
+			land_morale = 0.3
+
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_ART_OF_WAR
+		priest_title = FATHER
+		piety_name = KARMA
+
+	}
 	pusaka = {
 		graphical_culture = muslimgfx
 
