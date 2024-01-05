@@ -5,7 +5,7 @@ e_ontario = {
 	capital = 1271 # Toronto
 		
 	k_ontario = {
-		color = { 187 137 10 }
+		color = { 255 120 30 }
 		color2 = { 210 190 0 }
 
 		# Crusade target weight
@@ -28,31 +28,15 @@ e_ontario = {
 
 				b_windsor_ON = {}
 				b_leamington_ON = {}
-				b_chatham_kent_ON = {}
 				b_lasalle_ON = {}
 				b_ruthven_ON = {}
 				b_lakeshore_ON = {}
-				b_tilbury_ON = {}
-			}
-			c_lambton = {
-				color = { 67 71 39 }
-
-				b_sarnia_ON = {}
-				b_wallaceburg_ON = {}
-				b_clearwater_ON = {}
-				b_lambton_shores_ON = { 
-					used_for_dynasty_names = no
-				}
-				b_petrolia_ON = {}
-				b_oil_springs_ON = { 
-					used_for_dynasty_names = no
-				}
-				b_corunna_ON = {}
+				b_tecumseh_ON = {}
+				b_amherstburg_ON = {}
 			}
 			c_elgin = {
 				color = { 104 115 53 }
 
-				b_london_ON = {}
 				b_st_thomas_ON = {}
 				b_port_stanley_ON = {
 					used_for_dynasty_names = no
@@ -63,6 +47,7 @@ e_ontario = {
 				}
 				b_dorchester_ON = {}
 				b_ilderton_ON = {}
+				b_dutton_ON = {}
 			}
 			c_brant = {
 				color = { 150 165 78 }
@@ -77,24 +62,24 @@ e_ontario = {
 				}
 				b_delhi_ON = {}
 			}
+			c_chatham = {
+				color = { 150 165 78 }
+
+				b_chatham_kent_ON = {}
+				b_tilbury_ON = {}
+				b_camden_ON = {}
+				b_dover_ON = {}
+				b_harwich_ON = {}
+				b_orford_ON = {}
+				b_relaigh_ON = {}
+			}
 		}
 		d_huronia = {
 			color = { 79 134 189 }
 			color2= { 255 255 20 }
 
-			capital = 1277 #Wellington
+			capital = 1278 # Simcoe
 			
-			c_huron = {
-				color = { 112 146 190 }
-
-				b_goderich_ON = {}
-				b_bluewater_ON = {}
-				b_seaforth_ON = {}
-				b_kincardine_ON = {}
-				b_clinton_ON = {}
-				b_bayfield_ON = {}
-				b_zurich_ON = {}
-			}
 			c_simcoe = {
 				color = { 63 115 167 }
 
@@ -109,22 +94,6 @@ e_ontario = {
 					used_for_dynasty_names = no
 				}
 				b_innisfil_ON = {}
-			}
-			c_wellington = {
-				color = { 95 145 194 }
-
-				b_kitchener_ON = {
-					deitsch = "Berlin"
-					rostmann = "Berlin"
-					dellsman = "Berlin"
-					northlander = "Berlin"
-				}
-				b_guelph_ON = {}
-				b_cambridge_ON = {}
-				b_waterloo_ON = {}
-				b_hespeler_ON = {}
-				b_preston_ON = {}
-				b_petersburg_ON = {}
 			}
 			c_bruce = {
 				color = { 62 100 132 }
@@ -141,12 +110,142 @@ e_ontario = {
 				}
 				b_tara_ON = {}
 			}
+			c_grey = {
+				color = { 62 100 132 }
+
+				b_owen_sound_ON_east = {}
+				b_durham_ON = {}
+				b_meaford_ON = {}
+				b_markdale_ON = {}
+				b_hanover_ON = {}
+				b_dundalk_ON = {}
+				b_thornburry_ON = {}
+			}
+			c_dufferin = {
+				color = { 62 100 132 }
+
+				b_dufferin_ON = {}
+				b_amaranth_ON = {}
+				b_garafraxa_ON = {}
+				b_luther_ON = {}
+				b_melancthon_ON = {}
+				b_mono_ON = {}
+				b_mulmur_ON = {}
+			}
+		}
+		d_sexony = {
+			color = { 237 162 3 }
+
+			capital = 787 # Middlesex
+
+			c_huron = {
+				color = { 112 146 190 }
+
+				b_goderich_ON = {}
+				b_bluewater_ON = {}
+				b_seaforth_ON = {}
+				b_kincardine_ON = {}
+				b_clinton_ON = {}
+				b_bayfield_ON = {}
+				b_zurich_ON = {}
+			}
+			c_lambton = {
+				color = { 67 71 39 }
+
+				b_sarnia_ON = {}
+				b_wallaceburg_ON = {}
+				b_clearwater_ON = {}
+				b_lambton_shores_ON = { 
+					used_for_dynasty_names = no
+				}
+				b_petrolia_ON = {}
+				b_oil_springs_ON = { 
+					used_for_dynasty_names = no
+				}
+				b_corunna_ON = {}
+			}
+			c_nossex = {
+				color = { 67 71 39 }
+
+				b_listowel_ON = {}
+				b_mitchell_ON = {}
+				b_milverton_ON = {}
+				b_stratford_ON = {}
+				b_saint_marys_ON = {}
+				b_ellice_ON = {}
+				b_fullarton_ON = {}
+			}
+			c_middlesex_ON = {
+				color = { 67 71 39 }
+
+				b_london_ON = {}
+				b_thames_ON = {}
+				b_newbury_ON = {}
+				b_strathroy_ON = {}
+				b_caradoc_ON = {}
+				b_adelaide_ON = {}
+				b_biddulph_ON = {}
+			}
+		}
+		d_toronto = {
+			color = { 237 162 3 }
+
+			capital = 1271 #Toronto
+
+			c_toronto = {
+				color = { 237 162 3 }
+				holy_site = confederated
+				holy_site = high_church
+				holy_site = thelemic
+				holy_site = thelemic_reformed
+
+				b_toronto_ON = {}
+				b_york_ON = {}
+				b_kensington_ON = {}
+				b_scarborough_ON = {}
+				b_etobicoke_ON = {}
+				b_woodbridge_ON = {}
+				b_downsview_ON = {}
+			}
+			c_oshawa = {
+				color = { 240 200 66 }
+
+				b_oshawa_ON = {}
+				b_pickering_ON = {}
+				b_ajax_ON = {}
+				b_whitby_ON = {}
+				b_clarington_ON = {}
+				b_bowmanville_ON = {}
+				b_courtice_ON = {}
+			}
+			c_york = {
+				color = { 240 200 66 }
+
+				b_vaughan_ON = {}
+				b_richmond_hill_ON = {}
+				b_markham_ON = {}
+				b_aurora_ON = {}
+				b_stouffville_ON = {}
+				b_gwillimbury_ON = {}
+				b_georgiana_ON = {}
+			}
+			c_peel = {
+				color = { 240 200 66 }
+
+				b_mississauga_ON = {}
+				b_brampton_ON = {}
+				b_southfields_ON = {}
+				b_caledon_ON = {}
+				b_bolton_ON = {}
+				b_erin_mills_ON = {}
+				b_meadowvale_ON = {}
+			}
 		}
 		d_golden_horseshoe = {
 			color = { 252 189 60 }
 
-			capital = 1271 #Toronto
-			
+			capital = 792 # Halton
+
 			c_welland = {
 				color = { 252 174 12 }
 
@@ -171,7 +270,6 @@ e_ontario = {
 				culture = lacustrine
 
 				b_hamilton_ON = {}
-				b_burlington_ON = {}
 				b_dundas_ON = {}
 				b_mt_hope_ON = { 
 					used_for_dynasty_names = no
@@ -179,32 +277,45 @@ e_ontario = {
 				b_ancaster_ON = {}
 				b_waterdown_ON = {}
 				b_millgrove_ON = {}
+				b_gianbrook_ON = {}
 			}
-			c_toronto = {
-				color = { 237 162 3 }
-				holy_site = confederated
-				holy_site = high_church
-				holy_site = thelemic
-				holy_site = thelemic_reformed
-
-				b_toronto_ON = {}
-				b_york_ON = {}
-				b_mississauga_ON = {}
-				b_oakville_ON = {}
-				b_scarborough_ON = {}
-				b_etobicoke_ON = {}
-				b_woodbridge_ON = {}
-			}
-			c_oshawa = {
+			c_halton = {
 				color = { 240 200 66 }
 
-				b_oshawa_ON = {}
-				b_pickering_ON = {}
-				b_ajax_ON = {}
-				b_whitby_ON = {}
-				b_clarington_ON = {}
-				b_bowmanville_ON = {}
-				b_courtice_ON = {}
+				b_oakville_ON = {}
+				b_burlington_ON = {}
+				b_milton_ON = {}
+				b_halton_ON = {}
+				b_acton_ON = {}
+				b_georgetown_ON = {}
+				b_bronte_ON = {}
+			}
+			c_haldimand = {
+				color = { 240 200 66 }
+
+				b_canborough_ON = {}
+				b_cayuga_ON = {}
+				b_dunn_ON = {}
+				b_moulton_ON = {}
+				b_rainham_ON = {}
+				b_seneca_ON = {}
+				b_walpole_ON = {}
+			}
+			c_wellington = {
+				color = { 95 145 194 }
+
+				b_kitchener_ON = {
+					deitsch = "Berlin"
+					rostmann = "Berlin"
+					dellsman = "Berlin"
+					northlander = "Berlin"
+				}
+				b_guelph_ON = {}
+				b_cambridge_ON = {}
+				b_waterloo_ON = {}
+				b_hespeler_ON = {}
+				b_preston_ON = {}
+				b_petersburg_ON = {}
 			}
 		}
 	}
@@ -373,13 +484,13 @@ e_ontario = {
 				color = { 146 190 52 }
 				color2= { 255 255 255 }
 
-				b_owen_sound_ON_east = {}
-				b_durham_ON = {}
-				b_meaford_ON = {}
-				b_markdale_ON = {}
-				b_hanover_ON = {}
-				b_dundalk_ON = {}
-				b_thornburry_ON = {}
+				b_bexley_ON = {}
+				b_carden_ON = {}
+				b_manverts_ON = {}
+				b_ops_ON = {}
+				b_somerville_ON = {}
+				b_verulam_ON = {}
+				b_emily_ON = {}
 			}
 			c_ganaraska = {
 				color = { 154 223 145 }
