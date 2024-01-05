@@ -88,15 +88,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -212,15 +203,6 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
-			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
 			}
 			holder_scope = {
 				is_nomadic = no
@@ -338,15 +320,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}	
 			holder_scope = {
 				OR = {
 					has_landed_title = d_athos
@@ -513,15 +486,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}	
 			holder_scope = {				
 				OR = {
 					independent = yes
@@ -704,15 +668,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}
 			holder_scope = {					
 				NOR = { 
 						religion = jacobinist
@@ -892,15 +847,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1014,15 +960,6 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
-			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
 			}
 			OR = {
 				has_title_flag = alternate_hre
@@ -1194,15 +1131,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}	
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1355,15 +1283,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}	
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1516,15 +1435,6 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
-			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
 			}
 			holder_scope = {
 				OR = {
@@ -1702,15 +1612,6 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}
 			holder_scope = {
 				OR = {
 					AND = {
@@ -1773,93 +1674,7 @@ succession_laws = {
 		#child_opinion = 30
 		#dynasty_opinion = 10
 		potential = {
-			NAND = { 
-				has_law = succ_byzantine_elective 
-				should_have_byz_elective_trigger = yes
-			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
-			}	
-			holder_scope = {
-				OR = {
-					AND = {
-						religion_group = muslim
-						NOR = {
-							religion = wahhabi
-							religion = deobandi
-							religion = mesopotamian
-						}
-						is_theocracy = no
-					}
-					title = e_sufi
-					AND = {
-						has_religion_feature = religion_patriarchal
-						is_theocracy = no
-					}
-					AND = {
-						has_religion_feature = religion_matriarchal
-						is_theocracy = no
-					}
-					AND = {
-						religion = ahlehaqq
-						is_theocracy = no
-					}
-				}
-				is_republic = no					
-				is_merchant_republic = no
-				is_nomadic = no
-				NAND = {
-					OR = {
-						religion = bahai
-						religion = ibadi
-					}
-					controls_religion = yes
-				}
-			}
-			OR = {
-				holder_scope = { # Viceroyalties can always have turkish succession if muslim
-					any_demesne_title = {
-						is_vice_royalty = yes
-					}
-				}
-				AND = {
-					OR = {
-						is_landless_type_title = no
-						is_tribal_type_title = yes
-						temporary = yes
-					}
-					holder_scope = {
-						OR = {
-							independent = yes
-							NOT = {
-								any_liege = {
-									holy_order = yes
-								}
-							}
-						}
-					}
-					is_primary_type_title = no
-				}
-			}
-			NAND = { 
-				has_law = succession_voting_power_1
-				OR = { 
-					has_law = succ_feudal_elective 
-					has_law = succ_hre_elective
-				}
-			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
-			NOT = { holder_scope = { government = roman_imperial_government } }
-			NOT = { holder_scope = { government = confucian_bureaucracy } }
-			NOT = { holder_scope = { government = confederation_government } }
-			NOT = { holder_scope = { government = calvinist_government } }
-			NOT = { holder_scope = { government = order_government } }
+			always = no
 		}
 		effect = {
 			succession = turkish_succession
@@ -2078,15 +1893,6 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
-			}
-			NOT = {
-				OR = {
-					religion = constitutional
-					top_liege = {
-						religion = constitutional
-					}
-					should_have_byz_elective_trigger = yes
-				}
 			}
 			holder_scope = {
 				OR = {
