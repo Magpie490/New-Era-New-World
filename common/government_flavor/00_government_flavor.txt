@@ -2621,25 +2621,9 @@ government_flavor = {
 	graphics = GFX_evt_victory_arch_byzantine
 	priority = 3
 	trigger = {
+		government = roman_imperial_government
 		has_law = succ_byzantine_elective
 		is_landed = yes
-		OR = {
-			has_landed_title = e_columbia
-		}
-	}	
-}
-government_flavor = {
-	name = gov_roman_imperial_government_decayed
-	graphics = GFX_evt_rome_falls
-	priority = 3
-	trigger = {
-		has_law = succ_byzantine_elective
-		NOT = {
-			is_landed = yes
-			OR = {
-			has_landed_title = e_columbia
-			}
-		}	
 	}	
 }
 

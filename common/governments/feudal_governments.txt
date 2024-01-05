@@ -2000,6 +2000,12 @@ feudal_governments = {
 		title_prefix = "imperial_"
 		potential = {
 			OR = { 
+				religion = constitutional
+				AND = {
+					top_liege = {
+						religion = constitutional
+					}
+				}
 				AND = {
 					is_save_game = no
 					has_game_started = no
@@ -2062,26 +2068,6 @@ feudal_governments = {
 							}
 						}
 						has_law = succ_byzantine_elective
-					}
-				}
-				OR = {
-					AND = {
-						top_liege = {
-							government = roman_imperial_government
-						}
-						NOT = {
-							tier = BARON
-						}
-						religion = constitutional
-					}
-					AND = {
-						liege = {
-							government = roman_imperial_government
-						}
-						NOT = {
-							tier = BARON
-						}
-						religion = constitutional
 					}
 				}
 			}

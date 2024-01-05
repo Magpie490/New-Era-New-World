@@ -3017,6 +3017,99 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	}
 }
 character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
+	id = cleanup.88
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = roman_imperial_government
+		any_demesne_title = {
+			NOT = {
+				has_law = succ_byzantine_elective
+				tier = BARON
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOT = {
+					has_law = succ_byzantine_elective
+					tier = BARON
+					holding_type = temple
+				}
+			}
+			add_law = {
+				law = succ_byzantine_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
+	id = cleanup.881
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = roman_imperial_government
+		any_demesne_title = {
+			NOT = {
+				has_law = succ_open_elective
+			}
+			tier = BARON
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOT = {
+					has_law = succ_open_elective
+				}
+				tier = BARON
+			}
+			add_law = {
+				law = succ_open_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
+	id = cleanup.882
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = constitutional
+		government = theocracy_government
+		any_demesne_title = {
+			NOT = {
+				has_law = succ_open_elective
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOT = {
+					has_law = succ_open_elective
+				}
+			}
+			add_law = {
+				law = succ_open_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
 	id = cleanup.8
 	hide_window = yes
 	

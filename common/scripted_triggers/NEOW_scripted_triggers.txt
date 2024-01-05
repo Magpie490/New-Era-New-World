@@ -520,27 +520,12 @@ should_handle_american_invasion = {
 	}
 }
 should_have_byz_elective_trigger = {
-	OR = { 
-		title = e_byzantium
-		title = e_roman_empire
-		title = e_britannia
-		title = e_transnistria
-		title = e_ruthenia
-		title = e_marblists
-		title = e_bengal
 		AND = {
-			title = k_britannia
+			title = e_columbia
 			holder_scope = {
-				has_landed_title = e_britannia
+				has_landed_title = e_columbia
 			}
 		}
-		AND = {
-			OR = {
-				title = e_great_russia
-				title = d_petrist
-			}
-		}
-	}
 }
 #Madame desire triggers, used by the AI
 

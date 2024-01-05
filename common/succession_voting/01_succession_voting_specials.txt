@@ -3847,6 +3847,10 @@ byzantine_elective = {
 			vassal_of = FROMFROM 
 			has_minor_title = title_commander
 		}
+		additive_modifier = { #And finally the generals.
+			value = 5
+			vassal_of = FROMFROM 
+		}
 	}
 	elector_vote_strength = { 
 		days = 5 # 1 elector = 5 votes.
@@ -5542,7 +5546,7 @@ byzantine_elective = {
 
 		#Faithism
 		additive_modifier = { #Infidel
-			value = -100
+			value = -250
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_dogmatic }
@@ -5555,7 +5559,7 @@ byzantine_elective = {
 			}
 		}
 		additive_modifier = { #Heathen
-			value = -150
+			value = -250
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_dogmatic }
@@ -5572,7 +5576,7 @@ byzantine_elective = {
 			}
 		}
 		additive_modifier = { #Heretic
-			value = -100
+			value = -250
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_dogmatic }
@@ -5581,7 +5585,7 @@ byzantine_elective = {
 			FROM = { is_heresy_of = ROOT }
 		}
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
-			value = -100
+			value = -250
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
 			has_religion_feature = religion_dogmatic
 			FROM = { NOT = { religion = ROOT } }
