@@ -103,6 +103,11 @@ defender_pledge_crusade_trigger = {
 					is_within_diplo_range = ROOT
 				}
 			}
+			columbian = {
+				crusade_target_char = {
+					is_within_diplo_range = ROOT
+				}
+			}
 			fraticelli = {
 				crusade_target_char = {
 					is_within_diplo_range = ROOT
@@ -144,6 +149,13 @@ defender_pledge_crusade_trigger = {
 	custom_tooltip = {
 		text = defense_pledge_crusade_target_TT
 		catholic = {
+			NOT = {
+				crusade_target_char = {
+					character = PREVPREV
+				}
+			}
+		}
+		columbian = {
 			NOT = {
 				crusade_target_char = {
 					character = PREVPREV
@@ -222,6 +234,7 @@ check_if_crusader_trigger = {
 			ROOT = {
 				OR = {
 					religion = catholic
+					religion = columbian
 					religion = fraticelli
 					religion = cadaverist
 					religion = calvinist

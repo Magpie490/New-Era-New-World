@@ -762,6 +762,16 @@ character_event = {
 			}
 		}
 		mult_modifier = {
+			factor = 1.25
+			has_job_action = action_inquisition
+			religion = insular
+			NOT = {
+				insular = {
+					religion_authority = 0.6
+				}
+			}
+		}
+		mult_modifier = {
 			factor = 1.5
 			has_job_action = action_inquisition
 			religion = alawite
