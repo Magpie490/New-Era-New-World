@@ -223,6 +223,8 @@ decisions = {
 				religion = bon_reformed
 				religion = celtic_pagan_reformed
 				religion = celtic_pagan
+				religion = gator_pagan_reformed
+				religion = gator_pagan
 				religion = folklorist_reformed
 				religion = folklorist
 				religion = starist_pagan_reformed
@@ -352,6 +354,23 @@ decisions = {
 										OR = {
 											religion = celtic_pagan_reformed
 											religion = celtic_pagan
+										}
+									}
+								}
+							}
+							#Defender is celtic pagan but attacker is not
+							AND = {
+								ROOT = {
+									OR = {
+										religion = gator_pagan_reformed
+										religion = gator_pagan
+									}
+								}
+								attacker = {
+									NOT = {
+										OR = {
+											religion = gator_pagan_reformed
+											religion = gator_pagan
 										}
 									}
 								}

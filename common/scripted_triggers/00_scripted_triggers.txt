@@ -863,6 +863,10 @@ has_crusade_trait_trigger = {
 		trait = celtic_pagan_crusader
 	}
 	trigger_else_if = {
+		limit = { religion_openly_gator_pagan_or_reformed_trigger = yes }
+		trait = gator_pagan_crusader
+	}
+	trigger_else_if = {
 		limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 		trait = crusader_inuit
 	}
