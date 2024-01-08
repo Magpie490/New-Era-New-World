@@ -1178,6 +1178,7 @@ targetted_decisions = {
 				religion = mattaism
 				religion = memorialist
 				religion = constitutional
+				religion = community_of_christ
 				any_owned_bloodline = {
 					has_bloodline_flag = bloodline_endearing 
 					bloodline_is_active_for = PREV
@@ -1245,6 +1246,7 @@ targetted_decisions = {
 					bloodline_is_active_for = PREV
 				}
 				religion = donyipolo
+				religion = mainline
 				religion = mattaism
 				religion = ho_cult
 				religion = girondist
@@ -1254,10 +1256,7 @@ targetted_decisions = {
 		allow = {
 			prestige = 500
 			piety = 250
-			conditional_tooltip = {
-				trigger = { religion = girondist }
-				trait = just_ruler
-			}
+			trait = just
 			custom_tooltip = {
 				text = tooltip_dismantle_factions_cooldown
 				NOT = { has_character_modifier = dismantle_factions_cooldown }
