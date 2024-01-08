@@ -2071,6 +2071,11 @@ feudal_governments = {
 					}
 				}
 			}
+			NOT = {
+				primary_title = {
+					is_vice_royalty = yes
+				}
+			}
 			is_patrician = no
 		}
 		
@@ -2594,6 +2599,9 @@ feudal_governments = {
 			HOSPITAL
 			TRADE_POST
 		}
+		allowed_holdings_culture_and_religion = {
+			CITY
+		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
 		}
@@ -2680,6 +2688,10 @@ feudal_governments = {
 
 		can_build_tribal = no
 		
+		character_modifier = {
+			demesne_size = 4
+		}
+		vassal_limit = -12
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
 		}

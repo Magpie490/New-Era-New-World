@@ -6406,7 +6406,10 @@ title_decisions = {
 		
 		from_potential = {
 			is_ruler = yes
-			religion = mattaism
+			OR = {
+				religion = mattaism
+				religion = community_of_christ
+			}
 			NOT = {
 				has_character_modifier = hidden_timer_modif
 			}
@@ -6417,6 +6420,7 @@ title_decisions = {
 			location = {
 				OR = {
 					religion_group = christian
+					religion_group = mormonic
 					religion_group = muslim
 					religion_group = jewish_group
 					christian_syncretic_religion = yes
@@ -6435,6 +6439,7 @@ title_decisions = {
 			location = {
 				OR = {
 					religion_group = christian
+					religion_group = mormonic
 					religion_group = muslim
 					religion_group = jewish_group
 					christian_syncretic_religion = yes
