@@ -3026,7 +3026,10 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 		government = roman_imperial_government
 		any_demesne_title = {
 			NOT = {
-				has_law = succ_byzantine_elective
+				OR = {
+					has_law = succ_byzantine_elective
+					has_law = succ_appointment
+				}
 				tier = BARON
 			}
 		}
@@ -3035,7 +3038,10 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 		any_demesne_title = {
 			limit = {
 				NOT = {
-					has_law = succ_byzantine_elective
+					OR = {
+						has_law = succ_byzantine_elective
+						has_law = succ_appointment
+					}
 					tier = BARON
 					holding_type = temple
 				}
@@ -3057,7 +3063,7 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	trigger = {
 		government = roman_imperial_government
 		any_demesne_title = {
-			NOT = {
+			NOR = {
 				has_law = succ_open_elective
 			}
 			tier = BARON
@@ -3066,7 +3072,7 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	immediate = {
 		any_demesne_title = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_law = succ_open_elective
 				}
 				tier = BARON
