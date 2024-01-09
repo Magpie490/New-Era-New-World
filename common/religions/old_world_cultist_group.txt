@@ -44,6 +44,49 @@ old_world_cultist_group = {
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		
 	}
+	fidelista = {
+		graphical_culture = muslimgfx
+		secondary_event_pictures = stalinist
+
+		icon = 103
+		heresy_icon = 103
+		
+		color = { 220 0 0 }
+
+		crusade_name = GREAT_PATRIOTIC_WAR
+		
+		scripture_name = THE_BOOK_OF_BAYAMO
+		
+		high_god_name = GOD_FIDEL
+		
+		piety_name = LOYALTY
+		
+		priest_title = POP
+		
+		interface_skin = { OWC_interface pagan_interface }
+		
+		god_names = {
+			GOD_FIDEL GOD_CHE GOD_MARTI GOD_CIENFUEGOS GOD_LOS_BARBUDOS
+		}
+		
+		evil_god_names = {
+			GOD_OLOSI GOD_CIA_BAD GOD_BATISTA GOD_LOS_YANQUIS
+		}
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+		aggression = 1
+		allow_rivermovement = yes
+		allow_looting = yes
+		priests_can_marry = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		max_consorts = 3
+		priests_can_inherit = yes
+		
+		character_modifier = {
+			santeria_opinion = 10
+		}
+	}	
 	rangerite = {
 		graphical_culture = muslimgfx
 
@@ -98,6 +141,9 @@ old_world_cultist_group = {
 			GOD_WASHINGTON GOD_ARCH_TRAITOR GOD_MORDRED GOD_MORGAN_LEFAY GOD_LANCELOT
 		}
 		
+		character_modifier = {
+			constitutional_opinion = -20
+		}
 		aggression = 1.1
 		allow_rivermovement = yes
 		allow_viking_invasion = yes
@@ -1140,6 +1186,7 @@ old_world_cultist_group = {
 		
 		character_modifier={
 			religion_flex = -0.9
+			loyalist_opinion = -20
 		}
 		aggression = 1.0
 		allow_rivermovement = yes
