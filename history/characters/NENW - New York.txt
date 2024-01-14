@@ -1018,6 +1018,8 @@
 	trait = envious
 	trait = ambitious
 	trait = sympathy_pagans
+	trait = metal_type
+	father = 800086
 	2300.1.12 = {
 		birth = yes
 		add_claim=k_adirondack 
@@ -1043,6 +1045,7 @@
 	trait = charitable
 	trait = temperate
 	trait = content
+	trait = earth_type
 	2286.6.23 = {
 		birth = yes
 	}
@@ -1062,6 +1065,8 @@
 	trait = temperate
 	trait = kind
 	trait = diligent
+	trait = wood_type
+	father = 800076
 	2279.7.8 = {
 		birth = yes
 	}
@@ -1129,6 +1134,7 @@
 	trait = ambitious
 	trait = paranoid
 	trait = trickster
+	trait = fire_type
 	2283.12.1 = {
 		birth = yes
 		effect = {
@@ -1290,12 +1296,236 @@
 		death = yes
 	}
 }
-250023 = {
-	name = "Nissim"
-	dynasty = 5000280
-	religion = hasidic
-	culture = arhavi
-	2292.4.16 = {
+800076 = { #Usurper King of Gaoshan, 1st King of the Wang
+	name = "Jack"
+	dynasty = 5000241
+	religion = mahayana
+	culture = ny_asian
+	trait = skilled_tactician
+	trait = strategist
+	trait = diligent
+	trait = wroth
+	trait = ambitious
+	trait = erudite
+	trait = experimenter
+	2248.9.8 = {
+		birth = yes
+		effect = {
+			give_nickname = nick_the_usurper
+		}
+	}
+	2301.1.1 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800077 = {
+	name = "Bruce" #Weak ruler of Gaoshan, last of the Liu-Sun Kings
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = naive_appeaser
+	trait = infirm
+	trait = craven
+	trait = content
+	father = 800078
+	2198.6.23 = {
+		birth = yes
+		effect = {
+			give_nickname = nick_the_old
+		}
+	}
+	2281.5.4 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800078 = {
+	name = "Calvin" #Mad and Zealous ruler of Gaoshan who was a brilliant strategist, conquered large amount of land before being stopped by a coalition of Columbians, Natives and Amish.
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = brilliant_strategist
+	trait = lunatic	
+	trait = eccentric
+	trait = robust
+	trait = proud
+	trait = ambitious
+	trait = zealous
+	father = 800081
+	2156.7.22 = {
+		birth = yes
+	}
+	2215.4.14 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800079 = {
+	name = "Justin" #Middle Child who only gained the throne thanks to his older brother's early death.
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = flamboyant_schemer
+	trait = groomed	
+	trait = seducer
+	father = 800081
+	2146.9.12 = {
+		birth = yes
+	}
+	2191.3.20 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800080 = {
+	name = "Bruce"
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = brilliant_strategist
+	father = 800081
+	2143.9.3 = {
+		birth = yes
+	}
+	2174.7.10 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800081 = {
+	name = "Bruce" #Lead Gaoshan during the Great Siege of Montreal, off'd himself due to depression later in life
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = brilliant_strategist
+	trait = strategist
+	trait = wroth
+	trait = ambitious
+	trait = zealous
+	trait = depressed
+	trait = one_handed
+	trait = siege_leader
+	father = 800082
+	2123.10.5 = {
+		birth = yes
+	}
+	2181.5.12 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800082 = {
+	name = "Bruce" #Spent his reign rebuilding Gaoshan, died due to illness
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = charismatic_negotiator
+	trait = architect
+	trait = has_tuberculosis
+	father = 800084
+	2098.4.3 = {
+		birth = yes
+	}
+	2161.9.15 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800083 = {
+	name = "Samuel" #King of Gaoshan during the 1st half of the River Wars
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = skilled_tactician
+	trait = genius
+	trait = scholar
+	trait = severely_injured
+	father = 800084
+	2095.2.23 = {
+		birth = yes
+	}
+	2133.2.7 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800084 = {
+	name = "Calvin" #Created Gaoshan's Neo-Feudal System and Trade Network between the different realms of the era
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = midas_touched
+	trait = quick
+	trait = scholar
+	trait = administrator
+	father = 800085
+	2062.11.2 = {
+		birth = yes
+	}
+	2101.12.25 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800085 = {
+	name = "Bruce" #Created Gaoshan
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = brilliant_strategist
+	trait = one_eyed
+	trait = inspiring_leader
+	trait = shrewd
+	trait = duelist
+	2024.1.14 = {
+		birth = yes
+	}
+	2080.8.7 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800086 = {
+	name = "Samuel" #Created Gaoshan
+	dynasty = 5000239
+	religion = mahayana
+	culture = ny_asian
+	trait = brilliant_strategist
+	father = 800077
+	2271.7.14 = {
+		birth = yes
+	}
+	2300.8.7 = {
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+800088 = { #Heir of Gaoshan, interested in other things as well other then rulership
+	name = "Jack"
+	dynasty = 5000241
+	religion = mahayana
+	culture = ny_asian
+	trait = grey_eminence
+	trait = poet
+	trait = kind
+	trait = humble
+	trait = bisexual
+	trait = just
+	trait = water_type
+	father = 800060
+	2304.12.8 = {
 		birth = yes
 	}
 	2666.1.1 = {
