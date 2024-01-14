@@ -7907,14 +7907,6 @@ character_event = {
 	option = {
 		name = EVTOPTA_MNM_1903
 		
-		hidden_tooltip = {
-			if = {
-				limit = {
-					lifestyle_traits = 1
-				}
-				remove_lifestyle_trait_effect = yes
-			}
-		}
 		add_trait = scholar
 		clr_character_flag = choosing_hermetic_art
 	}
@@ -8014,7 +8006,7 @@ character_event = {
 		hidden_tooltip = {
 			if = {
 				limit = {
-					lifestyle_traits = 1
+					lifestyle_traits = 2
 				}
 				remove_lifestyle_trait_effect = yes
 			}
@@ -8092,7 +8084,7 @@ character_event = {
 		hidden_tooltip = {
 			if = {
 				limit = {
-					lifestyle_traits = 1
+					lifestyle_traits = 2
 				}
 				remove_lifestyle_trait_effect = yes
 			}
