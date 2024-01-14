@@ -175,6 +175,26 @@ e_acadia = {
 		}
 	}
 }
+e_nys = {
+	color = { 0 45 114 }
+	color2 = { 220 220 220 }
+	
+	capital = 10 # Albany
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_nys = {
+					is_titular = yes
+				}
+			}
+			e_nys = {
+				is_titular = no
+			}
+		}
+	}
+}
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor

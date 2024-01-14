@@ -1,62 +1,4 @@
 decisions = {
-	form_vermont = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_kingdom_potential = yes
-			culture = vermonter
-			k_vermont = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-		allow = {
-			completely_controls = d_unity
-			completely_controls = d_bennington
-			prestige = 500
-		}
-		effect = {
-			k_vermont = { gain_title_effect = yes }
-			
-			d_unity = { de_jure_liege = k_vermont }
-			d_bennington = { de_jure_liege = k_vermont }
-			
-			d_concordia = { de_jure_liege = k_new_hampshire }
-			d_pennacook = { de_jure_liege = k_new_hampshire }
-		}
-	}
-	form_new_hampshire = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_kingdom_potential = yes
-			culture = albmonter
-			k_new_hampshire = {
-				is_titular = yes
-				has_holder = no 
-			}
-			prisoner = no
-			has_regent = no 
-		}
-		allow = {
-			completely_controls = d_pennacook
-			completely_controls = d_concordia
-			prestige = 500
-		}
-		effect = {
-			k_new_hampshire = { gain_title_effect = yes }
-			
-			d_concordia = { de_jure_liege = k_new_hampshire }
-			d_pennacook = { de_jure_liege = k_new_hampshire }
-			
-			d_unity = { de_jure_liege = k_vermont }
-			d_bennington = { de_jure_liege = k_vermont }
-		}
-	}
 	form_rhode_island = {
 		is_high_prio = yes
 		only_playable = yes
@@ -96,12 +38,18 @@ decisions = {
 			has_regent = no 
 		}
 		allow = { 
-			completely_controls = d_connecticut
+			completely_controls = d_norwich
+			completely_controls = d_hartford
+			completely_controls = d_bridgeport
+			completely_controls = d_new_haven
 			prestige = 500
 		}
 		effect = { 
 			k_connecticut = { gain_title_effect = yes }
-			d_connecticut = { de_jure_liege = k_connecticut }
+			d_norwich = { de_jure_liege = k_connecticut }
+			d_hartford = { de_jure_liege = k_connecticut }
+			d_bridgeport = { de_jure_liege = k_connecticut }
+			d_new_haven = { de_jure_liege = k_connecticut }
 		}
 	}
 	form_wampanoag = {
@@ -252,35 +200,35 @@ decisions = {
 			e_carolina = { gain_empire_effect = yes }
 			k_tarheel = { de_jure_liege = e_carolina }
 			k_palmetto = { de_jure_liege = e_carolina }
-			if = {
-				limit = {
-					completely_controls = d_bluehills
-					completely_controls = d_walhalla
-				}
-				d_bluehills = { de_jure_liege = k_tarheel }
-				d_walhalla = { de_jure_liege = k_tarheel }
-			}
-			if = {
-				limit = {
-					completely_controls = d_bristol
-					completely_controls = d_east_tennessee
-					completely_controls = d_beans
-					completely_controls = d_middle_tennessee
-					completely_controls = d_west_tennessee
-				}
-				d_bristol = { de_jure_liege = k_tennessee }
-				d_east_tennessee = { de_jure_liege = k_tennessee }
-				d_beans = { de_jure_liege = k_tennessee }
-				d_middle_tennessee = { de_jure_liege = k_tennessee }
-				d_west_tennessee = { de_jure_liege = k_tennessee }
-				k_tennessee = { de_jure_liege = e_carolina }
-			}
-			if = {
-				limit = {
-					completely_controls = d_blue_ridge
-				}
-				d_blue_ridge = { de_jure_liege = k_palmetto }
-			}
+			# if = {
+				# limit = {
+					# completely_controls = d_bluehills
+					# completely_controls = d_walhalla
+				# }
+				# d_bluehills = { de_jure_liege = k_tarheel }
+				# d_walhalla = { de_jure_liege = k_tarheel }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = d_bristol
+					# completely_controls = d_east_tennessee
+					# completely_controls = d_beans
+					# completely_controls = d_middle_tennessee
+					# completely_controls = d_west_tennessee
+				# }
+				# d_bristol = { de_jure_liege = k_tennessee }
+				# d_east_tennessee = { de_jure_liege = k_tennessee }
+				# d_beans = { de_jure_liege = k_tennessee }
+				# d_middle_tennessee = { de_jure_liege = k_tennessee }
+				# d_west_tennessee = { de_jure_liege = k_tennessee }
+				# k_tennessee = { de_jure_liege = e_carolina }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = d_blue_ridge
+				# }
+				# d_blue_ridge = { de_jure_liege = k_palmetto }
+			# }
 		}
 	}
 	form_pennsylvania = {
@@ -362,36 +310,6 @@ decisions = {
 			k_aroostook = { any_direct_de_jure_vassal_title = { de_jure_liege = k_maine } }
 		}
 	}
-	form_maritimes = {
-		is_high_prio = yes
-		only_playable = yes
-		ai_check_interval = 24
-		potential = {
-			form_empire_potential = yes
-			OR = {
-				culture = wicker
-				culture = scotian
-			}
-			e_maritimes = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no 
-		}
-		allow = { 
-			prestige = 5000
-			completely_controls = k_new_brunswick
-			completely_controls = k_nova_scotia
-			completely_controls = k_prince_edward_island
-		}
-		effect = {
-			e_maritimes = { gain_empire_effect = yes }
-			k_prince_edward_island = { de_jure_liege = e_maritimes }
-			k_nova_scotia = { de_jure_liege = e_maritimes }
-			k_new_brunswick = { de_jure_liege = e_maritimes }
-		}
-	}
 	form_acadia = {
 		is_high_prio = yes
 		only_playable = yes
@@ -455,67 +373,168 @@ decisions = {
 			prestige = 5000
 			completely_controls = k_old_dominion
 			completely_controls = k_appalachia
+			completely_controls = k_vandalia
 			completely_controls = d_clinch
 		}
 		effect = {
 			e_magna_virginia = { gain_empire_effect = yes }
 			k_old_dominion = { de_jure_liege = e_magna_virginia }
 			k_appalachia = { de_jure_liege = e_magna_virginia }
+			k_vandalia = { de_jure_liege = e_magna_virginia }
 			d_clinch = { de_jure_liege = k_old_dominion }
-			if = {
-				limit = {
-					completely_controls = d_cumberland
-					completely_controls = d_bluegrass
-					completely_controls = d_pennyrile
-				}
-				d_cumberland = { de_jure_liege = k_kentucky }
-				d_bluegrass = { de_jure_liege = k_kentucky }
-				d_pennyrile = { de_jure_liege = k_kentucky }
-				k_kentucky = { de_jure_liege = e_magna_virginia }
+			# if = {
+				# limit = {
+					# completely_controls = d_cumberland
+					# completely_controls = d_bluegrass
+					# completely_controls = d_pennyrile
+				# }
+				# d_cumberland = { de_jure_liege = k_kentucky }
+				# d_bluegrass = { de_jure_liege = k_kentucky }
+				# d_pennyrile = { de_jure_liege = k_kentucky }
+				# k_kentucky = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_ohio
+				# }
+				# k_ohio = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_wabash
+				# }
+				# k_wabash = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_illinois
+				# }
+				# k_illinois = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_michigan
+				# }
+				# k_michigan = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_superior
+				# }
+				# k_superior = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_wisconsin
+				# }
+				# k_wisconsin = { de_jure_liege = e_magna_virginia }
+			# }
+			# if = {
+				# limit = {
+					# completely_controls = k_wisconsin
+					# completely_controls = d_arrowhead
+				# }
+				# d_arrowhead = { de_jure_liege = k_wisconsin }
+				# k_wisconsin = { de_jure_liege = e_magna_virginia }
+			# }
+		}
+	}
+	form_nys = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = politan
+				culture = buffian
+				culture = catskiller
+				culture = hudsunite
+				culture = finger_laker
+				culture = adarondaker
+				culture = dongren
 			}
-			if = {
-				limit = {
-					completely_controls = k_ohio
-				}
-				k_ohio = { de_jure_liege = e_magna_virginia }
+			e_nys = {
+				is_titular = yes
+				has_holder = no
 			}
-			if = {
-				limit = {
-					completely_controls = k_wabash
-				}
-				k_wabash = { de_jure_liege = e_magna_virginia }
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = k_taconica
+			completely_controls = k_new_york
+			completely_controls = k_buffalo
+			completely_controls = k_adirondack
+			completely_controls = k_upstachia
+		}
+		effect = {
+			e_nys = { gain_empire_effect = yes }
+			k_taconica = { de_jure_liege = e_nys }
+			k_new_york = { de_jure_liege = e_nys }
+			k_buffalo = { de_jure_liege = e_nys }
+			k_adirondack = { de_jure_liege = e_nys }
+			k_upstachia = { de_jure_liege = e_nys }
+		}
+	}
+	form_new_england = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = vermonter
+				culture = albmonter
+				culture = bostonian
+				culture = mainer
+				culture = lobsterfolk
+				culture = nutmegger
+				culture = massachusite
+				culture = aroostois
 			}
-			if = {
-				limit = {
-					completely_controls = k_illinois
-				}
-				k_illinois = { de_jure_liege = e_magna_virginia }
+			e_new_england = {
+				is_titular = yes
+				has_holder = no
 			}
-			if = {
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = k_vermont
+			completely_controls = k_new_hampshire
+			completely_controls = k_massachusets
+			completely_controls = d_rhode_island
+			completely_controls = d_hartford
+			completely_controls = d_bridgeport
+			completely_controls = d_new_haven
+			completely_controls = d_norwich
+			completely_controls = k_maine
+			completely_controls = k_aroostook
+			completely_controls = k_lobsterland
+			completely_controls = c_berkshires
+		}
+		effect = {
+			e_new_england = { gain_empire_effect = yes }
+			k_vermont = { de_jure_liege = e_new_england }
+			k_new_hampshire = { de_jure_liege = e_new_england }
+			k_massachusets = { de_jure_liege = e_new_england }
+			k_maine = { de_jure_liege = e_new_england }
+			k_aroostook = { de_jure_liege = e_new_england }
+			k_lobsterland = { de_jure_liege = e_new_england }
+			k_new_acadia = { de_jure_liege = e_new_england }
+			k_connecticut = { de_jure_liege = e_new_england }
+			k_rhode_island = { de_jure_liege = e_new_england }
+			k_wampanoag = { de_jure_liege = e_new_england }
+			c_berkshires = { de_jure_liege = d_massachusetts }
+			if = { #take duchies from Enysee if they arnt connecticut already
 				limit = {
-					completely_controls = k_michigan
+					k_connecticut = { is_titular = yes }
 				}
-				k_michigan = { de_jure_liege = e_magna_virginia }
-			}
-			if = {
-				limit = {
-					completely_controls = k_superior
-				}
-				k_superior = { de_jure_liege = e_magna_virginia }
-			}
-			if = {
-				limit = {
-					completely_controls = k_wisconsin
-				}
-				k_wisconsin = { de_jure_liege = e_magna_virginia }
-			}
-			if = {
-				limit = {
-					completely_controls = k_wisconsin
-					completely_controls = d_arrowhead
-				}
-				d_arrowhead = { de_jure_liege = k_wisconsin }
-				k_wisconsin = { de_jure_liege = e_magna_virginia }
+				d_hartford = { de_jure_liege = k_massachusets } 
+				d_bridgeport = { de_jure_liege = k_massachusets }
+				d_new_haven = { de_jure_liege = k_massachusets }
+				d_norwich = { de_jure_liege = k_massachusets }
 			}
 		}
 	}
