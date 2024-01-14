@@ -1579,7 +1579,13 @@ character_event = {
 			set_character_flag = flag_cheap_diviner #Prevents crit success, increases crit failure.
 		}
 		if = { 
-			limit = { OR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } }
+			limit = { 
+				OR = { 
+				has_religion_feature = religion_ritual_sacrifice 
+				has_religion_feature = religion_feature_satsana_phi 
+				has_religion_feature = religion_feature_celtic
+				} 
+			}
 			random_courtier = { 
 				limit = {
 					NOR = {
@@ -1615,6 +1621,7 @@ character_event = {
 		trigger = { 
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 			}
 			event_target:potential_victim = { is_alive = yes } 
@@ -1653,7 +1660,8 @@ character_event = {
 	}
 	option = { #Great bull - Ensure no Critical Fail - Unlocks Critical success
 		name = EVTOPTAHF23007
-		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } }
+		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi 
+		has_religion_feature = religion_feature_celtic} }
 		if = { 
 			limit = { ai = no }
 			scaled_wealth = { value = -0.9 min = -100 max = -200 } 
@@ -5061,7 +5069,8 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23207
 		trigger = { 
-			OR = { religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
+			OR = {
+		has_religion_feature = religion_feature_celtic religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
@@ -7865,6 +7874,7 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_satsana_phi
+				has_religion_feature = religion_feature_celtic
 				religion = aztec
 				religion = aztec_reformed
 			}
@@ -8597,6 +8607,7 @@ character_event = {
 			NOT = { trait = incapable }
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -8699,6 +8710,7 @@ character_event = {
 		NOT = { trait = bloodthirsty_gods_1 }
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8770,6 +8782,7 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8852,6 +8865,7 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8931,6 +8945,7 @@ narrative_event = {
 	trigger = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -9051,6 +9066,7 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9065,6 +9081,7 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9106,6 +9123,7 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9120,6 +9138,7 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -10998,6 +11017,7 @@ character_event = {
 	trigger = {
 		NOR = {
 			has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -11062,6 +11082,7 @@ character_event = {
 		trigger  = {  
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -11078,6 +11099,7 @@ character_event = {
 		trigger  = {  
 			NOR = {
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -11229,6 +11251,7 @@ character_event = {
 						religion = titoist
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
@@ -11334,6 +11357,7 @@ character_event = {
 						religion = titoist
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
@@ -11401,6 +11425,7 @@ character_event = {
 							NOT = { has_religion_feature = religion_peaceful }
 						}
 						has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_satsana_phi
 						religion = stalinist
 						religion = trotskyite
@@ -11545,6 +11570,7 @@ character_event = {
 				religion = titoist
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 			}
 		}
@@ -11569,6 +11595,7 @@ character_event = {
 				religion = titoist
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
+		has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_satsana_phi
 			}
 		}

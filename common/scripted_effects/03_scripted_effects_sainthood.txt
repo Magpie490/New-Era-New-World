@@ -1532,6 +1532,43 @@ check_if_ancestor_worship_worthy_effect = {
                 trait = bloodthirsty_gods_3
             }
         }
+        modifier = {
+            factor = 1.5
+				has_religion_feature = religion_feature_celtic
+            trait = impaler
+        }
+        modifier = {
+            factor = 1.5
+				has_religion_feature = religion_feature_celtic
+            trait = cruel
+        }
+        modifier = {
+            factor = 1.5
+				has_religion_feature = religion_feature_celtic
+            OR = { 
+                trait = bloodthirsty_gods_1
+                trait = bloodthirsty_gods_2
+                trait = bloodthirsty_gods_3
+            }
+        }
+        # Negative
+        modifier = {
+            factor = 0.65
+				has_religion_feature = religion_feature_celtic
+            NOR = {
+                trait = impaler
+                trait = cruel
+            }
+        }
+        modifier = {
+            factor = 0.2
+				has_religion_feature = religion_feature_celtic
+            NOR = {
+                trait = bloodthirsty_gods_1
+                trait = bloodthirsty_gods_2
+                trait = bloodthirsty_gods_3
+            }
+        }
         ## Adventuring & Sea-faring ##
         # Positive
         modifier = {
