@@ -110,7 +110,24 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			#culture = No Cultures Yet!
+			OR = {
+				has_landed_title = k_wabash
+				has_landed_title = k_illinois
+				has_landed_title = k_superior
+				has_landed_title = k_wisconsin
+				has_landed_title = k_ohio
+				has_landed_title = k_allegheny
+				has_landed_title = k_aurora
+				has_landed_title = k_ontario
+				has_landed_title = k_cleveland
+				has_landed_title = k_upnord
+				has_landed_title = k_mishiana
+				has_landed_title = k_midmishigan
+				has_landed_title = k_windgarden
+				has_landed_title = k_ottawa
+				has_landed_title = k_buffalo
+				has_landed_title = k_adirondack
+			}
 			e_great_lakes = {
 				is_titular = yes
 				has_holder = no 
@@ -125,10 +142,17 @@ decisions = {
 			completely_controls = k_superior
 			completely_controls = k_wisconsin
 			completely_controls = k_ohio
-			completely_controls = k_upstachia
 			completely_controls = k_allegheny
 			completely_controls = k_aurora
 			completely_controls = k_ontario
+			completely_controls = k_cleveland
+			completely_controls = k_upnord
+			completely_controls = k_mishiana
+			completely_controls = k_midmishigan
+			completely_controls = k_windgarden
+			completely_controls = k_ottawa
+			completely_controls = k_buffalo
+			completely_controls = k_adirondack
 			prestige = 5000
 		}
 		effect = {
@@ -139,10 +163,17 @@ decisions = {
 			k_superior = { de_jure_liege = e_great_lakes }
 			k_wisconsin = { de_jure_liege = e_great_lakes }
 			k_ohio = { de_jure_liege = e_great_lakes }
-			k_upstachia = { de_jure_liege = e_great_lakes }
 			k_allegheny = { de_jure_liege = e_great_lakes }
 			k_aurora = { de_jure_liege = e_great_lakes }
 			k_ontario = { de_jure_liege = e_great_lakes }
+			k_cleveland = { de_jure_liege = e_great_lakes }
+			k_mishiana = { de_jure_liege = e_great_lakes }
+			k_upnord = { de_jure_liege = e_great_lakes }
+			k_midmishigan = { de_jure_liege = e_great_lakes }
+			k_windgarden = { de_jure_liege = e_great_lakes }
+			k_ottawa = { de_jure_liege = e_great_lakes }
+			k_buffalo = { de_jure_liege = e_great_lakes }
+			k_adirondack = { de_jure_liege = e_great_lakes }
 		}
 	}
 	form_springfield = {
