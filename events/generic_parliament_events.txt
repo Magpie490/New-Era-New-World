@@ -83,6 +83,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
+		always = no
 		OR = {
 			religion = constitutional
 		}
@@ -169,6 +170,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
+		always = no
 		NOR = {
 			AND = {
 				OR = {
@@ -201,5 +203,210 @@ character_event = {
 		name = EVTOPTA_GPARL4
 		remove_trait=federalist_mp
 		remove_trait=centralist_mp
+	}
+}
+
+character_event = {
+	id = GPARL.5
+	desc = EVTDESC_GPARL5
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_GPARL5
+		add_trait=republican_sen
+		remove_trait=democrat_sen
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 stewardship = 5 }
+			modifier = { factor = 2 stewardship = 10 }
+			modifier = { factor = 2 stewardship = 15 }
+			modifier = { factor = 2 stewardship = 20 }
+			modifier = { factor = 3 trait = indulgent_wastrel }
+			modifier = { factor = 3 trait = thrifty_clerk }
+			modifier = { factor = 3 trait = fortune_builder }
+			modifier = { factor = 4 trait = midas_touched }
+			modifier = { factor = 4 trait = administrator }
+			modifier = { factor = 2 martial = 5 }
+			modifier = { factor = 2 martial = 10 }
+			modifier = { factor = 2 martial = 15 }
+			modifier = { factor = 2 martial = 20 }
+			modifier = { factor = 3 trait = misguided_warrior }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 3 trait = skilled_tactician }
+			modifier = { factor = 3 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = strategist }
+			modifier = { factor = 4 trait = duelist }
+			modifier = { factor = 4 trait = scholar }
+		}
+	}
+	option = {
+		name = EVTOPTB_GPARL5
+		add_trait=democrat_sen
+		remove_trait=republican_sen
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 learning = 5 }
+			modifier = { factor = 2 learning = 10 }
+			modifier = { factor = 2 learning = 15 }
+			modifier = { factor = 2 learning = 20 }
+			modifier = { factor = 3 trait = detached_priest }
+			modifier = { factor = 3 trait = martial_cleric }
+			modifier = { factor = 3 trait = scholarly_theologian }
+			modifier = { factor = 3 trait = mastermind_theologian }
+			modifier = { factor = 4 trait = mystic }
+			modifier = { factor = 2 diplomacy = 5 }
+			modifier = { factor = 2 diplomacy = 10 }
+			modifier = { factor = 2 diplomacy = 15 }
+			modifier = { factor = 2 diplomacy = 20 }
+			modifier = { factor = 3 trait = naive_appeaser }
+			modifier = { factor = 3 trait = underhanded_rogue }
+			modifier = { factor = 3 trait = charismatic_negotiator }
+			modifier = { factor = 4 trait = grey_eminence }
+			modifier = { factor = 4 trait = socializer }
+		}
+	}
+}
+character_event = {
+	id = GPARL.6
+	desc = EVTDESC_GPARL6
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_GPARL6
+		remove_trait=republican_sen
+		remove_trait=democrat_sen
+	}
+}
+character_event = {
+	id = GPARL.7
+	desc = EVTDESC_GPARL7
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		OR = {
+			religion = constitutional
+		}
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		OR = {
+			real_tier = KING
+			real_tier = EMPEROR
+		}
+		NOR = {
+		}
+		NOR = {
+			trait = democrat_sen
+			trait = republican_sen
+			has_minor_title = title_generic_member_parliament
+			has_minor_title = title_generic_member_parliament_1
+			has_minor_title = title_generic_member_parliament_2
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = EVTOPTA_GPARL7
+		add_trait=republican_sen
+		remove_trait=democrat_sen
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 stewardship = 5 }
+			modifier = { factor = 2 stewardship = 10 }
+			modifier = { factor = 2 stewardship = 15 }
+			modifier = { factor = 2 stewardship = 20 }
+			modifier = { factor = 3 trait = indulgent_wastrel }
+			modifier = { factor = 3 trait = thrifty_clerk }
+			modifier = { factor = 3 trait = fortune_builder }
+			modifier = { factor = 4 trait = midas_touched }
+			modifier = { factor = 4 trait = administrator }
+			modifier = { factor = 2 martial = 5 }
+			modifier = { factor = 2 martial = 10 }
+			modifier = { factor = 2 martial = 15 }
+			modifier = { factor = 2 martial = 20 }
+			modifier = { factor = 3 trait = misguided_warrior }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 3 trait = skilled_tactician }
+			modifier = { factor = 3 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = strategist }
+			modifier = { factor = 4 trait = duelist }
+			modifier = { factor = 4 trait = scholar }
+		}
+	}
+	option = {
+		name = EVTOPTB_GPARL7
+		add_trait=democrat_sen
+		remove_trait=republican_sen
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 learning = 5 }
+			modifier = { factor = 2 learning = 10 }
+			modifier = { factor = 2 learning = 15 }
+			modifier = { factor = 2 learning = 20 }
+			modifier = { factor = 3 trait = detached_priest }
+			modifier = { factor = 3 trait = martial_cleric }
+			modifier = { factor = 3 trait = scholarly_theologian }
+			modifier = { factor = 3 trait = mastermind_theologian }
+			modifier = { factor = 4 trait = mystic }
+			modifier = { factor = 2 diplomacy = 5 }
+			modifier = { factor = 2 diplomacy = 10 }
+			modifier = { factor = 2 diplomacy = 15 }
+			modifier = { factor = 2 diplomacy = 20 }
+			modifier = { factor = 3 trait = naive_appeaser }
+			modifier = { factor = 3 trait = underhanded_rogue }
+			modifier = { factor = 3 trait = charismatic_negotiator }
+			modifier = { factor = 4 trait = grey_eminence }
+			modifier = { factor = 4 trait = socializer }
+		}
+	}
+}
+character_event = {
+	id = GPARL.8
+	desc = EVTDESC_GPARL8
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		NOR = {
+			AND = {
+				OR = {
+					religion = constitutional
+				}
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+				}
+				OR = {
+					real_tier = KING
+					real_tier = EMPEROR
+				}
+				NOR = {
+				}
+			}
+			has_minor_title = title_generic_member_parliament
+			has_minor_title = title_generic_member_parliament_1
+			has_minor_title = title_generic_member_parliament_2
+		}
+		OR = {
+			trait = democrat_sen
+			trait = republican_sen
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = EVTOPTA_GPARL8
+		remove_trait=democrat_sen
+		remove_trait=republican_sen
 	}
 }

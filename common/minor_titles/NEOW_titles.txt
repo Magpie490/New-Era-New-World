@@ -939,7 +939,7 @@ title_senegal_prince = {
 
 	message = yes
 }
-title_generic_member_parliament = {
+title_constitutional_member_parliament = {
 	dignity = 3
 	realm_in_name = yes
 	grant_limit = 4
@@ -970,6 +970,225 @@ title_generic_member_parliament = {
 	allowed_to_grant = {
 		OR = {
 			religion = constitutional
+		}
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		OR = {
+			real_tier = KING
+			real_tier = EMPEROR
+		}
+		primary_title = { 
+			OR = {
+				has_law = parliament_laws_constitutional_1 
+				has_law = parliament_laws_constitutional_2
+				has_law = parliament_laws_constitutional_3
+			}
+			NOT = { 
+				has_law = parliament_laws_constitutional_0
+			}
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = GPARL.5 }
+	}
+	lose_effect = {
+		character_event = { id = GPARL.6 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_constitutional_member_parliament_1 = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 4
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		OR = {
+			religion = constitutional
+		}
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		OR = {
+			real_tier = KING
+			real_tier = EMPEROR
+		}
+		primary_title = { 
+			OR = {
+				has_law = parliament_laws_constitutional_2
+				has_law = parliament_laws_constitutional_3
+			}
+			NOT = { 
+				has_law = parliament_laws_constitutional_0
+			}
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = GPARL.5 }
+	}
+	lose_effect = {
+		character_event = { id = GPARL.6 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_constitutional_member_parliament_2 = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 4
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		OR = {
+			religion = constitutional
+		}
+		OR = {
+			is_feudal = yes
+			is_republic = yes
+		}
+		OR = {
+			real_tier = KING
+			real_tier = EMPEROR
+		}
+		primary_title = {
+			NOT = { 
+				has_law = parliament_laws_constitutional_0
+			}
+			has_law = parliament_laws_constitutional_3
+		}
+	}
+	revoke_trigger = {
+		is_foe = FROM
+	}
+	
+	gain_effect = {
+		character_event = { id = GPARL.5 }
+	}
+	lose_effect = {
+		character_event = { id = GPARL.6 }
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	message = yes
+}
+title_generic_member_parliament = {
+	dignity = 3
+	realm_in_name = yes
+	grant_limit = 4
+	is_voter = yes
+	is_high_prio = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+
+	
+	allowed_to_hold = {
+		OR = {
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_title_trigger = yes
+			has_law = true_cognatic_succession
+		}
+		is_landed = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		has_regent = no
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = {
+		OR = {
 			religion = mainline
 			religion = sarvodaya
 			religion = girondist
@@ -1062,7 +1281,6 @@ title_generic_member_parliament_1 = {
 	
 	allowed_to_grant = {
 		OR = {
-			religion = constitutional
 			religion = mainline
 			religion = sarvodaya
 			religion = girondist
@@ -1154,7 +1372,6 @@ title_generic_member_parliament_2 = {
 	
 	allowed_to_grant = {
 		OR = {
-			religion = constitutional
 			religion = mainline
 			religion = sarvodaya
 			religion = girondist
