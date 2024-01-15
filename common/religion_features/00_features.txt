@@ -1456,6 +1456,60 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
+	religion_feature_celtic2 = {
+		picture = GFX_religion_feature_celtic2
+		potential = {
+			has_game_started = yes
+			religion = celtic_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = celtic_pagan_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_animistic
+				has_selected_religion_feature = religion_defensive
+				has_selected_religion_feature = religion_beatification
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_land_morale }
+			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_defensive }
+			hidden_tooltip = { 
+				set_allow_looting = yes
+				set_hard_to_convert = yes
+				
+				set_unit_modifier = {		
+					garrison_size = 0.3
+					levy_size = 0.2
+					
+					key = "DEF_RELIGION"
+				}
+				set_unit_home_modifier = {
+					land_morale = 0.8
+					light_infantry_defensive = 0.8
+					heavy_infantry_defensive = 0.8
+					pikemen_defensive = 0.8
+					light_cavalry_defensive = 0.8
+					knights_defensive = 0.8
+					archers_defensive = 0.8
+					horse_archers_defensive = 0.8
+					camel_cavalry_defensive = 0.8
+					war_elephants_defensive = 0.8
+					
+					garrison_size = 0.4
+					
+					key = "DEF_RELIGION_HOME_TERRITORY"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_tengri = {
 		picture = GFX_religion_feature_tengri
 		potential = {
