@@ -66,8 +66,12 @@ syncratic_group = {
 		ignores_defensive_attrition= yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		
+		has_heir_designation = yes #Buffing em
 		landed_kin_prestige_bonus = yes
-		uses_jizya_tax = yes
+		character_modifier = {
+			phase_skirmish_attack = 0.1
+			religion_flex = -0.5
+		}
 
 		intermarry = sunni
 		intermarry = wahhabi
@@ -410,15 +414,11 @@ syncratic_group = {
 			SATAN THE_DEVIL_AT_THE_CROSSROADS THE_BOO_HAG THE_NIGHT_DOCTORS
 		}
 		character_modifier = {
+			phase_skirmish_attack = 0.1
+			religion_flex = -0.5
 		}
 	
 		aggression = 0.9
-		can_call_crusade = yes
-		pacifist = yes
-		can_excommunicate = yes
-		can_have_antipopes = no
-		can_grant_invasion_cb = yes
-		can_grant_divorce = yes
 		priests_can_inherit = yes
 		allow_rivermovement = yes
 		men_can_take_consorts = yes
@@ -429,8 +429,10 @@ syncratic_group = {
 		defensive_attrition = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
-		rel_head_defense = yes
-		join_crusade_if_bordering_hostile = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+		has_heir_designation = yes 
+		landed_kin_prestige_bonus = yes
 	}
 	dahatatta = {
 		graphical_culture = othermuslimgfx

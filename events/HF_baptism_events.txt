@@ -169,7 +169,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun } }
+			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun  religion = hoodoo} }
 		}
 		text = EVTDESCHFI20003
 	}
@@ -283,7 +283,7 @@ narrative_event = {
 			limit = {
 				NOT = { has_nickname = yes }
 				higher_real_tier_than = DUKE
-				event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun } }
+				event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun religion = hoodoo } }
 			}
 			ROOT = { give_nickname = nick_the_awoken }
 		}
@@ -714,7 +714,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			OR = { religion = islamity religion = bushism religion = voodun }
+			OR = { religion = islamity religion = bushism religion = voodun religion = hoodoo }
 		}
 		text = EVTDESCHFI20004
 	}
@@ -831,7 +831,7 @@ narrative_event = {
 		if = { 
 			limit = { 
 				NOT = { has_nickname = yes }
-				OR = { religion = islamity religion = bushism religion = voodun }
+				OR = { religion = islamity religion = bushism religion = voodun religion = hoodoo }
 			}
 			ROOT = { give_nickname = nick_the_waking_teacher }
 		}
@@ -1630,7 +1630,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
-			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun } }
+			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun religion = hoodoo } }
 		}
 		text = EVTDESCHFI20008
 	}
@@ -1735,7 +1735,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			has_character_flag = ai_flag_refuse_conversion
-			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun } }
+			event_target:sponsoring_king = { OR = { religion = islamity religion = bushism religion = voodun religion = hoodoo } }
 		}
 		text = EVTDESCHFU20008
 	}

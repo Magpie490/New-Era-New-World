@@ -263,6 +263,7 @@ decisions = {
 				religion = khanist
 				religion = maoist
 				religion = voodun
+				religion = hoodoo
 				religion = akjang
 				religion = vagarna
 				religion = bushism
@@ -3292,7 +3293,10 @@ decisions = {
 		
 		potential = {
 			age = 16
-			religion = voodun
+			OR = {
+				religion = voodun
+				religion = hoodoo
+			}
 			NOR = {
 				has_character_flag = picking_fetish_flag
 				has_character_modifier = hidden_timer_modif
@@ -4127,6 +4131,7 @@ decisions = {
 				religion = orange_king
 				religion = islamity
 				religion = voodun
+				religion = hoodoo
 				has_religion_feature = religion_tarot
 			}
 			NOT = {has_character_modifier=hidden_timer_modif}
