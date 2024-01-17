@@ -6645,7 +6645,8 @@ character_event = {
 		custom_tooltip = { text = EVTOPTC50020_TT }
 		if = { 
 			limit = { NOR = { religion_group = pagan_group has_religion_feature = religion_ritual_sacrifice 
-				has_religion_feature = religion_feature_celtic} }
+				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator} }
 			tiered_high_piety_negative_effect = yes 
 		}
 
@@ -6691,6 +6692,7 @@ character_event = {
 					OR = {
 						has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						religion = aztec
 						religion = aztec_reformed
 					}

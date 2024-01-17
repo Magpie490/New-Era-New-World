@@ -1457,6 +1457,50 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
+	religion_feature_gator = {
+		picture = GFX_religion_feature_gator
+		potential = {
+			has_game_started = yes
+			religion = gator_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = gator_pagan_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_relentless
+				has_selected_religion_feature = religion_peaceful
+				has_selected_religion_feature = religion_proselytizing
+				has_selected_religion_feature = religion_meritocratic
+				has_selected_religion_feature = religion_monastic
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
+			custom_tooltip = { text = tooltip_religion_feature_offensive }
+			custom_tooltip = { text = tooltip_religion_feature_aztec_sacrifices }
+			custom_tooltip = { text = tooltip_religion_feature_bloodthirsty_mechanics }
+			custom_tooltip = { text = tooltip_religion_feature_phonocracy }
+			hidden_tooltip = { 
+				set_ignores_defensive_attrition = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_celtic2 = {
 		picture = GFX_religion_feature_celtic2
 		potential = {

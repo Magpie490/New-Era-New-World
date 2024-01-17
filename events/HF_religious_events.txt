@@ -1397,6 +1397,7 @@ character_event = {
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan
 			has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
 			has_religion_feature = religion_feature_shindo
@@ -1486,6 +1487,7 @@ character_event = {
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan			
 			has_religion_feature = religion_feature_celtic		
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
 			has_religion_feature = religion_feature_shindo
@@ -1545,6 +1547,7 @@ character_event = {
 			has_religion_feature = religion_feature_folklorist_2
 			has_religion_feature = religion_feature_lakefolk_pagan		
 			has_religion_feature = religion_feature_celtic	
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_sarna
 			has_religion_feature = religion_feature_wuist
 			has_religion_feature = religion_feature_shindo
@@ -1584,6 +1587,7 @@ character_event = {
 				has_religion_feature = religion_ritual_sacrifice 
 				has_religion_feature = religion_feature_satsana_phi 
 				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				} 
 			}
 			random_courtier = { 
@@ -1622,6 +1626,7 @@ character_event = {
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 			}
 			event_target:potential_victim = { is_alive = yes } 
@@ -1660,7 +1665,9 @@ character_event = {
 	}
 	option = { #Great bull - Ensure no Critical Fail - Unlocks Critical success
 		name = EVTOPTAHF23007
-		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi 
+		trigger = { NOR = { 
+							has_religion_feature = religion_feature_gator
+							has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi 
 		has_religion_feature = religion_feature_celtic} }
 		if = { 
 			limit = { ai = no }
@@ -3664,6 +3671,7 @@ character_event = {
 				has_religion_feature = religion_feature_bon
 				has_religion_feature = religion_matriarchal
 				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			}
 		}
 	}
@@ -3757,6 +3765,7 @@ character_event = {
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
 						has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 					}
 					NOR = {  
 						#is_merchant_republic = yes
@@ -3790,6 +3799,7 @@ character_event = {
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 					ROOT = { has_religion_feature = religion_matriarchal }
@@ -3820,6 +3830,7 @@ character_event = {
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 					ROOT = { has_religion_feature = religion_patriarchal }
@@ -3850,6 +3861,7 @@ character_event = {
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 				}
@@ -3879,6 +3891,7 @@ character_event = {
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 				}
@@ -3906,6 +3919,7 @@ character_event = {
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 					ROOT = { 
@@ -3936,6 +3950,7 @@ character_event = {
 							has_religion_feature = religion_equal 
 							has_religion_feature = religion_feature_bon
 							has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						}
 					}
 					ROOT = { 
@@ -3977,6 +3992,7 @@ character_event = {
 			has_religion_feature = religion_feature_bon
 			has_religion_feature = religion_matriarchal
 			has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 		}
 	}
 	is_triggered_only = yes
@@ -4061,6 +4077,7 @@ character_event = {
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
 						has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 					}
 				}
 			}
@@ -5070,7 +5087,8 @@ character_event = {
 		name = EVTOPTAHF23207
 		trigger = { 
 			OR = {
-		has_religion_feature = religion_feature_celtic religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
+		has_religion_feature = religion_feature_celtic 
+							has_religion_feature = religion_feature_gator religion = stalinist religion = trotskyite religion = titoist religion = red_cult has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
@@ -5974,6 +5992,7 @@ character_event = {
 								has_religion_feature = religion_equal 
 								has_religion_feature = religion_feature_bon
 								has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 							}
 						} 
 					} 
@@ -7875,6 +7894,7 @@ character_event = {
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_satsana_phi
 				has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				religion = aztec
 				religion = aztec_reformed
 			}
@@ -7882,7 +7902,8 @@ character_event = {
 				has_religion_feature = religion_feature_folklorist_2
 				religion = sanamahist
 				has_religion_feature = religion_feature_lakefolk_pagan			
-				has_religion_feature = religion_feature_celtic			
+				has_religion_feature = religion_feature_celtic	
+							has_religion_feature = religion_feature_gator		
 				has_religion_feature = religion_haruspicy
 				has_religion_feature = religion_feature_wuist
 				has_religion_feature = religion_feature_shindo
@@ -8608,6 +8629,7 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -8711,6 +8733,7 @@ character_event = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8783,6 +8806,7 @@ character_event = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8866,6 +8890,7 @@ character_event = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -8946,6 +8971,7 @@ narrative_event = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -9067,6 +9093,7 @@ narrative_event = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9082,6 +9109,7 @@ narrative_event = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9124,6 +9152,7 @@ narrative_event = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -9139,6 +9168,7 @@ narrative_event = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -11018,6 +11048,7 @@ character_event = {
 		NOR = {
 			has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 			has_religion_feature = religion_feature_satsana_phi
 			religion = stalinist
 			religion = trotskyite
@@ -11083,6 +11114,7 @@ character_event = {
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -11100,6 +11132,7 @@ character_event = {
 			NOR = {
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 				religion = stalinist
 				religion = trotskyite
@@ -11252,6 +11285,7 @@ character_event = {
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
@@ -11358,6 +11392,7 @@ character_event = {
 						religion = red_cult
 						has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						has_religion_feature = religion_feature_satsana_phi
 					}
 				} 
@@ -11426,6 +11461,7 @@ character_event = {
 						}
 						has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 						has_religion_feature = religion_feature_satsana_phi
 						religion = stalinist
 						religion = trotskyite
@@ -11571,6 +11607,7 @@ character_event = {
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 			}
 		}
@@ -11596,6 +11633,7 @@ character_event = {
 				religion = red_cult
 				has_religion_feature = religion_ritual_sacrifice
 		has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 				has_religion_feature = religion_feature_satsana_phi
 			}
 		}
@@ -12195,6 +12233,7 @@ character_event = {
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon 	
 						has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 					} 
 				} 
 				FROMFROM = { 
@@ -12202,6 +12241,7 @@ character_event = {
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
 						has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 					} 
 				}
 			}
@@ -12302,6 +12342,7 @@ character_event = {
 						has_religion_feature = religion_equal 
 						has_religion_feature = religion_feature_bon
 						has_religion_feature = religion_feature_celtic
+							has_religion_feature = religion_feature_gator
 					}
 					NOR = {  
 						#is_merchant_republic = yes
