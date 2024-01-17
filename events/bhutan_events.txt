@@ -11,10 +11,9 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		FROM = { title = e_bhutan }
+		FROM = { title = e_columbia }
 	}
 	immediate = {
-		narrative_event = { id = bhutan.2 days = 1 }
 		if = {
 			limit = { has_global_flag = bhutan_reformed_diplo }
 			add_character_modifier = { name = bhutan_reformed_diplomacy duration = -1 }
@@ -555,7 +554,7 @@ character_event = {
 	is_triggered_only = yes
 	only_playable = yes
 	trigger = {
-		has_landed_title = e_bhutan
+		has_landed_title = e_columbia
 	}
 	immediate = {
 		if = {
