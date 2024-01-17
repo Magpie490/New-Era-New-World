@@ -1452,7 +1452,6 @@ feudal_governments = {
 					title = e_minyue
 				}
 			}
-			controls_religion = no
 			OR = {
 				religion = calvinist
 				religion = neohuguenot
@@ -1750,11 +1749,9 @@ feudal_governments = {
 		
 		character_modifier = {
 			retinue_maintenence_cost = -0.5
-		}
-		unit_modifier = {
 			levy_size = -1
 			
-			retinuesize_perc = 1.3
+			retinuesize_perc = 0.9
 		}
 		vassal_limit = 10
 		court_size_modifier = 15
@@ -2085,6 +2082,10 @@ feudal_governments = {
 
 		can_build_tribal = no
 		
+		character_modifier = {
+			retinue_maintenence_cost = -0.25
+			retinuesize_perc = 0.75
+		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
 			nomadtribal_government
@@ -2378,11 +2379,8 @@ feudal_governments = {
 		can_build_tribal = no
 		character_modifier = {
 			retinue_maintenence_cost = -0.5
-		}
-		unit_modifier = {
-			levy_size = -1.25
-			
 			retinuesize_perc = 1.3
+			levy_size = -1.25
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
@@ -2471,11 +2469,8 @@ feudal_governments = {
 		can_build_tribal = no
 		character_modifier = {
 			retinue_maintenence_cost = -0.75
-		}
-		unit_modifier = {
-			levy_size = -1
-			
 			retinuesize_perc = 1.6
+			levy_size = -1
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
