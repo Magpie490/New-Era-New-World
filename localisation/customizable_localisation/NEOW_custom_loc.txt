@@ -402,6 +402,48 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetEmulatedRuler
+
+	use_first_valid = yes # (Defaults to no)
+
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_arthur
+		}
+		localisation_key = String_Arthur
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_queen
+		}
+		localisation_key = String_the_Queen
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_laurier
+		}
+		localisation_key = String_Passage_Laurier
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_macdonald
+		}
+		localisation_key = String_Passage_Macdonald
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_mackenzie
+		}
+		localisation_key = String_Passage_Mackenzie
+	}
+	text = {
+		trigger = {
+			has_ambition = obj_loyalist_emulate_trudeau
+		}
+		localisation_key = String_Passage_Trudeau
+	}
+}
+defined_text = {
 	name = GetEmulatedTzarOrPassage
 
 	use_first_valid = yes # (Defaults to no)
@@ -417,6 +459,12 @@ defined_text = {
 			has_lutheran_emulate_ambition = yes
 		}
 		localisation_key = String_GetEmulatedPassage
+	}
+	text = {
+		trigger = {
+			has_loyalist_emulate_ambition = yes
+		}
+		localisation_key = String_GetEmulatedRuler
 	}
 }
 

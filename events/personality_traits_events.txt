@@ -144,6 +144,7 @@ character_event = {
 			personality_traits < 5
 			has_ambition = obj_zarist_emulate_nicholas
 			has_ambition = obj_lutheran_corinthians
+			has_ambition = obj_loyalist_emulate_laurier
 		}
 		NOR = {
 			trait = gluttonous
@@ -361,6 +362,7 @@ character_event = {
 		OR = {
 			personality_traits < 5
 			has_ambition = obj_lutheran_luke
+			has_ambition = obj_loyalist_emulate_mackenzie
 		}
 		NOR = {
 			trait = greedy
@@ -462,6 +464,7 @@ character_event = {
 			personality_traits < 5
 			has_ambition = obj_zarist_emulate_peter
 			has_ambition = obj_lutheran_galatians
+			has_ambition = obj_loyalist_emulate_laurier
 		}
 		NOR = {
 			trait = diligent
@@ -828,6 +831,9 @@ character_event = {
 			personality_traits < 5
 			has_ambition = obj_zarist_emulate_ivan
 			has_ambition = obj_lutheran_galatians
+			has_ambition = obj_loyalist_emulate_laurier
+			has_ambition = obj_loyalist_emulate_macdonald
+			has_ambition = obj_loyalist_emulate_mackenzie
 		}
 		NOR = {
 			trait = wroth
@@ -940,6 +946,7 @@ character_event = {
 			personality_traits < 5
 			has_ambition = obj_zarist_emulate_nicholas
 			has_ambition = obj_lutheran_exodus
+			has_ambition = obj_loyalist_emulate_queen
 		}
 		NOR = {
 			trait = proud
@@ -1047,6 +1054,7 @@ character_event = {
 			has_ambition = obj_zarist_emulate_peter
 			has_ambition = obj_zarist_emulate_catherine
 			has_ambition = obj_lutheran_ephesians
+			has_ambition = obj_loyalist_emulate_queen
 		}
 		NOR = {
 			trait = deceitful
@@ -1159,6 +1167,7 @@ character_event = {
 	trigger = {
 		OR = {
 			has_ambition = obj_lutheran_ephesians
+			has_ambition = obj_loyalist_emulate_arthur
 			personality_traits < 5
 		}
 		NOR = {
@@ -1254,6 +1263,7 @@ character_event = {
 	trigger = {
 		OR = {
 			personality_traits < 5
+			has_ambition = obj_loyalist_emulate_arthur
 			has_ambition = obj_zarist_emulate_alexis
 		}
 		NOR = {
@@ -1396,6 +1406,8 @@ character_event = {
 			has_ambition = obj_zarist_emulate_catherine
 			has_ambition = obj_zarist_emulate_nicholas
 			has_ambition = obj_lutheran_psalm
+			has_ambition = obj_loyalist_emulate_macdonald
+			has_ambition = obj_loyalist_emulate_trudeau
 		}
 		NOR = {
 			trait = ambitious
@@ -1529,6 +1541,7 @@ character_event = {
 			personality_traits < 5
 			has_ambition = obj_zarist_emulate_alexander
 			has_ambition = obj_lutheran_psalm
+			has_ambition = obj_loyalist_emulate_queen
 		}
 		NOR = {
 			trait = arbitrary
@@ -2028,6 +2041,8 @@ character_event = {
 			has_ambition = obj_zarist_emulate_alexander
 			has_ambition = obj_zarist_emulate_peter
 			has_ambition = obj_lutheran_luke
+			has_ambition = obj_loyalist_emulate_arthur
+			has_ambition = obj_loyalist_emulate_macdonald
 		}
 		NOR = {
 			trait = kind
@@ -2736,6 +2751,7 @@ character_event = {
 		OR = {
 			personality_traits > 5
 			has_ambition = obj_buddhist_temperance_food
+			has_ambition = obj_loyalist_emulate_laurier
 			has_ambition = obj_zarist_emulate_nicholas
 			has_ambition = obj_lutheran_corinthians
 		}
@@ -2808,6 +2824,7 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_buddhist_reject_greed
 			has_ambition = obj_lutheran_luke
+			has_ambition = obj_loyalist_emulate_mackenzie
 		}
 	}
 	weight_multiplier = {
@@ -2869,6 +2886,7 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_peter
 			has_ambition = obj_lutheran_galatians
+			has_ambition = obj_loyalist_emulate_laurier
 		}
 		trait = slothful
 	}
@@ -2903,6 +2921,7 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_ivan
 			has_ambition = obj_zarist_emulate_peter
+			has_ambition = obj_loyalist_emulate_macdonald
 		}
 		trait = kind
 	}
@@ -2938,6 +2957,7 @@ character_event = {
 			has_ambition = obj_buddhist_reject_envy
 			has_ambition = obj_zarist_emulate_alexander
 			has_ambition = obj_lutheran_luke
+			has_ambition = obj_loyalist_emulate_arthur
 		}
 	}
 	weight_multiplier = {
@@ -2975,6 +2995,7 @@ character_event = {
 		OR = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_ivan
+			has_ambition = obj_loyalist_emulate_mackenzie
 		}
 		trait = patient
 	}
@@ -3006,6 +3027,8 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_buddhist_reject_hate
 			has_ambition = obj_lutheran_galatians
+			has_ambition = obj_loyalist_emulate_laurier
+			has_ambition = obj_loyalist_emulate_macdonald
 		}
 	}
 	weight_multiplier = {
@@ -3039,7 +3062,10 @@ character_event = {
 	min_age = 16
 	only_capable = yes
 	trigger = {
-		personality_traits > 5
+		OR = {
+			personality_traits > 5
+			has_ambition = obj_loyalist_emulate_queen
+		}
 		trait = humble
 	}
 	weight_multiplier = {
@@ -3162,9 +3188,10 @@ character_event = {
 	only_capable = yes
 	trigger = {
 		OR = {
-		personality_traits > 5
+			personality_traits > 5
 			has_ambition = obj_zarist_emulate_peter
 			has_ambition = obj_lutheran_ephesians
+			has_ambition = obj_loyalist_emulate_queen
 		}
 		trait = deceitful
 	}
@@ -3219,6 +3246,7 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_buddhist_defeat_fear
 			has_ambition = obj_lutheran_ephesians
+			has_ambition = obj_loyalist_emulate_arthur
 		}
 	}
 	weight_multiplier = {
@@ -3283,6 +3311,7 @@ character_event = {
 		OR = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_alexis
+			has_ambition = obj_loyalist_emulate_arthur
 		}
 		trait = shy
 	}
@@ -3310,6 +3339,8 @@ character_event = {
 		OR = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_catherine
+			has_ambition = obj_loyalist_emulate_macdonald
+			has_ambition = obj_loyalist_emulate_trudeau
 		}
 		trait = content
 	}
@@ -3406,6 +3437,7 @@ character_event = {
 			personality_traits > 5
 			has_ambition = obj_zarist_emulate_alexander
 			has_ambition = obj_lutheran_psalm
+			has_ambition = obj_loyalist_emulate_queen
 		}
 		trait = arbitrary
 	}

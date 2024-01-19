@@ -1,21 +1,76 @@
-obj_zarist_emulate_peter = {
+obj_loyalist_emulate_arthur = {
 	type = character
 	can_cancel = no
 	potential = {
 		OR = {
-			religion = zarist
-			religion = petrist
+			religion = loyalist
 		}
 	}
 	
 	allow = {
 		is_adult = yes
 		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
+		NOT = { loyalist_emulated_trigger = yes }
 		NAND = {
-			trait = diligent
-			trait = cruel
+			trait = brave
+			trait = kind
+			trait = gregarious
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_peter
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_loyalist_emulate_queen = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = loyalist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { loyalist_emulated_trigger = yes }
+		NAND = {
+			trait = proud
 			trait = honest
+			trait = just
 		}
 	}
 	chance = {
@@ -39,8 +94,8 @@ obj_zarist_emulate_peter = {
 	}
 	success = {
 		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_peter
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_queen
 		}
 	}
 	abort_effect = {
@@ -57,21 +112,21 @@ obj_zarist_emulate_peter = {
 	}
 }
 
-obj_zarist_emulate_nicholas = {
+obj_loyalist_emulate_laurier = {
 	type = character
 	can_cancel = no
 	potential = {
-		religion = zarist
+		religion = loyalist
 	}
 	
 	allow = {
 		is_adult = yes
 		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
+		NOT = { loyalist_emulated_trigger = yes }
 		NAND = {
-			trait = content
-			trait = humble
 			trait = temperate
+			trait = diligent
+			trait = patient
 		}
 	}
 	chance = {
@@ -95,8 +150,8 @@ obj_zarist_emulate_nicholas = {
 	}
 	success = {
 		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_nicholas
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_laurier
 		}
 	}
 	abort_effect = {
@@ -113,80 +168,23 @@ obj_zarist_emulate_nicholas = {
 	}
 }
 
-obj_zarist_emulate_ivan = {
-	type = character
-	can_cancel = no
-	potential = {
-		religion = zarist
-	}
-	
-	allow = {
-		is_adult = yes
-		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
-		NAND = {
-			trait = wroth
-			trait = cruel
-			trait = paranoid
-		}
-	}
-	chance = {
-		factor = 50
-		
-		modifier = {
-			factor = 2
-			trait = zealous
-		}
-		modifier = {
-			factor = 0.2
-			trait = cynical
-		}
-		modifier = {
-			factor = 0.5
-			is_unimportant_trigger = yes
-		}
-	}
-	creation_effect = {
-		character_event = { id = zarist.100 }
-	}
-	success = {
-		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_ivan
-		}
-	}
-	abort_effect = {
-		hidden_tooltip = {
-			emulation_ambition_clear_effect = yes
-		}
-	}
-	effect = {
-		tooltip = {
-			piety = 50
-			prestige = 50
-		}
-		emulation_ambition_clear_effect = yes
-	}
-}
-
-obj_zarist_emulate_catherine = {
+obj_loyalist_emulate_macdonald = {
 	type = character
 	can_cancel = no
 	potential = {
 		OR = {
-			religion = zarist
-			religion = katerinist
+			religion = loyalist
 		}
 	}
 	
 	allow = {
 		is_adult = yes
 		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
+		NOT = { loyalist_emulated_trigger = yes }
 		NAND = {
 			trait = ambitious
-			trait = lustful
-			trait = deceitful
+			trait = cruel
+			trait = patient
 		}
 	}
 	chance = {
@@ -210,8 +208,8 @@ obj_zarist_emulate_catherine = {
 	}
 	success = {
 		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_catherine
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_macdonald
 		}
 	}
 	abort_effect = {
@@ -228,20 +226,76 @@ obj_zarist_emulate_catherine = {
 	}
 }
 
-obj_zarist_emulate_alexander = {
+obj_loyalist_emulate_mackenzie = {
 	type = character
 	can_cancel = no
 	potential = {
-		religion = zarist
+		religion = loyalist
 	}
 	
 	allow = {
 		is_adult = yes
 		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
+		NOT = { loyalist_emulated_trigger = yes }
 		NAND = {
-			trait = just
-			trait = kind
+			trait = shrewd
+			trait = charitable
+			trait = wroth
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_mackenzie
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_loyalist_emulate_trudeau = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = loyalist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { loyalist_emulated_trigger = yes }
+		NAND = {
+			trait = erudite
+			trait = ambitious
 			trait = stubborn
 		}
 	}
@@ -266,64 +320,8 @@ obj_zarist_emulate_alexander = {
 	}
 	success = {
 		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_alexander
-		}
-	}
-	abort_effect = {
-		hidden_tooltip = {
-			emulation_ambition_clear_effect = yes
-		}
-	}
-	effect = {
-		tooltip = {
-			piety = 50
-			prestige = 50
-		}
-		emulation_ambition_clear_effect = yes
-	}
-}
-
-obj_zarist_emulate_alexis = {
-	type = character
-	can_cancel = no
-	potential = {
-		religion = zarist
-	}
-	
-	allow = {
-		is_adult = yes
-		NOT = { trait = incapable }
-		NOT = { zarist_emulated_trigger = yes }
-		NAND = {
-			trait = gregarious
-			trait = trusting
-			trait = zealous
-		}
-	}
-	chance = {
-		factor = 50
-		
-		modifier = {
-			factor = 2
-			trait = zealous
-		}
-		modifier = {
-			factor = 0.2
-			trait = cynical
-		}
-		modifier = {
-			factor = 0.5
-			is_unimportant_trigger = yes
-		}
-	}
-	creation_effect = {
-		character_event = { id = zarist.100 }
-	}
-	success = {
-		custom_tooltip = {
-			text = zarist_emulate_tt
-			has_character_modifier = zarist_emulated_alexis
+			text = loyalist_emulate_tt
+			has_character_modifier = loyalist_emulated_trudeau
 		}
 	}
 	abort_effect = {

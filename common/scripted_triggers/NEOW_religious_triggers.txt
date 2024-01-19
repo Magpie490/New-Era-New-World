@@ -441,6 +441,27 @@ muslim_syncretic_religion = {
 	}
 }
 
+has_loyalist_emulate_ambition = {
+	OR = {
+		has_ambition = obj_loyalist_emulate_arthur
+		has_ambition = obj_loyalist_emulate_queen
+		has_ambition = obj_loyalist_emulate_laurier
+		has_ambition = obj_loyalist_emulate_macdonald
+		has_ambition = obj_loyalist_emulate_mackenzie
+		has_ambition = obj_loyalist_emulate_trudeau
+	}
+}
+loyalist_emulated_trigger = {
+	OR = {
+		has_character_modifier = zarist_emulated_arthur
+		has_character_modifier = zarist_emulated_queen
+		has_character_modifier = zarist_emulated_laurier
+		has_character_modifier = zarist_emulated_macdonald
+		has_character_modifier = zarist_emulated_mackenzie
+		has_character_modifier = zarist_emulated_trudeau
+		has_character_modifier = emulation_failed
+	}
+}
 has_zarist_emulate_ambition = {
 	OR = {
 		has_ambition = obj_zarist_emulate_peter
