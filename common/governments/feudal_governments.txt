@@ -2094,11 +2094,13 @@ feudal_governments = {
 		
 		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
-		can_create_empires = no
+		can_create_empires = yes
 		vassal_government_opinion_penalties = no
 		can_grant_kingdoms_and_empires_to_other_government_group = yes
 		can_be_granted_kingdoms_and_empires_by_other_government = no
 		free_retract_vassalage = yes
+		gets_religion_opinion_penalties = no
+		gives_religion_opinion_penalties = no
 	}
 	viceroyal_government = {
 		preferred_holdings = { CASTLE }
@@ -2297,10 +2299,10 @@ feudal_governments = {
 		capital_move_delay = 600
 	}
 	bhutanese_decayed_government = {
-		preferred_holdings = { CASTLE TEMPLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = { 
 			CASTLE 
-			TEMPLE
+			CITY
 			FORT
 			HOSPITAL
 		}
@@ -2346,41 +2348,41 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = viceroyal_government }
-			OR = {
-				primary_title = {
-					title = e_bhutan
-					NOT = {
-						has_title_flag = reformed_bhutan_gov
-					}						
-				}
+			religion = loyalist
+			AND = {
 				top_liege = {
-					primary_title = { 
-						title = e_bhutan 
-						NOT = {
-							has_title_flag = reformed_bhutan_gov
-						}
-					}
+					religion = loyalist
 				}
+			}
+			NOT = {
+				has_global_flag = canada_reformed_diplo
+				has_global_flag = canada_reformed_martial
+				has_global_flag = canada_reformed_stewardship
+				has_global_flag = canada_reformed_intrigue
+				has_global_flag = canada_reformed_learning
 			}
 			higher_tier_than = BARON
 			is_patrician = no
 		}
 		
-		color = { 255 190 23 }
+		color = { 213 43 30 }
 		
-		uses_piety_for_law_change = yes
-		barons_need_dynasty = yes
-		can_create_empires = no
-		free_retract_vassalage = yes
+		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
+		can_create_empires = yes
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
 		gets_religion_opinion_penalties = no
 		gives_religion_opinion_penalties = no
 
 		can_build_tribal = no
 		character_modifier = {
-			retinue_maintenence_cost = -0.5
-			retinuesize_perc = 1.3
-			levy_size = -1.25
+			retinue_maintenence_cost = -0.25
+			retinuesize_perc = 0.75
+			levy_size = -0.15
+			land_organisation = -0.05
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
@@ -2390,10 +2392,9 @@ feudal_governments = {
 	}
 	
 	bhutanese_restored_government = {
-		preferred_holdings = { CASTLE TEMPLE }
-		allowed_holdings = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = { 
 			CASTLE 
-			TEMPLE
 			CITY
 			FORT
 			HOSPITAL
@@ -2440,37 +2441,34 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = viceroyal_government }
-			OR = {
-				primary_title = { 
-					title = e_bhutan
-					has_title_flag = reformed_bhutan_gov				
-				}
+			religion = loyalist
+			AND = {
 				top_liege = {
-					primary_title = {
-						title = e_bhutan
-						has_title_flag = reformed_bhutan_gov
-					}
+					religion = loyalist
 				}
 			}
+			has_global_flag = canadian_reforms
 			higher_tier_than = BARON
 			is_patrician = no
 		}
 		
-		color = { 255 190 23 }
+		color = { 234 5 25 }
 		
-		uses_piety_for_law_change = yes
-		barons_need_dynasty = yes
-		can_create_empires = no
-		free_retract_vassalage = yes
+		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
+		can_create_empires = yes
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
 		gets_religion_opinion_penalties = no
 		gives_religion_opinion_penalties = no
 
 		can_build_tribal = no
 		character_modifier = {
-			retinue_maintenence_cost = -0.75
-			retinuesize_perc = 1.6
-			levy_size = -1
+			retinue_maintenence_cost = -0.33
+			retinuesize_perc = 0.95
+			land_organisation = 0.05
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government

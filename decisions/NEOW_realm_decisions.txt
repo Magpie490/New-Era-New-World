@@ -855,6 +855,238 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	canada_diplo_reform = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = k_dominion_canada
+			NOT = {
+				has_global_flag = canada_reformed_diplo
+			}
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			scaled_wealth = 2
+			OR = {
+				realm_diplomacy = 60
+				AND = {
+					trait = grey_eminence
+					realm_diplomacy = 55
+				}
+				AND = {
+					trait = socializer
+					realm_diplomacy = 55
+				}
+			}
+			ruled_years = 5
+			NOT = {
+				trait = content
+			}
+		}
+		effect = {
+			scaled_wealth = -2 #Two years of income
+			prestige = 500
+			set_global_flag = canada_reformed_diplo
+			add_character_modifier = { name = canada_reformed_diplomacy duration = -1 inherit = yes }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	canada_martial_reform = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = k_dominion_canada
+			NOT = {
+				has_global_flag = canada_reformed_martial
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			scaled_wealth = 2
+			OR = {
+				realm_martial = 60
+				AND = {
+					trait = brilliant_strategist
+					realm_martial = 55
+				}
+				AND = {
+					trait = strategist
+					realm_martial = 55
+				}
+			}
+			ruled_years = 5
+			NOT = {
+				trait = content
+			}
+		}
+
+		effect = {
+			scaled_wealth = -2 #Two years of income
+			prestige = 500		
+			set_global_flag = canada_reformed_martial
+
+			remove_character_modifier = canada_crumbled_martial
+			add_character_modifier = { name = canada_reformed_martial duration = -1 inherit = yes }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	canada_stewardship_reform = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = k_dominion_canada
+			NOT = {
+				has_global_flag = canada_reformed_stewardship
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			scaled_wealth = 2
+			OR = {
+				realm_stewardship = 60
+				AND = {
+					trait = midas_touched
+					realm_stewardship = 55
+				}
+				AND = {
+					trait = administrator
+					realm_stewardship = 55
+				}
+			}
+			ruled_years = 5
+			NOT = {
+				trait = content
+			}
+		}
+
+		effect = {
+			scaled_wealth = -2 #Two years of income
+			prestige = 500
+			set_global_flag = canada_reformed_stewardship
+			
+			add_character_modifier = { name = canada_reformed_stewardship duration = -1 inherit = yes }
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	canada_intrigue_reform = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = k_dominion_canada
+			NOT = {
+				has_global_flag = canada_reformed_intrigue
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			scaled_wealth = 2
+			OR = {
+				realm_intrigue = 60
+				AND = {
+					trait = elusive_shadow
+					realm_intrigue = 55
+				}
+				AND = {
+					trait = schemer
+					realm_intrigue = 55
+				}
+			}
+			ruled_years = 5
+			NOT = {
+				trait = content
+			}
+		}
+
+		effect = {
+			scaled_wealth = -2 #Two years of income
+			prestige = 500
+			set_global_flag = canada_reformed_intrigue
+			
+			add_character_modifier = { name = canada_reformed_intrigue duration = -1 inherit = yes }
+			
+		}
+		revoke_allowed = {
+		always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	canada_learning_reform = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = k_dominion_canada
+			NOT = {
+				has_global_flag = canada_reformed_learning
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			scaled_wealth = 2
+			OR = {
+				realm_learning = 60
+				AND = {
+					trait = mastermind_theologian
+					realm_learning = 55
+				}
+				AND = {
+					trait = scholar
+					realm_learning = 55
+				}
+			}
+			ruled_years = 5
+			NOT = {
+				trait = content
+			}
+		}
+
+		effect = {
+			scaled_wealth = -2 #Two years of income
+			prestige = 500
+			set_global_flag = canada_reformed_learning
+
+			add_character_modifier = { name = canada_reformed_learning duration = -1 inherit = yes }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	bhutan_diplo_reform = {
 		is_high_prio = yes
 		only_playable = yes
