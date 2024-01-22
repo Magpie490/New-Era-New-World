@@ -282,6 +282,38 @@ character_event = {
 		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
 	}
 }
+character_event = { 
+	id = cleanup.9992
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_global_flag = canada_reformed_diplo
+		has_global_flag = canada_reformed_martial
+		has_global_flag = canada_reformed_stewardship
+		has_global_flag = canada_reformed_intrigue
+		has_global_flag = canada_reformed_learning
+		OR = {
+			religion = loyalist
+			top_liege = {
+				religion = loyalist
+			}
+		}
+		higher_tier_than = BARON
+		is_theocracy = no
+		is_feudal = yes
+		is_republic = yes
+		NOT = {
+			government = bhutanese_restored_government
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		set_government_type = bhutanese_restored_government
+	}
+}
 
 character_event = { 
 	id = cleanup.8888
