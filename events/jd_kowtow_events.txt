@@ -1207,6 +1207,32 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
+					religion_group = apocalyptic
+				}
+				offmap_china = {
+					offmap_ruler = {
+						religion_group = apocalyptic
+					}
+				}
+			}
+			add_trait = sympathy_apocalyptic
+		}
+		if = {
+			limit = {
+				NOT = {
+					religion_group = post_christian_group
+				}
+				offmap_china = {
+					offmap_ruler = {
+						religion_group = post_christian_group
+					}
+				}
+			}
+			add_trait = sympathy_post_christian
+		}
+		if = {
+			limit = {
+				NOT = {
 					religion_group = christian
 				}
 				offmap_china = {

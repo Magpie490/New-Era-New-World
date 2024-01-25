@@ -3389,6 +3389,14 @@ character_event = {
 					NOT = { trait = sympathy_mormon }
 				}
 				trigger_else_if = {
+					limit = { FROM = { religion_group = apocalyptic } }
+					NOT = { trait = sympathy_apocalyptic }
+				}
+				trigger_else_if = {
+					limit = { FROM = { religion_group = post_christian_group } }
+					NOT = { trait = sympathy_post_christian }
+				}
+				trigger_else_if = {
 					limit = { FROM = { religion_group = jewish_group } }
 					NOR = { trait = sympathy_judaism trait = noahide }
 				}
@@ -3982,7 +3990,15 @@ character_event = {
 				}
 				trigger_else_if = {
 					limit = { FROM = { religion_group = mormonic } }
-					NOT = { trait = sympathy_mormon }
+					trait = sympathy_mormon 
+				}
+				trigger_else_if = {
+					limit = { FROM = { religion_group = post_christian_group } }
+					trait = sympathy_post_christian 
+				}
+				trigger_else_if = {
+					limit = { FROM = { religion_group = apocalyptic } }
+					trait = sympathy_apocalyptic 
 				}
 				trigger_else_if = {
 					limit = { FROM = { religion_group = jewish_group } }

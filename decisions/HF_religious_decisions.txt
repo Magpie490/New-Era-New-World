@@ -630,6 +630,8 @@ decisions = {
 				trait = sympathy_christendom
 				trait = sympathy_islam
 				trait = sympathy_mormon
+				trait = sympathy_apocalyptic
+				trait = sympathy_post_christian
 				trait = sympathy_pagans
 				trait = sympathy_zoroastrianism
 				trait = sympathy_judaism
@@ -956,6 +958,136 @@ decisions = {
 									}
 									any_demesne_province = {
 										religion_group = mormonic
+									}
+								}
+							}
+						}
+						100 = {
+							add_trait = sympathy_apocalyptic
+							
+							modifier = {
+								factor = 0
+								religion_group = apocalyptic
+							}
+							modifier = { # Prioritize getting a sympathy trait that is useful
+								factor = 100
+								OR = {
+									any_demesne_province = {
+										religion_group = apocalyptic
+									}
+									any_vassal = {
+										religion_group = apocalyptic
+									}
+								}
+							}
+							modifier = { # Otherwise try to emulate your liege
+								factor = 5
+								NOR = {
+									any_demesne_province = {
+										NOT = { religion_group = apocalyptic }
+									}
+									any_vassal = {
+										NOT = { religion_group = apocalyptic }
+									}
+								}
+								any_liege = {
+									OR = {
+										AND = {
+											trait = sympathy_apocalyptic
+											religion = ROOT
+										}
+										religion_group = apocalyptic
+									}
+								}	
+							}
+							modifier = {
+								factor = 0
+								NOR = {
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_mormon
+												religion = ROOT
+											}
+											religion_group = apocalyptic
+										}
+									}
+									spouse = {
+										religion_group = apocalyptic
+									}
+									any_courtier_or_vassal = {
+										religion_group = apocalyptic
+									}
+									any_neighbor_independent_ruler = {
+										religion_group = apocalyptic
+									}
+									any_demesne_province = {
+										religion_group = apocalyptic
+									}
+								}
+							}
+						}
+						100 = {
+							add_trait = sympathy_post_christian
+							
+							modifier = {
+								factor = 0
+								religion_group = post_christian_group
+							}
+							modifier = { # Prioritize getting a sympathy trait that is useful
+								factor = 100
+								OR = {
+									any_demesne_province = {
+										religion_group = post_christian_group
+									}
+									any_vassal = {
+										religion_group = post_christian_group
+									}
+								}
+							}
+							modifier = { # Otherwise try to emulate your liege
+								factor = 5
+								NOR = {
+									any_demesne_province = {
+										NOT = { religion_group = post_christian_group }
+									}
+									any_vassal = {
+										NOT = { religion_group = post_christian_group }
+									}
+								}
+								any_liege = {
+									OR = {
+										AND = {
+											trait = sympathy_post_christian
+											religion = ROOT
+										}
+										religion_group = post_christian_group
+									}
+								}	
+							}
+							modifier = {
+								factor = 0
+								NOR = {
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_mormon
+												religion = ROOT
+											}
+											religion_group = post_christian_group
+										}
+									}
+									spouse = {
+										religion_group = post_christian_group
+									}
+									any_courtier_or_vassal = {
+										religion_group = post_christian_group
+									}
+									any_neighbor_independent_ruler = {
+										religion_group = post_christian_group
+									}
+									any_demesne_province = {
+										religion_group = post_christian_group
 									}
 								}
 							}

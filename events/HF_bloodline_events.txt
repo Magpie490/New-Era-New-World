@@ -432,6 +432,24 @@ character_event = { # Sympathy for founder group
 						}
 					}
 					AND = {
+						religion_group = apocalyptic
+						ROOT = {
+							NOR = {
+								religion_group = apocalyptic
+								trait = sympathy_apocalyptic
+							}
+						}
+					}
+					AND = {
+						religion_group = post_christian_group
+						ROOT = {
+							NOR = {
+								religion_group = post_christian_group
+								trait = sympathy_post_christian
+							}
+						}
+					}
+					AND = {
 						religion_group = zoroastrian_group
 						ROOT = {
 							NOR = {
@@ -586,6 +604,24 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = mormonic
 									trait = sympathy_mormon
+								}
+							}
+						}
+						AND = {
+							religion_group = apocalyptic
+							ROOT = {
+								NOR = {
+									religion_group = apocalyptic
+									trait = sympathy_apocalyptic
+								}
+							}
+						}
+						AND = {
+							religion_group = post_christian_group
+							ROOT = {
+								NOR = {
+									religion_group = post_christian_group
+									trait = sympathy_post_christian
 								}
 							}
 						}
@@ -766,6 +802,22 @@ character_event = { # Sympathy for founder group
 				}
 			}
 			add_trait = sympathy_mormon
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = apocalyptic
+				}
+			}
+			add_trait = sympathy_apocalyptic
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = post_christian_group
+				}
+			}
+			add_trait = sympathy_post_christian
 		}
 		else_if = {
 			limit = {

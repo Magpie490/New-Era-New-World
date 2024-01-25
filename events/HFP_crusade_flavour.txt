@@ -1231,6 +1231,22 @@ character_event = {
 	        			}
 	        			AND = {
 	        				event_target:current_location = {
+	        					religion_group = apocalyptic
+	        				}
+	        				NOT = {
+	        					trait = sympathy_apocalyptic
+	        				}
+	        			}
+	        			AND = {
+	        				event_target:current_location = {
+	        					religion_group = spost_christian_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_post_christian
+	        				}
+	        			}
+	        			AND = {
+	        				event_target:current_location = {
 	        					religion_group = zoroastrian_group
 	        				}
 	        				NOT = {
@@ -1322,6 +1338,22 @@ character_event = {
 		        			}
 		        			AND = {
 		        				event_target:current_location = {
+		        					religion_group = apocalyptic
+		        				}
+		        				NOT = {
+		        					trait = sympathy_apocalyptic
+		        				}
+		        			}
+		        			AND = {
+		        				event_target:current_location = {
+		        					religion_group = post_christian_group
+		        				}
+		        				NOT = {
+		        					trait = sympathy_post_christian
+		        				}
+		        			}
+		        			AND = {
+		        				event_target:current_location = {
 		        					religion_group = zoroastrian_group
 		        				}
 		        				NOT = {
@@ -1376,6 +1408,28 @@ character_event = {
         				}
         			}
         			add_trait = sympathy_mormon
+        		}
+        		if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = apocalyptic
+        				}
+        				NOT = {
+        					trait = sympathy_apocalyptic
+        				}
+        			}
+        			add_trait = sympathy_apocalyptic
+        		}
+        		if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = post_christian_group
+        				}
+        				NOT = {
+        					trait = sympathy_post_christian
+        				}
+        			}
+        			add_trait = sympathy_post_christian
         		}
         		if = {
         			limit = {
@@ -2287,6 +2341,28 @@ character_event = {
     				}
     			}
     			add_trait = sympathy_mormon
+    		}
+    		if = {
+    			limit = {
+    				event_target:current_location = {
+    					religion_group = apocalyptic
+    				}
+    				NOT = {
+    					trait = sympathy_apocalyptic
+    				}
+    			}
+    			add_trait = sympathy_apocalyptic
+    		}
+    		if = {
+    			limit = {
+    				event_target:current_location = {
+    					religion_group = post_christian_group
+    				}
+    				NOT = {
+    					trait = sympathy_post_christian
+    				}
+    			}
+    			add_trait = sympathy_post_christian
     		}
     		if = {
     			limit = {

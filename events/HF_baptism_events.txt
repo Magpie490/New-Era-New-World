@@ -1473,6 +1473,14 @@ letter_event = {
 						event_target:sponsoring_king = { religion_group = mormonic }
 					}
 					AND = {
+						trait = sympathy_post_christian
+						event_target:sponsoring_king = { religion_group = post_christian_group }
+					}
+					AND = {
+						trait = sympathy_apocalyptic
+						event_target:sponsoring_king = { religion_group = apocalyptic }
+					}
+					AND = {
 						trait = sympathy_pagans
 						event_target:sponsoring_king = { religion_group = pagan_group }
 					}
@@ -1907,6 +1915,28 @@ narrative_event = {
 			limit = { 
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = apocalyptic
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_apocalyptic
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = post_christian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_post_christian
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = pagan_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2012,6 +2042,28 @@ narrative_event = {
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
 			add_trait = sympathy_mormon
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = apocalyptic
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_apocalyptic
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = post_christian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_post_christian
 		}
 		if = { 
 			limit = { 
@@ -2360,6 +2412,28 @@ narrative_event = {
 			limit = { 
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = apocalyptic
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_apocalyptic
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = post_christian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_post_christian
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = pagan_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2487,6 +2561,28 @@ narrative_event = {
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
 			add_trait = sympathy_mormon
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = apocalyptic
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_apocalyptic
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = post_christian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_post_christian
 		}
 		if = { 
 			limit = { 

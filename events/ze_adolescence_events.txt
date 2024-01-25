@@ -3718,6 +3718,8 @@ character_event = {
 						trait = sympathy_christendom
 						trait = sympathy_islam
 						trait = sympathy_mormon
+						trait = sympathy_apocalyptic
+						trait = sympathy_post_christian
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
@@ -3788,6 +3790,38 @@ character_event = {
 							location = { religion_group = mormonic } 
 							any_friend = { religion_group = mormonic }
 							any_sibling = { religion_group = mormonic }
+						}
+					}
+				}
+				10 = {
+					set_character_flag = add_sympathy_apocalyptic
+					modifier = {
+						factor = 0
+						religion_group = apocalyptic
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = apocalyptic }
+							location = { religion_group = apocalyptic } 
+							any_friend = { religion_group = apocalyptic }
+							any_sibling = { religion_group = apocalyptic }
+						}
+					}
+				}
+				10 = {
+					set_character_flag = add_sympathy_post_christian
+					modifier = {
+						factor = 0
+						religion_group = post_christian_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = post_christian_group }
+							location = { religion_group = post_christian_group } 
+							any_friend = { religion_group = post_christian_group }
+							any_sibling = { religion_group = post_christian_group }
 						}
 					}
 				}
@@ -3876,6 +3910,8 @@ character_event = {
 						trait = sympathy_christendom
 						trait = sympathy_islam
 						trait = sympathy_mormon
+						trait = sympathy_apocalyptic
+						trait = sympathy_post_christian
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
@@ -3990,6 +4026,18 @@ character_event = {
 			remove_trait = curious
 			add_trait = sympathy_mormon
 			clr_character_flag = add_sympathy_mormon
+		}
+		if = {
+			limit = { has_character_flag = add_sympathy_apocalyptic }
+			remove_trait = curious
+			add_trait = sympathy_apocalyptic
+			clr_character_flag = add_sympathy_apocalyptic
+		}
+		if = {
+			limit = { has_character_flag = add_sympathy_post_christian }
+			remove_trait = curious
+			add_trait = sympathy_post_christian
+			clr_character_flag = add_sympathy_post_christian
 		}
 		if = {
 			limit = { has_character_flag = add_sympathy_pagans }
@@ -4128,6 +4176,22 @@ character_event = {
 				}
 			}
 			tooltip = { FROM = { remove_trait = curious add_trait = sympathy_mormon } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_character_flag = add_sympathy_post_christian
+				}
+			}
+			tooltip = { FROM = { remove_trait = curious add_trait = sympathy_post_christian } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_character_flag = add_sympathy_apocalyptic
+				}
+			}
+			tooltip = { FROM = { remove_trait = curious add_trait = sympathy_apocalyptic } }
 		}
 		if = {
 			limit = {
@@ -4327,6 +4391,16 @@ character_event = {
 			clr_character_flag = add_sympathy_mormon
 		}
 		if = {
+			limit = { has_character_flag = add_sympathy_apocalyptic }
+			add_trait = sympathy_apocalyptic
+			clr_character_flag = add_sympathy_apocalyptic
+		}
+		if = {
+			limit = { has_character_flag = add_sympathy_post_christian }
+			add_trait = sympathy_post_christian
+			clr_character_flag = add_sympathy_post_christian
+		}
+		if = {
 			limit = { has_character_flag = add_sympathy_pagans }
 			add_trait = sympathy_pagans
 			clr_character_flag = add_sympathy_pagans
@@ -4408,6 +4482,8 @@ character_event = {
 						trait = sympathy_christendom
 						trait = sympathy_islam
 						trait = sympathy_mormon
+						trait = sympathy_apocalyptic
+						trait = sympathy_post_christian
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
@@ -4461,6 +4537,8 @@ character_event = {
 						trait = sympathy_christendom
 						trait = sympathy_islam
 						trait = sympathy_mormon
+						trait = sympathy_apocalyptic
+						trait = sympathy_post_christian
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism

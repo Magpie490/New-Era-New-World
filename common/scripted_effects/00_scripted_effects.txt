@@ -10430,6 +10430,20 @@ add_sympathy_for_prevs_true_religion_effect = {
 	}
 	else_if = {
 		limit = { 
+			PREV = { true_religion_group_post_christian_trigger = yes } 
+			NOT = { religion_group = post_christian_group }
+		}
+		add_trait = sympathy_post_christian
+	}
+	else_if = {
+		limit = { 
+			PREV = { true_religion_group_apocalyptic_trigger = yes } 
+			NOT = { religion_group = apocalyptic }
+		}
+		add_trait = sympathy_apocalyptic
+	}
+	else_if = {
+		limit = { 
 			PREV = { true_religion_group_pagan_group_trigger = yes } 
 			NOT = { religion_group = pagan_group }
 		}
@@ -10542,6 +10556,20 @@ add_sympathy_for_prevs_open_religion_effect = {
 			NOT = { religion_group = mormonic }
 		}
 		add_trait = sympathy_mormon
+	}
+	else_if = {
+		limit = { 
+			PREV = { religion_group = apocalyptic } 
+			NOT = { religion_group = apocalyptic }
+		}
+		add_trait = sympathy_apocalyptic
+	}
+	else_if = {
+		limit = { 
+			PREV = { religion_group = post_christian_group } 
+			NOT = { religion_group = post_christian_group }
+		}
+		add_trait = sympathy_post_christian
 	}
 	else_if = {
 		limit = { 
@@ -23746,6 +23774,22 @@ add_sympathy_for_religion_effect = {
 		}
 		ROOT = {
 			add_trait = sympathy_mormon
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = apocalyptic
+		}
+		ROOT = {
+			add_trait = sympathy_apocalyptic
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = post_christian_group
+		}
+		ROOT = {
+			add_trait = sympathy_post_christian
 		}
 	}
 	else_if = {

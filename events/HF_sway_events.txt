@@ -104,6 +104,14 @@ character_event = {
 						ROOT = { NOT = { religion_group = mormonic } }
 					}
 					event_target:potential_antagonized = { 
+						trait = sympathy_apocalyptic
+						ROOT = { NOT = { religion_group = apocalyptic } }
+					}
+					event_target:potential_antagonized = { 
+						trait = sympathy_post_christian
+						ROOT = { NOT = { religion_group = post_christian_group } }
+					}
+					event_target:potential_antagonized = { 
 						trait = sympathy_pagans
 						ROOT = { NOT = { religion_group = pagan_group } }
 					}
@@ -456,6 +464,14 @@ character_event = {
 					AND = {
 						ROOT = { trait = sympathy_mormon }
 						religion_group = mormonic
+					}
+					AND = {
+						ROOT = { trait = sympathy_apocalyptic }
+						religion_group = apocalyptic
+					}
+					AND = {
+						ROOT = { trait = sympathy_post_christian }
+						religion_group = post_christian_group
 					}
 					AND = {
 						ROOT = { trait = sympathy_pagans }
@@ -7021,6 +7037,14 @@ character_event = {
 						NOT = { trait = sympathy_mormon } 
 					} 
 					AND = { 
+						FROM = { religion_group = apocalyptic }
+						NOT = { trait = sympathy_apocalyptic } 
+					}
+					AND = { 
+						FROM = { religion_group = post_christian_group }
+						NOT = { trait = sympathy_post_christian } 
+					}
+					AND = { 
 						FROM = { religion_group = zoroastrian_group }
 						NOT = { trait = sympathy_zoroastrianism } 
 					} 
@@ -7170,6 +7194,24 @@ character_event = {
 				FROM = { has_character_flag = flag_appease_kind_religion }
 			} 
 			random = { chance = 30 add_trait = sympathy_mormon }
+		} 
+		if = { 
+			limit = { 
+				NOT = { religion_group = FROM } 
+				NOT = { trait = sympathy_apocalyptic }
+				FROM = { religion_group = apocalyptic }
+				FROM = { has_character_flag = flag_appease_kind_religion }
+			} 
+			random = { chance = 30 add_trait = sympathy_apocalyptic }
+		} 
+		if = { 
+			limit = { 
+				NOT = { religion_group = FROM } 
+				NOT = { trait = sympathy_post_christian }
+				FROM = { religion_group = post_christian_group }
+				FROM = { has_character_flag = flag_appease_kind_religion }
+			} 
+			random = { chance = 30 add_trait = sympathy_post_christian }
 		} 
 		if = { 
 			limit = { 
@@ -7417,6 +7459,22 @@ character_event = {
 				FROM = { religion_group = mormonic }
 			} 
 			random = { chance = 30 add_trait = sympathy_mormon }
+		} 
+		if = { 
+			limit = { 
+				NOT = { religion_group = FROM } 
+				NOT = { trait = sympathy_apocalyptic }
+				FROM = { religion_group = apocalyptic }
+			} 
+			random = { chance = 30 add_trait = sympathy_apocalyptic }
+		} 
+		if = { 
+			limit = { 
+				NOT = { religion_group = FROM } 
+				NOT = { trait = sympathy_post_christian }
+				FROM = { religion_group = post_christian_group }
+			} 
+			random = { chance = 30 add_trait = sympathy_post_christian }
 		} 
 		if = { 
 			limit = { 
