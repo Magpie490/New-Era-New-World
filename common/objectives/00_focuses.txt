@@ -666,6 +666,16 @@ focus_carousing = {
 				trait = decadent
 				trait = hedonist
 				trait = drunkard
+				trait = cynical
+			}
+		}
+		trigger_if = {
+			limit = { religion = gaiwiio }
+
+			OR = {
+				trait = hedonist
+				trait = drunkard
+				trait = cynical
 			}
 		}
 	}
@@ -689,6 +699,16 @@ focus_carousing = {
 					trait = decadent
 					trait = hedonist
 					trait = drunkard
+					trait = cynical
+				}
+			}
+			trigger_if = {
+				limit = { religion = gaiwiio }
+
+				NOR = {
+					trait = hedonist
+					trait = drunkard
+					trait = cynical
 				}
 			}
 		}
