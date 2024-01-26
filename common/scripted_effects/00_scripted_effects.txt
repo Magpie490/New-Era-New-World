@@ -6468,6 +6468,10 @@ add_crusade_trait_effect = {
 		add_trait = crusader_inuit
 	}
 	else_if = {
+		limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+		add_trait = anishinaabe_crusader
+	}
+	else_if = {
 		limit = { religion_openly_bon_or_reformed_trigger = yes }
 		add_trait = kailash_guardian
 	}
@@ -13748,12 +13752,14 @@ spawn_elder_effect = {
 					religion = west_african_pagan
 					religion = west_african_pagan_reformed
 					has_religion_feature = religion_animistic
+				has_religion_feature = religion_feature_anishinaabe
 				has_religion_feature = religion_feature_emmaean
 					has_religion_feature = religion_feature_celtic2
 					religion = kiratist
 					religion = koyapunem
 					has_religion_feature = religion_feature_maunaxite
 					has_religion_feature = religion_feature_inuit_pagan
+					has_religion_feature = religion_feature_anishinaabe
 					has_religion_feature = religion_feature_celtic
 					has_religion_feature = religion_feature_sarna
 				}

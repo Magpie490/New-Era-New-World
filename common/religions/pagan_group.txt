@@ -2478,35 +2478,23 @@ pagan_group = {
 		}
 		
 		unit_modifier = {
-			levy_size = 0.3
-			
-			retinuesize_perc = 0.5
+			land_morale = 0.4
+			light_infantry_offensive = 0.6
+			light_infantry_defensive = 0.6
 			
 			key = "OFF_RELIGION"
 		}
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_ADIZOOKANAG
-		priest_title = ELDER
-		
-		can_call_crusade = no
+
+		can_call_crusade = yes
 		priests_can_marry = yes
 		allow_looting = yes
 		allow_rivermovement = yes
-		female_temple_holders = yes
-		defensive_attrition = yes
-		ignores_defensive_attrition = yes
-		allow_viking_invasion = yes
-		seafarer = yes
-		max_consorts = 3
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = lakefolk_pagan_reformed
-		
-		aggression = 2.0 # AI aggression factor
-		
-		short_reign_opinion_year_mult = 2.5
+		raised_vassal_opinion_loss = no
+		landed_kin_prestige_bonus = yes
+		reformed = inuit_pagan_reformed
 		dislike_tribal_organization = yes
 		can_demand_religious_conversion = no
+		allow_in_ruler_designer = no
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -2539,35 +2527,29 @@ pagan_group = {
 			THE_DARK_SPIRITS GOD_THE_WENDIGO
 		}
 		
-		unit_modifier = {
-			levy_size = 0.3
-			
-			retinuesize_perc = 0.5
-			
-			key = "OFF_RELIGION"
-		}
-		
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_ADIZOOKANAG
 		priest_title = ELDER
 		
+		unit_modifier = {
+			land_morale = 0.4
+			light_infantry_offensive = 0.6
+			light_infantry_defensive = 0.6
+			
+			key = "OFF_RELIGION"
+		}
+		
+		aggression = 1.2
 		can_call_crusade = no
 		priests_can_marry = yes
 		allow_looting = yes
 		allow_rivermovement = yes
-		female_temple_holders = yes
-		defensive_attrition = yes
-		ignores_defensive_attrition = yes
-		allow_viking_invasion = yes
-		seafarer = yes
-		max_consorts = 3
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = lakefolk_pagan_reformed
-		
-		aggression = 2.0 # AI aggression factor
-		
-		short_reign_opinion_year_mult = 2.5
+		raised_vassal_opinion_loss = no
+		landed_kin_prestige_bonus = yes
+		allow_in_ruler_designer = yes
+		reformed = anishinaabe_reformed
 		dislike_tribal_organization = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		can_demand_religious_conversion = no
 		
 		religious_clothing_head = 3

@@ -1326,6 +1326,50 @@ religion_doctrine = {
 
 
 
+	religion_feature_anishinaabe = {
+		picture = GFX_religion_feature_anishinaabe
+		potential = {
+			has_game_started = yes
+			religion = anishinaabe_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOR = {
+				has_selected_religion_feature = religion_animistic  #Redundant
+				has_selected_religion_feature = religion_beatification 	#Redundant
+			}
+		}
+		trigger = {
+			religion = anishinaabe_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_animistic #redundant
+				has_selected_religion_feature = religion_beatification #redundant
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_land_morale }
+			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
+			hidden_tooltip = { 
+				set_unit_modifier = { 
+					land_morale = 0.1
+					key = "ANIMISTIC_RELIGION"
+				}
+				if = {
+					limit = { #Unlock looting for religions which do not have it already.
+						FROM = { 
+							character = yes 
+						}
+					}
+					set_allow_looting = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_inuit_pagan = {
 		picture = GFX_religion_feature_inuit_pagan
 		potential = {
