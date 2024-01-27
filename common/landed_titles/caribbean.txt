@@ -32,17 +32,29 @@ e_caribbean = {
 			color={ 206 166 155 }
 			color2={ 220 220 0 }
 
-			capital = 1100 # Havana
+			capital = 922 # Havana
 			
+			c_havana = {
+				color={ 255 100 37 }
+				color2={ 220 220 0 }
+
+				b_la_habana_CUB = {}
+				b_guanabacoa_CUB = {}
+				b_regla_CUB = {}
+				b_boyeros_CUB = {}
+				b_playa_CUB = {}
+				b_la_lisa_CUB = {}
+				b_diez_de_octubre_CUB = {}
+
+			}
 			c_mayabeque = {
 				color={ 197 151 37 }
 				color2={ 220 220 0 }
 				holy_site = santeria #placeholder
 				holy_site = candomble
 
-				b_la_habana_CUB = {}
-				b_guanabacoa_CUB = {}
-				b_regla_CUB = {}
+				b_san_jose_de_las_lajas = {}
+				b_san_nicolas_de_bari = {}
 				b_mariel_CUB = {}
 				b_bauta_CUB = {}
 				b_alamar_CUB = {}
@@ -62,31 +74,17 @@ e_caribbean = {
 				b_pijirigua_CUB = {}
 				b_camacho_CUB = {}
 			}
-			c_matanzas = {
-				color={ 213 180 170 }
-				color2={ 220 220 0 }
-
-				b_matanzas_CUB = {}
-				b_cardenas_CUB = {}
-				b_varadero_CUB = {}
-				b_jovellanos_CUB = {}
-				b_limonar_CUB = {}
-				b_santa_marta_CUB = {}
-				b_santa_ana_CUB = {}
-				b_coliseo_CUB = {}
-			}
-			c_pinar_del_rio = {
+			c_pinar_del_rio = { # fix
 				color={ 185 58 149 }
 				color2={ 220 220 0 }
 
 				b_pinar_del_rio_CUB = {}
 				b_san_cristobal_CUB = {}
-				b_guane_CUB = {}
 				b_la_coloma_CUB = {}
-				b_mantua_CUB = {}
 				b_sandino_CUB = {}
 				b_montezuelo_CUB = {}
 				b_pilotos_CUB = {}
+				b_vinales_CUB = {}
 			}
 			c_isla_de_pinos = {
 				color={ 199 112 129 }
@@ -101,25 +99,49 @@ e_caribbean = {
 				b_la_isabel_CUB = {}
 				b_jucaro_CUB = {}
 			}
-		}
-		d_las_villas = {
-			color={ 221 222 230 }
-			color2={ 220 220 0 }
-
-			capital = 1105 # Santa Clara
-			
-			c_santa_clara = {
-				color={ 201 157 220 }
+			c_mantua = {
+				color={ 230 80 129 }
 				color2={ 220 220 0 }
 
-				b_santa_clara_CUB = {}
-				b_sagua_la_grande_CUB = {}
-				b_caibarien_CUB = {}
-				b_esperanza_CUB = {}
-				b_encrucijada_CUB = {}
-				b_placetas_CUB = {}
-				b_mordazo_CUB = {}
-				b_camajuani_CUB = {}
+				b_san_juan_y_martinez_CUB = {}
+				b_santa_lucia_CUB = {}
+				b_minas_de_matahambre_CUB = {}
+				b_isabel_rubio_CUB = {}
+				b_vivero_CUB = {}
+				b_guane_CUB = {}
+				b_mantua_CUB = {}
+			}
+		}
+		d_matanzas = {
+			color={ 200 150 200 }
+			color2={ 220 220 0 }
+
+			capital = 1101 # Matanzas
+
+			c_matanzas = {
+				color={ 213 180 170 }
+				color2={ 220 220 0 }
+
+				b_matanzas_CUB = {}
+				b_cardenas_CUB = {}
+				b_varadero_CUB = {}
+				b_jovellanos_CUB = {}
+				b_limonar_CUB = {}
+				b_santa_marta_CUB = {}
+				b_santa_ana_CUB = {}
+				b_coliseo_CUB = {}
+			}
+			c_colon_CUB = {
+				color={ 200 200 140 }
+				color2={ 220 220 0 }
+
+				b_colon_CUB = {}
+				b_jaguey_grande_CUB = {}
+				b_los_arabos_CUB = {}
+				b_calimete_CUB = {}
+				b_amarillas_CUB = {}
+				b_australia_CUB = {}
+				b_manguito_CUB = {}
 			}
 			c_zapata = {
 				color={ 155 122 171 }
@@ -133,6 +155,25 @@ e_caribbean = {
 				b_guasasa_CUB = {}
 				b_la_forestal_CUB = {}
 			}
+		}
+		d_las_villas = {
+			color={ 221 222 230 }
+			color2={ 220 220 0 }
+
+			capital = 1105 # Santa Clara
+			
+			c_santa_clara = { # Caibarién actually
+				color={ 201 157 220 }
+				color2={ 220 220 0 }
+
+				b_caibarien_CUB = {}
+				b_sagua_la_grande_CUB = {}
+				b_encrucijada_CUB = {}
+				b_mordazo_CUB = {}
+				b_camajuani_CUB = {}
+				b_remedios_CUB = {}
+				b_san_antonio_de_las_vueltas_CUB = {}
+			}
 			c_cienfuegos = {
 				color={ 232 250 240 }
 				color2={ 220 220 0 }
@@ -143,7 +184,6 @@ e_caribbean = {
 				b_constancia_CUB = {}
 				b_cumanayagua_CUB = {}
 				b_manaquitas_CUB = {}
-				b_manicaragua_CUB = {}
 				b_rodas_CUB = {}
 			}
 			c_sancti_spiritus = {
@@ -153,10 +193,34 @@ e_caribbean = {
 				b_sancti_spiritus_CUB = {}
 				b_trinidad_CUB = {}
 				b_tunas_de_zaza_CUB = {}
-				b_cabaiguan_CUB = {}
 				b_el_maja_CUB = {}
 				b_fomento_CUB = {}
+				b_banao_CUB = {}
+				b_casilda_CUB = {}
+			}
+			c_cabaiguan = {
+				color={ 200 180 100 }
+				color2={ 220 220 0 }
+
+				b_cabaiguan_CUB = {}
+				b_jatibonico_CUB = {}
 				b_guayos_CUB = {}
+				b_yaguajay_CUB = {}
+				b_taguasco_CUB = {}
+				b_zaza_del_medio_CUB = {}
+				b_mayajigua_CUB = {}
+			}
+			c_villa_clara = {
+				color={ 200 240 140 }
+				color2={ 220 220 0 }
+
+				b_santa_clara_CUB = {}
+				b_placetas_CUB = {}
+				b_esperanza_CUB = {}
+				b_manicaragua_CUB = {}
+				b_ranchuelo_CUB = {}
+				b_matagua_CUB = {}
+				b_baez_CUB = {}
 			}
 		}
 		d_camaguey = {
@@ -187,22 +251,56 @@ e_caribbean = {
 				b_el_purial_CUB = {}
 				b_jagueyal_CUB = {}
 				b_majagua_CUB = {}
-				b_jatibonico_CUB = {}
 				b_sanguily_CUB = {}
 				b_santa_rosa_CUB = {}
 			}
-			c_camaguey = {
+			c_camaguey = { 
 				color={ 238 175 247 }
 				color2={ 220 220 0 }
 
 				b_camaguey_CUB = {}
 				b_siboney_CUB = {}
-				b_la_jagua_CUB = {}
 				b_botones_CUB = {}
-				b_sibanicu_CUB = {}
-				b_vertientes_CUB = {}
 				b_jaguey_CUB = {}
 				b_agramonte_CUB = {}
+				b_florida_CUB = {}
+				b_carlos_manuel_de_cespedes_CUB = {}
+			}
+			c_nuevitas = {
+				color={ 200 175 255 }
+				color2={ 220 220 0 }
+
+				b_nuevitas_CUB = {}
+				b_minas_CUB = {}
+				b_senado_CUB = {}
+				b_camalote_CUB = {}
+				b_cascorro_CUB = {}
+				b_sibanicu_CUB = {}
+				b_guaimaro_cUB = {}
+			}
+			c_vertientes = {
+				color={ 240 175 200 }
+				color2={ 220 220 0 }
+
+				b_vertientes_CUB = {}
+				b_la_jagua_CUB = {}
+				b_santa_cruz_del_sur_CUB = {}
+				b_najasa_CUB = {}
+				b_candido_gonzales_CUB = {}
+				b_haiti_CUB = {}
+				b_batalla_de_las_guasimas_CUB = {}
+			}
+			c_cayo_romano = {
+				color={ 240 200 255 }
+				color2={ 220 220 0 }
+
+				b_romano_CUB = {}
+				b_coco_CUB = {}
+				b_guillermo_CUB = {}
+				b_santa_maria_CUB = {}
+				b_fragoso_CUB = {}
+				b_pajonai_CUB = {}
+				b_cruz_CUB = {}
 			}
 		}
 		d_oriente = {
@@ -211,44 +309,6 @@ e_caribbean = {
 
 			capital = 1113 # Sierra Maestra
 			
-			c_las_tunas = {
-				color = { 172 164 145 }
-				color2={ 220 220 20 }
-
-				b_las_tunas_CUB = {}
-				b_puerto_padre_CUB = {}
-				b_naranjo_CUB = {}
-				b_guaimaro_cUB = {}
-				b_guayabal_CUB = {}
-				b_ramirez_CUB = {}
-				b_gaston_CUB = {}
-				b_maniabon_CUB = {}
-			}
-			c_granma = { # fix
-				color = { 143 106 92 }
-				color2={ 220 220 20 }
-
-				b_bayamo_CUB = {}
-				b_manzanillo_CUB = {}
-				b_yara_CUB = {}
-				b_guisa_CUB = {}
-				b_jiguani_CUB = {}
-				b_san_francisco_CUB = {}
-				b_rio_cauto_CUB = {}
-			}
-			c_holguin = {
-				color = { 133 146 134 }
-				color2={ 220 220 20 }
-
-				b_holguin_CUB = {}
-				b_gibara_CUB = {}
-				b_banes_CUB = {}
-				b_mayari_CUB = {}
-				b_antilla_CUB = {}
-				b_san_german_CUB = {}
-				b_cacocum_CUB = {}
-				b_retrete_CUB = {}
-			}
 			c_sierra_maestra = {
 				color = { 180 173 188 }
 				color2={ 220 220 20 }
@@ -287,25 +347,6 @@ e_caribbean = {
 				b_yamaniguey_CUB = {}
 				b_naranjo_agrio_CUB = {}
 			}
-			c_campechuela = {
-				color = { 132 101 90 }
-				color2={ 220 220 20 }
-
-				b_campechuela_CUB = {}
-				b_niquero_CUB = {}
-				b_bartolome_maso_CUB = {}
-				b_pilon_CUB = {}
-				b_media_luna_CUB = {}
-				b_san_ramon_CUB = {}
-				b_las_mercedes_CUB = {}
-			}
-		}
-		d_gitmo = {
-			color = { 79 75 70 }
-			color2={ 220 220 20 }
-
-			capital = 1115
-
 			c_guantanamo = {
 				color = { 163 158 152 }
 				color2={ 220 220 20 }
@@ -319,6 +360,62 @@ e_caribbean = {
 				b_tortuguilla_CUB = {}
 				b_sempre_CUB = {}
 				b_niceto_perez_CUB = {}
+			}
+		}
+		d_granma = {
+			color = { 143 106 92 }
+			color2={ 220 220 20 }
+
+			capital = 1111 # Granny
+
+			c_granma = {
+				color = { 143 106 92 }
+				color2={ 220 220 20 }
+
+				b_bayamo_CUB = {}
+				b_manzanillo_CUB = {}
+				b_yara_CUB = {}
+				b_guisa_CUB = {}
+				b_jiguani_CUB = {}
+				b_san_francisco_CUB = {}
+				b_rio_cauto_CUB = {}
+			}
+			c_holguin = {
+				color = { 133 146 134 }
+				color2={ 220 220 20 }
+
+				b_holguin_CUB = {}
+				b_gibara_CUB = {}
+				b_banes_CUB = {}
+				b_mayari_CUB = {}
+				b_antilla_CUB = {}
+				b_san_german_CUB = {}
+				b_cacocum_CUB = {}
+				b_retrete_CUB = {}
+			}
+			c_campechuela = {
+				color = { 132 101 90 }
+				color2={ 220 220 20 }
+
+				b_campechuela_CUB = {}
+				b_niquero_CUB = {}
+				b_bartolome_maso_CUB = {}
+				b_pilon_CUB = {}
+				b_media_luna_CUB = {}
+				b_san_ramon_CUB = {}
+				b_las_mercedes_CUB = {}
+			}
+			c_las_tunas = {
+				color = { 172 164 145 }
+				color2={ 220 220 20 }
+
+				b_las_tunas_CUB = {}
+				b_puerto_padre_CUB = {}
+				b_naranjo_CUB = {}
+				b_guayabal_CUB = {}
+				b_ramirez_CUB = {}
+				b_gaston_CUB = {}
+				b_maniabon_CUB = {}
 			}
 		}
 	}
