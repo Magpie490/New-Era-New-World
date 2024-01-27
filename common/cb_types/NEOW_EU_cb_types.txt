@@ -182,9 +182,9 @@ european_unification = {
 		}
 	}
 }
-cyprus_reclaimation_confed = {
-    name = CB_NAME_CYPRUS_RECLAIMATION_CONFED
-	war_name = WAR_NAME_CYPRUS_RECLAIMATION_CONFED
+cree_reclaimation_confed = {
+    name = CB_NAME_CREE_RECLAIMATION_CONFED
+	war_name = WAR_NAME_CREE_RECLAIMATION_CONFED
 	sprite = 17
 	truce_days = 1825
 	is_permanent = yes
@@ -203,8 +203,7 @@ cyprus_reclaimation_confed = {
 	can_use = {
 		ROOT = {
 			OR = {
-				has_landed_title = k_cyprus_league
-				has_landed_title = e_aegean
+				has_landed_title = k_cree_confed
 			}
 			independent = yes
 			NOT = { same_realm = FROM }
@@ -215,16 +214,14 @@ cyprus_reclaimation_confed = {
 
 	can_use_title = {
 		OR = {
-			de_jure_liege_or_above = e_greece
-			de_jure_liege_or_above = e_turkey
+			de_jure_liege_or_above = k_jamesie
 		}
 	}
 	
 	is_valid = {
 		ROOT = {
 			OR = {
-				has_landed_title = k_cyprus_league
-				has_landed_title = e_aegean
+				has_landed_title = k_jamesie
 			}
 			independent = yes
 			NOT = { same_realm = FROM }
