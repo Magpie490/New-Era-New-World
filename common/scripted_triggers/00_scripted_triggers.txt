@@ -775,6 +775,10 @@ has_crusade_trait_trigger = {
 		trait = romuvas_own
 	}
 	trigger_else_if = {
+		limit = { religion_openly_antiquarianist_or_reformed_trigger = yes }
+		trait = antiquarianist_crusader
+	}
+	trigger_else_if = {
 		limit = { religion_openly_finnish_or_reformed_trigger = yes }
 		trait = ukkos_shield
 	}

@@ -9,13 +9,16 @@ old_world_cultist_group = {
 	
 	color = { 0.3 0.3 1.0 }
 
-	antiquarianist = {
+	antiquarianist_reformed = {
 		graphical_culture = muslimgfx
 
 		icon = 81
+		heresy_icon = 109
 		
-		color = { 255 106 0 }
-
+		color = { 255 146 40 }
+		
+		crusade_name = INVERVENTION
+		
 		scripture_name = THE_ANNALS_OF_INDUSTRY
 		
 		high_god_name = GOD_FATHER_INDUSTRY
@@ -32,16 +35,66 @@ old_world_cultist_group = {
 			GOD_MOTHER_GAIA GOD_NATURE_BAD
 		}
 		
-		aggression = 1.1
+		aggression = 1.3
+		
 		allow_rivermovement = yes
-		allow_viking_invasion = yes
-		allow_looting = yes
 		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
 		max_consorts = 3
-		priests_can_inherit = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		allow_in_ruler_designer = no
+		religious_clothing_head = 14
+		religious_clothing_priest = 6
+		
+		
+	}
+	antiquarianist = {
+		graphical_culture = muslimgfx
+
+		icon = 81
+		heresy_icon = 109
+		
+		color = { 255 106 0 }
+
+		crusade_name = INVERVENTION
+		
+		scripture_name = THE_ANNALS_OF_INDUSTRY
+		
+		high_god_name = GOD_FATHER_INDUSTRY
+		
+		priest_title = SMITH
+		
+		interface_skin = { ironist_interface OWC_interface pagan_interface }
+		
+		god_names = {
+			GOD_FATHER_INDUSTRY GOD_TITANS_OF_PROGRESS GOD_FATHER_DODGE GOD_FATHER_LELAND GOD_FATHER_FORD GOD_FATHER_PROMETHEUS
+		}
+		
+		evil_god_names = {
+			GOD_MOTHER_GAIA GOD_NATURE_BAD
+		}
+		
+		aggression = 1.3
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
 		defensive_attrition = yes
 		ignores_defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = antiquarianist_reformed
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 6
+		
 		
 	}
 	fidelista = {

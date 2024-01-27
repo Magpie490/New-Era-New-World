@@ -2332,6 +2332,31 @@ d_tengri_pagan_reformed = {
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
 
+d_antiquarianist_reformed = {
+	color={ 255 146 40 }
+	color2={ 220 220 0 }
+	
+	capital = 118 #Detroit
+	
+	title = "HEAD_MAGNATE"
+	title_female = "HEAD_MAGNATE"
+	foa = "POPE_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes #always exists - reformed pagan religious heads need this, the code handles it if you reform as temporal		
+	
+	# Controls a religion
+	controls_religion = antiquarianist_reformed
+	
+	religion = antiquarianist_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
 d_baltic_pagan_reformed = {
 	color={ 122 165 70 }
 	color2={ 220 220 0 }

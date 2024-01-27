@@ -4297,6 +4297,7 @@ narrative_event = {
 			inuit_pagan_reformed          = { inuit_pagan = { set_flag = has_been_reformed } }
 			hellenic_pagan_reformed     = { hellenic_pagan = { set_flag = has_been_reformed } }
 			baltic_pagan_reformed     = { baltic_pagan = { set_flag = has_been_reformed } }
+			antiquarianist_reformed     = { antiquarianist = { set_flag = has_been_reformed } }
 			sarna_pagan_reformed     = { sarna_pagan = { set_flag = has_been_reformed } }
 			bon_reformed     = { bon = { set_flag = has_been_reformed } }
 			emmaean_reformed     = { emmaean = { set_flag = has_been_reformed } }
@@ -4319,7 +4320,6 @@ narrative_event = {
 
 				starist_pagan_reformed        = { d_starist_pagan_reformed = { save_event_target_as = religious_head_title } }
 				tengri_pagan_reformed       = { d_tengri_pagan_reformed = { save_event_target_as = religious_head_title } }
-				hellenic_pagan_reformed       = { d_baltic_pagan_reformed = { save_event_target_as = religious_head_title } }
 				finnish_pagan_reformed      = { d_finnish_pagan_reformed = { save_event_target_as = religious_head_title } }
 				folklorist_reformed        = { d_folklorist_reformed = { save_event_target_as = religious_head_title } }
 				novelist_reformed       = { d_novelist_reformed = { save_event_target_as = religious_head_title } }
@@ -4327,6 +4327,7 @@ narrative_event = {
 				inuit_pagan_reformed          = { d_inuit_pagan_reformed = { save_event_target_as = religious_head_title } }
 				hellenic_pagan_reformed          = { k_hellenic_pagan = { save_event_target_as = religious_head_title } }
 				baltic_pagan_reformed     = { d_baltic_pagan_reformed = { save_event_target_as = religious_head_title } }
+				antiquarianist_reformed     = { d_antiquarianist_reformed = { save_event_target_as = religious_head_title } }
 				sarna_pagan_reformed     = { d_sarna_pagan_reformed = { save_event_target_as = religious_head_title } }
 				bon_reformed     = { d_bon_reformed = { save_event_target_as = religious_head_title } }
 				emmaean_reformed     = { d_emmaean = { save_event_target_as = religious_head_title } }
@@ -4577,6 +4578,8 @@ narrative_event = {
 				remove_intermarry = maunaxite_reformed
 				remove_intermarry = baltic_pagan
 				remove_intermarry = baltic_pagan_reformed
+				remove_intermarry = antiquarianist
+				remove_intermarry = antiquarianist_reformed
 				remove_intermarry = finnish_pagan
 				remove_intermarry = finnish_pagan_reformed
 				remove_intermarry = hellenic_pagan
@@ -4783,6 +4786,31 @@ narrative_event = {
 				}
 
 				baltic_pagan_reformed = {
+					set_unit_modifier = {
+						garrison_size = 0.2
+						levy_size = 0.2
+
+						key = DEF_RELIGION
+					}
+
+					set_unit_home_modifier = {
+						land_morale = 0.8
+						garrison_size = 0.4
+
+						light_infantry_defensive = 0.8
+						heavy_infantry_defensive = 0.8
+						pikemen_defensive = 0.8
+						light_cavalry_defensive = 0.8
+						knights_defensive = 0.8
+						archers_defensive = 0.8
+						horse_archers_defensive = 0.8
+						camel_cavalry_defensive = 0.8
+						war_elephants_defensive = 0.8
+
+						key = DEF_RELIGION_HOME_TERRITORY
+					}
+				}
+				antiquarianist_reformed = {
 					set_unit_modifier = {
 						garrison_size = 0.2
 						levy_size = 0.2

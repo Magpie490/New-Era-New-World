@@ -1326,6 +1326,45 @@ religion_doctrine = {
 
 
 
+	religion_feature_antiquarianist = {
+		picture = GFX_religion_feature_antiquarianist
+		potential = {
+			has_game_started = yes
+			religion = antiquarianist_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOR = {
+				has_selected_religion_feature = religion_adventuring  #Redundant
+				has_selected_religion_feature = religion_peaceful
+				has_selected_religion_feature = religion_ritual_sacrifice
+				has_selected_religion_feature = religion_patriarchal # Incompatible
+				has_selected_religion_feature = religion_matriarchal # Incompatible
+			}
+		}
+		trigger = {
+			religion = antiquarianist_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_adventuring #redundant
+				has_selected_religion_feature = religion_peaceful
+				has_selected_religion_feature = religion_ritual_sacrifice
+				has_selected_religion_feature = religion_patriarchal # Incompatible
+				has_selected_religion_feature = religion_matriarchal # Incompatible
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_adventuring }
+			custom_tooltip = { text = tooltip_religion_feature_pirating }
+			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			hidden_tooltip = {
+				set_heir_designation = yes
+				enable_prepared_invasion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_anishinaabe = {
 		picture = GFX_religion_feature_anishinaabe
 		potential = {

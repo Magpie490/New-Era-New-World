@@ -444,6 +444,7 @@ targeted_decisions = {
 				religion = finnish_pagan
 				religion = tengri_pagan
 				religion = baltic_pagan
+				religion = antiquarianist
 				religion = novelist
 				religion = folklorist
 				religion = maunaxite
@@ -485,6 +486,10 @@ targeted_decisions = {
 			if = {
 				limit = { religion = baltic_pagan }
 				religion = baltic_pagan_reformed
+			}
+			if = {
+				limit = { religion = antiquarianist }
+				religion = antiquarianist_reformed
 			}
 			if = {
 				limit = { religion = tengri_pagan }
@@ -613,6 +618,10 @@ targeted_decisions = {
 					AND = {
 						religion = baltic_pagan
 						baltic_pagan_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = antiquarianist
+						antiquarianist_reformed = { has_religion_feature = religion_proselytizing }
 					}
 					AND = {
 						religion = tengri_pagan

@@ -216,6 +216,8 @@ decisions = {
 				religion = finnish_pagan_reformed
 				religion = baltic_pagan
 				religion = baltic_pagan_reformed
+				religion = antiquarianist
+				religion = antiquarianist_reformed
 				religion = oldbeliever
 				religion = bezpopotvsy
 				religion = haymanot
@@ -286,6 +288,22 @@ decisions = {
 										OR = {
 											religion = baltic_pagan
 											religion = baltic_pagan_reformed
+										}
+									}
+								}
+							}
+							AND = {
+								ROOT = {
+									OR = {
+										religion = antiquarianist
+										religion = antiquarianist_reformed
+									}
+								}
+								attacker = {
+									NOT = {
+										OR = {
+											religion = antiquarianist
+											religion = antiquarianist_reformed
 										}
 									}
 								}
