@@ -1156,40 +1156,46 @@ e_great_planes = {
 			}
 		}
 	}
-	k_platte = {
-		color = { 190 225 111 }
-		color2= { 255 255 255 }
-
-		culture = grangelander
-
-		capital = 353 # Omaha
-
-		# Crusade target weight
-		catholic = 50
-		revelationist_reformed = 50
-		norse_pagan_reformed = 5
-
-		d_kansas = {
-			color = { 74 122 73 }
-			color2= { 255 255 255 }
-
-			capital = 344 # Topeka
-
-			c_topeka = { # 344
-				color = { 53 86 52 }
+	k_kansas = {
+		color = { 0 135 123 }
+		color2 = { 255 255 255 }
+		d_wichita = {
+			color = { 0 165 110 }
+			color2 = { 255 255 255 }
+			
+			capital = 348 # Wichita
+			c_joplin = {
+				color = { 0 150 100}
 				color2= { 255 255 255 }
 
-				b_topeka_KS = {}
-				b_lawrence_KS = {}
-				b_manhattan_KS = {}
-				b_tecumseh_KS = {}
-				b_st_marys_KS = {}
-				b_alma_KS = {}
-				b_wamego_KS = {}
-				b_wakarusa_KS = {}
+				b_joplin_MO = {}
+				b_carthage_MO = {}
+				b_webb_city_MO = {
+					used_for_dynasty_names = no
+				}
+				b_carl_junction_MO = {
+					used_for_dynasty_names = no
+				}
+				b_neosho_MO = {}
+				b_pittsburg_KS = {}
+				b_galena_KS = {}
+				b_miami_OK = {}
+			}
+			c_wichita = { # 348
+				color = { 20 170 120 }
+				color2= { 255 255 255 }
+
+				b_wichita_KS = {}
+				b_hutchinson_KS = {}
+				b_wellington_KS = {}
+				b_derby_KS = {}
+				b_winfield_KS = {}
+				b_andover_KS = {}
+				b_anthony_KS = {}
+				b_goddard_KS = {}
 			}
 			c_independence = { # 345
-				color = { 80 132 79 }
+				color = { 40 200 150 }
 				color2= { 255 255 255 }
 
 				b_independence_KS = {}
@@ -1203,8 +1209,48 @@ e_great_planes = {
 				b_cherryvale_KS = {}
 				b_oswego_KS = {}
 			}
+		}
+		d_kansas = {
+			color = { 0 127 72 }
+			color2= { 255 255 255 }
+
+			capital = 344 # Topeka
+
+			c_topeka = { # 344
+				color = { 0 112 65 }
+				color2= { 255 255 255 }
+
+				b_topeka_KS = {}
+				b_lawrence_KS = {}
+				b_manhattan_KS = {}
+				b_tecumseh_KS = {}
+				b_st_marys_KS = {}
+				b_alma_KS = {}
+				b_wamego_KS = {}
+				b_wakarusa_KS = {}
+			}
+			c_moks = {
+				color = { 0 150 50 }
+				color2= { 255 255 255 }
+				holy_site = mormon
+				holy_site = bickertonite
+				holy_site = godbeite
+				holy_site = strangite
+				holy_site = ironist
+
+				b_kansas_city_MOKS = { # just gonna do the collective city okay
+					used_for_dynasty_names = no
+				}
+				b_leavenworth_KS = {}
+				b_independence_MO = {}
+				b_westwood_KS = {}
+				b_raytown_MO = {}
+				b_lenexa_KS = {}
+				b_olathe_KS = {}
+				b_shawnee_KS = {}
+			}
 			c_atchison = { # 346
-				color = { 91 150 90 }
+				color = { 0 150 90}
 				color2= { 255 255 255 }
 
 				b_atchison_KS = {}
@@ -1217,7 +1263,7 @@ e_great_planes = {
 				b_leona_KS = {}
 			}
 			c_republic = { # 347
-				color = { 85 138 84 }
+				color = { 0 138 84 }
 				color2= { 255 255 255 }
 
 				b_belleville_KS = {}
@@ -1231,26 +1277,13 @@ e_great_planes = {
 			}
 		}
 		d_chisholm = {
-			color = { 80 92 184 }
+			color = { 0 175 161 }
 			color2= { 255 255 255 }
 
-			capital = 348
+			capital = 349
 
-			c_wichita = { # 348
-				color = { 60 74 204 }
-				color2= { 255 255 255 }
-
-				b_wichita_KS = {}
-				b_hutchinson_KS = {}
-				b_wellington_KS = {}
-				b_derby_KS = {}
-				b_winfield_KS = {}
-				b_andover_KS = {}
-				b_anthony_KS = {}
-				b_goddard_KS = {}
-			}
 			c_dodge = { # 349
-				color = { 69 82 171 }
+				color = { 0 175 171 }
 				color2= { 255 255 255 }
 
 				b_fort_dodge_KS = {
@@ -1265,7 +1298,7 @@ e_great_planes = {
 				b_mullinville_KS = {}
 			}
 			c_liberal = { # 350
-				color = { 111 121 196 }
+				color = { 0 196 121 }
 				color2= { 255 255 255 }
 
 				b_liberal_KS = {}
@@ -1278,19 +1311,8 @@ e_great_planes = {
 				b_santana_KS = {}
 				b_sublette_KS = {}
 			}
-			c_smoky_hill = { # 351
-				color = { 94 119 208 }
-				color2= { 255 255 255 }
-
-				b_oakley_KS = {}
-				b_colby_KS = {}
-				b_oberlin_KS = {}
-				b_goodland_KS = {}
-				b_atwood_KS = {}
-				b_st_francis_KS = {}
-			}
 			c_hays = { # 352
-				color = { 35 49 177 }
+				color = { 0 177 149 }
 				color2= { 255 255 255 }
 
 				b_fort_hays_KS = {
@@ -1307,14 +1329,71 @@ e_great_planes = {
 				b_stockton_KS = {}
 			}
 		}
+	}
+
+	k_platte = {
+		color = { 227 25 55 }
+		color2= { 255 255 255 }
+
+		culture = grangelander
+
+		capital = 353 # Omaha
+
+		# Crusade target weight
+		catholic = 50
+		revelationist_reformed = 50
+		norse_pagan_reformed = 5
+
+		d_smoky_hills = {
+			color = { 228 128 128 }
+			color2 = { 255 255 255 }
+			c_republican = { # 362
+				color = { 255 150 150 }
+				color2= { 255 255 255 }
+
+				b_holdrege_NE = {}
+				b_mccook_NE = {}
+				b_lexington_NE = {}
+				b_imperial_NE = {}
+				b_cozad_NE = {}
+				b_arapahoe_NE = {}
+				b_oxford_NE = {}
+				b_cambridge_NE = {}
+			}
+			c_smoky_hill = { # 351
+				color = { 208 94 119 }
+				color2= { 255 255 255 }
+
+				b_oakley_KS = {}
+				b_colby_KS = {}
+				b_oberlin_KS = {}
+				b_goodland_KS = {}
+				b_atwood_KS = {}
+				b_st_francis_KS = {}
+			}
+			c_arp = { # 392
+				color = { 237 165 165 }
+				color2= { 255 255 255 }
+
+				b_sterling_CO = {}
+				b_holyoke_CO = {}
+				b_julesburg_CO = {}
+				b_peetz_CO = {}
+				b_haxtun_CO = {}
+				b_atwood_CO = {}
+				b_amherst_CO = {}
+				b_paoli_CO = {}
+			}
+		}
+			
 		d_nebraska = {
-			color = { 151 138 45 }
+			color = { 200 0 25 }
 			color2= { 255 255 255 }
 
 			capital = 353
 
 			c_omaha = { # 353
-				color = { 192 174 44 }
+				color = { 180 0 25 }
 				color2= { 255 255 255 }
 				holy_site = ironist
 
@@ -1330,7 +1409,7 @@ e_great_planes = {
 				b_wahoo_NE = {}
 			}
 			c_norfolk = { # 354
-				color = { 155 141 47 }
+				color = { 220 50 80 }
 				color2= { 255 255 255 }
 
 				b_norfolk_NE = {}
@@ -1345,7 +1424,7 @@ e_great_planes = {
 				b_wisner_NE = {}
 			}
 			c_niobrara = { # 355
-				color = { 123 109 53 }
+				color = { 255 0 25 }
 				color2= { 255 255 255 }
 
 				b_niobrara_NE = {}
@@ -1357,7 +1436,7 @@ e_great_planes = {
 				b_orchard_NE = {}
 			}
 			c_grand_island = { # 356
-				color = { 141 129 41 }
+				color = { 200 50 85 }
 				color2= { 255 255 255 }
 
 				b_grand_island_NE = {
@@ -1374,22 +1453,6 @@ e_great_planes = {
 				b_chapman_NE = {}
 				b_hastings_NE = {}
 				b_cairo_NE = {}
-			}
-			c_kearny = { # 357
-				color = { 196 183 91 }
-				color2= { 255 255 255 }
-
-				b_fort_kearny_NE = {
-					used_for_dynasty_names = no
-				}
-				b_kearney_NE = {}
-				b_minden_NE = {}
-				b_gibbon_NE = {}
-				b_riverdale_NE = {}
-				b_amherst_NE = {}
-				b_elm_creek_NE = {
-					used_for_dynasty_names = no
-				}
 			}
 		}
 		d_kickatus = {
@@ -1410,6 +1473,22 @@ e_great_planes = {
 				b_springview_NE = {}
 				b_burton_NE = {}
 				b_bassett_NE = {}
+			}
+			c_kearny = { # 357
+				color = { 255 180 255 }
+				color2= { 255 255 255 }
+
+				b_fort_kearny_NE = {
+					used_for_dynasty_names = no
+				}
+				b_kearney_NE = {}
+				b_minden_NE = {}
+				b_gibbon_NE = {}
+				b_riverdale_NE = {}
+				b_amherst_NE = {}
+				b_elm_creek_NE = {
+					used_for_dynasty_names = no
+				}
 			}
 			c_pine_ridge = { # 359
 				color = { 255 217 232 }
@@ -1451,19 +1530,6 @@ e_great_planes = {
 				b_gandy_NE = {}
 				b_tryon_NE = {}
 				b_lemoyne_NE = {}
-			}
-			c_republican = { # 362
-				color = { 255 157 197 }
-				color2= { 255 255 255 }
-
-				b_holdrege_NE = {}
-				b_mccook_NE = {}
-				b_lexington_NE = {}
-				b_imperial_NE = {}
-				b_cozad_NE = {}
-				b_arapahoe_NE = {}
-				b_oxford_NE = {}
-				b_cambridge_NE = {}
 			}
 		}
 	}
