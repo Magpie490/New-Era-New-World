@@ -554,6 +554,18 @@ e_caribbean = {
 				b_cayman_brac_KY = {}
 				b_little_cayman_KY = {}
 			}
+			c_little_cayman = {
+				color={ 203 150 18 }
+				color2={ 255 255 255 }
+
+				b_knob_hill_KY = {}
+				b_south_town_KY = {}
+				b_edward_bodden_KY = {}
+				b_the_bight_KY = {}
+				b_the_bluff_KY = {}
+				b_kirkconnell_KY = {}
+				b_dennis_point_KY = {}
+			}
 		}
 		d_isla_de_san_andres = {
 			color={ 168 29 93 }
@@ -924,17 +936,10 @@ e_caribbean = {
 			}
 		}
 	}
-	
-	k_hispaniola = {
-		capital = 1187 # Port-au-Prince
-		color = { 0 191 47 }
-		
-		brazilian = "Espanhola"
-		dominicano = "La Española"
-		boricua = "La Española"
-		cubano = "La Española"
-		haitian = "Ayiti"
-		
+
+	k_haiti = {
+		color = { 10 0 140 }
+
 		d_haiti = {
 			culture = haitian
 			capital = 1187 # Port-au-Prince
@@ -957,7 +962,47 @@ e_caribbean = {
 				b_petionville_HA = {}
 				b_cite_soleil_HA = {}
 				b_croix_des_bouqets_HA = {}
+				b_gressier_HA = {}
 			}
+			c_la_gonave = {
+				color = { 73 76 162 }
+				
+				b_anse_a_galets_HA = {}
+				b_pointe_a_raquette_HA = {}
+				b_gros_mangle_HA = {}
+				b_picmy_HA = {}
+				b_grand_vide_HA = {}
+				b_palma_HA = {}
+				b_trou_louis_HA = {}
+			}
+			c_les_cayes = {
+				color = { 10 50 200 }
+				haitian = "Okay"
+				b_les_cayes_HA = {}
+				b_leogane_HA = {}
+				b_aquin_HA = {}
+				b_arniquet_HA = {}
+				b_torbeck_HA = {}
+				b_chantal_HA = {}
+				b_port_salut_HA = {}
+			}
+			c_jamcel = {
+				color = { 50 100 200 }
+
+				b_jacmel_HA = {}
+				b_bainet_HA = {}
+				b_belle_anse_HA = {}
+				b_grand_gosier_HA = {}
+				b_la_vallee_HA = {}
+				b_marigot_HA = {}
+				b_cotes_de_fer_HA = {}
+			}
+		}
+		d_artibonite = {
+			color = { 10 50 100 }
+
+			capital = 1188 # Artibonite
+
 			c_artibonite = {
 				color = { 10 50 100 }
 				haitian = "Latibonit"
@@ -968,36 +1013,34 @@ e_caribbean = {
 				b_petite_riviere_de_lartibonite_HA = {}
 				b_gros_morne_HA = {}
 				b_saint_michel_de_latalaye_HA = {}
+				b_verrettes_HA = {}
+			}
+			c_hinche = {
+				color = { 100 50 200 }
+
+				b_hinche_HA = {}
+				b_thomassique_HA = {}
+				b_lascahobas_HA = {}
+				b_mirebalais_HA = {}
+				b_belladere_HA = {}
+				b_thomonde_HA = {}
+				b_maissade_HA = {}
 			}
 			c_le_cap = {
 				color = { 60 40 140 }
 				holy_site = voodoo
 				haitian = "Okap"
 				venteux = "Okap"
+
 				b_citadelle_laferriere_HA = { }
 				b_cap_haitien_HA = {
 					haitian = "Kapayisyen"
 				}
 				b_pilate_HA = {}
 				b_trou_du_nord_HA = {}
-			}
-			c_la_gonave = {
-				color = { 73 76 162 }
-				
-				b_anse_a_galets_HA = {}
-				b_pointe_a_raquette_HA = {}
-				b_gros_mangle_HA = {}
-				b_picmy_HA = {}
-				b_grand_vide_HA = {}
-			}
-			c_les_cayes = {
-				color = { 10 50 200 }
-				haitian = "Okay"
-				b_jacmel_HA = { }
-				b_les_cayes_HA = {}
-				b_leogane_HA = {}
-				b_aquin_HA = {}
-				b_bainet_HA = {}
+				b_bahon_HA = {}
+				b_limbe_HA = {}
+				b_dondon_HA = {}
 			}
 			c_port_de_paix = {
 				color = { 50 50 200 }
@@ -1011,7 +1054,6 @@ e_caribbean = {
 				b_la_tortue_HA = {}
 			}
 		}
-			
 		d_tortuga = {
 			color = { 94 70 82 }
 			color2= { 255 255 20 }
@@ -1021,10 +1063,6 @@ e_caribbean = {
 			haitian = "Latòti"
 			quebecois = "Tortue"
 			cajun = "Tortue"
-
-			allow = {
-				religion = brethren
-			}
 			
 			c_tortuga = { # 2086
 				color={ 158 194 79 }
@@ -1040,6 +1078,19 @@ e_caribbean = {
 				b_voute_eglise_HTI = {}
 			}
 		}
+	}
+	
+	k_hispaniola = { # make titular, maybe an empire
+		capital = 1187 # Port-au-Prince
+		color = { 0 191 47 }
+		
+		brazilian = "Espanhola"
+		dominicano = "La Española"
+		boricua = "La Española"
+		cubano = "La Española"
+		haitian = "Ayiti"
+		
+		
 		
 		d_dominica = {
 			culture = dominicano
