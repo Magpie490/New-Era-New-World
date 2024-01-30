@@ -3796,7 +3796,12 @@ character_event = {
 	only_independent = yes
 
 	trigger = {
-		realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
+		OR = {
+			realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
+			religion = madonnite
+			religion = kemetic
+			religion = solar
+		}
 	}
 
 	immediate = {
@@ -3833,7 +3838,7 @@ character_event = {
 	desc = {
 		text = EVTDESC_LT_20510_christian
 		picture = GFX_evt_bad_news
-		trigger = { religion_group = christian }
+		trigger = { OR = { religion_group = mormonic religion_group = christian religion_group = post_christian_group religion_group = apocalyptic}}
 	}
 	desc = {
 		text = EVTDESC_LT_20510_muslim
@@ -3855,7 +3860,12 @@ character_event = {
 
 	trigger = {
 		is_inaccessible_trigger = no
-		realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
+		OR = {
+			realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
+			religion = madonnite
+			religion = kemetic
+			religion = solar
+		}
 	}
 
 	immediate = {
@@ -3980,7 +3990,7 @@ character_event = {
 	desc = {
 		text = EVTDESC_LT_20520_pagan
 		picture = GFX_evt_feast_hf
-		trigger = { religion_group = pagan_group }
+		trigger = { OR = { religion_group = pagan_group  religion_group = post_christian_group religion_group = apocalyptic }}
 	}
 	desc = {
 		text = EVTDESC_LT_20520_monoteist
@@ -3990,6 +4000,7 @@ character_event = {
 				religion_group = christian
 				religion_group = jewish_group
 				religion_group = muslim
+				religion_group = mormonic
 			}
 		}
 	}
@@ -4003,14 +4014,20 @@ character_event = {
 
 	trigger = {
 		is_inaccessible_trigger = no
-		realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
+		OR = {
+			AND = {
+				realm_wonder_or_upgrade_has_flag_burial_ground_trigger = yes
 
-		event_target:target_wonder = {
-			wonder_owner = {
-				character = ROOT
+				event_target:target_wonder = {
+					wonder_owner = {
+						character = ROOT
+					}
+				}
 			}
+			religion = madonnite
+			religion = kemetic
+			religion = solar
 		}
-
 		OR = {
 			has_character_flag = big_burial
 			has_character_flag = normal_burial
@@ -4024,6 +4041,8 @@ character_event = {
 				OR = {
 					religion_group = pagan_group
 					religion_group = indian_group
+					religion_group = post_christian_group 
+					religion_group = apocalyptic
 				}
 			}
 		}
