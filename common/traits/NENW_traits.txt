@@ -1,6 +1,6 @@
 arboreal_gaian = {
 	diplomacy = 2
-	monthly_character_piety = 1
+	monthly_character_piety = 0.5
 	
 	religious_branch = celtic_pagan
 	religious = yes # Lost immediately on religion change
@@ -96,7 +96,7 @@ arboreal_old_ones = {
 
 arboreal_reformed_gaian = {
 	diplomacy = 2
-	monthly_character_piety = 1
+	monthly_character_piety = 0.5
 	
 	religious_branch = celtic_pagan_reformed
 	religious = yes # Lost immediately on religion change
@@ -185,6 +185,221 @@ arboreal_reformed_old_ones = {
 	
 	opposite_opinion = -10
 	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+cult_cienfuegos = {
+	learning = 2
+	global_revolt_risk = -0.01
+	
+	religious_branch = fidelista
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		cult_marti
+		cult_che
+		#cult_cienfuegos
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+
+cult_che = {
+	martial = 2
+	
+	religious_branch = fidelista
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		cult_marti
+		#cult_che
+		cult_cienfuegos
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+	command_modifier = {
+		religious_enemy = 0.1
+	}
+}
+
+cult_marti = {
+	stewardship = 2
+	monthly_character_piety = 0.5
+	
+	religious_branch = fidelista
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		#cult_marti
+		nyabinghi_order
+		cult_cienfuegos
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+
+twelve_tribes = {
+	diplomacy = 2
+	vassal_opinion = 5
+	global_revolt_risk = -0.01
+	tolerates_jewish_group = yes
+	tolerates_christian = yes
+	
+	religious_branch = rastafari
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		bobo_ashanti
+		nyabinghi_order
+		#twelve_tribes
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+
+nyabinghi_order = {
+	martial = 2
+	
+	religious_branch = rastafari
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		bobo_ashanti
+		#nyabinghi_order
+		twelve_tribes
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+	command_modifier = {
+		religious_enemy = 0.1
+	}
+}
+
+bobo_ashanti = {
+	learning = 2
+	monthly_character_piety = 0.5
+	
+	religious_branch = rastafari
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		#bobo_ashanti
+		nyabinghi_order
+		twelve_tribes
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
+
+white_horse_cult = {
+	threat_decay_speed = 0.05
+	monthly_character_prestige = 0.5
+	
+	religious_branch = triumphant
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		#white_horse_cult
+		red_horse_cult
+		black_horse_cult
+		pale_horse_cult
+	}
+	
+	opposite_opinion = -15
+	same_opinion = 10
+
+	customizer = no
+	random = no
+	command_modifier = {
+		religious_enemy = 0.2
+	}
+}
+
+red_horse_cult = {
+	martial = 2
+	
+	religious_branch = triumphant
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		white_horse_cult
+		#red_horse_cult
+		black_horse_cult
+		pale_horse_cult
+	}
+	
+	opposite_opinion = -15
+	same_opinion = 10
+
+	customizer = no
+	random = no
+	command_modifier = {
+		speed = 0.2
+	}
+}
+
+black_horse_cult = {
+	global_revolt_risk = -0.02
+	global_tax_modifier = 0.05
+	
+	religious_branch = triumphant
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		white_horse_cult
+		red_horse_cult
+		#black_horse_cult
+		pale_horse_cult
+	}
+	
+	opposite_opinion = -15
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+pale_horse_cult = {
+	learning = 1
+	monthly_character_piety = 0.5
+	
+	religious_branch = triumphant
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		white_horse_cult
+		red_horse_cult
+		black_horse_cult
+		#pale_horse_cult
+	}
+	
+	opposite_opinion = -15
+	same_opinion = 10
 
 	customizer = no
 	random = no

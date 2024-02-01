@@ -1,0 +1,229 @@
+namespace = triumphant
+
+character_event = {
+	id = triumphant.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_triumphant_300
+	desc = EVTDESC_triumphant_300
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_triumphant_cult
+	}
+	
+	option = {#Nicholas
+		name = EVTOPTA_triumphant_300
+		add_trait = white_horse_cult
+	}
+	
+	option = {#Olga
+		name = EVTOPTB_triumphant_300
+		add_trait = red_horse_cult
+	}
+	
+	option = {#Ivan
+		name = EVTOPTC_triumphant_300
+		add_trait = black_horse_cult
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_triumphant_300
+		add_trait = pale_horse_cult
+	}
+	
+	after = {
+		clr_character_flag = picking_triumphant_cult
+	}
+}
+
+letter_event = {
+	id = triumphant.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = triumphant302Desc
+	hide_window = yes
+	trigger = {
+		religion = triumphant
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = white_horse_cult
+			trait = red_horse_cult
+			trait = black_horse_cult
+			trait = pale_horse_cult
+		}
+	}
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = white_horse_cult
+						}
+						mother_even_if_dead = {
+							trait = white_horse_cult
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = white_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = white_horse_cult
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = white_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = white_horse_cult
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = white_horse_cult
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = red_horse_cult
+						}
+						mother_even_if_dead = {
+							trait = red_horse_cult
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = red_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = red_horse_cult
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = red_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = red_horse_cult
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = red_horse_cult
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = black_horse_cult
+						}
+						mother_even_if_dead = {
+							trait = black_horse_cult
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = black_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = black_horse_cult
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = black_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = black_horse_cult
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_stewardship_score = yes
+				add_trait = black_horse_cult
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = pale_horse_cult
+						}
+						mother_even_if_dead = {
+							trait = pale_horse_cult
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = pale_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = pale_horse_cult
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = pale_horse_cult
+								}
+								mother_even_if_dead = {
+									trait = pale_horse_cult
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = pale_horse_cult
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_triumphant_cult
+	}
+}
