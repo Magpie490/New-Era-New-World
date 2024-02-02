@@ -69,6 +69,27 @@ letter_event = {
 	is_triggered_only = yes
 	border = GFX_event_letter_frame_religion
 	desc = arboreal5Desc
+	hide_window = yes
+	trigger = {
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = arboreal_gaian
+			trait = arboreal_reformed_gaian
+			trait = arboreal_architect
+			trait = arboreal_reformed_architect
+			trait = arboreal_murican
+			trait = arboreal_reformed_murican
+			trait = arboreal_old_ones
+			trait = arboreal_reformed_old_ones
+		}
+	}
 	option = {
 		name = EVTOPTA_arboreal5
 		random_list = {
