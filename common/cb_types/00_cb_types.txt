@@ -4232,10 +4232,10 @@ new_crusade = {
 					}
 				}
 				trigger_if = {
-					limit = { religion = sevillian }
+					limit = { religion = sedevacantist }
 					custom_tooltip = {
 						text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
-						has_global_flag = sevillian_crusades_unlocked
+						has_global_flag = sedevacantist_crusades_unlocked
 					}
 				}
 				trigger_else_if = {
@@ -4425,21 +4425,21 @@ new_crusade = {
 		if = {
 			limit = {
 				NOR = {
-					has_global_flag = sevillian_crusades_unlocked
+					has_global_flag = sedevacantist_crusades_unlocked
 					defender = {
-						religion = sevillian
+						religion = sedevacantist
 					}
 					attacker = {
-						religion = sevillian
+						religion = sedevacantist
 					}
 				}
 			}
-			set_global_flag = sevillians_can_join
+			set_global_flag = sedevacantists_can_join
 		}
 	 }
 
 	on_success_title = {
-		clr_global_flag = sevillians_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
+		clr_global_flag = sedevacantists_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
 		ROOT = {
 			crusade_target_title = {
 				save_event_target_as = new_crusade_title
@@ -5460,7 +5460,7 @@ new_crusade = {
 	}
 
 	on_fail = {
-		clr_global_flag = sevillians_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
+		clr_global_flag = sedevacantists_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
 		ROOT = {
 			character_event = { id = HFP.41199}
 		}
@@ -5545,7 +5545,7 @@ new_crusade = {
 	}
 
 	on_reverse_demand = {
-		clr_global_flag = sevillians_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
+		clr_global_flag = sedevacantists_can_join #this flag is meant to allow sevillian lords to get events where they participate personally in the Crusade, even though they're not formally allowed to
 		ROOT = {
 			character_event = { id = HFP.41199 }
 		}
