@@ -4997,6 +4997,307 @@ character_event = {
 # RISE OF THE SHI'A CALIPHATE
 
 # THE START OF THE CATHOLIC CRUSADES -#1: 2600 AD
+narrative_event = {
+	id = 39660
+	title = EVTNAME39660
+	desc = EVTDESC39660
+	picture = GFX_evt_jerusalem
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	only_men = yes
+	religion = catholic
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2425
+		NOT = { has_global_flag = christian_crusades_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = christian_crusades_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA39660
+		trigger = {
+			OR = {
+				religion = catholic
+				religion = columbian
+				religion = orthodox
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	option = {
+		name = EVTOPTC39660
+		trigger = {
+			OR = {
+				religion = sedevacantist
+				religion = ultramontain
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD39660
+		trigger = {
+			religion_group = christian
+			NOR = {
+				religion = catholic
+				religion = columbian
+				religion = orthodox
+				religion = sedevacantist
+				religion = ultramontain
+			}
+		}
+	}
+}
+
+# THE START OF THE CHRISTIAN CRUSADES - NEW ORLEANS FAILING
+narrative_event = {
+	id = 39661
+	title = EVTNAME39660
+	desc = EVTDESC39661
+	picture = GFX_evt_hagia_sofia
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	only_men = yes
+	religion = catholic
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		NOT = { has_global_flag = christian_crusades_unlocked }
+		
+		OR = {
+			AND = {
+				k_acadiana = {
+					holder_scope = {
+						NOT = { religion_group = christian }
+					}
+				}
+				k_acadiana = { always = yes }
+			}
+			1124 = { # Vilnius
+				NOT = { owner = { top_liege = { religion_group = christian } } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		set_global_flag = christian_crusades_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA39660
+		trigger = {
+			OR = {
+				religion = catholic
+				religion = columbian
+				religion = orthodox
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	option = {
+		name = EVTOPTC39660
+		trigger = {
+				religion = sedevacantist
+				religion = ultramontain
+		}
+	}
+	option = {
+		name = EVTOPTD39660
+		trigger = {
+			religion_group = christian
+			NOR = {
+				religion = catholic
+				religion = columbian
+				religion = orthodox
+				religion = sedevacantist
+				religion = ultramontain
+			}
+		}
+	}
+}
+
+
+narrative_event = {#Gallicanist Crusades begin - enough time passes
+	id = 39665
+	title = EVTNAME39665
+	desc = EVTDESC39665
+	picture = GFX_evt_pope
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	only_men = yes
+	religion = sedevacantist
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		has_global_flag = christian_crusades_unlocked
+		NOT = { has_global_flag = sedevacantist_crusades_unlocked }
+		
+	}
+	
+	mean_time_to_happen = {#around 30 years after Catholic Crusades
+		months = 360
+	}
+	
+	immediate = {
+		set_global_flag = sedevacantist_crusades_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA39665
+		trigger = {
+			religion = sedevacantist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39665
+		trigger = {
+			religion = catholic
+		}
+	}
+	option = {
+		name = EVTOPTC39665
+		trigger = {
+			religion_group = christian
+			NOR = {
+				religion = catholic
+				religion = sedevacantist
+			}
+		}
+	}	
+	option = {
+		name = EVTOPTD39665
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+
+narrative_event = {#Gallicanist Crusades Start - Montréal or Québec lost
+	id = 39666
+	title = EVTNAME39665
+	desc = EVTDESC39666
+	picture = GFX_evt_pope
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	only_men = yes
+	religion = sedevacantist
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		NOT = { has_global_flag = sedevacantist_crusades_unlocked }
+		OR = {
+			1217 = { # Montréal
+				NOT = { owner = { top_liege = { religion = sedevacantist } } }
+			}
+			1199 = { # Québec
+				NOT = { owner = { top_liege = { religion = sedevacantist } } }
+			}
+		}		
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		set_global_flag = sedevacantist_crusades_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA39665
+		trigger = {
+			religion = sedevacantist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39665
+		trigger = {
+			religion = catholic
+		}
+	}
+	option = {
+		name = EVTOPTC39665
+		trigger = {
+			religion_group = christian
+			NOR = {
+				religion = catholic
+				religion = sedevacantist
+			}
+		}
+	}	
+	option = {
+		name = EVTOPTD39665
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
 
 
 # THE START OF MUSLIM JIHADS - happens immediately when a caliphate or the Wahhabi sheikhdom is restored
@@ -5016,28 +5317,13 @@ narrative_event = {
 	min_age = 16
 	religion_group = muslim
 	
-	is_triggered_only = yes #This event fires immediately whenever the Sunni, Shiite, or Wahhabi religious heads are created
+	is_triggered_only = yes #This event fires immediately whenever the Salihi religious head is created
 	trigger = {
 		NOT = {
 			has_global_flag = muslim_jihads_unlocked
 		}
 		OR = {
-			d_sunni = {
-				title = FROM
-			}
-			d_wahhabi = {
-				title = FROM
-			}
-			d_deobandi = {
-				title = FROM
-			}
-			d_mesopotamian = {
-				title = FROM
-			}
-			d_ismaili = {
-				title = FROM
-			}
-			d_ibadi = {
+			d_salihi = {
 				title = FROM
 			}
 		}

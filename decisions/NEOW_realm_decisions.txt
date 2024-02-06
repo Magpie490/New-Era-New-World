@@ -53,6 +53,58 @@ decisions = {
 		}
 	}
 	
+	centralise_upnord_confederation = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			primary_title = {
+				title = k_upnord_confederation
+			}
+			k_upnord = {
+				has_holder = no
+			}
+			government = confederation_government
+			prisoner = no
+			has_regent = no
+		}
+	
+		allow = {
+			centralise_confederation_trigger = yes
+		}
+	
+		effect = {
+			custom_tooltip = {
+				text = centralise_upnord_confederation_tt
+				set_feudal_government_effect = yes
+				primary_title = {
+					k_upnord = {
+						grant_title = ROOT
+						copy_title_laws = PREV
+						copy_title_history = PREV
+						add_law = feudal_administration
+						add_law = ze_administration_laws_1
+						add_law = succ_primogeniture
+						make_primary_title = yes
+						show_scope_change = no
+					}
+					unsafe_destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
+				}
+				any_vassal = {
+					limit = { higher_tier_than = BARON }
+					opinion = { modifier = bad_succ_law_change who = ROOT months = 360 }
+				}
+			}
+			prestige = -500
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	form_aegean = {
 		is_high_prio = yes
 		only_playable = yes
@@ -2053,104 +2105,6 @@ decisions = {
 				}
 			}
 			piety = 600
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	form_england = {
-		is_high_prio = yes
-		only_playable = no
-		ai_check_interval = 24
-		potential = {
-			form_kingdom_potential = yes
-			OR = {
-				culture = westlander
-				culture = new_english
-				culture = northlander
-				culture = eastlander
-				culture = old_norman
-				culture = farlander
-				culture = ulsterite
-				culture = ashkenazi
-				has_landed_title = d_anglican
-			}
-			k_england = {
-				is_titular = yes
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-
-		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
-			form_kingdom_allow = yes
-			#Controls a bunch of shit
-				d_northumberland = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_liverpool = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_york = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_lincoln = { show_scope_change = no province_completely_controls_trigger = yes }
-				
-				d_hereford = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_bedford = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_norfolk = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_canterbury = { show_scope_change = no province_completely_controls_trigger = yes }
-				
-				d_hampshire = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_gloucester = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_cornwall = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_somerset = { show_scope_change = no province_completely_controls_trigger = yes }
-				d_channel_islands = { show_scope_change = no province_completely_controls_trigger = yes }
-		}
-
-		effect = {
-			custom_tooltip = {
-				text = form_england_tt
-				k_england = {
-					gain_title_effect = yes
-				}
-			}
-			
-
-			hidden_tooltip = {
-				###Something about England
-				k_britannia = {
-					destroy_landed_title = THIS
-				}
-				activate_title = {
-					title = k_britannia
-					status = no
-				}
-				d_northumberland = { de_jure_liege = k_england }
-				d_liverpool = { de_jure_liege = k_england }
-				d_york = { de_jure_liege = k_england }
-				d_lincoln = { de_jure_liege = k_england }
-				
-				d_hereford = { de_jure_liege = k_england }
-				d_bedford = { de_jure_liege = k_england }
-				d_norfolk = { de_jure_liege = k_england }
-				d_canterbury = { de_jure_liege = k_england }
-				
-				d_hampshire = { de_jure_liege = k_england }
-				d_gloucester = { de_jure_liege = k_england }
-				d_cornwall = { de_jure_liege = k_england }
-				d_somerset = { de_jure_liege = k_england }
-				
-				d_channel_islands = { de_jure_liege = k_england }
-				
-				d_gwynedd = { de_jure_liege = k_wales }
-				d_powys = { de_jure_liege = k_wales }
-				d_gwent = { de_jure_liege = k_wales }
-				d_deheubarth = { de_jure_liege = k_wales }
-				
-				d_the_isles = { de_jure_liege = k_mann }
-			}
 		}
 		revoke_allowed = {
 			always = no

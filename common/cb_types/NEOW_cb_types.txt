@@ -12978,6 +12978,215 @@ soviet_reconquest = {
 	}
 }
 
+constitutionalist_reconquest = {
+	name = CB_NAME_CONSTITUTIONAL_RECONQUEST
+	war_name = WAR_NAME_CONSTITUTIONAL_RECONQUEST
+	sprite = 17
+	truce_days = 1825
+	is_permanent = yes
+	check_de_jure_tier = DUKE # this scans all dejure duchies for the counties which are held by or vassals(or below) of selected character. Only valid if is_permanent = yes
+
+	allowed_to_target_tributaries = no
+	
+	sort_priority = 1900
+
+	can_use_gui = {
+		check_if_crusader_trigger = yes
+	}
+
+	can_use = {
+		ROOT = { bhutan_major_cb = yes	}
+		ROOT = {
+			has_landed_title = e_columbia
+			independent = yes
+			NOT = { same_realm = FROM }
+			mercenary = no
+			has_global_flag = bhutan_reformed_diplo
+			has_global_flag = bhutan_reformed_martial
+			has_global_flag = bhutan_reformed_stewardship
+			has_global_flag = bhutan_reformed_intrigue
+			has_global_flag = bhutan_reformed_learning
+			NOR = {
+				has_character_modifier = government_corruption_9
+				has_character_modifier = government_corruption_10
+			}
+		}
+	}
+
+	can_use_title = {
+		OR = {
+			de_jure_liege_or_above = k_blue_ridge
+			de_jure_liege_or_above = k_appalachia
+			de_jure_liege_or_above = k_vandalia
+			de_jure_liege_or_above = k_allegheny
+			de_jure_liege_or_above = k_pittsburgh
+			de_jure_liege_or_above = k_upstachia
+			de_jure_liege_or_above = k_adirondack
+			de_jure_liege_or_above = k_buffalo
+			de_jure_liege_or_above = k_new_york
+			de_jure_liege_or_above = k_taconica
+			de_jure_liege_or_above = k_eastsylvania
+			de_jure_liege_or_above = k_columbia
+			de_jure_liege_or_above = k_new_england
+			de_jure_liege_or_above = k_vermont
+			de_jure_liege_or_above = k_new_hampshire
+			de_jure_liege_or_above = k_lobsterland
+			de_jure_liege_or_above = k_aroostook
+			de_jure_liege_or_above = k_massachusets
+			de_jure_liege_or_above = k_tarheel
+			de_jure_liege_or_above = k_old_dominion
+			de_jure_liege_or_above = k_connecticut
+			de_jure_liege_or_above = k_jersey
+			de_jure_liege_or_above = k_rhode_island
+			de_jure_liege_or_above = k_new_acadia
+			de_jure_liege_or_above = k_wampanoag
+			de_jure_liege_or_above = k_maryland
+			de_jure_liege_or_above = k_delaware
+			de_jure_liege_or_above = k_delmarva
+			de_jure_liege_or_above = k_maine
+			de_jure_liege_or_above = k_pennsylvania
+			de_jure_liege_or_above = k_jaxland
+			de_jure_liege_or_above = k_georgia
+			de_jure_liege_or_above = k_dixie
+			de_jure_liege_or_above = k_alabama
+			de_jure_liege_or_above = k_palmetto
+			de_jure_liege_or_above = k_two_carolinas
+			de_jure_liege_or_above = k_florida
+			de_jure_liege_or_above = k_egypt
+			de_jure_liege_or_above = k_cahokia
+			de_jure_liege_or_above = k_kentucky
+			de_jure_liege_or_above = k_obion
+			de_jure_liege_or_above = k_tennessee
+			de_jure_liege_or_above = k_st_louis
+			de_jure_liege_or_above = k_missouri
+			de_jure_liege_or_above = k_ozarks
+			de_jure_liege_or_above = k_magnolia
+			de_jure_liege_or_above = k_texarkana
+			de_jure_liege_or_above = k_acadiana
+			de_jure_liege_or_above = k_arkansas
+			de_jure_liege_or_above = k_louisiana
+			de_jure_liege_or_above = k_wisconsin
+			de_jure_liege_or_above = k_iowa
+			de_jure_liege_or_above = k_minnesota
+			de_jure_liege_or_above = k_ohio
+			de_jure_liege_or_above = k_cleveland
+			de_jure_liege_or_above = k_wabash
+			de_jure_liege_or_above = k_illinois
+			de_jure_liege_or_above = k_windgarden
+			de_jure_liege_or_above = k_upnord
+			de_jure_liege_or_above = k_mishiana
+			de_jure_liege_or_above = k_midmishigan
+			de_jure_liege_or_above = k_michigan
+			de_jure_liege_or_above = k_superior
+		}
+	}
+	
+	is_valid = {
+		ROOT = {
+			independent = yes
+			NOT = { same_realm = FROM }
+		}
+	}
+
+	on_add = {
+		general_on_add_effect = yes
+	}
+	
+	on_success = {
+		ROOT = {
+			participation_scaled_prestige = 100
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = { 
+				participation_scaled_prestige = 100
+			}
+		}
+		
+		FROM = { prestige = -100 }
+	}
+
+	on_success_title = {
+		custom_tooltip = { 
+			text = other_invasion_succ_tip
+			hidden_tooltip = {
+				ROOT = {
+					vassalize_or_take_under_title = {
+						title = PREV
+						enemy = FROM
+						type = invasion
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				holder_scope = { character = FROM }
+			}
+			usurp_title_only = { target = ROOT type = invasion }
+		}
+
+		hidden_tooltip = {
+			check_if_reconquista_finished_effect = yes
+			FROM = {
+				landless_pope_effect = yes
+			}
+		}
+	}
+
+	on_fail = {
+		ROOT = { prestige = -150 }
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+			ROOT = { prestige = -200 }
+		}
+		FROM = {
+			participation_scaled_piety = 100
+			participation_scaled_prestige = 200
+			if = {
+				limit = {
+					uses_decadence = yes
+				}
+				participation_scaled_decadence = -10
+			}
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { 
+				participation_scaled_piety = 100
+				participation_scaled_prestige = 200
+				if = {
+					limit = {
+						uses_decadence = yes
+					}
+					participation_scaled_decadence = -10
+				}
+			}
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
 great_russian_reconquest = {
 	name = CB_NAME_IMPERIAL
 	war_name = WAR_NAME_IMPERIAL
