@@ -120,3 +120,28 @@ mulroney_bloodline = {
 	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
 	flags = { historical_bloodline }
 }
+tycoon_tim = { #Nine Great Tycoons Bloodline
+	inheritance = patrilineal
+	monthly_character_prestige = 0.5
+	combat_rating = 10
+	antiquarianist_opinion = 5
+	loyalist_opinion = 5
+	picture = GFX_bloodlines_symbol_war_knight
+		active = {
+		OR = {
+			religion_group = christian
+			religion = antiquarianist
+			religion = loyalist
+		}
+	}
+	flags = { historical_bloodline }
+}
+cree_bloodline = {
+	inheritance = patrilineal
+	allow_bastards = yes
+	diplomacy = 1
+	bloodline_effect_free_legitimize = 1
+	monthly_character_prestige = 0.5
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	flags = { historical_bloodline bloodline_legitimize }
+}
