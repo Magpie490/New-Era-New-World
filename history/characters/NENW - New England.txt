@@ -1554,12 +1554,26 @@
 	}
 }
 700109 = {
-	name = "Adrian"
-	dynasty = 5000300
+	name = "John"
+	dynasty = 5001002 
 	religion = columbian
 	culture = nutmegger
-	2279.5.14 = {
+	trait = martial_cleric
+	trait = humble
+	trait = shy
+	trait = honest
+	trait = depressed
+	disallow_random_traits = yes
+	2289.5.14 = {
 		birth = yes
+	}
+	2324.1.1 = {
+		add_spouse = 700115
+		effect = {
+			add_rival = 700113
+			add_friend = 700114
+			add_lover = 700115
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -1598,6 +1612,69 @@
 		birth = yes
 	}
 	2666.1.1 = {
+		death = yes
+	}
+}
+700113 = {
+	name = "Gary"
+	religion = columbian
+	culture = nutmegger
+	trait = grey_eminence
+	trait = possessed
+	trait = gregarious
+	trait = deceitful
+	trait = proud
+	employer = 700109
+	disallow_random_traits = yes
+	2271.3.23 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700114 = {
+	name = "Garcia"
+	religion = columbian
+	culture = nutmegger
+	trait = tough_soldier 
+	trait = holy_warrior
+	trait = celibate
+	trait = brave
+	trait = diligent
+	trait = stubborn
+	trait = zealous
+	employer = 700109
+	disallow_random_traits = yes
+	2262.11.6 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2324.1.1 = {
+		effect = { add_rival = 700113 }
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700115 = {
+	name = "Lisa"
+	religion = columbian
+	culture = nutmegger
+	female = yes
+	trait = naive_appeaser
+	trait = attractive
+	trait = socializer
+	trait = groomed 
+	trait = kind
+	trait = content
+	trait = trusting
+	2297.8.6 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2555.1.1 = {
 		death = yes
 	}
 }
