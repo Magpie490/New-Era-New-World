@@ -59,7 +59,259 @@ pagan_group = {
 		dynamic_cult = no
 		secret_religion = no
 	}
+
+	trinitarian_reformed = { 
 	
+		graphical_culture = mongolgfx
+
+		icon = 203
+		heresy_icon = 204
+		
+		color = { 118 204 0}
+		
+		high_god_name = GOD_THE_SKY_FATHER
+		
+		god_names = {
+			GOD_THE_SKY_FATHER GOD_THE_EARTH_MOTHER GOD_THE_GREAT_MYSTERY GOD_THE_SHINING_MESSIAH GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			GOD_THE_DECEIVER GOD_THE_SNAKE GOD_THE_DARK_BRINGER THE_DARK_SPIRITS
+		}
+		
+	
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_PRAIRIE_SONGS
+		priest_title = SHAMAN
+		
+		priests_can_marry = yes
+		allow_looting = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = trinitarian_reformed
+		ignores_defensive_attrition = yes
+		allow_rivermovement = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 4
+		
+		dislike_tribal_organization = yes
+		
+		intermarry = buddhist_group
+		intermarry = zoroastrian_group
+		intermarry = khanist
+		intermarry = ironist
+		can_demand_religious_conversion = no
+	}
+	trinitarian = { 
+	
+		graphical_culture = mongolgfx
+
+		icon = 203
+		heresy_icon = 204
+		
+		color = { 118 204 0}
+		
+		high_god_name = GOD_THE_SKY_FATHER
+		
+		god_names = {
+			GOD_THE_SKY_FATHER GOD_THE_EARTH_MOTHER GOD_THE_GREAT_MYSTERY GOD_THE_SHINING_MESSIAH GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			GOD_THE_DECEIVER GOD_THE_SNAKE GOD_THE_DARK_BRINGER THE_DARK_SPIRITS
+		}
+		
+	
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_PRAIRIE_SONGS
+		priest_title = SHAMAN
+		
+		priests_can_marry = yes
+		allow_looting = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = trinitarian_reformed
+		ignores_defensive_attrition = yes
+		allow_rivermovement = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 4
+		
+		dislike_tribal_organization = yes
+		
+		intermarry = buddhist_group
+		intermarry = zoroastrian_group
+		intermarry = khanist
+		intermarry = ironist
+		can_demand_religious_conversion = no
+	}
+	
+	taalawsohu_reformed = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 57
+		heresy_icon = 58
+		
+		color = { 22 229 188 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = SACRED_TABLETS
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_TAWA
+		
+		god_names = {
+			GOD_KOKOPELLI GOD_KOKYANGWUTI GOD_MASAUWU GOD_PAHANA GOD_WUYAS
+		}
+		evil_god_names = {
+			GOD_COYOTE GOD_NATASKAS GOD_TSAVEYO
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 2
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		#reformed = taalawsohu_reformed
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+		intermarry = midewiwin
+		intermarry = midewiwin_reformed
+		intermarry = exovedate
+		intermarry = raven_tales_reformed
+		intermarry = orthodox
+		intermarry = blackfish
+		intermarry = navajo
+		intermarry = navajo_reformed
+		intermarry = numic_reformed
+		intermarry = numic
+		intermarry = taalawsohu
+		intermarry = waashat_reformed
+		intermarry = waashat
+
+		alternate_start = { always = no }
+
+	}
+	taalawsohu = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 57
+		heresy_icon = 58
+		
+		color = { 17 178 146 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SACRED_TABLETS
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_TAWA
+		
+		god_names = {
+			GOD_KOKOPELLI GOD_KOKYANGWUTI GOD_MASAUWU GOD_PAHANA GOD_WUYAS
+		}
+		evil_god_names = {
+			GOD_COYOTE GOD_NATASKAS GOD_TSAVEYO
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 2
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		reformed = taalawsohu_reformed
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+	}
+	
+	blessing_way = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 57
+		heresy_icon = 58
+		
+		color = { 204 183 142 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SACRED_TABLETS
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_TAWA
+		
+		god_names = {
+			GOD_KOKOPELLI GOD_KOKYANGWUTI GOD_MASAUWU GOD_PAHANA GOD_WUYAS
+		}
+		evil_god_names = {
+			GOD_COYOTE GOD_NATASKAS GOD_TSAVEYO
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 2
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		reformed = blessing_way_reformed
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+	}
+	blessing_way_reformed = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 57
+		heresy_icon = 58
+		
+		color = { 204 183 142 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SACRED_TABLETS
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_TAWA
+		
+		god_names = {
+			GOD_KOKOPELLI GOD_KOKYANGWUTI GOD_MASAUWU GOD_PAHANA GOD_WUYAS
+		}
+		evil_god_names = {
+			GOD_COYOTE GOD_NATASKAS GOD_TSAVEYO
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 2
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+	}
 	bon_reformed = {
 		graphical_culture = bongfx
 		secondary_event_pictures = tengri_pagan
