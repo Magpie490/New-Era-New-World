@@ -34,6 +34,122 @@ character_event = { # Give Indian characters appropriate schools at game start
 		character_event = { id = RoI.30120 }
 	}
 }
+narrative_event = {
+	id = cleanup.2
+	title = EVTNAME_cleanup_2
+	desc = EVTDESC_cleanup_2
+	picture = GFX_evt_emissary
+	border = GFX_event_narrative_frame_religion
+	#portrait = d_ibadi
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = k_papacy
+		has_global_flag = warlike_triumphant_flag
+		NOT = { has_global_flag = peaceful_triumphant_flag }
+	}
+	immediate = {
+		clr_global_flag = warlike_triumphant_flag
+		set_global_flag = peaceful_triumphant_flag
+		triumphant = {
+			set_allow_looting = no
+			set_can_call_crusade = no
+			set_hard_to_convert = no
+			set_pacifist = yes
+			set_raised_vassal_opinion_loss = yes
+			set_peace_prestige_loss = no
+			set_piety_loss_for_attacking_same_religion = no
+			set_peace_piety_gain = 1
+			set_convert_other_groups = 0
+			set_convert_same_group = 0
+			set_ai_aggression = 0.5
+			set_defensive_attrition = yes
+			enable_prepared_invasion = ROOT
+			set_character_modifier = {
+				levy_size = -0.1
+				global_tax_modifier = 0.1
+			}
+		}
+	}
+	option = {
+		name = cleanup2OptA
+		trigger = {
+			religion = triumphant
+		}
+	}
+	option = {
+		name = cleanup2OptB
+		trigger = {
+			NOT = { religion = triumphant }
+		}
+	}
+}
+narrative_event = {
+	id = cleanup.3
+	title = EVTNAME_cleanup_3
+	desc = EVTDESC_cleanup_3
+	picture = GFX_evt_emissary
+	border = GFX_event_narrative_frame_religion
+	#portrait = d_ibadi
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = k_papacy
+		has_global_flag = peaceful_triumphant_flag
+		NOT = { has_global_flag = warlike_triumphant_flag }
+	}
+	immediate = {
+		clr_global_flag = peaceful_triumphant_flag
+		set_global_flag = warlike_triumphant_flag
+		triumphant = {
+			set_pacifist = no
+			set_allow_looting = yes
+			set_hard_to_convert = no
+			set_peace_piety_gain = 0
+			set_raised_vassal_opinion_loss = no
+			set_piety_loss_for_attacking_same_religion = no
+			set_peace_prestige_loss = yes
+			set_convert_other_groups = 0
+			set_convert_same_group = 1
+			set_ai_aggression = 2.0
+			set_can_call_crusade = yes
+			set_hard_to_convert = yes
+			disable_prepared_invasion = ROOT
+			set_character_modifier = {
+				levy_size = 0.1
+				global_tax_modifier = -0.1
+			}
+		}
+	}
+	option = {
+		name = cleanup3OptA
+		trigger = {
+			religion = triumphant
+		}
+	}
+	option = {
+		name = cleanup3OptB
+		trigger = {
+			NOT = { religion = triumphant }
+		}
+	}
+}
+character_event = { 
+	id = cleanup.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_landed_title = k_papacy
+		}
+		NOT = { has_global_flag = peaceful_triumphant_flag }
+		NOT = { has_global_flag = peaceful_triumphant_startup_flag }
+	}
+	immediate = {
+		set_global_flag = peaceful_triumphant_flag
+		set_global_flag = peaceful_triumphant_startup_flag
+	}
+}
 character_event = { 
 	id = cleanup.999
 	hide_window = yes
@@ -2891,21 +3007,6 @@ character_event = {
 				}
 			}
 		}
-	}
-}
-character_event = {#sets the irish revolter with the irish_revolter character flag
-	id = cleanup.4
-	hide_window = yes
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		primary_title = { title = k_irish_rebels }
-		is_save_game = no
-	}
-	immediate = {
-		set_character_flag = irish_revolter
-		save_event_target_as = rebel_leader
 	}
 }
 character_event = {#ensures each newly formed Oligarchic Republic has the Oligarchic Elective government
