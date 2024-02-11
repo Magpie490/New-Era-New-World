@@ -5746,7 +5746,10 @@ religious = {
 			holy_war_start_trigger = yes
 			conditional_tooltip = {
 				trigger = {
+					OR = {
 					religion = neovedantic
+					religion = shangava
+					}
 				}
 				piety = 250
 			}
@@ -5758,6 +5761,7 @@ religious = {
 			}
 			conditional_tooltip = {
 				trigger = {
+					NOT = { religion = shangava }
 					NOT = { religion = neovedantic }
 					NOT = { religion = stalinist }
 				}
@@ -5772,7 +5776,10 @@ religious = {
 			holy_war_start_effect = yes
 			if = {
 				limit = {
+					OR = {
 					religion = neovedantic
+					religion = shangava
+					}
 				}
 				piety = -250
 			}

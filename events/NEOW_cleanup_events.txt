@@ -859,6 +859,48 @@ character_event = {
 	}
 }
 character_event = { 
+	id = cleanup.5508
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			religion = shangava
+		}
+		OR = {
+			is_theocracy = yes
+			government = theocratic_feudal_government
+		}
+		NOT = {
+			trait = brahmin_special
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		add_trait = brahmin_special
+	}
+}
+character_event = { 
+	id = cleanup.5509
+	hide_window = yes
+
+	trigger = {
+		father_even_if_dead = {
+			trait = brahmin_special
+		}
+		NOT = {
+			trait = brahmin_special
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		add_trait = brahmin_special
+	}
+}
+character_event = { 
 	id = cleanup.508
 	hide_window = yes
 
