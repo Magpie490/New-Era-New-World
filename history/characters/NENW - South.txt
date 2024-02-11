@@ -153,7 +153,10 @@
 		birth = yes
 	}
 	2276.9.12 = {
-		death = yes
+		death = {
+			death_reason = death_murder
+			killer = 910028
+		}
 	}
 }
 910016 = { # The sixth king of the Two Carolinas. Depressed of his father's passing, he would go on to be an architect, neglecting most of his duties in order to create fortresses to protect what's left of the Kingdom.
@@ -320,7 +323,7 @@
 	2212.7.21 = {
 		death = {
 			death_reason = death_murder
-			killer = 210023
+			killer = 910023
 		}
 	}
 }
@@ -402,7 +405,7 @@
 	culture = "karaliner"
 	religion = "mainline"
 	diplomacy = 6
-	martial = 8
+	martial = 4
 	stewardship = 6 
 	intrigue = 7
 	learning = 4
@@ -416,23 +419,402 @@
 		birth = yes
 	}
 }
-911016 = { # The Chief of Catawba. One of the remaining vassals of the Two Carolinas, he is described as a vulture circling his prey.
-	name = "Richard"
-	dynasty = 5023220
-	culture = "smokelander"
+
+910027 = { # The first Count of Chapel Hill. The last lands to rise up, the loss of this land marked the end of the Two Carolina's dominance over the region, although his lisp made it hard to say orders.
+	name = "Cole"
+	dynasty = 5024134
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 6
+	stewardship = 5 
+	intrigue = 6
+	learning = 7
+	trait = "tough_soldier"
+	trait = "peasant_noble"
+	trait = "lisp"
+	trait = "envious"
+	trait = "honest"
+	disallow_random_traits = yes 
+	2198.9.20 = {
+		birth = yes
+	}
+	2237.4.15 = {
+		death = yes
+	}
+}
+910028 = { # The second Count of Chapel Hill. So bold, that he attacked the weak Two Carolinas, but learned the hard way that a cornered animal is the most dangerous.
+	name = "Malcom"
+	dynasty = 5024134
+	father = 910027
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 9
+	stewardship = 5 
+	intrigue = 6
+	learning = 7
+	trait = "brilliant_strategist"
+	trait = "scarred_high"
+	trait = "ambitious"
+	trait = "envious"
+	trait = "brave"
+	disallow_random_traits = yes 
+	2225.1.15 = {
+		birth = yes
+	}
+	2276.9.12 = {
+			death = {
+			death_reason = death_murder
+			killer = 910015
+		}
+	}	
+}
+910029 = { # The third Count of Chapel Hill. Seeing the fate of his father, he hid in his castle, only to read.
+	name = "Lyndon"
+	dynasty = 5024134
+	father = 910028
+	culture = "karaliner"
 	religion = "mainline"
 	diplomacy = 5
+	martial = 4
+	stewardship = 7 
+	intrigue = 6
+	learning = 5
+	trait = "martial_cleric"
+	trait = "erudite"
+	trait = "shy"
+	trait = "humble"
+	trait = "depressed"
+	disallow_random_traits = yes 
+	2242.1.15 = {
+		birth = yes
+	}
+	2306.4.12 = {
+		death = yes
+	}
+}
+910030 = { # The current Count of Chapel Hill. A gardener, who has no care to tend for them thanks to his slothfulness.
+	name = "Jermaine"
+	dynasty = 5024134
+	father = 910029
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 3
+	stewardship = 6 
+	intrigue = 5
+	learning = 7
+	trait = "indulgent_wastrel"
+	trait = "sloth"
+	trait = "gardener"
+	trait = "stressed"
+	trait = "patient"
+	disallow_random_traits = yes 
+	2281.4.26 = {
+		birth = yes
+	}
+}
+910031 = { # The first Duke of Southside. The frontier of the High Kingdom against Columbia, he was given the task of fending them off by any means necessary. He did this by diplomacy.
+	name = "Kevin"
+	dynasty = 5024112
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 6
+	learning = 7
+	trait = "grey_eminence"
+	trait = "socializer"
+	trait = "gregarious"
+	trait = "deceitful"
+	trait = "humble"
+	disallow_random_traits = yes 
+	2045.3.25 = {
+		birth = yes
+	}
+	2101.8.2 = {
+		death = yes
+	}
+}
+910032 = { # The second Duke of Southside. This man used the building of forts to fend off the Columbians, which led to the centralization of the realms, just shy of his capital county.
+	name = "Ezekiel"
+	dynasty = 5024112
+	father = 910031
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 6
+	stewardship = 7 
+	intrigue = 6
+	learning = 5
+	trait = "fortune_builder"
+	trait = "architect"
+	trait = "greedy"
+	trait = "ambitious"
+	trait = "eccentric"
+	disallow_random_traits = yes 
+	2077.10.19 = {
+		birth = yes
+	}
+	2126.9.10 = {
+		death = yes
+	}
+}
+910033 = { # The third Duke of Southside. This one fended off the Columbians by intrigue.
+	name = "Warren"
+	dynasty = 5024112
+	father = 910032
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 7
+	martial = 4
+	stewardship = 5 
+	intrigue = 8
+	learning = 6
+	trait = "elusive_shadow"
+	trait = "plotter"
+	trait = "deceitful"
+	trait = "shy"
+	trait = "shrewd"
+	disallow_random_traits = yes 
+	2104.4.20 = {
+		birth = yes
+	}
+	2154.6.12 = {
+		death = yes
+	}
+}
+910034 = { # The fourth Duke of Southside. This one used all of his predecessor's work as deterence, not really being concious of his job.
+	name = "Calvin"
+	dynasty = 5024112
+	father = 910033
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 3
+	learning = 4
+	trait = "indulgent_wastrel"
+	trait = "sloth"
+	trait = "shy"
+	trait = "chaste"
+	trait = "honest"
+	disallow_random_traits = yes 
+	2139.7.20 = {
+		birth = yes
+	}
+	2190.8.20 = {
+		death = yes
+	}
+}
+910035 = { # The fifth Duke of Southside. Amassing a large force in order to protect the Two Carolinas from Columbia, but the collapse of the High Kingdom and the Southron populace being more loyal to Columbia meant that his strategy was ill-advised.
+	name = "Hunter"
+	dynasty = 5024112
+	father = 910034
+	culture = "karaliner"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 7
+	stewardship = 5 
+	intrigue = 6
+	learning = 3
+	trait = "skilled_tactician"
+	trait = "strategist"
+	trait = "paranoid"
+	trait = "scarred"
+	trait = "cruel"
+	disallow_random_traits = yes 
+	2170.3.21 = {
+		birth = yes
+	}
+	2212.3.4 = {
+		death = yes
+	}
+}
+910036 = { # The sixth Duke of Southside. The noble made Duke after the collapse of the Two Carolinas, he now serves the Columbians as their southern frontier, a reversing of the roles.
+	name = "Isaias"
+	dynasty = 4022277
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 7
+	stewardship = 6 
+	intrigue = 4
+	learning = 5
+	trait = "tough_soldier"
+	trait = "stressed"
+	trait = "poet"
+	trait = "gluttonous"
+	trait = "zealous"
+	disallow_random_traits = yes 
+	2187.11.4 = {
+		birth = yes
+	}
+	2238.7.20 = {
+		death = yes
+	}
+}
+910037 = { # The seventh Duke of Southside. This man would be a great administrator, holding off greedy Federalists who wanted the land for themselves.
+	name = "Justinian"
+	dynasty = 4022277
+	father = 910036
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 8
+	martial = 4
+	stewardship = 9 
+	intrigue = 7
+	learning = 6
+	trait = "charismatic_negotiatior"
+	trait = "deceitful"
+	trait = "administrator"
+	trait = "proud"
+	trait = "gregarious"
+	disallow_random_traits = yes 
+	2226.1.15 = {
+		birth = yes
+	}
+	2282.6.20 = {
+		death = yes
+	}
+}
+910038 = { # The eighth Duke of Southside. A gardener who is meek and humble about his achievements.
+	name = "Meleager"
+	dynasty = 4022277
+	father = 910037
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 4
+	learning = 5
+	trait = "fortune_builder"
+	trait = "gardener"
+	trait = "shy"
+	trait = "gardener"
+	trait = "humble"
+	disallow_random_traits = yes 
+	2255.4.23 = {
+		birth = yes
+	}
+	2308.5.12 = {
+		death = yes
+	}
+}
+910039 = { # The current Duke of Southside. A man who writes books and poems, and is the scandal amongst women.
+	name = "Bedivere"
+	dynasty = 4022277
+	father = 910038
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 7
 	martial = 4
 	stewardship = 5 
 	intrigue = 7
 	learning = 6
-	trait = "amateurish_plotter"
-	trait = "craven"
-	trait = "ambitious"
-	trait = "arbitrary"
-	trait = "gregarious"
+	trait = "intricate_webweaver"
+	trait = "seducer"
+	trait = "lustful"
+	trait = "poet"
+	trait = "erudite"
 	disallow_random_traits = yes 
-	2290.1.15 = {
+	2290.2.14 = {
+		birth = yes
+	}
+}
+910040 = { # The first Count of Brunswick. A Southron noble who rose up with the Duke of Southside to rule the newly conquered Columbian land.
+	name = "Merriman"
+	dynasty = 4022261
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 5
+	martial = 3
+	stewardship = 5 
+	intrigue = 4
+	learning = 6
+	trait = "martial_cleric"
+	trait = "stubborn"
+	trait = "feeble"
+	trait = "brave"
+	trait = "administrator"
+	disallow_random_traits = yes 
+	2186.8.7 = {
+		birth = yes
+	}
+	2235.10.4 = {
+		death = yes
+	}
+}
+910041 = { # The second Count of Brunswick. A architect and gardener, he would create beautiful gardens that stand out even today.
+	name = "Alpheus"
+	dynasty = 4022261
+	father = 910040
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 6
+	martial = 4
+	stewardship = 7 
+	intrigue = 6
+	learning = 5
+	trait = "midas_touched"
+	trait = "gardener"
+	trait = "architect"
+	trait = "proud"
+	trait = "diligent"
+	disallow_random_traits = yes 
+	2227.2.19 = {
+		birth = yes
+	}
+	2279.5.21 = {
+		death = yes
+	}
+}
+910042 = { # The third Count of Brunswick. A man built like a brick house that enjoyed playing games.
+	name = "Pellinore"
+	dynasty = 4022261
+	father = 910041
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 7
+	martial = 6
+	stewardship = 5 
+	intrigue = 3
+	learning = 4
+	trait = "skilled_tactician"
+	trait = "gamer"
+	trait = "robust"
+	trait = "just"
+	trait = "chaste"
+	disallow_random_traits = yes 
+	2258.6.25 = {
+		birth = yes
+	}
+	2307.12.17 = {
+		death = yes
+	}
+}
+910043 = { # The current Count of Brunswick. A man of high intrigue, he is renouned to having a ring of spymasters at all times.
+	name = "Urien"
+	dynasty = 4022261
+	father = 910042
+	culture = "southron"
+	religion = "mainline"
+	diplomacy = 7
+	martial = 5
+	stewardship = 4 
+	intrigue = 6
+	learning = 5
+	trait = "elusive_shadow"
+	trait = "plotter"
+	trait = "deceitful"
+	trait = "gregarious"
+	trait = "arbitrary"
+	disallow_random_traits = yes 
+	2295.1.15 = {
 		birth = yes
 	}
 }
