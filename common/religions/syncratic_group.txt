@@ -225,7 +225,7 @@ syncratic_group = {
 		icon = 125
 		heresy_icon = 125
 		
-		color = { 119 0 255 }
+		color = { 22 119 229 }
 		
 		crusade_name = CRUSADE
 		use_new_crusade = no
@@ -244,6 +244,89 @@ syncratic_group = {
 		}
 		character_modifier = {
 			catholic_opinion = -10
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		uses_decadence = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		max_wives = 4
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = orthodox
+		intermarry = catholic
+		intermarry = syncratic_group
+		intermarry = sevillian
+		intermarry = lutheran
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
+		intermarry = cadaverist
+		intermarry = prussianist
+		intermarry = transatlantic
+		intermarry = baptist
+		#intermarry = jugoslavist
+		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = nasrini
+		intermarry = koptic
+		intermarry = mattaism
+		intermarry = xinjiao
+		
+		intermarry = evangelical
+		
+		intermarry = highchurch
+		intermarry = muwahidunna
+		intermarry = fraticelli
+		intermarry = hussite
+		intermarry = anglican
+		intermarry = raelian
+		intermarry = brethren
+		intermarry = raelian
+		intermarry = poseidonian
+		intermarry = chaldean
+		intermarry = yersenism
+		intermarry = ahlehaqq
+		intermarry = marblists
+		intermarry = armenianapostolic
+	}
+	kristooil = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 139
+		heresy_icon = 139
+		
+		color = { 214 50 255 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_POPOL_VUH
+		priest_title = PRIEST
+		
+		high_god_name = GOD_JUNAB_KUJ
+		
+		god_names = {
+			GOD_JUNAB_KUJ GOD_JESUCRISTO GOD_EKCHUA GOD_LA_VIRGENCITA GOD_CHAAC GOD_KUKULKAN GOD_RI_LAJ_MAM GOD_THE_SAINTS
+		}
+		
+		evil_god_names = {
+			GOD_AJ_PUCH GOD_THE_OKOL_PIXAN GOD_THE_WITCHES GOD_THE_NAHUALISTAS
+		}
+		character_modifier = {
 		}
 
 		aggression = 0.8
