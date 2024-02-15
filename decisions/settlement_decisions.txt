@@ -454,7 +454,6 @@ settlement_decisions = {
 				religion = jacobinist
 				religion = trotskyite
 				religion = titoist
-				religion = red_cult
 				trait = cruel
 				trait = impaler
 				trait = aggressive_leader
@@ -474,6 +473,7 @@ settlement_decisions = {
 				trait = charitable
 				trait = just
 			}
+			war = yes
 			has_dlc = "Horse Lords"
 		}
 		
@@ -493,7 +493,9 @@ settlement_decisions = {
 				}
 			}
 			has_siege = no
+			controller = { character = FROM }
 		}
+		
 		
 		allow = {
 			NOT = { has_holding_modifier = recently_burnt_the_land }
