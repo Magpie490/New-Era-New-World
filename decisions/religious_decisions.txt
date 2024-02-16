@@ -143,80 +143,6 @@ decisions = {
 			}
 		}
 	}
-	give_offerings_sidhe = {
-		only_playable = yes
-		is_high_prio = yes
-		potential = {
-			has_dlc = "The Old Gods"
-			is_ruler = yes
-			age = 16
-			prisoner = no
-			OR = {
-				religion = celtic_pagan
-				religion = celtic_pagan_reformed
-			}
-			NOT = { has_religion_feature = religion_dogmatic }
-			NOR = {
-				has_character_modifier = sidhe_offerings_bad
-				has_character_modifier = sidhe_offerings_neutral
-				has_character_modifier = sidhe_offerings_good
-				has_character_flag = sidhe_offerings_giving
-			}
-		}
-		allow = {
-			war = no
-			any_demesne_title = {
-				location = {
-					any_province_holding = { is_occupied = no }
-				}
-			}
-			any_courtier = {
-				has_job_title = job_spiritual
-			}
-			scaled_wealth = {
-				value = 0.30
-				min = 5
-				max = 75
-			}
-			prisoner = no
-		}
-		effect = {
-			custom_tooltip = {
-				text = prepare_offerings
-				scaled_wealth = {
-					value = -0.15
-					min = -5
-					max = -75
-				}
-				set_character_flag = sidhe_offerings_giving
-				hidden_tooltip = {
-					character_event = { id = celtic.248 }
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 0
-				NOT = {
-					scaled_wealth = 1.0
-				}
-			}
-			modifier = {
-				factor = 0
-				trait = cynical
-			}
-			modifier = {
-				factor = 0
-				trait = craven
-			}
-			modifier = {
-				factor = 0
-				trait = paranoid
-			}
-		}
-	}
 	
 	give_offerings_gods = {
 		only_playable = yes
@@ -271,10 +197,10 @@ decisions = {
 				religion = akjang
 				religion = vagarna
 				religion = bushism
-			}
-			NOR = {
 				religion = celtic_pagan
 				religion = celtic_pagan_reformed
+			}
+			NOR = {
 				religion = sikh
 				religion = jain
 			}
