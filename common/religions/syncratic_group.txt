@@ -421,13 +421,92 @@ syncratic_group = {
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_call_crusade = yes
-		uses_decadence = yes
 		attacking_same_religion_piety_loss = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		rel_head_defense = yes
 		priests_can_marry = yes
-		max_wives = 4
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = orthodox
+		intermarry = catholic
+		intermarry = syncratic_group
+		intermarry = sevillian
+		intermarry = lutheran
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = orleanist
+		intermarry = cadaverist
+		intermarry = prussianist
+		intermarry = transatlantic
+		intermarry = baptist
+		#intermarry = jugoslavist
+		intermarry = islamity
+		intermarry = dahatatta
+		intermarry = nasrini
+		intermarry = koptic
+		intermarry = mattaism
+		intermarry = xinjiao
+		
+		intermarry = evangelical
+		
+		intermarry = highchurch
+		intermarry = muwahidunna
+		intermarry = fraticelli
+		intermarry = hussite
+		intermarry = anglican
+		intermarry = raelian
+		intermarry = brethren
+		intermarry = raelian
+		intermarry = poseidonian
+		intermarry = chaldean
+		intermarry = yersenism
+		intermarry = ahlehaqq
+		intermarry = marblists
+		intermarry = armenianapostolic
+	}
+	sun_dance = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 67
+		heresy_icon = 67
+		
+		color = { 255 207 63 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_THE_GREAT_SPIRIT
+		
+		god_names = {
+			GOD_THE_GREAT_SPIRIT GOD_THE_GREAT_MYSTERY GOD_THE_SUN GOD_WAKAN_TANKA GOD_JESUS GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		
+		evil_god_names = {
+			GOD_THE_DECEIVER THE_DARK_SPIRITS
+		}
+		character_modifier = {
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
 		
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
