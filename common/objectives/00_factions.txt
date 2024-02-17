@@ -9468,6 +9468,13 @@ faction_independence = {
 		}
 		modifier = {#Jacobinists always want to be free
 			factor = 2
+			religion = juggalo
+			liege = {
+				NOT = { religion = juggalo }
+			}
+		}
+		modifier = {#Jacobinists always want to be free
+			factor = 2
 			religion = jacobinist
 			liege = {
 				NOT = { religion = jacobinist }

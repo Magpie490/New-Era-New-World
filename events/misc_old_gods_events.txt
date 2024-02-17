@@ -240,7 +240,10 @@ character_event = {
 	option = {
 		name = EVTOPTA62320
 		trigger = {
-			religion = aurorean
+			OR = {
+				religion = aurorean
+				religion = juggalo
+			}
 		}
 		spawn_unit = {
 			province = capital_scope
@@ -263,8 +266,9 @@ character_event = {
 	option = {
 		name = EVTOPTA62320
 		trigger = {
-			NOT = {
+			NOR = {
 				religion = aurorean
+				religion = juggalo
 			}
 		}
 		spawn_unit = {
@@ -429,7 +433,10 @@ character_event = {
 	option = {
 		name = EVTOPTA62321
 		trigger = {
-			religion = aurorean
+			OR = {
+				religion = aurorean
+				religion = juggalo
+			}
 		}
 
 		create_character = {
@@ -471,8 +478,9 @@ character_event = {
 	option = {
 		name = EVTOPTA62321
 		trigger = {
-			NOT = {
+			NOR = {
 				religion = aurorean
+				religion = juggalo
 			}
 		}
 
@@ -527,7 +535,10 @@ character_event = {
 		trigger = {
 			OR = {
 				religion_group = oceanic
-				religion = aurorean
+				OR = {
+					religion = aurorean
+					religion = juggalo
+				}
 				has_religion_feature = religion_adventuring
 			}
 
@@ -560,7 +571,10 @@ character_event = {
 					}
 					OR = {
 					religion_group = oceanic
-					religion = aurorean
+						OR = {
+							religion = aurorean
+							religion = juggalo
+						}
 					}
 					NOT = { has_religion_feature = religion_adventuring }
 				}
@@ -658,7 +672,10 @@ character_event = {
 		name = EVTOPTA62320
 
 		trigger = {
-			religion = aurorean
+			OR = {
+				religion = aurorean
+				religion = juggalo
+			}
 		}
 		spawn_unit = {
 			province = capital_scope
@@ -682,8 +699,9 @@ character_event = {
 		name = EVTOPTA62320
 
 		trigger = {
-			NOT = {
+			NOR = {
 				religion = aurorean
+				religion = juggalo
 			}
 		}
 		spawn_unit = {
