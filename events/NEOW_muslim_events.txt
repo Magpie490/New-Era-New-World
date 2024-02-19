@@ -11,6 +11,10 @@ character_event = { #Clean up event
 				has_claim = d_sunni
 			}
 			AND = {
+				NOT = { religion = salihi }
+				has_claim = d_salihi
+			}
+			AND = {
 				NOT = { religion = wahhabi }
 				has_claim = d_wahhabi
 			}
@@ -35,6 +39,10 @@ character_event = { #Clean up event
 			if = {
 				limit = { NOT = { religion = sunni } }
 				remove_claim = d_sunni
+			}
+			if = {
+				limit = { NOT = { religion = salihi } }
+				remove_claim = d_salihi
 			}
 			if = {
 				limit = { NOT = { religion = wahhabi } }
@@ -240,6 +248,15 @@ character_event = {
 				controls_religion = no
 			}
 			d_sunni = { add_claim = PREV }
+			caliphate_gain_effect = yes
+		}
+		if = {
+			limit = {
+				independent = yes
+				religion = salihi
+				controls_religion = no
+			}
+			d_salihi = { add_claim = PREV }
 			caliphate_gain_effect = yes
 		}
 		else = {
