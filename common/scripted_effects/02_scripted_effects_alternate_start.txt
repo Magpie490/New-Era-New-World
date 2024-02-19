@@ -3095,6 +3095,17 @@ randomize_religion_names_effect = {
 	}
 	if = {
 		limit = {
+			salihi = {
+				is_name_randomized = yes
+			}
+		}
+		d_salihi = {
+			set_name="ALT_SUNNI"
+			adjective="ALT_SUNNI_ADJ"
+		}
+	}
+	if = {
+		limit = {
 			shiite = {
 				is_name_randomized = yes
 			}
