@@ -1224,6 +1224,47 @@ old_world_cultist_group = {
 		intermarry = katoliko
 		intermarry = eastern_lightning
 	}
+	custodite = {
+		graphical_culture = othermuslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		interface_skin = { OWC_interface }
+		icon = 151
+		heresy_icon = 151
+		
+		color = { 0 34 102 }
+		
+		scripture_name = THE_LAST_ORDERS
+		priest_title = JUDGE
+		piety_name = PATRIOTISM
+		
+		high_god_name = GOD_OLD_GLORY
+		
+		god_names = {
+			GOD_OLD_GLORY GOD_LADY_COLUMBIA GOD_THE_ETERNAL_OATH GOD_THE_COMMANDER_IN_CHIEF GOD_THE_AMERICANA
+		}
+		
+		evil_god_names = {
+			GOD_THE_ANARCHISTS GOD_THE_GODLESS_TRAITORS GOD_THE_SAVAGE_LOOTERS GOD_THE_REDS GOD_THE_DRAFT_DODGERS
+		}	
+		
+		character_modifier={
+			religion_flex = 0.5
+			constitutional_opinion = 10
+		}
+		aggression = 1.0
+		allow_rivermovement = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_retire_to_monastery = yes
+		has_heir_designation = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		rel_head_defense = yes
+		female_temple_holders = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 20
+	}	
 	constitutional = {
 		graphical_culture = constitutionalgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
