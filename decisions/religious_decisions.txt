@@ -200,6 +200,8 @@ decisions = {
 				religion = bushism
 				religion = celtic_pagan
 				religion = celtic_pagan_reformed
+				religion = gaian
+				religion = luddite
 			}
 			NOR = {
 				religion = sikh
@@ -4205,6 +4207,8 @@ decisions = {
 				religion = hoodoo
 				religion = juggalo
 				religion = citrus_scientology
+				religion = gaian
+				religion = luddite
 				has_religion_feature = religion_tarot
 			}
 			NOT = {has_character_modifier=hidden_timer_modif}
@@ -6140,6 +6144,170 @@ targeted_decisions = {
 	}
 }
 title_decisions = {
+	ease_depopulation_issues = {
+		only_playable = yes
+		filter = owned		
+		ai_target_filter = owned
+		ai_check_interval = 48
+		
+		from_potential = {
+			is_ruler = yes
+			wealth = 142
+			NOT = {
+				has_character_modifier = hidden_timer_modif
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+			location = { 
+				OR = {
+					has_province_modifier = depopulated_1
+					has_province_modifier = depopulated_2
+					has_province_modifier = depopulated_3
+				} 
+				num_of_settlements = 1
+			}
+			holder_scope = {
+				OR = {
+					is_liege_or_above = FROM
+					character = FROM
+				}
+			}
+		}
+		
+		allow = {
+			location = {
+				OR = {
+					has_province_modifier = depopulated_1
+					has_province_modifier = depopulated_2
+					has_province_modifier = depopulated_3				
+				}
+				num_of_settlements = 1
+			}
+			FROM = {
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 1 } }
+					wealth = 142
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 2 } }
+					wealth = 284
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 3 } }
+					wealth = 426
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 4 } }
+					wealth = 568
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 5 } }
+					wealth = 710
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 6 } }
+					wealth = 852
+				}
+				trigger_if = {
+					limit = { ROOT = { num_of_settlements == 7 } }
+					wealth = 1000
+				}
+			}
+		}
+		
+		effect = {
+			FROM = {
+				hidden_tooltip = { 
+					add_character_modifier = { name = hidden_timer_modif duration = 183 hidden = yes} 
+				}		
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 1
+						}
+					}
+					wealth = -142
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 2
+						}
+					}
+					wealth = -284
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 3
+						}
+					}
+					wealth = -426
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 4
+						}
+					}
+					wealth = -568
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 5
+						}
+					}
+					wealth = -710
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 6
+						}
+					}
+					wealth = -852
+				}
+				if = {
+					limit = {
+						ROOT = {
+							num_of_settlements == 7
+						}
+					}
+					wealth = -1000
+				}
+				piety = 200
+			}
+			location = {
+				decrease_depopulation_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {trait = cynical}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {trait = greedy}
+			}
+			modifier = {
+				factor = 1.5
+				FROM={trait = zealous}
+			}
+			modifier = {
+				factor = 1.5
+				FROM={trait = charitable}
+			}
+		}
+	}
 	zoroastrian_help_the_poor = {
 		only_playable = yes
 			filter = owned		
