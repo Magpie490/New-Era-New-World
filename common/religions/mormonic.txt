@@ -69,7 +69,7 @@ mormonic = {
 		graphical_culture = westerngfx
 
 		icon = 106
-		heresy_icon = 106
+		heresy_icon = 179
 		
 		color = { 13 162 255 }
 		
@@ -88,8 +88,70 @@ mormonic = {
 			SATAN LUCIFER THE_ADVERSARY
 		}
 		character_modifier = {
-			religion_flex = -0.5
-			fertility = 0.25
+		}
+		unit_home_modifier = {
+			land_morale = 0.6
+		}
+		aggression = 1
+		allow_rivermovement = yes
+		pacifist = yes
+		autocephaly = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		hard_to_convert = yes
+		rel_head_defense = yes
+		landed_kin_prestige_bonus = yes
+		feminist = yes
+		intermarry = armenianapostolic
+		intermarry = lutheran
+		intermarry = calvinist
+		intermarry = genevist
+		intermarry = prussianist
+		intermarry = baptist
+		intermarry = nasrini
+		intermarry = xinjiao
+		intermarry = easternprotestant
+		intermarry = evangelical
+		intermarry = highchurch
+		intermarry = hussite
+		intermarry = anglican
+		intermarry = charismatic
+		intermarry = quaker
+		intermarry = eastern_lightning
+		intermarry = gidoggyo
+		intermarry = shinto
+		intermarry = bushinto
+		intermarry = buddhoshinto
+		intermarry = ainushinto
+		intermarry = shinko
+		intermarry = amidism
+		intermarry = mahayana
+		intermarry = shindo_reformed
+		intermarry = shindo
+	}
+	brighamite = {
+		graphical_culture = westerngfx
+
+		icon = 180
+		heresy_icon = 181
+		
+		color = { 17 55 178 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_BOOK_OF_MORMON
+		priest_title = PRIEST
+		
+		high_god_name = HEAVENLY_FATHER
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_PROPHETS
+		}
+		evil_god_names = {
+			SATAN LUCIFER THE_ADVERSARY
+		}
+		character_modifier = {
 		}
 		unit_home_modifier = {
 			land_morale = 0.6
