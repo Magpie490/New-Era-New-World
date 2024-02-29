@@ -152,7 +152,7 @@ pagan_group = {
 		icon = 208
 		heresy_icon = 209
 		
-		color = { 191 0 0 }
+		color = { 153 0 0 }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_RAVEN_TALES
 		priest_title = SHAMAN
@@ -181,13 +181,70 @@ pagan_group = {
 		religious_clothing_priest = 15
 		intermarry = peyotist
 	}
+	arcadian = {
+		graphical_culture = buddhistgfx
+		icon = 186
+		heresy_icon = 186
+		
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 30 153 75 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+	
+		high_god_name = GOD_THE_HORNED_GOD
+
+		god_names = {
+			GOD_THE_HORNED_GOD GOD_PAN GOD_HERMES GOD_PUSHAN GOD_DIONYSUS GOD_THE_CHINOOKS GOD_THE_SATYRS GOD_THE_DRYADS GOD_THE_SPIRITS
+		}
+
+		evil_god_names = {
+			GOD_THE_MAN GOD_THE_ROT GOD_THE_INDUSTRY_DEVILS THE_DARK_SPIRITS
+		}
+		
+		character_modifier = {
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LOST_ARCADIA
+		priest_title = MAGE
+		piety_name = MAGICK
+		
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_rivermovement = yes		
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_excommunicate = yes
+		can_retire_to_monastery = yes
+		feminist = yes
+		allow_looting = yes
+		seafarer = yes
+		female_temple_holders = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		autocephaly = yes
+		divine_blood = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = theosophy
+		intermarry = orange_king
+		intermarry = congregationist
+		intermarry = ibadi
+	}
 	raven_tales_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
 
 		icon = 208
 		heresy_icon = 209
 		
-		color = { 229 0 0 }
+		color = { 191 0 0 }
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_RAVEN_TALES
 		priest_title = SHAMAN
@@ -446,9 +503,6 @@ pagan_group = {
 		raised_vassal_opinion_loss = no
 		max_consorts = 2
 		priests_can_marry = yes
-		can_demand_religious_conversion = no
-		
-		reformed = raven_tales_reformed
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
