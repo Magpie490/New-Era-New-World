@@ -70,6 +70,7 @@ tycoon_elizabeth = { #Nine Great Tycoons Bloodline
 	celtic_pagan_opinion = 5
 	celtic_pagan_reformed_opinion = 5
 	antiquarianist_opinion = 5
+	antiquarianist_reformed_opinion = 5
 	loyalist_opinion = 5
 	picture = GFX_bloodlines_symbol_war_knight
 		active = {
@@ -124,6 +125,7 @@ tycoon_tim = { #Nine Great Tycoons Bloodline
 	monthly_character_prestige = 0.5
 	combat_rating = 10
 	antiquarianist_opinion = 5
+	antiquarianist_reformed_opinion = 5
 	loyalist_opinion = 5
 	picture = GFX_bloodlines_symbol_war_knight
 		active = {
@@ -172,6 +174,32 @@ hadad_bloodline = {
 	monthly_character_piety = 1.5
 	chaldean_opinion = 5
 	madonnite_opinion = 5
+	picture = GFX_bloodlines_temp_symbol
+	flags = { historical_bloodline }
+}
+tycoon_skyrim = { #The Hero of Skyrim- Michigan
+	inheritance = patrilineal
+	monthly_character_prestige = 0.5
+	combat_rating = 10
+	antiquarianist_opinion = 10
+	antiquarianist_reformed_opinion = 10
+	delver_opinion = 5
+	delver_reformed_opinion = 5
+	picture = GFX_bloodlines_symbol_war_knight
+		active = {
+		OR = {
+			religion = antiquarianist
+		}
+	}
+	flags = { historical_bloodline }
+}
+detroit_bloodline = {
+	inheritance = patrilineal
+	stewardship = 1
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	antiquarianist_reformed_opinion = 7
+	antiquarianist = 7
 	picture = GFX_bloodlines_temp_symbol
 	flags = { historical_bloodline }
 }

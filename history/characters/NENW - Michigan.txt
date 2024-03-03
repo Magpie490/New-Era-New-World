@@ -141,13 +141,33 @@
 		death = yes
 	}
 }
-400008 = {
-	name = "Mather"
+400008 = { #Former rulers of Detroit
+	name = "Frederick"
 	dynasty = 3000468
 	religion = antiquarianist
 	culture = michigander
-	2278.6.22 = {
+	trait = "skilled_tactician"
+	trait = "scarred_mid"
+	trait = "quick"
+	trait = "strategist"
+	trait = "theologian"
+	trait = "diligent"
+	trait = "wroth"
+	trait = "temperate"
+	trait = "proud"
+	trait = "deceitful"
+	trait = "zealous"
+	trait = "inspiring_leader"
+	trait = "aggressive_leader"
+	disallow_random_traits = yes
+	2298.6.22 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = detroit_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -180,7 +200,7 @@
 400011 = {
 	name = "Oliver"
 	dynasty = 4000454
-	religion = antiquarianist
+	religion = ironist
 	culture = michigander
 	2293.8.23 = {
 		birth = yes
@@ -276,7 +296,7 @@
 400019 = {
 	name = "Stephen"
 	dynasty = 4000462
-	religion = antiquarianist
+	religion = ironist
 	culture = michigander
 	2279.3.14 = {
 		birth =  yes
@@ -345,13 +365,30 @@
 		death = yes
 	}
 }
-400025 = {
-	name = "Sylvanius"
+400025 = { #THE BUSINESSBORN(s great-great-grandson)
+	name = "Todd"
 	dynasty = 3000471
 	religion = antiquarianist
 	culture = rostlander
+	trait = charismatic_negotiator
+	trait = seducer
+	trait = scholar
+	trait = patient
+	trait = envious
+	trait = humble
+	trait = charitable
+	trait = erudite
+	trait = just
+	trait = gregarious
+	disallow_random_traits = yes
 	2272.4.23 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = tycoon_skyrim
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -446,7 +483,7 @@
 	name = "Roy"
 	dynasty = 3000488
 	religion = luddite
-	culture = michigander
+	culture = laikmahn
 	2287.4.13 = {
 		birth = yes
 	}
