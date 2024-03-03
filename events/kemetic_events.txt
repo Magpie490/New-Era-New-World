@@ -1,0 +1,466 @@
+namespace = kemetic
+
+character_event = {
+	id = kemetic.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_kemetic_300
+	desc = EVTDESC_kemetic_300
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_kemetic_cult
+	}
+	
+	option = {#Nicholas
+		name = EVTOPTA_kemetic_300
+		add_trait = patron_osiris
+	}
+	
+	option = {#Olga
+		name = EVTOPTB_kemetic_300
+		add_trait = patron_isis
+	}
+	
+	option = {#Load others
+		name = EVTOPTC_kemetic_300
+		add_trait = patron_horus
+	}
+	
+	option = {#Load others
+		name = EVTOPTE_kemetic_300
+		hidden_tooltip = { character_event = { id = kemetic.301 } }
+	}
+	
+	after = {
+		clr_character_flag = picking_kemetic_cult
+	}
+}
+
+character_event = {
+	id = kemetic.301
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_kemetic_301
+	desc = EVTDESC_kemetic_301
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_kemetic_cult
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_kemetic_300
+		add_trait = patron_linkon
+	}	
+	
+	option = {#Nicholas
+		name = EVTOPTA_kemetic_301
+		add_trait = patron_thoth
+	}
+	
+	option = {#Olga
+		name = EVTOPTB_kemetic_301
+		add_trait = patron_hathor
+	}	
+	
+	option = {#Load others
+		name = EVTOPTF_kemetic_301
+		hidden_tooltip = { character_event = { id = kemetic.303 } }
+	}
+	
+	after = {
+		clr_character_flag = picking_kemetic_cult
+	}
+}
+
+character_event = {
+	id = kemetic.303
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_kemetic_303
+	desc = EVTDESC_kemetic_303
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_kemetic_cult
+	}	
+	
+	option = {#Load others
+		name = EVTOPTC_kemetic_301
+		add_trait = patron_sekhmet
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_kemetic_301
+		add_trait = patron_anubis	
+	}
+	
+	option = {#Load others
+		name = EVTOPTF_kemetic_303
+		hidden_tooltip = { character_event = { id = kemetic.300 } }
+	}
+	
+	after = {
+		clr_character_flag = picking_kemetic_cult
+	}
+}
+
+letter_event = {
+	id = kemetic.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = kemetic302Desc
+	hide_window = yes
+	trigger = {
+		religion = kemetic
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = patron_osiris
+			trait = patron_isis
+			trait = patron_horus
+			trait = patron_linkon
+			trait = patron_thoth
+			trait = patron_hathor
+			trait = patron_sekhmet
+			trait = patron_anubis
+		}
+	}
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_osiris
+						}
+						mother_even_if_dead = {
+							trait = patron_osiris
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_osiris
+								}
+								mother_even_if_dead = {
+									trait = patron_osiris
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_osiris
+								}
+								mother_even_if_dead = {
+									trait = patron_osiris
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_osiris
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_isis
+						}
+						mother_even_if_dead = {
+							trait = patron_isis
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_isis
+								}
+								mother_even_if_dead = {
+									trait = patron_isis
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_isis
+								}
+								mother_even_if_dead = {
+									trait = patron_isis
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = patron_isis
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_horus
+						}
+						mother_even_if_dead = {
+							trait = patron_horus
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_horus
+								}
+								mother_even_if_dead = {
+									trait = patron_horus
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_horus
+								}
+								mother_even_if_dead = {
+									trait = patron_horus
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = patron_horus
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_linkon
+						}
+						mother_even_if_dead = {
+							trait = patron_linkon
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_linkon
+								}
+								mother_even_if_dead = {
+									trait = patron_linkon
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_linkon
+								}
+								mother_even_if_dead = {
+									trait = patron_linkon
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_linkon
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_thoth
+						}
+						mother_even_if_dead = {
+							trait = patron_thoth
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_thoth
+								}
+								mother_even_if_dead = {
+									trait = patron_thoth
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_thoth
+								}
+								mother_even_if_dead = {
+									trait = patron_thoth
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_thoth
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_hathor
+						}
+						mother_even_if_dead = {
+							trait = patron_hathor
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_hathor
+								}
+								mother_even_if_dead = {
+									trait = patron_hathor
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_hathor
+								}
+								mother_even_if_dead = {
+									trait = patron_hathor
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_hathor
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_sekhmet
+						}
+						mother_even_if_dead = {
+							trait = patron_sekhmet
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_sekhmet
+								}
+								mother_even_if_dead = {
+									trait = patron_sekhmet
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_sekhmet
+								}
+								mother_even_if_dead = {
+									trait = patron_sekhmet
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_sekhmet
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = patron_anubis
+						}
+						mother_even_if_dead = {
+							trait = patron_anubis
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_anubis
+								}
+								mother_even_if_dead = {
+									trait = patron_anubis
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = patron_anubis
+								}
+								mother_even_if_dead = {
+									trait = patron_anubis
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = patron_anubis
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_kemetic_cult
+	}
+}

@@ -405,3 +405,208 @@ pale_horse_cult = {
 	customizer = no
 	random = no
 }
+
+patron_osiris = {
+	health = 0.5
+	stewardship = 1
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		patron_linkon
+		#patron_osiris
+		patron_thoth
+		patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_isis = {
+	diplomacy = 1
+	fertility = 0.2
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		#patron_isis
+		patron_horus
+		patron_linkon
+		patron_osiris
+		patron_thoth
+		patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_horus = {
+	stewardship = 2
+	monthly_character_prestige = 0.5
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		#patron_horus
+		patron_linkon
+		patron_osiris
+		patron_thoth
+		patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_linkon = {
+	martial = 1
+	threat_decay_speed = 0.075
+	monthly_character_piety = 0.5
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		#patron_linkon
+		patron_osiris
+		patron_thoth
+		patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_thoth = {
+	learning = 1
+	diplomacy = 1
+	global_revolt_risk = -0.01
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		patron_linkon
+		patron_osiris
+		#patron_thoth
+		patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_hathor = {
+	demesne_size = 1
+	plot_discovery_chance = 0.05
+	sex_appeal_opinion = 5
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		patron_linkon
+		patron_osiris
+		patron_thoth
+		#patron_hathor
+		patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_sekhmet = {
+	martial = 1
+	levy_size = 0.05
+	combat_rating = 5
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		patron_linkon
+		patron_osiris
+		patron_thoth
+		patron_hathor
+		#patron_sekhmet
+		patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
+
+patron_anubis = {
+	dynasty_opinion = 10
+	diplomacy = 1
+	intrigue = 1
+	
+	religious_branch = kemetic
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		patron_isis
+		patron_horus
+		patron_linkon
+		patron_osiris
+		patron_thoth
+		patron_hathor
+		patron_sekhmet
+		#patron_anubis
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 10
+
+	customizer = no
+	random = no
+}
