@@ -570,3 +570,38 @@ decisions = {
 		}
 	}
 }
+
+form_the_banks = {
+	is_high_prio = yes
+	only_playable = yes
+	ai_check_interval = 24
+	potential = {
+		form_kingdom_potential = yes
+		OR = {	
+			has_landed_title = d_inner_banks
+			has_landed_title = d_outer_banks
+		}
+		OR = {
+			culture = carolino
+			culture = hoi_toider
+			religion = brethren
+		}
+		k_the_banks= {
+			is_titular = yes
+			has_holder = no 
+		}
+		prisoner = no
+		has_regent = no 
+	}
+	allow = {
+		completely_controls = d_inner_banks
+		completely_controls = d_outer_banks
+		prestige = 500
+		wealth = 1000
+	}
+	effect = {
+		k_the_banks = { gain_title_effect = yes }
+		d_outer_banks = { de_jure_liege = k_the_banks  }
+		d_inner_banks = { de_jure_liege = k_the_banks  }
+	}
+}
