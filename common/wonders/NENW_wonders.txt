@@ -1,0 +1,115 @@
+wonder_pyramid_memphis = {
+	allow_coastal = no
+	picture = GFX_wonder_strip_pyramid
+	model = wonder_pyramid
+	allow_construction = no
+	potential = {
+	}
+	active = {
+		ROOT = {
+			OR = {
+				culture = lil_egyptian
+				culture = mississippian
+				trait = lunatic
+				has_religion_feature = religion_feature_pyramids
+				religion = kemetic
+				religion = amunite
+				religion = solar
+			}
+		}
+	}
+	flags = {
+		is_historical
+		burial_ground
+		is_destructible
+		cost_low
+	}
+	background_overrides = {
+		snow = fields
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_extra_pyramids
+		upgrade_mythological_beast
+		upgrade_hidden_room
+		upgrade_sacrificial_altar
+		upgrade_necropolis
+		upgrade_lime_stone_casing
+		upgrade_traps
+		upgrade_overseer_of_rites
+
+		# OTHER:
+		upgrade_roads
+		upgrade_spikes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 200
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 200
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 1000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
