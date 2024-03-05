@@ -6067,6 +6067,22 @@ byzantine_elective = {
 			}
 		}
 		additive_modifier = {
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_same_party
+			trait = republican_sen
+			FROM = { 
+				trait = republican_sen
+			}
+		}
+		additive_modifier = {
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_same_party
+			trait = democrat_sen
+			FROM = { 
+				trait = democrat_sen
+			}
+		}
+		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stressed
 			NOT = { character = FROM } #Do not judge yourself.
