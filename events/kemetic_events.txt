@@ -464,3 +464,27 @@ letter_event = {
 		clr_character_flag = picking_kemetic_cult
 	}
 }
+
+character_event = {
+	id = LENIN.950
+
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			real_father_even_if_dead = {
+				trait = golden_horus
+			}
+			mother_even_if_dead = {
+				trait = golden_horus
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		add_trait = descendant_golden_horus
+	}
+}
