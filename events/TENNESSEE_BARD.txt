@@ -1,0 +1,968 @@
+namespace = TENHARM
+### British bards
+
+# Famed bard enters realm(+ explanaition of wtf is bards even)
+narrative_event = {
+	id = TENHARM.690
+	title = EVTNAMETENHARM.690
+	desc = EVTDESCTENHARM.690
+	picture = GFX_evt_bandits
+
+	capable_only = yes
+	only_playable = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		NOT = { is_inaccessible_trigger = yes }
+		NOT = {
+			has_alternate_start_parameter = {
+				key = culture_names
+				value = random
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	option = {
+		name = EVTOPTATENHARM.690
+		custom_tooltip = { text = let_him_in2 }
+		narrative_event = { id = TENHARM.691 days = 3}
+	}
+	option = {
+		name = EVTOPTBTENHARM.690
+		custom_tooltip = { text = i_dont_care_about_bards2 }
+		prestige = 50
+	}
+}
+
+# You invite him in an have a chat
+narrative_event = {
+	id = TENHARM.691
+	title = EVTNAMETENHARM.691
+	desc = EVTDESCTENHARM.691
+	picture = GFX_evt_feast
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTATENHARM.691
+		custom_tooltip = { 
+			text = sing_your_song2 
+			hidden_tooltip = {
+				random_list = {
+					25 = {
+						narrative_event = { id = TENHARM.6921 days = 3 } 
+					}
+					25 = {
+						narrative_event = { id = TENHARM.6922 days = 3 } 
+					}
+					25 = {
+						narrative_event = { id = TENHARM.6923 days = 3 } 
+					}
+					25 = {
+						narrative_event = { id = TENHARM.6924 days = 3 } 
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBTENHARM.691
+		custom_tooltip = { text = get_out_of_here_bard2 }
+		random_list = {
+			10 = {
+				add_trait = cynical
+			}
+			20 = {
+			    add_trait = arbitrary
+			}
+			70 = {}
+		}
+	}
+}
+narrative_event = {
+	id = TENHARM.6921
+	title = EVTNAMETENHARM.6921
+	desc = EVTDESCTENHARM.6921
+	picture = GFX_evt_siberian_bard
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTATENHARM.6922
+		wealth = -25
+		piety = 50
+		custom_tooltip = { 
+		    text = minted_coin2 
+		}
+		ai_chance = {
+	    factor = 40
+	    }
+	}
+	option = {
+		name = EVTOPTBTENHARM.6922
+		prestige = -100
+		piety = -100
+        custom_tooltip = { 
+			text = arrest_him_lol2
+			hidden_tooltip = {
+				random_list = {
+					10 = { wealth = 25 }
+					45 = { wealth = 50 }
+					35 = { wealth = 100 }
+					10 = { wealth = 150 }
+				}
+			}
+		} 
+	    ai_chance = {
+			factor = 30 
+			modifier = {
+				factor = 2
+				OR ={
+					trait = greedy
+					trait = cruel			
+				} 
+			}		
+		} 
+	}
+	option = {
+		name = EVTOPTCTENHARM.6921
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				OR ={
+					trait = poet
+					trait = bard_sibir
+				}		
+			}
+		}
+		wealth = -100
+		custom_tooltip = { 
+			text = offer_to_stay_as_an_official2
+			hidden_tooltip = {
+				random_list = {
+					33 = { character_event = { id = TENHARM.693 days = 3 } }
+					34 = { character_event = { id = TENHARM.694 days = 3 } }
+					33 = { character_event = { id = TENHARM.695 days = 3 } }
+				}
+			}
+     	}
+    }  
+}
+narrative_event = {
+	id = TENHARM.6922
+	title = EVTNAMETENHARM.6922
+	desc = EVTDESCTENHARM.6922
+	picture = GFX_evt_siberian_bard
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTATENHARM.6922
+		wealth = -25
+		piety = 50
+		custom_tooltip = { 
+		    text = minted_coin 
+		}
+		ai_chance = {
+	    factor = 40
+	    }
+	}
+	option = {
+		name = EVTOPTBTENHARM.6922
+		prestige = -100
+		piety = -100
+        custom_tooltip = { 
+			text = arrest_him_lol2
+			hidden_tooltip = {
+				random_list = {
+					10 = { wealth = 25 }
+					45 = { wealth = 50 }
+					35 = { wealth = 100 }
+					10 = { wealth = 150 }
+				}
+			}
+		} 
+	    ai_chance = {
+			factor = 30
+	
+			modifier = {
+				factor = 2
+				OR ={
+				    trait = cynical
+					trait = greedy
+					trait = cruel			
+				} 
+			}		
+		} 
+	}
+	option = {
+		name = EVTOPTCTENHARM.6922
+		ai_chance = {
+			factor = 40
+		}
+		wealth = -100
+		custom_tooltip = { 
+			text = offer_to_stay_as_an_official2
+			hidden_tooltip = {
+				random_list = {
+					33 = { character_event = { id = TENHARM.693 days = 3 } }
+					34 = { character_event = { id = TENHARM.694 days = 3 } }
+					33 = { character_event = { id = TENHARM.695 days = 3 } }
+				}
+			}
+     	}
+    }  
+}
+narrative_event = {
+	id = TENHARM.6923
+	title = EVTNAMETENHARM.6923
+	desc = EVTDESCTENHARM.6923
+	picture = GFX_evt_siberian_bard
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTATENHARM.6922
+		wealth = -25
+		piety = 50
+		custom_tooltip = { 
+		    text = minted_coin2
+		}
+		ai_chance = {
+	    factor = 40
+	    }
+	}
+	option = {
+		name = EVTOPTBTENHARM.6922
+		prestige = -100
+		piety = -100
+        custom_tooltip = { 
+			text = arrest_him_lol2
+			hidden_tooltip = {
+				random_list = {
+					10 = { wealth = 25 }
+					45 = { wealth = 50 }
+					35 = { wealth = 100 }
+					10 = { wealth = 150 }
+				}
+			}
+		} 
+	    ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				OR ={
+				    trait = kind
+					trait = slothful
+					trait = greedy
+					trait = cruel			
+				} 
+			}		
+		} 
+	}
+	option = {
+		name = EVTOPTCTENHARM.6923
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				OR ={
+					trait = poet
+					trait = bard_sibir
+				}		
+			}
+		}
+		wealth = -100
+		custom_tooltip = { 
+			text = offer_to_stay_as_an_official2
+			hidden_tooltip = {
+				random_list = {
+					33 = { character_event = { id = TENHARM.693 days = 3 } }
+					34 = { character_event = { id = TENHARM.694 days = 3 } }
+					33 = { character_event = { id = TENHARM.695 days = 3 } }
+				}
+			}
+     	}
+    }  
+}
+narrative_event = {
+	id = TENHARM.6924
+	title = EVTNAMETENHARM.6924
+	desc = EVTDESCTENHARM.6924
+	picture = GFX_evt_siberian_bard
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTATENHARM.6922
+		wealth = -25
+		piety = 50
+		custom_tooltip = { 
+		    text = minted_coin2 
+		}
+		ai_chance = {
+	    factor = 40
+	    }
+	}
+	option = {
+		name = EVTOPTBTENHARM.6922
+		prestige = -100
+		piety = -100
+        custom_tooltip = { 
+			text = arrest_him_lol2
+			hidden_tooltip = {
+				random_list = {
+					10 = { wealth = 25 }
+					45 = { wealth = 50 }
+					35 = { wealth = 100 }
+					10 = { wealth = 150 }
+				}
+			}
+		} 
+	    ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				OR = {
+					trait = greedy
+					trait = cruel			
+				} 
+			}		
+		} 
+	}
+	option = {
+		name = EVTOPTCTENHARM.6924
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				OR ={
+					trait = poet
+					trait = bard_sibir
+				}		
+			}
+		}
+		wealth = -100
+		custom_tooltip = { 
+			text = offer_to_stay_as_an_official2
+			hidden_tooltip = {
+				random_list = {
+					33 = { character_event = { id = TENHARM.693 days = 3 } }
+					34 = { character_event = { id = TENHARM.694 days = 3 } }
+					33 = { character_event = { id = TENHARM.695 days = 3 } }
+				}
+			}
+     	}
+    }  
+}
+#Wise Scholar of Old
+character_event = {
+	id = TENHARM.693
+	desc = EVTDESCTENHARM.693
+	picture = GFX_evt_emissary
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_random_priest = {
+			random_traits = no
+			dynasty = NONE
+			age = 22
+			religion = ROOT
+			culture = ROOT
+			attributes = {
+		    diplomacy = 10
+			learning = 10
+			}
+			trait = bard_sibir
+			trait = shrewd
+			trait = erudite
+			trait = diligent
+		}
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			random_list = {
+				25 = {
+					add_trait = just
+				}
+				25 = {
+					add_trait = chaste
+				}
+				25 = {
+					add_trait = stubborn
+				}
+				25 = {
+					add_trait = patient
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = mystic
+				}
+				33 = {
+					add_trait = scholar
+				}
+				33 = {
+					add_trait = theologian
+				}
+			}
+			give_minor_title = title_court_bard
+		}
+	}
+	
+	option = {
+		name = EVTOPTATENHARM.693
+		custom_tooltip = {
+			text = bard_at_your_command2
+		}
+    }
+}
+
+#A Classical bard
+character_event = {
+	id = TENHARM.694
+	desc = EVTDESCTENHARM.694
+	picture = GFX_evt_emissary
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_random_diplomat = {
+			random_traits = no
+			dynasty = NONE
+			age = 22
+			religion = ROOT
+			culture = ROOT
+			attributes = {
+		    diplomacy = 10
+			learning = 10
+			}
+			trait = bard_sibir
+			trait = shrewd
+			trait = gregarious
+			trait = diligent
+		}
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			random_list = {
+				25 = {
+					add_trait = honest
+				}
+				25 = {
+					add_trait = kind
+				}
+				25 = {
+					add_trait = charitable
+				}
+				25 = {
+					add_trait = trusting
+				}
+			}
+			random_list = {
+				67 = {
+					add_trait = socializer
+				}
+				33 = {
+					add_trait = gamer
+				}
+			}
+			give_minor_title = title_court_bard
+		}
+	}
+	option = {
+		name = EVTOPTATENHARM.694
+		custom_tooltip = {
+			text = bard_at_your_command2
+		}
+	}
+}
+
+#A Warrior-Poet
+character_event = {
+	id = TENHARM.695
+	desc = EVTDESCTENHARM.695
+	picture = GFX_evt_emissary
+	hide_window = yes
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_random_soldier = {
+			random_traits = no
+			dynasty = NONE
+			age = 22
+			religion = ROOT
+			culture = ROOT
+			attributes = {
+		    diplomacy = 10
+			learning = 10
+			}
+			trait = bard_sibir
+			trait = shrewd
+			trait = brave
+			trait = diligent
+		    }
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			random_list = {
+				25 = {
+					add_trait = zealous
+				}
+				25 = {
+					add_trait = wroth
+				}
+				25 = {
+					add_trait = cruel
+				}
+				25 = {
+					add_trait = robust
+				}
+			}
+			random_list = {
+				25 = {
+					add_trait = aggressive_leader
+				}
+				25 = {
+					add_trait = inspiring_leader
+				}
+				25 = {
+					add_trait = trickster
+				}
+				25 = {
+					add_trait = winter_soldier
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = duelist
+				}
+				50 = {
+					add_trait = strategist
+				}
+			}
+			give_minor_title = title_court_bard
+		}
+	}
+	option = {
+		name = EVTOPTATENHARM.695
+		custom_tooltip = {
+			text = bard_at_your_command2
+		}
+	}
+}
+character_event = {
+	id = TENHARM.696
+	desc = EVTDESCTENHARM.696
+	picture = GFX_evt_princess_byzantine
+
+	capable_only = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		trait = poet
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EVTOPTACOURTE.696
+		remove_trait = poet
+		add_trait = bard_sibir
+	}
+}
+
+# Hadith - Greed
+character_event = {
+	id = TENHARM.86320
+	desc = EVTDESCTENHARM86320
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86320
+		tooltip_info = greedy
+
+		trigger = { trait = greedy }
+
+		remove_trait = greedy
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86320
+
+		trigger = {
+			NOT = { trait = greedy }
+		}
+
+		scaled_wealth = 0.1
+	}
+}
+
+# Hadith - Protect from laziness, cowardice etc
+character_event = {
+	id = TENHARM.86330
+	desc = EVTDESCTENHARM86330
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86330
+		tooltip_info = slothful
+
+		trigger = { trait = slothful }
+
+		remove_trait = slothful
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86330
+
+		trigger = {
+			NOT = { trait = slothful }
+		}
+
+		prestige = 25
+	}
+}
+
+# Hadith - Envy
+character_event = {
+	id = TENHARM.86340
+	desc = EVTDESCTENHARM86340
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86340
+		tooltip_info = envious
+
+		trigger = { trait = envious }
+
+		remove_trait = envious
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86340
+
+		trigger = {
+			NOT = { trait = envious }
+		}
+
+		piety = 15
+	}
+}
+
+# Hadith - Truth
+character_event = {
+	id = TENHARM.86350
+	desc = EVTDESCTENHARM86350
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86350
+		tooltip_info = deceitful
+
+		trigger = { trait = deceitful }
+
+		remove_trait = deceitful
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86350
+
+		trigger = {
+			NOT = { trait = deceitful }
+		}
+
+		change_diplomacy = 1
+	}
+}
+
+# Hadith - Cowardice
+character_event = {
+	id = TENHARM.86360
+	desc = EVTDESCTENHARM86360
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86360
+		tooltip_info = craven
+
+		trigger = { trait = craven }
+
+		remove_trait = craven
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86360
+
+		trigger = {
+			NOT = { trait = craven }
+		}
+
+		change_martial = 1
+	}
+}
+
+# Hadith - Unjust
+character_event = {
+	id = TENHARM.86380
+	desc = EVTDESCTENHARM86380
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86380
+		tooltip_info = arbitrary
+
+		trigger = { trait = arbitrary }
+
+		remove_trait = arbitrary
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86380
+
+		trigger = {
+			NOT = { trait = arbitrary }
+		}
+
+		change_diplomacy = 1
+	}
+}
+
+# Hadith - Next world
+character_event = {
+	id = TENHARM.86390
+	desc = EVTDESCTENHARM86390
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86390
+		tooltip_info = hedonist
+
+		trigger = { trait = hedonist }
+
+		remove_trait = hedonist
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86390
+
+		trigger = {
+			NOT = { trait = hedonist }
+		}
+
+		change_stewardship = 1
+	}
+}
+
+# Hadith - Cynical
+character_event = {
+	id = TENHARM.86400
+	desc = EVTDESCTENHARM86400
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTATENHARM86400
+		tooltip_info = cynical
+
+		trigger = { trait = cynical }
+
+		remove_trait = cynical
+	}
+
+	option = {
+		name = EVTOPTBTENHARM86400
+
+		trigger = {
+			NOT = { trait = cynical }
+		}
+
+		change_diplomacy = 1
+	}
+}
+
+# Hadith - Wroth
+character_event = {
+	id = TENHARM.86410
+	desc = EVTDESCTENHARM86410
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		in_command = no
+		
+		religion = harmonic
+		any_courtier_or_vassal = {
+			has_minor_title = title_court_bard
+			trait = bard_sibir
+			liege = { character = PREVPREV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = EVTOPTA86410
+		tooltip_info = wroth
+
+		trigger = { trait = wroth }
+
+		remove_trait = wroth
+	}
+
+	option = {
+		name = EVTOPTB86410
+
+		trigger = {
+			NOT = { trait = wroth }
+		}
+
+		change_stewardship = 1
+	}
+}
