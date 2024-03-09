@@ -100,6 +100,10 @@ character_event = {
 			trait = theologian
 		}
 		mult_modifier = {
+			factor = 1.4
+			location = { any_province_holding = { has_holding_modifier = jizya_tax } }
+		}
+		mult_modifier = {
 			factor = 0.9
 			trait = sympathy_christendom
 			location = { religion_group = christian }
