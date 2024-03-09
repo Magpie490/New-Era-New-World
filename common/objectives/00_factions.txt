@@ -9343,6 +9343,15 @@ faction_independence = {
 			factor = 2
 			religion = thelemic
 		}
+		modifier = {#Base Thelemics always want to be free
+			factor = 2
+			religion = edenite
+			liege = {
+				NOT = {
+					religion = edenite
+				}
+			}
+		}
 		modifier = {#Orange King always want to be loyal
 			factor = 0.25
 			religion = orange_king

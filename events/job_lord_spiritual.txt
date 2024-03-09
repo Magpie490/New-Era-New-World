@@ -670,24 +670,6 @@ character_event = {
 		mult_modifier = {
 			factor = 1.5
 			has_job_action = action_inquisition
-			religion = postdiluvian
-			location = {
-				NOT = {
-					culture_group = appalachian_group
-				}
-			}
-		}
-		mult_modifier = {
-			factor = 0.25
-			has_job_action = action_inquisition
-			religion = postdiluvian
-			location = {
-				culture_group = appalachian_group
-			}
-		}
-		mult_modifier = {
-			factor = 1.5
-			has_job_action = action_inquisition
 			OR = {
 				religion = anglican
 				religion_group = muslim
@@ -811,6 +793,16 @@ character_event = {
 			religion = insular
 			NOT = {
 				insular = {
+					religion_authority = 0.6
+				}
+			}
+		}
+		mult_modifier = {
+			factor = 1.25
+			has_job_action = action_inquisition
+			religion = postdiluvian
+			NOT = {
+				postdiluvian = {
 					religion_authority = 0.6
 				}
 			}
