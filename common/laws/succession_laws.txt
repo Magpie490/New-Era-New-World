@@ -88,6 +88,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -134,6 +138,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			#NOT = { holder_scope = { government = calvinist_government } }
@@ -204,6 +209,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				is_nomadic = no
 				OR = {
@@ -251,6 +260,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -319,6 +329,10 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
+			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
 			}
 			holder_scope = {
 				OR = {
@@ -411,6 +425,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -501,6 +516,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {				
 				OR = {
 					independent = yes
@@ -576,6 +595,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -683,6 +703,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {					
 				NOR = { 
 						religion = jacobinist
@@ -742,6 +766,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -862,6 +887,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -940,6 +969,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -975,6 +1005,10 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
+			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
 			}
 			OR = {
 				has_title_flag = alternate_hre
@@ -1054,6 +1088,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = order_government } }
@@ -1077,7 +1112,7 @@ succession_laws = {
 		}			
 	}
 	
-	succ_byzantine_elective = {
+	succ_federal_elective = {
 		oldest_child_opinion = -5
 		child_opinion = -5
 		dynasty_opinion = -5
@@ -1136,6 +1171,88 @@ succession_laws = {
 		}			
 	}
 
+	succ_byzantine_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				OR = {
+					title = e_mississippi
+					title = e_north_mississippi
+					title = e_south_mississippi
+					should_have_byz_elective_trigger = yes
+					AND = {
+						higher_real_tier_than = KING
+						NOR = {
+							government = eastern_feudal
+							government = chinese_imperial_government
+							government = bhutanese_decayed_government
+							government = bhutanese_restored_government
+							government = neoziamet_government
+							government = oligarchic_republic
+							government = merchant_republic_government
+							government = federal_government
+						}
+						has_law = ze_administration_laws_2
+						OR = {
+							has_law = crown_authority_3
+							has_law = crown_authority_4
+							has_law = centralization_3
+							has_law = centralization_4
+						}
+					}
+				}
+				NOR = { 
+					religion_group = muslim
+					religion = sarvodaya
+					religion = jacobinist
+					religion = titoist
+					religion = stalinist
+					religion = trotskyite
+					has_religion_feature = religion_ritual_sacrifice
+				}
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
+			}
+			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = byzantine_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
 	succ_tanistry = {
 		oldest_child_opinion = -20
 		child_opinion = -10
@@ -1145,6 +1262,10 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
+			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
 			}
 			holder_scope = {
 				OR = {
@@ -1298,6 +1419,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1347,6 +1472,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1451,6 +1577,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				OR = {
 					AND = {
@@ -1539,6 +1669,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1603,6 +1734,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1627,6 +1759,10 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
+			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
 			}
 			holder_scope = {
 				OR = {
@@ -1669,6 +1805,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = oligarchic_republic } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1913,6 +2050,10 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				should_have_byz_elective_trigger = yes
 			}
+			NAND = { 
+				has_law = succ_federal_elective 
+				should_have_fed_elective_trigger = yes
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1967,6 +2108,7 @@ succession_laws = {
 			NOT = { tier = baron }
 			NOT = { holder_scope = { government = feudal_government } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
+			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = japanese_feudal } }
 			NOT = { holder_scope = { government = oligarchic_republic } }

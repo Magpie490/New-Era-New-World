@@ -449,11 +449,23 @@ should_handle_american_invasion = {
 		}
 	}
 }
+should_have_fed_elective_trigger = {
+	OR = {
+		religion = constitutional
+		top_liege = {
+			religion = constitutional
+		}
+	}
+}
 should_have_byz_elective_trigger = {
 		AND = {
-			title = e_columbia
+			title = e_mississippi
+			title = e_north_mississippi
+			title = e_south_mississippi
 			holder_scope = {
-				has_landed_title = e_columbia
+				has_landed_title = e_mississippi
+				has_landed_title = e_north_mississippi
+				has_landed_title = e_south_mississippi
 			}
 		}
 }

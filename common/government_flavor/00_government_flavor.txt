@@ -2621,8 +2621,27 @@ government_flavor = {
 	graphics = GFX_evt_victory_arch_byzantine
 	priority = 3
 	trigger = {
-		government = roman_imperial_government
-		has_law = succ_byzantine_elective
+		OR = {
+			government = roman_imperial_government
+		}
+		OR = {
+			has_law = succ_byzantine_elective
+		}
+		is_landed = yes
+	}	
+}
+
+government_flavor = {
+	name = gov_federal_government
+	graphics = GFX_evt_american_gov
+	priority = 3
+	trigger = {
+		OR = {
+			government = federal_government
+		}
+		OR = {
+			has_law = succ_federal_elective
+		}
 		is_landed = yes
 	}	
 }
