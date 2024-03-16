@@ -191,7 +191,7 @@
 	religion = antiquarianist
 	culture = michigander
 	trait = "midas_touched"
-	trait = "eccentric"
+	trait = "lunatic"
 	trait = "proud"
 	trait = "envious"
 	trait = "wroth"
@@ -255,11 +255,23 @@
 	}
 }
 400014 = {
-	name = "Edmund"
+	name = "Belisarius"
 	dynasty = 4000457
 	religion = antiquarianist
+	secret_religion = delver
 	culture = michigander
-	2287.6.12 = {
+	trait = "disfigured"
+	trait = "genius"
+	trait = "giant"
+	trait = "eccentric"
+	trait = "mystic"
+	trait = "cynical"
+	trait = "ambitious"
+	trait = "patient"
+	trait = "sympathy_pagans"
+	trait = "mastermind_theologian"
+	disallow_random_traits = yes
+	2275.6.12 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -351,12 +363,32 @@
 	}
 }
 400022 = {
-	name = "Theodore"
+	name = "Liesbeth"
+	female = yes
 	dynasty = 4000463
-	religion = quaker
+	religion = antiquarianist
+	secret_religion = quaker
 	culture = michigaanisch
-	2272.4.15 = {
+	trait = "brilliant_strategist"
+	trait = "one_handed"
+	trait = "one_legged"
+	trait = "duelist"
+	trait = "chaste"
+	trait = "diligent"
+	trait = "wroth"
+	trait = "brave"
+	trait = "trusting"
+	trait = "stubborn"
+	trait = "light_foot_leader"
+	trait = "unyielding_leader"
+	trait = "homosexual"
+	disallow_random_traits = yes
+	2300.4.15 = {
 		birth = yes
+		effect = {
+			add_artifact = prosthetic_hand_metal
+			add_artifact = prosthetic_leg_artifact
+		}
 	}
 	2666.1.1 = {
 		death = yes
