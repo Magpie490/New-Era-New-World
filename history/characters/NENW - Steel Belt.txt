@@ -432,13 +432,32 @@
 		death = yes
 	}
 }
-100033 = {
+100033 = { #Son of the former Governor of Little Egypt, he killed him and took the throne during the collapse of the empire
 	name = "Ramsay"
 	dynasty = 3000512
 	religion = kemetic
 	culture = lil_egyptian
-	2279.5.31 = {
+	trait=fortune_builder
+	trait=lefthanded
+	trait=androgynous
+	trait=hedonist
+	trait=greedy
+	trait=proud
+	trait=lustful
+	trait=deceitful
+	trait=zealous
+	trait=zodiac_leo
+	trait=patron_horus
+	trait=kinslayer
+	disallow_random_traits = yes
+	2299.5.31 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = kemetic_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
