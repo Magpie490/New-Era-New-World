@@ -55,17 +55,7 @@ laws = {
 			has_law = war_voting_power_0
 			OR = {
 				NOR = {
-					AND = {
-						religion = constitutional
-						OR = {
-							real_tier = KING
-							real_tier = EMPEROR
-						}
-						OR = {
-							is_feudal = yes
-							is_republic = yes
-						}
-					}
+					government = federal_government
 				} 
 				has_law = parliament_laws_generic_0
 			}
