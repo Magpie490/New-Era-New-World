@@ -54,10 +54,10 @@ laws = {
 			has_law = execution_voting_power_0
 			has_law = war_voting_power_0
 			OR = {
-				NOR = {
-					government = federal_government
+				NOT = {
+					holder_scope = { government = federal_government }
 				} 
-				has_law = parliament_laws_generic_0
+				has_law = parliament_laws_constitutional_0
 			}
 			OR = {
 				NOT = { holder_scope = { is_tribal = yes } }
