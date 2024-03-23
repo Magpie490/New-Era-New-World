@@ -6356,6 +6356,10 @@ add_crusade_trait_effect = {
 		add_trait = wunggur_crusader
 	}
 	else_if = {
+		limit = { OR = { religion = delver religion = delver_reformed } }
+		add_trait = delver_crusader
+	}
+	else_if = {
 		limit = { religion_openly_kaharingan_pagan_or_reformed_trigger = yes }
 		add_trait = sandung_guardian
 	}
@@ -21081,6 +21085,7 @@ fire_haruspicy_event_effect = {
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_sarna
 						has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_delver
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
 						religion = poseidonian
@@ -21116,6 +21121,7 @@ fire_haruspicy_event_effect = {
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_sarna
 						has_religion_feature = religion_feature_wuist
+				has_religion_feature = religion_feature_delver
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
 						religion = poseidonian

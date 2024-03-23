@@ -821,6 +821,32 @@ religion_doctrine = {
 			factor = 1
 		}
 	}
+	religion_feature_delver = {
+		picture = GFX_religion_feature_delver
+		potential = {
+			has_game_started = yes
+			religion = delver_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = delver_reformed
+			NOR = {
+				has_selected_religion_feature = religion_alchemy 
+				has_selected_religion_feature = religion_haruspicy #Redundant
+				has_selected_religion_feature = religion_beatification
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_alchemy }
+			custom_tooltip = { text = tooltip_religion_feature_haruspicy }
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_wuist = {
 		picture = GFX_religion_feature_wuist
 		potential = {

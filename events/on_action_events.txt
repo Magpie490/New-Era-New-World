@@ -4998,6 +4998,22 @@ narrative_event = {
 			}
 		}
 		if = {
+			limit = { religion = delver_reformed }
+			d_jedi_order = {
+				religion = delver_reformed # This Holy Order now changes religion
+				holder_scope = {
+					religion = delver_reformed
+					any_realm_character = {
+						limit = {
+							religion = delver
+							is_vassal_or_below_of = PREV
+						}
+						religion = delver_reformed
+					}
+				}
+			}
+		}
+		if = {
 			limit = { religion = bon_reformed }
 			d_dralhas_children = {
 				religion = bon_reformed # This Holy Order now changes religion
