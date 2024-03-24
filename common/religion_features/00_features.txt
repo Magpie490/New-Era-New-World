@@ -513,7 +513,6 @@ religion_doctrine = {
 		
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_feature_baltic_2
 			}
 		}
@@ -545,6 +544,7 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_baltic_2
+				has_selected_religion_feature = religion_feature_novelist
 			}
 		}
 		effect = {
@@ -598,6 +598,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_maunaxite #Redundant	
 				has_selected_religion_feature = religion_feature_starist #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
+				has_selected_religion_feature = religion_feature_novelist #Redundant
 				has_selected_religion_feature = religion_ritual_sacrifice
 			}
 		}
@@ -623,6 +624,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_moism
 				has_selected_religion_feature = religion_feature_finnish
 				has_selected_religion_feature = religion_feature_nousthreskeia
+				has_selected_religion_feature = religion_feature_novelist
 			}
 		}
 		effect = {
@@ -668,7 +670,6 @@ religion_doctrine = {
 		picture = GFX_religion_feature_monastic
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_feature_starist
 				has_selected_religion_feature = religion_ritual_sacrifice
 			}
@@ -1207,6 +1208,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_defensive
 				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_tengri #Redundant
+				has_selected_religion_feature = religion_feature_novelist #Redundant
 			}
 		}
 		effect = {
@@ -1517,7 +1519,6 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_no_leader
-				has_selected_religion_feature = religion_feature_novelist#redundant
 				religion_group = christian #Random World redundancy.
 			}
 		}
@@ -2078,30 +2079,35 @@ religion_doctrine = {
 			religion = novelist_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_no_leader
-				has_selected_religion_feature = religion_beatification #redundant
-				has_selected_religion_feature = religion_monastic #redundant
-				has_selected_religion_feature = religion_pronatal #redundant
+				has_selected_religion_feature = religion_relentless #redundant
+				has_selected_religion_feature = religion_meritocratic #redundant
+				has_selected_religion_feature = religion_holy_family
+				has_selected_religion_feature = religion_stable
 			}
 		}
 		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_beatification }
-			custom_tooltip = { text = tooltip_religion_feature_eldership }
-			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_fertility_bonus }
-			custom_tooltip = { text = tooltip_religion_feature_dynasty_bonus }
-			custom_tooltip = { text = tooltip_religion_feature_improve_children }
-			custom_tooltip = { text = tooltip_religion_feature_love_likely }
-
-			hidden_tooltip = {
-				set_character_modifier = {
-					dynasty_opinion = 15
-					fertility = 0.15
-					learning = 2
-					key = "FAMILY_ATTR_RELIGION"
+			custom_tooltip = { text = tooltip_religion_feature_incest }
+			custom_tooltip = { text = tooltip_religion_feature_holy_family }
+			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			custom_tooltip = { text = tooltip_religion_feature_stable }
+			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
+			custom_tooltip = { text = tooltip_religion_feature_offensive }
+			hidden_tooltip = { 
+				set_ignores_defensive_attrition = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "RELENTLESS_RELIGION"
 				}
-			}	
-			
-
+				set_heir_designation = yes
+			}
 		}
 		ai_will_do = {
 			factor = 50
@@ -2732,14 +2738,10 @@ religion_leadership = {
 				limit = { 
 					FROM = { 
 						character = yes 
-						OR = { 
-							religion = novelist
-							religion = bon
-						}
+						religion = bon
 					}
 					OR = {
 						has_selected_religion_feature = religion_monastic
-						has_selected_religion_feature = religion_feature_novelist
 					}
 				}
 				set_character_modifier = {
@@ -2751,10 +2753,7 @@ religion_leadership = {
 				limit = { 
 					FROM = { 
 						character = yes 
-						OR = { 
-							religion = novelist
-							religion = bon
-						}
+						religion = bon
 					}
 				}
 				set_character_modifier = {

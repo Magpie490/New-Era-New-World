@@ -6116,3 +6116,21 @@ RETTYPE_CUL_RYUKYU =
 		heavy_infantry_morale = 0.1
 	}
 }
+
+#Dynasty specific retinues
+RETTYPE_DYN_VALYRIAN_DRAGONS = {
+	first_type = 6
+	first_amount = 50
+	special_troops = flamethrowers
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		dynasty = 5001001
+	}
+	
+	modifier = {
+		flamethrowers_defensive = 0.4
+		flamethrowers_morale = 0.4
+	}
+}

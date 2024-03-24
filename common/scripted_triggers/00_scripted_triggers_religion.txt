@@ -1772,7 +1772,10 @@ religion_has_excommunication = {
 }
 
 religion_has_incest = {
-	has_religion_feature = religion_holy_family
+	OR = {
+		has_religion_feature = religion_holy_family
+		has_religion_feature = religion_feature_novelist
+	}
 }
 
 is_antipope = {
