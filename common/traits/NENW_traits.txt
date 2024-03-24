@@ -189,6 +189,50 @@ arboreal_reformed_old_ones = {
 	customizer = no
 	random = no
 }
+fire_cross = {
+	martial = 1
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+	
+	same_opinion_if_same_religion = 5
+	threat_decay_speed = 0.05
+	
+	religious_branch = peyotist
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		half_moon
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+	command_modifier = {
+		religious_enemy = 0.1
+	}
+}
+
+half_moon = {
+	diplomacy = 1
+	
+	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
+
+	same_opinion_if_same_religion = 5
+	days_of_supply = 5
+	religious_branch = peyotist
+	religious = yes # Lost immediately on religion change
+
+	opposites =  {
+		fire_cross
+	}
+	
+	opposite_opinion = -10
+	same_opinion = 5
+
+	customizer = no
+	random = no
+}
 cult_cienfuegos = {
 	learning = 1
 	tech_growth_modifier = 0.1

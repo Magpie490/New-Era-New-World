@@ -1,0 +1,138 @@
+namespace = peyotist
+
+character_event = {
+	id = peyotist.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_300
+	desc = EVTDESC_peyotist_300
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_peyotist_cult
+	}
+	
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_300
+		add_trait = fire_cross
+	}
+	
+	option = {#Ivan
+		name = EVTOPTB_peyotist_300
+		add_trait = half_moon
+	}
+	
+	after = {
+		clr_character_flag = picking_peyotist_cult
+	}
+}
+
+letter_event = {
+	id = peyotist.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = peyotist302Desc
+	hide_window = yes
+	trigger = {
+		religion = peyotist
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = fire_cross
+			trait = half_moon
+		}
+	}
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = fire_cross
+						}
+						mother_even_if_dead = {
+							trait = fire_cross
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = fire_cross
+								}
+								mother_even_if_dead = {
+									trait = fire_cross
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = fire_cross
+								}
+								mother_even_if_dead = {
+									trait = fire_cross
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = fire_cross
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = half_moon
+						}
+						mother_even_if_dead = {
+							trait = half_moon
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = half_moon
+								}
+								mother_even_if_dead = {
+									trait = half_moon
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = half_moon
+								}
+								mother_even_if_dead = {
+									trait = half_moon
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = half_moon
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_peyotist_cult
+	}
+}
