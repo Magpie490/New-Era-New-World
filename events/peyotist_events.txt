@@ -1,6 +1,228 @@
 namespace = peyotist
 
 character_event = {
+	id = peyotist.1
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_1
+	desc = EVTDESC_peyotist_1
+
+	
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_1
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					character_event = { id = peyotist.2 }
+				}
+				20 = {
+					character_event = { id = peyotist.3 }
+				}
+				20 = {
+					character_event = { id = peyotist.4 }
+				}
+				20 = {
+					character_event = { id = peyotist.5 }
+				}
+				20 = {
+					character_event = { id = peyotist.6 }
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = peyotist.2#horror
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_2
+	desc = EVTDESC_peyotist_2
+
+	immediate = {
+		if = {
+			limit = {
+				trait = fire_cross
+			}
+			character_event = { id = peyotist.7 days = 3 }
+		}
+		else_if = {
+			limit = {
+				trait = half_moon
+			}
+			character_event = { id = peyotist.8 days = 3 }
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_2
+		piety = 200
+		add_trait = paranoid
+		add_trait = temperate
+		remove_trait = gluttonous
+	}
+}
+character_event = {
+	id = peyotist.3#forest
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_3
+	desc = EVTDESC_peyotist_3
+
+	immediate = {
+		if = {
+			limit = {
+				trait = fire_cross
+			}
+			character_event = { id = peyotist.7 days = 3 }
+		}
+		else_if = {
+			limit = {
+				trait = half_moon
+			}
+			character_event = { id = peyotist.8 days = 3 }
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_3
+		piety = 200
+		add_trait = ambitious
+		add_trait = envious
+		remove_trait = kind
+	}
+}
+character_event = {
+	id = peyotist.4#city
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_4
+	desc = EVTDESC_peyotist_4
+
+	immediate = {
+		if = {
+			limit = {
+				trait = fire_cross
+			}
+			character_event = { id = peyotist.7 days = 3 }
+		}
+		else_if = {
+			limit = {
+				trait = half_moon
+			}
+			character_event = { id = peyotist.8 days = 3 }
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_4
+		piety = 200
+		add_trait = humble
+		add_trait = erudite
+		remove_trait = proud
+	}
+}
+character_event = {
+	id = peyotist.5#hunt
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_5
+	desc = EVTDESC_peyotist_5
+
+	immediate = {
+		if = {
+			limit = {
+				trait = fire_cross
+			}
+			character_event = { id = peyotist.7 days = 3 }
+		}
+		else_if = {
+			limit = {
+				trait = half_moon
+			}
+			character_event = { id = peyotist.8 days = 3 }
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_5
+		piety = 200
+		add_trait = brave
+		add_trait = diligent
+		remove_trait = craven
+		remove_trait = slothful
+	}
+}
+character_event = {
+	id = peyotist.6#river
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_6
+	desc = EVTDESC_peyotist_6
+
+	immediate = {
+		if = {
+			limit = {
+				trait = fire_cross
+			}
+			character_event = { id = peyotist.7 days = 3 }
+		}
+		else_if = {
+			limit = {
+				trait = half_moon
+			}
+			character_event = { id = peyotist.8 days = 3 }
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_6
+		piety = 200
+		add_trait = content
+		add_trait = gregarious
+		remove_trait = shy
+		remove_trait = ambitious
+	}
+}
+character_event = {
+	id = peyotist.7#fire cross
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_7
+	desc = EVTDESC_peyotist_7
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_7
+		piety = 100
+	}
+	after = {
+		clr_character_flag = on_vision_quest
+	}
+}
+character_event = {
+	id = peyotist.8#half moon
+	is_triggered_only = yes
+	picture = GFX_peyotist_ritual
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_peyotist_8
+	desc = EVTDESC_peyotist_8
+	
+	option = {#Olga
+		name = EVTOPTA_peyotist_8
+		piety = 100
+	}
+	after = {
+		clr_character_flag = on_vision_quest
+	}
+}
+character_event = {
 	id = peyotist.300
 	is_triggered_only = yes
 	picture = GFX_evt_book_carolingian_script
