@@ -775,6 +775,16 @@ character_event = {
 		mult_modifier = {
 			factor = 1.5
 			has_job_action = action_inquisition
+			religion = scholastic
+			NOT = {
+				scholastic = {
+					religion_authority = 0.8
+				}
+			}
+		}
+		mult_modifier = {
+			factor = 1.5
+			has_job_action = action_inquisition
 			religion = druze
 			NOT = {
 				druze = {

@@ -1258,7 +1258,15 @@ targetted_decisions = {
 		allow = {
 			prestige = 500
 			piety = 250
-			trait = just
+			conditional_tooltip = {
+				trigger = { 
+					OR = {
+						religion = girondist 
+						religion = scholastic 
+					}
+				}
+				trait = just_ruler
+			}
 			custom_tooltip = {
 				text = tooltip_dismantle_factions_cooldown
 				NOT = { has_character_modifier = dismantle_factions_cooldown }
