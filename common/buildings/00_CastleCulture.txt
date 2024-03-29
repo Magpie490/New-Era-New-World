@@ -18262,4 +18262,155 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	#Egyptian Charioteers
+	ca_culture_lil_egyptian_1 = {
+		desc = ca_culture_lil_egyptian_1_desc
+		potential = {
+			OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				has_building = ca_culture_lil_egyptian_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		chariots_offensive = 0.15
+		chariots = 30
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lil_egyptian_2 = {
+		desc = ca_culture_lil_egyptian_1_desc
+		potential = {
+			OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				has_building = ca_culture_lil_egyptian_1
+				has_building = ca_culture_lil_egyptian_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		}
+		upgrades_from = ca_culture_lil_egyptian_1
+		gold_cost = 250
+		build_time = 1095
+		chariots_offensive = 0.15
+		chariots = 35
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lil_egyptian_3 = {
+		desc = ca_culture_lil_egyptian_1_desc
+		potential = {
+			OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				has_building = ca_culture_lil_egyptian_1
+				has_building = ca_culture_lil_egyptian_2
+				has_building = ca_culture_lil_egyptian_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2 
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		}
+		upgrades_from = ca_culture_lil_egyptian_2
+		gold_cost = 300
+		build_time = 2190
+		chariots_offensive = 0.15
+		chariots = 40
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lil_egyptian_4 = {
+		desc = ca_culture_lil_egyptian_1_desc
+		potential = {
+			OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				has_building = ca_culture_lil_egyptian_1
+				has_building = ca_culture_lil_egyptian_2
+				has_building = ca_culture_lil_egyptian_3
+				has_building = ca_culture_lil_egyptian_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				OR = {
+				culture = lil_egyptian
+				culture = memphisan
+				}
+			}
+		}
+		upgrades_from = ca_culture_lil_egyptian_3
+		gold_cost = 320
+		build_time = 2190
+		chariots_offensive = 0.15
+		chariots = 45
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 }
