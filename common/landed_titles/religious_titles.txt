@@ -3342,3 +3342,32 @@ k_aglipayan = {
 	
 	dignity = 200
 }
+d_solar = {
+	color={ 230 91 0 }
+	color2={ 0 128 63 }
+	
+	capital = 1055 #Cairo
+	creation_requires_capital = no
+	dignity = 100
+	allow = {
+		piety = 100
+		num_of_holy_sites = 3
+		OR = {
+			trait = golden_horus
+			trait = descendant_golden_horus
+		}
+	}
+	title = "PHAROAH"
+	title_female = "PHAROAH"
+	foa = "POPE_FOA"
+	
+	religion = solar
+	
+	controls_religion = solar
+	short_name = yes
+	assimilate = no
+
+	dynasty_title_names = no
+
+	caliphate = yes
+}

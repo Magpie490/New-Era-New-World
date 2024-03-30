@@ -18413,4 +18413,151 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	#Watcher Watchman
+	ca_culture_watcher_1 = {
+		desc = ca_culture_watcher_1_desc
+		potential = {
+			OR = {
+				culture = watchers
+				has_building = ca_culture_watcher_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		knights = 15
+		pikemen = 30
+		knights_offensive = 0.15
+		pikemen_defensive = 0.05
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_watcher_2 = {
+		desc = ca_culture_watcher_1_desc
+		potential = {
+			OR = {
+				culture = watchers
+				has_building = ca_culture_watcher_1
+				has_building = ca_culture_watcher_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		}
+		upgrades_from = ca_culture_watcher_1
+		gold_cost = 250
+		build_time = 1095
+		knights = 20
+		pikemen = 40
+		knights_offensive = 0.15
+		pikemen_defensive = 0.05
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_watcher_3 = {
+		desc = ca_culture_watcher_1_desc
+		potential = {
+			OR = {
+				culture = watchers
+				has_building = ca_culture_watcher_1
+				has_building = ca_culture_watcher_2
+				has_building = ca_culture_watcher_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2 
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		}
+		upgrades_from = ca_culture_watcher_2
+		gold_cost = 300
+		build_time = 2190
+		knights = 25
+		pikemen = 50
+		knights_offensive = 0.15
+		pikemen_defensive = 0.05
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_watcher_4 = {
+		desc = ca_culture_watcher_1_desc
+		potential = {
+			OR = {
+				culture = watchers
+				has_building = ca_culture_watcher_1
+				has_building = ca_culture_watcher_2
+				has_building = ca_culture_watcher_3
+				has_building = ca_culture_watcher_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				OR = {
+				culture = watchers
+				}
+			}
+		}
+		upgrades_from = ca_culture_watcher_3
+		gold_cost = 320
+		build_time = 2190
+		knights = 30
+		pikemen = 60
+		knights_offensive = 0.15
+		pikemen_defensive = 0.05
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 }
