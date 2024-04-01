@@ -95,3 +95,50 @@
 		death = yes
 	}
 }
+
+1100005 = {
+	dynasty = 3000666
+	name = "Carlos"
+	religion = sevillian
+	culture = andalu
+	trait = brilliant_strategist
+	trait = santiago_el_mayor
+	trait = adventurer
+	trait = diligent
+	trait = greedy
+	trait = proud
+	trait = ambitious
+	trait = brave
+	trait = flat_terrain_leader
+	trait = holy_warrior
+	disallow_random_traits = yes
+	2293.2.12 = {
+		birth = yes
+	}
+	2324.1.1={
+		effect = {
+			wealth = 100
+			spawn_unit = {
+				province = 1175
+				owner = ROOT
+				troops = {
+					light_infantry = { 400 400 }
+					archers = { 150 150 }
+				}
+				attrition = 1
+			}
+			spawn_unit = {
+				province = 1175
+				owner = ROOT
+				troops = {
+					knight = { 50 50 }
+					archers = { 250 250 }
+				}
+				attrition = 1
+			}
+		}	
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
