@@ -184,6 +184,12 @@
 	religion = quaker
 	2269.5.16 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = quakertwo_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -360,20 +366,30 @@
 		death = yes
 	}
 }
-100027 = {
-	name = "Robert"
+100027 = { #Illegitimate son of Grand Prince Isaac who became a general, wants to claim Cahokia for himself.
+	name = "Basil"
 	dynasty = 3000506
 	religion = madonnite
+	culture = hoosier
 	trait = skilled_tactician
 	trait = brave
 	trait = temperate
 	trait = zealous
 	trait = stubborn
 	trait = diligent
-	trait = inspiring_leader 
-	culture = hoosier
-	2276.7.4 = {
+	trait = legit_bastard
+	trait = heavy_infantry_leader
+	trait = freckles_2
+	trait = ambitious
+	trait = inspiring_leader
+	trait = zodiac_capricorn
+	disallow_random_traits = yes
+	father = 200000
+	2289.10.4 = {
 		birth = yes
+		effect = {
+			add_claim = k_cahokia
+		}
 	}
 	2666.1.1 = {
 		death = yes

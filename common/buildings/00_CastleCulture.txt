@@ -18944,4 +18944,166 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	ca_culture_pennsilfaanisch_1 = {
+		desc = ca_culture_pennsilfaanisch_1_desc
+		potential = {
+			OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				has_building = ca_culture_pennsilfaanisch_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		prerequisites = { ca_wall_1 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 30
+		archers = 20
+		fort_level = 0.25
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_pennsilfaanisch_2 = {
+		desc = ca_culture_pennsilfaanisch_1_desc
+		potential = {
+			OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				has_building = ca_culture_pennsilfaanisch_1
+				has_building = ca_culture_pennsilfaanisch_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		upgrades_from = ca_culture_pennsilfaanisch_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 45
+		archers = 25
+		fort_level = 0.25
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_pennsilfaanisch_3 = {
+		desc = ca_culture_pennsilfaanisch_1_desc
+		potential = {
+			OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				has_building = ca_culture_pennsilfaanisch_1
+				has_building = ca_culture_pennsilfaanisch_2
+				has_building = ca_culture_pennsilfaanisch_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		upgrades_from = ca_culture_pennsilfaanisch_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 60
+		archers = 30
+		fort_level = 0.25
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_pennsilfaanisch_4 = {
+		desc = ca_culture_pennsilfaanisch_1_desc
+		potential = {
+			OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				has_building = ca_culture_pennsilfaanisch_1
+				has_building = ca_culture_pennsilfaanisch_2
+				has_building = ca_culture_pennsilfaanisch_3
+				has_building = ca_culture_pennsilfaanisch_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+				culture = pennsilfaanisch
+				culture = michigaanisch
+				}
+			}
+		}
+		upgrades_from = ca_culture_pennsilfaanisch_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 80
+		archers = 40
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		fort_level = 0.25
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}	
 }
