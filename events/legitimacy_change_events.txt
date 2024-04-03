@@ -2197,36 +2197,24 @@ character_event = {
 				limit = { ROOT = { realm_diplomacy = 60 } }
 				change_variable = { which = "government_legitimacy" value = 5 }
 			}
-			if = {
-				limit = { ROOT = { has_landed_title = e_bhutan } }
-				change_variable = { which = "government_legitimacy" value = 10 }
-			}
-			if = {
-				limit = { ROOT = { has_landed_title = k_bhutan } }
-				change_variable = { which = "government_legitimacy" value = 10 }
-			}
-			if = {
-				limit = { ROOT = { has_artifact = crown_bhutan } }
-				change_variable = { which = "government_legitimacy" value = 10 }
-			}
 			
 			if = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_hong_kong 
+							has_landed_title = c_cairo
 							any_vassal = {
-								has_landed_title = c_hong_kong
+								has_landed_title = c_cairo
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_hong_kong
+									has_landed_title = c_cairo
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_hong_kong
+										has_landed_title = c_cairo
 									}
 								}
 							}
@@ -2239,19 +2227,44 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_macau 
+							has_landed_title = c_kaskaskia
 							any_vassal = {
-								has_landed_title = c_macau
+								has_landed_title = c_kaskaskia
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_macau
+									has_landed_title = c_kaskaskia
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_macau
+										has_landed_title = c_kaskaskia
+									}
+								}
+							}
+						}
+					} 
+				}
+				change_variable = { which = "government_legitimacy" value = 10 }
+			}
+			if = {
+				limit = { 
+					ROOT = { 
+						OR = {
+							has_landed_title = c_st_louis 
+							any_vassal = {
+								has_landed_title = c_st_louis
+							}
+							any_vassal = {
+								any_vassal = {
+									has_landed_title = c_st_louis
+								}
+							}
+							any_vassal = {
+								any_vassal = {
+									any_vassal = {
+										has_landed_title = c_st_louis
 									}
 								}
 							}
@@ -2264,19 +2277,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_taipei 
+							has_landed_title = c_chicago 
 							any_vassal = {
-								has_landed_title = c_taipei
+								has_landed_title = c_chicago
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_taipei
+									has_landed_title = c_chicago
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_taipei
+										has_landed_title = c_chicago
 									}
 								}
 							}
@@ -2289,19 +2302,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_tainan 
+							has_landed_title = c_louisville
 							any_vassal = {
-								has_landed_title = c_tainan
+								has_landed_title = c_louisville
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_tainan
+									has_landed_title = c_louisville
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_tainan
+										has_landed_title = c_louisville
 									}
 								}
 							}
@@ -2314,19 +2327,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_xiamen 
+							has_landed_title = c_cincinnati 
 							any_vassal = {
-								has_landed_title = c_xiamen
+								has_landed_title = c_cincinnati
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_xiamen
+									has_landed_title = c_cincinnati
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_xiamen
+										has_landed_title = c_cincinnati
 									}
 								}
 							}
@@ -2339,19 +2352,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_guangzhou 
+							has_landed_title = c_indianapolis
 							any_vassal = {
-								has_landed_title = c_guangzhou
+								has_landed_title = c_indianapolis
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_guangzhou
+									has_landed_title = c_indianapolis
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_guangzhou
+										has_landed_title = c_indianapolis
 									}
 								}
 							}
@@ -2364,19 +2377,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_yongchuan
+							has_landed_title = c_peoria 
 							any_vassal = {
-								has_landed_title = c_yongchuan
+								has_landed_title = c_peoria
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_yongchuan
+									has_landed_title = c_peoria
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_yongchuan
+										has_landed_title = c_peoria
 									}
 								}
 							}
@@ -2389,19 +2402,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_wenchuan 
+							has_landed_title = c_memphis 
 							any_vassal = {
-								has_landed_title = c_wenchuan
+								has_landed_title = c_memphis
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_wenchuan
+									has_landed_title = c_memphis
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_wenchuan
+										has_landed_title = c_memphis
 									}
 								}
 							}
@@ -2414,19 +2427,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_nanjing 
+							has_landed_title = c_new_orleans
 							any_vassal = {
-								has_landed_title = c_nanjing
+								has_landed_title = c_new_orleans
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_nanjing
+									has_landed_title = c_new_orleans
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_nanjing
+										has_landed_title = c_new_orleans
 									}
 								}
 							}
@@ -2439,19 +2452,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_shanghai
+							has_landed_title = c_little_rock
 							any_vassal = {
-								has_landed_title = c_shanghai
+								has_landed_title = c_little_rock
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_shanghai
+									has_landed_title = c_little_rock
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_shanghai
+										has_landed_title = c_little_rock
 									}
 								}
 							}
@@ -2464,19 +2477,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_ningbo
+							has_landed_title = c_detroit
 							any_vassal = {
-								has_landed_title = c_ningbo
+								has_landed_title = c_detroit
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_ningbo
+									has_landed_title = c_detroit
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_ningbo
+										has_landed_title = c_detroit
 									}
 								}
 							}
@@ -2489,19 +2502,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_hangzhou
+							has_landed_title = c_yohogania
 							any_vassal = {
-								has_landed_title = c_hangzhou
+								has_landed_title = c_yohogania
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_hangzhou
+									has_landed_title = c_yohogania
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_hangzhou
+										has_landed_title = c_yohogania
 									}
 								}
 							}
@@ -2514,269 +2527,19 @@ character_event = {
 				limit = { 
 					ROOT = { 
 						OR = {
-							has_landed_title = c_xian
+							has_landed_title = c_rock_island
 							any_vassal = {
-								has_landed_title = c_xian
+								has_landed_title = c_rock_island
 							}
 							any_vassal = {
 								any_vassal = {
-									has_landed_title = c_xian
+									has_landed_title = c_rock_island
 								}
 							}
 							any_vassal = {
 								any_vassal = {
 									any_vassal = {
-										has_landed_title = c_xian
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_beijing 
-							any_vassal = {
-								has_landed_title = c_beijing
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_beijing
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_beijing
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_dalian
-							any_vassal = {
-								has_landed_title = c_dalian
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_dalian
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_dalian
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_shenyang
-							any_vassal = {
-								has_landed_title = c_shenyang
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_shenyang
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_shenyang
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_harbin
-							any_vassal = {
-								has_landed_title = c_harbin
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_harbin
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_harbin
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_seoul
-							any_vassal = {
-								has_landed_title = c_seoul
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_seoul
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_seoul
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_pyongyang
-							any_vassal = {
-								has_landed_title = c_pyongyang
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_pyongyang
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_pyongyang
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_qingdao
-							any_vassal = {
-								has_landed_title = c_qingdao
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_qingdao
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_qingdao
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_jinan
-							any_vassal = {
-								has_landed_title = c_jinan
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_jinan
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_jinan
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_aksu
-							any_vassal = {
-								has_landed_title = c_aksu
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_aksu
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_aksu
-									}
-								}
-							}
-						}
-					} 
-				}
-				change_variable = { which = "government_legitimacy" value = 5 }
-			}
-			if = {
-				limit = { 
-					ROOT = { 
-						OR = {
-							has_landed_title = c_lhasa
-							any_vassal = {
-								has_landed_title = c_lhasa
-							}
-							any_vassal = {
-								any_vassal = {
-									has_landed_title = c_lhasa
-								}
-							}
-							any_vassal = {
-								any_vassal = {
-									any_vassal = {
-										has_landed_title = c_lhasa
+										has_landed_title = c_rock_island
 									}
 								}
 							}
