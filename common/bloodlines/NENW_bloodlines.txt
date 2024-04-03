@@ -221,3 +221,36 @@ kemetic_bloodline = {
 	picture = GFX_bloodlines_temp_symbol
 	flags = { historical_bloodline }
 }
+quakerone_bloodline = {
+	inheritance = patrilineal
+	stewardship = 2
+	monthly_character_prestige = 1
+	monthly_character_piety = 1
+	quaker_opinion = 5
+	tquaker_opinion = 5
+	picture = GFX_bloodlines_symbol_cross_2
+		active = {
+		OR = {
+			religion = quaker
+			religion = tquaker
+		}
+	}
+	flags = { historical_bloodline }
+}
+quakertwo_bloodline = {
+	inheritance = patrilineal
+	martial = 1
+	learning = 1
+	monthly_character_prestige = 1
+	monthly_character_piety = 1
+	quaker_opinion = 5
+	tquaker_opinion = 5
+	picture = GFX_bloodlines_symbol_cross_2
+		active = {
+		OR = {
+			religion = quaker
+			religion = tquaker
+		}
+	}
+	flags = { historical_bloodline }
+}
