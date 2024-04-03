@@ -2,5 +2,17 @@ e_mississippi = {
 	color={ 124 200 255 }
 	color2={ 220 220 20 }
 
-	capital = 1072 
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_mississippi = {
+					is_titular = yes
+				}
+			}
+			e_mississippi = {
+				is_titular = no
+			}
+		}
+	}
+	capital = 1056 # Cahokia
 }
