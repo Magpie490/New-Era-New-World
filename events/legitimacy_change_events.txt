@@ -462,6 +462,10 @@ character_event = {
 			}
 			
 			if = {
+				limit = { ROOT = { trait = missi_claiment } }
+				change_variable = { which = "government_legitimacy" value = 15 }
+			}
+			if = {
 				limit = { 
 					ROOT = { 
 						OR = {
@@ -2196,6 +2200,10 @@ character_event = {
 			if = {
 				limit = { ROOT = { realm_diplomacy = 60 } }
 				change_variable = { which = "government_legitimacy" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = missi_claiment } }
+				change_variable = { which = "government_legitimacy" value = 15 }
 			}
 			
 			if = {
