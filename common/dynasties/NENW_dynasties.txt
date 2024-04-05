@@ -10247,13 +10247,13 @@
 3000541 = { name = "Putnam" culture = hoosier }
 3000542 = { name = "Debs" culture = hoosier }
 3000543 = { name = "Kheprison"
-			religion = solar
 			culture = lil_egyptian
 			used_for_random = no
 				coat_of_arms = {
+				religion = solar
 				template = 0
 					layer = {
-					texture = 16 #NENW_CoAs.tga
+					texture = 1 #NENW_CoAs.tga
 					texture_internal = 72
 					emblem = 0
 					color = 0
@@ -10367,7 +10367,22 @@
 	}
 }
 3000573 = { name = "Zugritter" culture = prairiegerman }
-3000574 = { name = "Menkheperre" culture = lil_egyptian }
+3000574 = { name = "Menkheperre" 
+			culture = lil_egyptian
+			used_for_random = no
+			coat_of_arms = {
+				religion = kemetic
+				template = 0
+				layer = {
+				texture = 1 #NENW_CoAs.tga
+				texture_internal = 136
+				emblem = 0
+				color = 0
+				color = 0
+				color = 0
+		}
+	}	
+}
 3000575 = { name = "Burlison" culture = nashvillian }
 3000576 = { name = "Tallarn" 
 			culture = hawkeyean
