@@ -19117,5 +19117,238 @@ castle = {
 		
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
+	}
+	ca_culture_federalist_1 = {
+		desc = ca_culture_federalist_1_desc
+		potential = {
+			OR = { 
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				has_building = ca_culture_federalist_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		gold_cost = 300
+		build_time = 1095
+		gunmen = 20
+		gunmen_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_federalist_2 = {
+		desc = ca_culture_federalist_1_desc
+		potential = {
+			OR = { 
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				has_building = ca_culture_federalist_1
+				has_building = ca_culture_federalist_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		upgrades_from = ca_culture_federalist_1
+		gold_cost = 300
+		build_time = 1095
+		gunmen = 20
+		gunmen_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_federalist_3 = {
+		desc = ca_culture_federalist_1_desc
+		potential = {
+			OR = { 
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				has_building = ca_culture_federalist_1
+				has_building = ca_culture_federalist_2
+				has_building = ca_culture_federalist_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		upgrades_from = ca_culture_federalist_2
+		gold_cost = 300
+		build_time = 1095
+		gunmen = 20
+		gunmen_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_federalist_4 = {
+		desc = ca_culture_federalist_1_desc
+		potential = {
+			OR = { 
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				has_building = ca_culture_federalist_1
+				has_building = ca_culture_federalist_2
+				has_building = ca_culture_federalist_3
+				has_building = ca_culture_federalist_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = {
+				OR = {
+				culture = federalist
+				culture = vulgar_federalist
+				culture = ballimorian
+				culture = jerseyite
+				culture = politan
+				culture = arhavi
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+		upgrades_from = ca_culture_federalist_3
+		gold_cost = 300
+		build_time = 1095
+		gunmen = 20
+		gunmen_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
 	}	
 }
