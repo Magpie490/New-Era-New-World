@@ -208,21 +208,24 @@
 }
 1100009 = {
 	dynasty = 3000670
-	name = "Kingsley"
+	name = "Kenneth" #A man who claims descent from a leader of Jamaica long ago. Also somewhat at odds with the Garvey family due to his faith
 	religion = adventist
 	culture = brettonnach
 	trait = skilled_tactician
 	trait = brave
 	trait = kind
-	trait = charismatic
+	trait = gregarious
 	trait = robust
 	trait = stubborn
 	trait = cynical
 	trait = diligent
-	trait = shy
+	trait = shy	
 	2268.1.24 = {
 		birth = yes
 		culture = caribbanglo
+	}
+	2290.1.1 = {
+		add_spouse = 1100021
 	}
 	2666.1.1 = {
 		death = yes
@@ -434,14 +437,62 @@
 }
 
 1100020 = {
-	name = "Morgan"
-	dynasty = 5001004
+	name = "Morgan" #Son of Bucko. Destined to grow up into a Captain one day...
+	dynasty = 5001004 #Yes this is a Captain Morgan reference
 	religion = brethren
 	culture = hoosier
 	father = 1100000
 	mother = 1100001
 	trait = quick	
 	2324.4.4 = {
+		birth = yes
+		culture = caribbanglo
+	}	
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+1100021 = {
+	name = "Jade" #Wife of Kenneth
+	religion = adventist
+	culture = brettonnach
+	female = yes
+	trait = charismatic_negotiator
+	trait = kind
+	trait = gregarious
+	trait = groomed
+	trait = gardener
+	trait = diligent
+	trait = temperate	
+	2275.3.2 = {
+		birth = yes
+		culture = caribbanglo
+	}
+	2290.1.1 = {
+		add_spouse = 1100009
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+1100022 = {
+	name = "William" #Son of Kenneth. An warrior full of ambition and a desire for adventure
+	dynasty = 3000670
+	religion = adventist
+	culture = brettonnach
+	father = 1100009
+	mother = 1100021
+	trait = skilled_tactician
+	trait = hunter
+	trait = gregarious
+	trait = groomed
+	trait = ambitious
+	trait = diligent
+	trait = proud
+	disallow_random_traits = yes
+	2300.7.11 = {
 		birth = yes
 		culture = caribbanglo
 	}	
