@@ -542,12 +542,24 @@
 	}
 }
 400033 = {
-	name = "Roy"
+	name = "Maxamed" #Salih's blood
 	dynasty = 3000488
-	religion = luddite
-	culture = laikmahn
-	2287.4.13 = {
+	religion = salihi
+	culture = mishyghani
+	trait = "charismatic_negotiator"
+	trait = "sayyid"
+	trait = "ambitious"
+	trait = "greedy"
+	trait = "cynical"
+	trait = "gregarious"
+	disallow_random_traits = yes
+	father = 400042
+	2306.12.13 = {
 		birth = yes
+		effect = {
+			add_claim = k_iowa
+			add_claim = d_driftless
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -670,6 +682,53 @@
 	}
 	2319.7.5 = {
 		add_matrilineal_spouse = 400038
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+400042 = {
+	name = "Daniyal"
+	dynasty = 3000488
+	religion = salihi
+	culture = mishyghani
+	trait = "fortune_builder"
+	trait = "sayyid"
+	trait = "incapable"
+	2266.2.3 = {
+		birth = yes
+		effect = {
+			create_bloodline = {
+				type = salih_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+400043 = {
+	name = "Cabdirashiid"
+	dynasty = 3000488
+	religion = salihi
+	culture = mishyghani
+	employer = 100046
+	trait = "martial_cleric"
+	trait = "sayyid"
+	trait = "chaste"
+	trait = "content"
+	trait = "zealous"
+	trait = "faqih"
+	trait = "hajjaj"
+	disallow_random_traits = yes
+	father = 400042
+	2286.10.6 = {
+		birth = yes
+		effect = {
+			add_claim = k_iowa
+			add_claim = d_driftless
+		}
 	}
 	2666.1.1 = {
 		death = yes
