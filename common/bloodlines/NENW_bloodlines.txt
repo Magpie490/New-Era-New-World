@@ -200,7 +200,7 @@ detroit_bloodline = {
 	monthly_character_piety = 0.5
 	antiquarianist_reformed_opinion = 7
 	antiquarianist = 7
-	picture = GFX_bloodlines_temp_symbol
+	picture = GFX_bloodlines_symbol_war_knight
 	flags = { historical_bloodline }
 }
 arthur_bloodline = {
@@ -265,6 +265,33 @@ salih_bloodline = {
 		OR = {
 			religion = salihi
 			religion = sufi
+		}
+	}
+	flags = { historical_bloodline }
+}
+morrow_bloodline = {
+	inheritance = patrilineal
+	martial = 2
+	monthly_character_prestige = 2.5
+	triumphant_opinion = 10
+	picture = GFX_bloodlines_symbol_murder_peace
+		active = {
+		OR = {
+			religion = triumphant
+		}
+	}
+	flags = { historical_bloodline }
+}
+killbasil_bloodline = {
+	inheritance = patrilineal
+	monthly_character_prestige = 2
+	combat_rating = 20
+	triumphant_opinion = 10
+	madonnite_opinion = -25
+	picture = GFX_bloodlines_symbol_war_child
+		active = {
+		OR = {
+			religion = triumphant
 		}
 	}
 	flags = { historical_bloodline }
