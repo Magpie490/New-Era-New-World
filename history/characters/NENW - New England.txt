@@ -35,13 +35,19 @@
 		death = yes
 	}
 }
-700002 = { #Ambitious (or crazy) king of the Northeast Kingdom
-	name = "George"
+700002 = {
+	name = "George"  #Ambitious (or crazy) king of the Northeast Kingdom
 	dynasty = 5000002 #Aiken
 	religion = "highmount"
 	culture = "vermonter"
+	trait = "flamboyant_schemer"
 	trait = "proud"
+	trait = "greedy"
+	trait = "arbitrary"
+	trait = "gregarious"
+	trait = "stubborn"
 	trait = "ambitious"
+	disallow_random_traits = yes
 	2300.6.19 = {
 		birth = yes
 	}
@@ -416,12 +422,13 @@
 	}
 }
 700030 = { #Count of the Berkshires
-	name = "Godric"
-	dynasty = 5000012 #Adams
+	name = "Gomez" #Gomez Addams, the patriarch of the Addams family and its values
+	dynasty = 5000012 #Addams
 	religion = "columbian"
-	culture = "massachusite"
+	culture = "proviguese" #For portrait
 	2284.7.11 = {
 		birth = yes
+		culture = "massachusite"
 	}
 	2299.7.12={
 		add_spouse=700033
@@ -433,7 +440,7 @@
 700031 = {
 	name = "Wednesday"
 	female=yes
-	dynasty = 5000012 #Adams
+	dynasty = 5000012 #Addams
 	father=700030
 	mother=700033
 	religion = "columbian"
@@ -447,7 +454,7 @@
 }
 700032 = {
 	name = "Pugsley"
-	dynasty = 5000012 #Adams
+	dynasty = 5000012 #Addams
 	father=700030
 	mother=700033
 	religion = "columbian"
