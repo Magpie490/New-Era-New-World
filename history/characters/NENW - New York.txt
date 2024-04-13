@@ -829,12 +829,22 @@
 	}
 }
 800048 = {
-	name = "Priam"
-	dynasty = 5000210
+	name = "Priam" #An odd man who claims descent from an ancient line of kings. Troy was once ruled by this famed family, or so he believes
+	dynasty = 5000210 #Ilion
 	religion = highmount
-	culture = hudsunite
+	culture = kolorantoi #For portrait
+	trait = skilled_tactician
+	trait = tall
+	trait = fair
+	trait = robust
+	trait = gregarious
+	trait = strategist
+	trait = proud
+	trait = brave
+	disallow_random_traits = yes
 	2291.7.6 = {
 		birth = yes
+		culture = hudsunite
 	}
 	2666.1.1 = {
 		death = yes
@@ -934,7 +944,7 @@
 	}
 }
 800056 = {
-	name = "Rasid" #An Albanian American ruler, just trying to survive in this difficult world
+	name = "Ilias" #An Albanian American ruler, just trying to survive in this difficult world
 	dynasty = 5000231
 	religion = sufi
 	culture = chamerian
@@ -1712,12 +1722,58 @@
 	}
 }
 800093 = {
-	name = "Johny"
+	name = "Johnny"
 	dynasty = 3000689
 	religion = juggalo
 	culture = politan
 	2283.4.15 = {
 		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800094 = {
+	name = "Hector" #Hector, son of Priam
+	dynasty = 5000210 #Ilion
+	religion = highmount
+	culture = kolorantoi #For portrait
+	father = 800048	
+	2319.8.1 = {
+		birth = yes
+		culture = hudsunite
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800095 = {
+	name = "Paris" #Paris, second son of Priam
+	dynasty = 5000210 #Ilion
+	religion = highmount
+	culture = kolorantoi #For portrait
+	father = 800048	
+	2322.7.11 = {
+		birth = yes
+		culture = hudsunite
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800096 = {
+	name = "Cassandra" #Cassandra, daughter of Priam
+	dynasty = 5000210 #Ilion
+	religion = highmount
+	culture = kolorantoi #For portrait
+	father = 800048
+	female = yes
+	2323.12.1 = {
+		birth = yes
+		culture = hudsunite
 	}
 	2666.1.1 = {
 		death = yes
