@@ -152,3 +152,157 @@ province_event = {
 		name = "EVTOPTAWA13"
 	}
 }
+
+province_event = { #Türk wanderers
+	id = wanderer.14
+	desc = EVTDESC_WA_14
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		owner = {
+			NOT = { has_character_modifier = cruelly_drove_out_minority }
+		}
+		region = custom_turk_wandering
+		NOR = {
+			has_province_modifier = ny_turkish_minority
+			culture = ny_turkish
+			is_looting_in = ROOT
+			is_occupied = yes
+			units_in_province = 1
+			has_disease = yes
+		}
+	}
+	mean_time_to_happen = {
+		months = 420
+		modifier = {
+			factor = 0.95
+			has_province_modifier = prosperity_modifier_1 
+		}
+		modifier = {
+			factor = 0.90
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 0.85
+			has_province_modifier = prosperity_modifier_3
+		}
+	}
+	option = {
+		name = "EVTOPTAWA14"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = just }
+			}
+		}
+		add_province_modifier = {
+			name = ny_turkish_minority
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBWA14"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = charitable }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = arbitrary }
+			}
+		}
+		trigger = {
+			NOT = { culture = ny_turkish }
+		}
+		wealth = 25
+		owner = {
+			add_character_modifier = {
+				name = cruelly_drove_out_minority
+				duration = 90
+			}
+		}
+	}
+}
+province_event = {
+	id = wanderer.15
+	desc = EVTDESC_WA_15
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = ny_turkish_minority
+		culture = ny_turkish
+		religion = sufi
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = ny_turkish_minority
+	}
+	option = {
+		name = "EVTOPTAWA15"
+	}
+}
+province_event = {
+	id = wanderer.16
+	desc = EVTDESC_WA_16
+	
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		has_province_modifier = ny_turkish_minority
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.95
+			is_looting_in = ROOT
+		}
+		modifier = {
+			factor = 0.95
+			is_occupied = yes
+		}
+		modifier = {
+			factor = 0.95
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.95
+			has_disease = yes
+		}
+	}
+	immediate={
+		remove_province_modifier = ny_turkish_minority
+	}
+	option = {
+		name = "EVTOPTAWA16"
+	}
+}
