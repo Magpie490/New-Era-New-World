@@ -634,113 +634,6 @@ e_ontario = {
 
 		capital = 284 # Sudbury
 		
-		d_kenora = {
-			color = { 71 33 0 }
-			color2 = { 255 178 0 }
-			
-			culture = canuck
-			
-			capital = 584 #Winnipeg
-		
-			c_winnipeg = {
-				color = { 0 0 206 }
-				color2 = { 255 175 0 }
-				holy_site = quaker
-				holy_site = tquaker
-				
-				b_winnipeg_MB = {}
-				b_selkirk_MB = {}
-				b_stonewall_MB = {}
-				b_pinawa_MB = {}
-				b_readingley_MB = {}
-				b_lorette_MB = {}
-				b_prawda_MB = {}
-			}
-			c_steinbach_MB = {
-				color={ 255 255 255 }
-				color2={ 255 255 255 }
-				
-				b_steinbach_MB = {}
-				b_warroad_MB = {}
-				b_ste_anne_MB = {}
-				b_buffalo_point_MB = {}
-				b_saint_malo_MB = {}
-				b_zhoda_MB = {}
-				b_vita_MB = {}
-			}
-			c_whiteshell_MB = {
-				color={ 255 255 255 }
-				color2={ 255 255 255 }
-				
-				b_whiteshell_MB = {}
-				b_rennie_MB = {}
-				b_shoal_lake_MB = {}
-				b_angle_inlet_MB = {}
-				b_falcon_beach_MB = {}
-				b_oak_island_MB = {}
-				b_clearwater_bay_MB = {}
-			}
-			c_atikaki = {
-				color = { 243 50 9 }
-				color2 = { 255 255 255 }
-				
-				b_manigotagan_MB = {}
-				b_bloodvein_MB = {}
-				b_bissett_MB = {}
-				b_beresford_MB = {}
-				b_winipigow_MB = {}
-				b_loon_straits_MB = {}
-				b_seymourville_MB = {}
-			}
-			c_lac_seul = {
-				color = { 36 105 50 }
-				color2 = { 117 35 114 }
-				
-				b_dryden_ON = {}
-				b_kenora_ON = {}
-				b_minaki_ON = {}
-				b_ignace_ON = {}
-				b_wabigoon_ON = {}
-				b_oxdrift_ON = {}
-				b_dinorwic_ON = {}
-			}
-			c_turtle_river_ON = {
-				color={ 255 255 255 }
-				color2={ 255 255 255 }
-				
-				b_farrington_ON = {}
-				b_windy_point_ON = {}
-				b_mine_centre_ON = {}
-				b_seine_river_ON = {}
-				b_crilly_ON = {}
-				b_flanders_ON = {}
-				b_leatherdale_landing_ON = {}
-			}
-			c_quetico = {
-				color = { 204 0 0 }
-				color2 = { 255 255 255 }
-				
-				b_shebandowan_ON = {}
-				b_kashabowie_ON = {}
-				b_sapawe_ON = {}
-				b_huronian_ON = {}
-				b_kawene_ON = {}
-				b_atikokan_ON = {}
-				b_shabaqua_ON = {}
-			}
-			c_wabakimi = {
-				color = { 255 246 153 }
-				color2 = { 167 145 100 }
-				
-				b_collins_ON = {}
-				b_allanwater_bridge_ON = {}
-				b_brightsand_ON = {}
-				b_kopka_ON = {}
-				b_cache_lake_ON = {}
-				b_vivid_lake_ON = {}
-				b_gunter_ON = {}
-			}
-		}	
 		d_algoma = {
 			color = { 45 153 45 }
 			color2= { 255 255 255 }
@@ -1028,10 +921,22 @@ e_ontario = {
 			}
 
 		}
-		d_placeholder = {
-			capital = 1786
-			color = { 255 255 255 }
-			color2= { 255 255 255 }
+	}
+	k_kenora = {
+		color = { 71 33 0 }
+		color2 = { 255 178 0 }
+
+		# Crusade target weight
+		ursuline = 50
+		rust_cultist_reformed = 5
+		norse_pagan_reformed = 50
+
+		capital = 584 # Sudbury
+		
+		d_manto_sakahigan = {
+			capital = 1799
+			color = { 102 73 47 }
+			color2 = { 255 255 255 }
 	
 			c_kistiganwacheeng = {
 				color = { 128 65 80 }
@@ -1084,6 +989,75 @@ e_ontario = {
 			}
 		}
 		
+		d_kenora = {
+			color = { 71 33 0 }
+			color2 = { 255 178 0 }
+			
+			culture = canuck
+			
+			capital = 584 #Winnipeg
+		
+			c_whiteshell_MB = {
+				color={ 66 105 50 }
+				color2={ 255 255 255 }
+				
+				b_whiteshell_MB = {}
+				b_rennie_MB = {}
+				b_shoal_lake_MB = {}
+				b_angle_inlet_MB = {}
+				b_falcon_beach_MB = {}
+				b_oak_island_MB = {}
+				b_clearwater_bay_MB = {}
+			}
+			c_lac_seul = {
+				color = { 36 105 50 }
+				color2 = { 117 35 114 }
+				
+				b_dryden_ON = {}
+				b_kenora_ON = {}
+				b_minaki_ON = {}
+				b_ignace_ON = {}
+				b_wabigoon_ON = {}
+				b_oxdrift_ON = {}
+				b_dinorwic_ON = {}
+			}
+			c_turtle_river_ON = {
+				color={ 36 135 50 }
+				color2={ 255 255 255 }
+				
+				b_farrington_ON = {}
+				b_windy_point_ON = {}
+				b_mine_centre_ON = {}
+				b_seine_river_ON = {}
+				b_crilly_ON = {}
+				b_flanders_ON = {}
+				b_leatherdale_landing_ON = {}
+			}
+			c_quetico = {
+				color = { 204 0 0 }
+				color2 = { 255 255 255 }
+				
+				b_shebandowan_ON = {}
+				b_kashabowie_ON = {}
+				b_sapawe_ON = {}
+				b_huronian_ON = {}
+				b_kawene_ON = {}
+				b_atikokan_ON = {}
+				b_shabaqua_ON = {}
+			}
+			c_wabakimi = {
+				color = { 255 246 153 }
+				color2 = { 167 145 100 }
+				
+				b_collins_ON = {}
+				b_allanwater_bridge_ON = {}
+				b_brightsand_ON = {}
+				b_kopka_ON = {}
+				b_cache_lake_ON = {}
+				b_vivid_lake_ON = {}
+				b_gunter_ON = {}
+			}
+		}	
 		d_patricia = { #Patricia Portion
 			color = { 102	43	47 }
 			color2 = { 255 255 255 }
