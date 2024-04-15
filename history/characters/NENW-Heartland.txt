@@ -22,7 +22,7 @@
 
 650001 = {
 	name = "Mustafa" #Caliph of Iowa, a man of true zeal and outward ambition
-	dynasty = 3000565 #Abdul-Qaadir
+	dynasty = 3000565 #Ayyuwaid
 	religion = "salihi"
 	culture = "somali"
 	trait="scholarly_theologian"
@@ -35,7 +35,7 @@
 	trait="proud"
 	trait="sayyid"
 	disallow_random_traits = yes
-	2288.3.19 = {
+	2285.3.19 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -57,6 +57,9 @@
 	disallow_random_traits = yes
 	2290.4.9 = {
 		birth = yes
+	}
+	2323.1.1 = {
+		add_spouse = 650015
 	}
 	2666.1.1 = {
 		death = yes
@@ -207,6 +210,82 @@
 	2301.2.2 = {
 		birth = yes
 	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+650015 = {
+	name = "Aisha" #Oldest daughter of Caliph Mustafa, married to recent convert Adam Mohammed
+	dynasty = 3000565 #Ayyuwaid
+	religion = "salihi"
+	culture = "somali"
+	female = yes
+	father = 650001
+	trait="sayyid"
+	2301.7.9 = {
+		birth = yes
+	}
+	2323.1.1 = {
+		add_spouse = 650002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+650016 = {
+	name = "Mariam" #Younger daughter of Caliph Mustafa, married to Sulejman down river to forge closer ties
+	dynasty = 3000565 #Ayyuwaid
+	religion = "salihi"
+	culture = "somali"
+	female = yes
+	father = 650001
+	trait="sayyid"
+	2305.5.1 = {
+		birth = yes
+	}
+	2324.1.1 = {
+		add_spouse = 100046
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+650017 = {
+	name = "Umar" #A rather difficult son of Mustafa. Despite his upbringing, he seems to have very little interest in becoming Caliph
+	dynasty = 3000565 #Ayyuwaid
+	religion = "salihi"
+	culture = "somali"
+	father = 650001
+	trait="detached_priest"
+	trait="slow"
+	trait="gamer"
+	trait="chaste"
+	trait="slothful"
+	trait="arbitrary"
+	trait="cynical"
+	trait="sayyid"
+	disallow_random_traits = yes
+	2307.5.1 = {
+		birth = yes
+	}	
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+650018 = {
+	name = "Jafar" #Youngest and newborn son of Mustafa
+	dynasty = 3000565 #Ayyuwaid
+	religion = "salihi"
+	culture = "somali"
+	father = 650001
+	trait="sayyid"	
+	2322.5.1 = {
+		birth = yes
+	}	
 	2666.1.1 = {
 		death = yes
 	}
