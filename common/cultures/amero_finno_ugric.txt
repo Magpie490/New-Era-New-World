@@ -19,39 +19,37 @@ amero_finno_ugric = {
 			Lalli Lauri_Lawrence Lemetti Lars_Lawrence Linus_Linus Leo_Leo
 			Mauri_Maurice Mikko_Michael Matti_Matthew Marco_Mark Markku_Mark Magnus_Magnus Michael_Michael Max_Maximus Martin_Martin 
 			Oiva Onni Otso_Ursus Olavi_Olaf Otto_Otto 
-			Pyry Päiviö Pentti_Benedict Petri_Peter Paavo_Paul Pekko Pehr_Peter 
+			Pyry Pentti_Benedict Petri_Peter Paavo_Paul Pekko Pehr_Peter 
 			Reko_Gregory Risto_Christopher Riku_Richard Rieti_Frederick Rudolf_Rudolf
 			Sampo Satajalka Satatieto Seppo_Sebastian Soini_Sven Stefan_Stephen Sauli_Saul 
 			Tapani_Stephen Terho Toivo Taisto Tuokko_David Taneli_Daniel Turo Tommo_Thomas Thomas_Thomas 
 			Ukko_Ukko Uoti_Olaf Urho 
-			Väinö Valta Valto Veli Vesa Voitto Valteri_Walter Valdemar_Vladimir Vertti_Ferdinand 
-			Yrjö_George
+			Valta Valto Veli Vesa Voitto Valteri_Walter Valdemar_Vladimir Vertti_Ferdinand 
 			Zacharias_Zachary
 		}
 		female_names = {
 			Aamu Aino Auni_Agnes Anna_Anna Ansa Alma
 			Elisabet_Elizabeth Elina_Helen Eve_Eve
-			Hellä Helmi_Wilhelmina Hertta Henriette_Henriette
+			Helmi_Wilhelmina Hertta Henriette_Henriette
 			Ilta Inkeri_Ingrid Ilmatar Irene_Irene Ilona_Helen
 			Janina_Jane Jenny_Jennifer
-			Kaarina_Catherine Käpy Kielo Kukka Kristiina_Christina Kivutar Kristin_Christina 
+			Kaarina_Catherine Kielo Kukka Kristiina_Christina Kivutar Kristin_Christina 
 			Lauha Lempi Loviisa_Louise Liekko_Helen Lemmikki Lyylikki_Lydia Linda_Linda 
 			Mahla Maija_Mary Marja_Mary Mesi Metta Mielikki Marta_Martha Margareta_Margaret
-			Päivä Päivi Pihla Pilvi 
+			Pihla Pilvi 
 			Rauha 
 			Sisko Suoma Sohvi_Sophia Salme Sanna_Susan
 			Taimi Terhi Titti_Christina Tuija Tuovi Tuuli Tuulikki Tuuri Tyyne Talvikki Tuulitar 
 			Vanamo Venla
 		}
 		from_dynasty_prefix = "luota "
-		male_patronym = "npoika"
-		female_patronym = "ntytär"
+		
 		prefix = no
 		feminist = yes
 
 		modifier = default_culture_modifier
 	}
-	amcsi = { #Hungarian-American
+	amcsi = { #Hungarian-American/Canadian
 		graphical_cultures = { magyargfx ugricgfx easterngfx }
 
 		color = { 128 156 80 }
@@ -102,9 +100,10 @@ amero_finno_ugric = {
 			Zo�_Zoe 
 		}
 
-		from_dynasty_suffix = "y"
-		male_patronym = "szon"
+		#from_dynasty_suffix = "y"
+		#male_patronym = "szon"
 		prefix = no
+		feminist = yes
 
 		modifier = default_culture_modifier
 
@@ -172,12 +171,13 @@ amero_finno_ugric = {
 			Zoa_Zoe Zanett_Jane Zofia_Sophia Zuzanna_Susan
 		}
 		
-		dynasty_name_first = yes
+		#dynasty_name_first = yes
 		feminist = yes
+		allow_looting = yes
 		
 		#from_dynasty_prefix = "a "
-		from_dynasty_suffix = "y"
-		male_patronym = "fi"
+		#from_dynasty_suffix = "y"
+		#male_patronym = "fi"
 		prefix = no
 
 		modifier = default_culture_modifier
