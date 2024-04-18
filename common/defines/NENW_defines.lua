@@ -1,12 +1,12 @@
 NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE = 2325
 
-NDefines.NFrontend.CAMERA_LOOKAT_X = 1900.0
-NDefines.NFrontend.CAMERA_LOOKAT_Y = 0.0
-NDefines.NFrontend.CAMERA_LOOKAT_Z = 648.0
+NDefines.NFrontend.CAMERA_LOOKAT_X = 2000.0
+NDefines.NFrontend.CAMERA_LOOKAT_Y = 20.0
+NDefines.NFrontend.CAMERA_LOOKAT_Z = 1450.0
 NDefines.NFrontend.CAMERA_LOOKAT_SETTINGS_X = 1900.0
 NDefines.NFrontend.CAMERA_LOOKAT_SETTINGS_Y = 0.0
 NDefines.NFrontend.CAMERA_LOOKAT_SETTINGS_Z = 648.0
-NDefines.NFrontend.CAMERA_START_X = 2100.0
+NDefines.NFrontend.CAMERA_START_X = 1400.0
 NDefines.NFrontend.CAMERA_START_Y = 2450.0
 NDefines.NFrontend.CAMERA_START_Z = 900.0
 NDefines.NFrontend.CAMERA_END_X = 1800.0
