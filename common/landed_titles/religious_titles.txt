@@ -2035,7 +2035,7 @@ d_salihi = {
 	color={ 40 160 40 }
 	color2={ 220 220 0 }
 	
-	capital = 265 # Mecca
+	capital = 118 #Detroit
 	
 	creation_requires_capital = no
 	
@@ -2050,43 +2050,13 @@ d_salihi = {
 	
 	# Controls a religion
 	controls_religion = salihi
-	location_ruler_title = yes
+	
 	allow = {
-		religion = salihi
-		OR = {
-			trait = mirza
-			trait = sayyid
-			piety = 1000
-			custom_tooltip = {
-				text = sunni_bloodline_TT
-
-				any_owned_bloodline = {
-					has_bloodline_flag = bloodline_sunni_leader
-					bloodline_is_active_for = PREV
-				}
-			}
-		}
-		custom_tooltip = {
-			text = THREE_HOLY_SITES_TT
-			hidden_tooltip = {
-				any_realm_title = {
-					count = 3
-					is_holy_site = ROOT
-				}
-			}
-		}
+		num_of_holy_sites = 2
+		piety = 500
 	}
 	
-	caliphate = yes
-	
-	coat_of_arms=
-	{
-		data=
-		{
-			0 0 0 3 0 2 2
-		}
-		religion=salihi
-	}
+	caliphate = yes	
 }
 d_ismaili = {
 	color={ 60 190 60 }
@@ -2113,16 +2083,7 @@ d_ismaili = {
 		piety = 500
 	}
 
-	caliphate = yes
-	
-	coat_of_arms=
-	{
-		data=
-		{
-			0 0 0 9 1 7 7
-		}
-		religion=shiite
-	}
+	caliphate = yes	
 }
 
 d_wahhabi = {
