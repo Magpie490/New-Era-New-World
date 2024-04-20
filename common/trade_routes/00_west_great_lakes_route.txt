@@ -1,0 +1,52 @@
+west_great_lakes_route = {
+wealth = 20			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 263
+			province_id = 224
+			province_id = 3724
+			province_id = 934
+			province_id = 286
+			province_id = 1271
+			province_id = 1157
+			province_id = 170
+			province_id = 3714
+			province_id = 118
+		}
+	}
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.04
+		city_tax_modifier = 0.04
+		temple_tax_modifier = 0.04
+		tribal_tax_modifier = 0.04
+		trade_route_value = 3
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.08
+		icon = 61
+	}
+
+	start = {				# Start provinces of trade route
+		263
+		1047
+		1271
+		118
+	}
+	start = {
+		1047
+		1271
+	}
+	start = {
+		1047
+		118
+	}
+#Main route
+    path = {
+		263 262 900 224 223 1142 1140 3724 1138 1048 1047 
+	}
+	path = {
+		1047 3722 1011 1010 934 289 292 284 286 287 1278 794 1271
+	}
+	path = {
+		1047 1049 3725 1156 1157 1159 1152 1149 864 170 740 169 168 3714 178 3721 119 118
+}
