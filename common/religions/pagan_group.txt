@@ -14,12 +14,12 @@ pagan_group = {
 	
 	# Names given only to Pagan characters (base names)
 	male_names = {
-		Anund Asbjörn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund Gudröd Hardeknud Helge Odd Orm 
-		Orvar Ottar Rikulfr Rurik Sigbjörn Styrbjörn Starkad Styrkar Sämund Sölve Sörkver Thorolf Tjudmund Toke Tolir 
-		Torbjörn Torbrand Torfinn Torgeir Toste Tyke
+		Anund Asbjï¿½rn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund Gudrï¿½d Hardeknud Helge Odd Orm 
+		Orvar Ottar Rikulfr Rurik Sigbjï¿½rn Styrbjï¿½rn Starkad Styrkar Sï¿½mund Sï¿½lve Sï¿½rkver Thorolf Tjudmund Toke Tolir 
+		Torbjï¿½rn Torbrand Torfinn Torgeir Toste Tyke
 	}
 	female_names = {
-		Aslaug Bothild Björg Freja Grima Gytha Kráka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
+		Aslaug Bothild Bjï¿½rg Freja Grima Gytha Krï¿½ka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
 	}
 
 	pagan = { # Use for misc other pagans
@@ -308,17 +308,15 @@ pagan_group = {
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
 		intermarry = peyotist
-		#intermarry = midewiwin
-		#intermarry = midewiwin_reformed
 		intermarry = raven_tales
 		intermarry = raven_tales_reformed
 		intermarry = uniate
 		intermarry = blackfish
-		#intermarry = navajo
-		#intermarry = navajo_reformed
 		intermarry = numic_reformed
 		intermarry = numic
 		intermarry = oceanic
+		intermarry = kakyosin
+		intermarry = kakyosin_reformed
 	}
 	taalawsohu_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -366,6 +364,8 @@ pagan_group = {
 		intermarry = numic
 		intermarry = oceanic
 		intermarry = taalawsohu
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
 
 		alternate_start = { always = no }
 
@@ -416,6 +416,8 @@ pagan_group = {
 		intermarry = numic
 		intermarry = oceanic
 		intermarry = taalawsohu_reformed
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
 	}
 	raven_tales = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -679,6 +681,9 @@ pagan_group = {
 		intermarry = oceanic
 		intermarry = crow_way
 		intermarry = crow_way_reformed
+		intermarry = kakyosin_reformed
+		intermarry = sun_dance
+		intermarry = dreamer
 	}
 	kakyosin_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -715,6 +720,9 @@ pagan_group = {
 		intermarry = oceanic
 		intermarry = crow_way
 		intermarry = crow_way_reformed
+		intermarry = kakyosin
+		intermarry = sun_dance
+		intermarry = waashat
 	}
 	blessing_way = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -749,8 +757,16 @@ pagan_group = {
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
+
 		intermarry = peyotist
 		intermarry = oceanic
+		intermarry = taalawsohu
+		intermarry = taalawsohu_reformed
+		intermarry = blue_star
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		intermarry = blessing_way_reformed
+		intermarry = zenith
 	}
 	blessing_way_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -783,8 +799,16 @@ pagan_group = {
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
+
 		intermarry = peyotist
 		intermarry = oceanic
+		intermarry = taalawsohu
+		intermarry = taalawsohu_reformed
+		intermarry = blue_star
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		intermarry = blessing_way
+		intermarry = zenith
 	}
 	zenith = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -816,8 +840,16 @@ pagan_group = {
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
+
 		intermarry = peyotist
 		intermarry = oceanic
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		intermarry = cowboy_buddhist
+		intermarry = sun_dance
+		intermarry = amaitist
 	}
 	bon_reformed = {
 		graphical_culture = bongfx
@@ -1532,6 +1564,11 @@ pagan_group = {
 		intermarry = cowboy_buddhist
 		intermarry = oceanic
 		intermarry = trinitarian
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
+		intermarry = zenith
+		intermarry = peyotist
+		intermarry = tengri_pagan
 	}		
 	
 	
@@ -1590,6 +1627,11 @@ pagan_group = {
 		intermarry = cowboy_buddhist
 		intermarry = oceanic
 		intermarry = trinitarian
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
+		intermarry = zenith
+		intermarry = peyotist
+		intermarry = tengri_pagan_reformed
 
 		can_demand_religious_conversion = no
 	}
@@ -1776,13 +1818,15 @@ pagan_group = {
 		intermarry = novelist
 		intermarry = novelist_reformed
 		intermarry = celtic_pagan
+		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
-		intermarry = summer_queen
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
 		intermarry = oceanic
 		intermarry = gridiron
+		intermarry = gator_pagan
+		intermarry = shriner
 	}
 
 	gator_pagan = {
@@ -1837,14 +1881,16 @@ pagan_group = {
 		intermarry = catholic
 		intermarry = novelist
 		intermarry = novelist_reformed
+		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
-		intermarry = summer_queen
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
 		intermarry = oceanic
 		intermarry = gridiron
+		intermarry = gator_pagan_reformed
+		intermarry = shriner
 	}
 
 	celtic_pagan_reformed = {
@@ -1894,7 +1940,6 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		
-		intermarry = catholic
 		intermarry = novelist
 		intermarry = novelist_reformed
 		intermarry = celtic_pagan
@@ -1908,6 +1953,10 @@ pagan_group = {
 		intermarry = mahayana
 		intermarry = oceanic
 		intermarry = macabrist
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = scholastic
+		intermarry = highmount
 	}
 
 	celtic_pagan = {
@@ -1958,7 +2007,6 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		
-		intermarry = catholic
 		intermarry = novelist
 		intermarry = novelist_reformed
 		intermarry = celtic_pagan_reformed
@@ -1972,6 +2020,10 @@ pagan_group = {
 		intermarry = mahayana
 		intermarry = oceanic
 		intermarry = macabrist
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = scholastic
+		intermarry = highmount
 	}
 	inuit_pagan_reformed = {
 		graphical_culture = reformednorsegfx
@@ -2025,9 +2077,8 @@ pagan_group = {
 		
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
-		
-		
-		
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
@@ -2088,9 +2139,6 @@ pagan_group = {
 		
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
-		
-		
-		
 		intermarry = inuit_pagan_reformed
 		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
@@ -2098,6 +2146,8 @@ pagan_group = {
 		intermarry = novelist_reformed
 		intermarry = bushism
 		intermarry = oceanic
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
 	}
 	lakefolk_pagan_reformed = {
 		graphical_culture = reformednorsegfx
@@ -2156,6 +2206,16 @@ pagan_group = {
 		intermarry = oceanic
 		intermarry = antiquarianist
 		intermarry = antiquarianist_reformed
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = sun_dance
+		intermarry = peyotist
+		intermarry = gaian
+		intermarry = delver
+		intermarry = delver_reformed
+		intermarry = ironist
+		intermarry = anishinaabe
+		intermarry = anishinaabe_reformed
 	}
 
 	lakefolk_pagan = {
@@ -2221,6 +2281,16 @@ pagan_group = {
 		intermarry = oceanic
 		intermarry = antiquarianist
 		intermarry = antiquarianist_reformed
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = sun_dance
+		intermarry = peyotist
+		intermarry = gaian
+		intermarry = delver
+		intermarry = delver_reformed
+		intermarry = ironist
+		intermarry = anishinaabe
+		intermarry = anishinaabe_reformed
 	}
 	novelist_reformed = { # Like books
 		graphical_culture = nobeliangfx
@@ -2258,8 +2328,6 @@ pagan_group = {
 		#aggression = 2.5 # AI aggression factor
 		
 		intermarry = novelist
-		
-		
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
@@ -2267,6 +2335,10 @@ pagan_group = {
 		intermarry = inuit_pagan_reformed
 		intermarry = summer_queen
 		intermarry = oceanic
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = delver
+		intermarry = delver_reformed
 	}
 
 	novelist = { # Like books
@@ -2310,13 +2382,16 @@ pagan_group = {
 		
 		intermarry = novelist_reformed
 		intermarry = raelian
-		
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
 		intermarry = summer_queen
 		intermarry = oceanic
+		intermarry = gator_pagan
+		intermarry = gator_pagan_reformed
+		intermarry = delver
+		intermarry = delver_reformed
 	}
 
 	
@@ -3136,10 +3211,16 @@ pagan_group = {
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
+		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
+		intermarry = anishinaabe
 		intermarry = gaiwiio
 		intermarry = oceanic
 		intermarry = loyalist
+		intermarry = anglican
+		intermarry = united_church
+		intermarry = gaian
+
 	}
 	anishinaabe = {
 		graphical_culture = norsegfx
@@ -3192,9 +3273,15 @@ pagan_group = {
 		intermarry = celtic_pagan_reformed
 		intermarry = inuit_pagan
 		intermarry = inuit_pagan_reformed
-		intermarry = loyalist
-		intermarry = oceanic
+		intermarry = lakefolk_pagan
 		intermarry = lakefolk_pagan_reformed
+		intermarry = anishinaabe_reformed
+		intermarry = gaiwiio
+		intermarry = oceanic
+		intermarry = loyalist
+		intermarry = anglican
+		intermarry = united_church
+		intermarry = gaian
 	}
 }
 	
