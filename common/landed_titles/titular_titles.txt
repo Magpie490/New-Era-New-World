@@ -2190,7 +2190,7 @@ e_wastelander = {
 	creation_requires_capital = no	
 }
 
-e_brethren = {
+e_buccaneer = {
 	color={ 65 35 25 }
 	color2={ 150 50 50 }
 	capital = 2086 # Tortuga
@@ -2198,10 +2198,10 @@ e_brethren = {
 	allow = {
 		war = no
 		not = { tier = emperor }
-		religion = brethren
+		religion = buccaneer
 		OR = {
 			realm_size = 90
-			e_brethren = { OR = { is_titular = no has_holder = yes } }
+			e_buccaneer = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes

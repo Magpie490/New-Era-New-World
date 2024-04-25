@@ -8493,6 +8493,20 @@ warrior_lodge_sea_creed = {
 					}
 				}
 			}
+			religion = buccaneer
+			AND = {
+				culture = doggerlander
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = buccaneer }
+					}
+					AND = {
+						trait = zealous
+						religion = buccaneer
+					}
+				}
+			}
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -8518,6 +8532,7 @@ warrior_lodge_sea_creed = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion = brethren
+			religion = buccaneer
 			AND = {
 				culture = doggerlander
 				OR = {
@@ -8540,6 +8555,9 @@ warrior_lodge_sea_creed = {
 					any_vassal = { religion = brethren }
 					any_liege = { religion = brethren }
 					any_neighbor_independent_ruler = { religion = brethren }
+					any_vassal = { religion = buccaneer }
+					any_liege = { religion = buccaneer }
+					any_neighbor_independent_ruler = { religion = buccaneer }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
@@ -8568,6 +8586,24 @@ warrior_lodge_sea_creed = {
 					AND = {
 						trait = zealous
 						religion = brethren
+					}
+				}
+			}
+			religion = buccaneer
+			AND = {
+				NOT = { religion = buccaneer }
+				NOT = { trait = zealous }
+			}
+			AND = {
+				culture = doggerlander
+				OR = {
+					AND = {
+						NOT = { trait = zealous }
+						NOT = { religion = buccaneer }
+					}
+					AND = {
+						trait = zealous
+						religion = buccaneer
 					}
 				}
 			}
@@ -8847,6 +8883,20 @@ warrior_lodge_sea_creed = {
 						AND = {
 							trait = zealous
 							religion = brethren
+						}
+					}
+				}
+				religion = buccaneer
+				AND = {
+					culture = doggerlander
+					OR = {
+						AND = {
+							NOT = { trait = zealous }
+							NOT = { religion = buccaneer }
+						}
+						AND = {
+							trait = zealous
+							religion = buccaneer
 						}
 					}
 				}
