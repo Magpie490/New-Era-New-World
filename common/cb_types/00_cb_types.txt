@@ -310,6 +310,9 @@ other_claim = {
 	sort_priority = 900
 
 	can_use = {
+		ROOT = {
+			mercenary = no
+		}
 	}
 
 	can_use_gui = {
@@ -1834,6 +1837,13 @@ claim_all = {
 	sort_priority = 1100
 
 	can_use = {
+		ROOT = {
+			total_claims = {
+				who = FROM
+				strong = yes # Count only strong claims
+				value = 2
+			}
+		}
 	}
 
 	can_use_gui = {
