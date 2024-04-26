@@ -1834,6 +1834,13 @@ claim_all = {
 	sort_priority = 1100
 
 	can_use = {
+		ROOT = {
+			total_claims = {
+				who = FROM
+				strong = yes # Count only strong claims
+				value = 2
+			}
+		}
 	}
 
 	can_use_gui = {
