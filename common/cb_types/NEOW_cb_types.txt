@@ -278,7 +278,6 @@ invade_numenor = {##Designed to reclaim Numenor if you're of Bonaparte blood
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			independent = yes
 			OR = {
 				religion = novelist_reformed
@@ -443,7 +442,6 @@ unite_russia = {##Designed to help the Zarists consolidate
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			independent = yes
 			OR = {
 				is_zarist_religion_trigger = yes
@@ -588,7 +586,6 @@ choose_the_right_caliph = {
 				is_anti_caliph = yes
 				controls_religion = yes
 			}
-			bhutan_medium_cb = yes
 		}
 		FROM = {
 			OR = {
@@ -856,7 +853,6 @@ take_cometee = {
 		ROOT = {
 			religion = jacobinist
 			trait = guillotine_master_3
-			bhutan_medium_cb = yes
 		}
 	}
 	
@@ -972,7 +968,6 @@ jacobinist_county_conquest = {
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
-			bhutan_medium_cb = yes
 			NOT = {
 				has_character_modifier = county_conquest_timer
 			}
@@ -1326,7 +1321,6 @@ jacobinist_ducal_conquest = {
 			religion = jacobinist
 			mercenary = no
 			is_nomadic = no
-			bhutan_medium_cb = yes
 		}
 		FROM = {
 			religion = jacobinist
@@ -1591,7 +1585,6 @@ jacobinist_start_of_revolution_invasion = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				ai = yes
 				multiplayer = no
@@ -2018,7 +2011,6 @@ jacobinist_continue_revolution_invasion = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				ai = yes
 				multiplayer = no
@@ -2348,7 +2340,6 @@ jacobinist_restore_republic_boarders = {
 
 	can_use = {
 		ROOT = {
-			bhutan_medium_cb = yes
 			OR = {
 				ai = yes
 				multiplayer = no
@@ -2690,7 +2681,6 @@ jacobinist_spread_revolution = {
 
 	can_use = {
 		ROOT = {
-			bhutan_minor_cb = yes
 			religion = jacobinist
 			is_nomadic = no
 			mercenary = no
@@ -2846,7 +2836,6 @@ trotskyite_spread_revolution = {
 
 	can_use = {
 		ROOT = {
-			bhutan_minor_cb = yes
 			religion = trotskyite
 			is_nomadic = no
 			mercenary = no
@@ -3495,7 +3484,6 @@ tributary_corsair_cb = { # New8
 	
 	can_use = {
 		ROOT = {
-			bhutan_minor_cb = yes
 			is_nomadic = no
 			independent = yes
 			mercenary = no
@@ -3959,365 +3947,6 @@ dismantle_confederacy_cb = {
 			modifier = {
 				factor = 2
 				FROM = {trait = viking}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = ravager}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = seaking}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = sea_queen}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = proud}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {trait = misguided_warrior}
-			}
-			modifier = {
-				factor = 0.7
-				FROM = {trait = tough_soldier}
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {trait = skilled_tactician}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = brilliant_strategist}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {trait = amateurish_plotter}
-			}
-			modifier = {
-				factor = 0.7
-				FROM = {trait = flamboyant_schemer}
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {trait = intricate_webweaver}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = elusive_shadow}
-			}
-			modifier = {
-				factor = 0.7
-				FROM = {trait = naive_appeaser}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {trait = underhanded_rogue}
-			}
-			modifier = {
-				factor = 0.3
-				FROM = {trait = charismatic_negotiator}
-			}
-			modifier = {
-				factor = 0.1
-				FROM = {trait = grey_eminence}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {trait = slow}
-			}
-			modifier = {
-				factor = 0.2
-				FROM = {trait = imbecile}
-			}
-			modifier = {
-				factor = 0.2
-				FROM = {
-					martial < 5
-				}
-			}
-			modifier = {
-				factor = 0.7
-				FROM = {
-					martial = 5
-					martial < 10
-				}
-			}
-			modifier = {
-				factor = 1.3
-				FROM = {
-					martial = 10
-					martial < 15
-				}
-			}
-			modifier = {
-				factor = 1.8
-				FROM = {
-					martial = 15
-					martial < 20
-				}
-			}
-			modifier = {
-				factor = 2.2
-				FROM = {
-					martial = 20
-				}
-			}
-			modifier = {
-				factor = 0.2
-				FROM = {
-					intrigue < 5
-				}
-			}
-			modifier = {
-				factor = 0.7
-				FROM = {
-					intrigue = 5
-					intrigue < 10
-				}
-			}
-			modifier = {
-				factor = 1.3
-				FROM = {
-					intrigue = 10
-					intrigue < 15
-				}
-			}
-			modifier = {
-				factor = 1.8
-				FROM = {
-					intrigue = 15
-					intrigue < 20
-				}
-			}
-			modifier = {
-				factor = 2.2
-				FROM = {
-					intrigue = 20
-				}
-			}
-	}
-}
-dismantle_threat_bhutan_cb = {
-	name = CB_NAME_DISMANTLE_THREAT_BHUTAN
-	war_name = WAR_NAME_DISMANTLE_THREAT_BHUTAN
-	sprite = 30
-	truce_days = 1825
-	is_permanent = yes
-	display_on_map = no
-	hostile_against_others = yes
-	can_ask_to_join_war = no
-	
-	defender_unoccupied_warscore = yes
-	
-	can_use_gui = {
-		ROOT = {
-			prestige = 500
-		}
-	}
-	
-	on_add = {
-		ROOT = {
-			prestige = -500
-		}
-	}
-	can_use = {
-		ROOT = { 
-			bhutan_minor_cb = yes
-			has_landed_title = e_bhutan
-		}
-		FROM = { 
-			independent = yes
-			realm_size = 100 
-			NOT = { government = confederation_government }
-		}
-	}
-
-	on_success = {
-		FROM = {
-			custom_tooltip = { 
-				text = dismantle_threat_bhutan_success_tt
-				hidden_effect = {
-					any_courtier = { death = { death_reason = death_executed_by_bhutanese_emperor killer = ROOT } }
-					any_demesne_title = {
-						limit = {
-							higher_tier_than = COUNT
-							is_landless_type_title = no
-						}
-						destroy_landed_title = THIS
-					}
-					any_player = {
-						limit = {
-							NOT = { character = ROOT_FROM }
-							OR = {
-								is_within_diplo_range = ROOT
-								liege = { character = ROOT_FROM }
-							}
-						}
-						narrative_event = { id = bhutan.8 }
-					}
-					death = { death_reason = death_executed_by_bhutanese_emperor killer = ROOT }
-				}
-			}
-		}
-		ROOT = {
-			prestige = 200
-		}
-	}
-
-	on_fail = {
-		FROM = {
-			piety = 100
-			participation_scaled_prestige = 250
-		}
-		any_defender = {
-			limit = { NOT = { character = FROM } }
-			hidden_tooltip = { participation_scaled_prestige = 250 }
-		}
-		ROOT = {
-			piety = -100
-		}
-	}
-
-	on_reverse_demand = {
-		ROOT = {
-			piety = -200
-			transfer_scaled_wealth = {
-				to = FROM
-				value = 3.0
-				min = 300
-			}
-		}
-		FROM = {
-			piety = 200
-			participation_scaled_prestige = 1000
-		}
-		any_defender = {
-			limit = { NOT = { character = FROM } }
-			hidden_tooltip = { participation_scaled_prestige = 1000 }
-		}
-	}
-	
-	on_attacker_leader_death = {
-		end_war = invalid
-	}
-
-	attacker_ai_victory_worth = {
-		factor = -1 # always accept
-	}
-	
-	attacker_ai_defeat_worth = {
-		factor = 100
-	}
-
-	defender_ai_victory_worth = {
-		factor = -1 # always accept
-	}
-	
-	defender_ai_defeat_worth = {
-		factor = 100
-	}
-
-	ai_will_do = {
-		factor = 1
-			modifier = {
-				factor = 0.5
-				ROOT = {trait = misguided_warrior}
-			}
-			modifier = {
-				factor = 0.7
-				ROOT = {trait = tough_soldier}
-			}
-			modifier = {
-				factor = 1.5
-				ROOT = {trait = skilled_tactician}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = brilliant_strategist}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = brave}
-			}
-			modifier = {
-				factor = 0
-				ROOT = {trait = bhutan_isolationist}
-			}
-			modifier = {
-				factor = 0.5
-				ROOT = {trait = bhutan_open}
-			}
-			modifier = {
-				factor = 0
-				ROOT = {
-					opinion = { 
-						who = FROM
-						value = 40
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = bhutan_expansionist}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = ambitious}
-			}
-			modifier = {
-				factor = 0.1
-				ROOT = {trait = slothful}
-			}
-			modifier = {
-				factor = 2
-				ROOT = {trait = proud}
-			}
-			modifier = {
-				factor = 0.2
-				ROOT = {trait = greedy}
-			}
-			modifier = {
-				factor = 0.1
-				ROOT = {trait = content}
-			}
-			modifier = {
-				factor = 0.1
-				FROM = {trait = humble}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = ambitious}
-			}
-			modifier = {
-				factor = 2
-				FROM = {prestige = 2000}
-			}
-			modifier = {
-				factor = 2
-				FROM = {wealth = 1500}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = wroth}
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {trait = greedy}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = envious}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = viking}
-			}
-			modifier = {
-				factor = 2
-				FROM = {trait = pirate}
 			}
 			modifier = {
 				factor = 2
@@ -5098,7 +4727,6 @@ fraticelli_anti_greed = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = fraticelli
 				religion = luddite
@@ -5189,7 +4817,6 @@ fraticelli_anti_greed = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = fraticelli
 				religion = fidelista
@@ -5489,7 +5116,6 @@ evangelical_anti_sin = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = evangelical
 				religion = citrus_scientology
@@ -5582,7 +5208,6 @@ evangelical_anti_sin = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = evangelical
 				religion = citrus_scientology
@@ -5854,7 +5479,6 @@ catholic_anti_sevillian_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = catholic
@@ -5934,7 +5558,6 @@ catholic_anti_sevillian_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = catholic
@@ -6196,7 +5819,6 @@ catholic_anti_gallicanist_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = catholic
@@ -6275,7 +5897,6 @@ catholic_anti_gallicanist_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = catholic
@@ -6535,7 +6156,6 @@ sevillian_anti_catholic_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = sevillian
@@ -6615,7 +6235,6 @@ sevillian_anti_catholic_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = sevillian
@@ -6875,7 +6494,6 @@ gallicanist_anti_catholic_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = sedevacantist
@@ -6954,7 +6572,6 @@ gallicanist_anti_catholic_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			trait = zealous
 			OR = {
 				religion = sedevacantist
@@ -7213,7 +6830,6 @@ sevillian_anti_protestant_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = sevillian
 				religion = sedevacantist
@@ -7302,7 +6918,6 @@ sevillian_anti_protestant_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = sevillian
 				religion = sedevacantist
@@ -7592,7 +7207,6 @@ cadaverist_anti_christian_holy_war = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = cadaverist
 			NOT = { government = confederation_government }
 			FROM = {
@@ -7669,7 +7283,6 @@ cadaverist_anti_christian_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = cadaverist
 			NOT = { government = confederation_government }
 			FROM = {
@@ -7922,7 +7535,6 @@ neohuguenot_anti_christian_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = neohuguenot
 			NOT = { government = confederation_government }
 			FROM = {
@@ -7998,7 +7610,6 @@ neohuguenot_anti_christian_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = neohuguenot
 			NOT = { government = confederation_government }
 			FROM = {
@@ -8272,7 +7883,6 @@ pacifist_anti_sin = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			pacifist = yes
 			NOR = {
 				trait = greedy
@@ -8375,7 +7985,6 @@ pacifist_anti_sin = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			pacifist = yes
 			NOR = {
 				trait = greedy
@@ -8677,7 +8286,6 @@ combuddhist_anti_greed = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = combuddhist
 			NOT = { government = confederation_government }
 			OR = {
@@ -8763,7 +8371,6 @@ combuddhist_anti_greed = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = combuddhist
 			NOT = { government = confederation_government }
 			OR = {
@@ -9027,7 +8634,6 @@ sectarian_buddhist_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = thaislam
 			NOT = { government = confederation_government }
 			FROM = {
@@ -9101,7 +8707,6 @@ sectarian_buddhist_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			religion = thaislam
 			NOT = { government = confederation_government }
 			FROM = {
@@ -9353,7 +8958,6 @@ neodonatists_anti_christian_holy_war = {
 
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = neodonatists
 				religion = sebastianist
@@ -9448,7 +9052,6 @@ neodonatists_anti_christian_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			OR = {
 				religion = neodonatists
 				religion = sebastianist
@@ -9724,7 +9327,6 @@ canarian_anti_sevillian_holy_war = {
 			}
 		}
 		ROOT = {
-			bhutan_major_cb = yes
 			AND = {
 				OR = {
 					religion = cadaverist
@@ -9838,7 +9440,6 @@ canarian_anti_sevillian_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			bhutan_major_cb = yes
 			AND = {
 				OR = {
 					religion = cadaverist
@@ -10081,7 +9682,7 @@ cadaverist_pope_rescue = {
 	
 	can_use = {		
 		ROOT = {
-			bhutan_medium_cb = yes
+			
 			religion = cadaverist
 		}
 		FROM = {
@@ -10204,7 +9805,7 @@ chinese_imperial_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		NAND = {
 			ROOT = {
 				OR = {
@@ -10479,7 +10080,7 @@ taoist_county_conquest = {
 			mercenary = no
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
 			independent = yes
-			bhutan_medium_cb = yes
+			
 		}
 	}
 
@@ -10780,7 +10381,7 @@ honourable_county_conquest = {
 			mercenary = no
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
 			independent = yes
-			bhutan_medium_cb = yes
+			
 		}
 		FROM = {
 			realm_levy_diff = {
@@ -11141,7 +10742,7 @@ japanese_emperor_killer_ruler = {
 	sort_priority = 750
 
 	can_use = {
-		ROOT = { bhutan_minor_cb = yes	}
+		
 		NAND = {
 			ROOT = {
 				OR = {
@@ -11364,7 +10965,7 @@ japanese_emp_county_conquest = {
 				has_character_modifier = county_conquest_timer
 			}
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
-			bhutan_medium_cb = yes
+			
 		}
 	}
 
@@ -11636,7 +11237,7 @@ wuxia_county_conquest = {
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
-			bhutan_medium_cb = yes
+			
 		}
 		FROM = {
 			religion = wuxia
@@ -12025,7 +11626,7 @@ wuxia_ducal_conquest = {
 			religion = wuxia
 			mercenary = no
 			is_nomadic = no
-			bhutan_medium_cb = yes
+			
 		}
 		FROM = {
 			religion = wuxia
@@ -12295,7 +11896,7 @@ byzantine_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_byzantium
 			independent = yes
@@ -12479,7 +12080,7 @@ macedonian_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_macedonia
 			independent = yes
@@ -12659,7 +12260,7 @@ ottoman_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_ottoman
 			independent = yes
@@ -12830,7 +12431,7 @@ soviet_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_cccp
 			independent = yes
@@ -13020,7 +12621,7 @@ constitutionalist_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_columbia
 			independent = yes
@@ -13229,7 +12830,7 @@ great_russian_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_great_russia
 			independent = yes
@@ -13412,7 +13013,7 @@ russian_republican_reconquest = {
 	}
 
 	can_use = {
-		ROOT = { bhutan_major_cb = yes	}
+		
 		ROOT = {
 			has_landed_title = e_russian_republic
 			independent = yes
@@ -15647,7 +15248,7 @@ take_pirate_king = {
 	can_use = {
 		ROOT = {
 			religion = east_brethren
-			bhutan_medium_cb = yes
+			
 		}
 	}
 	
