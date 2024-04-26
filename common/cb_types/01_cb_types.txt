@@ -150,9 +150,6 @@ dejure_duchy_claim = { # New1
 				}
 			}
 		}
-		ROOT = {
-			bhutan_medium_cb = yes
-		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
 			NOT = {
@@ -410,22 +407,6 @@ force_vassalization = { # New2
 				}
 			}
 		}
-		ROOT = {
-			OR = {
-				AND = {
-					tier = COUNT
-					bhutan_minor_cb = yes
-				}
-				AND = {
-					tier = DUKE
-					bhutan_medium_cb = yes
-				}
-				AND = {
-					tier = KING
-					bhutan_major_cb = yes
-				}
-			}
-		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
 			NOT = {
@@ -434,18 +415,6 @@ force_vassalization = { # New2
 					value = off
 				}
 			}
-			NOT = {
-				government = bhutanese_decayed_government
-			}
-			#Bhutan can also use this when Expansionist if they Reformed their Government
-			OR = {
-				NOT = {
-					government = bhutanese_restored_government
-				}
-				OR = {
-					trait = bhutan_expansionist
-				}
-			}		
 			higher_tier_than = count
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -611,9 +580,6 @@ great_realm_conflict = { # New3
 					trait = japanese_emperor_trait
 				}
 			}
-		}
-		ROOT = {
-			bhutan_major_cb = yes
 		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
@@ -914,9 +880,6 @@ ducal_county_conquest = { # New4
 					trait = japanese_emperor_trait
 				}
 			}
-		}
-		ROOT = {
-			bhutan_minor_cb = yes
 		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
@@ -1523,9 +1486,6 @@ liberate_religion = { # New6
 					trait = japanese_emperor_trait
 				}
 			}
-		}
-		ROOT = {
-			bhutan_medium_cb = yes
 		}
 		OR = {
 			has_dlc = "Holy Fury"
@@ -2448,9 +2408,6 @@ unjust_conquest = { # New7
 		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
-			bhutan_medium_cb = yes
-		}
-		ROOT = {
 			NOT = {
 				has_game_rule = {
 					name = unjustified_wars
@@ -2459,24 +2416,7 @@ unjust_conquest = { # New7
 			}
 			NOT = {
 				has_character_modifier = county_conquest_timer
-			}
-			#Bhutan can only use this if Expansionist
-			OR = {
-				NOT = {
-					government = bhutanese_decayed_government
-				}
-				trait = bhutan_expansionist
-			}
-			#Bhutan can also use this when Open if they Reformed their Government
-			OR = {
-				NOT = {
-					government = bhutanese_restored_government
-				}
-				OR = {
-					trait = bhutan_open
-					trait = bhutan_expansionist
-				}
-			}			
+			}		
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
 			NOT = { pacifist = yes }
@@ -2939,17 +2879,11 @@ tributary_permanent_cb = { # New8
 		has_dlc = "Jade Dragon"
 
 		ROOT = {
-			bhutan_minor_cb = yes
 			NOT = {
 				has_game_rule = {
 					name = jade_dragon_cbs
 					value = off
 				}
-			}
-			#Bhutan can only use this if not Isolationist
-			NAND = {
-				government = bhutanese_decayed_government
-				trait = bhutan_isolationist
 			}
 			is_nomadic = no
 			independent = yes
@@ -4369,7 +4303,6 @@ force_open_china_cb = {
 	
 	can_use = {
 		ROOT = {
-			bhutan_medium_cb = yes
 			independent = yes
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -4529,7 +4462,6 @@ destabilization_china_cb = {
 	
 	can_use = {
 		ROOT = {
-			bhutan_medium_cb = yes
 			independent = yes
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -4655,7 +4587,6 @@ invasion_of_china_cb = {
 	
 	can_use = {
 		ROOT = {
-			bhutan_major_cb = yes
 			independent = yes
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -4759,12 +4690,6 @@ invasion_of_china_cb = {
 								clr_character_flag = given_temple_name_by_script
 								set_name = ""
 								set_feudal_government_effect = yes
-							}
-							if = {
-								limit = {
-									has_landed_title = e_bhutan
-								}
-								achievement_war_in_heaven_done_effect = yes
 							}
 						}
 						set_offmap_flag = no_succession_news
@@ -5758,7 +5683,6 @@ flower_war_cb = {
 				religion = marked
 				religion = juggalo
 			}	
-			bhutan_medium_cb = yes
 		}
 		
 		
@@ -6519,7 +6443,6 @@ matriarchal_deposition_war = {
 	can_use = {
 		has_dlc = "Holy Fury"
 		ROOT = {
-			bhutan_minor_cb = yes
 			higher_real_tier_than = DUKE
 			has_religion_feature = religion_warlike
 			is_female = yes
@@ -6972,7 +6895,6 @@ patriarchal_deposition_war = {
 	can_use = {
 		has_dlc = "Holy Fury"
 		ROOT = {
-			bhutan_minor_cb = yes
 			higher_real_tier_than = DUKE
 			has_religion_feature = religion_warlike
 			is_female = no
