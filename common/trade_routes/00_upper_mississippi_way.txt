@@ -1,12 +1,14 @@
-route_10_east = {
+upper_mississippi_way = {
 wealth = 20			# Total base wealth of silk route
 	trade_post_display_trigger = {
 		OR = {
-			province_id = 1093
-			province_id = 1046
-			province_id = 1043
-			province_id = 1124
-			province_id = 1239
+			province_id = 1055 ##cairo
+			province_id = 1024
+			province_id = 1127
+			province_id = 1124 ##new orleans
+			province_id = 3341
+			province_id = 1285
+			province_id = 777
 		}
 	}
 
@@ -22,18 +24,39 @@ wealth = 20			# Total base wealth of silk route
 	}
 
 	start = {				# Start provinces of trade route
-		1097
+		1055
+		1132
+	}
+	start = {
+		1132
+		1125
+	}
+	start = {
+		1125
 		1124
 	}
 	start = {
-		1124
-		1239
+		3341
+		1132
+	}
+	start = {
+		1285
+		1125
 	}
 #Main route
     path = {
-		1097 1098 1094 1627 1093 1631 931 1092 1084 932 1046 1045 1632 1633 1044 742 1043 757 1117 772 1118 1124
+		1055 1018 1023 1024 1131 1132
 	}
 	path = {
-		1124 1119 768 1252 785 1253 767 1239
+		1132 1133 1127 1126 1125
+	}
+	path = {
+		1125 773 1119 1124
+	}
+	path = {
+		3341 243 236 875 232 1132
+	}
+	path = {
+		1285 779 778 777 1267 1125
 	}
 }
