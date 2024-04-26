@@ -457,6 +457,7 @@ decisions = {
 				has_focus = focus_theology
 				has_quest = quest_indian_monastic_order_pilgrimage
 			}
+			always = no 
 			is_playable = yes
 			has_dharmic_religion_trigger = yes
 			NOT = { trait = indian_pilgrim }
@@ -549,6 +550,7 @@ decisions = {
 				has_quest = quest_monastic_order_pilgrimage_christian
 			}
 			is_playable = yes
+			always = no 
 			OR = {
 				religion = islamity
 				religion = muwahidunna
@@ -667,6 +669,7 @@ decisions = {
 				religion = ahlehaqq
 				religion_group = muslim
 			}
+			always = no 
 			NOT = { trait = hajjaj }
 			NOT = { trait = on_hajj }
 			NOT = {	has_character_flag = preparing_hajj }
