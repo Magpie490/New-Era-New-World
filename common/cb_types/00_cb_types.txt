@@ -2394,17 +2394,6 @@ invasion = {
 				}
 			}
 		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 	}
 
 	can_use_gui = {
@@ -2847,17 +2836,6 @@ tribal_invasion = {
 	}
 	
 	can_use = {
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 	}
 	
 	on_add = {
@@ -5881,17 +5859,6 @@ religious = {
 			OR = {
 				mercenary = no
 				holy_order = yes
-			}
-		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
 			}
 		}
 	}
@@ -10402,17 +10369,6 @@ viking_invasion = {
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
 		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 	}
 	
 	can_use_title = {
@@ -10670,17 +10626,6 @@ pagan_subjugation = {
 	sort_priority = 2000
 	
 	can_use = {
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 		ROOT = {
 			religion_group = pagan_group
 			is_reformed_religion = no
@@ -12670,17 +12615,6 @@ muslim_county_conquest = {
 				has_character_modifier = county_conquest_timer
 			}
 		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 	}
 
 	can_use_title = {
@@ -12989,17 +12923,6 @@ pagan_county_conquest = {
 				}
 				FROM = {
 					NOT = { religion = ROOT }
-				}
-			}
-		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
 				}
 			}
 		}
@@ -14999,17 +14922,6 @@ buddhist_holy_war = {
 			mercenary = no
 			is_nomadic = no
 		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-		}
 	}
 	
 	can_use_title = {
@@ -15353,17 +15265,6 @@ indian_subjugation = {
 				OR = {
 					has_landed_title = e_tokyo
 					trait = japanese_emperor_trait
-				}
-			}
-		}
-		ROOT = {
-			NOT = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
 				}
 			}
 		}
@@ -16750,13 +16651,6 @@ march_cb = {
 	can_use = {
 		
 		ROOT = {
-			AND = {
-				government = mandala_government
-				OR = {
-					real_tier = KING
-					real_tier = EMPEROR
-				}
-			}
 			OR = {
 				prestige = 500
 				AND = {
