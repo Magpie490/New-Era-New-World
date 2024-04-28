@@ -30,6 +30,8 @@ monastic_order_benedictine = {
 		age = 16
 		OR = {
 			religion = catholic
+			religion = columbian
+			religion = watcher
 			AND = {
 				is_heretic = no
 				OR = {
@@ -57,12 +59,15 @@ monastic_order_benedictine = {
 	show_society = {
 		OR = {
 			religion = catholic
+			religion = columbian
+			religion = watcher
 			AND = {
 				is_heretic = no
 				OR = {
 					religion = fraticelli
 					religion = cadaverist
 					religion = hussite
+					
 				}
 			}
 			society_member_of = monastic_order_benedictine
@@ -72,6 +77,8 @@ monastic_order_benedictine = {
 	potential = {
 		OR = {
 			religion = catholic
+			religion = columbian
+			religion = watcher
 			AND = {
 				is_heretic = no
 				OR = {
@@ -312,7 +319,11 @@ monastic_order_benedictine = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = catholic
+		   	OR = { 
+				religion = catholic
+				religion = columbian
+				religion = watcher
+			}
 			age = 16
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
@@ -367,6 +378,8 @@ monastic_order_dominican = {
 		age = 16
 		OR = {
 			religion = catholic
+			religion = columbian
+			religion = watcher
 			AND = {
 				is_heretic = no
 				OR = {
@@ -395,6 +408,8 @@ monastic_order_dominican = {
 		OR = {
 			OR = {
 				religion = catholic
+				religion = columbian
+				religion = watcher
 				AND = {
 					is_heretic = no
 					OR = {
@@ -411,6 +426,8 @@ monastic_order_dominican = {
 	potential = { 
 		OR = {
 			religion = catholic
+			religion = columbian
+			religion = watcher
 			AND = {
 				is_heretic = no
 				OR = {
@@ -650,7 +667,11 @@ monastic_order_dominican = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = catholic
+			OR = { 
+				religion = catholic
+				religion = columbian
+				religion = watcher
+			}
 			age = 16
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
@@ -4434,6 +4455,8 @@ monastic_order_jewish = {
 			religion = jewish
 			religion = mikraist
 			religion = haymanot
+			religion = maaravi
+			religion = hasidic
 		}
 		custom_tooltip = {
 			text = did_not_betray_society
@@ -4455,6 +4478,8 @@ monastic_order_jewish = {
 			religion = mikraist
 			religion = haymanot
 			society_member_of = monastic_order_jewish
+			religion = maaravi
+			religion = hasidic
 		}
 	}
 	
@@ -4463,6 +4488,8 @@ monastic_order_jewish = {
 			religion = jewish
 			religion = mikraist
 			religion = haymanot
+			religion = maaravi
+			religion = hasidic
 		}
 	}
 	
@@ -4731,6 +4758,8 @@ monastic_order_jewish = {
 				religion = jewish
 				religion = haymanot
 				religion = mikraist
+				religion = maaravi
+				religion = hasidic
 			}
 			age = 30
 			is_female = no
