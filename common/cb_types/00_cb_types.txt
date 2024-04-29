@@ -16652,15 +16652,15 @@ march_cb = {
 		
 		ROOT = {
 			OR = {
-				prestige = 500
 				AND = {
-					prestige = 200
-					custom_tooltip = {
-					text = HAS_SRIVIJAYA_BLOOD_CT
-					any_owned_bloodline = {has_bloodline_flag = cheaper_tributaries}
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
 					}
 				}
-			}	
+			}
+			prestige = 500
 			mercenary = no
 			NOT = { is_vassal_or_below = FROM }
 			NOT = { is_liege_or_above = FROM }
