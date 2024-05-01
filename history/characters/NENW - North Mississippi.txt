@@ -991,14 +991,19 @@
 200053 = { #OUR LORD AND SAVIOR KLEMENS, add traits later
 	name = "Klemens"
 	dynasty = 3000676
-	culture = lil_egyptian
+	culture = ameropolski
 	religion = solar
+	trait = "homosexual"
+	trait = "ambitious"
+	trait = "cancer"
 	2023.2.24= {
 		birth = yes
+		culture = lil_egyptian
 	}
 	2070.12.26 = {
-		death = yes 
-		death_reason = death_natural
+		death = {
+		death_reason = death_trait
+		}
 	}
 }
 200054 = { #St. Louis Veild
@@ -1006,12 +1011,17 @@
 	culture = gatewayer
 	religion = pagan
 	occluded=yes
+	trait = "possessed"
+	trait = "cannibal_trait"
+	trait = "lunatic"
 	2001.7.8= {
 		birth = yes
 	}
 	2045.3.15 = {
-		death = yes 
-		death_reason = death_execution executor  = 200053
+		death = {
+		death_reason = death_execution
+		killer = 200053
+		}
 	}
 }
 200055 = { #Lincoln but funny madonnite
