@@ -19646,4 +19646,173 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	ca_culture_dominion_1 = {
+		desc = ca_culture_dominion_1_desc
+		potential = {
+			OR = { 
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				has_building = ca_culture_dominion_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		gold_cost = 300
+		build_time = 1095
+		knights = 25
+		light_cavalry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_dominion_2 = {
+		desc = ca_culture_dominion_1_desc
+		potential = {
+			OR = { 
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				has_building = ca_culture_dominion_1
+				has_building = ca_culture_dominion_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		upgrades_from = ca_culture_dominion_1
+		gold_cost = 300
+		build_time = 1095
+		knights = 25
+		light_cavalry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_dominion_3 = {
+		desc = ca_culture_dominion_1_desc
+		potential = {
+			OR = { 
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				has_building = ca_culture_dominion_1
+				has_building = ca_culture_dominion_2
+				has_building = ca_culture_dominion_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		upgrades_from = ca_culture_dominion_2
+		gold_cost = 300
+		build_time = 1095
+		knights = 25
+		light_cavalry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_dominion_4 = {
+		desc = ca_culture_dominion_1_desc
+		potential = {
+			OR = { 
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				has_building = ca_culture_dominion_1
+				has_building = ca_culture_dominion_2
+				has_building = ca_culture_dominion_3
+				has_building = ca_culture_dominion_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = {
+				OR = {
+				culture = ontarian
+				culture = canjabi
+				culture = kanadajin
+				}
+			}
+		}
+		upgrades_from = ca_culture_dominion_3
+		gold_cost = 300
+		build_time = 1095
+		knights = 25
+		light_cavalry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 }
