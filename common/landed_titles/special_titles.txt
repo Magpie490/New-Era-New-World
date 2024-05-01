@@ -345,3 +345,22 @@ e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
 	
 	extra_ai_eval_troops = 7500
 }
+
+e_mississippi = {
+	color={ 0 131 255 }
+	color2={ 220 220 20 }
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_mississippi = {
+					is_titular = yes
+				}
+			}
+			e_mississippi = {
+				is_titular = no
+			}
+		}
+	}
+	capital = 1056 # Cahokia
+}
