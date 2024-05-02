@@ -2190,6 +2190,18 @@ set_feudal_government_effect = {
 	}
 	else_if = {
 		limit = {
+			is_government_potential = roman_imperial_government
+		}
+		set_government_type = roman_imperial_government
+	}
+	else_if = {
+		limit = {
+			is_government_potential = federal_government
+		}
+		set_government_type = federal_government
+	}
+	else_if = {
+		limit = {
 			is_government_potential = calvinist_government
 		}
 		set_government_type = calvinist_government
