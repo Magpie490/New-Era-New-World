@@ -329,6 +329,10 @@ d_twentyninth_infantry_div = {
 	religion = constitutional
 	culture = federalist
 
+	title = "MAJORGENERAL"
+	title_female = "MAJORGENERAL"
+	foa = "COMMANDER_FOA"
+
 	mercenary = yes
 
 	hire_range = 750
@@ -344,7 +348,7 @@ d_twentyninth_infantry_div = {
 	mercenary_type = twentyninth_infantry_div_composition
 }
 d_hundredandsecond_cavalry_regiment = {
-	color={ 0 0 129 }
+	color={ 17 93 34 }
 	color2 = { 100 100 100 }
 	
 	capital = 23 # Trenton
@@ -352,6 +356,10 @@ d_hundredandsecond_cavalry_regiment = {
 
 	religion = constitutional
 	culture = jerseyite
+
+	title = "LIEUTENANTCOLONEL"
+	title_female = "LIEUTENANTCOLONEL"
+	foa = "COMMANDER_FOA"
 
 	mercenary = yes
 
@@ -367,4 +375,145 @@ d_hundredandsecond_cavalry_regiment = {
 
 	mercenary_type = hundredandsecond_cavalry_regiment_composition
 
+}
+d_sixtyninth_infantry_regiment = {
+	color={ 0 0 129 }
+	color2 = { 100 100 100 }
+	
+	capital = 3 # Manhattan
+	short_name = yes
+
+	religion = constitutional
+	culture = politan
+
+	mercenary = yes
+	
+	title = "LIEUTENANTGENERAL"
+	title_female = "LIEUTENANTGENERAL"
+	foa = "COMMANDER_FOA"
+
+	hire_range = 750
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = sixtyninth_infantry_regiment_composition
+
+}
+d_hundredandthird_engineer_battalion = {
+	color={ 187 50 48 }
+	color2 = { 100 100 100 }
+	
+	capital = 27 # Philadelphia
+	short_name = yes
+
+	religion = constitutional
+	culture = keystoner
+
+	mercenary = yes
+	
+	title = "LIEUTENANTCOLONEL"
+	title_female = "LIEUTENANTCOLONEL"
+	foa = "COMMANDER_FOA"
+
+	hire_range = 750
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = hundredandthird_engineer_battalion_composition
+}
+d_nineteenth_special_forces_group = {
+	color={ 0 91 125 }
+	color2 = { 100 100 100 }
+	
+	capital = 27 # Philadelphia
+	short_name = yes
+
+	religion = constitutional
+	culture = bostonian
+
+	mercenary = yes
+	
+	title = "COLONEL"
+	title_female = "COLONEL"
+	foa = "COMMANDER_FOA"
+
+	hire_range = 750
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = nineteenth_special_forces_composition
+}
+d_hundredandsecond_infantry_regiment = {
+	color={ 24 22 149 }
+	color2 = { 100 100 100 }
+	
+	capital = 27 # Philadelphia
+	short_name = yes
+
+	religion = constitutional
+	culture = nutmegger
+
+	mercenary = yes
+	
+	title = "COLONEL"
+	title_female = "COLONEL"
+	foa = "COMMANDER_FOA"
+
+	hire_range = 750
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = hundredandsecond_infantry_regiment_composition
+}
+d_hundredandfirst_field_artillery_regiment = {
+	color={ 204 0 51 }
+	color2 = { 100 100 100 }
+	
+	capital = 69 # Boston
+	short_name = yes
+
+	religion = constitutional
+	culture = bostonian
+
+	mercenary = yes
+	
+	title = "COLONEL"
+	title_female = "COLONEL"
+	foa = "COMMANDER_FOA"
+
+	hire_range = 750
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = hundredandfirst_field_artillery_regiment_composition
 }
