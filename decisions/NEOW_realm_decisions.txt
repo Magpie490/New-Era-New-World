@@ -10579,29 +10579,29 @@ decisions = {
 			factor = 1
 		}
 	}
-	claim_soroca = {
+	claim_washington = {
 		only_independent = yes
 		is_high_prio = yes
 		
 		potential = {
 			is_nomadic = no
 			is_playable = yes
-			has_landed_title = e_transnistria
-			NOT = { has_landed_title = c_peresechen }
+			has_landed_title = e_columbia
+			NOT = { has_landed_title = c_washington }
 			any_realm_lord = { 
 				ai = yes
-				has_landed_title = c_peresechen 
+				has_landed_title = c_washington 
 			}
 		}
 		allow = {
-			NOT = { has_landed_title = c_peresechen }
+			NOT = { has_landed_title = c_washington }
 			any_realm_lord = { 
-				has_landed_title = c_peresechen 
+				has_landed_title = c_washington 
 			}
 		}
 		effect = {
 			ROOT = {
-				c_peresechen = {
+				c_washington = {
 					usurp_title_plus_barony_if_unlanded_and_vassals = PREV
 				}
 			}
