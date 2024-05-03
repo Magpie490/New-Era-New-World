@@ -26,7 +26,7 @@
 	}
 }
 800001 = {
-	name = "Carl"
+	name = "Carl" #Carl Ackerman, a successful financier who recently was elected to power
 	dynasty = 4021085 
 	religion=maaravi
 	culture=arhavi
@@ -35,6 +35,8 @@
 	trait=just
 	trait=proud
 	trait=fortune_builder
+	trait = maaravi_reform
+	disallow_random_traits = yes
 	2300.5.27 = {
 		birth = yes
 	}
@@ -1866,6 +1868,76 @@
 		effect = {
 		}
 		culture = adirondacker
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800100 = {
+	name = "Sergey" #Sergey, a patrician of mixed heritage. Born to a Jewish father and a Slavic mother. A man raised on both cultures, he is sometimes conflicted in his identity
+	dynasty = 4021078
+	religion = maaravi
+	secret_religion = orthodox
+	culture = doukhobors #For portrait
+	trait = thrifty_clerk
+	trait = stressed
+	trait = groomed
+	trait = temperate
+	trait = sympathy_christendom
+	trait = kind
+	trait = honest	
+	trait = maaravi_reform	
+	disallow_random_traits=yes
+	2298.6.1 = {
+		birth = yes
+		culture = arhavi
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800101 = {
+	name = "Norman" #Norman Osborn, a man born into wealth and leader of Oscorp. He is something of a scientist himself
+	dynasty = 5022754
+	religion = columbian
+	culture = catskiller #For portrait
+	trait = intricate_webweaver
+	trait = quick
+	trait = groomed
+	trait = diligent
+	trait = greedy
+	trait = cruel
+	trait = proud	
+	trait = scholar	
+	trait = ambitious	
+	disallow_random_traits=yes
+	2295.12.1 = {
+		birth = yes
+		culture = politan
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800102 = {
+	name = "Ryan" #Ryan O'Hearn, a pious Catholic native of NYC
+	dynasty = 5022780
+	religion = columbian
+	culture = brebharnach #For portrait
+	trait = martial_cleric
+	trait = charitable
+	trait = patient
+	trait = humble
+	trait = proud
+	trait = zealous
+	trait = brave	
+	disallow_random_traits=yes
+	2296.11.11 = {
+		birth = yes
+		culture = politan
 	}
 	2666.1.1 = {
 		death = yes
