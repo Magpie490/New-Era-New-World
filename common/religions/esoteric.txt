@@ -874,7 +874,7 @@ esoteric = {
 		allow_rivermovement = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
-		can_grant_invasion_cb = yes
+		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
@@ -1388,7 +1388,8 @@ esoteric = {
 		character_modifier = {
 		}
 		
-		unit_modifier = {		
+		unit_modifier = {
+			land_morale = 0.2
 			garrison_size = 0.4
 			
 			key = "DEF_RELIGION"
@@ -1426,10 +1427,6 @@ esoteric = {
 		women_can_take_consorts = yes
 		max_consorts = 3
 		can_demand_religious_conversion = no
-		
-		unit_modifier = {
-			land_morale = 0.2
-		}
 		
 		religious_clothing_head = 8
 		religious_clothing_priest = 8

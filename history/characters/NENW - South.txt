@@ -2310,7 +2310,7 @@
 910121 = { 
 	name = "Jasper"
 	dynasty = 3000590
-	culture = diksah
+	culture = affrilachian
 	religion = gridiron
 	trait = fortune_builder
 	trait = just
@@ -2402,20 +2402,26 @@
 	}
 }
 910126 = { 
-	name = "Emerson"
+	name = "Emerson" #Lord Emerson of the Crimson Tide. Exiled from Tuscaloosa by King Terique with his clique, he hopes to reclaim his home field one day
 	dynasty = 3000593
-	culture = affrilachian
+	culture = diksah
 	religion = gridiron
-	trait = midas_touched
+	trait = tough_soldier
 	trait = uncouth
 	trait = robust
 	trait = brave
-	trait = charitable
+	trait = patient
 	trait = stubborn
 	trait = diligent
 	trait = envious
+	trait = adventurer
+	disallow_random_traits = yes
 	2291.3.27 = {
 		birth = yes
+		effect = {
+			add_claim = d_tuscaloosa
+			add_claim = c_tuscaloosa			
+		}
 	}
 	2666.1.1 = {
 		death = yes
