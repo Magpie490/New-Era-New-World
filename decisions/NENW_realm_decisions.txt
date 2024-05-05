@@ -722,4 +722,269 @@ decisions = {
 			factor = 1
 		}
 	}	
+	organize_sixtyninth_infantry_regiment = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = sixtyninth_infantry_regiment_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_manhattan
+				any_realm_lord = { 
+					has_landed_title = c_manhattan 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = sixtyninth_infantry_regiment_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_sixtyninth_infantry_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_sixtyninth_infantry_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandthird_engineer_battalion = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = hundredandthird_engineer_battalion_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_philadelphia
+				any_realm_lord = { 
+					has_landed_title = c_philadelphia 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = hundredandthird_engineer_battalion_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_hundredandthird_engineer_battalion status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandthird_engineer_battalion = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_nineteenth_special_forces_group = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = nineteenth_special_forces_group_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_providence
+				any_realm_lord = { 
+					has_landed_title = c_providence 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = nineteenth_special_forces_group_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_nineteenth_special_forces_group status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_nineteenth_special_forces_group = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandsecond_infantry_regiment = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = hundredandsecond_infantry_regiment_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_hartford
+				any_realm_lord = { 
+					has_landed_title = c_hartford 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = hundredandsecond_infantry_regiment_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_hundredandsecond_infantry_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandsecond_infantry_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandfirst_field_artillery_regiment = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = hundredandfirst_field_artillery_regiment_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_boston
+				any_realm_lord = { 
+					has_landed_title = c_boston 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = hundredandfirst_field_artillery_regiment_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_hundredandfirst_field_artillery_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandfirst_field_artillery_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
