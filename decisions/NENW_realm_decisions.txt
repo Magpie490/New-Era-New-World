@@ -724,7 +724,6 @@ decisions = {
 	}	
 	organize_sixtyninth_infantry_regiment = {
 		only_independent = yes
-		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -777,7 +776,6 @@ decisions = {
 	}
 	organize_hundredandthird_engineer_battalion = {
 		only_independent = yes
-		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -830,7 +828,6 @@ decisions = {
 	}
 	organize_nineteenth_special_forces_group = {
 		only_independent = yes
-		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -883,7 +880,6 @@ decisions = {
 	}
 	organize_hundredandsecond_infantry_regiment = {
 		only_independent = yes
-		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -936,7 +932,6 @@ decisions = {
 	}
 	organize_hundredandfirst_field_artillery_regiment = {
 		only_independent = yes
-		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -977,6 +972,162 @@ decisions = {
 					}
 				new_character = {
 					d_hundredandfirst_field_artillery_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_eightysix_infantry_brigade = {
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = eightysix_infantry_brigade_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_montpelier
+				any_realm_lord = { 
+					has_landed_title = c_montpelier 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = eightysix_infantry_brigade_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_eightysix_infantry_brigade status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_eightysix_infantry_brigade = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandninetyseven_artillery_brigade = {
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = hundredandninetyseven_artillery_brigade_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_concord
+				any_realm_lord = { 
+					has_landed_title = c_concord 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = hundredandninetyseven_artillery_brigade_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_hundredandninetyseven_artillery_brigade status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandninetyseven_artillery_brigade = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandthirtythree_engineer_battalion = {
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			has_landed_title = e_columbia
+			religion = constitutional
+			NOT = { has_global_flag = hundredandthirtythree_engineer_battalion_founded }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_kennebec
+				any_realm_lord = { 
+					has_landed_title = c_kennebec 
+				}
+			}
+			prestige = 1500
+			wealth = 1500
+		}
+		effect = {
+			set_global_flag = hundredandthirtythree_engineer_battalion_founded
+			prestige = -1500
+			wealth = -1500
+			activate_title = { title = d_hundredandthirtythree_engineer_battalion status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandthirtythree_engineer_battalion = {
 						grant_title = PREV
 					}
 					set_defacto_liege = ROOT
