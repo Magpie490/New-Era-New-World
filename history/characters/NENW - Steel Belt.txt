@@ -645,18 +645,27 @@
 	dynasty = 3000524
 	religion = delver
 	culture = prairielander
-
+	martial=6 diplomacy=7 stewardship=8 intrigue=8 learning=5
 	trait = grey_eminence
 	trait = quick
 	trait = socializer
 	trait = draconic_lodge
 	trait = just
 	trait = gregarious
+	trait = temperate
+	trait = honest
 
 	disallow_random_traits = true
 
 	2273.2.27 = {
 		birth = yes
+	}
+	2284.1.1={
+		prestige = 1250
+		add_spouse=100073
+		effect={
+			add_lover=100073
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -1068,19 +1077,74 @@
 	name = "Arthas"
 	dynasty = 3000524
 	father = 100043
+	mother = 100073
 	religion = delver
 	culture = prairielander
-
+	martial=5 diplomacy=4 stewardship=5 intrigue=5 learning=6
 	trait = skilled_tactician
 	trait = draconic_lodge
 	trait = stubborn
 	trait = zealous
 	trait = wroth
+	trait = proud
 
     disallow_random_traits = true
 
 	2305.7.13 = {
 		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+100073={
+	name=Lianne
+	female=yes
+	religion = delver
+	culture = prairielander
+	martial=6 diplomacy=6 stewardship=6 intrigue=6 learning=6
+	trait=charismatic_negotiator trait=kind trait=gregarious trait=chaste trait = draconic_lodge
+	disallow_random_traits = yes
+	2277.4.12={ birth=yes add_trait=creature_human }
+	2294.1.1={
+		add_spouse=60001
+		effect={
+			add_lover=60001
+		}
+	}
+	2666.1.1={ death=yes }
+}
+100074={
+	name=Calia
+	female=yes
+	dynasty=30000
+	religion = delver
+	culture = prairielander
+	trait=scholarly_theologian trait=chaste trait=kind trait=honest trait = draconic_lodge
+	father=100043	#Terenas
+	mother=100073	#Lianne
+	2302.5.7={ birth=yes add_trait=creature_human }
+	2666.1.1={ death=yes }
+}
+100075 = {
+	name = "Uther"
+	religion = delver
+	culture = prairielander
+
+	martial=5 diplomacy=6 stewardship=3 intrigue=4 learning=8
+	trait=brilliant_strategist trait=strong trait=duelist
+	trait=kind trait=draconic_lodge trait=just trait=chaste trait=patient trait=erudite
+
+    disallow_random_traits = true
+
+	2278.2.26 = {
+		birth = yes
+	}
+	2290.8.10={
+		employer=100043 #Terenas
+	}
+	2318.5.1={
+		give_nickname = nick_the_lightbringer
 	}
 	2666.1.1 = {
 		death = yes
