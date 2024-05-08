@@ -697,3 +697,36 @@ d_hesse_comp = {
 	
 	mercenary_type = hesse_composition
 }
+d_order_of_the_silver_hand = {
+	color={ 73 113 210 }
+	color2={ 255 255 255 }
+
+	capital = 1147 # Galena or Mandapika
+
+	religion = delver
+	culture = prairielander
+
+	short_name = yes
+	mercenary = yes #They want to be a holy order
+
+	title = "LORD"
+	title_female = "LADY"
+
+	allow = {
+		OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+	}
+
+	# Always exists
+	landless = yes
+
+	# Cannot be held as a secondary title
+	primary = yes
+
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+
+	mercenary_type = order_of_the_silver_hand_composition
+	monthly_income = 10
+}
