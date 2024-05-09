@@ -20,6 +20,27 @@ e_springfield = {
 		}
 	}
 }
+e_columbia_non = {
+	color={ 0 13 195 }
+	color2={ 220 220 0 }
+	capital = 63 #Washington
+	creation_requires_capital = yes
+	dynasty_title_names = no
+	short_name = yes
+	purple_born_heirs = yes
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_columbia_non = {
+					is_titular = yes
+				}
+			}
+			e_columbia_non = {
+				is_titular = no
+			}
+		}
+	}
+}
 e_grand_orient_host = {
 	color = { 240 240 240 }
 	color2 = { 152 196 21 }

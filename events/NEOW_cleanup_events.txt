@@ -151,73 +151,63 @@ character_event = {
 	}
 }
 character_event = { 
-	id = cleanup.999
+	id = cleanup.8228
 	hide_window = yes
 	only_rulers = yes
 	
 	trigger = {
-		OR = {
-		has_landed_title = e_ming
-		has_landed_title = e_qing
-		has_landed_title = e_katoliko_china
-		has_landed_title = e_yuan
-		has_landed_title = e_maoist
-		has_landed_title = e_legalist
-		has_landed_title = e_taoist
-		has_landed_title = e_sui
-		has_landed_title = e_white_lotus
-		has_landed_title = e_tridemism
-		has_landed_title = e_wuxia
-		has_landed_title = e_xianxia
-		has_landed_title = e_heavenly
-		has_landed_title = e_han
-		has_landed_title = e_qin
-		has_landed_title = e_hui
-		has_landed_title = e_jin
-		has_landed_title = e_yangtze
-		has_landed_title = e_zhujiang
-		has_landed_title = e_minyue
-		}
+		has_landed_title = e_columbia
 		NOT = {
-			government = mandate_heaven
+			religion = constitutional
 		}
 	}
 	mean_time_to_happen = {
 		days = 0
 	}
 	immediate = {
-		set_government_type = mandate_heaven
 		primary_title = {
-			add_law = ze_administration_laws_2
-			add_law = vice_royalty_2
+			e_columbia_non = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				copy_title_history = PREV
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_byzantine_elective
+			}
+		}
+		e_columbia = {
+			show_scope_change = no
+			destroy_landed_title = THIS
 		}
 	}
 }
 character_event = { 
-	id = cleanup.9997
+	id = cleanup.8328
 	hide_window = yes
 	only_rulers = yes
 	
 	trigger = {
-		any_realm_province = {
-			OR = {
-				has_province_modifier = summerautumnbonus_modif
-				has_province_modifier = septemberbonus_modif
-			}
-		}
-		OR = {
-			month == 9
-			month == 10
-			month == 11
-			month == 0
-		}
+		has_landed_title = e_columbia_non
+		religion = constitutional
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 0
 	}
 	immediate = {
-		remove_province_modifier = summerautumnbonus_modif
-		remove_province_modifier = septemberbonus_modif
+		primary_title = {
+			e_columbia = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				copy_title_history = PREV
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_byzantine_elective
+			}
+		}
+		e_columbia_non = {
+			show_scope_change = no
+			destroy_landed_title = THIS
+		}
 	}
 }
 character_event = { 
