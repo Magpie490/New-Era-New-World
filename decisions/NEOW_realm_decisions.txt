@@ -8282,21 +8282,30 @@ decisions = {
 		}
 	}
 	
-	form_baltic = {
+	form_canada = {
 		is_high_prio = yes
 		only_playable = no
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
 			OR = {		###Must be one of the following cultures
-				culture = ugricbaltic
-				culture_group = baltic
-				culture = lietuvininkai
-			}
-			NOT = {
-				religion = catholic #Baltic Catholics should form Commonwealth instead
-			}			
-			e_baltic = {
+				culture_group = franco_canadian
+				culture_group = laurentine_anglo
+				culture_group = north_atlantic_anglophone	
+				culture = wicker
+				OR = {
+					culture = rostlander
+					OR = {
+						religion = loyalist
+						religion = anglican
+						religion = united_church
+						religion = sedevacantist
+						religion = ultramontain
+						religion = insular
+					}
+				}						
+			}						
+			e_canada = {
 				is_titular = yes
 				has_holder = no
 			}
@@ -8310,12 +8319,22 @@ decisions = {
 			}
 			form_empire_allow = yes
 			#Control a bunch of lands
-				k_lativia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_estonia = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_ottawa = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_quebec = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_newfoundland = { show_scope_change = no province_completely_controls_trigger = yes }
 			OR = {
-				has_landed_title = k_lithuania
-				k_lithuania = { show_scope_change = no province_completely_controls_trigger = yes }
+				has_landed_title = e_ontario
+				e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }				
+				OR = {
+				has_landed_title = e_ontario
+				e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }				
+				}
+				OR = {
+				has_landed_title = e_ontario
+				e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }				
+				}
 			}
+			
 		}
 
 		effect = {
@@ -8323,7 +8342,7 @@ decisions = {
 			hidden_tooltip = {
 			}
 			primary_title = {
-				e_baltic = {
+				e_canada = {
 					grant_title = ROOT
 					copy_title_laws = PREV
 					copy_title_history = PREV
@@ -8331,8 +8350,8 @@ decisions = {
 			}
 			
 			custom_tooltip = {
-				text = form_baltic_tt 
-				e_baltic = {
+				text = form_canada_tt 
+				e_canada = {
 					gain_title_effect = yes
 				}
 			}
@@ -8340,9 +8359,20 @@ decisions = {
 
 			hidden_tooltip = {
 				###Unite the kingdoms and own stuff
-				k_lithuania = { de_jure_liege = e_baltic }
-				k_lativia = { de_jure_liege = e_baltic }
-				k_estonia = { de_jure_liege = e_baltic }				
+				k_ontario = { de_jure_liege = e_canada }
+				k_ottawa = { de_jure_liege = e_canada }
+				k_grand_montreal = { de_jure_liege = e_canada }
+				k_quebec = { de_jure_liege = e_canada }
+				k_aurora = { de_jure_liege = e_canada }
+				k_kenora = { de_jure_liege = e_canada }
+				k_soo = { de_jure_liege = e_canada }
+				k_beauce_gaspe = { de_jure_liege = e_canada }
+				k_jamesie = { de_jure_liege = e_canada }
+				k_new_brunswick = { de_jure_liege = e_canada }
+				k_nova_scotia = { de_jure_liege = e_canada }
+				k_prince_edward_island = { de_jure_liege = e_canada }
+				k_newfoundland = { de_jure_liege = e_canada }
+				k_labrador = { de_jure_liege = e_canada }				
 			}
 		}
 		revoke_allowed = {
