@@ -239,7 +239,7 @@ k_watchers_in_the_dark = {
 	# Extra income due to donations, etc
 	monthly_income = 6 # (Must be an integer between 1 and 512)	
 }
-d_mahayana_order = {
+d_mahayana_order = { #Shaolin Order
 	color={ 142 142 142 }
 	color2= { 255 255 255 }
 	
@@ -269,7 +269,7 @@ d_mahayana_order = {
 	# Extra income due to banking, etc
 	monthly_income = 5 # (Must be an integer between 1 and 512)
 }
-d_columbian_order = {
+d_columbian_order = { #Knights of Columbus
 	color={ 23 21 76 }
 	color2={ 255 255 255 }
 	
@@ -298,7 +298,7 @@ d_columbian_order = {
 	
 	mercenary_type = knights_hospitaler_composition
 }
-d_evangelical_order = {
+d_evangelical_order = { #Knights of the New Millenium
 	color={ 206 66 206 }
 	color2={ 255 255 255 }
 	
@@ -327,7 +327,7 @@ d_evangelical_order = {
 	
 	mercenary_type = knights_hospitaler_composition
 }
-d_loyalist_order = {
+d_loyalist_order = { #Mounties
 	color = { 140 55 121 }
 	color2={ 255 255 255 }
 	
@@ -356,7 +356,7 @@ d_loyalist_order = {
 	
 	mercenary_type = knights_hospitaler_composition
 }
-d_gaiwiio_order = {
+d_gaiwiio_order = { #Rotisken’rakéhte
 	color={ 60 200 100 }
 	color2={ 255 255 255 }
 	
@@ -384,4 +384,62 @@ d_gaiwiio_order = {
 	monthly_income = 2 # (Must be an integer between 1 and 512)
 	
 	mercenary_type = jerseydevils_composition
+}
+d_mainline_order = { #Salvation Army
+	color={ 109 147 213 }
+	color2={ 255 255 255 }
+	
+	capital = 139 #Raleigh
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = karaliner
+	
+	# Parent Religion 
+	religion = mainline
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+d_insular_order = { #Knights of Saint Andrew
+	color = { 17 65 157 }
+	color2={ 255 255 255 }
+	
+	capital = 1260 # Halifax
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = scotian
+	
+	# Parent Religion 
+	religion = insular
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
 }
