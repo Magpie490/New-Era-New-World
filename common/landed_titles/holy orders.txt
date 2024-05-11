@@ -443,3 +443,32 @@ d_insular_order = { #Knights of Saint Andrew
 	
 	mercenary_type = knights_hospitaler_composition
 }
+d_general_militia = { #General Militia
+	color={ 107 227 217 }
+	color2={ 255 255 255 }
+	
+	capital = 118 # Detroit
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = motorman
+	
+	# Parent Religion 
+	religion = antiquarianist
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
