@@ -1563,6 +1563,135 @@ nomad = {
 		
 	}
 	
+	no_hillfort_1 = {
+		desc = no_hillfort_1_desc
+		potential = {
+			FROM = { government = raider_government }
+		}
+		is_active_trigger = {
+			FROM = { government = raider_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				FROM = { government = raider_government }
+			}
+		}
+		gold_cost = 25
+		build_time = 365
+		
+		fort_level = 0.5
+		levy_size = 0.15
+		garrison_size = 0.15
+		archers = 50
+		light_infantry = 40
+		retinuesize = 100
+		ai_creation_factor = 97
+		ai_feudal_modifier = 10
+		ai_republic_modifier = -10
+		
+		extra_tech_building_start = 0.3
+		tax_income = -0.01
+	}
+	
+	no_hillfort_2 = {
+		desc = no_hillfort_2_desc
+		potential = {
+			FROM = { government = raider_government }
+		}
+		is_active_trigger = {
+			FROM = { government = raider_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				FROM = { government = raider_government }
+			}
+		}
+		upgrades_from = no_hillfort_1
+		gold_cost = 50
+		build_time = 365
+		
+		fort_level = 0.5
+		levy_size = 0.15
+		garrison_size = 0.15
+		archers = 50
+		light_infantry = 40
+		ai_creation_factor = 98
+		ai_feudal_modifier = 10
+		ai_republic_modifier = -10
+		
+		convert_to_city = ct_wall_1
+		convert_to_castle = ca_wall_1
+		
+		extra_tech_building_start = 1.5
+		tax_income = -0.01
+	}
+	
+	no_hillfort_3 = {
+		desc = no_hillfort_3_desc
+		potential = {
+			FROM = { government = raider_government }
+		}
+		is_active_trigger = {
+			FROM = { government = raider_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				FROM = { government = raider_government }
+			}
+		}
+		upgrades_from = no_hillfort_2
+		gold_cost = 75
+		build_time = 365
+		
+		fort_level = 0.5
+		levy_size = 0.15
+		garrison_size = 0.15
+		archers = 50
+		light_infantry = 40
+		ai_creation_factor = 99
+		ai_feudal_modifier = 10
+		ai_republic_modifier = -10
+		
+		extra_tech_building_start = 2
+		tax_income = -0.01
+	}
+	
+	no_hillfort_4 = {
+		desc = no_hillfort_4_desc
+		potential = {
+			FROM = { government = raider_government }
+		}
+		is_active_trigger = {
+			FROM = { government = raider_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				FROM = { government = raider_government }
+			}
+		}
+		upgrades_from = no_hillfort_3
+		gold_cost = 100
+		build_time = 365
+		
+		fort_level = 0.5
+		levy_size = 0.15
+		garrison_size = 0.15
+		archers = 50
+		light_infantry = 40
+		ai_creation_factor = 100
+		ai_feudal_modifier = 10
+		ai_republic_modifier = -10
+		
+		convert_to_city = ct_wall_2
+		convert_to_castle = ca_wall_2
+		
+		extra_tech_building_start = 2.5
+		tax_income = -0.01
+	}
 	################### BAGHATUR COUNCIL ###################
 	no_baghatur_council_1 = {
 		desc = no_baghatur_council_desc
