@@ -327,3 +327,61 @@ d_evangelical_order = {
 	
 	mercenary_type = knights_hospitaler_composition
 }
+d_loyalist_order = {
+	color = { 140 55 121 }
+	color2={ 255 255 255 }
+	
+	capital = 1297 #Ottawa
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = ontarian
+	
+	# Parent Religion 
+	religion = loyalist
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+d_gaiwiio_order = {
+	color={ 60 200 100 }
+	color2={ 255 255 255 }
+	
+	capital = 3651 #Niagara
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = mohawk
+	
+	# Parent Religion 
+	religion = gaiwiio
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = jerseydevils_composition
+}
