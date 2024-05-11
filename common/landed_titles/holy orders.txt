@@ -414,3 +414,32 @@ d_mainline_order = { #Salvation Army
 	
 	mercenary_type = knights_hospitaler_composition
 }
+d_insular_order = { #Knights of Saint Andrew
+	color = { 17 65 157 }
+	color2={ 255 255 255 }
+	
+	capital = 1260 # Halifax
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = scotian
+	
+	# Parent Religion 
+	religion = insular
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
