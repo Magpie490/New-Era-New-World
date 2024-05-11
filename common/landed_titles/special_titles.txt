@@ -127,6 +127,28 @@ d_fomoria = {
 		always = no
 	}
 }
+e_bloody_bisons = {
+	color={ 204 0 0 }
+	color2={ 220 220 0 }
+	capital = 376
+	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
+	primary = yes
+	short_name = yes
+	
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_bloody_bisons = {
+					is_titular = yes
+				}
+			}
+			e_bloody_bisons = {
+				is_titular = no
+			}
+		}
+	}
+}
 e_new_england = {
 	color={ 100 175 145 }
 	color2={ 220 220 0 }
