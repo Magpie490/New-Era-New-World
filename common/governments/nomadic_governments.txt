@@ -51,20 +51,7 @@ nomadic_governments = {
 			mercenary = no
 			holy_order = no
 			has_oligarchy_title_trigger = no
-			NOR = {
-				primary_title = {
-					OR = { 
-						title = e_bloody_bisons
-					}
-				}
-				liege = {
-					primary_title = {
-						OR = { 
-							title = e_bloody_bisons
-						}
-					}
-				}
-			}
+			NOT = { is_government_potential = raider_government }
 		}
 		
 		unit_home_modifier = {
@@ -138,20 +125,7 @@ nomadic_governments = {
 			mercenary = no
 			holy_order = no
 			has_oligarchy_title_trigger = no
-			OR = {
-				primary_title = {
-					OR = { 
-						title = e_bloody_bisons
-					}
-				}
-				liege = {
-					primary_title = {
-						OR = { 
-							title = e_bloody_bisons
-						}
-					}
-				}
-			}
+			uses_raider_gov = yes
 		}
 		aggression = 1.5
 		
