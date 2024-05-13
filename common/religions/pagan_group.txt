@@ -28,12 +28,12 @@ pagan_group = {
 
 		icon = 5
 		
-		color = { 0.6 0.0 0.0 }
+		color = { 0.2 0.2 0.2 }
 		
-		high_god_name = GOD_THE_CREATOR
+		high_god_name = GOD_THE_CREATOR_2
 		
 		god_names = {
-			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS GOD_THE_PLUNDER GOD_THE_BOOTY GOD_STRIFE GOD_STRUGGLE GOD_BATTLE
 		}
 		evil_god_names = {
 			THE_DARK_SPIRITS
@@ -42,11 +42,19 @@ pagan_group = {
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
 		
-		allow_rivermovement = yes
 		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
 		female_temple_holders = yes
-		max_consorts = 3
-		
+		max_consorts = 6
+		seafarer = yes
+		raised_vassal_opinion_loss = no
+		has_heir_designation = yes
+		peace_prestige_loss = yes
+		aggression = 2.0 # AI aggression factor
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		short_reign_opinion_year_mult = 2
 		defensive_attrition = yes
 		
 		religious_clothing_head = 3
