@@ -850,6 +850,23 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
+	religion_special_raider = { #Gives option to do alchemy.
+		picture = GFX_religion_feature_alchemy
+		potential = {
+			always = no.
+		}
+		trigger = {
+			always = no.
+		}
+
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_weed }
+			custom_tooltip = { text = tooltip_religion_feature_extort }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	religion_feature_wuist = {
 		picture = GFX_religion_feature_wuist
 		potential = {
