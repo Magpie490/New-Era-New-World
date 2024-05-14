@@ -920,6 +920,18 @@ settlement_decisions = {
 			modifier = { # Only for tribal holdings
 				factor = 0
 				NOT = { holding_type = tribal }
+				NOT = {
+					FROM = {
+						government = raider_government
+					}
+				}
+			}
+			modifier = { # Only for tribal holdings
+				factor = 0
+				holding_type = tribal 
+				FROM = {
+					government = raider_government
+				}
 			}
 		}
 	}
