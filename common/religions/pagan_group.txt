@@ -13,14 +13,6 @@ pagan_group = {
 	interface_skin = { pagan_interface }
 	
 	# Names given only to Pagan characters (base names)
-	male_names = {
-		Anund Asbj�rn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund Gudr�d Hardeknud Helge Odd Orm 
-		Orvar Ottar Rikulfr Rurik Sigbj�rn Styrbj�rn Starkad Styrkar S�mund S�lve S�rkver Thorolf Tjudmund Toke Tolir 
-		Torbj�rn Torbrand Torfinn Torgeir Toste Tyke
-	}
-	female_names = {
-		Aslaug Bothild Bj�rg Freja Grima Gytha Kr�ka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
-	}
 
 	pagan = { # Use for misc other pagans
 		graphical_culture = pagangfx
@@ -36,10 +28,10 @@ pagan_group = {
 			GOD_THE_SPIRITS GOD_THE_ANCESTORS GOD_THE_PLUNDER GOD_THE_BOOTY GOD_STRIFE GOD_STRUGGLE GOD_BATTLE
 		}
 		evil_god_names = {
-			THE_DARK_SPIRITS
+			THE_DARK_SPIRITS THE_OLD_EMPIRE THE_FEDS THE_COPS THE_MAN 
 		}
 		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
+		scripture_name = THE_OUTER_CUSTOMS
 		priest_title = PRIEST
 		
 		priests_can_marry = yes
@@ -48,7 +40,6 @@ pagan_group = {
 		allow_looting = yes
 		female_temple_holders = yes
 		max_consorts = 6
-		seafarer = yes
 		raised_vassal_opinion_loss = no
 		has_heir_designation = yes
 		peace_prestige_loss = yes
@@ -63,6 +54,7 @@ pagan_group = {
 		allow_in_ruler_designer = no
 		
 		dislike_tribal_organization = yes
+		features = { religion_haruspicy religion_beatification }
 		
 		dynamic_cult = no
 		secret_religion = no
