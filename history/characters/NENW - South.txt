@@ -2752,8 +2752,8 @@
 		death = yes
 	}
 }
-910143 = {  
-	name = "John" 
+910143 = {  #Family claims to be the descendents of Asi-yahola
+	name = "James" 
 	dynasty = 3000656
 	culture = seminole
 	religion = gator_pagan
@@ -2765,8 +2765,15 @@
 	trait = cynical
 	trait = proud
 	trait = chaste
-	2272.5.13 = {
+	disallow_random_traits = yes
+	2282.5.13 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = seminole_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes

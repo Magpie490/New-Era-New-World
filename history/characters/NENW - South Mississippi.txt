@@ -108,12 +108,31 @@
 	}
 }
 950006 = {
-	name = "Charles"
+	name = "Charles" #King of Acadiana, who is a just and zealous men, but was greatly wounded when trying to fight by his father's side in the Acadian Independence War.
 	dynasty = 5000249
 	religion = catholic
 	culture = cajun
+	trait = skilled_tactician
+	trait = scarred_mid
+	trait = one_handed
+	trait = socializer
+	trait = temperate
+	trait = patient
+	trait = humble
+	trait = envious
+	trait = zealous
+	trait = just
+	trait = inspiring_leader
+	trait = crowned_by_bishop
+	disallow_random_traits = yes
 	2306.3.4 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = acadiana_crusade_bloodline 
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
