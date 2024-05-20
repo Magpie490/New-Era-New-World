@@ -1,11 +1,13 @@
-route_10_east = {
+route_20_east = {
 wealth = 20			# Total base wealth of silk route
 	trade_post_display_trigger = {
 		OR = {
-			province_id = 1093
-			province_id = 1046
-			province_id = 1043
-			province_id = 1124
+			province_id = 1127
+			province_id = 1036
+			province_id = 149
+			province_id = 1643
+			province_id = 158
+			province_id = 3602
 		}
 	}
 
@@ -21,18 +23,25 @@ wealth = 20			# Total base wealth of silk route
 	}
 
 	start = {				# Start provinces of trade route
-		1097
-		1124
+		1127
+		157
 	}
 	start = {
-		1124
-		767
+		157
+		158
+	}
+	start = {
+		157
+		3602
 	}
 #Main route
     path = {
-		1097 1098 1094 1627 1093 1631 931 1092 1084 932 1046 1045 1632 1633 1044 742 1043 757 1117 772 1118 1124
+		1127 1128 754 759 1129 749 750 1036 751 149 203 157
 	}
 	path = {
-		1124 1119 768 1252 785 1253 767
+		157 1643 159 158
+	}
+	path = {
+		157 161 154 3602
 	}
 }
