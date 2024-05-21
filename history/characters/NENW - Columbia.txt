@@ -113,10 +113,22 @@
 	}
 }
 900008 = {
-	name = "Elizer"
+	name = "Elizer" #Son of Titus Lamar, a man groomed to succeed his father so there is much stress in his life
 	dynasty = 5000165
 	religion=constitutional
 	culture=federalist
+	father = 900000
+	trait=fortune_builder
+	trait=stressed
+	trait=quick
+	trait=tall
+	trait=diligent
+	trait=kind
+	trait=poet
+	trait=humble
+	trait=proud
+	trait=honest
+	disallow_random_traits = yes
 	2292.04.14 = {
 		birth = yes
 	}
@@ -756,6 +768,7 @@
 	dynasty = 4000006
 	culture = american
 	religion = constitutional
+	father = 900077
 	1833.8.20 = {
 		birth = yes
 	}
@@ -777,7 +790,7 @@
 }
 900056 = {
 	name = "Theodore" #Big Stick
-	dynasty = 5000165
+	dynasty = 4000036
 	culture = american
 	religion = constitutional
 	trait = skilled_tactician
@@ -861,7 +874,7 @@
 }
 900062 = {
 	name = "Franklin Delano"
-	dynasty = 5000165
+	dynasty = 4000038
 	culture = american
 	religion = constitutional
 	1882.1.30 = {
@@ -897,7 +910,7 @@
 }
 900065 = {
 	name = "John Fitzgerald"
-	dynasty = 5000025
+	dynasty = 4000037
 	culture = american
 	religion = constitutional
 	1917.5.29 = {
@@ -1052,6 +1065,21 @@
 		culture = federalist
 	}
 	2666.1.2 = {
+		death = yes
+	}
+}
+
+#Tying up historical president families
+900077 = {
+	name = "John Scott" #Son of William Henry
+	dynasty = 4000006
+	culture = american
+	religion = constitutional
+	father = 900040
+	1804.10.4 = {
+		birth = yes
+	}
+	1878.5.25 = {
 		death = yes
 	}
 }
