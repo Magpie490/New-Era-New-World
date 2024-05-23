@@ -8312,6 +8312,238 @@ decisions = {
 		}
 	}
 	
+	form_usa = {
+		is_high_prio = yes
+		only_playable = no
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = {
+				region = custom_usa
+			}
+			NOR = {
+				culture_group = caddoan
+				culture_group = chinookan
+				culture_group = cree
+				culture_group = eastern_algonquian
+				culture_group = haudenosaunee
+				culture_group = haida_group
+				culture_group = hopi_group
+				culture_group = kootenay
+				culture_group = mayan
+				culture_group = mixe-zoque
+				culture_group = muskogean
+				culture_group = natchez_group
+				culture_group = northern_athabaskan
+				culture_group = numic
+				culture_group = ojibwe
+				culture_group = oto-manguean
+				culture_group = piman
+				culture_group = plains_algonquian
+				culture_group = puebloan
+				culture_group = sahaptian
+				culture_group = salishan
+				culture_group = siouan
+				culture_group = southern_athabaskan
+				culture_group = tlingit_group
+				culture_group = tanoan
+				culture_group = tsimshianic
+				culture_group = uto-aztecal
+				culture_group = wakashan
+				culture_group = yuman
+			}
+			e_usa = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control a bunch of lands
+				k_blue_ridge = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_appalachia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_vandalia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_allegheny = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_pittsburgh = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_florida = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_upstachia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_adirondack = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_buffalo = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_new_york = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_taconica = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_eastsylvania = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_columbia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_new_england = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_northeast_kingdom = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_vermont = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_new_hampshire = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_lobsterland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_aroostook = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_massachusets = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_tarheel = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_old_dominion = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_jersey = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_connecticut = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_rhode_island = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_new_acadia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_wampanoag = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_maryland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_delaware = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_delmarva = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_maine = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_pennsylvania = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_jaxland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_georgia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_dixie = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_alabama = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_palmetto = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_two_carolinas = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_tuskegee = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_birmingham = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_upnord = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_mishiana = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_midmishigan = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_michigan = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_superior = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_egypt = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_cahokia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_kentucky = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_obion = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_tennessee = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_st_louis = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_missouri = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_ozarks = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_magnolia = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_texarkana = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_acadiana = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_arkansas = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_louisiana = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_ohio = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_cleveland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_wisconsin = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_wabash = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_illinois = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_windgarden = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_iowa = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_minnesota = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_dakota = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			prestige = 1000
+			hidden_tooltip = {
+			}
+			primary_title = {
+				e_usa = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+					copy_title_history = PREV
+				}
+			}
+			
+			custom_tooltip = {
+				text = form_canada_tt 
+				e_usa = {
+					gain_title_effect = yes
+				}
+			}
+
+			hidden_tooltip = {
+				###Unite the kingdoms and own stuff	
+				k_blue_ridge = { de_jure_liege = e_usa }	
+				k_appalachia = { de_jure_liege = e_usa }	
+				k_vandalia = { de_jure_liege = e_usa }	
+				k_allegheny = { de_jure_liege = e_usa }	
+				k_pittsburgh = { de_jure_liege = e_usa }	
+				k_florida = { de_jure_liege = e_usa }	
+				k_upstachia = { de_jure_liege = e_usa }	
+				k_adirondack = { de_jure_liege = e_usa }	
+				k_buffalo = { de_jure_liege = e_usa }	
+				k_new_york = { de_jure_liege = e_usa }	
+				k_taconica = { de_jure_liege = e_usa }	
+				k_eastsylvania = { de_jure_liege = e_usa }	
+				k_columbia = { de_jure_liege = e_usa }	
+				k_new_england = { de_jure_liege = e_usa }	
+				k_northeast_kingdom = { de_jure_liege = e_usa }	
+				k_vermont = { de_jure_liege = e_usa }	
+				k_new_hampshire = { de_jure_liege = e_usa }	
+				k_lobsterland = { de_jure_liege = e_usa }	
+				k_aroostook = { de_jure_liege = e_usa }	
+				k_massachusets = { de_jure_liege = e_usa }	
+				k_tarheel = { de_jure_liege = e_usa }	
+				k_old_dominion = { de_jure_liege = e_usa }	
+				k_jersey = { de_jure_liege = e_usa }	
+				k_connecticut = { de_jure_liege = e_usa }	
+				k_rhode_island = { de_jure_liege = e_usa }	
+				k_new_acadia = { de_jure_liege = e_usa }	
+				k_wampanoag = { de_jure_liege = e_usa }	
+				k_maryland = { de_jure_liege = e_usa }	
+				k_delaware = { de_jure_liege = e_usa }	
+				k_delmarva = { de_jure_liege = e_usa }	
+				k_maine = { de_jure_liege = e_usa }	
+				k_pennsylvania = { de_jure_liege = e_usa }	
+				k_jaxland = { de_jure_liege = e_usa }	
+				k_georgia = { de_jure_liege = e_usa }	
+				k_dixie = { de_jure_liege = e_usa }	
+				k_alabama = { de_jure_liege = e_usa }	
+				k_palmetto = { de_jure_liege = e_usa }	
+				k_two_carolinas = { de_jure_liege = e_usa }	
+				k_tuskegee = { de_jure_liege = e_usa }	
+				k_birmingham = { de_jure_liege = e_usa }	
+				k_upnord = { de_jure_liege = e_usa }	
+				k_mishiana = { de_jure_liege = e_usa }	
+				k_midmishigan = { de_jure_liege = e_usa }	
+				k_michigan = { de_jure_liege = e_usa }	
+				k_superior = { de_jure_liege = e_usa }	
+				k_egypt = { de_jure_liege = e_usa }	
+				k_cahokia = { de_jure_liege = e_usa }	
+				k_kentucky = { de_jure_liege = e_usa }	
+				k_obion = { de_jure_liege = e_usa }	
+				k_tennessee = { de_jure_liege = e_usa }	
+				k_st_louis = { de_jure_liege = e_usa }	
+				k_missouri = { de_jure_liege = e_usa }	
+				k_ozarks = { de_jure_liege = e_usa }	
+				k_magnolia = { de_jure_liege = e_usa }	
+				k_texarkana = { de_jure_liege = e_usa }	
+				k_acadiana = { de_jure_liege = e_usa }	
+				k_arkansas = { de_jure_liege = e_usa }	
+				k_louisiana = { de_jure_liege = e_usa }	
+				k_ohio = { de_jure_liege = e_usa }	
+				k_cleveland = { de_jure_liege = e_usa }	
+				k_wisconsin = { de_jure_liege = e_usa }	
+				k_wabash = { de_jure_liege = e_usa }	
+				k_illinois = { de_jure_liege = e_usa }	
+				k_windgarden = { de_jure_liege = e_usa }	
+				k_iowa = { de_jure_liege = e_usa }	
+				k_minnesota = { de_jure_liege = e_usa }	
+				k_dakota = { de_jure_liege = e_usa }			
+			}
+			if = {
+				limit = {
+					ROOT = {
+						religion = constitutional
+					}
+				}
+				loyalist = {
+					make_reformer_head_of_religion = yes
+					set_religion_head = e_usa
+				}
+				activate_title = { title = e_columbia  status = no }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	form_canada = {
 		is_high_prio = yes
 		only_playable = no
