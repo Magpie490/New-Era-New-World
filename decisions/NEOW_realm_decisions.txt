@@ -878,7 +878,13 @@ decisions = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			has_landed_title = k_dominion_canada
+			OR = {
+				has_landed_title = k_dominion_canada
+				AND = {
+					religion = loyalist
+					has_landed_title = e_canada
+				}
+			}
 			NOT = {
 				has_global_flag = canada_reformed_diplo
 			}
@@ -922,7 +928,13 @@ decisions = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			has_landed_title = k_dominion_canada
+			OR = {
+				has_landed_title = k_dominion_canada
+				AND = {
+					religion = loyalist
+					has_landed_title = e_canada
+				}
+			}
 			NOT = {
 				has_global_flag = canada_reformed_martial
 			}
@@ -969,7 +981,13 @@ decisions = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			has_landed_title = k_dominion_canada
+			OR = {
+				has_landed_title = k_dominion_canada
+				AND = {
+					religion = loyalist
+					has_landed_title = e_canada
+				}
+			}
 			NOT = {
 				has_global_flag = canada_reformed_stewardship
 			}
@@ -1016,7 +1034,13 @@ decisions = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			has_landed_title = k_dominion_canada
+			OR = {
+				has_landed_title = k_dominion_canada
+				AND = {
+					religion = loyalist
+					has_landed_title = e_canada
+				}
+			}
 			NOT = {
 				has_global_flag = canada_reformed_intrigue
 			}
@@ -1063,7 +1087,13 @@ decisions = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
-			has_landed_title = k_dominion_canada
+			OR = {
+				has_landed_title = k_dominion_canada
+				AND = {
+					religion = loyalist
+					has_landed_title = e_canada
+				}
+			}
 			NOT = {
 				has_global_flag = canada_reformed_learning
 			}
@@ -8371,7 +8401,6 @@ decisions = {
 					gain_title_effect = yes
 				}
 			}
-			
 
 			hidden_tooltip = {
 				###Unite the kingdoms and own stuff
@@ -8389,6 +8418,18 @@ decisions = {
 				k_prince_edward_island = { de_jure_liege = e_canada }
 				k_newfoundland = { de_jure_liege = e_canada }
 				k_labrador = { de_jure_liege = e_canada }				
+			}
+			if = {
+				limit = {
+					ROOT = {
+						religion = loyalist
+					}
+				}
+				loyalist = {
+					make_reformer_head_of_religion = yes
+					set_religion_head = e_canada
+				}
+				activate_title = { title = k_dominion_canada  status = no }
 			}
 		}
 		revoke_allowed = {
