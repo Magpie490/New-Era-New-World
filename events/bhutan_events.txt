@@ -11,7 +11,17 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		FROM = { title = e_columbia }
+		OR = { 
+			FROM = { 
+				title = e_columbia 
+			}
+			AND = {
+				religion = constitutional
+				FROM = { 
+					title = e_usa 
+				}
+			}
+		}
 	}
 	immediate = {
 		if = {
@@ -480,7 +490,13 @@ character_event = {
 	is_triggered_only = yes
 	only_playable = yes
 	trigger = {
-		has_landed_title = e_columbia
+		OR = { 
+			has_landed_title = e_columbia
+			AND = {
+				religion = constitutional
+				has_landed_title = e_columbia
+			}
+		}
 	}
 	immediate = {
 		if = {
