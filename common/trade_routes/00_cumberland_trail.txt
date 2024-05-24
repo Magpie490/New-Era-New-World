@@ -1,12 +1,12 @@
-ninety_five_south = {
+cumberland_trail = {
 wealth = 20			# Total base wealth of silk route
 	trade_post_display_trigger = {
 		OR = {
-			province_id = 139
-			province_id = 3602
-			province_id = 158
-			province_id = 1630
-			province_id = 1097
+			province_id = 1024##
+			province_id = 1019
+			province_id = 1009##
+			province_id = 151
+			province_id = 143
 		}
 	}
 
@@ -22,32 +22,25 @@ wealth = 20			# Total base wealth of silk route
 	}
 
 	start = {				# Start provinces of trade route
-		1664 #dinwiddie
-		3594 #moore
+		1024
+		824
 	}
 	start = {
-		3594 #moore
-		3602 #richland
+		1009
+		824
 	}
 	start = {
-		3602 #richland
-		158 #savannah
-	}
-	start = {
-		158 #savannah
-		1097 #miami
+		824
+		3594
 	}
 #Main route
     path = {
-		1664 1662 138 139 3594
+		1024 834 832 3318 1083 1019 1021 824
 	}
 	path = {
-		3594 136 166 3602
+		1009 735 840 1016 824
 	}
 	path = {
-		3602 162 160 158
-	}
-	path = {
-		158 206 207 1086 1630 1089 1090 1096 1624 1097
+		824 151 3309 3312 142 143 3596 1081 3594
 	}
 }
