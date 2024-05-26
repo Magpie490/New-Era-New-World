@@ -1,13 +1,12 @@
-midwestern_way = {
+trappers_trail = {
 wealth = 20			# Total base wealth of silk route
 	trade_post_display_trigger = {
 		OR = {
-			province_id = 102##
-			province_id = 88
-			province_id = 116
-			province_id = 1009
-			province_id = 837
-			province_id = 1055##
+			province_id = 1816
+			province_id = 331
+			province_id = 1787
+			province_id = 1794
+			province_id = 934
 		}
 	}
 
@@ -23,11 +22,39 @@ wealth = 20			# Total base wealth of silk route
 	}
 
 	start = {				# Start provinces of trade route
-		102
-		1055
+		1815
+		1790
+	}
+	start = {
+		1790
+		331
+	}
+	start = {
+		1793
+		1790
+	}
+	start = {
+		660
+		331
+	}
+	start = {
+		331
+		943
 	}
 #Main route
     path = {
-		102 103 104 90 88 92 705 706 711 712 116 719 122 741 1008 1009 1060 1059 837 1017 1055
+		1815 1817 1816 1792 1791 1790
+	}
+	path = {
+		1790 331
+	}
+	path = {
+		1793 1794 1789 1790
+	}
+	path = {
+		660 1786 1787 1788 1823 331
+	}
+	path = {
+		331 332 333 334 288 289 934
 	}
 }
