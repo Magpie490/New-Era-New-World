@@ -883,17 +883,10 @@ the_assassins = {
 		}
 		age = 16
 		OR = {
-			true_religion = stalinist
+			true_religion = constitutional
 			AND = {
 				religion_group = old_world_cultist_group
 				NOT = { trait = zealous }
-				OR = {#Zarists can't join unless they're cynical or very sneaky
-					NOT = {
-						is_zarist_religion_trigger = yes
-					}
-					trait = cynical
-					intrigue = 18
-				}
 			}
 			AND = {
 				trait = sympathy_old_world_cultist
@@ -905,14 +898,14 @@ the_assassins = {
 					intrigue = 18
 				}
 				any_playable_ruler = {
-					religion = stalinist
+					religion = constitutional
 					NOT = {
 						distance_from_realm = { value = 300 who = ROOT }
 					}
 				}				
 			}
 			AND = {
-				culture_group = east_slavic
+				culture_group = high_american
 				NOT = { trait = zealous }
 				OR = {
 					trait = schemer
@@ -920,7 +913,7 @@ the_assassins = {
 					intrigue = 18
 				}
 				any_playable_ruler = {
-					religion = stalinist
+					religion = constitutional
 					NOT = {
 						distance_from_realm = { value = 300 who = ROOT }
 					}
@@ -930,7 +923,7 @@ the_assassins = {
 				ai = no
 				NOT = { trait = zealous }
 				any_playable_ruler = {
-					religion = stalinist
+					religion = constitutional
 					NOT = {
 						distance_from_realm = { value = 300 who = ROOT }
 					}
@@ -966,12 +959,12 @@ the_assassins = {
 			
 				OR = {
 					religion_group = old_world_cultist_group
-					secret_religion = stalinist
+					secret_religion = constitutional
 					AND = {
 						ai = no
 						NOT = { trait = zealous }
 						any_playable_ruler = {
-							religion = stalinist
+							religion = constitutional
 							NOT = {
 								distance_from_realm = { value = 300 who = ROOT }
 							}
@@ -985,8 +978,8 @@ the_assassins = {
 
 	potential = {
 		OR = {
-			religion = stalinist
-			secret_religion = stalinist
+			religion = constitutional
+			secret_religion = constitutional
 		}
 	}
 
@@ -1224,7 +1217,7 @@ the_assassins = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no 
-			religion = stalinist
+			religion = constitutional
 			age = 16
 			OR = {
 				is_female = no
