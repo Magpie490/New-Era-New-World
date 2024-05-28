@@ -483,11 +483,11 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = zealous
-				NOT = { secret_religion = stalinist }
+				NOT = { secret_religion = constitutional }
 			}
 			modifier = {
 				factor = 0
-				true_religion_stalinist_trigger = no
+				true_religion_constitutional_trigger = no
 				OR = {
 					controls_religion = yes
 					capital_holding = { holding_type = TEMPLE }
@@ -518,14 +518,14 @@ character_event = {
 
 	#Disapproving of shia
 	option = {
-		trigger = { true_religion_stalinist_trigger = no }
+		trigger = { true_religion_constitutional_trigger = no }
 
 		name = {
-			trigger = { NOT = { religion = stalinist } }
+			trigger = { NOT = { religion = constitutional } }
 			text = EVTOPTB_6020_NOTMUSLIM
 		}
 		name = {
-			trigger = { religion = stalinist }
+			trigger = { religion = constitutional }
 			text = EVTOPTB_6020_MUSLIM
 		}
 
@@ -623,11 +623,11 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 
 	desc = {
-		trigger = { FROM = { NOT = { religion = stalinist } } }
+		trigger = { FROM = { NOT = { religion = constitutional } } }
 		text = EVTDESC_MNM_6022_A
 	}
 	desc = {
-		trigger = { FROM = { religion = stalinist } }
+		trigger = { FROM = { religion = constitutional } }
 		text = EVTDESC_MNM_6022_B
 	}
 
@@ -706,7 +706,7 @@ character_event = {
 			factor = 50
 			modifier = {
 				factor = 0.5
-				true_religion_stalinist_trigger = no
+				true_religion_constitutional_trigger = no
 			}
 			modifier = {
 				factor = 2
@@ -897,8 +897,8 @@ character_event = {
 						society = the_assassins
 					}
 					if = {
-						limit = { NOT = { religion = stalinist } }
-						set_secret_religion = stalinist
+						limit = { NOT = { religion = constitutional } }
+						set_secret_religion = constitutional
 					}
 				}
 			}
@@ -994,7 +994,7 @@ character_event = {
 
 	#Allahu akbar!
 	option = {
-		trigger = { true_religion_stalinist_trigger = yes }
+		trigger = { true_religion_constitutional_trigger = yes }
 		name = {
 			trigger = {
 				NOT = {
@@ -1024,7 +1024,7 @@ character_event = {
 
 	#I will convert
 	option = {
-		trigger = { true_religion_stalinist_trigger = no }
+		trigger = { true_religion_constitutional_trigger = no }
 		name = {
 			trigger = {
 				NOT = {
@@ -1049,7 +1049,7 @@ character_event = {
 			custom_tooltip = { text = EVTOPTB_6028_TOOLTIP }
 		}
 
-		religion = stalinist
+		religion = constitutional
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 		
@@ -1077,7 +1077,7 @@ character_event = {
 
 	#I will convert, secretly
 	option = {
-		trigger = { true_religion_stalinist_trigger = no }
+		trigger = { true_religion_constitutional_trigger = no }
 		name = {
 			trigger = {
 				NOT = {
@@ -1103,7 +1103,7 @@ character_event = {
 		}
 		
 		hidden_effect = { clear_secret_religion = yes } #To hide spammy tooltips...
-		set_secret_religion = stalinist
+		set_secret_religion = constitutional
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 
@@ -1253,8 +1253,8 @@ character_event = {
 							society = the_assassins
 						}
 						if = {
-							limit = { NOT = { religion = stalinist } }
-							set_secret_religion = stalinist
+							limit = { NOT = { religion = constitutional } }
+							set_secret_religion = constitutional
 						}
 					}
 				}
@@ -1411,7 +1411,7 @@ character_event = {
 				NOT = { society_member_of = the_assassins }
 				is_within_diplo_range = ROOT
 				trait = cynical 
-				religion = stalinist
+				religion = constitutional
 				is_adult = yes
 				ai = yes
 			}
@@ -1421,7 +1421,7 @@ character_event = {
 			limit = { 
 				NOT = { society_member_of = the_assassins }
 				is_within_diplo_range = ROOT
-				true_religion_stalinist_trigger = no 
+				true_religion_constitutional_trigger = no 
 				is_adult = yes
 				ai = yes
 			}
@@ -1431,7 +1431,7 @@ character_event = {
 			limit = {
 				NOT = { society_member_of = the_assassins }
 				is_within_diplo_range = ROOT
-				true_religion_stalinist_trigger = no
+				true_religion_constitutional_trigger = no
 				trait = zealous
 				is_adult = yes
 				ai = yes
@@ -1449,7 +1449,7 @@ character_event = {
 					is_close_relative = ROOT
 				}
 				OR = {
-					true_religion_stalinist_trigger = no
+					true_religion_constitutional_trigger = no
 					trait = cynical
 				}
 				is_adult = yes
@@ -3326,7 +3326,7 @@ character_event = {
 			}
 			20 = {
 				modifier = { factor = 0 ai = yes }
-				modifier = { factor = 0 NOT = { religion = stalinist } }
+				modifier = { factor = 0 NOT = { religion = constitutional } }
 				event_target:grand_master = { character_event = { id = MNM.6203 } } #Convert a specific holding
 			}
 			15 = {
@@ -3354,7 +3354,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					NOT = { religion = stalinist }
+					NOT = { religion = constitutional }
 				}
 				modifier = {
 					factor = 0
@@ -3372,11 +3372,11 @@ character_event = {
 								owner = {
 									top_liege = {
 										NOT = { character = ROOT }
-										NOT = { religion = stalinist }
+										NOT = { religion = constitutional }
 										any_realm_province = {
-											owner = { NOT = { religion = stalinist } }
+											owner = { NOT = { religion = constitutional } }
 											any_province_holding = { 
-												owner = { NOT = { religion = stalinist } } 
+												owner = { NOT = { religion = constitutional } } 
 												OR = {
 													holding_type = temple
 													holding_type = castle
@@ -3469,12 +3469,12 @@ character_event = {
 					any_independent_ruler = { 
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = stalinist }
+						NOT = { religion = constitutional }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							attacker = { character = PREV }
 							defender = { 
-								religion = stalinist 
+								religion = constitutional 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3486,12 +3486,12 @@ character_event = {
 					limit = {
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = stalinist }
+						NOT = { religion = constitutional }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							any_attacker = { character = PREV }
 							defender = { 
-								religion = stalinist 
+								religion = constitutional 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3517,7 +3517,7 @@ character_event = {
 									liege = { is_feudal = yes }
 									any_war = {
 										any_attacker = { character = PREV }
-										defender = { religion = stalinist }
+										defender = { religion = constitutional }
 									}
 								}
 							}
@@ -3535,7 +3535,7 @@ character_event = {
 										liege = { is_feudal = yes }
 										any_war = {
 											any_attacker = { character = PREV }
-											defender = { religion = stalinist }
+											defender = { religion = constitutional }
 										}
 									}
 								}
@@ -3640,8 +3640,8 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = stalinist }
-						any_realm_province = { religion = stalinist }
+						NOT = { religion = constitutional }
+						any_realm_province = { religion = constitutional }
 					}
 				}
 				random_independent_ruler = {
@@ -3654,11 +3654,11 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = stalinist }
-						any_realm_province = { religion = stalinist }
+						NOT = { religion = constitutional }
+						any_realm_province = { religion = constitutional }
 					}
 					save_event_target_as = assassins_target
-					set_character_flag = assassins_target_persecutes_stalinists
+					set_character_flag = assassins_target_persecutes_constitutionals
 				}
 			}
 		}
@@ -3670,13 +3670,13 @@ character_event = {
 					is_within_diplo_range = ROOT
 					assassins_appropriate_target_trigger = yes
 					NOT = { character = ROOT }
-					NOT = { religion = stalinist }
+					NOT = { religion = constitutional }
 					NOT = { society_member_of = the_assassins }
 					OR = {
 						NOT = {
 							any_playable_ruler = {
 								assassins_appropriate_target_trigger = yes
-								NOT = { religion = stalinist }
+								NOT = { religion = constitutional }
 								NOT = { society_member_of = the_assassins }
 								
 								OR = {
@@ -3709,7 +3709,7 @@ character_event = {
 		if = {
 			limit = { NOT = { is_within_diplo_range = event_target:assassins_target } }
 			event_target:assassins_target = {
-				clr_character_flag = assassins_target_persecutes_stalinists
+				clr_character_flag = assassins_target_persecutes_constitutionals
 				clr_character_flag = assassins_target_fallback
 				clr_character_flag = assassins_target_war_attacker
 				clr_character_flag = assassins_target_war_attacker_vassal
@@ -3772,8 +3772,8 @@ society_quest_event = {
 		text = EVTDESC_MNM_6202_MARKED_FOR_DEATH
 	}
 	desc = {
-		trigger = { event_target:assassins_target = { has_character_flag = assassins_target_persecutes_stalinists } }
-		text = EVTDESC_MNM_6202_PERSECUTED_stalinistS
+		trigger = { event_target:assassins_target = { has_character_flag = assassins_target_persecutes_constitutionals } }
+		text = EVTDESC_MNM_6202_PERSECUTED_constitutionalS
 	}
 	desc = {
 		trigger = { event_target:assassins_target = { has_character_flag = assassins_target_fallback } }
@@ -3786,12 +3786,12 @@ society_quest_event = {
 		hidden_effect = {
 			event_target:assassins_target = {
 				any_war = {
-					limit = { defender = { religion = stalinist } }
-					defender = { save_event_target_as = stalinist_defender }
+					limit = { defender = { religion = constitutional } }
+					defender = { save_event_target_as = constitutional_defender }
 				}
 				any_realm_province = {
-					limit = { religion = stalinist }
-					save_event_target_as = stalinist_province
+					limit = { religion = constitutional }
+					save_event_target_as = constitutional_province
 				}
 			}
 		}
@@ -3856,7 +3856,7 @@ society_quest_event = {
 			clr_character_flag = appear_in_option
 
 			hidden_effect = {
-				clr_character_flag = assassins_target_persecutes_stalinists
+				clr_character_flag = assassins_target_persecutes_constitutionals
 				clr_character_flag = assassins_target_fallback
 				clr_character_flag = assassins_target_war_attacker
 				clr_character_flag = assassins_target_war_attacker_vassal
@@ -3871,7 +3871,7 @@ society_quest_event = {
 
 		hidden_effect = {
 			event_target:assassins_target = {
-				clr_character_flag = assassins_target_persecutes_stalinists
+				clr_character_flag = assassins_target_persecutes_constitutionals
 				clr_character_flag = assassins_target_fallback
 				clr_character_flag = assassins_target_war_attacker
 				clr_character_flag = assassins_target_war_attacker_vassal
@@ -3958,8 +3958,8 @@ character_event = {
 
 	trigger = { 
 		FROM = { 
-			religion = stalinist 
-			any_realm_province = { NOT = { religion = stalinist } }
+			religion = constitutional 
+			any_realm_province = { NOT = { religion = constitutional } }
 		} 
 	}
 
@@ -3996,19 +3996,19 @@ society_quest_event = {
 	immediate = {
 		random_realm_province = {
 			limit = { 
-				NOT = { religion = stalinist }
+				NOT = { religion = constitutional }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_realm_province = {
 			limit = { 
-				owner = { NOT = { religion = stalinist } }
-				NOT = { religion = stalinist }
+				owner = { NOT = { religion = constitutional } }
+				NOT = { religion = constitutional }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_demesne_province = {
-			limit = { NOT = { religion = stalinist } }
+			limit = { NOT = { religion = constitutional } }
 			save_event_target_as = conversion_province
 		}
 		event_target:conversion_province = { owner = { save_event_target_as = conversion_province_owner } }
@@ -4907,13 +4907,13 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = old_world_cultist_group }
 								AND = {
-									NOT = { religion = stalinist }
+									NOT = { religion = constitutional }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = old_world_cultist_group } } } } } } }
 								}
 							}
 							any_realm_province = {
 								any_province_holding = { 
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4932,14 +4932,14 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = old_world_cultist_group }
 								AND = {
-									NOT = { religion = stalinist }
+									NOT = { religion = constitutional }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = old_world_cultist_group } } } } } } }
 								}
 							}
 							any_realm_province = {
-								owner = { NOT = { religion = stalinist } }
+								owner = { NOT = { religion = constitutional } }
 								any_province_holding = { 
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4955,7 +4955,7 @@ society_quest_event = {
 						random_realm_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4964,7 +4964,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4976,7 +4976,7 @@ society_quest_event = {
 						random_demesne_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4985,7 +4985,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = stalinist } } 
+									owner = { NOT = { religion = constitutional } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -7718,7 +7718,7 @@ character_event = { # clean-up after training apprentice
 	hide_window = yes
 
 	option = {
-		if = { limit = { event_target:assassin_protege = { true_religion_stalinist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_constitutional_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT }
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
@@ -7744,7 +7744,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 
 	trigger = {
 		event_target:assassin_protege = { is_alive = yes }
-		true_religion_stalinist_trigger = no
+		true_religion_constitutional_trigger = no
 	}
 
 	is_triggered_only = yes
@@ -7752,7 +7752,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 	option = { #I (apprentice)  will convert
 		name = EVTOPTA_MNM_6258
 		
-		religion = stalinist
+		religion = constitutional
 		
 		ai_chance = {
 			factor = 20
@@ -7779,7 +7779,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 		name = EVTOPTB_MNM_6258
 		
 		clear_secret_religion = yes
-		set_secret_religion = stalinist
+		set_secret_religion = constitutional
 
 		ai_chance = {
 			factor = 80
@@ -7818,42 +7818,42 @@ character_event = { # Final talk with apprentice
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_great
-			event_target:assassin_protege = { true_religion_stalinist_trigger = yes }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_A # apprentice is a fine example and already a believer
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_ok
-			event_target:assassin_protege = { true_religion_stalinist_trigger = yes }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_B # Apprentice has done alright, all things considered
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_failed_miserably
-			event_target:assassin_protege = { true_religion_stalinist_trigger = yes }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_C # believer apprentice is dead, I might train a new one?
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_great
-			event_target:assassin_protege = { true_religion_stalinist_trigger = no }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_D # apprentice is a fine example and already a believer
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_ok
-			event_target:assassin_protege = { true_religion_stalinist_trigger = no }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_E # Apprentice has done alright, all things considered AND will convert
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_failed_miserably
-			event_target:assassin_protege = { true_religion_stalinist_trigger = no }
+			event_target:assassin_protege = { true_religion_constitutional_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_F # to-be-converted apprentice is dead, I might train a new one?
 	}
@@ -7867,7 +7867,7 @@ character_event = { # Final talk with apprentice
 		hidden_effect = { character_event = { id = MNM.6257 } } # clean up
 		event_target:assassin_protege = { set_character_flag = show_picture_in_option }
 
-		if = { limit = { event_target:assassin_protege = { true_religion_stalinist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_constitutional_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT_2 }
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
@@ -7887,7 +7887,7 @@ character_event = { # Final talk with apprentice
 		add_society_currency_minor_effect = yes
 		hidden_effect = { character_event = { id = MNM.6257 } } # clean up
 		event_target:assassin_protege = { set_character_flag = show_picture_in_option }
-		if = { limit = { event_target:assassin_protege = { true_religion_stalinist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_constitutional_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT_2 }
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
@@ -9119,9 +9119,9 @@ character_event = {
 			limit = { 
 				independent = yes 
 				primary_title = { title = d_hashshashin } 
-				NOT = { religion = stalinist }
+				NOT = { religion = constitutional }
 			}
-			religion = stalinist
+			religion = constitutional
 		}
 
 		if = {
@@ -9129,12 +9129,12 @@ character_event = {
 				NAND = {
 					independent = yes 
 					primary_title = { title = d_hashshashin }
-					religion = stalinist
+					religion = constitutional
 				}
-				NOT = { secret_religion = stalinist }
+				NOT = { secret_religion = constitutional }
 			}
 			clear_secret_religion = yes
-			set_secret_religion = stalinist
+			set_secret_religion = constitutional
 		}
 
 		#Try and force them to lvl 3 of the assassins
@@ -9171,10 +9171,10 @@ character_event = {
 		if = {
 			limit = { 
 				primary_title = { title = d_hashshashin } 
-				religion = stalinist
+				religion = constitutional
 			} 
 			any_courtier = {
-				religion = stalinist
+				religion = constitutional
 
 				if = {
 					limit = {
@@ -9194,7 +9194,7 @@ character_event = {
 				}
 			}
 			any_vassal = {
-				religion = stalinist
+				religion = constitutional
 
 				if = {
 					limit = {
