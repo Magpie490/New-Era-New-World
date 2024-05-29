@@ -33,11 +33,11 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	religion = stalinist
+	religion = constitutional
 	
 	trigger = {
-		year = 2563#takes at least 8 years
-		religion = stalinist
+		year = 2333#takes at least 8 years
+		religion = constitutional
 		#is_heretic = no
 		NOT = {
 			has_global_flag = assassins_founded 
@@ -46,7 +46,7 @@ narrative_event = {
 
 		OR = {
 			society_member_of = the_assassins #Either you are in on it...
-			b_bolkhov = {
+			b_lincolnia_VA = {
 				holder_scope = {
 					NOT = { dynasty = ROOT }
 					NOT = { character = ROOT }
@@ -82,10 +82,10 @@ narrative_event = {
 		activate_title = { title = d_hashshashin status = yes }
 		create_character = {
 			random_traits = no
-			name = "Vladimir"
+			name = "George"
 			dynasty = random
-			religion = stalinist
-			culture = muscovite
+			religion = constitutional
+			culture = federalist
 			female = no
 			age = 40
 			attributes = {
@@ -118,7 +118,7 @@ narrative_event = {
 			set_government_type = feudal_government
 
 			
-			b_bolkhov = {
+			b_lincolnia_VA = {
 				holder_scope = {
 					abdicate_to = PREVPREV
 				}
@@ -135,7 +135,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = pietrovan
+				culture = vulgar_federalist
 				female = no
 				age = 16
 			}
@@ -143,7 +143,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = pietrovan
+				culture = vulgar_federalist
 				female = no
 				age = 18
 			}
@@ -151,7 +151,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = pomoran
+				culture = southron
 				female = no
 				age = 18
 			}
@@ -159,7 +159,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = pomoran
+				culture = southron
 				female = no
 				age = 20
 			}
@@ -167,7 +167,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = wolgadeutsche
+				culture = arhavi
 				female = no
 				age = 25
 			}
@@ -175,7 +175,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = wolgadeutsche
+				culture = arhavi
 				female = no
 				age = 26
 			}
@@ -183,7 +183,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = no
 				age = 28
 			}
@@ -191,7 +191,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = yes
 				age = 16
 			}
@@ -199,7 +199,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = yes
 				age = 17
 			}
@@ -207,7 +207,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = yes
 				age = 18
 			}
@@ -215,7 +215,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = yes
 				age = 18
 			}
@@ -223,7 +223,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = NONE
 				religion = ROOT
-				culture = muscovite
+				culture = federalist
 				female = yes
 				age = 20
 			}
@@ -243,7 +243,7 @@ narrative_event = {
 	}
 }
 
-# The KGB spread to Riga
+# The CIA spreads to Louisville
 narrative_event = {
 	id = 88001
 	title = "EVTNAME88001"
@@ -261,20 +261,20 @@ narrative_event = {
 	}
 	
 	only_playable = yes
-	religion = stalinist
+	religion = constitutional
 	has_global_flag = assassins_founded
 	
 	trigger = {
-		year = 2560
+		year = 2334
 		has_landed_title = d_hashshashin
 		NOT = {
-			has_global_flag = kgb_riga
+			has_global_flag = cia_louisville
 			has_global_flag = assassins_destroyed
 		}
-		b_ikskile = {
+		b_la_grange_KY = {
 			has_holder = no
 		}
-		1596 = { # Riga
+		1009 = { # Louisville
 			NOR = {
 				num_of_settlements = 5
 				AND = {
@@ -292,10 +292,10 @@ narrative_event = {
 	option = {
 		trigger = { has_landed_title = d_hashshashin }
 		name = "OK"
-		set_global_flag = kgb_riga
-		1596 = { # Archa
+		set_global_flag = cia_louisville
+		1009 = { # Archa
 			build_holding = {
-				title = b_ikskile
+				title = b_la_grange_KY
 				type = castle
 				holder = ROOT
 			}
@@ -316,7 +316,7 @@ narrative_event = {
 	}
 }
 
-# The KGB spread to Leipzig
+# The CIA spread to the South
 narrative_event = {
 	id = 88099
 	title = "EVTNAME88099"
@@ -334,25 +334,25 @@ narrative_event = {
 	}
 	
 	only_playable = yes
-	religion = stalinist
+	religion = constitutional
 	has_global_flag = assassins_founded
-	has_global_flag = kgb_riga
+	has_global_flag = cia_louisville
 	
 	trigger = {
-		year = 2575
+		year = 2335
 		has_landed_title = d_hashshashin
 		NOT = {
-			has_global_flag = kgb_leipzig
+			has_global_flag = cia_breakfast
 			has_global_flag = assassins_destroyed
 		}
-		b_naumburg = {
+		b_douglas_GA = {
 			has_holder = no
 		}
-		311 = { # Plauen, where Leipzig is
+		1638 = { # Plauen, where Leipzig is
 			NOR = {
-				num_of_settlements = 7
+				num_of_settlements = 4
 				AND = {
-					num_of_settlements = 6
+					num_of_settlements = 3
 					has_settlement_construction = yes
 				}
 			}
@@ -366,10 +366,10 @@ narrative_event = {
 	option = {
 		trigger = { has_landed_title = d_hashshashin }
 		name = "OK"
-		set_global_flag = kgb_leipzig
-		311 = { # Riga
+		set_global_flag = cia_breakfast
+		1638 = { # 
 			build_holding = {
-				title = b_naumburg
+				title = b_douglas_GA
 				type = castle
 				holder = ROOT
 			}
@@ -421,7 +421,7 @@ narrative_event = {
 			has_global_flag = assassins_resurface
 		}
 		NOT = {
-			stalinist = {
+			constitutional = {
 				is_name_randomized = yes
 			}
 		}
@@ -477,7 +477,7 @@ narrative_event = {
 	has_global_flag = assassins_scatter
 	
 	trigger = {
-		year = 2570
+		year = 2350
 		controls_religion = yes # Let it happen for the Pope - he's always around
 		NOT = { 
 			has_global_flag = assassins_resurface
@@ -496,10 +496,10 @@ narrative_event = {
 		hidden_tooltip = {
 			create_character = {
 				random_traits = no
-				name = "Vyacheslav"
+				name = "James Jesus"
 				dynasty = random
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = no
 				age = 19
 				attributes = {
@@ -532,105 +532,105 @@ narrative_event = {
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = pietrovan
+				religion = constitutional
+				culture = vulgar_federalist
 				female = no
 				age = 16
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = pietrovan
+				religion = constitutional
+				culture = vulgar_federalist
 				female = no
 				age = 18
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = wolgadeutsche
+				religion = constitutional
+				culture = arhavi
 				female = no
 				age = 18
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = wolgadeutsche
+				religion = constitutional
+				culture = arhavi
 				female = no
 				age = 20
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = pomoran
+				religion = constitutional
+				culture = southron
 				female = no
 				age = 25
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = pomoran
+				religion = constitutional
+				culture = southron
 				female = no
 				age = 26
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = no
 				age = 28
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = yes
 				age = 16
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = yes
 				age = 17
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = yes
 				age = 18
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = yes
 				age = 18
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				religion = stalinist
-				culture = muscovite
+				religion = constitutional
+				culture = federalist
 				female = yes
 				age = 20
 			}
 			random_list = {
 				50 = {
-					b_bolkhov = { grant_title = PREV }
+					b_lincolnia_VA = { grant_title = PREV }
 				}
 				50 = {
-					b_ikskile = { grant_title = PREV }
+					b_la_grange_KY = { grant_title = PREV }
 				}
 			}
 		}
@@ -671,14 +671,14 @@ narrative_event = {
 	has_global_flag = assassins_founded
 	
 	trigger = {
-		year = 2575
+		year = 2355
 		has_landed_title = d_hashshashin
 		NOT = { demesne_size = 1 }
 		NOT = {
 			has_global_flag = assassins_destroyed
 		}
 		NOT = {
-			stalinist = {
+			constitutional = {
 				is_name_randomized = yes
 			}
 		}
@@ -715,159 +715,159 @@ narrative_event = {
 ###################################
 
 # Assassins attempt to kill Mongol leader
-character_event = {
-	id = 88005
-	hide_window = yes # not optimal but better than an empty event.
-	
-	has_global_flag = assassins_founded
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		OR = {
-			NOT = { has_global_flag = assassins_scatter }
-			has_global_flag = assassins_resurface
-		}
-		NOT = { has_global_flag = assassins_destroyed }
-		NOT = { has_global_flag = mongols_provoke_assassins }
-		OR = {
-			has_landed_title = e_ilkhanate
-			has_landed_title = e_golden_horde
-			any_liege = { has_landed_title = e_ilkhanate }
-			any_liege = { has_landed_title = e_golden_horde }
-		}
-		FROM = {
-			OR = {
-				title = b_bolkhov
-				title = b_ikskile
-				title = b_naumburg
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = mongols_provoke_assassins
-		if = {
-			limit = { 
-				OR = {
-					has_landed_title = e_ilkhanate
-					has_landed_title = e_golden_horde
-				}
-			}
-			random_list = {
-				40 = {
-					character_event = { id = 88006 days = 5 }
-				}
-				60 = {
-					character_event = { id = 88008 days = 5 }
-				}
-			}
-		}
-		if = {
-			limit = { 
-				OR = {
-					any_liege = { has_landed_title = e_ilkhanate }
-					any_liege = { has_landed_title = e_golden_horde }
-				}
-			}
-			random_list = {
-				40 = {
-					any_liege = { 
-						limit = {
-							OR = {
-								has_landed_title = e_ilkhanate
-								has_landed_title = e_golden_horde
-							}
-						}
-						character_event = { id = 88006 days = 5 }
-					}
-				}
-				60 = {
-					any_liege = { 
-						limit = {
-							OR = {
-								has_landed_title = e_ilkhanate
-								has_landed_title = e_golden_horde
-							}
-						}
-						character_event = { id = 88008 days = 5 }
-					}
-				}
-			}
-		}
-	}
-}
+#character_event = {
+#	id = 88005
+#	hide_window = yes # not optimal but better than an empty event.
+#	
+#	has_global_flag = assassins_founded
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		OR = {
+#			NOT = { has_global_flag = assassins_scatter }
+#			has_global_flag = assassins_resurface
+#		}
+#		NOT = { has_global_flag = assassins_destroyed }
+#		NOT = { has_global_flag = mongols_provoke_assassins }
+#		OR = {
+#			has_landed_title = e_ilkhanate
+#			has_landed_title = e_golden_horde
+#			any_liege = { has_landed_title = e_ilkhanate }
+#			any_liege = { has_landed_title = e_golden_horde }
+#		}
+#		FROM = {
+#			OR = {
+#				title = b_lincolnia_VA
+#				title = b_ikskile
+#				title = b_naumburg
+#			}
+#		}
+#	}
+#	
+#	immediate = {
+#		set_global_flag = mongols_provoke_assassins
+#		if = {
+#			limit = { 
+#				OR = {
+#					has_landed_title = e_ilkhanate
+#					has_landed_title = e_golden_horde
+#				}
+#			}
+#			random_list = {
+#				40 = {
+#					character_event = { id = 88006 days = 5 }
+#				}
+#				60 = {
+#					character_event = { id = 88008 days = 5 }
+#				}
+#			}
+#		}
+#		if = {
+#			limit = { 
+#				OR = {
+#					any_liege = { has_landed_title = e_ilkhanate }
+#					any_liege = { has_landed_title = e_golden_horde }
+#				}
+#			}
+#			random_list = {
+#				40 = {
+#					any_liege = { 
+#						limit = {
+#							OR = {
+#								has_landed_title = e_ilkhanate
+#								has_landed_title = e_golden_horde
+#							}
+#						}
+#						character_event = { id = 88006 days = 5 }
+#					}
+#				}
+#				60 = {
+#					any_liege = { 
+#						limit = {
+#							OR = {
+#								has_landed_title = e_ilkhanate
+#								has_landed_title = e_golden_horde
+#							}
+#						}
+#						character_event = { id = 88008 days = 5 }
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
 
 # They succeed!
-character_event = {
-	id = 88006
-
-	hide_window = yes # not optimal but better than an empty event.
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		ai = yes
-	}
-	
-	immediate = {
-		death = { death_reason = death_hashshashin }
-		narrative_event = { id = 88007 days = 2 }
-	}
-}
+#character_event = {
+#	id = 88006
+#
+#	hide_window = yes # not optimal but better than an empty event.
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		ai = yes
+#	}
+#	
+#	immediate = {
+#		death = { death_reason = death_hashshashin }
+#		narrative_event = { id = 88007 days = 2 }
+#	}
+#}
 
 # The Mongol leader is dead!
-narrative_event = {
-	id = 88007
-	title = "EVTNAME88007"
-	desc = "EVTDESC88007"
-	border = GFX_event_narrative_frame_intrigue
-	major = yes
-	
-	picture = "GFX_evt_shadow"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA88007"
-	}
-}
+#narrative_event = {
+#	id = 88007
+#	title = "EVTNAME88007"
+#	desc = "EVTDESC88007"
+#	border = GFX_event_narrative_frame_intrigue
+#	major = yes
+#	
+#	picture = "GFX_evt_shadow"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "EVTOPTA88007"
+#	}
+#}
 
 # They fail!
-character_event = {
-	id = 88008
-	hide_window = yes # not optimal but better than an empty event.
-	
-	is_triggered_only = yes
-	
-	option = {
-		narrative_event = { id = 88009 days = 2 }
-	}
-}
+#character_event = {
+#	id = 88008
+#	hide_window = yes # not optimal but better than an empty event.
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		narrative_event = { id = 88009 days = 2 }
+#	}
+#}
 
 # The Mongol leader has survived!
-narrative_event = {
-	id = 88009
-	title = "EVTNAME88009"
-	desc = "EVTDESC88009"
-	border = GFX_event_narrative_frame_intrigue
-	major = yes
-	
-	picture = "GFX_evt_shadow"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA88009"
-		trigger = { religion_group = old_world_cultist_group }
-	}
-	option = {
-		name = "EVTOPTA88016"
-		trigger = { 
-			NOT = { religion_group = old_world_cultist_group }
-		}
-	}
-}
+#narrative_event = {
+#	id = 88009
+#	title = "EVTNAME88009"
+#	desc = "EVTDESC88009"
+#	border = GFX_event_narrative_frame_intrigue
+#	major = yes
+#	
+#	picture = "GFX_evt_shadow"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "EVTOPTA88009"
+#		trigger = { religion_group = old_world_cultist_group }
+#	}
+#	option = {
+#		name = "EVTOPTA88016"
+#		trigger = { 
+#			NOT = { religion_group = old_world_cultist_group }
+#		}
+#	}
+#}
 
 ######################################
 # Assassins strike at decadent ruler #
@@ -1278,13 +1278,15 @@ character_event = {
 		}
 		capital_scope = {
 			NOR = {
-				region = world_india
-				region = world_himalayas
-				region = world_manchuria
-				region = world_korea
-				region = world_china
-				region = world_southeast_asia
-				region = world_japan
+				region = world_eastern_canada
+				region = world_central_canada
+				region = world_appalachia
+				region = world_northeast
+				region = world_southeast
+				region = world_mississippi
+				region = world_great_plainsUS
+				region = world_steel_belt
+				region = world_caribbean 
 			}
 		}
 		liege = {
@@ -1297,14 +1299,8 @@ character_event = {
 		}
 		NOT = { has_global_flag = assassins_destroyed }
 		OR = {
-			religion = sisukkuus
-			religion = zarist
-			religion = katerinist
-			religion = petrist
-			religion = stalinist
-			religion = leninist
-			religion = trotskyite
-			religion = titoist
+			religion = constitutional
+			religion = columbian
 		}
 		is_primary_heir = no
 		is_pretender = no
