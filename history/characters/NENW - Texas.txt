@@ -2,6 +2,7 @@
 	dynasty = 3000754
 	name = "Hank"
 	father=2700012
+	mother=2700016
 	religion = lone_star
 	culture = houstonian
 	trait = fortune_builder
@@ -17,11 +18,16 @@
 	2284.4.15 = {
 		birth = yes
 	}
+	2294.4.15 = {
+			add_friend=2700017
+			add_friend=2700021
+			add_friend=2700022
+		}
+	}
 	2304.4.15 = {
 		add_spouse=2700010
 		effect={
 			add_lover=2700010
-			add_friend=100075 #Uther
 		}
 	}
 	2666.1.1 = {
@@ -283,11 +289,13 @@
 	trait = content
 	trait = kind
 	trait = playful
-	martial = 7
-	diplomacy = 10
-	disallow_random_traits = yes
+	trait = is_fat
 	2314.2.7 = {
 		birth = yes
+	}
+	2324.4.15 = {
+			add_friend=2700020
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -301,9 +309,9 @@
 	trait = skilled_tactician
 	trait = stubborn
 	trait = diligent
-	trait = content
 	trait = zealous
 	trait = wroth
+	trait = aggressive_leader
 	martial = 10
 	disallow_random_traits = yes
 	2250.4.15 = {
@@ -311,6 +319,9 @@
 	}
 	2264.4.15 = {
 		trait=dwarf #Lost his shins
+	}
+	2366.4.15 = {
+		add_spouse=2700016
 	}
 	2666.1.1 = {
 		death = yes
@@ -377,6 +388,133 @@
 	culture = lipan
 	trait = scholarly_theologian
 	2290.10.27 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700016 = {
+	name = "Tilly"
+	female=yes
+	religion = lone_star
+	culture = houstonian
+	trait = kind
+	2252.4.15 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700017 = {
+	dynasty = 3000772
+	name = "Dale"
+	religion = lone_star
+	culture = houstonian
+	trait = fortune_builder
+	trait = stubborn
+	trait = diligent
+	trait = paranoid
+	trait = zealous
+	intrigue = 1
+	disallow_random_traits = yes
+	2284.7.12 = {
+		birth = yes
+	}
+	2294.4.15 = {
+			add_friend=2700021
+			add_friend=2700022
+		}
+	}
+	2304.4.15 = {
+		add_spouse=2700014
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700018 = {
+	dynasty = 3000775
+	name = "Nancy"
+	female=yes
+	religion = lone_star
+	culture = houstonian
+	trait = fortune_builder
+	trait = stubborn
+	trait = diligent
+	trait = paranoid
+	trait = lustful
+	disallow_random_traits = yes
+	2284.4.15 = {
+		birth = yes
+	}
+	2304.4.15 = {
+		effect={
+			add_lover=2700015
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700019 = {
+	#dynasty = redcorn
+	name = "John"
+	religion = lone_star
+	culture = albaamo #is actually Anasazi
+	trait = patient
+	trait = lustful
+	disallow_random_traits = yes
+	2284.4.15 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700020 = {
+	dynasty = 3000772
+	name = "Joseph"
+	father=2700017
+	mother=2700018
+	real_father=2700019
+	religion = lone_star
+	culture = houstonian
+	trait = rowdy
+	2314.7.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700021 = {
+	dynasty = 3000773
+	name = "Bill"
+	religion = lone_star
+	culture = houstonian
+	trait = is_fat
+	trait = depressed
+	2284.7.12 = {
+		birth = yes
+	}
+	2294.4.15 = {
+			add_friend=2700022
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700022 = {
+	dynasty = 3000774
+	name = "Jeff"
+	religion = lone_star
+	culture = houstonian
+	trait = stutter
+	trait = lustful
+	2284.7.12 = {
 		birth = yes
 	}
 	2666.1.1 = {
