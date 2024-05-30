@@ -19,6 +19,7 @@
 		birth = yes
 	}
 	2294.4.15 = {
+		effect={	
 			add_friend=2700017
 			add_friend=2700021
 			add_friend=2700022
@@ -156,6 +157,7 @@
 	trait = charitable
 	trait = trickster
 	trait = inspiring_leader
+	martial = 10
 	disallow_random_traits = yes
 	2296.1.1 = {
 		birth = yes
@@ -214,7 +216,7 @@
 		death = yes
 	}
 }
-2700008 = { 
+2700008 = {
 	dynasty = 3000764
 	name = "Pawel"
 	religion = lone_star
@@ -294,6 +296,7 @@
 		birth = yes
 	}
 	2324.4.15 = {
+		effect = {	
 			add_friend=2700020
 		}
 	}
@@ -312,6 +315,7 @@
 	trait = zealous
 	trait = wroth
 	trait = aggressive_leader
+	trait = sympathy_judaism
 	martial = 10
 	disallow_random_traits = yes
 	2250.4.15 = {
@@ -320,7 +324,7 @@
 	2264.4.15 = {
 		trait=dwarf #Lost his shins
 	}
-	2366.4.15 = {
+	2266.4.15 = {
 		add_spouse=2700016
 	}
 	2666.1.1 = {
@@ -423,12 +427,16 @@
 		birth = yes
 	}
 	2294.4.15 = {
+		effect = {	
 			add_friend=2700021
 			add_friend=2700022
 		}
 	}
 	2304.4.15 = {
-		add_spouse=2700014
+		add_spouse=2700018
+	}
+	2306.2.15 = {
+		employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
@@ -454,20 +462,26 @@
 			add_lover=2700015
 		}
 	}
+	2306.2.15 = {
+		employer = 2700000
+	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2700019 = {
-	#dynasty = redcorn
+	dynasty = 3000776
 	name = "John"
-	religion = lone_star
-	culture = albaamo #is actually Anasazi
+	religion = peyotist
+	culture = alabama #is actually Anasazi
 	trait = patient
 	trait = lustful
 	disallow_random_traits = yes
 	2284.4.15 = {
 		birth = yes
+	}
+	2306.2.15 = {
+		employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
@@ -485,6 +499,9 @@
 	2314.7.12 = {
 		birth = yes
 	}
+	2306.2.15 = {
+		employer = 2700000
+	}
 	2666.1.1 = {
 		death = yes
 	}
@@ -496,12 +513,17 @@
 	culture = houstonian
 	trait = is_fat
 	trait = depressed
+	trait = kind
 	2284.7.12 = {
 		birth = yes
 	}
 	2294.4.15 = {
+		effect = {	
 			add_friend=2700022
 		}
+	}
+	2306.2.15 = {
+		employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
@@ -514,8 +536,13 @@
 	culture = houstonian
 	trait = stutter
 	trait = lustful
+	trait = honest
+	trait = shrewd
 	2284.7.12 = {
 		birth = yes
+	}
+	2306.2.15 = {
+		employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
