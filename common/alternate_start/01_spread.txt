@@ -1,145 +1,5 @@
 adjacencies = {
-	2 = 275 # Austisland - Nidaros
-	33 = 34 # Faroe Islands - Shetland
-	34 = 36 # Shetland - Orkney
-	31 = 2139 #Cornwall - Scilly
-	204 = 827 # Barcelona - Mallorca
-	233 = 324 # Genoa - Corsica
-	849 = 846 # Canarias - Ifni
-	73 = 74 # Kent - Guines
-	478 = 479 # Monemvasia - Kaneia
-	343 = 812 # Siracusa - Malta
-	871 = 1369 # Busaso - Socotra
-	1360 = 1114 # Maldives - Mahoyadapuram
-	758 = 757 # Selukeia - Famagusta
-	31 = 103 # Cornwall - Leon
-	357 = 356 # Treviso - Venezia
-	1828 = 1829 # Zavarot - Kolguyev
-	50 = 54 # Galloway - Isle of Mann
-	50 = 5 #Galloway - Antrim
-	16 = 18 #Wexford - Dyfed
-	9 = 2140
-	47 = 2143
-	45 = 2144
-	45 = 1939
-	35 = 2146
-	35 = 2145
-	2154 = 2147
-	327 = 2492 #Pisa - Elba (to island of Elba)
-	2492 = 1574 #Elba - Gallura (covers Sardinia)
-	338 = 339 # Reggio - Messina (spreads to Sicily)
-	341 = 2129  # Trapani - Pantelleria (to island of Pantelleria)
-	473 = 474 #Arta to Cepholonia (covers that island)
-	267 = 2020 #Jyalland to Doggerland
-	70 = 2021 #Norfolk to Doggerland
-	2021 = 2513
-	100 = 2039 # Avranches - Channel Islands
-	827 = 826 #Majorca to Menorca
-	827 = 2128 #Majorca to Ibiza
-	338 = 2493 #Reggio to Aeolian Islands
-	812 = 2148 #Malta to Goza
-	474 = 1889 # Cephelonia to Zakynthos
-	2533 = 2039
-	2534 = 2039
-	2535 = 2039
-	2327 = 2330 # guinea islands
-	2269 = 2483 # saloum
-	2262 = 2316 # Maio
-	2316 = 2320 # boa vista
-	2316 = 2317
-	2317 = 2318
-	2320 = 2321
-	2321 = 2322
-	2322 = 2323
-	2323 = 2324
-	2324 = 2325
-	845 = 849
-	849 = 2102
-	2102 = 2103
-	2103 = 2286
-	2286 = 2287
-	2287 = 2288
-	2288 = 2289
-	166 = 2307
-	2307 = 2308
-	2308 = 2309
-	2309 = 2310
-	2310 = 2311
-	2311 = 2312
-	2312 = 2313
-	2313 = 2314
-	2314 = 2315
-	813 = 2024
-	1616 = 2101
-	298 = 300
-	300 = 301
-	290 = 291
-	377 = 376
-	850 = 2100
-	482 = 2118
-	2118 = 2119
-	2119 = 2120
-	2120 = 2121
-	2121 = 2122
-	2122 = 2123
-	2123 = 2124
-	2124 = 2125
-	468 = 2130
-	2130 = 2131
-	2131 = 2132
-	1360 = 2133
-	2133 = 2134
-	2134 = 2135
-	2135 = 2136
-	2318 = 2319
-	303 = 305
-	482 = 484
-	484 = 483
-	1530 = 1531
-	106 = 2137
-	106 = 2138
-	1236 = 2158
-	2158 = 2159
-	2019 = 84
-	3700 = 3701
-	2900 = 2903
-	2901 = 2902
-	2884 = 3886
-	2879 = 2877
-	2878 = 2876
-	2881 = 3885
-	2891 = 3889
-	3173 = 3296
-	2867 = 2875
-	2578 = 3892
-	2661 = 3894
-	4061 = 3893
-	2666 = 2665
-	3701 = 3705 # singapore - batam
-	3705 = 3751 # batam - indonesia
-	3347 = 2719 # mainland china - magong
-	2719 = 2720 # magong - taiwan
-	2726 = 3871 # okinawa up to japan
-	3871 = 3872
-	3872 = 3873
-	3873 = 3876
-	3876 = 3875
-	3875 = 3874
-	3874 = 3879
-	3879 = 3880
-	3880 = 3881 
-	3882 = 2730
-	2728 = 3896 # taiwan - philipines
-	3896 = 3895
-	3895 = 3024
-	4057 = 3029
-	3041 = 3039
-	3040 = 3038
-	3040 = 3042
-	3038 = 4077
-	3042 = 3047
-	4077 = 4075
-	3762 = 4066 # indonesia - java
+	
 }
 
 culture_group_spread = {
@@ -271,23 +131,23 @@ culture_group_spread = {
 			}
 		}
 	}
-	modifier = {
-		factor = 0.5 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.5 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 	modifier = {
 		factor = 14
 		OR = {
@@ -361,23 +221,23 @@ culture_spread = {
 			}
 		}
 	}
-	modifier = {
-		factor = 0.05 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.05 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 }
 
 religion_group_spawn = {
@@ -531,23 +391,23 @@ religion_group_spread = {
 			}
 		}
 	}
-	modifier = {
-		factor = 0.5 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.5 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 	modifier = {
 		factor = 25
 		religion_group = pagan_group
@@ -709,23 +569,23 @@ religion_spread = {
 			}
 		}
 	}
-	modifier = {
-		factor = 0.05 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.05 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 }
 
 dejure_kingdom_spread = {
@@ -770,23 +630,23 @@ dejure_kingdom_spread = {
 		factor = 0.6
 		distance = { where = FROM value > 1000 }
 	}
-	modifier = {
-		factor = 0.01 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROMFROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.01 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROMFROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 }
 
 dejure_empire_spread = {
@@ -831,23 +691,23 @@ dejure_empire_spread = {
 		factor = 0.6
 		distance = { where = FROM value > 1000 }
 	}
-	modifier = {
-		factor = 0.1 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROMFROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.1 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROMFROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 }
 
 holy_site_spread = {
@@ -934,21 +794,21 @@ holy_site_spread = {
 
 holding_spread = {
 	factor = 100
-	modifier = {
-		factor = 0.1 # Don't cross the channel too often
-		OR = {
-			province = 31
-			province = 103
-			province = 73
-			province = 74
-		}
-		FROMFROM = {
-			OR = {
-				province = 31
-				province = 103
-				province = 73
-				province = 74
-			}
-		}
-	}
+	# modifier = {
+		# factor = 0.1 # Don't cross the channel too often
+		# OR = {
+			# province = 31
+			# province = 103
+			# province = 73
+			# province = 74
+		# }
+		# FROMFROM = {
+			# OR = {
+				# province = 31
+				# province = 103
+				# province = 73
+				# province = 74
+			# }
+		# }
+	# }
 }
