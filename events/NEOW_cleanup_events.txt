@@ -43,6 +43,15 @@ narrative_event = {
 	#portrait = d_ibadi
 	major = yes
 	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			religion = triumphant
+			any_vassal = { religion = triumphant }
+			any_liege = { religion = triumphant }
+			any_neighbor_independent_ruler = { religion = triumphant }
+		}
+	}
+	
 	trigger = {
 		has_landed_title = k_papacy
 		has_global_flag = warlike_triumphant_flag
@@ -93,6 +102,14 @@ narrative_event = {
 	#portrait = d_ibadi
 	major = yes
 	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			religion = triumphant
+			any_vassal = { religion = triumphant }
+			any_liege = { religion = triumphant }
+			any_neighbor_independent_ruler = { religion = triumphant }
+		}
+	}
 	trigger = {
 		has_landed_title = k_papacy
 		has_global_flag = peaceful_triumphant_flag
