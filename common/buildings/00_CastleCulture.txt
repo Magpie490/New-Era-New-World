@@ -19815,4 +19815,157 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	ca_culture_east_texas_1 = {
+		desc = ca_culture_east_texas_1_desc
+		potential = {
+			OR = { 
+				culture = teksaski
+				culture_group = east_texan
+				has_building = ca_culture_east_texas_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		gold_cost = 300
+		build_time = 1095
+		carbineers = 20
+		carbineers_offensive = 0.25
+		carbineers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_east_texas_2 = {
+		desc = ca_culture_east_texas_1_desc
+		potential = {
+			OR = { 
+				culture = teksaski
+				culture_group = east_texan
+				has_building = ca_culture_east_texas_1
+				has_building = ca_culture_east_texas_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		upgrades_from = ca_culture_east_texas_1
+		gold_cost = 300
+		build_time = 1095
+		carbineers = 20
+		carbineers_offensive = 0.25
+		carbineers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_east_texas_3 = {
+		desc = ca_culture_east_texas_1_desc
+		potential = {
+			OR = { 
+				culture = teksaski
+				culture_group = east_texan
+				has_building = ca_culture_east_texas_1
+				has_building = ca_culture_east_texas_2
+				has_building = ca_culture_east_texas_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		upgrades_from = ca_culture_east_texas_2
+		gold_cost = 300
+		build_time = 1095
+		carbineers = 20
+		carbineers_offensive = 0.25
+		carbineers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_east_texas_4 = {
+		desc = ca_culture_east_texas_1_desc
+		potential = {
+			OR = { 
+				culture = teksaski
+				culture_group = east_texan
+				has_building = ca_culture_east_texas_1
+				has_building = ca_culture_east_texas_2
+				has_building = ca_culture_east_texas_3
+				has_building = ca_culture_east_texas_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = {
+				OR = {
+				culture = teksaski
+				culture_group = east_texan
+				}
+			}
+		}
+		upgrades_from = ca_culture_east_texas_3
+		gold_cost = 300
+		build_time = 1095
+		carbineers = 20
+		carbineers_offensive = 0.25
+		carbineers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 }

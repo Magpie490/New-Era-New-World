@@ -1,0 +1,102 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Special troops
+
+RETTYPE_CUL_TEX_FIRE = 
+{
+	first_type = 6
+	first_amount = 50
+	special_troops = flamethrowers
+	
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = west_texan
+			culture_group = east_texan
+			culture = tejano
+			any_realm_province = {
+				OR = {
+			culture_group = west_texan
+			culture_group = east_texan
+			culture = tejano
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		flamethrowers_defensive = 0.35
+		flamethrowers_morale = 0.35
+	}
+}
+RETTYPE_CUL_VAQUERO = 
+{
+	first_type = 3
+	first_amount = 125
+	second_type = 6
+	second_amount = 25
+	
+	special_troops = carbineers
+	maintenance_multiplier = 1.2
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = tejano
+			culture = regio 
+			culture = norteno
+			any_realm_province = {
+				OR = {
+			culture = tejano
+			culture = regio 
+			culture = norteno
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		light_cavalry_morale = 0.1
+		carbineers_offensive = 0.3
+	}
+}
+RETTYPE_CUL_TEX_COWBOY = 
+{
+	first_type = 3
+	first_amount = 100
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = carbineers
+	maintenance_multiplier = 1.2
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = west_texan
+			culture_group = east_texan
+			any_realm_province = {
+				OR = {
+			culture_group = west_texan
+			culture_group = east_texan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.15
+		carbineers_morale = 0.1
+		carbineers_offensive = 0.35
+	}
+}

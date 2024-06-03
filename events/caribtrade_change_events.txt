@@ -22,10 +22,6 @@ character_event = {
 		capital_scope = {
 			region = world_caribbean
 		}
-		has_game_rule = {
-			name = fitna_fracture
-			value = on
-		} 
 		independent = yes
 	}
 	
@@ -108,10 +104,6 @@ character_event = {
 		has_landed_title = event_target:carib_trade_title
 		is_nomadic = no
 		is_tribal = no
-		has_game_rule = {
-			name = fitna_fracture
-			value = on
-		} 
 	}
 	
 	immediate = {
@@ -129,7 +121,7 @@ character_event = {
 			#determine how much the realm size should change it
 			if = {
 				limit = { ROOT = { government = merchant_republic_government } }
-				change_variable = { which = "government_legitimacy" value = 15 }
+				change_variable = { which = "carib_trade" value = 15 }
 			}
 			if = {
 				limit = { ROOT = { any_tributary = { count = 2 } } } #4 counties
@@ -785,10 +777,6 @@ character_event = {
 				}
 			}
 		}
-		has_game_rule = {
-			name = fitna_fracture
-			value = on
-		} 
 	}
 	
 	immediate = {
@@ -849,10 +837,6 @@ character_event = {
 		has_landed_title = event_target:carib_trade_title
 		is_nomadic = no
 		is_tribal = no
-		has_game_rule = {
-			name = fitna_fracture
-			value = on
-		} 
 	}
 	
 	immediate = {
@@ -870,7 +854,7 @@ character_event = {
 			#determine how much the realm size should change it
 			if = {
 				limit = { ROOT = { government = merchant_republic_government } }
-				change_variable = { which = "government_legitimacy" value = 15 }
+				change_variable = { which = "carib_trade" value = 15 }
 			}
 			if = {
 				limit = { ROOT = { any_tributary = { count = 2 } } } #4 counties
