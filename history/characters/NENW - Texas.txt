@@ -12,6 +12,7 @@
 	trait = content
 	trait = zealous
 	trait = shy
+	trait = chaste
 	martial = 7
 	diplomacy = 10
 	disallow_random_traits = yes
@@ -161,6 +162,7 @@
 	trait = charitable
 	trait = trickster
 	trait = inspiring_leader
+	trait = robust
 	martial = 10
 	disallow_random_traits = yes
 	2296.1.1 = {
@@ -266,19 +268,26 @@
 	name = "Peggy"
 	female = yes
 	dynasty=3000766
+	father=2700024
+	mother=2700025
 	religion = lone_star
 	culture = houstonian
 	trait = scholarly_theologian
 	trait = trusting
 	trait = diligent
 	trait = content
-	trait = envious
+	trait = chaste
 	trait = proud
 	learning = 7
 	diplomacy = 10
 	disallow_random_traits = yes
 	2284.2.7 = {
 		birth = yes
+	}
+	2294.4.15 = {
+		effect={	
+			add_friend=2700018
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -330,6 +339,9 @@
 	}
 	2266.4.15 = {
 		add_spouse=2700016
+	}
+	2280.4.15 = {
+		remove_spouse=2700016
 	}
 	2666.1.1 = {
 		death = yes
@@ -421,13 +433,12 @@
 	name = "Dale"
 	religion = lone_star
 	culture = houstonian
-	trait = fortune_builder
+	trait = indulgent_wastrel
 	trait = stubborn
 	trait = diligent
-	trait = paranoid
-	trait = zealous
+	trait = trusting
+	trait = craven
 	intrigue = 1
-	disallow_random_traits = yes
 	2284.7.12 = {
 		birth = yes
 	}
@@ -453,11 +464,11 @@
 	female=yes
 	religion = lone_star
 	culture = houstonian
-	trait = fortune_builder
-	trait = stubborn
-	trait = diligent
+	trait = charismatic_negotiator
+	trait = deceitful
 	trait = paranoid
 	trait = lustful
+	trait = fair
 	disallow_random_traits = yes
 	2284.4.15 = {
 		birth = yes
@@ -481,6 +492,7 @@
 	culture = tiwa
 	trait = patient
 	trait = lustful
+	trait = robust
 	2284.4.15 = {
 		birth = yes
 	}
@@ -557,6 +569,101 @@
 	culture = trinitean
 	2284.7.12 = {
 		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2700024 = {
+	dynasty = 3000766
+	name = "Doc"
+	religion = lone_star
+	culture = montane
+	2250.4.15 = {
+		birth = yes
+	}
+	2266.4.15 = {
+		add_spouse=2700025
+	}
+	2316.1.1 = {
+		death = yes
+	}
+}
+2700025 = {
+	name = "Maddy"
+	female=yes
+	religion = lone_star
+	culture = montane
+	trait = chaste
+	2255.4.15 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700026 = {
+	dynasty = 3000766
+	name = "Hoyt"
+	father=2700024
+	mother=2700025
+	religion = lone_star
+	culture = houstonian
+	trait = flamboyant_schemer
+	trait = deceitful
+	trait = greedy
+	trait = arbitrary
+	2280.2.7 = {
+		birth = yes
+	}
+	2296.4.15 = {
+		add_spouse=2700027
+	}
+	2324.1.1 = {
+		remove_spouse=2700027
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700027 = {
+	name = "Leanne"
+	female=yes
+	religion = lone_star
+	culture = houstonian
+	trait = drunkard
+	trait = wroth
+	trait = gregarious
+	trait = brave
+	2280.2.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700028 = {
+	dynasty = 3000766
+	name = "Luanne"
+	female=yes
+	father=2700026
+	mother=2700027
+	religion = lone_star
+	culture = houstonian
+	trait = trusting
+	trait = dull
+	trait = fair
+	trait = zealous
+	trait = detached_priest
+	trait = lustful
+	trait = diligent
+	stewardship = 1
+	2306.2.13 = {
+		birth = yes
+	}
+	2324.2.15 = {
+		employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
