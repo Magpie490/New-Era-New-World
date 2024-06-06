@@ -3,7 +3,6 @@
 	dynasty = 5000006
 	dna=dhccicgacfc
 	properties=ei00o
-	#race=englishgfx
 	religion=columbian
 	culture=federalist
 	trait=strong
@@ -12,6 +11,7 @@
 	trait=lustful
 	trait=kind
 	trait=cynical
+	trait=gregarious
 	trait=grey_eminence
 	disallow_random_traits = yes
 	#give_nickname=nick_aniki
@@ -27,7 +27,7 @@
 }
 800001 = {
 	name = "Carl" #Carl Ackerman, a successful financier who recently was elected to power
-	dynasty = 4021085 
+	dynasty = 4021085
 	religion=maaravi
 	culture=arhavi
 	trait=brave
@@ -63,6 +63,11 @@
 		effect = {
 			add_artifact = spectacles
 			add_artifact = record_1
+		}
+	}
+	2316.1.1 = {
+		effect = {	
+			add_friend=800112
 		}
 	}
 	2666.03.02 = {
@@ -754,6 +759,7 @@
 800041 = {
 	name = "Mario" #Mario, a man who likes to stomp on things often
 	dynasty = 5000007
+	father=800110
 	religion = columbian
 	culture = politan
 	trait = tough_soldier
@@ -762,10 +768,16 @@
 	trait = diligent
 	trait = kind
 	trait = brave
-	trait = zealous
+	trait = gregarious
+	trait = twin
 	disallow_random_traits = yes
-	2292.6.4 = {
+	2292.10.11 = {
 		birth = yes
+	}
+	2294.4.15 = {
+		effect = {	
+			add_friend=800111
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -1924,7 +1936,7 @@
 	trait = ambitious
 	trait = zealous	
 	disallow_random_traits=yes
-	2295.12.1 = {
+	2276.12.1 = {
 		birth = yes
 		culture = politan
 	}
@@ -2089,6 +2101,188 @@
 		birth = yes
 	}	
 	2666.1.1 = {
+		death = yes
+	}
+}
+
+800109 = {
+	name = "Harry" #Norman Osborn's son
+	dynasty = 5022754
+	religion = scholastic
+	culture = catskiller #For portrait
+	father=800101
+	trait = charismatic_negotiator
+	trait = quick
+	trait = groomed
+	trait = diligent
+	trait = gregarious
+	trait = kind
+	trait = proud
+	disallow_random_traits=yes
+	2308.2.13 = {
+		birth = yes
+		culture = politan
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800110= {
+	name = "Mario" #Mario's father
+	dynasty = 5000007
+	religion = columbian
+	culture = politan
+	trait = tough_soldier
+	trait = strong
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = zealous
+	disallow_random_traits = yes
+	2252.6.4 = {
+		birth = yes
+	}
+	2310.3.3 = {
+		death = yes
+	}
+}
+800111= {
+	name = "Luigi" #Mario's brother
+	dynasty = 5000007
+	father=800110
+	religion = columbian
+	culture = politan
+	trait = thrifty_clerk
+	trait = tall
+	trait = groomed
+	trait = diligent
+	trait = kind
+	trait = craven
+	trait = shy
+	trait = twin
+	disallow_random_traits = yes
+	2292.10.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800112 = {
+	name = "Michael"
+	dynasty = 5000311 #Kucinski
+	religion=columbian
+	culture=jerseyite
+	trait=gamer
+	2306.5.27 = {
+		birth = yes
+	}
+	2316.5.27 = {
+		employer = 800005
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800113 = {
+	name = "Vella"
+	female=yes
+	dynasty = 5000312 #Wilde
+	religion=harmonic
+	culture=tennessee_korean #Vaguely ethnic
+	trait=poet
+	2298.5.27 = {
+		birth = yes
+	}
+	2316.5.27 = {
+		employer = 800005
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800114 = {
+	name = "Rory"
+	dynasty = 5000314 #Mancer
+	religion=columbian
+	culture=jerseyite
+	trait=depressed
+	trait=shy
+	2298.5.27 = {
+		birth = yes
+	}
+	2316.5.27 = {
+		employer = 800005
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800115 = {
+	name = "Claudio"
+	dynasty = 5000313 #Unkrich
+	father=800117
+	religion=columbian
+	culture=tuskegean
+	trait=sympathy_shinto
+	2298.5.27 = {
+		birth = yes
+		culture=jerseyite
+	}
+	2316.5.27 = {
+		employer = 800005
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800116 = {
+	name = "Chondra"
+	female=yes
+	dynasty = 5000313 #Unkrich
+	father=800117
+	religion=columbian
+	culture=tuskegean
+	2300.5.27 = {
+		birth = yes
+		culture=jerseyite
+	}
+	2316.5.27 = {
+		employer = 800005
+	}
+	2666.03.02 = {
+		death = yes
+	}
+}
+800117 = {
+	name = "Claudio"
+	dynasty = 5000313 #Unkrich
+	religion=columbian
+	culture=tuskegean
+	2258.5.27 = {
+		birth = yes
+		culture=jerseyite
+	}
+	2306.03.02 = {
+		death = yes
+	}
+}
+
+800118 = {
+	name = "Christopher"
+	dynasty = 5000315 #Poole
+	religion=technopolitan
+	culture=politan
+	trait=sympathy_shinto
+	trait=arbitrary
+	trait=lustful
+	trait=mastermind_theologian
+	2300.10.1 = {
+		birth = yes
+	}
+	2666.03.02 = {
 		death = yes
 	}
 }
