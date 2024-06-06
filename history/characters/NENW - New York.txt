@@ -27,7 +27,7 @@
 }
 800001 = {
 	name = "Carl" #Carl Ackerman, a successful financier who recently was elected to power
-	dynasty = 4021085 
+	dynasty = 4021085
 	religion=maaravi
 	culture=arhavi
 	trait=brave
@@ -754,6 +754,7 @@
 800041 = {
 	name = "Mario" #Mario, a man who likes to stomp on things often
 	dynasty = 5000007
+	father=800110
 	religion = columbian
 	culture = politan
 	trait = tough_soldier
@@ -762,10 +763,16 @@
 	trait = diligent
 	trait = kind
 	trait = brave
-	trait = zealous
+	trait = gregarious
+	trait = twin
 	disallow_random_traits = yes
-	2292.6.4 = {
+	2292.10.11 = {
 		birth = yes
+	}
+	2294.4.15 = {
+		effect = {	
+			add_friend=800111
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -1924,7 +1931,7 @@
 	trait = ambitious
 	trait = zealous	
 	disallow_random_traits=yes
-	2295.12.1 = {
+	2276.12.1 = {
 		birth = yes
 		culture = politan
 	}
@@ -2088,6 +2095,71 @@
 	2305.4.11 = {
 		birth = yes
 	}	
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800109 = {
+	name = "Harry" #Norman Osborn's son
+	dynasty = 5022754
+	religion = scholastic
+	culture = catskiller #For portrait
+	father=800101
+	trait = charismatic_negotiator
+	trait = quick
+	trait = groomed
+	trait = diligent
+	trait = gregarious
+	trait = kind
+	trait = proud
+	disallow_random_traits=yes
+	2308.2.13 = {
+		birth = yes
+		culture = politan
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+800110= {
+	name = "Mario" #Mario's father
+	dynasty = 5000007
+	religion = columbian
+	culture = politan
+	trait = tough_soldier
+	trait = strong
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = zealous
+	disallow_random_traits = yes
+	2252.6.4 = {
+		birth = yes
+	}
+	2310.3.3 = {
+		death = yes
+	}
+}
+800111= {
+	name = "Luigi" #Mario's brother
+	dynasty = 5000007
+	father=800110
+	religion = columbian
+	culture = politan
+	trait = thrifty_clerk
+	trait = tall
+	trait = groomed
+	trait = diligent
+	trait = kind
+	trait = craven
+	trait = shy
+	trait = twin
+	disallow_random_traits = yes
+	2292.10.11 = {
+		birth = yes
+	}
 	2666.1.1 = {
 		death = yes
 	}
