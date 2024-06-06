@@ -331,7 +331,7 @@
 	}
 }
 100024 = {
-	name = "Stephen" #Descdent of Charles Hadad, even if heavily 'murican now, former governor of illinoi
+	name = "Stephen" #Descedant of Charles Hadad, even if heavily 'murican now, former governor of illinoi
 	dynasty = 3000493
 	religion = madonnite
 	culture = prairielander
@@ -1321,5 +1321,126 @@
 	}
 	2666.1.1 = {
 		death = yes
+	}
+}
+
+100089={
+	name=Tirion
+	dynasty=5000316
+	culture=prairielander religion=delver
+	martial=7 diplomacy=7 stewardship=6 intrigue=3 learning=6
+	trait=brilliant_strategist trait=charitable trait=kind trait=diligent trait=brave trait=draconic_lodge
+	disallow_random_traits = yes
+	2279.7.21={ birth=yes }
+	2306.1.1={
+		add_spouse=100090
+	}
+	2318.5.1={
+		#create_bloodline = { #Silver Hand Founder
+		#	type = tirion
+		#}		
+	}	
+	2332.4.1={
+		remove_spouse=100090
+	}
+	2360.12.23={ death=yes }
+}
+100090={
+	name=Karandra
+	female=yes
+	culture=prairielander religion=delver
+	martial=6 diplomacy=5 stewardship=5 intrigue=4 learning=6
+	trait=underhanded_rogue trait=gregarious trait=zealous trait=stubborn trait=draconic_lodge
+	disallow_random_traits = yes
+	2286.11.21={ birth=yes }
+	2306.1.1={
+		add_spouse=100089
+	}
+	2332.4.1={
+		remove_spouse=100089
+	}
+	2333.6.1={ death=yes }
+}
+100091={
+	name=Taelan
+	dynasty=5000316
+	culture=prairielander religion=delver
+	martial=6 diplomacy=6 stewardship=6 intrigue=5 learning=7
+	trait=skilled_tactician trait=kind trait=charitable trait=gregarious trait=draconic_lodge
+	disallow_random_traits = yes
+	father=100089	#Tirion
+	mother=100090	#Karandra
+	2318.7.8={ birth=yes }
+	2334.7.8={
+		trait = robust
+	}
+	2380.7.9={ death=yes }
+}
+100092={
+	name=Saidan
+	dynasty=5000317
+	culture=prairielander religion=delver
+	martial=7 diplomacy=6 stewardship=4 intrigue=5 learning=6
+	trait=brilliant_strategist
+	trait=wroth trait=temperate trait=humble trait=brave trait=zealous trait=erudite trait=draconic_lodge
+	disallow_random_traits=yes
+	2275.11.26={
+		birth=yes
+	}
+	2280.8.10={
+		employer=100043 #Terenas
+	}
+	2318.5.1={
+		employer=100075
+		#create_bloodline = { #Silver Hand Founder
+		#	type = saidan
+		#}		
+	}
+	2335.9.9={
+		add_trait=holy_warrior
+	}
+	2338.3.15={
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+100093={
+	name=Turalyon
+	culture=prairielander religion=delver
+	martial=8 diplomacy=7 stewardship=5 intrigue=6 learning=6
+	trait=brilliant_strategist trait=brave trait=humble trait=kind trait=charitable
+	trait=diligent trait=just trait=draconic_lodge
+	2295.1.2={ birth=yes }
+	2318.5.1={
+		employer=100075
+		#create_bloodline = { #Silver Hand Founder
+		#	type = turalyon
+		#}		
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+100094={
+	name=Gavinrad
+	culture=prairielander religion=delver
+	martial=8 diplomacy=7 stewardship=7 intrigue=2 learning=7
+	trait=brilliant_strategist trait=kind trait=charitable trait=trusting trait=honest trait=draconic_lodge
+	2269.6.9={ birth=yes }
+	2303.8.10={
+		give_nickname = nick_the_dire
+	}
+	2318.5.1={
+		employer=100075
+		#create_bloodline = { #Silver Hand Founder
+		#	type = gavinrad
+		#}
+	}
+	2333.5.15={
+		death = {
+			death_reason = death_battle
+			killer = 100072
+		}
 	}
 }
