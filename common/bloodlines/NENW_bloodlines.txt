@@ -177,7 +177,7 @@ hadad_bloodline = {
 	picture = GFX_bloodlines_temp_symbol
 	flags = { historical_bloodline }
 }
-tycoon_skyrim = { #The Hero of Skyrim- Michigan
+tycoon_skyrim = { #The Hero of Skyrim-Michigan
 	inheritance = patrilineal
 	monthly_character_prestige = 0.5
 	combat_rating = 10
@@ -186,9 +186,11 @@ tycoon_skyrim = { #The Hero of Skyrim- Michigan
 	delver_opinion = 5
 	delver_reformed_opinion = 5
 	picture = GFX_bloodlines_symbol_war_knight
-		active = {
+	active = {
 		OR = {
 			religion = antiquarianist
+			religion = delver
+			religion = delver_reformed
 		}
 	}
 	flags = { historical_bloodline }
@@ -318,4 +320,105 @@ seminole_bloodline = {
 	muskogean_opinion = 15
 	picture = GFX_bloodlines_temp_symbol
 	flags = { historical_bloodline }
+}
+terenas = { #From Guardians of Azeroth
+	monthly_character_prestige = 0.2
+	vassal_opinion = 3
+	global_revolt_risk = -0.02
+
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_peace
+	flags = { historical_bloodline }
+}
+#Silver Hand
+uther = {
+	combat_rating = 8
+	monthly_character_piety = 0.1
+	delver_opinion = 10
+	delver_reformed_opinion = 10
+	bloodline_effect_great_heroes_appear = 1
+
+	inheritance = patrilineal
+	picture = GFX_bloodlines_symbol_war_knight
+	flags = { historical_bloodline bloodline_heroes }
+    active = {
+		OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+	}
+}
+tirion = {
+	combat_rating = 8
+	monthly_character_piety = 0.1
+	delver_opinion = 10
+	delver_reformed_opinion = 10
+
+	inheritance = patrilineal
+	picture = GFX_bloodlines_symbol_war_knight
+	flags = { historical_bloodline }
+    active = {
+		OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+    }
+}
+saidan = {
+	combat_rating = 8
+	monthly_character_piety = 0.1
+	delver_opinion = 10
+	delver_reformed_opinion = 10
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+
+	inheritance = patrilineal
+	picture = GFX_bloodlines_symbol_war_knight
+	flags = { historical_bloodline }
+    active = {
+        OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+    }
+}
+gavinrad = {
+	combat_rating = 8
+	monthly_character_piety = 0.1
+	delver_opinion = 10
+	delver_reformed_opinion = 10
+	command_modifier = {
+		morale_offence = 0.05
+	}
+
+	inheritance = patrilineal
+	picture = GFX_bloodlines_symbol_war_knight
+	flags = { historical_bloodline }
+    active = {
+        OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+    }
+}
+turalyon = {
+	combat_rating = 8
+	monthly_character_piety = 0.1
+	delver_opinion = 10
+	delver_reformed_opinion = 10
+	command_modifier = {
+		morale_defence = 0.05
+	}	
+
+	inheritance = patrilineal
+	picture = GFX_bloodlines_symbol_war_knight
+	flags = { historical_bloodline }
+    active = {
+        OR = {
+			religion = delver
+			religion = delver_reformed
+		}
+    }
 }
