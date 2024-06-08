@@ -418,3 +418,28 @@ turalyon = {
 		}
     }
 }
+
+mccain = {
+	bloodthirsty_gods_1_opinion = 5
+	bloodthirsty_gods_2_opinion = 5
+	bloodthirsty_gods_3_opinion = 5
+	marked_opinion = 10
+	watcher_opinion = -10
+	inheritance = patrilineal
+	allow_bastards = yes
+	bloodline_effect_prestige_sacrifice = 1 #Gain prestige on top of piety when sacrificing people to the gods by decision.
+	monthly_character_piety = 0.3
+	bloodline_effect_phonocratic = 1
+	picture = GFX_bloodlines_symbol_bloodthirsty
+	active = {
+		OR = {
+			has_religion_feature = religion_ritual_sacrifice
+			has_religion_feature = religion_feature_celtic
+			has_religion_feature = religion_feature_gator
+			religion = marked
+			religion = juggalo
+			culture_group = appalachian_group
+		}
+	}
+	flags = { bloodline_prestige_sacrifice historical_bloodline bloodline_phonocratic }
+}
