@@ -1,0 +1,200 @@
+# Rastas have dreadlocks even if they are not Jamaican
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_rastahat"
+		texturefile = "gfx\\characters\\rastahat.dds"
+		noOfFrames = 4
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_rasta_mon"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				#portrait_religion = rastafari
+				OR = {
+					portrait_has_trait = twelve_tribes
+					portrait_has_trait = nyabinghi_order
+				}
+				NOT = { portrait_culture = jamaican }
+				portrait_in_command = no
+				NOT = { portrait_has_trait = mystic }
+			}
+		}
+		
+		layer = { 
+			"GFX_african_male_hair_midage:c7"
+			"GFX_african_male_hair_behind_midage:c6"
+			"GFX_african_male_hair_midage:c4"
+			
+		}
+		allow_property_values = {
+			1 = {
+				0 = {
+					always = yes
+				}
+			}
+			5 = {
+				0 = {
+					portrait_has_trait = twelve_tribes
+				}
+				1 = {
+					portrait_has_trait = nyabinghi_order
+				}					
+			}
+			3 = {
+				0 = {
+					portrait_has_trait = twelve_tribes
+				}
+				1 = {
+					portrait_has_trait = nyabinghi_order
+				}					
+			}
+		}		
+	}
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_rasta_mon2"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_religion = rastafari
+				OR = {
+					portrait_has_trait = twelve_tribes
+					portrait_has_trait = nyabinghi_order
+				}
+				NOT = { portrait_culture = jamaican }
+				portrait_in_command = yes
+				NOT = { portrait_has_trait = mystic }
+			}
+		}
+		
+		layer = { 
+			"GFX_rastahat:c5"
+			
+		}
+		allow_property_values = {
+			1 = {
+				0 = {
+					always = yes
+				}
+			}
+			5 = {
+				0 = {
+					always = no
+				}
+				1 = {
+					OR = {
+						portrait_has_trait = twelve_tribes
+						portrait_has_trait = nyabinghi_order
+					}
+				}						
+			}
+		}		
+	}
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_rasta_mon3"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_religion = rastafari
+				OR = {
+					portrait_has_trait = twelve_tribes
+					portrait_has_trait = nyabinghi_order
+				}
+				portrait_has_trait = mystic
+			}
+		}
+		
+		layer = { 
+			"GFX_rastahat:c5"
+			"GFX_rastahat:c4"
+			
+		}
+		allow_property_values = {
+			1 = {
+				0 = {
+					always = yes
+				}
+			}
+			5 = {
+				0 = {
+					always = no
+				}
+				1 = {
+					always = no
+				}
+				2 = {
+					always = no
+				}
+				3 = {
+					portrait_has_trait = mystic
+				}				
+			}
+			3 = {
+				0 = {
+					always = no
+				}
+				1 = {
+					always = no
+				}
+				2 = {
+					always = no
+				}
+				3 = {
+					portrait_has_trait = mystic
+				}				
+			}
+		}		
+	}
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_rasta_mon4"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_clothing = yes
+				portrait_has_trait = bobo_ashanti
+			}
+		}
+		
+		layer = { 
+			"GFX_rastahat:c5"
+			"GFX_rastahat:c4"
+			
+		}
+		allow_property_values = {
+			1 = {
+				0 = {
+					NOT = { portrait_has_trait = cynical }
+				}
+			}
+			5 = {	
+				1 = {
+					portrait_has_trait = bobo_ashanti
+				}
+			}
+			3 = {
+				1 = {
+					portrait_has_trait = bobo_ashanti
+				}
+			}
+		}		
+	}
+}
