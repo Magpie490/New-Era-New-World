@@ -592,11 +592,19 @@
 	}
 }
 400034 = {
-	name = "Debbie"
+	name = "Debbie" #Countess Debbie, a luddite ruler with big ambitions
 	dynasty = 3000489
 	religion = luddite
 	culture = laikmahn
 	female = yes
+	trait = "charismatic_negotiator"
+	trait = "tall"
+	trait = "ambitious"
+	trait = "diligent"
+	trait = "envious"
+	trait = "gregarious"
+	trait = "zealous"
+	disallow_random_traits = yes
 	2293.4.23 = {
 		birth = yes
 	}
@@ -769,11 +777,12 @@
 }
 
 400044 = {
-	name = "Blake" #Son of Alexis
+	name = "Blake" #Son of Alexis, born to an unknown consort. Likely a low level servant
 	dynasty = 3000484
 	religion = gaian
 	culture = laikmahn
 	mother = 400029
+	trait = "child_of_consort_male"
 	2311.2.18 = {
 		birth = yes
 	}
@@ -795,6 +804,39 @@
 	trait = "trusting"
 	disallow_random_traits = yes
 	2295.7.20 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+400046 = {
+	name = "Walker" #Son of Debbie, born to an unknown father
+	dynasty = 3000489
+	religion = luddite
+	culture = laikmahn
+	mother = 400034
+	trait = "quick"
+	trait = "child_of_consort_male"
+	2315.3.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+400047 = {
+	name = "Bianca" #Daughter of Debbie, born to an unknown father
+	dynasty = 3000489
+	religion = luddite
+	culture = laikmahn
+	mother = 400034
+	female = yes
+	trait = "fair"
+	trait = "child_of_consort_male"
+	2317.2.11 = {
 		birth = yes
 	}
 	2666.1.1 = {
