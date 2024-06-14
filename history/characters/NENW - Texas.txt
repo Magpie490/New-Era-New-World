@@ -163,6 +163,7 @@
 	trait = trickster
 	trait = inspiring_leader
 	trait = robust
+	trait = legendary_duelist
 	martial = 10
 	disallow_random_traits = yes
 	2296.1.1 = {
@@ -172,7 +173,7 @@
 		death = yes
 	}
 }
-2700006 = { #A humble men who is a scholar of triumphant theology
+2700006 = { #A humble man who is a scholar of triumphant theology
 	dynasty = 3000760
 	name = "Werner"
 	religion = triumphant
@@ -313,6 +314,7 @@
 	2324.4.15 = {
 		effect = {	
 			add_friend=2700020
+			add_friend=2700031
 		}
 	}
 	2666.1.1 = {
@@ -667,6 +669,72 @@
 		birth = yes
 	}
 	2324.2.15 = {
+		employer = 2700000
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700029 = {
+	dynasty = 3000778
+	name = "Kahn"
+	religion = theravada
+	culture = tennessee_korean #laotian
+	trait = scholarly_theologian
+	trait = stubborn
+	trait = diligent
+	trait = proud
+	2284.4.15 = {
+		birth = yes
+	}
+	2304.4.15 = {
+		add_spouse=2700030
+		effect={
+			add_lover=2700030
+		}
+	}
+	2324.6.15 = {
+		employer = 2700000
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700030 = {
+	name = "Minh"
+	female=yes
+	religion = theravada
+	culture = tennessee_korean #laotian
+	trait = charismatic_negotiator
+	trait = gregarious
+	trait = diligent
+	trait = proud
+	2284.4.15 = {
+		birth = yes
+	}
+	2324.6.15 = {
+		employer = 2700000
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700031 = {
+	dynasty = 3000778
+	name = "Connie"
+	female=yes
+	father=2700029
+	mother=2700030
+	religion = theravada
+	culture = tennessee_korean #laotian
+	trait = quick
+	trait = patient
+	trait = diligent
+	trait = timid
+	2314.2.7 = {
+		birth = yes
+	}
+	2324.6.15 = {
 		employer = 2700000
 	}
 	2666.1.1 = {

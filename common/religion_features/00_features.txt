@@ -513,6 +513,7 @@ religion_doctrine = {
 		
 		trigger = {
 			NOR = {
+				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_feature_baltic_2
 			}
 		}
@@ -544,7 +545,7 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_baltic_2
-				has_selected_religion_feature = religion_feature_novelist
+				has_selected_religion_feature = religion_feature_novelist_2
 			}
 		}
 		effect = {
@@ -598,7 +599,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_maunaxite #Redundant	
 				has_selected_religion_feature = religion_feature_starist #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
-				has_selected_religion_feature = religion_feature_novelist #Redundant
+				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
 				has_selected_religion_feature = religion_ritual_sacrifice
 			}
 		}
@@ -624,7 +625,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_moism
 				has_selected_religion_feature = religion_feature_finnish
 				has_selected_religion_feature = religion_feature_nousthreskeia
-				has_selected_religion_feature = religion_feature_novelist
+				has_selected_religion_feature = religion_feature_novelist_2
 			}
 		}
 		effect = {
@@ -670,6 +671,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_monastic
 		trigger = {
 			NOR = {
+				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_feature_starist
 				has_selected_religion_feature = religion_ritual_sacrifice
 			}
@@ -1227,7 +1229,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_defensive
 				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_tengri #Redundant
-				has_selected_religion_feature = religion_feature_novelist #Redundant
+				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
 			}
 		}
 		effect = {
@@ -1538,6 +1540,7 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_no_leader
+				has_selected_religion_feature = religion_feature_novelist
 				religion_group = christian #Random World redundancy.
 			}
 		}
@@ -2098,10 +2101,54 @@ religion_doctrine = {
 			religion = novelist_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_no_leader
+				has_selected_religion_feature = religion_beatification #redundant
+				has_selected_religion_feature = religion_monastic #redundant
+				has_selected_religion_feature = religion_pronatal #redundant
+				has_selected_religion_feature = religion_feature_novelist_2
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
+			custom_tooltip = { text = tooltip_religion_feature_monastic }
+			custom_tooltip = { text = tooltip_religion_feature_fertility_bonus }
+			custom_tooltip = { text = tooltip_religion_feature_dynasty_bonus }
+			custom_tooltip = { text = tooltip_religion_feature_improve_children }
+			custom_tooltip = { text = tooltip_religion_feature_love_likely }
+
+			hidden_tooltip = {
+				set_character_modifier = {
+					dynasty_opinion = 15
+					fertility = 0.15
+					learning = 2
+					key = "FAMILY_ATTR_RELIGION"
+				}
+			}	
+			
+
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_novelist_2 = {
+		picture = GFX_religion_feature_novelist_2
+		potential = {
+			has_game_started = yes
+			religion = novelist_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = novelist_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_no_leader
 				has_selected_religion_feature = religion_relentless #redundant
 				has_selected_religion_feature = religion_meritocratic #redundant
 				has_selected_religion_feature = religion_holy_family
 				has_selected_religion_feature = religion_stable
+				has_selected_religion_feature = religion_feature_novelist
 			}
 		}
 		effect = {
