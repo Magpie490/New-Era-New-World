@@ -1,12 +1,14 @@
-2700000 = { #King of Houston, who some believe to be not even a real texan... change face later and add family
+2700000 = { #King of Houston, who some believe to be not even a real texan...
 	dynasty = 3000754
+	dna="cabaixhbbak"
+	properties="cl0e0d"
 	name = "Hank"
 	father=2700012
 	mother=2700016
 	religion = lone_star
 	culture = houstonian
 	trait = fortune_builder
-	trait = barren
+	trait = barren #narrow urethra
 	trait = stubborn
 	trait = diligent
 	trait = content
@@ -347,6 +349,9 @@
 	2280.4.15 = {
 		remove_spouse=2700016
 	}
+	2286.4.15 = {
+		add_spouse=2700032
+	}
 	2666.1.1 = {
 		death = yes
 	}
@@ -456,7 +461,7 @@
 		add_spouse=2700018
 	}
 	2306.2.15 = {
-		employer = 2700000
+		#employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
@@ -483,7 +488,7 @@
 		}
 	}
 	2306.2.15 = {
-		employer = 2700000
+		employer = 2700017
 	}
 	2666.1.1 = {
 		death = yes
@@ -501,7 +506,7 @@
 		birth = yes
 	}
 	2306.2.15 = {
-		employer = 2700000
+		employer = 2700017
 	}
 	2666.1.1 = {
 		death = yes
@@ -519,7 +524,7 @@
 	trait = playful
 	2314.7.12 = {
 		birth = yes
-		employer = 2700000
+		employer = 2700017
 	}
 	2666.1.1 = {
 		death = yes
@@ -528,14 +533,26 @@
 2700021 = {
 	dynasty = 3000773
 	name = "Bill"
+	dna="aeilehidcan"
+	properties="xo0e0k"
+	father = 250070
 	religion = lone_star
-	culture = houstonian
+	culture = cajun
+	trait = tough_soldier
 	trait = is_fat
 	trait = depressed
 	trait = kind
 	trait = gluttonous
+	trait = uncouth
+	trait = trusting
 	2284.7.12 = {
 		birth = yes
+		effect = {
+			add_claim=k_acadiana
+			add_claim=d_orleans
+			add_claim=c_new_orleans
+			add_claim=b_matairie_LA
+		}
 	}
 	2294.4.15 = {
 		effect = {	
@@ -543,7 +560,7 @@
 		}
 	}
 	2306.2.15 = {
-		employer = 2700000
+		#employer = 2700000
 	}
 	2666.1.1 = {
 		death = yes
@@ -558,6 +575,7 @@
 	trait = lustful
 	trait = honest
 	trait = shrewd
+	trait = seducer
 	2284.7.12 = {
 		birth = yes
 	}
@@ -736,6 +754,23 @@
 	}
 	2324.6.15 = {
 		employer = 2700000
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700032 = {
+	name = "Dierdre"
+	female = yes
+	religion = lone_star
+	culture = houstonian
+	trait = naive_appeaser
+	trait = trusting
+	trait = kind
+	trait = content
+	trait = humble
+	2285.12.17 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
