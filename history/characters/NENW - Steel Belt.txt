@@ -341,6 +341,7 @@
 	dynasty = 3000493
 	religion = madonnite
 	culture = prairielander
+	father = 100099
 	trait = charismatic_negotiator
 	trait = stutter
 	trait = diligent
@@ -1471,3 +1472,92 @@
 		death = yes
 	}
 }
+
+#Hadad family
+100096 = {
+	name = "Charles" #Charles Hadad, founder of the Hadad governate in central Illinois.
+	dynasty = 3000493
+	religion = chaldean
+	culture = ameroassyrian
+	trait = charismatic_negotiator
+	trait = shrewd
+	trait = administrator
+	trait = diligent
+	trait = patient
+	trait = ambitious
+	trait = brave	
+	disallow_random_traits = yes
+	2150.3.18 = {
+		birth = yes		
+	}
+	2205.1.2 = {
+		death = yes
+	}
+}
+
+100097 = {
+	name = "John" #John I son of Charles, inherited his father's position assimilated into the local culture
+	dynasty = 3000493
+	religion = madonnite
+	culture = ameroassyrian
+	father = 100096
+	trait = thrifty_clerk
+	trait = quick
+	trait = administrator
+	trait = diligent
+	trait = patient
+	trait = charitable
+	trait = gregarious	
+	disallow_random_traits = yes
+	2180.5.2 = {
+		birth = yes
+		culture = prairielander
+	}
+	2230.4.2 = {
+		death = yes
+	}
+}
+
+100098 = {
+	name = "John" #John II son of John I, a poor excuse of a governor who risked his family's desposition
+	dynasty = 3000493
+	religion = madonnite
+	culture = prairielander
+	father = 100097
+	trait = indulgent_wastrel
+	trait = slow
+	trait = feeble
+	trait = chaste
+	trait = slothful
+	trait = craven
+	trait = stubborn	
+	disallow_random_traits = yes
+	2210.6.12 = {
+		birth = yes		
+	}
+	2260.11.2 = {
+		death = yes
+	}
+}
+
+100099 = {
+	name = "Christopher" #Christopher son of John II, forced to clean up his father's messy administration
+	dynasty = 3000493
+	religion = madonnite
+	culture = prairielander
+	father = 100098
+	trait = fortune_builder
+	trait = stressed
+	trait = diligent
+	trait = brave
+	trait = just
+	trait = temperate
+	disallow_random_traits = yes
+	2240.2.1 = {
+		birth = yes		
+	}
+	2305.1.2 = {
+		death = yes
+	}
+}
+#End of Hadad family
