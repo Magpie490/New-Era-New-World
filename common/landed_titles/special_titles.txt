@@ -383,6 +383,8 @@ e_usa = {
 	color = { 0 43 96 }
 	color2 = { 220 220 0 }
 	
+	capital = 63 #Washington
+	
 	title = "PRESIDENT_COLUMB"
 	foa = "PRESIDENT_COLUMB_FOA"
 	title_female = "PRESIDENT_COLUMB"
@@ -400,6 +402,101 @@ e_usa = {
 		}
 	}
 }
+e_boswash = {
+	color = { 0 38 255 }
+	color2 = { 220 220 220 }
+	
+	capital = 63 #Washington
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_boswash = {
+					is_titular = yes
+				}
+			}
+			e_boswash = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_mississippi = {
+	color={ 0 131 255 }
+	color2={ 220 220 20 }
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_mississippi = {
+					is_titular = yes
+				}
+			}
+			e_mississippi = {
+				is_titular = no
+			}
+		}
+	}
+	capital = 1056 # Cahokia
+}
+e_new_afrika = {
+	color = { 0 133 63 }
+	color2 = { 220 220 220 }
+	
+	capital = 1128
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_new_afrika = {
+					is_titular = yes
+				}
+			}
+			e_new_afrika = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_wabanakia = {
+	color = { 234 235 236 }
+	color2 = { 220 220 220 }
+	
+	capital = 3696
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_wabanakia = {
+					is_titular = yes
+				}
+			}
+			e_wabanakia = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_lenape = {
+	color = { 235 34 36 }
+	color2 = { 220 220 220 }
+		
+	capital = 27
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_lenape = {
+					is_titular = yes
+				}
+			}
+			e_lenape = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
@@ -431,34 +528,4 @@ e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
 	can_be_usurped = no
 	
 	extra_ai_eval_troops = 7500
-}
-
-e_mississippi = {
-	color={ 0 131 255 }
-	color2={ 220 220 20 }
-
-	allow = {
-		conditional_tooltip = {
-			trigger = {
-				e_mississippi = {
-					is_titular = yes
-				}
-			}
-			e_mississippi = {
-				is_titular = no
-			}
-		}
-	}
-	capital = 1056 # Cahokia
-}
-
-d_newark= {
-	color = { 0 45 105 }
-	color2 = { 152 196 21 }
-	
-	capital = 4 # Palisades
-
-	allow = {
-		always = no
-	}
 }

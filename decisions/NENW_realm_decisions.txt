@@ -67,15 +67,14 @@ decisions = {
 			has_regent = no 
 		}
 		allow = { 
-			completely_controls = d_rhode_island
-			completely_controls = d_boston
+			
+			completely_controls = d_plymouth
 			completely_controls = d_nantucket
 			prestige = 500
 		}
 		effect = { 
 			k_wampanoag = { gain_title_effect = yes }
-			d_rhode_island = { de_jure_liege = k_wampanoag }
-			d_boston = { de_jure_liege = k_wampanoag }
+			d_plymouth = { de_jure_liege = k_wampanoag }
 			d_nantucket = { de_jure_liege = k_wampanoag }
 		}
 	}
@@ -722,6 +721,272 @@ decisions = {
 			factor = 1
 		}
 	}	
+	form_boswash = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = bostonian
+				culture_group = high_american
+				culture = crabber
+				culture = nutmegger
+				culture = proviguese
+			}
+			e_boswash = {
+				is_titular = yes
+				has_holder = no
+			}
+			NOT = {
+				religion = constitutional
+				culture = southron
+				culture = keystoner
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_massachusets
+			completely_controls = k_new_york
+			completely_controls = k_jersey
+			completely_controls = k_delmarva
+			completely_controls = k_columbia
+			completely_controls = d_nova
+			completely_controls = d_philadelphia
+			#if they exist
+			completely_controls = k_wampanoag
+			completely_controls = k_connecticut
+			completely_controls = k_rhode_island
+		}
+		effect = {
+			e_boswash = {
+				gain_empire_effect = yes
+				add_law = succ_byzantine_elective
+				add_law = ze_administration_laws_2
+			}
+			k_massachusets = { de_jure_liege = e_boswash }
+			k_new_york = { de_jure_liege = e_boswash }
+			k_jersey = { de_jure_liege = e_boswash }
+			k_delmarva = { de_jure_liege = e_boswash }
+			k_columbia = { de_jure_liege = e_boswash }
+			k_wampanoag = { de_jure_liege = e_boswash }
+			k_rhode_island = { de_jure_liege = e_boswash }
+			k_connecticut = { de_jure_liege = e_boswash }
+			d_nova = { de_jure_liege = k_columbia }
+			d_philadelphia = { de_jure_liege = k_jersey }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_louisiana = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			OR = {
+				culture = kreyol
+				culture = crawfisher
+			}
+			k_louisiana = {
+				is_titular = yes
+				has_holder = no 
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = { 
+			completely_controls = d_vernon
+			completely_controls = d_orleans
+			completely_controls = d_atchafalaya
+			completely_controls = d_acadiana
+			completely_controls = d_west_florida
+			completely_controls = d_natchitoches
+			completely_controls = d_alexandria
+			completely_controls = d_ruston
+			completely_controls = d_alluvia
+		}
+		effect = {
+			k_louisiana = { gain_title_effect = yes }
+			d_vernon = { de_jure_liege = k_louisiana }
+			d_orleans = { de_jure_liege = k_louisiana }
+			d_atchafalaya = { de_jure_liege = k_louisiana }
+			d_acadiana = { de_jure_liege = k_louisiana }
+			d_west_florida = { de_jure_liege = k_louisiana }
+			d_natchitoches = { de_jure_liege = k_louisiana }
+			d_alexandria = { de_jure_liege = k_louisiana }
+			d_ruston = { de_jure_liege = k_louisiana }
+			d_alluvia = { de_jure_liege = k_louisiana }
+		}
+	}
+	form_new_afrika = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture_group = afrosoutherner
+			e_new_afrika = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_palmetto
+			completely_controls = k_magnolia
+			completely_controls = k_georgia
+			completely_controls = k_dixie
+			completely_controls = k_alabama
+			completely_controls = k_texarkana
+			completely_controls = k_acadiana
+			completely_controls = k_louisiana
+			completely_controls = k_gullah
+		}
+		effect = {
+			e_new_afrika = { gain_empire_effect = yes }
+			k_palmetto = { de_jure_liege = e_new_afrika }
+			k_magnolia = { de_jure_liege = e_new_afrika }
+			k_georgia = { de_jure_liege = e_new_afrika }
+			k_dixie = { de_jure_liege = e_new_afrika }
+			k_alabama = { de_jure_liege = e_new_afrika }
+			k_texarkana = { de_jure_liege = e_new_afrika }
+			k_acadiana = { de_jure_liege = e_new_afrika }
+			k_louisiana = { de_jure_liege = e_new_afrika }
+			k_gullah = { de_jure_liege = e_new_afrika }
+			k_birmingham = { de_jure_liege = e_new_afrika }
+			k_tuskegee = { de_jure_liege = e_new_afrika }
+		}
+	}
+	form_gullah = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			culture = gullah
+			k_gullah = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = d_lowcountry
+			completely_controls = d_altamaha
+		}
+		effect = {
+			k_gullah = { gain_title_effect = yes }
+			d_altamaha = { de_jure_liege = k_gullah }
+			d_lowcountry = { de_jure_liege = k_gullah }
+		}
+	}
+	form_wabanaki = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = mikmaq
+				culture = penobscot
+			}
+			e_wabanakia = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_aroostook
+			completely_controls = k_lobsterland
+			completely_controls = k_new_brunswick
+			completely_controls = k_nova_scotia
+			completely_controls = k_prince_edward_island
+			completely_controls = k_newfoundland
+			completely_controls = k_beauce_gaspe
+			completely_controls = k_maine #if it exists
+			completely_controls = k_new_acadia #if it exists
+			completely_controls = d_east_champlain
+			completely_controls = d_nek
+			completely_controls = d_pennacook
+		}
+		effect = {
+			e_wabanakia = { gain_empire_effect = yes }
+			k_aroostook = { de_jure_liege = e_wabanakia }
+			k_lobsterland = { de_jure_liege = e_wabanakia }
+			k_new_brunswick = { de_jure_liege = e_wabanakia }
+			k_nova_scotia = { de_jure_liege = e_wabanakia }
+			k_prince_edward_island = { de_jure_liege = e_wabanakia }
+			k_newfoundland = { de_jure_liege = e_wabanakia }
+			k_maine = { de_jure_liege = e_wabanakia }
+			k_new_acadia = { de_jure_liege = e_wabanakia }
+			k_beauce_gaspe = { de_jure_liege = e_wabanakia }
+			k_wabanakik = { de_jure_liege = e_wabanakia }
+			d_east_champlain = { de_jure_liege = k_wabanakik }
+			d_nek = { de_jure_liege = k_wabanakik }
+			d_pennacook = { de_jure_liege = k_wabanakik }
+		}
+	}
+	form_lenape = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			culture = lenape
+			e_lenape = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = d_delaware_valley
+			completely_controls = d_jersey
+			completely_controls = d_philadelphia
+			completely_controls = d_cersey
+			completely_controls = d_north_jersey
+			completely_controls = d_skylands
+			completely_controls = d_new_york
+			completely_controls = d_long_island
+			completely_controls = d_charrland
+			completely_controls = d_poconos
+			completely_controls = d_catskill
+			completely_controls = d_west_hudson
+			completely_controls = d_east_hudson
+		}
+		effect = {
+			e_lenape = { gain_title_effect = yes }
+			k_eastsylvania = { de_jure_liege = e_lenape }
+			k_jersey = { de_jure_liege = e_lenape }
+			k_delaware = { de_jure_liege = e_lenape }
+			k_new_york = { de_jure_liege = e_lenape }
+			k_upstachia = { de_jure_liege = e_lenape }
+			d_three_mile_island = { de_jure_liege = k_columbia }
+			d_mohawk_valley = { de_jure_liege = k_adirondack }
+			d_saratoga = { de_jure_liege = k_adirondack }
+			d_delaware_valley = { de_jure_liege = k_delaware }
+			if = { #take duchies from Enysee if they arnt connecticut already
+				limit = {
+					k_connecticut = { is_titular = yes }
+				}
+				#d_hartford = { de_jure_liege = k_massachusets } 
+				d_bridgeport = { de_jure_liege = k_massachusets }
+				d_new_haven = { de_jure_liege = k_massachusets }
+				d_norwich = { de_jure_liege = k_massachusets }
+			}
+		}
+	}
 	organize_sixtyninth_infantry_regiment = {
 		only_independent = yes
 		ai_check_interval = 24

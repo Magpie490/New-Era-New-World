@@ -1485,6 +1485,18 @@ e_columbia = {
 				b_greeley_PA = {}
 				b_dingmans_ferry_PA = {}
 			}
+			c_chemung = {
+				color={ 123 137 122 }
+				color2={ 220 220 0 }
+
+				b_elmira_NY = {}
+				b_horseheads_NY = {}
+				b_southport_NY = {}
+				b_waverly_NY = {}
+				b_sayre_PA = {}
+				b_athens_PA = {}
+				b_owego_NY = {}
+			}
 			c_ricketts = {
 				color={ 108 120 139 }
 				color2={ 220 220 0 }
@@ -4030,4 +4042,22 @@ e_columbia = {
 		
 		allow = { always = no }
 	}
-}
+	k_wabanakik = {
+		color = { 34 235 36 }
+		color2 = { 220 220 220 }
+		
+		capital = 688 # Laconia
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_wabanakik = {
+						is_titular = yes
+					}
+				}
+				k_wabanakik = {
+					is_titular = no
+				}
+			}
+		}
+	}
