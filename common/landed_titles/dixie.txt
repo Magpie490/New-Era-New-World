@@ -1086,7 +1086,7 @@ e_dixie = {
 		# Crusade target weight
 		constitutional = 200
 		columbian = 200
-		#puritan = 5
+		puritan = 5
 		thelemic_reformed = 50
 
 		capital = 164
@@ -1400,6 +1400,25 @@ e_dixie = {
 		color2 = { 107 69 245 }
 		
 		capital = 1036
+	}
+	k_gullah = {
+		color = { 35 105 13 }
+		color2 = { 220 220 0 }
+		
+		capital = 164
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_gullah = {
+						is_titular = yes
+					}
+				}
+				k_gullah = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	d_falconia = {
 		color = { 125 27 27 }
