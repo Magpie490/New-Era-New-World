@@ -76,6 +76,7 @@ tycoon_elizabeth = { #Nine Great Tycoons Bloodline
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 			religion = antiquarianist
+			religion = antiquarianist_reformed
 			religion = loyalist
 		}
 	}
@@ -103,7 +104,7 @@ naundorff_bloodline = { #bourbon pretenders
 	inheritance = patrilineal
 	allow_bastards = no
 	monthly_character_prestige = 0.2
-	franco-canadian_opinion = 10
+	franco_canadian_opinion = 10
 	christian_opinion = 5
 	diplomacy = 1
 	flags = { historical_bloodline }
@@ -129,6 +130,7 @@ tycoon_tim = { #Nine Great Tycoons Bloodline
 		OR = {
 			religion_group = christian
 			religion = antiquarianist
+			religion = antiquarianist_reformed
 			religion = loyalist
 		}
 	}
@@ -186,6 +188,7 @@ tycoon_skyrim = { #The Hero of Skyrim-Michigan
 	active = {
 		OR = {
 			religion = antiquarianist
+			religion = antiquarianist_reformed
 			religion = delver
 			religion = delver_reformed
 		}
@@ -443,4 +446,13 @@ mccain = {
 		}
 	}
 	flags = { bloodline_prestige_sacrifice historical_bloodline bloodline_phonocratic }
+}
+tenskwatawa = {
+	ojibwe_opinion = 5
+	peyotist_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	monthly_character_piety = 0.3
+	picture = GFX_bloodlines_symbol_benevolent
+	flags = { historical_bloodline }
 }
