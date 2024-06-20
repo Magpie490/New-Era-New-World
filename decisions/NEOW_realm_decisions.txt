@@ -1158,6 +1158,20 @@ decisions = {
 					trait = socializer
 					realm_diplomacy = 35
 				}
+				AND = {
+					ai = yes 
+					OR = {
+						realm_diplomacy = 35
+						AND = {
+							trait = grey_eminence
+							realm_diplomacy = 30
+						}
+						AND = {
+							trait = socializer
+							realm_diplomacy = 30
+						}
+					}
+				}
 			}
 			ruled_years = 2
 			NOT = {
@@ -1203,6 +1217,20 @@ decisions = {
 				AND = {
 					trait = strategist
 					realm_martial = 35
+				}
+				AND = {
+					ai = yes 
+					OR = {
+						realm_martial = 35
+						AND = {
+							trait = brilliant_strategist
+							realm_martial = 30
+						}
+						AND = {
+							trait = strategist
+							realm_martial = 30
+						}
+					}
 				}
 			}
 			ruled_years = 2
@@ -1250,6 +1278,20 @@ decisions = {
 				AND = {
 					trait = administrator
 					realm_stewardship = 35
+				}
+				AND = {
+					ai = yes 
+					OR = {
+						realm_stewardship = 35
+						AND = {
+							trait = midas_touched
+							realm_stewardship = 30
+						}
+						AND = {
+							trait = administrator
+							realm_stewardship = 30
+						}
+					}
 				}
 			}
 			ruled_years = 2
@@ -1299,6 +1341,20 @@ decisions = {
 					trait = schemer
 					realm_intrigue = 35
 				}
+				AND = {
+					ai = yes 
+					OR = {
+						realm_intrigue = 35
+						AND = {
+							trait = elusive_shadow
+							realm_intrigue = 30
+						}
+						AND = {
+							trait = schemer
+							realm_intrigue = 30
+						}
+					}
+				}
 			}
 			ruled_years = 2
 			NOT = {
@@ -1346,6 +1402,20 @@ decisions = {
 				AND = {
 					trait = scholar
 					realm_learning = 35
+				}
+				AND = {
+					ai = yes 
+					OR = {
+						realm_learning = 35
+						AND = {
+							trait = mastermind_theologian
+							realm_learning = 30
+						}
+						AND = {
+							trait = scholar
+							realm_learning = 30
+						}
+					}
 				}
 			}
 			ruled_years = 2
