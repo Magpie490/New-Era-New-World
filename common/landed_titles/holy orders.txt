@@ -472,6 +472,37 @@ d_general_militia = { #General Militia
 	
 	mercenary_type = knights_hospitaler_composition
 }
+
+d_sec = { #Southeastern Conference
+	color={ 23 21 76 }
+	color2={ 255 255 255 }
+	
+	capital = 1036 # Birmingham
+	
+	short_name = yes
+	
+	title = "COMMISSIONER"
+	foa = "COMMISSIONER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = fiskean
+	
+	# Parent Religion 
+	religion = gridiron
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+
 d_hashshashin = {
 	color={ 14 40 120 }
 	color2={ 220 220 20 }
