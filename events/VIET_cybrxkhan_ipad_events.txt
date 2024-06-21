@@ -514,8 +514,12 @@ character_event = {
 			is_abroad = no
 			OR = {
 				culture_group = byzantine
+				culture_group = amerohellene
 				capital_scope = {
-					culture_group = byzantine
+					OR = {
+						culture_group = byzantine
+						culture_group = amerohellene
+					}
 				}
 			}
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -918,11 +922,15 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		NOT = {
+		NOR = {
 			culture_group = byzantine
+			culture_group = amerohellene
 		}
 		any_demesne_province = {
-			culture_group = byzantine
+			OR = {
+				culture_group = byzantine
+				culture_group = amerohellene
+			}
 		}
 		NOT = { has_character_flag = VIET_learning_bitter_greek_greens }
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -1018,6 +1026,7 @@ character_event = {
 			in_command = no
 			OR = {
 				culture_group = byzantine
+				culture_group = amerohellene
 				culture_group = albanian
 				culture_group = lusophone
 				culture_group = hispanophone
@@ -1213,6 +1222,7 @@ character_event = {
 		is_abroad = no
 		OR = {
 				culture_group = byzantine
+				culture_group = amerohellene
 				culture_group = albanian
 				culture_group = lusophone
 				culture_group = hispanophone
@@ -4692,6 +4702,7 @@ character_event = {
 			culture_group = celtic
 			culture_group = hispanophone
 			culture_group = byzantine
+			culture_group = amerohellene
 		}
 	}
 	

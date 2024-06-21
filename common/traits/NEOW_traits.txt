@@ -976,6 +976,7 @@ japanese_bad_honour = {
 	potential =  {
 		OR = {
 			culture_group = japan_group
+			culture_group = amero_japonic
 			religion = shinto
 			religion = bushinto
 			religion = buddhoshinto
@@ -996,6 +997,7 @@ japanese_1_honour = {
 	potential =  {
 		OR = {
 			culture_group = japan_group
+			culture_group = amero_japonic
 			religion = shinto
 			religion = bushinto
 			religion = buddhoshinto
@@ -1017,6 +1019,7 @@ japanese_2_honour = {
 	potential =  {
 		OR = {
 			culture_group = japan_group
+			culture_group = amero_japonic
 			religion = shinto
 			religion = bushinto
 			religion = buddhoshinto
@@ -1040,6 +1043,7 @@ japanese_3_honour = {
 	potential =  {
 		OR = {
 			culture_group = japan_group
+			culture_group = amero_japonic
 			religion = shinto
 			religion = bushinto
 			religion = buddhoshinto
@@ -3842,12 +3846,11 @@ orthodox_mykola = {
 	    orthodox_vasiliy
 	}
 
-	opposite_opinion = 0
+	opposite_opinion = -5
 	same_opinion = 5
-    folklorist_opinion = 10
-	
-	stewardship = 2
-	global_revolt_risk = -0.01
+
+	monthly_character_piety = 0.75
+	monthly_character_prestige = -0.25
 	
 	potential = { religion = orthodox }
 	religious_branch = orthodox
@@ -3864,12 +3867,11 @@ orthodox_vasiliy = {
 	   #orthodox_vasiliy
 	}
 
-	opposite_opinion = -5
+	opposite_opinion = 0
 	same_opinion = 5
-
-	monthly_character_piety = 0.75
-	monthly_character_prestige = -0.25
 	
+	stewardship = 2
+	global_revolt_risk = -0.01
 	
 	potential = { religion = orthodox }
 	religious_branch = orthodox
