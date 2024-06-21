@@ -3771,7 +3771,7 @@ orthodox_athos = {
 	   #orthodox_athos
 	    orthodox_andrian
 	    orthodox_giorgi
-	    orthodox_mykola
+	    orthodox_nicholas
 	    orthodox_vasiliy
 	}
     same_religion_opinion = -10
@@ -3795,7 +3795,7 @@ orthodox_andrian = {
 	    orthodox_athos
 	   #orthodox_andrian
 	    orthodox_giorgi
-	    orthodox_mykola
+	    orthodox_nicholas
 	    orthodox_vasiliy
 	}
 
@@ -3818,13 +3818,13 @@ orthodox_giorgi = {
 	    orthodox_athos
 	    orthodox_andrian
 	   #orthodox_giorgi
-	    orthodox_mykola
+	    orthodox_nicholas
 	    orthodox_vasiliy
 	}
 
 	opposite_opinion = -5
     same_opinion = 5
-	infidel_opinion = -25
+	infidel_opinion = -10
 	
 	ai_zeal = 15
 	command_modifier = {
@@ -3837,20 +3837,23 @@ orthodox_giorgi = {
 	religious = yes
 	ruler_designer_cost = 0
 }
-orthodox_mykola = {
+orthodox_nicholas = {
 	opposites = {
 	    orthodox_athos
 	    orthodox_andrian
 	    orthodox_giorgi
-	   #orthodox_mykola
+	   #orthodox_nicholas
 	    orthodox_vasiliy
 	}
 
 	opposite_opinion = -5
 	same_opinion = 5
 
-	monthly_character_piety = 0.75
-	monthly_character_prestige = -0.25
+	learning = 1
+	stewardship = 1
+	tradevalue = 2
+	days_of_supply = 10
+	galleys_perc = 0.05
 	
 	potential = { religion = orthodox }
 	religious_branch = orthodox
@@ -3863,7 +3866,7 @@ orthodox_vasiliy = {
 	    orthodox_athos
 	    orthodox_andrian
 	    orthodox_giorgi
-	    orthodox_mykola
+	    orthodox_nicholas
 	   #orthodox_vasiliy
 	}
 
@@ -3871,6 +3874,7 @@ orthodox_vasiliy = {
 	same_opinion = 5
 	
 	stewardship = 2
+	diplomacy = 1
 	global_revolt_risk = -0.01
 	
 	potential = { religion = orthodox }
