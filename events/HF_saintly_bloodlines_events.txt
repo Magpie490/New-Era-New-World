@@ -575,11 +575,14 @@ character_event = {
 	has_dlc = "Holy Fury"
 	trigger = {
 		has_dlc = "Mystics"
-		any_owned_bloodline = {
-			has_bloodline_flag = monastic_saintly_bloodline
-			founder = {
-				religion = ROOT
+		OR = {
+			any_owned_bloodline = {
+				has_bloodline_flag = monastic_saintly_bloodline
+				founder = {
+					religion = ROOT
+				}
 			}
+			trait = orthodox_vasiliy
 		}
 		capital_scope = {
 			NOT = {

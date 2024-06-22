@@ -2665,15 +2665,17 @@ feudal_governments = {
 		capital_move_delay = 600
 	}
 	bhutanese_decayed_government = {
-		preferred_holdings = { CASTLE CITY }
+		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
-			CITY
 			FORT
 			HOSPITAL
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
+		}
+		allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same culture
+			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -2770,15 +2772,17 @@ feudal_governments = {
 	}
 	
 	bhutanese_restored_government = {
-		preferred_holdings = { CASTLE CITY }
+		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
-			CITY
 			FORT
 			HOSPITAL
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
+		}
+		allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same culture
+			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government

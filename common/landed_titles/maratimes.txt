@@ -285,6 +285,7 @@ e_maratimes = {
 			cajun = "Nouvelle-Écosse"
 			haitian = "Nouvelle-Écosse"
 			maritimer = "Alba Nuadh"
+			mikmaq = "Epegoitnag"
 
 			c_chignecto = {
 				color = { 26 65 157 }
@@ -344,6 +345,8 @@ e_maratimes = {
 			color2={ 255 255 255 }
 			
 			capital = 1260 # Halifax
+			
+			mikmaq = "Segepenegatig"
 
 			c_halifax = {
 				color = { 17 65 157 }
@@ -408,6 +411,7 @@ e_maratimes = {
 			quebecois = "Île-Royale"
 			cajun = "Île-Royale"
 			maritimer = "Ceap Breatainn"
+			mikmaq = "Onamag"
 			
 			c_pitupok = {
 				color = { 100 80 162 }
@@ -551,6 +555,7 @@ e_maratimes = {
 		rivierois = "Terre-Neuve"
 		nordien = "Terre-Neuve"
 		caillouvian = "Terre-Neuve"
+		mikmaq = "Taqamgug"
 
 		d_avalon = {
 			color={ 14 53 140 }
@@ -845,6 +850,23 @@ e_maratimes = {
 			}
 		}
 	}
-	
+	k_mikmaq = {
+		color = { 230 240 250 }
+		color2 = { 220 220 20 }
+		capital = 1202 # Gasp?
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_mikmaq = {
+						is_titular = yes
+					}
+				}
+				k_mikmaq = {
+					is_titular = no
+				}
+			}
+		}
+	}
 }
 
