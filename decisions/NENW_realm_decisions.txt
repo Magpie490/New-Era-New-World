@@ -1006,6 +1006,34 @@ decisions = {
 			d_cape_breton = { de_jure_liege = k_mikmaq }
 		}
 	}
+	form_delaware = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			OR = {
+				is_capital = c_wilmington
+				is_capital = c_dover
+				is_capital = c_sussex
+			}
+			tier = DUKE
+			NOT = { tier = KING }
+			k_delaware = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = d_delaware_valley
+		}
+		effect = {
+			k_delaware = { gain_title_effect = yes }
+			d_delaware_valley = { de_jure_liege = k_delaware }
+		}
+	}
 	form_lenape = {
 		is_high_prio = yes
 		only_playable = yes
