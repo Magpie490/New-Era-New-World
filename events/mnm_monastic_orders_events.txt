@@ -2423,8 +2423,11 @@ letter_event = {
 		}
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_major_effect = yes
@@ -2647,8 +2650,11 @@ letter_event = {
 		
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_medium_effect = yes
@@ -2798,8 +2804,11 @@ letter_event = {
 		
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_large_effect = yes
@@ -3038,8 +3047,11 @@ letter_event = {
 		hidden_effect = { monastic_order_purity_effect = yes }
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_large_effect = yes
@@ -4098,8 +4110,11 @@ letter_event = {
 			limit = { NOT = { has_quest = quest_monastic_order_donate_to_charity } }
 			if = {
 				limit = {
-					any_owned_bloodline = {
-						has_bloodline_flag = monastic_saintly_bloodline 
+					OR = {
+						any_owned_bloodline = {
+							has_bloodline_flag = monastic_saintly_bloodline
+						}
+						trait = orthodox_vasiliy
 					}
 				}
 				add_society_currency_medium_effect = yes
@@ -4116,8 +4131,11 @@ letter_event = {
 			hidden_effect = { monastic_order_purity_effect = yes }
 			if = {
 				limit = {
-					any_owned_bloodline = {
-						has_bloodline_flag = monastic_saintly_bloodline
+					OR = {
+						any_owned_bloodline = {
+							has_bloodline_flag = monastic_saintly_bloodline
+						}
+						trait = orthodox_vasiliy
 					}
 				}
 				add_society_currency_major_effect = yes
@@ -8268,8 +8286,11 @@ character_event = {
 		prestige = 50
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_major_effect = yes
@@ -8324,8 +8345,11 @@ character_event = {
 		prestige = 100
 		if = {
 			limit = {
-				any_owned_bloodline = {
-					has_bloodline_flag = monastic_saintly_bloodline
+				OR = {
+					any_owned_bloodline = {
+						has_bloodline_flag = monastic_saintly_bloodline
+					}
+					trait = orthodox_vasiliy
 				}
 			}
 			add_society_currency_large_effect = yes
