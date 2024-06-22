@@ -112,6 +112,7 @@
 	dynasty = 5000249
 	religion = catholic
 	culture = cajun
+	father = 250083
 	trait = skilled_tactician
 	trait = scarred_mid
 	trait = one_handed
@@ -1111,5 +1112,290 @@
 	}
 	2666.1.1 = {
 		death = yes
+	}
+}
+
+#History of Acadiana
+250073 = {
+	name = "Philip" # Philip I, first king of Acadiana. With assistance from Mexico, united Acadiana under his banner.
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	trait = brilliant_strategist
+	trait = scarred_mid
+	trait = quick
+	trait = robust
+	trait = strategist
+	trait = patient
+	trait = diligent
+	trait = ambitious
+	trait = zealous
+	trait = just
+	trait = crusader_king
+	trait = holy_warrior
+	trait = crowned_by_pope
+	disallow_random_traits = yes
+	2143.2.10 = {
+		birth = yes
+		give_nickname = nick_the_sword_of_god
+		effect = {
+			create_bloodline = {
+				type = acadiana_crusade_bloodline 
+				has_dlc = "Holy Fury"
+			}
+		}
+	}
+	2199.2.1 = {
+		death = yes
+	}
+}
+
+250074 = {
+	name = "Jean" #Prince Jean, oldest son of King Philip. Patiently waited for his time on the throne, but died a year prior to his father.
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	father = 250073
+	trait = thrifty_clerk
+	trait = stressed
+	trait = groomed
+	trait = administrator
+	trait = poet
+	trait = patient
+	trait = diligent
+	trait = humble
+	trait = content
+	trait = just	
+	disallow_random_traits = yes
+	2166.5.1 = {
+		birth = yes		
+	}
+	2198.4.12 = {
+		death = yes
+	}
+}
+
+250075 = {
+	name = "Louis" #Louis I, second son of King Philip. Ascended the throne at age 10 but was the longest reigning ruler in Acadianan history.
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	father = 250073
+	trait = skilled_tactician
+	trait = shrewd
+	trait = administrator
+	trait = charitable
+	trait = diligent
+	trait = ambitious
+	trait = brave
+	trait = honest
+	trait = zealous
+	trait = just
+	trait = beatified
+	trait = inspiring_leader	
+	disallow_random_traits = yes
+	2189.3.11 = {
+		birth = yes
+		give_nickname = nick_the_great
+	}
+	2259.6.2 = {
+		death = yes
+	}
+}
+
+250076 = {
+	name = "Louis" #Louis II, son of King Louis the Great. Died 4 years into his reign
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	father = 250075
+	trait = charismatic_negotiator
+	trait = lefthanded
+	trait = gamer
+	trait = kind
+	trait = proud
+	trait = content
+	trait = gregarious
+	trait = honest
+	disallow_random_traits = yes
+	2207.7.2 = {
+		birth = yes
+		give_nickname = nick_the_old
+	}
+	2263.12.20 = {
+		death = yes
+	}
+}
+
+250077 = {
+	name = "Louis" #Louis III, son of King Louis the Old. A promising ruler who fell to his wounds from battle
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	father = 250076
+	trait = skilled_tactician
+	trait = lefthanded
+	trait = strong
+	trait = hunter
+	trait = proud
+	trait = falconer
+	trait = gregarious
+	trait = brave
+	trait = wounded
+	disallow_random_traits = yes
+	2229.7.20 = {
+		birth = yes
+		give_nickname = nick_the_lion
+	}
+	2265.11.13 = {
+		death = yes
+	}
+}
+
+250078 = {
+	name = "Louis" #Louis IV, son of King Louis the Lion. An young king killed under suspicious circumstances. His death ended the main Vernon family line 
+	dynasty = 3000787 #Vernon
+	religion = catholic
+	culture = cajun
+	father = 250077
+	2260.1.2 = {
+		birth = yes		
+	}
+	2266.2.13 = {
+		death = {
+			death_reason = death_murder_unknown		
+		}
+	}
+}
+
+250079 = {
+	name = "Philip" #Philip II, second son of King Louis the Old and titular Count of Concordia. A cruel and sadistic ruler who reigned with terror
+	dynasty = 3000788 #Vernon-Concordia
+	religion = catholic
+	culture = cajun
+	father = 250076
+	trait = intricate_webweaver
+	trait = possessed
+	trait = schemer
+	trait = wroth
+	trait = envious
+	trait = cruel
+	trait = paranoid
+	trait = stubborn
+	trait = cynical
+	disallow_random_traits = yes
+	2233.1.15 = {
+		birth = yes	
+		give_nickname = nick_the_cruel
+	}
+	2279.5.2 = {
+		death = yes
+	}
+}
+
+250080 = {
+	name = "Louis" #Louis V, son of King Philip the Cruel. A ruler who later became just like his father after a foiled assasination attempt. Killed by his cousin after losing a civil war
+	dynasty = 3000788 #Vernon-Concordia
+	religion = catholic
+	culture = cajun
+	father = 250079
+	trait = charismatic_negotiator
+	trait = lunatic
+	trait = impaler
+	trait = wroth
+	trait = patient
+	trait = cruel
+	trait = paranoid
+	trait = arbitrary
+	trait = cynical
+	trait = dynastic_kinslayer
+	disallow_random_traits = yes
+	2255.9.1 = {
+		birth = yes	
+		give_nickname = nick_the_mad
+	}
+	2283.7.3 = {
+		death = {
+			death_reason = death_execution_hanging
+			killer = 250082
+		}
+	}
+}
+
+250081 = {
+	name = "Jean" #Jean, son of King Louis the Old and titular Count of Cameron. A rather content ruler that somewhat faded into obscurity. Murdered during the Bloodbath of New Orleans
+	dynasty = 5000249 #Vernon-Cameron
+	religion = catholic
+	culture = cajun
+	father = 250076
+	trait = martial_cleric
+	trait = architect
+	trait = temperate
+	trait = patient
+	trait = humble
+	trait = content
+	trait = shy
+	trait = trusting
+	disallow_random_traits = yes
+	2235.8.1 = {
+		birth = yes		
+	}
+	2281.5.1 = {
+		death = {
+			death_reason = death_murder_butchered
+			killer = 250080
+		}
+	}
+}
+
+250082 = {
+	name = "Henry" #Henry I, son of Prince Jean of Cameron. Fought his mad cousin Louis V during the civil war and executed him after. Known for taxing the church to raise funds, leading to his excommunication
+	dynasty = 5000249 #Vernon-Cameron
+	religion = catholic
+	culture = cajun
+	father = 250081
+	trait = tough_soldier
+	trait = one_eyed
+	trait = shrewd
+	trait = greedy
+	trait = brave
+	trait = kind
+	trait = stubborn
+	trait = dynastic_kinslayer
+	trait = excommunicated
+	disallow_random_traits = yes
+	2257.8.21 = {
+		birth = yes
+		give_nickname = nick_the_black		
+	}
+	2304.7.11 = {
+		death = yes
+	}
+}
+
+250083 = {
+	name = "Henry" #Henry II, son of King Henry the Black. Known for his chivalry and dedication to Acadiana, but was killed in battle
+	dynasty = 5000249 #Vernon-Cameron
+	religion = catholic
+	culture = cajun
+	father = 250082
+	trait = skilled_tactician
+	trait = tall
+	trait = fair
+	trait = duelist
+	trait = chaste
+	trait = charitable
+	trait = just
+	trait = trusting
+	trait = honest
+	disallow_random_traits = yes
+	2280.8.21 = {
+		birth = yes
+		give_nickname = nick_the_noble		
+	}
+	2324.6.14 = {
+		death = {
+			death_reason = death_battle			
+		}
 	}
 }
