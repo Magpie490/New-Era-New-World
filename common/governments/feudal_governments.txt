@@ -1658,6 +1658,13 @@ feudal_governments = {
 				religion = doukhobor
 				religion = myriadic
 				religion = fidelista
+				AND = {
+				religion = santeria
+					OR = {
+						culture = cubano
+						culture = oriental
+					}
+				}
 			}
 			higher_tier_than = BARON
 			is_patrician = no
