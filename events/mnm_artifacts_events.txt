@@ -10152,19 +10152,27 @@ character_event = {
 					weapon_sword = {
 						if = {
 							limit = {
-								culture_group = japan_group
+								OR = {
+									culture_group = japan_group
+									culture_group = amero_japonic
+								}
 							}
 			        		add_artifact = saijo_o_wazamono
 						}
 						else_if = {
 							limit = {
-								culture_group = south_chinese_group
-								culture_group = chinese_group
-								culture_group = hmong_mien
-								culture_group = northern_thai
-								culture_group = tanjia
-								culture_group = qiangic
-								culture_group = korean_group
+								OR = {
+									culture_group = south_chinese_group
+									culture_group = chinese_group
+									culture_group = hmong_mien
+									culture_group = northern_thai
+									culture_group = tanjia
+									culture_group = qiangic
+									culture_group = korean_group
+									culture_group = amero_sinitic
+									culture_group = amero_koreanic
+									culture_group = amero_hmongic
+								}
 							}
 							random_list = {
 								1 = { add_artifact = chinese_sword_tier_4_heartseeker }

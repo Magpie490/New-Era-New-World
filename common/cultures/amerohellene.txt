@@ -383,4 +383,83 @@ amerohellene = {
 
 		modifier = default_culture_modifier
 	}
+	minoan = { #Cuban melting pot
+		graphical_cultures = { byzantinegfx }
+		
+		color = { 127 3 252 }
+
+		male_names = {
+			Abel Adalbertos Addiel Agostinos Agustínos_Augustine Albertos_Albert Albitos Alcibiades Alejandros_Alexander Alexis Alfredo_Alfred Alían Aliecer Alinos Álvaros_Alvaro Amadeo Ámparos André_Andrew Ángelos_Angel Anselmos_Anselm Antonios_Anthony Arian Ariel Armentarios Arnoldos Arsenios Arturos_Arthur Aurelios_Aurelius
+			Bachiris Barbaritos Bartolomé_Bartholomew Basilios Batista Bienvenido "Blas Roca" Bola Bolivar Braulio Brian Bruzón 
+			Calixto Cándido Carlos_Charles Casanovas Castro César_Caesar Chucho Chutek Claudio Cristóbal_Christopher Compay Cucuas 
+			Dagoberto Dámaso Damiános_Damian Danilo Dayron Delfín Demetrio_Dimitri Desiderio Dialenli Didier Diego 
+			Eduardo_Edward Efraín_Ephraim Eliades Elián Eliécer Elvis Emeterio Emiliano Emilio Enrique_Henry Erick_Eric Ernesto_Ernest Escobar Esteban_Stephen Eusebio 
+			Fadrique Faizon Fayad Federicos_Frederick Felippos_Phillip Félix_Felix Fernandos_Ferdinand Fidel Fidelios Flores Francisco_Francis Fulgencio 
+			Garcia Gasparas Gonzalo_Gonzalo Guilliermos_William Guy 
+			Hatüey Héctoras_Hector Hernando_Hernan Hidalgo Higinios Hugo Humberto 
+			Ibrahim_Abraham Idoney Ignacio Isidoro_Isidor Issac 
+			Jacinto Javier Jerónimo Jesús_Jesus Joan Johny Jorge_George José_Joseph Juan_John Julio_Julius Justice 
+			Laureano_Lawrence Lázaro_Lazarus Leodanis Léon_Leo Leonardo_Leonard Liober Liván Lolo Lorenzos_Lawrence Luis_Louis
+			Mailoco Manuel_Immanuel Marcos Mariano Marios Marlon Marquise Martinos_Martin Mauricio_Maurice Máximo Metopio Miguelito_Michael Moisés_Moses Minos_Minos Moreno 
+			Neisser Nelson Nicasio Nicolás_Nicholas Norberto Núñez Nuno 
+			Octavios_Octavius Orestes Orlando Orosio Osbel Óscar_Oscar Osmany Osvaldo_Oswald Omar
+			Pablos_Paul Pacheco Paulos_Paul Pedros_Peter Periquito Perucho Pío Ponciano 
+			Rabinato Rafael_Raphael Ramón Raúl Raydel Recaredo Reinaldo Reinier Rene Repilado Rey Ricardo_Richard Roberto_Robert Rolando_Roland Romario Romy Rosel Rosendo Rubén_Ruben Rudy 
+			Sabarico Sancho Saturnino Sebastián_Sebastian Sergio_Sergius Servando Severino Severo Silvio Simon Sol Suario 
+			Teodomiros_Theodore Tico Tomás_Thomas Tumelo 
+			Ulpiano
+			Vascos Versalles Vicente_Vincent Víctor_Victor Vidal Voltairos 
+			Walfredo Wilber Wifredo_Wilfred 
+			Xavier Xerome_Jerome
+			Yandy Yankos Yasmany Yiandros Yordanis Yotuel Yunel Yuniel Yunier Yuniesqui 
+			Zoilo 
+		}
+		female_names = {
+			Addys Adela Agustina_Augustine Albita Ale Alina Ana_Anna Anaima Anga Angela Anisley Annalie Antonia_Antonia Ariana Aylín_Eileen Aymee_Amy 
+			Beatriz_Beatrice Blanca 
+			Camila Candelaria Cari Caridad Carilda Carolina Celeste Celina Chalía Clara Cucu 
+			Daína Daniela Dariana Dayma Diana Diosa Dolores Dulce Dunia 
+			Elaine Elena Elia Elisa Ella Ely Emma Esperanza Esther Evelyn 
+			Francisca Fredesvinda 
+			Gabriela_Gabriela Georgina Gertrudis_Gertrude Gilda Gloria 
+			Haila Haydée_Heidi 
+			Ioamnet Isa Isabella Isbet Isolina Issabella Ivian 
+			Jamillette Jessica Joann Jonte 
+			Katerine_Catherine
+			Lauren Leyanis Liaena Liliana Lina Lissette Lizbet_Elizabeth Lora Loreta Lucila Lydia 
+			Magaly Manela Margarita_Margaret Maria Marianela Maricela Marlene Marta Mayelin Melba Mey Mirabal Mireya Mirta Monika Moraima 
+			Nathalia_Natalie Nelsis Nitza Nivaria Noema 
+			Odalys Oleydis Olivia Omara Osleidys 
+			Pasifai Perla Polita
+			Regla Rosa_Rose Rosalina_Rosalind Rosario Rosaura 
+			Sadaise 
+			Tasha Teté 
+			Vanesa Velia Vida Vilma 
+			Wendy 
+			Xiomara 
+			Yaimara Yamy Yaneisy Yanet Yanetsy Yanitzia Yany Yaraina Yargelis Yenifer Yeny Yipsi Yoandri Yudelkis Yunaika Yunaisy Yunaisys Yunior 
+			Zamira Zoé_Zoe
+		}
+
+		parent = cubano
+		from_dynasty_prefix = "tou "
+		#grammar_transform = spanish
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 40
+		mat_grf_name_chance = 40
+		father_name_chance = 15
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+		mother_name_chance = 20
+		
+		disinherit_from_blinding = yes
+		feminist = yes
+		allow_looting = yes
+		seafarer = yes
+
+		modifier = default_culture_modifier
+	}
 }

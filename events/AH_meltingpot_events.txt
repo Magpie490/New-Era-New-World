@@ -1,0 +1,158 @@
+namespace = AHMP
+#minoan
+character_event = {
+	id = AHMP.6
+	desc = "EVTDESCAHMP.6"
+	picture = GFX_evt_frankisc
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			culture_group = amerohellene
+		}
+		any_demesne_province = {
+			OR = {
+				culture = cubano
+				culture = oriental
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.5
+			culture = minoan
+		}
+		modifier = {
+			factor = 0.8
+			learning = 7
+		}
+		modifier = {
+			factor = 0.85
+			learning = 11
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAAHMP.6
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = cubano
+					culture = oriental
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = minoan
+		}
+	}
+}
+
+character_event = {
+	id = AHMP.61
+	desc = "EVTDESCAHMP.61"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	
+	trigger = {
+		NOT = { culture = minoan }
+		any_demesne_province = {
+			culture = minoan
+			is_capital = yes
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 11
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAAHMP.61
+		culture = minoan
+		prestige = -5
+	}
+
+	option = {
+		name = EVTOPTBAHMP.61
+		prestige = 5
+	}
+}
+
+#minoan
+character_event = {
+	id = AHMP.611
+	desc = "EVTDESCAHMP.611"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAAHMP.611"
+		culture = minoan
+	}
+}

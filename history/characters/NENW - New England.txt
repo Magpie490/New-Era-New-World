@@ -16,7 +16,7 @@
 700001 = { #Holy Shit Peter Griffin
 	name = "Peter"
 	dynasty = 5000001 #Griffin
-	religion = "columbian"
+	religion = "macabrist"
 	culture = "bostonian"
 	trait = "slothful"
 	trait = "is_fat"
@@ -211,9 +211,11 @@
 700011 = {
 	name = "Frank"
 	dynasty = 5000009 #Heffley
+	father = 700123
 	religion = "columbian"
 	culture = "massachusite"
 	trait = "diligent"
+	trait = "proud"
 	2284.1.31 = {
 		birth = yes
 		effect = {
@@ -258,6 +260,8 @@
 	religion = "columbian"
 	culture = "massachusite"
 	trait = "deceitful"
+	trait = "indolent"
+	trait = "fussy"
 	2310.1.31 = {
 		birth = yes
 		effect = {
@@ -276,7 +280,7 @@
 	religion = "columbian"
 	culture = "massachusite"
 	trait = "possessed"
-	2320.1.31 = {
+	2321.1.31 = {
 		birth = yes
 		effect = {
 			add_claim = c_worcester
@@ -1882,6 +1886,61 @@
 		birth = yes
 	}
 	2320.1.2 = {
+		death = yes
+	}
+}
+
+700123 = { #Grandpa Heffley
+	name = "Gregory"
+	dynasty = 5000009 #Heffley
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "kind"
+	trait = "arbitrary"
+	2254.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+			add_artifact = spectacles
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700124 = {
+	name = "Joe"
+	dynasty = 5000009 #Heffley
+	father = 700123
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "arbitrary"
+	2282.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700125 = {
+	name = "Gary"
+	dynasty = 5000009 #Heffley
+	father = 700123
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "arbitrary"
+	trait = "lustful"
+	trait = "slothful"
+	2289.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
 		death = yes
 	}
 }
