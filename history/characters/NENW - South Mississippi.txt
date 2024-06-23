@@ -260,11 +260,12 @@
 	}
 }
 950015 = {
-	name = "Claudine" #Claudine, a fierce Voodun warrior who carved out her own realm after being expelled from New Orleans by King Charles.
+	name = "Claudine" #Claudine, daughter of Carmen and current ruler of Mobile. A fierce Voodun warrior eager to take back Louisiana from the Catholics
 	dynasty = 5000261
 	religion = voodun
 	culture = kreyol
 	female = yes
+	mother = 250090
 	trait = tough_soldier
 	trait = scarred
 	trait = robust
@@ -272,8 +273,7 @@
 	trait = ambitious
 	trait = diligent
 	trait = proud
-	trait = wroth
-	trait = adventurer
+	trait = wroth	
 	disallow_random_traits = yes
 	2294.5.13 = {
 		birth = yes
@@ -1397,5 +1397,167 @@
 		death = {
 			death_reason = death_battle			
 		}
+	}
+}
+#End of Acadiana history
+
+#Start of historical rulers of Louisiana
+250084 = {
+	name = "Anne" #Queen Anne, founder of Louisiana. Lost her kingdom to a Catholic crusade which established Acadiana. Died during the war of old age
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	female = yes
+	trait = scholarly_theologian
+	trait = fair
+	trait = shrewd
+	trait = mystic
+	trait = temperate
+	trait = patient
+	trait = kind
+	trait = trusting	
+	disallow_random_traits = yes
+	2100.5.13 = {
+		birth = yes
+	}
+	2177.1.3 = {
+		death = yes
+	}
+}
+#End of rulers of Louisiana
+
+#Start of Giraud family in exile in Mobile
+250085 = {
+	name = "Evangeline" #Duchess Evangeline, only known daughter of Queen Anne. Fled to Mobile and established rule there after fall of Louisana
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	female = yes
+	mother = 250084
+	trait = fortune_builder
+	trait = quick
+	trait = administrator
+	trait = diligent
+	trait = patient
+	trait = ambitious
+	trait = just
+	trait = paranoid	
+	disallow_random_traits = yes
+	2132.4.1 = {
+		birth = yes
+	}
+	2204.12.3 = {
+		death = yes
+	}
+}
+
+250086 = {
+	name = "Raveneau" #Duke Raveneau, son of Evangeline. Born to a consort. Known for trying to build up an army to take back Louisiana but failed due to lack of funds
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	mother = 250085
+	trait = thrifty_clerk
+	trait = stressed
+	trait = child_of_consort_male
+	trait = diligent
+	trait = greedy
+	trait = stubborn
+	trait = zealous
+	disallow_random_traits = yes
+	2155.6.12 = {
+		birth = yes
+	}
+	2210.11.1 = {
+		death = yes
+	}
+}
+
+250087 = {
+	name = "Maxime" #Duke Maxime, son of Raveneau. Known for his long and somewhat prosperous reign, as Mobile finally has a notable treasury
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	father = 250086
+	trait = grey_eminence
+	trait = gardener
+	trait = diligent
+	trait = proud
+	trait = gregarious
+	trait = just
+	trait = trusting
+	disallow_random_traits = yes
+	2183.7.23 = {
+		birth = yes
+	}
+	2250.3.14 = {
+		death = yes
+	}
+}
+
+250088 = {
+	name = "François" #Duke François, son of Maxime. Known for his dapper appearance and neglect of his realm. Perhaps the desire to retake Louisana is fading...
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	father = 250087
+	trait = flamboyant_schemer
+	trait = fair
+	trait = socializer
+	trait = proud
+	trait = gregarious
+	trait = lustful
+	trait = slothful
+	disallow_random_traits = yes
+	2210.9.2 = {
+		birth = yes		
+	}
+	2260.10.29 = {
+		death = yes
+	}
+}
+
+250089 = {
+	name = "Troy" #Duke Troy, son of François. A careful ruler who tried to build up intel within Acadiana to incite a revolt, but this was quickly squashed by the Acadianans without issue
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	father = 250088
+	trait = intricate_webweaver
+	trait = schemer
+	trait = diligent
+	trait = patient
+	trait = envious
+	trait = erudite
+	trait = shy
+	disallow_random_traits = yes
+	2240.4.21 = {
+		birth = yes
+	}
+	2300.6.9 = {
+		death = yes
+	}
+}
+
+250090 = {
+	name = "Carmen" #Duchess Carmen, daughter of Troy. A skilled diplomat who tried in vain to build alliances against Acadiana with very limited success
+	dynasty = 5000261 #Giraud
+	religion = voodun
+	culture = kreyol
+	father = 250089
+	female = yes
+	trait = grey_eminence
+	trait = diligent
+	trait = patient
+	trait = ambitious
+	trait = gregarious
+	trait = honest
+	trait = zealous
+	disallow_random_traits = yes
+	2266.5.13 = {
+		birth = yes
+	}
+	2311.5.23 = {
+		death = yes
 	}
 }
