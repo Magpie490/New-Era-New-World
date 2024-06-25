@@ -5125,8 +5125,18 @@ character_event = {
 		name = EVTOPTAHF23207
 		trigger = { 
 			OR = {
-		has_religion_feature = religion_feature_celtic 
-							has_religion_feature = religion_feature_gator religion = stalinist religion = trotskyite religion = titoist religion = red_cult religion = juggalo has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
+				has_religion_feature = religion_feature_celtic 
+				has_religion_feature = religion_feature_gator 
+				religion = stalinist
+				religion = trotskyite
+				religion = titoist
+				religion = red_cult
+				religion = juggalo
+				religion = marked
+				religion = templarist
+				has_religion_feature = religion_ritual_sacrifice 
+				has_religion_feature = religion_feature_satsana_phi 
+			} 
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
@@ -8681,6 +8691,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 	}
@@ -8788,6 +8799,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 	}
 
@@ -8863,6 +8875,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOR = { 
 			trait = bloodthirsty_gods_2 
@@ -8949,6 +8962,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOT = { 
 			trait = bloodthirsty_gods_3
@@ -9032,6 +9046,7 @@ narrative_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOT = {
 			any_owned_bloodline = { # Not already has a Bloodthirsty bloodline.
@@ -9155,6 +9170,8 @@ narrative_event = {
 				religion = titoist
 				religion = red_cult
 				religion = juggalo
+				religion = marked
+				religion = templarist
 			}
 		}
 		text = EVTDESCAHF23435
@@ -9218,6 +9235,7 @@ narrative_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 	}
@@ -11118,6 +11136,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 	}
 	immediate = {
@@ -11186,6 +11205,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 		hidden_tooltip  = {  
@@ -11206,6 +11226,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 		hidden_tooltip  = {  
@@ -11353,6 +11374,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 						has_religion_feature = religion_ritual_sacrifice
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
@@ -11462,6 +11484,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 						has_religion_feature = religion_ritual_sacrifice
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
@@ -11541,6 +11564,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11681,6 +11705,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
@@ -11709,6 +11734,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
