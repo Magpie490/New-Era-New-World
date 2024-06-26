@@ -6908,6 +6908,21 @@
 5128850 = { name="Valencia" culture=arizonense  }
 
 5128851 = { name="White" culture=newmexican  } #Breaking Bad
+5128851 = { #Breaking Bad
+    name = "White"
+    culture = newmexican
+	used_for_random = no
+    coat_of_arms = {
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 0
+            emblem = 0
+            color = 3
+            color = 3
+        }
+    }
+}
 5128852 = { name="Heisenberg" culture=newmexican  } #Breaking Bad
 5128853 = { name="Goodman" culture=newmexican  } #Breaking Bad
 5128854 = { name="Pinkman" culture=newmexican  } #Breaking Bad
@@ -17187,7 +17202,22 @@
 		}
 	}
 }
-3000785 = { name = "Holden" culture = ranchlander }
+3000785 = { name = "Holden" 
+			culture = ranchlander
+			used_for_random = no
+				coat_of_arms = {
+				religion = rangerite
+				template = 0
+				layer = {
+				texture = 16 #NENW_CoAs.tga
+				texture_internal = 296
+				emblem = 0
+				color = 0
+				color = 0
+				color = 0
+		}
+	}
+}
 3000786 = { name = "Glanton" culture = ranchlander }
 3000789 = { name = "Kihegashugah" culture = osage used_for_random = no }
 3000790 = { name = "Monoquet" 

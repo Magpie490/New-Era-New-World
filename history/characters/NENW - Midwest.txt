@@ -97,6 +97,8 @@
 2720004 = { # The Horde of Dodge. A man who was found and raised in a field in Kansas, he now strives for justice and liberty
 	name = "Clark"
 	dynasty = 5127564 #Kent
+	father = 2720007
+	mother = 2720008
 	culture = plattean
 	religion = tengri_pagan
 	trait = brilliant_strategist
@@ -108,12 +110,16 @@
 	trait = diligent
 	trait = honest
 	trait = just
+	trait = kind
 	disallow_random_traits = yes
 	2296.6.20 = {
 		birth = yes
 	}
 	2323.1.1={
 		add_spouse=2720005
+		effect={
+			add_lover=2720005
+		}
 	}
 	2500.1.1 = {
 		death = yes
@@ -154,10 +160,54 @@
 	father = 2720004
 	mother = 2720005
 	trait = quick
-	trait = haughty	
+	trait = haughty
+	trait = strong
 	2324.7.4 = {
 		birth = yes
 	}	
+	2500.1.1 = {
+		death = yes
+	}
+}
+2720007 = { # Clark Kent's father
+	name = "Jonathan"
+	dynasty = 5127564 #Kent
+	culture = plattean
+	religion = tengri_pagan
+	trait = fortune_builder
+	trait = brave
+	trait = humble
+	trait = charitable
+	trait = diligent
+	trait = honest
+	trait = just
+	disallow_random_traits = yes
+	2266.6.20 = {
+		birth = yes
+	}
+	2283.1.1={
+		add_spouse=2720008
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+2720008 = { # Clark Kent's mother
+	name = "Martha"
+	female = yes
+	culture = plattean
+	religion = tengri_pagan
+	trait = martial_cleric
+	trait = kind
+	trait = trusting
+	trait = charitable
+	trait = diligent
+	trait = honest
+	trait = just
+	disallow_random_traits = yes
+	2266.6.20 = {
+		birth = yes
+	}
 	2500.1.1 = {
 		death = yes
 	}
