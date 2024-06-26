@@ -5123,29 +5123,39 @@ character_event = {
 
 	option = {
 		name = EVTOPTAHF23207
-		trigger = { 
+		trigger = {
 			OR = {
-		has_religion_feature = religion_feature_celtic 
-							has_religion_feature = religion_feature_gator religion = stalinist religion = trotskyite religion = titoist religion = red_cult religion = juggalo has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_satsana_phi } 
+				has_religion_feature = religion_feature_celtic
+				has_religion_feature = religion_feature_gator
+				religion = stalinist
+				religion = trotskyite
+				religion = titoist
+				religion = red_cult
+				religion = juggalo
+				religion = marked
+				religion = templarist
+				has_religion_feature = religion_ritual_sacrifice
+				has_religion_feature = religion_feature_satsana_phi
+			}
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
 		add_blood_splatter_effect = yes
-		if = { 
+		if = {
 			limit = {
-				FROM = { location = { num_of_settlements = 6 } } 
+				FROM = { location = { num_of_settlements = 6 } }
 			}
 			piety = 150
 			religion_authority = {
 				modifier = great_sacrifice_positive
 				years = 150
 			}
-			hidden_tooltip = { 
-				change_variable = { which = burned_hearts_points value = 2 } 
+			hidden_tooltip = {
+				change_variable = { which = burned_hearts_points value = 2 }
 				bloodthirsty_tiered_traits_effect = yes
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 4 } }
 				FROM = { location = { NOT = { num_of_settlements = 6 } } }
@@ -5155,30 +5165,30 @@ character_event = {
 				modifier = great_sacrifice_positive
 				years = 100
 			}
-			hidden_tooltip = { 
-				change_variable = { which = burned_hearts_points value = 1 } 
+			hidden_tooltip = {
+				change_variable = { which = burned_hearts_points value = 1 }
 				bloodthirsty_tiered_traits_effect = yes
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 2 } }
 				FROM = { location = { NOT = { num_of_settlements = 4 } } }
 			}
-			piety = 50 
+			piety = 50
 			religion_authority = {
 				modifier = great_sacrifice_positive
 				years = 50
 			}
-			hidden_tooltip = { 
+			hidden_tooltip = {
 				bloodthirsty_tiered_traits_effect = yes
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { NOT = { num_of_settlements = 2 } } }
 			}
-			piety = 25 
+			piety = 25
 			religion_authority = {
 				modifier = great_sacrifice_positive
 				years = 25
@@ -5187,7 +5197,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTBHF23207
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 6 } }
 			}
@@ -5200,14 +5210,14 @@ character_event = {
 			}
 			wealth = 200
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 2 } }
 				FROM = { location = { NOT = { num_of_settlements = 4 } } }
 			}
 			wealth = 100
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { NOT = { num_of_settlements = 2 } } }
 			}
@@ -5217,20 +5227,20 @@ character_event = {
 	option = {
 		name = EVTOPTCHF23207
 		trigger = { is_ruler = yes higher_tier_than = BARON }
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 6 } }
 			}
 			capital_scope = { show_scope_change = no add_lots_thralls_capital_effect = yes }
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { num_of_settlements = 3 } }
 				FROM = { location = { NOT = { num_of_settlements = 6 } } }
 			}
 			capital_scope = { show_scope_change = no add_some_thralls_capital_effect = yes }
 		}
-		if = { 
+		if = {
 			limit = {
 				FROM = { location = { NOT = { num_of_settlements = 3 } } }
 			}
@@ -5243,11 +5253,11 @@ character_event = {
 character_event = {
 	id = HF.23208
 	desc = EVTDESCHF23208
-	picture = { 
+	picture = {
 		trigger = { FROM = { is_female = no } } 
 		picture = GFX_evt_vikings_arriving_oldgods
 	}
-	picture = { 
+	picture = {
 		trigger = { FROM = { is_female = yes } } 
 		picture = GFX_evt_norse_tempest
 	}
@@ -5257,8 +5267,8 @@ character_event = {
 
 	option = {
 		name = EVTOPTAHF23208
-		trigger = { NOT = { religion = FROM } } 
-		if = { 
+		trigger = { NOT = { religion = FROM } }
+		if = {
 			limit = {
 				FROMFROM = { location = { num_of_settlements = 6 } }
 			}
@@ -5267,7 +5277,7 @@ character_event = {
 				years = 150
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROMFROM = { location = { num_of_settlements = 4 } }
 				FROMFROM = { location = { NOT = { num_of_settlements = 6 } } }
@@ -5277,7 +5287,7 @@ character_event = {
 				years = 100
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROMFROM = { location = { num_of_settlements = 2 } }
 				FROMFROM = { location = { NOT = { num_of_settlements = 4 } } }
@@ -5287,7 +5297,7 @@ character_event = {
 				years = 50
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				FROMFROM = { location = { NOT = { num_of_settlements = 2 } } }
 			}
@@ -8681,6 +8691,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 	}
@@ -8777,7 +8788,7 @@ character_event = {
 
 	trigger = {
 		NOT = { trait = bloodthirsty_gods_1 }
-		OR = { 
+		OR = {
 			has_religion_feature = religion_ritual_sacrifice
 			has_religion_feature = religion_feature_celtic
 			has_religion_feature = religion_feature_gator
@@ -8788,6 +8799,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 	}
 
@@ -8863,6 +8875,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOR = { 
 			trait = bloodthirsty_gods_2 
@@ -8949,6 +8962,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOT = { 
 			trait = bloodthirsty_gods_3
@@ -9032,6 +9046,7 @@ narrative_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 		NOT = {
 			any_owned_bloodline = { # Not already has a Bloodthirsty bloodline.
@@ -9155,6 +9170,8 @@ narrative_event = {
 				religion = titoist
 				religion = red_cult
 				religion = juggalo
+				religion = marked
+				religion = templarist
 			}
 		}
 		text = EVTDESCAHF23435
@@ -9218,6 +9235,7 @@ narrative_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 	}
@@ -11118,6 +11136,7 @@ character_event = {
 			religion = red_cult
 			religion = juggalo
 			religion = marked
+			religion = templarist
 		}
 	}
 	immediate = {
@@ -11186,6 +11205,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 		hidden_tooltip  = {  
@@ -11206,6 +11226,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 			}
 		}
 		hidden_tooltip  = {  
@@ -11353,6 +11374,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 						has_religion_feature = religion_ritual_sacrifice
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
@@ -11462,6 +11484,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 						has_religion_feature = religion_ritual_sacrifice
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
@@ -11541,6 +11564,7 @@ character_event = {
 						religion = red_cult
 						religion = juggalo
 						religion = marked
+						religion = templarist
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11681,6 +11705,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
@@ -11709,6 +11734,7 @@ character_event = {
 				religion = red_cult
 				religion = juggalo
 				religion = marked
+				religion = templarist
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
