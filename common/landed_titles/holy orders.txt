@@ -503,6 +503,36 @@ d_sec = { #Southeastern Conference
 	mercenary_type = knights_hospitaler_composition
 }
 
+d_free_baptist_order = { #Legion of Moses
+	color={ 0 74 127 }
+	color2={ 255 255 255 }
+	
+	capital = 1128 # Jackson
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = fiskean
+	
+	# Parent Religion 
+	religion = baptist
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+
 d_hashshashin = {
 	color={ 14 40 120 }
 	color2={ 220 220 20 }

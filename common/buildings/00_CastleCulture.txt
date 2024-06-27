@@ -17858,17 +17858,26 @@ castle = {
 	ca_culture_viet_1 = {
 		desc = ca_culture_viet_1_desc
 		potential = {
-			culture_group = viet
+			OR = {
+				culture_group = viet
+				culture_group = amero_vietic
+			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		prerequisites = { ca_wall_2 }
@@ -17886,19 +17895,26 @@ castle = {
 		potential = {
 			OR = { 
 				culture_group = viet
+				culture_group = amero_vietic
 				has_building = ca_culture_viet_1
 				has_building = ca_culture_viet_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		upgrades_from = ca_culture_viet_1
@@ -17916,6 +17932,7 @@ castle = {
 		potential = {
 			OR = { 
 				culture_group = viet
+				culture_group = amero_vietic
 				has_building = ca_culture_viet_1
 				has_building = ca_culture_viet_2
 				has_building = ca_culture_viet_3
@@ -17923,13 +17940,19 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		upgrades_from = ca_culture_viet_2
@@ -17947,6 +17970,7 @@ castle = {
 		potential = {
 			OR = { 
 				culture_group = viet
+				culture_group = amero_vietic
 				has_building = ca_culture_viet_1
 				has_building = ca_culture_viet_2
 				has_building = ca_culture_viet_3
@@ -17955,13 +17979,19 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
-				culture_group = viet
+				OR = {
+					culture_group = viet
+					culture_group = amero_vietic
+				}
 			}
 		}
 		upgrades_from = ca_culture_viet_3

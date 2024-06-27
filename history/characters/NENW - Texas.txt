@@ -22,7 +22,7 @@
 		birth = yes
 	}
 	2294.4.15 = {
-		effect={	
+		effect={
 			add_friend=2700017
 			add_friend=2700021
 			add_friend=2700022
@@ -39,7 +39,7 @@
 		death = yes
 	}
 }
-2700001 = { #You know who this is, must i even say more?
+2700001 = { #You know who this is, must I even say more?
 	dynasty = 3000755
 	name = "George"
 	religion = lone_star
@@ -166,10 +166,11 @@
 	trait = inspiring_leader
 	trait = robust
 	trait = legendary_duelist
-	martial = 10
+	trait = wuxia_master
+	martial = 11
 	#trait = immortal
 	disallow_random_traits = yes
-	2296.1.1 = {
+	2296.3.10 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -229,7 +230,7 @@
 2700008 = {
 	dynasty = 3000764
 	name = "Pawel"
-	religion = lone_star
+	religion = moravian
 	culture = teksaski
 	trait = midas_touched
 	trait = architect
@@ -552,7 +553,7 @@
 			add_claim=k_acadiana
 			add_claim=d_orleans
 			add_claim=c_new_orleans
-			add_claim=b_matairie_LA
+			#add_claim=b_matairie_LA
 		}
 	}
 	2294.4.15 = {
@@ -701,12 +702,14 @@
 2700029 = {
 	dynasty = 3000778
 	name = "Kahn"
-	religion = theravada
-	culture = hmong #laotian
+	religion = lone_star
+	culture = viet_kieu #Technically the Ocean but whatever lel
 	trait = scholarly_theologian
 	trait = stubborn
 	trait = diligent
 	trait = proud
+	trait = sympathy_buddhism
+	disallow_random_traits = yes
 	2284.4.15 = {
 		birth = yes
 	}
@@ -716,9 +719,6 @@
 			add_lover=2700030
 		}
 	}
-	2324.6.15 = {
-		employer = 2700000
-	}
 	2666.1.1 = {
 		death = yes
 	}
@@ -726,17 +726,19 @@
 2700030 = {
 	name = "Minh"
 	female=yes
-	religion = theravada
-	culture = hmong #laotian
+	religion = lone_star
+	culture = viet_kieu #Technically the Ocean but whatever lel
 	trait = charismatic_negotiator
 	trait = gregarious
 	trait = diligent
 	trait = proud
+	trait = sympathy_buddhism
+	disallow_random_traits = yes
 	2284.4.15 = {
 		birth = yes
 	}
 	2324.6.15 = {
-		employer = 2700000
+		employer = 2700029
 	}
 	2666.1.1 = {
 		death = yes
@@ -748,17 +750,19 @@
 	female=yes
 	father=2700029
 	mother=2700030
-	religion = theravada
-	culture = hmong #laotian
+	religion = lone_star
+	culture = viet_kieu #Technically the Ocean but whatever lel
 	trait = quick
 	trait = patient
 	trait = diligent
 	trait = timid
+	trait = sympathy_buddhism
+	disallow_random_traits = yes
 	2314.2.7 = {
 		birth = yes
 	}
 	2324.6.15 = {
-		employer = 2700000
+		employer = 2700029
 	}
 	2666.1.1 = {
 		death = yes
@@ -858,10 +862,11 @@
 	name = "Judge"
 	dna="chfgaejbal"
 	properties="0o0d0k"
-	religion = rangerite
+	religion = triumphant
 	culture = ranchlander
 	trait = grey_eminence
 	trait = cruel
+	trait = red_horse_cult
 	trait = lustful
 	trait = gregarious
 	trait = arbitrary
@@ -877,11 +882,11 @@
 	trait = poet
 	trait = impaler
 	#trait = immortal
-	diplomacy = 10
-	intrigue = 10
-	martial = 9
-	stewardship = 9
-	learning = 10
+	diplomacy = 11
+	intrigue = 11
+	martial = 10
+	stewardship = 10
+	learning = 11
 	health = 6.6
 	2288.6.6 = {
 		birth = yes
@@ -907,15 +912,424 @@
 	trait = lustful
 	trait = gregarious
 	trait = arbitrary
+	trait = wroth
 	2288.7.12 = {
 		birth = yes
 	}
 	2306.2.15 = {
-		employer = 2700037
 		effect={
 			join_society = the_satanists
 			add_friend=2700037
 		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700039 = {
+	dynasty = 3000754
+	name = "Good Hank"
+	father = 2700012
+	mother = 2700032
+	religion = lone_star
+	culture = houstonian
+	2325.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700040 = {
+	dynasty = 3000792
+	name = "George"
+	religion = moravian
+	culture = houstonian
+	trait = tough_soldier
+	2288.1.1 = {
+		birth = yes
+	}
+	2310.4.15 = {
+		add_spouse=2700041
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700041 = {
+	name = "Mary"
+	female = yes
+	dynasty = 3000793
+	mother = 2700045
+	religion = lone_star
+	culture = houstonian
+	trait = zealous
+	trait = kind
+	trait = quick
+	trait = patient
+	2288.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700042 = {
+	dynasty = 3000792
+	name = "George"
+	father = 2700040
+	mother = 2700041
+	religion = lone_star
+	culture = houstonian
+	trait = rowdy
+	trait = diligent
+	2311.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700043 = {
+	dynasty = 3000792
+	name = "Sheldon"
+	father = 2700040
+	mother = 2700041
+	religion = scholastic
+	culture = houstonian
+	trait = mastermind_theologian
+	trait = genius
+	trait = twin
+	trait = curious
+	trait = fussy
+	trait = eccentric
+	trait = erudite
+	2316.1.1 = {
+		birth = yes
+	}
+	2323.2.15 = {
+		effect={
+			join_society = hermetics
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700044 = {
+	dynasty = 3000792
+	name = "Melissa"
+	female = yes
+	father = 2700040
+	mother = 2700041
+	religion = lone_star
+	culture = houstonian
+	trait = twin
+	trait = cynical
+	trait = playful
+	trait = affectionate
+	2316.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700045 = { #Meemaw
+	name = "Constance"
+	female = yes
+	dynasty = 3000793
+	religion = lone_star
+	culture = houstonian
+	trait = kind
+	trait = quick
+	trait = patient
+	trait = gregarious
+	2250.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2700046 = { # A count near the duchy of Balcones. An aggressive raider with a love for women.
+	name = "Arthur"
+	dynasty = 5128226
+	religion = rangerite
+	culture = ranchlander
+	diplomacy = 4
+	martial = 4
+	stewardship = 3
+	intrigue = 4
+	learning = 3
+	trait = misguided_warrior
+	trait = aggressive_leader
+	trait = lustful
+	trait = humble
+	trait = wroth
+	disallow_random_traits = yes
+	2293.2.12 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700047 = { # A count in the fringes of The Metroplex. More subservent, he mostly tries to tend to his fields.
+	name = "Moses"
+	dynasty = 5128219
+	religion = rangerite
+	culture = ranchlander
+	diplomacy = 6
+	martial = 5
+	stewardship = 6
+	intrigue = 4
+	learning = 5
+	trait = naive_appeaser
+	trait = timid
+	trait = content
+	trait = gardener
+	trait = gregarious
+	disallow_random_traits = yes
+	2290.12.24 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700048 = { # The Horde of Petroplex. One of the minor powers in South Texas, he tries to make his realm seem as if it is bigger than it actually is.
+	name = "Dax"
+	dynasty = 5128253
+	religion = rangerite
+	culture = ranchlander
+	diplomacy = 2
+	martial = 5
+	stewardship = 4
+	intrigue = 3
+	learning = 5
+	trait = tough_soldier
+	trait = ambitious
+	trait = lunatic
+	trait = paranoid
+	trait = arbitrary
+	disallow_random_traits = yes
+	2291.8.14 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700049 = { # The Clan of Hans. Constantly annoyed by his insane lord.
+	name = "Hans"
+	religion = rangerite
+	culture = texgerman
+	diplomacy = 5
+	martial = 4
+	stewardship = 5
+	intrigue = 6
+	learning = 5
+	trait = elusive_shadow
+	trait = stressed
+	trait = wroth
+	trait = honest
+	trait = flanker
+	disallow_random_traits = yes
+	2288.7.15 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700050 = { # The Horde of Fort Stockton. Pinned down, it remains to be seen if his clan will survive.
+	name = "Maximiliano"
+	dynasty = 5128302
+	religion = guadalupano
+	culture = tejano
+	diplomacy = 7
+	martial = 4
+	stewardship = 5
+	intrigue = 3
+	learning = 5
+	trait = tough_soldier
+	trait = stressed
+	trait = giant
+	trait = brave
+	trait = arbitrary
+	disallow_random_traits = yes
+	2280.1.23 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700051 = { # The Count of Uvalde. One of the Bracero holdouts in Texas.
+	name = "Luciano"
+	dynasty = 5128281
+	religion = bracero
+	culture = tejano
+	diplomacy = 5
+	martial = 4
+	stewardship = 5
+	intrigue = 6
+	learning = 3
+	trait = intricate_webweaver
+	trait = shy
+	trait = just
+	trait = strong
+	trait = robust
+	disallow_random_traits = yes
+	2274.2.13 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700052 = { # The Count of Possum. The only semi-centralized Sky Father realm, he seeks to convert others to the faith.
+	name = "Chad"
+	dynasty = 5128231
+	religion = tengri_pagan
+	culture = ranchlander
+	diplomacy = 4
+	martial = 2
+	stewardship = 5
+	intrigue = 5
+	learning = 6
+	trait = tough_soldier
+	trait = zealous
+	trait = proud
+	trait = charitable
+	trait = lefthanded
+	disallow_random_traits = yes
+	2286.1.21 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700053 = { # The Horde of Lubbock. Constantly travels around, picking up a love for alcohol along the way.
+	name = "Ellsworth"
+	dynasty = 5128213
+	religion = tengri_pagan
+	culture = cheyenne
+	diplomacy = 6
+	martial = 4
+	stewardship = 5
+	intrigue = 5
+	learning = 6
+	trait = charismatic_negotiator
+	trait = socializer
+	trait = drunkard
+	trait = gluttonous
+	trait = content
+	disallow_random_traits = yes
+	2288.10.2 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700054 = { # The Horde of Floyd. A weak man, both in body and will.
+	name = "Drury"
+	dynasty = 5127637
+	religion = tengri_pagan
+	culture = arapaho
+	diplomacy = 5
+	martial = 6
+	stewardship = 5
+	intrigue = 4
+	learning = 4
+	trait = naive_appeaser
+	trait = shy
+	trait = craven
+	trait = weak
+	trait = greedy
+	disallow_random_traits = yes
+	2298.12.1 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2700055 = { # The Horde of Amarillo. A wrathful and ambitious man, he poses a serious threat to his fellow hordes.
+	name = "Lorenzo"
+	dynasty = 5127869
+	religion = tengri_pagan
+	culture = comanche
+	diplomacy = 4
+	martial = 5
+	stewardship = 4
+	intrigue = 6
+	learning = 5
+	trait = skilled_tactician
+	trait = wroth
+	trait = aggressive_leader
+	trait = ambitious
+	trait = cynical
+	disallow_random_traits = yes
+	2300.10.19 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+2700056 = { #Came to power young due to his father's influence and early death, main goal is to secure the continued existence of the republic
+	dynasty = 3000796
+	name = "Cyril"
+	religion = moravian
+	culture = czexan
+	trait = fortune_builder
+	stewardship = 7
+	diplomacy = 5
+	martial = 6
+	trait = diligent
+	trait = administrator
+	trait = deceitful
+	trait = wroth
+	trait = short
+	trait = gregarious
+	2300.1.10 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700057 = { 
+	dynasty = 3000797
+	name = "Jan"
+	religion = moravian
+	culture = czexan
+	trait = mastermind_theologian
+	learning = 9
+	martial = 8
+	trait = duelist
+	trait = patient
+	trait = temperate
+	trait = humble
+	trait = kind
+	trait = erudite
+	trait = content
+	2281.5.7 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
