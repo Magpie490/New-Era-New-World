@@ -108,8 +108,8 @@ title_fraticelli_cardinal = {
 	message = yes
 }
 
-title_sevillian_cardinal = {
-	religion = sevillian
+title_gallicanist_cardinal = {
+	religion = sedevacantist
 	can_elect_head = yes
 	revoke_allowed = no
 	
@@ -128,11 +128,20 @@ title_sevillian_cardinal = {
 		always = no
 	}
 	allow = {
-		religion = sevillian
+		religion = sedevacantist
 		is_theocracy = yes
-		k_sevillian_pope = {
+		k_gallicanist = {
 			holder_scope = {
 				is_within_diplo_range = ROOT
+			}
+		}
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = k_gallicanist
+					}
+				}
 			}
 		}
 	}
