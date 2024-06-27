@@ -6908,6 +6908,20 @@
 5128850 = { name="Valencia" culture=arizonense  }
 
 5128851 = { name="White" culture=newmexican  } #Breaking Bad
+5128851 = { #Breaking Bad
+    name = "White"
+    culture = newmexican
+    coat_of_arms = {
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 0
+            emblem = 0
+            color = 3
+            color = 3
+        }
+    }
+}
 5128852 = { name="Heisenberg" culture=newmexican  } #Breaking Bad
 5128853 = { name="Goodman" culture=newmexican  } #Breaking Bad
 5128854 = { name="Pinkman" culture=newmexican  } #Breaking Bad
@@ -11756,10 +11770,10 @@
 5226489 = { name="Redmond" culture=laikmahn  }
 5226490 = { name="Steadman" culture=laikmahn  }
 
-5226491 = { name="Lambert" culture=newmexican used_for_random = no } #Breaking Bad
-5226492 = { name="McGill" culture=windlander used_for_random = no } #Breaking Bad
-5226493 = { name="Beneke" culture=windlander used_for_random = no } #Breaking Bad
-5226494 = { name="Wolynetz" culture=windlander used_for_random = no } #Breaking Bad
+5226491 = { name="Lambert" culture=newmexican } #Breaking Bad
+5226492 = { name="McGill" culture=windlander } #Breaking Bad
+5226493 = { name="Beneke" culture=newmexican } #Breaking Bad
+5226494 = { name="Wolynetz" culture=newmexican } #Breaking Bad
 
 5226495 = { name="Aazhang" culture=farsi  }
 5226496 = { name="Abdi" culture=farsi  }
@@ -17187,7 +17201,22 @@
 		}
 	}
 }
-3000785 = { name = "Holden" culture = ranchlander }
+3000785 = { name = "Holden" 
+			culture = ranchlander
+			used_for_random = no
+				coat_of_arms = {
+				religion = rangerite
+				template = 0
+				layer = {
+				texture = 16 #NENW_CoAs.tga
+				texture_internal = 296
+				emblem = 0
+				color = 0
+				color = 0
+				color = 0
+		}
+	}
+}
 3000786 = { name = "Glanton" culture = ranchlander }
 3000789 = { name = "Kihegashugah" culture = osage used_for_random = no }
 3000790 = { name = "Monoquet" 
@@ -17210,6 +17239,8 @@
 3000792 = { name = "Cooper" culture = houstonian }
 3000793 = { name = "Tucker" culture = houstonian }
 3000794 = { name = "Ross" culture = sunshiner }
+3000795 = { name="Freeman" culture=newmexican } #Half-Life
+
 
 #For Acadiana history
 3000787 = { name = "Vernon" culture = cajun used_for_random = no }
@@ -17582,37 +17613,85 @@
 4000104 = { name = "Castle" culture = american used_for_random = no}
 4000105 = { name = "Wolf" culture = american used_for_random = no}
 4000106 = { name = "Carper" culture = american used_for_random = no}
-4000107 = { name = "Boreman" culture = american }
-4000108 = { name = "Farnsworth" culture = american }
-4000109 = { name = "Stevenson" culture = american }
-4000110 = { name = "Jacob" culture = american }
-4000111 = { name = "Mathews" culture = american }
-4000112 = { name = "Jackson" culture = american }
-4000113 = { name = "Wilson" culture = american }
-4000114 = { name = "Fleming" culture = american }
-4000115 = { name = "MacCorkle" culture = american }
-4000116 = { name = "Atkinson" culture = american }
-4000117 = { name = "White" culture = american }
-4000118 = { name = "Dawson" culture = american }
-4000119 = { name = "Glasscock" culture = american }
-4000120 = { name = "Hatfield" culture = american }
-4000121 = { name = "Cornwell" culture = american }
-4000122 = { name = "Morgan" culture = american }
-4000123 = { name = "Gore" culture = american }
-4000124 = { name = "Conley" culture = american }
-4000125 = { name = "Kump" culture = american }
-4000126 = { name = "Holt" culture = american }
-4000127 = { name = "Neely" culture = american }
-4000128 = { name = "Meadows" culture = american }
-4000129 = { name = "Patteson" culture = american }
-4000130 = { name = "Marland" culture = american }
-4000131 = { name = "Underwood" culture = american }
-4000132 = { name = "Barron" culture = american }
-4000133 = { name = "Smith" culture = american }
-4000134 = { name = "Moore" culture = american }
-4000135 = { name = "Rockefeller" culture = american }
-4000136 = { name = "Caperton" culture = american }
-4000137 = { name = "Pierpont" culture = american }
+4000107 = { name = "Boreman" culture = american used_for_random = no}
+4000108 = { name = "Farnsworth" culture = american used_for_random = no}
+4000109 = { name = "Stevenson" culture = american used_for_random = no}
+4000110 = { name = "Jacob" culture = american used_for_random = no}
+4000111 = { name = "Mathews" culture = american used_for_random = no}
+4000112 = { name = "Jackson" culture = american used_for_random = no}
+4000113 = { name = "Wilson" culture = american used_for_random = no}
+4000114 = { name = "Fleming" culture = american used_for_random = no}
+4000115 = { name = "MacCorkle" culture = american used_for_random = no}
+4000116 = { name = "Atkinson" culture = american used_for_random = no}
+4000117 = { name = "White" culture = american used_for_random = no}
+4000118 = { name = "Dawson" culture = american used_for_random = no}
+4000119 = { name = "Glasscock" culture = american used_for_random = no}
+4000120 = { name = "Hatfield" culture = american used_for_random = no}
+4000121 = { name = "Cornwell" culture = american used_for_random = no}
+4000122 = { name = "Morgan" culture = american used_for_random = no}
+4000123 = { name = "Gore" culture = american used_for_random = no}
+4000124 = { name = "Conley" culture = american used_for_random = no}
+4000125 = { name = "Kump" culture = american used_for_random = no}
+4000126 = { name = "Holt" culture = american used_for_random = no}
+4000127 = { name = "Neely" culture = american used_for_random = no}
+4000128 = { name = "Meadows" culture = american used_for_random = no}
+4000129 = { name = "Patteson" culture = american used_for_random = no}
+4000130 = { name = "Marland" culture = american used_for_random = no}
+4000131 = { name = "Underwood" culture = american used_for_random = no}
+4000132 = { name = "Barron" culture = american used_for_random = no}
+4000133 = { name = "Smith" culture = american used_for_random = no}
+4000134 = { name = "Moore" culture = american used_for_random = no}
+4000135 = { name = "Rockefeller" culture = american used_for_random = no}
+4000136 = { name = "Caperton" culture = american used_for_random = no}
+4000137 = { name = "Pierpont" culture = american used_for_random = no}
+4000138 = { name = "Wharton" culture = american used_for_random = no}
+4000139 = { name = "Bryan" culture = american used_for_random = no}
+4000140 = { name = "Reed" culture = american used_for_random = no}
+4000141 = { name = "Moore" culture = american used_for_random = no}
+4000142 = { name = "Franklin" culture = american used_for_random = no}
+4000143 = { name = "Mifflin" culture = american used_for_random = no}
+4000144 = { name = "Snyder" culture = american used_for_random = no}
+4000145 = { name = "Findlay" culture = american used_for_random = no}
+4000146 = { name = "Hiester" culture = american used_for_random = no}
+4000147 = { name = "Shulze" culture = american used_for_random = no}
+4000148 = { name = "Wolf" culture = american used_for_random = no}
+4000149 = { name = "Ritner" culture = american used_for_random = no}
+4000150 = { name = "Porter" culture = american used_for_random = no}
+4000151 = { name = "Shunk" culture = american used_for_random = no}
+4000152 = { name = "Johnston" culture = american used_for_random = no}
+4000153 = { name = "Bigler" culture = american used_for_random = no}
+4000154 = { name = "Pollock" culture = american used_for_random = no}
+4000155 = { name = "Packer" culture = american used_for_random = no}
+4000156 = { name = "Curtin" culture = american used_for_random = no}
+4000157 = { name = "Geary" culture = american used_for_random = no}
+4000158 = { name = "Hartranft" culture = american used_for_random = no}
+4000159 = { name = "Hoyt" culture = american used_for_random = no}
+4000160 = { name = "Pattison" culture = american used_for_random = no}
+4000161 = { name = "Beaver" culture = american used_for_random = no}
+4000162 = { name = "Hastings" culture = american used_for_random = no}
+4000163 = { name = "Stone" culture = american used_for_random = no}
+4000164 = { name = "Pennypacker" culture = american used_for_random = no}
+4000165 = { name = "Stuart" culture = american used_for_random = no}
+4000166 = { name = "Tener" culture = american used_for_random = no}
+4000167 = { name = "Brumbaugh" culture = american used_for_random = no}
+4000168 = { name = "Sproul" culture = american used_for_random = no}
+4000169 = { name = "Pinchot" culture = american used_for_random = no}
+4000170 = { name = "Fisher" culture = american used_for_random = no}
+4000171 = { name = "Earle" culture = american used_for_random = no}
+4000172 = { name = "James" culture = american used_for_random = no}
+4000173 = { name = "Martin" culture = american used_for_random = no}
+4000174 = { name = "Bell" culture = american used_for_random = no}
+4000175 = { name = "Duff" culture = american used_for_random = no}
+4000176 = { name = "Fine" culture = american used_for_random = no}
+4000177 = { name = "Leader" culture = american used_for_random = no}
+4000178 = { name = "Lawrence" culture = american used_for_random = no}
+4000179 = { name = "Scranton" culture = american used_for_random = no}
+4000180 = { name = "Shafer" culture = american used_for_random = no}
+4000181 = { name = "Shapp" culture = american used_for_random = no}
+4000182 = { name = "Thornburgh" culture = american used_for_random = no}
+4000183 = { name = "Casey" culture = american used_for_random = no}
+4000184 = { name = "Ridge" culture = american used_for_random = no}
+
 5001001 = {
 	name = "Targaryen"
 	culture = westerosi_valyrian

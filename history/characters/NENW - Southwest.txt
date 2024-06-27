@@ -23,9 +23,11 @@
 }
 2710001 = { # 
 	name = "Walter"
+	dna="abbdizgadcn"
+	properties="jo0dmk"
 	dynasty = 5128851
 	culture = newmexican
-	religion = blue_star #don't know what religion to give them
+	religion = blue_star #don't know what religion to give them for now
 	trait = mastermind_theologian
 	trait = quick
 	trait = diligent
@@ -34,11 +36,22 @@
 	trait = ambitious
 	trait = cancer
 	trait = scholar
+	learning = 10
 	health = 9 #handles the cancer pretty well
 	2275.9.7 = {
 		birth = yes
+		effect={
+			add_artifact = spectacles
+		}
 	}
-	2304.4.15 = {
+	2293.2.15 = {
+		effect={
+			join_society = hermetics
+			set_society_grandmaster = yes
+			add_society_currency_massive_effect = yes
+		}
+	}
+	2306.4.15 = {
 		add_spouse=2710002
 	}
 	2666.1.1 = {
@@ -139,7 +152,7 @@
 		birth = yes
 	}
 	2304.4.15 = {
-		add_spouse=2710002
+		add_spouse=2710009
 	}
 	2666.1.1 = {
 		death = yes
@@ -224,6 +237,35 @@
 	trait = strategist
 	2294.9.24 = {
 		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710013 = {
+	name = "Gordon"
+	dynasty = 3000795
+	culture = newmexican
+	religion = trinitarian
+	trait = mastermind_theologian
+	trait = quick
+	trait = diligent
+	trait = erudite
+	trait = stutter #No mute trait
+	trait = brave
+	trait = scholar
+	learning = 10
+	2298.9.7 = {
+		birth = yes
+		effect={
+			add_artifact = spectacles
+		}
+	}
+	2293.2.15 = {
+		effect={
+			join_society = hermetics
+			add_society_currency_massive_effect = yes
+		}
 	}
 	2666.1.1 = {
 		death = yes
