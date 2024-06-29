@@ -2783,7 +2783,7 @@
 	}
 }
 910141 = {  
-	name = "Ra's" #R'a al Ghul, a strong and cunning man who dreams of world domination. Has a particular dislike of bats
+	name = "Ra's" #Ra's al Ghul, a strong and cunning man who dreams of world domination. Has a particular dislike of bats
 	dynasty = 3000655
 	culture = fluridani
 	religion = sufi
@@ -2799,6 +2799,12 @@
 	disallow_random_traits = yes
 	2277.12.20 = {
 		birth = yes
+		effect = {
+			create_bloodline = {
+				type = ras_al_ghul
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2666.1.1 = {
 		death = yes
