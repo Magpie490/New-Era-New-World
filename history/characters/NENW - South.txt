@@ -3066,16 +3066,22 @@
 	name = "Damian" #Son of Bruce, born out of an affair with Talia. Currently under the care of Ra's as a protege.
 	dynasty = 5022731 #Wayne
 	culture = southron #For portrait
-	religion = columbian
+	religion = sufi
 	father = 900301
 	mother = 910153
 	trait = willful
 	trait = quick
 	trait = legit_bastard
-	trait = sympathy_islam
+	trait = sympathy_christendom
 	2323.8.1 = {
 		birth = yes
 		culture = fluridani
+		effect = {
+			create_bloodline = {
+				type = ras_al_ghul
+				has_dlc = "Holy Fury"
+			}
+		}
 	}
 	2323.8.2 = {
 		employer = 910141 #Damian joins the League of Shadows		
