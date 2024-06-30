@@ -89,6 +89,10 @@
 	disallow_random_traits = yes
 	2285.4.21 = {
 		birth = yes
+		effect = {
+			wealth = 300
+			add_artifact = gold_bar
+		}
 	}
 	2500.1.1 = {
 		death = yes
@@ -122,6 +126,8 @@
 		add_spouse=2720005
 		effect={
 			add_lover=2720005
+			add_friend=900301
+			add_rival=2720003
 		}
 	}
 	2666.1.1 = {
@@ -657,6 +663,34 @@
 		employer = 2720000 #Court of Dorothy	
 	}
 	2500.1.1 = {
+		death = yes
+	}
+}
+2720029 = { 
+	name = "Luke" #the man who shoots faster than his shadow
+	culture = jayhawker
+	religion = gambler
+	trait = skilled_tactician
+	trait = tall
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = just
+	trait = quick
+	trait = duelist
+	give_nickname = nick_the_lucky
+	2300.1.2 = {
+		birth = yes
+		effect = {
+			add_artifact=ate_firearm
+		}
+	}
+	2323.8.2 = {
+		effect = {
+			add_rival=2720010
+		}
+	}
+	2666.1.1 = {
 		death = yes
 	}
 }
