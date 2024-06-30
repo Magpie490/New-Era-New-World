@@ -1,20 +1,19 @@
-2720000 = { # The Count of Moks. Paranoid towards everything and everyone.
-	name = "Duke"
+2720000 = { 
+	name = "Dorothy" #Dorothy of Gale. A woman who was swept away from Kansas
 	dynasty = 50068
 	culture = goldmen
 	religion = community_of_christ
-	diplomacy = 4
-	martial = 5
-	stewardship = 6
-	intrigue = 5
-	learning = 7
-	trait = amateurish_plotter
-	trait = paranoid
-	trait = cynical
-	trait = stressed
-	trait = stubborn
+	female = yes
+	trait = charismatic_negotiator
+	trait = shrewd
+	trait = temperate
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = honest
+	trait = trusting
 	disallow_random_traits = yes
-	2302.1.13 = {
+	2303.1.13 = {
 		birth = yes
 	}
 	2500.1.1 = {
@@ -581,6 +580,81 @@
 	trait = charitable
 	2306.11.28 = {
 		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720026 = { 
+	name = "Lion" #A lion man who is trying to overcome his cowardly nature
+	culture = lion
+	religion = community_of_christ
+	trait = misguided_warrior
+	trait = strong
+	trait = patient
+	trait = kind
+	trait = humble
+	trait = craven
+	trait = honest
+	trait = trusting
+	trait = celibate
+	disallow_random_traits = yes
+	2285.1.2 = {
+		birth = yes
+	}
+	2323.8.2 = {
+		employer = 2720000 #Court of Dorothy	
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720027 = { 
+	name = "Scarecrow" #A scarecrow who seeks knowledge and most importantly, a brain
+	culture = goldmen
+	religion = community_of_christ
+	trait = detached_priest
+	trait = disfigured
+	trait = imbecile
+	trait = tall
+	trait = uncouth
+	trait = diligent
+	trait = kind
+	trait = ambitious
+	trait = celibate
+	disallow_random_traits = yes
+	2285.1.2 = {
+		birth = yes
+	}
+	2323.8.2 = {
+		employer = 2720000 #Court of Dorothy	
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720028 = { 
+	name = "Tinman" #A man made of tin apparently who seeks affection and most importantly, a heart
+	culture = goldmen
+	religion = community_of_christ
+	trait = naive_appeaser
+	trait = robust
+	trait = architect
+	trait = tall
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = just
+	trait = celibate
+	disallow_random_traits = yes
+	2285.1.2 = {
+		birth = yes
+	}
+	2323.8.2 = {
+		employer = 2720000 #Court of Dorothy	
 	}
 	2500.1.1 = {
 		death = yes
