@@ -89,6 +89,10 @@
 	disallow_random_traits = yes
 	2285.4.21 = {
 		birth = yes
+		effect = {
+			wealth = 300
+			add_artifact = gold_bar
+		}
 	}
 	2500.1.1 = {
 		death = yes
@@ -122,6 +126,8 @@
 		add_spouse=2720005
 		effect={
 			add_lover=2720005
+			add_friend=900301
+			add_rival=2720003
 		}
 	}
 	2666.1.1 = {
@@ -655,6 +661,226 @@
 	}
 	2323.8.2 = {
 		employer = 2720000 #Court of Dorothy	
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720029 = { 
+	name = "Luke" #the man who shoots faster than his shadow
+	culture = jayhawker
+	religion = gambler
+	trait = skilled_tactician
+	trait = tall
+	trait = diligent
+	trait = kind
+	trait = brave
+	trait = just
+	trait = quick
+	trait = duelist
+	give_nickname = nick_the_lucky
+	2300.1.2 = {
+		birth = yes
+		effect = {
+			add_artifact=ate_firearm
+		}
+	}
+	2323.8.2 = {
+		effect = {
+			add_rival=2720010
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2720030 = { # The Count of Gregory. A gardener as fertile as his fields.
+	name = "Taylor"
+	dynasty = 5129260
+	culture = dakota
+	religion = peyotist
+	diplomacy = 5
+	martial = 4
+	stewardship = 7 
+	intrigue = 6
+	learning = 4
+	trait = fortune_builder
+	trait = gardener
+	trait = fecund
+	trait = gregarious
+	trait = humble
+	disallow_random_traits = yes
+	2290.10.20 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720031 = { # The Horde of Pine Ridge. Strong and stubborn, people around him find it hard to convince him. 
+	name = "Caden"
+	dynasty = 5123876
+	culture = lakota
+	religion = peyotist
+	diplomacy = 4
+	martial = 6
+	stewardship = 5 
+	intrigue = 7
+	learning = 5
+	trait = tough_soldier
+	trait = strong
+	trait = stubborn
+	trait = wroth
+	trait = stressed
+	disallow_random_traits = yes
+	2297.1.13 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720032 = { # The Horde of Rosebud. Oblivious to the harsh world. 
+	name = "Tim"
+	dynasty = 5123891
+	culture = lakota
+	religion = peyotist
+	diplomacy = 4
+	martial = 5
+	stewardship = 4 
+	intrigue = 5
+	learning = 6
+	trait = underhanded_rogue
+	trait = gregarious
+	trait = kind
+	trait = trusting
+	trait = patient
+	disallow_random_traits = yes
+	2302.7.20 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720033 = { # The Horde of Cheyenne River. Paranoid and untrusting, he always lies to people around him. 
+	name = "Allan"
+	dynasty = 5123886
+	culture = lakota
+	religion = sun_dance
+	diplomacy = 4
+	martial = 5
+	stewardship = 3 
+	intrigue = 7
+	learning = 4
+	trait = intricate_webweaver
+	trait = deceitful
+	trait = cruel
+	trait = gregarious
+	trait = envious
+	disallow_random_traits = yes
+	2295.9.4 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720034 = { # The Horde of Black Hills. With a hideous face, he hides behind a mask. 
+	name = "Silas"
+	dynasty = 5129961
+	culture = northern_cheyenne
+	religion = sun_dance
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 7
+	learning = 5
+	trait = naive_appeaser
+	trait = shy
+	trait = ugly
+	trait = depressed
+	trait = groomed
+	disallow_random_traits = yes
+	2297.10.23 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720035 = { # The Horde of Dunn. Ambitious, but held back by his mental state. 
+	name = "Lloyd"
+	dynasty = 5123223
+	culture = hidatsa
+	religion = sun_dance
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 5
+	learning = 7
+	trait = tough_soldier
+	trait = ambitious
+	trait = shy
+	trait = depressed
+	trait = drunkard
+	disallow_random_traits = yes
+	2291.8.23 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720036 = { # The Count of Mandan. Charitable and patient, he hopes for his horde neighbors to do the same.
+	name = "George"
+	culture = mandan
+	religion = sun_dance
+	diplomacy = 4
+	martial = 5
+	stewardship = 7 
+	intrigue = 4
+	learning = 5
+	trait = thrifty_clerk
+	trait = patient
+	trait = charitable
+	trait = just
+	trait = erudite
+	disallow_random_traits = yes
+	2293.8.26 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+2720037 = { # The Horde of Fort Berthold. Greedy and indulgent in the worldly pleasures. 
+	name = "Morris"
+	dynasty = 5129329
+	culture = arikara
+	religion = sun_dance
+	diplomacy = 4
+	martial = 5
+	stewardship = 6 
+	intrigue = 4
+	learning = 5
+	trait = misguided_warrior
+	trait = lustful
+	trait = gluttonous
+	trait = greedy
+	trait = cruel
+	disallow_random_traits = yes
+	2291.9.1 = {
+		birth = yes
 	}
 	2500.1.1 = {
 		death = yes

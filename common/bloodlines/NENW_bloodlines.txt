@@ -464,6 +464,42 @@ ras_al_ghul = {
 	bloodline_effect_murder_stalk = 1
 	inheritance = patrilineal
 	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_benevolent
+	picture = GFX_bloodlines_symbol_murder
 	flags = { historical_bloodline bloodline_murder_stalk bloodline_murderous }
+}
+the_judge = {
+	cruel_opinion = 5
+	red_horse_cult_opinion = 5
+	plot_power_modifier = 0.15
+	defensive_plot_power_modifier = 0.1
+	bloodline_effect_murder_deflection = 1
+	bloodline_effect_faster_dissent = 1
+	bloodline_effect_phonocratic = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_war
+	flags = { historical_bloodline bloodline_murder_deflection bloodline_murderous bloodline_phonocratic bloodline_faster_dissent }
+}
+chuck_norris = {
+	combat_rating = 15
+	brave_opinion = 5
+	martial = 1
+	bloodline_effect_battle_survivor = 1
+	bloodline_effect_joining_warrior_lodge = 1
+	monthly_character_prestige = 0.1
+	health = 3
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_war
+	flags = { historical_bloodline battle_survivor_bloodline bloodline_legendary_warrior }
+}
+qajar = {
+	shiite_opinion = 5
+	amero_iranic_opinion = 5
+	global_revolt_risk = -0.01
+	monthly_character_prestige = 0.5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_sunni
+	flags = { historical_bloodline }
 }
