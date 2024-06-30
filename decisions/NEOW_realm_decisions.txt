@@ -8489,73 +8489,11 @@ decisions = {
 			}
 			form_empire_allow = yes
 			#Control a bunch of lands
-				k_blue_ridge = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_appalachia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_vandalia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_allegheny = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_pittsburgh = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_florida = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_upstachia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_adirondack = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_buffalo = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_new_york = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_taconica = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_eastsylvania = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_columbia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_new_england = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_northeast_kingdom = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_vermont = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_new_hampshire = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_lobsterland = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_aroostook = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_massachusets = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_tarheel = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_old_dominion = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_jersey = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_connecticut = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_rhode_island = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_new_acadia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_wampanoag = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_maryland = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_delaware = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_delmarva = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_maine = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_pennsylvania = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_jaxland = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_georgia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_dixie = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_alabama = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_palmetto = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_two_carolinas = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_tuskegee = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_birmingham = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_upnord = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_mishiana = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_midmishigan = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_michigan = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_superior = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_egypt = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_cahokia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_kentucky = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_obion = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_tennessee = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_st_louis = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_missouri = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_ozarks = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_magnolia = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_texarkana = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_acadiana = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_arkansas = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_louisiana = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_ohio = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_cleveland = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_wisconsin = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_wabash = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_illinois = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_windgarden = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_iowa = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_minnesota = { show_scope_change = no province_completely_controls_trigger = yes }
-				k_dakota = { show_scope_change = no province_completely_controls_trigger = yes }
+				completely_controls_region = world_northeast
+				completely_controls_region = world_appalachia
+				completely_controls_region = world_southeast
+				completely_controls_region = world_mississippi
+				completely_controls_region = world_steel_belt
 		}
 
 		effect = {
@@ -8583,7 +8521,6 @@ decisions = {
 				k_appalachia = { de_jure_liege = e_usa }	
 				k_vandalia = { de_jure_liege = e_usa }	
 				k_allegheny = { de_jure_liege = e_usa }	
-				k_pittsburgh = { de_jure_liege = e_usa }	
 				k_florida = { de_jure_liege = e_usa }	
 				k_upstachia = { de_jure_liege = e_usa }	
 				k_adirondack = { de_jure_liege = e_usa }	
@@ -8602,12 +8539,8 @@ decisions = {
 				k_tarheel = { de_jure_liege = e_usa }	
 				k_old_dominion = { de_jure_liege = e_usa }	
 				k_jersey = { de_jure_liege = e_usa }	
-				k_connecticut = { de_jure_liege = e_usa }	
-				k_rhode_island = { de_jure_liege = e_usa }	
 				k_new_acadia = { de_jure_liege = e_usa }	
 				k_wampanoag = { de_jure_liege = e_usa }	
-				k_maryland = { de_jure_liege = e_usa }	
-				k_delaware = { de_jure_liege = e_usa }	
 				k_delmarva = { de_jure_liege = e_usa }	
 				k_maine = { de_jure_liege = e_usa }	
 				k_pennsylvania = { de_jure_liege = e_usa }	
@@ -8616,9 +8549,6 @@ decisions = {
 				k_dixie = { de_jure_liege = e_usa }	
 				k_alabama = { de_jure_liege = e_usa }	
 				k_palmetto = { de_jure_liege = e_usa }	
-				k_two_carolinas = { de_jure_liege = e_usa }	
-				k_tuskegee = { de_jure_liege = e_usa }	
-				k_birmingham = { de_jure_liege = e_usa }	
 				k_upnord = { de_jure_liege = e_usa }	
 				k_mishiana = { de_jure_liege = e_usa }	
 				k_midmishigan = { de_jure_liege = e_usa }	
