@@ -1,0 +1,90 @@
+usa_male = {
+	monthly_character_prestige = 1
+	constitutional_opinion = 10
+	custodite_opinion = 10
+	high_american_opinion = 10
+	low_american_opinion = 10
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+}
+usa_female = {
+	monthly_character_prestige = 1
+	constitutional_opinion = 10
+	custodite_opinion = 10
+	high_american_opinion = 10
+	low_american_opinion = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+}
+
+canada_male = {
+	monthly_character_prestige = 1
+	loyalist_opinion = 10
+	laurentine_anglo_opinion = 10
+	low_american_opinion = 10
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+}
+canada_female = {
+	monthly_character_prestige = 1
+	loyalist_opinion = 10
+	laurentine_anglo_opinion = 10
+	low_american_opinion = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+}
+
+texas_male = {
+	monthly_character_prestige = 0.25
+	lone_star_opinion = 5
+	rangerite_opinion = 5
+	east_texan_opinion = 5
+	west_texan_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		OR = {
+			religion = lone_star
+			religion = rangerite
+			culture_group = east_texan
+			culture_group = west_texan
+			culture = tejano
+			culture = texgerman
+			culture = teksaski
+			culture = czexan
+		}
+	}
+}
+texas_female = {
+	monthly_character_prestige = 0.25
+	lone_star_opinion = 5
+	rangerite_opinion = 5
+	east_texan_opinion = 5
+	west_texan_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		OR = {
+			religion = lone_star
+			religion = rangerite
+			culture_group = east_texan
+			culture_group = west_texan
+			culture = tejano
+			culture = texgerman
+			culture = teksaski
+			culture = czexan
+		}
+	}
+}
