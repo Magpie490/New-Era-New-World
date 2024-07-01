@@ -148,6 +148,8 @@
 2700005 = { #Member of an ancient line of Texas Rangers
 	dynasty = 3000759
 	name = "Carlos Ray"
+	dna="acabeucaebz"
+	properties="0m0dak"
 	religion = rangerite
 	culture = dallasian
 	trait = brilliant_strategist
@@ -178,6 +180,13 @@
 				type = chuck_norris
 				has_dlc = "Holy Fury"
 			}
+		}
+	}
+	2318.3.10 = {
+		effect={
+			join_society = warrior_lodge_texas_ranger
+			set_society_grandmaster = yes
+			add_society_currency_massive_effect = yes
 		}
 	}
 	2666.1.1 = {
@@ -595,7 +604,9 @@
 		birth = yes
 	}
 	2306.2.15 = {
-		#employer = 2700000
+		effect={
+			join_society = warrior_lodge_texas_ranger
+		}
 	}
 	2666.1.1 = {
 		death = yes
