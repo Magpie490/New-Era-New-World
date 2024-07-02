@@ -7847,6 +7847,30 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_custodite } }
 		join_society = warrior_lodge_custodite
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_gibborim } }
+		join_society = warrior_lodge_gibborim
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_gator } }
+		join_society = warrior_lodge_gator
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_antiquarianist } }
+		join_society = warrior_lodge_antiquarianist
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_gaian } }
+		join_society = warrior_lodge_gaian
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_delver } }
+		join_society = warrior_lodge_delver
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_raider } }
+		join_society = warrior_lodge_raider
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -21091,6 +21115,24 @@ add_warrior_lodge_leader_trait_effect = {
 		warrior_lodge_custodite = {
 			add_trait = custodite_leader
 		}
+		warrior_lodge_gibborim = {
+			add_trait = gibborim_leader
+		}
+		warrior_lodge_gator = {
+			add_trait = gator_leader
+		}
+		warrior_lodge_antiquarianist = {
+			add_trait = antiquarianist_leader
+		}
+		warrior_lodge_gaian = {
+			add_trait = gaian_leader
+		}
+		warrior_lodge_delver = {
+			add_trait = delver_leader
+		}
+		warrior_lodge_raider = {
+			add_trait = raider_leader
+		}
 	}
 }
 fire_haruspicy_event_effect = {
@@ -21113,7 +21155,7 @@ fire_haruspicy_event_effect = {
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_sarna
 						has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
+						has_religion_feature = religion_feature_delver
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
 						religion = poseidonian
@@ -21149,7 +21191,7 @@ fire_haruspicy_event_effect = {
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_sarna
 						has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
+						has_religion_feature = religion_feature_delver
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
 						religion = poseidonian

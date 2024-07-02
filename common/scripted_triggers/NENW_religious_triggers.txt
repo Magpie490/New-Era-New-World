@@ -1,3 +1,10 @@
+is_texan_religion_trigger = {
+	OR = {
+		religion = rangerite
+		religion = lone_star
+	}
+}
+
 religion_openly_gator_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_gator_or_reformed_trigger
@@ -5,6 +12,28 @@ religion_openly_gator_or_reformed_trigger = {
 			OR = {
 				religion = gator_pagan
 				religion = gator_pagan_reformed
+			}
+		}
+	}
+}
+religion_openly_antiquarianist_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_gator_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = antiquarianist
+				religion = antiquarianist_reformed
+			}
+		}
+	}
+}
+religion_openly_delver_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_gator_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = delver
+				religion = delver_reformed
 			}
 		}
 	}
@@ -18,4 +47,16 @@ is_triumphant_religion_trigger = {
 }
 is_custodite_religion_trigger = {
 	religion = custodite
+}
+is_gibborim_religion_trigger = {
+	religion = gibborim
+}
+is_gaian_religion_trigger = {
+	religion = gaian
+}
+is_luddite_religion_trigger = {
+	religion = gaian
+}
+is_raider_religion_trigger = {
+	religion = pagan
 }
