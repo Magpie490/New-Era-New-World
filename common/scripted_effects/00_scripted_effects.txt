@@ -7831,6 +7831,22 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_satsana_pi } }
 		join_society = warrior_lodge_satsana_pi
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_texas_ranger } }
+		join_society = warrior_lodge_texas_ranger
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_gridiron } }
+		join_society = warrior_lodge_gridiron
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_triumphant } }
+		join_society = warrior_lodge_triumphant
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_custodite } }
+		join_society = warrior_lodge_custodite
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -21062,6 +21078,18 @@ add_warrior_lodge_leader_trait_effect = {
 		}
 		warrior_lodge_satsana_pi = {
 			add_trait = satsana_pi_leader
+		}
+		warrior_lodge_texas_ranger = {
+			add_trait = rangerite_leader
+		}
+		warrior_lodge_gridiron = {
+			add_trait = gridiron_leader
+		}
+		warrior_lodge_triumphant = {
+			add_trait = triumphant_leader
+		}
+		warrior_lodge_custodite = {
+			add_trait = custodite_leader
 		}
 	}
 }

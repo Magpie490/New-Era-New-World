@@ -3094,6 +3094,41 @@ character_event = {
         }
 		else_if = {
 			limit = {
+				OR = {
+					religion = rangerite
+					culture_group = east_texan
+					culture_group = west_texan
+					any_vassal = { religion = rangerite }
+					any_liege = { religion = rangerite }
+					any_neighbor_independent_ruler = { religion = rangerite } 
+				}
+				can_join_society = warrior_lodge_texas_ranger
+			}
+            join_society = warrior_lodge_texas_ranger
+        }
+		else_if = {
+			limit = {
+				is_gridiron_religion_trigger = yes
+				can_join_society = warrior_lodge_gridiron
+			}
+            join_society = warrior_lodge_gridiron
+        }
+		else_if = {
+			limit = {
+				is_triumphant_religion_trigger = yes
+				can_join_society = warrior_lodge_triumphant
+			}
+            join_society = warrior_lodge_triumphant
+        }
+		else_if = {
+			limit = {
+				is_custodite_religion_trigger = yes
+				can_join_society = warrior_lodge_custodite
+			}
+            join_society = warrior_lodge_custodite
+        }
+		else_if = {
+			limit = {
 				is_nomadic = yes
 				OR = {
 					can_join_society = warrior_lodge_tengri
