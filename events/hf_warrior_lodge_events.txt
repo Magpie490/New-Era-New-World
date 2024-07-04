@@ -3171,6 +3171,34 @@ character_event = {
         }
 		else_if = {
 			limit = {
+				is_cowboy_buddhist_religion_trigger = yes
+				can_join_society = warrior_lodge_cowboy_buddhist
+			}
+            join_society = warrior_lodge_cowboy_buddhist
+        }
+		else_if = {
+			limit = {
+				is_peyotist_religion_trigger = yes
+				can_join_society = warrior_lodge_peyotist
+			}
+            join_society = warrior_lodge_peyotist
+        }
+		else_if = {
+			limit = {
+				is_sun_dance_religion_trigger = yes
+				can_join_society = warrior_lodge_sun_dance
+			}
+            join_society = warrior_lodge_sun_dance
+        }
+		else_if = {
+			limit = {
+				is_juggalo_religion_trigger = yes
+				can_join_society = warrior_lodge_juggalo
+			}
+            join_society = warrior_lodge_juggalo
+        }
+		else_if = {
+			limit = {
 				is_nomadic = yes
 				OR = {
 					can_join_society = warrior_lodge_tengri

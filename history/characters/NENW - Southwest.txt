@@ -27,7 +27,7 @@
 	properties="jo0dmk"
 	dynasty = 5128851
 	culture = newmexican
-	religion = blue_star #don't know what religion to give them for now
+	religion = penitente
 	trait = mastermind_theologian
 	trait = quick
 	trait = diligent
@@ -65,7 +65,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = fortune_builder
 	2287.8.11 = {
 		birth = yes
@@ -80,7 +80,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = stutter
 	2308.7.8 = {
 		birth = yes
@@ -96,7 +96,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2324.2.16 = {
 		birth = yes
 	}
@@ -104,13 +104,13 @@
 		death = yes
 	}
 }
-2710005 = { # A shady lawyer
+2710005 = { # A shady lawyer currently employed by Duke Walter
 	name = "Saul"
 	dynasty = 5128853
 	father = 100100
 	mother = 100101
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = intricate_webweaver
 	trait = quick
 	trait = deceitful
@@ -118,21 +118,29 @@
 	trait = gregarious
 	trait = greedy
 	trait = socializer
+	trait = sympathy_judaism
 	2277.11.12 = {
 		birth = yes
+	}
+	2323.8.2 = {
+		employer = 2710001		
 	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2710006 = {
-	name = "Jesse"
+	name = "Jesse" #Business partner and friend of Walter, currently ruler of Escondida
 	dynasty = 5128854
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = charismatic_negotiator
 	trait = gregarious
-	trait = kind
+	trait = shrewd
+	trait = diligent
+	trait = brave
+	trait = paranoid
+	disallow_random_traits = yes
 	2301.9.24 = {
 		birth = yes
 	}
@@ -141,13 +149,20 @@
 	}
 }
 2710007 = {
-	name = "Hank"
+	name = "Hank" #A diligent but somewhat clueless warrior who seeks justice with some success
 	dynasty = 5128855
 	culture = newmexican
-	religion = blue_star
+	religion = trinitarian
 	trait = tough_soldier
 	trait = gregarious
 	trait = brave
+	trait = sturdy
+	trait = diligent
+	trait = proud
+	trait = just
+	trait = trusting
+	trait = brave
+	disallow_random_traits = yes
 	2283.3.24 = {
 		birth = yes
 	}
@@ -159,10 +174,10 @@
 	}
 }
 2710008 = {
-	name = "Mike"
+	name = "Mike" #A fighter and enforcer who currently serves under Duke Walter
 	dynasty = 5128856
 	culture = newmexican
-	religion = blue_star
+	religion = trinitarian
 	trait = brilliant_strategist
 	trait = patient
 	trait = brave
@@ -170,6 +185,7 @@
 	trait = deceitful
 	trait = marshal_2
 	trait = strategist
+	trait = sympathy_christendom
 	2260.9.24 = {
 		birth = yes
 	}
@@ -184,7 +200,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = amateurish_plotter
 	trait = deceitful
 	trait = greedy
@@ -200,7 +216,7 @@
 	name = "George"
 	dynasty = 5226491
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2250.8.11 = {
 		birth = yes
 	}
@@ -215,7 +231,7 @@
 	name = "Holly"
 	female = yes
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2250.8.11 = {
 		birth = yes
 	}
@@ -223,27 +239,35 @@
 		death = yes
 	}
 }
-2710012 = {
+2710012 = { # The ruler of El Paso. Known for his delicious chicken from his store. Some say he has a different business, though.... 
 	name = "Gustavo"
 	dynasty = 5128421
-	culture = neomexicano
-	religion = blue_star
-	trait = elusive_shadow
+	culture = amherican #For portrait
+	religion = bracero
+	diplomacy = 8
+	martial = 4
+	stewardship = 6
+	intrigue = 7
+	learning = 7
+	trait = midas_touched
+	trait = administrator
+	trait = schemer
+	trait = proud
+	trait = gregarious
 	trait = patient
-	trait = humble
 	trait = ambitious
-	trait = deceitful
-	trait = genius
-	trait = strategist
+	trait = quick
+	disallow_random_traits = yes
 	2294.9.24 = {
 		birth = yes
+		culture = neomexicano
 	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2710013 = {
-	name = "Gordon"
+	name = "Gordon" #A mastermind of a person who rarely speaks
 	dynasty = 3000795
 	culture = newmexican
 	religion = trinitarian
@@ -251,15 +275,17 @@
 	trait = quick
 	trait = diligent
 	trait = erudite
-	trait = stutter #No mute trait
-	trait = lisp #No mute trait
+	trait = shy #closest to mute
 	trait = brave
 	trait = scholar
+	trait = duelist
 	learning = 10
 	2298.9.7 = {
 		birth = yes
 		effect={
 			add_artifact = spectacles
+			add_claim = c_capulin
+			add_claim = c_raton
 		}
 	}
 	2313.2.15 = {
@@ -267,6 +293,114 @@
 			join_society = hermetics
 			add_society_currency_massive_effect = yes
 		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710014 = {
+	name = "Matt"
+	dynasty = 5128856
+	father = 2710008
+	culture = newmexican
+	religion = trinitarian
+	trait = skilled_tactician
+	trait = just
+	trait = brave
+	trait = diligent
+	trait = stubborn
+	2280.9.24 = {
+		birth = yes
+	}
+	2306.4.15 = {
+		add_spouse=2710015
+	}
+	2320.1.1 = {
+		death = yes
+	}
+}
+2710015 = {
+	name = "Stacy"
+	female = yes
+	culture = newmexican
+	religion = trinitarian
+	2280.9.24 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710016 = {
+	name = "Kaylee"
+	female = yes
+	dynasty = 5128856
+	father = 2710014
+	mother = 2710015
+	culture = newmexican
+	religion = trinitarian
+	2316.9.24 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2710017 = {
+	name = "Ethan" #A devoted christian man keeping his spirits high with prayer
+	dynasty = 5128902
+	culture = mescalero
+	religion = penitente
+	trait = scholarly_theologian
+	trait = theologian
+	trait = chaste
+	trait = diligent
+	trait = kind
+	trait = erudite
+	trait = honest
+	trait = zealous
+	disallow_random_traits = yes
+	2290.3.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2710018 = {
+	name = "Tuco" #A somewhat unhinged merchant eager to enact revenge on anyone who crosses him
+	dynasty = 5128701
+	culture = norteno
+	religion = trinitarian
+	trait = fortune_builder
+	trait = lunatic
+	trait = groomed
+	trait = diligent
+	trait = greedy
+	trait = wroth
+	trait = ambitious
+	trait = arbitrary
+	trait = deceitful
+	trait = gregarious
+	trait = paranoid
+	disallow_random_traits = yes
+	2289.2.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2710019 = {
+	name = "Rafael"
+	dynasty = 5128422
+	culture = neomexicano
+	religion = bracero
+	2288.2.2 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes

@@ -7871,6 +7871,22 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_raider } }
 		join_society = warrior_lodge_raider
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_cowboy_buddhist } }
+		join_society = warrior_lodge_cowboy_buddhist
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_peyotist } }
+		join_society = warrior_lodge_peyotist
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_sun_dance } }
+		join_society = warrior_lodge_sun_dance
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_juggalo } }
+		join_society = warrior_lodge_juggalo
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -21132,6 +21148,18 @@ add_warrior_lodge_leader_trait_effect = {
 		}
 		warrior_lodge_raider = {
 			add_trait = raider_leader
+		}
+		warrior_lodge_cowboy_buddhist = {
+			add_trait = cowboy_buddhist_leader
+		}
+		warrior_lodge_peyotist = {
+			add_trait = peyotist_leader
+		}
+		warrior_lodge_sun_dance = {
+			add_trait = sun_dance_leader
+		}
+		warrior_lodge_juggalo = {
+			add_trait = juggalo_leader
 		}
 	}
 }
