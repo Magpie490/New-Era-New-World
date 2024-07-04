@@ -118,6 +118,7 @@
 	trait = gregarious
 	trait = greedy
 	trait = socializer
+	trait = sympathy_judaism
 	2277.11.12 = {
 		birth = yes
 	}
@@ -241,7 +242,7 @@
 2710012 = { # The ruler of El Paso. Known for his delicious chicken from his store. Some say he has a different business, though.... 
 	name = "Gustavo"
 	dynasty = 5128421
-	culture = neomexicano
+	culture = tuskegean #for portrait
 	religion = bracero
 	diplomacy = 8
 	martial = 4
@@ -258,6 +259,7 @@
 	trait = quick
 	2294.9.24 = {
 		birth = yes
+		culture = neomexicano
 	}
 	2666.1.1 = {
 		death = yes
@@ -281,6 +283,8 @@
 		birth = yes
 		effect={
 			add_artifact = spectacles
+			add_claim = c_capulin
+			add_claim = c_raton
 		}
 	}
 	2313.2.15 = {
@@ -288,6 +292,54 @@
 			join_society = hermetics
 			add_society_currency_massive_effect = yes
 		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710014 = {
+	name = "Matt"
+	dynasty = 5128856
+	father = 2710008
+	culture = newmexican
+	religion = trinitarian
+	trait = skilled_tactician
+	trait = just
+	trait = brave
+	trait = diligent
+	trait = stubborn
+	2280.9.24 = {
+		birth = yes
+	}
+	2306.4.15 = {
+		add_spouse=2710015
+	}
+	2320.1.1 = {
+		death = yes
+	}
+}
+2710015 = {
+	name = "Stacy"
+	female = yes
+	culture = newmexican
+	religion = trinitarian
+	2280.9.24 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710016 = {
+	name = "Kaylee"
+	female = yes
+	dynasty = 5128856
+	father = 2710014
+	mother = 2710015
+	culture = newmexican
+	religion = trinitarian
+	2316.9.24 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
