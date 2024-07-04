@@ -27,7 +27,7 @@
 	properties="jo0dmk"
 	dynasty = 5128851
 	culture = newmexican
-	religion = blue_star #don't know what religion to give them for now
+	religion = penitente
 	trait = mastermind_theologian
 	trait = quick
 	trait = diligent
@@ -65,7 +65,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = fortune_builder
 	2287.8.11 = {
 		birth = yes
@@ -80,7 +80,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = stutter
 	2308.7.8 = {
 		birth = yes
@@ -96,7 +96,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2324.2.16 = {
 		birth = yes
 	}
@@ -104,13 +104,13 @@
 		death = yes
 	}
 }
-2710005 = { # A shady lawyer
+2710005 = { # A shady lawyer currently employed by Duke Walter
 	name = "Saul"
 	dynasty = 5128853
 	father = 100100
 	mother = 100101
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = intricate_webweaver
 	trait = quick
 	trait = deceitful
@@ -121,18 +121,25 @@
 	2277.11.12 = {
 		birth = yes
 	}
+	2323.8.2 = {
+		employer = 2710001		
+	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2710006 = {
-	name = "Jesse"
+	name = "Jesse" #Business partner and friend of Walter, currently ruler of Escondida
 	dynasty = 5128854
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = charismatic_negotiator
 	trait = gregarious
-	trait = kind
+	trait = shrewd
+	trait = diligent
+	trait = brave
+	trait = paranoid
+	disallow_random_traits = yes
 	2301.9.24 = {
 		birth = yes
 	}
@@ -141,13 +148,20 @@
 	}
 }
 2710007 = {
-	name = "Hank"
+	name = "Hank" #A diligent but somewhat clueless warrior who seeks justice with some success
 	dynasty = 5128855
 	culture = newmexican
-	religion = blue_star
+	religion = trinitarian
 	trait = tough_soldier
 	trait = gregarious
 	trait = brave
+	trait = sturdy
+	trait = diligent
+	trait = proud
+	trait = just
+	trait = trusting
+	trait = brave
+	disallow_random_traits = yes
 	2283.3.24 = {
 		birth = yes
 	}
@@ -159,10 +173,10 @@
 	}
 }
 2710008 = {
-	name = "Mike"
+	name = "Mike" #A fighter and enforcer who currently serves under Duke Walter
 	dynasty = 5128856
 	culture = newmexican
-	religion = blue_star
+	religion = trinitarian
 	trait = brilliant_strategist
 	trait = patient
 	trait = brave
@@ -170,6 +184,7 @@
 	trait = deceitful
 	trait = marshal_2
 	trait = strategist
+	trait = sympathy_christendom
 	2260.9.24 = {
 		birth = yes
 	}
@@ -184,7 +199,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	trait = amateurish_plotter
 	trait = deceitful
 	trait = greedy
@@ -200,7 +215,7 @@
 	name = "George"
 	dynasty = 5226491
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2250.8.11 = {
 		birth = yes
 	}
@@ -215,7 +230,7 @@
 	name = "Holly"
 	female = yes
 	culture = newmexican
-	religion = blue_star
+	religion = penitente
 	2250.8.11 = {
 		birth = yes
 	}
@@ -223,25 +238,7 @@
 		death = yes
 	}
 }
-2710012 = {
-	name = "Gustavo"
-	dynasty = 5128421
-	culture = neomexicano
-	religion = blue_star
-	trait = elusive_shadow
-	trait = patient
-	trait = humble
-	trait = ambitious
-	trait = deceitful
-	trait = genius
-	trait = strategist
-	2294.9.24 = {
-		birth = yes
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
+
 2710013 = {
 	name = "Gordon"
 	dynasty = 3000795
