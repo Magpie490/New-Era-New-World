@@ -3095,12 +3095,12 @@ character_event = {
 		else_if = {
 			limit = {
 				OR = {
-					religion = rangerite
+					is_texan_religion_trigger = yes
 					culture_group = east_texan
 					culture_group = west_texan
-					any_vassal = { religion = rangerite }
-					any_liege = { religion = rangerite }
-					any_neighbor_independent_ruler = { religion = rangerite } 
+					any_vassal = { is_texan_religion_trigger = yes }
+					any_liege = { is_texan_religion_trigger = yes }
+					any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
 				}
 				can_join_society = warrior_lodge_texas_ranger
 			}
@@ -3126,6 +3126,48 @@ character_event = {
 				can_join_society = warrior_lodge_custodite
 			}
             join_society = warrior_lodge_custodite
+        }
+		else_if = {
+			limit = {
+				is_gibborim_religion_trigger = yes
+				can_join_society = warrior_lodge_gibborim
+			}
+            join_society = warrior_lodge_gibborim
+        }
+		else_if = {
+			limit = {
+				religion_openly_gator_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_gator
+			}
+            join_society = warrior_lodge_gator
+        }
+		else_if = {
+			limit = {
+				religion_openly_antiquarianist_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_antiquarianist
+			}
+            join_society = warrior_lodge_antiquarianist
+        }
+		else_if = {
+			limit = {
+				is_gaian_religion_trigger = yes
+				can_join_society = warrior_lodge_gaian
+			}
+            join_society = warrior_lodge_gaian
+        }
+		else_if = {
+			limit = {
+				religion_openly_delver_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_delver
+			}
+            join_society = warrior_lodge_delver
+        }
+		else_if = {
+			limit = {
+				is_raider_religion_trigger = yes
+				can_join_society = warrior_lodge_raider
+			}
+            join_society = warrior_lodge_raider
         }
 		else_if = {
 			limit = {
