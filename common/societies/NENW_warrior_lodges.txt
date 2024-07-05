@@ -65,8 +65,7 @@ warrior_lodge_texas_ranger = {
 		OR = {
 			OR = {
 				is_texan_religion_trigger = yes
-				culture_group = east_texan
-				culture_group = west_texan
+				is_texan_culture = yes
 			}
 			AND = {
 				custom_tooltip = {
@@ -88,8 +87,7 @@ warrior_lodge_texas_ranger = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			OR = {
 				is_texan_religion_trigger = yes
-				culture_group = east_texan
-				culture_group = west_texan
+				is_texan_culture = yes
 			}
 			AND = {
 				OR = {
@@ -114,14 +112,12 @@ warrior_lodge_texas_ranger = {
 		OR = {
 			OR = {
 				is_texan_religion_trigger = yes
-				culture_group = east_texan
-				culture_group = west_texan
+				is_texan_culture = yes
 			}
 			AND = {
 				NOR = { 
 					is_texan_religion_trigger = yes
-					culture_group = east_texan
-					culture_group = west_texan
+					is_texan_culture = yes
 				}
 				NOT = { trait = zealous }
 			}
@@ -378,8 +374,7 @@ warrior_lodge_texas_ranger = {
 	    	controls_religion = no
 		   	OR = {
 				is_texan_religion_trigger = yes
-				culture_group = east_texan
-				culture_group = west_texan
+				is_texan_culture = yes
 			}
 			is_adult = yes
 			is_in_society = no

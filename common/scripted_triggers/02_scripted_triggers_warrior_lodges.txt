@@ -574,25 +574,10 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			limit = {
 				OR = {
 					is_texan_religion_trigger = yes
+					is_texan_culture = yes
 					any_vassal = { is_texan_religion_trigger = yes }
 					any_liege = { is_texan_religion_trigger = yes }
-					any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
-					AND = {
-						OR = {
-							culture_group = east_texan
-							culture_group = west_texan
-						}
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { is_texan_religion_trigger = yes }
-							}
-							AND = {
-								trait = zealous
-								is_texan_religion_trigger = yes
-							}
-						}
-					}
+					any_neighbor_independent_ruler = { is_texan_religion_trigger = yes }
 				} 
 			}
 			society_member_of = warrior_lodge_texas_ranger
@@ -927,25 +912,10 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		limit = {
 			OR = {
 				is_texan_religion_trigger = yes
+				is_texan_culture = yes
 				any_vassal = { is_texan_religion_trigger = yes }
 				any_liege = { is_texan_religion_trigger = yes }
 				any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
-				AND = {
-					OR = {
-						culture_group = east_texan
-						culture_group = west_texan
-					}
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { is_texan_religion_trigger = yes }
-						}
-						AND = {
-							trait = zealous
-							is_texan_religion_trigger = yes
-						}
-					}
-				}
 			}
 		}
 		warrior_lodge_texas_ranger = { society_has_members = yes }
@@ -1248,29 +1218,14 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_thuyhoa = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { 
-				OR = { 
+			limit = {
+				OR = {
 					is_texan_religion_trigger = yes
+					is_texan_culture = yes
 					any_vassal = { is_texan_religion_trigger = yes }
 					any_liege = { is_texan_religion_trigger = yes }
 					any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
-					AND = {
-						OR = {
-							culture_group = east_texan
-							culture_group = west_texan
-						}
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { is_texan_religion_trigger = yes }
-							}
-							AND = {
-								trait = zealous
-								is_texan_religion_trigger = yes
-							}
-						}
-					}
-				} 
+				}
 			}
 			warrior_lodge_texas_ranger = { num_of_society_members < 30 }
 		}
@@ -1603,29 +1558,10 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		limit = { 
 			OR = { 
 				is_texan_religion_trigger = yes
-				OR = {
-					culture_group = east_texan
-					culture_group = west_texan
-				}
+				is_texan_culture = yes
 				any_vassal = { is_texan_religion_trigger = yes }
 				any_liege = { is_texan_religion_trigger = yes }
 				any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
-				AND = {
-					OR = {
-						culture_group = east_texan
-						culture_group = west_texan
-					}
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							is_texan_religion_trigger = yes
-						}
-						AND = {
-							trait = zealous
-							is_texan_religion_trigger = yes
-						}
-					}
-				}
 			} 
 		}
 		NOT = { warrior_lodge_texas_ranger = { society_has_members = yes } }
@@ -2064,25 +2000,10 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		limit = {
 			OR = { 
 				is_texan_religion_trigger = yes
+				is_texan_culture = yes
 				any_vassal = { is_texan_religion_trigger = yes }
 				any_liege = { is_texan_religion_trigger = yes }
-				any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
-				AND = {
-					OR = {
-						culture_group = east_texan
-						culture_group = west_texan
-					}
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { is_texan_religion_trigger = yes }
-						}
-						AND = {
-							trait = zealous
-							is_texan_religion_trigger = yes
-						}
-					}
-				}
+				any_neighbor_independent_ruler = { is_texan_religion_trigger = yes }
 			} 
 		}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_texas_ranger }
@@ -2644,22 +2565,19 @@ special_join_warrior_lodge_trigger = {
 						any_vassal = {
 							OR = {
 								is_texan_religion_trigger = yes
-								culture_group = east_texan
-								culture_group = west_texan
+								is_texan_culture = yes
 							}
 						}
 						any_liege = { 
 							OR = {
 								is_texan_religion_trigger = yes
-								culture_group = east_texan
-								culture_group = west_texan
+								is_texan_culture = yes
 							}
 						}
 						any_neighbor_independent_ruler = { 
 							OR = {
 								is_texan_religion_trigger = yes
-								culture_group = east_texan
-								culture_group = west_texan
+								is_texan_culture = yes
 							}
 						}
 					}
