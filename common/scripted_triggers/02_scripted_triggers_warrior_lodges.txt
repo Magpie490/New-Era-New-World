@@ -60,6 +60,14 @@ is_member_of_any_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_peyotist
 			society_member_of = warrior_lodge_sun_dance
 			society_member_of = warrior_lodge_juggalo
+			society_member_of = warrior_lodge_crow_way
+			society_member_of = warrior_lodge_lakefolk
+			society_member_of = warrior_lodge_raven_tales
+			society_member_of = warrior_lodge_zenith
+			society_member_of = warrior_lodge_arcadian
+			society_member_of = warrior_lodge_anishinaabe
+			society_member_of = warrior_lodge_marked
+			society_member_of = warrior_lodge_trinitarian
 		}
 	}
 }
@@ -109,6 +117,14 @@ has_any_warrior_lodge_training_trait_trigger = {
 		trait = peyotist_leader
 		trait = sun_dance_leader
 		trait = juggalo_leader
+		trait = crow_way_leader
+		trait = lakefolk_leader
+		trait = raven_tales_leader
+		trait = zenith_leader
+		trait = arcadian_leader
+		trait = anishinaabe_leader
+		trait = marked_leader
+		trait = trinitarian_leader
 	}
 }
 
@@ -282,6 +298,38 @@ has_current_warrior_lodge_leader_trait_trigger = {
 		trigger_else_if = {
 			limit = { society_member_of = warrior_lodge_juggalo }
 			trait = juggalo_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_crow_way }
+			trait = crow_way_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_lakefolk }
+			trait = lakefolk_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_raven_tales }
+			trait = raven_tales_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_zenith }
+			trait = zenith_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_arcadian }
+			trait = arcadian_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_anishinaabe }
+			trait = anishinaabe_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_marked }
+			trait = marked_leader
+		}
+		trigger_else_if = {
+			limit = { society_member_of = warrior_lodge_trinitarian }
+			trait = trinitarian_leader
 		}
 		trigger_else = {
 			limit = { society_member_of = warrior_lodge_satsana_pi }
@@ -600,6 +648,38 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 		trigger_else_if = {
 			limit = { is_juggalo_religion_trigger = yes }
 			society_member_of = warrior_lodge_juggalo
+		}
+		trigger_else_if = {
+			limit = { religion_openly_crow_way_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_crow_way
+		}
+		trigger_else_if = {
+			limit = { religion_openly_lakefolk_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_lakefolk
+		}
+		trigger_else_if = {
+			limit = { religion_openly_raven_tales_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_raven_tales
+		}
+		trigger_else_if = {
+			limit = { religion_openly_zenith_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_zenith
+		}
+		trigger_else_if = {
+			limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_arcadian
+		}
+		trigger_else_if = {
+			limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_anishinaabe
+		}
+		trigger_else_if = {
+			limit = { is_marked_religion_trigger = yes }
+			society_member_of = warrior_lodge_marked
+		}
+		trigger_else_if = {
+			limit = { is_trinitarian_religion_trigger = yes }
+			society_member_of = warrior_lodge_trinitarian
 		}
 		trigger_else = {
 			limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
@@ -922,6 +1002,38 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		limit = { is_juggalo_religion_trigger = yes }
 		warrior_lodge_juggalo = { society_has_members = yes }
 	}
+	trigger_else_if = {
+		limit = { religion_openly_crow_way_or_reformed_trigger = yes }
+		warrior_lodge_crow_way = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_lakefolk_or_reformed_trigger = yes }
+		warrior_lodge_lakefolk = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_raven_tales_or_reformed_trigger = yes }
+		warrior_lodge_raven_tales = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_zenith_or_reformed_trigger = yes }
+		warrior_lodge_zenith = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+		warrior_lodge_arcadian = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+		warrior_lodge_anishinaabe = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { is_marked_religion_trigger = yes }
+		warrior_lodge_marked = { society_has_members = yes }
+	}
+	trigger_else_if = {
+		limit = { is_trinitarian_religion_trigger = yes }
+		warrior_lodge_trinitarian = { society_has_members = yes }
+	}
 	trigger_else = {
 		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
 		warrior_lodge_satsana_pi = { society_has_members = yes }
@@ -1213,6 +1325,38 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 		trigger_else_if = {
 			limit = { is_juggalo_religion_trigger = yes }
 			warrior_lodge_juggalo = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_crow_way_or_reformed_trigger = yes }
+			warrior_lodge_crow_way = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_lakefolk_or_reformed_trigger = yes }
+			warrior_lodge_lakefolk = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_raven_tales_or_reformed_trigger = yes }
+			warrior_lodge_raven_tales = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_zenith_or_reformed_trigger = yes }
+			warrior_lodge_zenith = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+			warrior_lodge_arcadian = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+			warrior_lodge_anishinaabe = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { is_marked_religion_trigger = yes }
+			warrior_lodge_marked = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { is_trinitarian_religion_trigger = yes }
+			warrior_lodge_trinitarian = { num_of_society_members < 30 }
 		}
 		trigger_else = {
 			limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
@@ -1539,6 +1683,38 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_juggalo = { society_has_members = yes } }
 	}
 	trigger_else_if = {
+		limit = { religion_openly_crow_way_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_crow_way = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_lakefolk_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_lakefolk = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_raven_tales_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_raven_tales = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_zenith_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_zenith = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_arcadian = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+		NOT = { warrior_lodge_anishinaabe = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { is_marked_religion_trigger = yes }
+		NOT = { warrior_lodge_marked = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { is_trinitarian_religion_trigger = yes }
+		NOT = { warrior_lodge_trinitarian = { society_has_members = yes } }
+	}
+	trigger_else_if = {
 		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_satsana_pi = { society_has_members = yes } }
 	}
@@ -1590,6 +1766,14 @@ this_society_is_a_warrior_lodge_trigger = {
 		is_society = warrior_lodge_peyotist
 		is_society = warrior_lodge_sun_dance
 		is_society = warrior_lodge_juggalo
+		is_society = warrior_lodge_crow_way
+		is_society = warrior_lodge_lakefolk
+		is_society = warrior_lodge_raven_tales
+		is_society = warrior_lodge_zenith
+		is_society = warrior_lodge_arcadian
+		is_society = warrior_lodge_anishinaabe
+		is_society = warrior_lodge_marked
+		is_society = warrior_lodge_trinitarian
 	}
 }
 
@@ -1635,6 +1819,14 @@ has_religion_matching_any_warrior_lodge_trigger = {
 		is_peyotist_religion_trigger = yes
 		is_sun_dance_religion_trigger = yes
 		is_juggalo_religion_trigger = yes
+		religion_openly_crow_way_or_reformed_trigger = yes
+		religion_openly_lakefolk_or_reformed_trigger = yes
+		religion_openly_raven_tales_or_reformed_trigger = yes
+		religion_openly_zenith_or_reformed_trigger = yes
+		religion_openly_arcadian_or_reformed_trigger = yes
+		religion_openly_anishinaabe_or_reformed_trigger = yes
+		is_marked_religion_trigger = yes
+		is_trinitarian_religion_trigger = yes
 	}
 }
 
@@ -1950,6 +2142,38 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 	trigger_else_if = {
 		limit = { is_juggalo_religion_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_juggalo }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_crow_way_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_crow_way }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_lakefolk_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_lakefolk }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_raven_tales_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_raven_tales }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_zenith_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_zenith }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_arcadian }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_anishinaabe }
+	}
+	trigger_else_if = {
+		limit = { is_marked_religion_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_marked }
+	}
+	trigger_else_if = {
+		limit = { is_trinitarian_religion_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_trinitarian }
 	}
 	trigger_else_if = {
 		limit = { religion_openly_satsana_pi_or_reformed_trigger = yes }
@@ -2607,6 +2831,110 @@ special_join_warrior_lodge_trigger = {
 						any_vassal = { is_juggalo_religion_trigger = yes }
 						any_liege = { is_juggalo_religion_trigger = yes }
 						any_neighbor_independent_ruler = { is_juggalo_religion_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_crow_way } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_crow_way_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_crow_way_or_reformed_trigger = yes }
+						any_liege = { religion_openly_crow_way_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_crow_way_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_lakefolk } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_lakefolk_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_lakefolk_or_reformed_trigger = yes }
+						any_liege = { religion_openly_lakefolk_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_lakefolk_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_raven_tales } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_raven_tales_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_raven_tales_or_reformed_trigger = yes }
+						any_liege = { religion_openly_raven_tales_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_raven_tales_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_zenith } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_zenith_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_zenith_or_reformed_trigger = yes }
+						any_liege = { religion_openly_zenith_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_zenith_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_arcadian } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_arcadian_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_arcadian_or_reformed_trigger = yes }
+						any_liege = { religion_openly_arcadian_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_arcadian_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_anishinaabe } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_anishinaabe_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+						any_liege = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_anishinaabe_or_reformed_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_marked } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_marked_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { is_marked_religion_trigger = yes }
+						any_liege = { is_marked_religion_trigger = yes }
+						any_neighbor_independent_ruler = { is_marked_religion_trigger = yes }
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { FROM = { is_society = warrior_lodge_trinitarian } }
+			custom_tooltip = {
+				text = has_liege_vassal_or_neighbor_of_trinitarian_religion_tt
+				hidden_trigger = {
+					OR = {
+						any_vassal = { is_trinitarian_religion_trigger = yes }
+						any_liege = { is_trinitarian_religion_trigger = yes }
+						any_neighbor_independent_ruler = { is_trinitarian_religion_trigger = yes }
 					}
 				}
 			}
