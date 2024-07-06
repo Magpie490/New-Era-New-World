@@ -417,6 +417,7 @@ title_court_jester = {
 	grant_limit = 1
 	opinion_effect = -5
 	juggalo_opinion = 10
+	shriner_opinion = 10
 	
 	monthly_salary = 0.02
 	monthly_prestige = -0.25
@@ -424,8 +425,8 @@ title_court_jester = {
 	is_unique = yes
 	
 	allowed_to_hold = {
-		NOT = { 
-			primary_title = { temporary = yes } 
+		NOT = {
+			primary_title = { temporary = yes }
 		}
 		is_adult = yes
 		NOT = { has_character_flag = guru }
@@ -449,6 +450,7 @@ title_court_jester = {
 			religion_group = syncratic_group
 			has_dharmic_religion_trigger = yes
 			religion = juggalo
+			religion = shriner
 		}
 	}
 	

@@ -7887,6 +7887,38 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_juggalo } }
 		join_society = warrior_lodge_juggalo
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_crow_way } }
+		join_society = warrior_lodge_crow_way
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_lakefolk_pagan } }
+		join_society = warrior_lodge_lakefolk_pagan
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_raven_tales } }
+		join_society = warrior_lodge_raven_tales
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_zenith } }
+		join_society = warrior_lodge_zenith
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_arcadian } }
+		join_society = warrior_lodge_arcadian
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_anishinaabe } }
+		join_society = warrior_lodge_anishinaabe
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_marked } }
+		join_society = warrior_lodge_marked
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_trinitarian } }
+		join_society = warrior_lodge_trinitarian
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -21160,6 +21192,30 @@ add_warrior_lodge_leader_trait_effect = {
 		}
 		warrior_lodge_juggalo = {
 			add_trait = juggalo_leader
+		}
+		warrior_lodge_crow_way = {
+			add_trait = crow_way_leader
+		}
+		warrior_lodge_lakefolk_pagan = {
+			add_trait = lakefolk_leader
+		}
+		warrior_lodge_raven_tales = {
+			add_trait = raven_tales_leader
+		}
+		warrior_lodge_zenith = {
+			add_trait = zenith_leader
+		}
+		warrior_lodge_arcadian = {
+			add_trait = arcadian_leader
+		}
+		warrior_lodge_anishinaabe = {
+			add_trait = anishinaabe_leader
+		}
+		warrior_lodge_marked = {
+			add_trait = marked_leader
+		}
+		warrior_lodge_trinitarian = {
+			add_trait = trinitarian_leader
 		}
 	}
 }
