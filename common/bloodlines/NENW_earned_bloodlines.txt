@@ -43,7 +43,7 @@ canada_female = {
 }
 
 texas_male = {
-	monthly_character_prestige = 0.25
+	monthly_character_prestige = 0.5
 	lone_star_opinion = 5
 	rangerite_opinion = 5
 	east_texan_opinion = 5
@@ -66,7 +66,7 @@ texas_male = {
 	}
 }
 texas_female = {
-	monthly_character_prestige = 0.25
+	monthly_character_prestige = 0.5
 	lone_star_opinion = 5
 	rangerite_opinion = 5
 	east_texan_opinion = 5
@@ -86,5 +86,27 @@ texas_female = {
 			culture = teksaski
 			culture = czexan
 		}
+	}
+}
+new_afrika_male = {
+	monthly_character_prestige = 0.5
+	afrosoutherner_opinion = 10
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		culture_group = afrosoutherner
+	}
+}
+new_afrika_female = {
+	monthly_character_prestige = 0.5
+	afrosoutherner_opinion = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		culture_group = afrosoutherner
 	}
 }

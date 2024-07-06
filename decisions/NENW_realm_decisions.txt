@@ -1202,6 +1202,31 @@ decisions = {
 			k_gullah = { de_jure_liege = e_new_afrika }
 			k_birmingham = { de_jure_liege = e_new_afrika }
 			k_tuskegee = { de_jure_liege = e_new_afrika }
+			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = new_afrika_female
+				}
+				new_bloodline = {
+					set_description = "new_afrika_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = new_afrika_male
+				}
+				new_bloodline = {
+					set_description = "new_afrika_male_desc"
+				}
+			}
 		}
 	}
 	form_gullah = {
