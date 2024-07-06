@@ -3363,6 +3363,7 @@ crusade = {
 						religion_group = zoroastrian_group
 						religion_group = jewish_group
 						religion_group = old_world_cultist_group
+						religion_group = apocalyptic
 						religion = neoncult_reformed
 						religion = maunaxite_reformed
 						religion = wuist_reformed
@@ -3370,8 +3371,6 @@ crusade = {
 						religion = summer_queen
 						religion = druze
 						religion = alawite
-						religion = cruzadista
-						religion = sebastianist
 						religion = nousthreskeia_reformed
 						religion = gnostic
 						religion = eastern_lightning
@@ -12921,6 +12920,10 @@ pagan_county_conquest = {
 						religion = alukta_pagan_reformed
 						primary_title = {
 						title = e_druze
+						}
+						AND = {
+							religion = triumphant
+							has_global_flag = warlike_triumphant_flag
 						}
 					}
 					NOT = { same_realm = FROM }
