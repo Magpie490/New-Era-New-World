@@ -291,13 +291,18 @@ killbasil_bloodline = {
 	combat_rating = 20
 	triumphant_opinion = 10
 	madonnite_opinion = -25
+	bloodline_effect_duel = 1
+	command_modifier = {
+		morale_offence = 0.015
+		morale_defence = 0.015
+	}
 	picture = GFX_bloodlines_symbol_war_child
 		active = {
 		OR = {
 			religion = triumphant
 		}
 	}
-	flags = { historical_bloodline }
+	flags = { historical_bloodline duelist_bloodline }
 }
 acadiana_crusade_bloodline = {
 	inheritance = patrilineal

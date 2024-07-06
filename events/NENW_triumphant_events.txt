@@ -1,0 +1,138 @@
+namespace=triumphant
+
+narrative_event = {
+	id = triumphant.1
+	title = EVTNAME_triumphant_1
+	desc = EVTDESC_triumphant_1
+	picture = GFX_evt_emissary
+	border = GFX_event_narrative_frame_religion
+	#portrait = d_ibadi
+	major = yes
+	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			religion = triumphant
+			any_vassal = { religion = triumphant }
+			any_liege = { religion = triumphant }
+			any_neighbor_independent_ruler = { religion = triumphant }
+		}
+	}
+	
+	trigger = {
+		has_landed_title = d_triumphant
+		has_global_flag = warlike_triumphant_flag
+		NOT = { has_global_flag = peaceful_triumphant_flag }
+	}
+	immediate = {
+		clr_global_flag = warlike_triumphant_flag
+		set_global_flag = peaceful_triumphant_flag
+		triumphant = {
+			set_allow_looting = no
+			set_can_call_crusade = no
+			set_can_grant_claim = no
+			set_can_grant_invasion_cb = no
+			set_hard_to_convert = no
+			set_pacifist = yes
+			set_raised_vassal_opinion_loss = yes
+			set_peace_prestige_loss = no
+			set_piety_loss_for_attacking_same_religion = no
+			set_peace_piety_gain = 1
+			set_convert_other_groups = 0
+			set_convert_same_group = 0
+			set_ai_aggression = 0.5
+			set_defensive_attrition = yes
+			disable_prepared_invasion = ROOT
+			set_character_modifier = {
+				levy_size = -0.1
+				global_tax_modifier = 0.1
+			}
+		}
+	}
+	option = {
+		name = triumphant1OptA
+		trigger = {
+			religion = triumphant
+		}
+	}
+	option = {
+		name = triumphant1OptB
+		trigger = {
+			NOT = { religion = triumphant }
+		}
+	}
+}
+
+narrative_event = {
+	id = triumphant.2
+	title = EVTNAME_triumphant_2
+	desc = EVTDESC_triumphant_2
+	picture = GFX_evt_emissary
+	border = GFX_event_narrative_frame_religion
+	#portrait = d_ibadi
+	major = yes
+	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			religion = triumphant
+			any_vassal = { religion = triumphant }
+			any_liege = { religion = triumphant }
+			any_neighbor_independent_ruler = { religion = triumphant }
+		}
+	}
+	trigger = {
+		has_landed_title = d_triumphant
+		has_global_flag = peaceful_triumphant_flag
+		NOT = { has_global_flag = warlike_triumphant_flag }
+	}
+	immediate = {
+		clr_global_flag = peaceful_triumphant_flag
+		set_global_flag = warlike_triumphant_flag
+		triumphant = {
+			set_pacifist = no
+			set_allow_looting = yes
+			set_hard_to_convert = no
+			set_peace_piety_gain = 0
+			set_raised_vassal_opinion_loss = no
+			set_piety_loss_for_attacking_same_religion = no
+			set_peace_prestige_loss = yes
+			set_convert_other_groups = 0
+			set_convert_same_group = 1
+			set_ai_aggression = 2.0
+			set_can_call_crusade = yes
+			set_can_grant_claim = yes
+			set_can_grant_invasion_cb = yes
+			set_hard_to_convert = yes
+			enable_prepared_invasion = ROOT
+			set_character_modifier = {
+				levy_size = 0.1
+				global_tax_modifier = -0.1
+			}
+		}
+	}
+	option = {
+		name = triumphant2OptA
+		trigger = {
+			religion = triumphant
+		}
+	}
+	option = {
+		name = triumphant2OptB
+		trigger = {
+			NOT = { religion = triumphant }
+		}
+	}
+}
+character_event = {
+	id = triumphant.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = d_triumphant
+		NOT = { has_global_flag = peaceful_triumphant_flag }
+		NOT = { has_global_flag = peaceful_triumphant_startup_flag }
+	}
+	immediate = {
+		set_global_flag = peaceful_triumphant_flag
+		set_global_flag = peaceful_triumphant_startup_flag
+	}
+}

@@ -842,7 +842,7 @@ action_improve_rel_relations = {
 
 	potential = {
 		FROM = {
-			NOR = { religion_group = muslim is_communist_religion_trigger = yes }
+			NOR = { religion_group = muslim is_communist_religion_trigger = yes religion = shriner }
 		}
 	}
 
@@ -929,7 +929,7 @@ action_charity = {
 	local_revolt_risk = -0.01
 
 	potential = {
-		FROM = { OR = { religion_group = muslim is_communist_religion_trigger = yes } }
+		FROM = { OR = { religion_group = muslim is_communist_religion_trigger = yes religion = shriner } }
 	}
 
 	trigger = {

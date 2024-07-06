@@ -3096,8 +3096,7 @@ character_event = {
 			limit = {
 				OR = {
 					is_texan_religion_trigger = yes
-					culture_group = east_texan
-					culture_group = west_texan
+					is_texan_culture = yes
 					any_vassal = { is_texan_religion_trigger = yes }
 					any_liege = { is_texan_religion_trigger = yes }
 					any_neighbor_independent_ruler = { is_texan_religion_trigger = yes } 
@@ -3196,6 +3195,62 @@ character_event = {
 				can_join_society = warrior_lodge_juggalo
 			}
             join_society = warrior_lodge_juggalo
+        }
+		else_if = {
+			limit = {
+				religion_openly_crow_way_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_crow_way
+			}
+            join_society = warrior_lodge_crow_way
+        }
+		else_if = {
+			limit = {
+				religion_openly_lakefolk_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_lakefolk
+			}
+            join_society = warrior_lodge_lakefolk
+        }
+		else_if = {
+			limit = {
+				religion_openly_raven_tales_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_raven_tales
+			}
+            join_society = warrior_lodge_raven_tales
+        }
+		else_if = {
+			limit = {
+				religion_openly_zenith_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_zenith
+			}
+            join_society = warrior_lodge_zenith
+        }
+		else_if = {
+			limit = {
+				religion_openly_arcadian_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_arcadian
+			}
+            join_society = warrior_lodge_arcadian
+        }
+		else_if = {
+			limit = {
+				religion_openly_anishinaabe_or_reformed_trigger = yes
+				can_join_society = warrior_lodge_anishinaabe
+			}
+            join_society = warrior_lodge_anishinaabe
+        }
+		else_if = {
+			limit = {
+				is_marked_religion_trigger = yes
+				can_join_society = warrior_lodge_marked
+			}
+            join_society = warrior_lodge_marked
+        }
+		else_if = {
+			limit = {
+				is_trinitarian_religion_trigger = yes
+				can_join_society = warrior_lodge_trinitarian
+			}
+            join_society = warrior_lodge_trinitarian
         }
 		else_if = {
 			limit = {
