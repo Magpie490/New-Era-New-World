@@ -37,18 +37,26 @@
 }
 
 2910002 = {
-	name = "Jared" #Duke Jared of West Slope. A devout brighamite who has grand plans for his followers
-	dynasty = 5123281
+	name = "Brad" #King Brad of West Slope. A man who has lost a lot but only has one thing keeping him going with full determination. lisa the painful add rest of the party later
+	dynasty = 3000798
 	culture = westsloper
-	religion = brighamite
-	trait = scholarly_theologian
-	trait = patient
-	trait = charitable
-	trait = envious
-	trait = ambitious
-	trait = zealous
+	religion = zenith
+	trait = brilliant_strategist
+	trait = robut
+	trait = strong
+	trait = duelist
+	trait = wroth
+	trait = stubborn
+	trait = aggressive_leader
+	trait = experimenter
+	trait = depressed
+	trait = tribal_kinslayer
+	trait = legendary_duelist
+	trait = bisexual
+	martial = 10
 	disallow_random_traits = yes
-	2288.5.1 = {
+	father = 2910006
+	2285.1.1 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -57,16 +65,21 @@
 }
 
 2910003 = {
-	name = "Hayden" #Count Hayden of Gunnison. A simple farmer leader of the mountainous valleys he calls home
-	dynasty = 5123261
+	name = "Benny" #Count Hayden of Gunnison. A young valiant ruler who is searching for something, lisa the hopeful add the others later
+	dynasty = 5123289
 	culture = westsloper
 	religion = zenith
-	trait = tough_soldier
-	trait = scarred
-	trait = temperate
-	trait = robust
-	trait = content
+	trait = skilled_tactician
+	trait = quick
+	trait = chaste
+	trait = kind
+	trait = humble
+	trait = brave
+	trait = gregarious
+	trait = honest
 	trait = trusting
+	trait = light_foot_leader
+	trait = desert_terrain_leader
 	disallow_random_traits = yes
 	2300.2.1 = {
 		birth = yes
@@ -77,24 +90,91 @@
 }
 
 2910004 = {
-	name = "Callaway" #Countess Callaway of Breckendridge. A woman more concerned with her skiing ability than anything else
-	dynasty = 5123297
+	name = "Alex" #Count Alex of Breckendridge. The Mystic of the Wilbur Sin, lisa the pointless add joel and others
+	dynasty = 3000805
 	culture = westsloper
 	religion = zenith
-	female = yes
-	trait = misguided_warrior
-	trait = tall
-	trait = fair
-	trait = gamer
-	trait = diligent
-	trait = slothful
-	trait = gregarious
-	trait = stubborn
+	trait = skilled_tactician
+	trait = robust
+	trait = duelist
+	trait = mystic
+	trait = uncouth
+	trait = patient
+	trait = humble
+	trait = cynical
+	trait = rough_terrain_leader
+	trait = content
+	trait = unyielding_leader
+	trait = adventurer
+	martial = 8
 	disallow_random_traits = yes
-	2302.8.11 = {
+	2279.8.11 = {
 		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
+	}
+}
+2910005 = {
+	name = "Buddy" #Adopted daugther of Brad Armstrong
+	dynasty = 3000798
+	culture = ny_asian
+	religion = zenith
+	female = yes
+	trait = one_eyed
+	trait = adopted_child
+	disallow_random_traits = yes
+	father = 2910002
+	2320.8.11 = {
+		birth = yes
+		effect = {
+		}
+		culture = westsloper
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910006 = {
+	name = "Marty" #Father of Brad Armstrong, a cruel man who was exiled from his home
+	dynasty = 3000798
+	culture = frontranger
+	religion = zenith
+	trait = cruel
+	father = 2910007
+	2265.1.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910007 = {
+	name = "Truman" #Father of Marty Armstrong, a man who was once famed for his martial arts
+	dynasty = 3000798
+	culture = frontranger
+	religion = custodite
+	2245.1.11 = {
+		birth = yes
+	}
+	2290.1.1 = {
+		death = {
+			death_reason = death_accident
+		}
+	}
+}
+2910008 = {
+	name = "George" #An important member of the Custodite elite
+	dynasty = 3000798
+	culture = frontranger
+	religion = custodite
+	father = 2910007
+	2266.6.12 = {
+		birth = yes
+	}
+	2299.1.1 = {
+		death = {
+			death_reason = death_accident
+		}
 	}
 }
