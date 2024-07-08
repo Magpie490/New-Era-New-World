@@ -1096,10 +1096,11 @@ targeted_decisions = {
 				trait = gregarious
 				trait = erudite
 				trait = paranoid
-				trait = paranoid
-				trait = paranoid
 			}
-			religion = aurorean
+			OR = {
+				religion = aurorean
+				religion = marked
+			}
 			NOT = { has_character_flag = going_berserk } #to stop you spamming the button
 			prestige = 300
 		}
