@@ -42,7 +42,7 @@
 	culture = westsloper
 	religion = zenith
 	trait = brilliant_strategist
-	trait = robut
+	trait = robust
 	trait = strong
 	trait = duelist
 	trait = wroth
@@ -53,6 +53,7 @@
 	trait = tribal_kinslayer
 	trait = legendary_duelist
 	trait = bisexual
+	trait = scarred
 	martial = 10
 	disallow_random_traits = yes
 	father = 2910006
@@ -120,15 +121,14 @@
 	dynasty = 3000798
 	culture = ny_asian
 	religion = zenith
+	father = 2910002
+	real_father = 2910010
 	female = yes
 	trait = one_eyed
 	trait = adopted_child
 	disallow_random_traits = yes
-	father = 2910002
-	2320.8.11 = {
+	2315.8.11 = {
 		birth = yes
-		effect = {
-		}
 		culture = westsloper
 	}
 	2666.1.1 = {
@@ -141,12 +141,19 @@
 	culture = frontranger
 	religion = zenith
 	trait = cruel
+	trait = drunkard
+	trait = uncouth
+	trait = slothful
+	trait = lustful
 	father = 2910007
 	2265.1.11 = {
 		birth = yes
 	}
-	2666.1.1 = {
-		death = yes
+	2324.1.1 = {
+		death = {
+			death_reason = death_duel
+			killer = 2910002
+		}
 	}
 }
 2910007 = {
@@ -169,6 +176,7 @@
 	culture = frontranger
 	religion = custodite
 	father = 2910007
+	trait = brilliant_strategist
 	2266.6.12 = {
 		birth = yes
 	}
@@ -176,5 +184,40 @@
 		death = {
 			death_reason = death_accident
 		}
+	}
+}
+2910009 = {
+	name = "Lisa" #The Painful
+	female = yes
+	dynasty = 3000798
+	culture = westsloper
+	religion = zenith
+	father = 2910006
+	2294.1.1 = {
+		birth = yes
+	}
+	2301.1.1 = {
+		death = {
+			death_reason = death_suicide_hanging
+		}
+	}
+}
+2910010 = {
+	name = "Yado"
+	culture = ny_asian
+	religion = brighamite
+	trait = scholarly_theologian
+	trait = proud
+	trait = scholar
+	trait = ambitious
+	trait = patient
+	trait = craven
+	disallow_random_traits = yes
+	2285.1.1 = {
+		birth = yes
+		culture = westsloper
+	}
+	2666.1.1 = {
+		death = yes
 	}
 }

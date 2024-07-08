@@ -3887,9 +3887,9 @@ add_plague_symptom_effect = {
 		10 = {
 			modifier = {
 				factor = 0
-				trait = malaise
+				trait = headache
 			}
-			character_event = { id = RIP.5010 }
+			character_event = { id = RIP.5004 }
 		}
 		10 = {
 			modifier = {
@@ -3904,6 +3904,13 @@ add_plague_symptom_effect = {
 				trait = cramps
 			}
 			character_event = { id = RIP.5006 }
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				trait = fatigue
+			}
+			character_event = { id = RIP.5009 }
 		}
 	}
 }
@@ -4104,16 +4111,16 @@ add_smallpox_symptom_effect = {
 		10 = {
 			modifier = {
 				factor = 0
-				trait = rash
+				trait = diarrhea
 			}
-			character_event = { id = RIP.5007 }
+			character_event = { id = RIP.5002 }
 		}
 		10 = {
 			modifier = {
 				factor = 0
-				trait = fever
+				trait = vomiting
 			}
-			character_event = { id = RIP.5001 }
+			character_event = { id = RIP.5003 }
 		}
 		10 = {
 			modifier = {
@@ -6288,26 +6295,59 @@ add_cat_effect = {
 		limit = {
 			NOT = { has_character_modifier = pet_cat }
 		}
-
+		
 		add_character_modifier = {
 			name = pet_cat
 			duration = -1
 		}
-
+		random_list = { # Flavor Randomization
+					50 = { 
+						create_character = {
+							random_traits = no
+							dynasty = actually_culture
+							culture = cat
+							female = no
+							age = 1
+							attributes = {
+								diplomacy = 2
+								learning = 2
+								stewardship = 2
+								intrigue = 2
+								martial = 2
+							}
+							trait = cat
+						}
+					}
+					50 = { 
+						create_character = {
+							random_traits = no
+							dynasty = actually_culture
+							culture = cat
+							female = yes
+							age = 1
+							attributes = {
+								diplomacy = 2
+								learning = 2
+								stewardship = 2
+								intrigue = 2
+								martial = 2
+							}
+							trait = cat
+						}
+					}
+				}
+			
+			new_character = {
+				add_friend = ROOT
+			}
 		character_event = {
 			id = 77802 # Cat dies
 			days = 6500
 			random = 2000
 		}
 
-		character_event = {
-			id = 77861 # Cat & dog
-			days = 30
-			random = 100
-		}
 	}
 }
-
 add_crusade_trait_effect = {
 	if = {
 		limit = { religion_group = muslim }
