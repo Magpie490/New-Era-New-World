@@ -532,7 +532,8 @@ christian = {
 		}
 		
 		character_modifier = {
-			armenianapostolic_opinion = 5 
+			orthodox_opinion = 5
+			armenianapostolic_opinion = 5
 			koptic_opinion = 5
 			chaldean_opinion = 5
 		}
@@ -546,6 +547,7 @@ christian = {
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_retire_to_monastery = yes
+		pacifist = yes
 		priests_can_inherit = no
 		hard_to_convert = yes
 		defensive_attrition = yes
@@ -2927,6 +2929,10 @@ christian = {
 			SATAN LUCIFER GOD_LI_JYAB THE_DARK_SPIRITS
 		}
 		
+		character_modifier={
+			loyalist_opinion = -30
+		}
+		
 		aggression = 1.3
 		autocephaly = yes
 		pentarchy = yes
@@ -2941,7 +2947,9 @@ christian = {
 		allow_rivermovement = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
-		max_wives = 4
+		bs_marriage = yes
+		pc_marriage = yes
+		max_wives = 5
 		allow_looting = no
 		can_demand_religious_conversion = yes
 		hard_to_convert = yes

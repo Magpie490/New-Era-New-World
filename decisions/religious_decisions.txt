@@ -349,6 +349,9 @@ decisions = {
 				religion = delver
 				religion = dianic
 				religion = myriadic
+				religion = illustrious
+				religion = anishinaabe
+				religion = anishinaabe_reformed
 			}
 		}
 		allow = {
@@ -392,6 +395,7 @@ decisions = {
 		potential = {
 			OR = {
 				religion = peyotist
+				religion = exovedate
 			}
 			NOT = {
 				has_character_modifier = hidden_timer_modif
@@ -403,10 +407,6 @@ decisions = {
 			is_adult = yes
 			NOT = {
 				has_character_flag = on_vision_quest
-			}
-			OR = {
-				trait = fire_cross
-				trait = half_moon
 			}
 		}
 		allow = {
@@ -508,6 +508,11 @@ decisions = {
 				religion = rastafari
 				religion = postdiluvian
 				has_religion_feature = religion_special_raider
+				religion = arcadian
+				religion = doukhobor
+				religion = sun_dance
+				religion = dianic
+				religion = myriadic
 			}
 			NOT = { trait = incapable }
 			NOT = { trait = infirm }

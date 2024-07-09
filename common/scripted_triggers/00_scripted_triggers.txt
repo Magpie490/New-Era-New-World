@@ -783,6 +783,10 @@ has_crusade_trait_trigger = {
 		trait = ukkos_shield
 	}
 	trigger_else_if = {
+		limit = { religion_openly_zenith_or_reformed_trigger = yes }
+		trait = sun_warrior
+	}
+	trigger_else_if = {
 		limit = { religion_openly_hellenic_or_reformed_trigger = yes }
 		trait = ares_own
 	}
