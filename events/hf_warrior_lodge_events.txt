@@ -3254,6 +3254,13 @@ character_event = {
         }
 		else_if = {
 			limit = {
+				is_kemetic_religion_trigger = yes
+				can_join_society = warrior_lodge_kemetic
+			}
+            join_society = warrior_lodge_kemetic
+        }
+		else_if = {
+			limit = {
 				is_nomadic = yes
 				OR = {
 					can_join_society = warrior_lodge_tengri
