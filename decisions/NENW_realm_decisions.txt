@@ -645,6 +645,31 @@ decisions = {
 			k_westslope = { de_jure_liege = e_colorado }
 			k_frontrange = { de_jure_liege = e_colorado }
 			d_san_luis_valley = { de_jure_liege = k_westslope }
+			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = colorado_female
+				}
+				new_bloodline = {
+					set_description = "colorado_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = colorado_male
+				}
+				new_bloodline = {
+					set_description = "colorado_male_desc"
+				}
+			}
 		}
 	}
 	
