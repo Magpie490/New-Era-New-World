@@ -894,20 +894,16 @@
 	trait = grey_eminence
 	trait = cruel
 	trait = red_horse_cult
+	trait = is_fat
 	trait = lustful
 	trait = gregarious
-	trait = arbitrary
 	trait = giant
 	trait = deceitful
 	trait = baptized_by_satan
 	trait = genius
 	trait = strong
 	trait = cynical
-	trait = possessed
-	trait = shrewd
-	trait = robust
 	trait = poet
-	trait = impaler
 	#trait = immortal
 	diplomacy = 11
 	intrigue = 11
@@ -925,11 +921,7 @@
 		}
 	}
 	2306.2.15 = {
-		effect={
-			join_society = the_satanists
-			set_society_grandmaster = yes
-			add_society_currency_massive_effect = yes
-		}
+		employer = 2700038
 	}
 	2666.1.1 = {
 		death = yes
@@ -948,6 +940,12 @@
 	trait = wroth
 	2288.7.12 = {
 		birth = yes
+	}
+	2306.2.15 = {
+		effect={
+			join_society = the_satanists
+			add_friend=2700037
+		}
 	}
 	2306.2.15 = {
 		effect={
