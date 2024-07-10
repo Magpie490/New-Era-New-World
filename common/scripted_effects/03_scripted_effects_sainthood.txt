@@ -1523,31 +1523,13 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-			OR = {
-			religion = shriner
-            has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist	
-			religion = citrus_scientology
-			religion = highmount	
-			religion = raelian
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			}
+			uses_zodiacs = yes
             has_any_astrology_trait_trigger = yes
         }
         # Negative
         modifier = {
             factor = 0.65
-			OR = {
-			religion = shriner
-            has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist
-			religion = citrus_scientology	
-			religion = highmount
-			religion = raelian	
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			}          
+			uses_zodiacs = yes
 			NOT = {
                 has_any_astrology_trait_trigger = yes
             }
