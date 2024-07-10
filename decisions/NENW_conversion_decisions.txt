@@ -219,4 +219,216 @@ targeted_decisions = {
 			}
 		}
 	}
+	convert_to_canadensium = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR = {
+				culture_group = laurentine_anglo
+				culture_group = plains_canuck
+				culture_group = west_coaster
+			}
+			OR = {
+				capital_scope = {
+					culture = canadensium
+				}
+				religion = omniaveritatis
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				culture_group = laurentine_anglo
+				culture_group = plains_canuck
+				culture_group = west_coaster
+			}
+		}
+		effect = {
+			culture = canadensium
+			any_courtier = {
+				limit = {
+					OR = {
+						culture_group = laurentine_anglo
+						culture_group = plains_canuck
+						culture_group = west_coaster
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = canadensium
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = {
+					OR = {
+						culture_group = laurentine_anglo
+						culture_group = plains_canuck
+						culture_group = west_coaster
+					}
+				}
+				NOT ={
+					capital_scope = { culture = canadensium }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = canadensium }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = canadensium
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = canadensium
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = canadensium
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = canadensium
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = canadensium
+				}
+			}
+		}
+	}
+	convert_to_montanum = {
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			OR = {
+				culture_group = mountainer
+			}
+			OR = {
+				capital_scope = {
+					culture = montanum
+				}
+				religion = omniaveritatis
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				culture_group = mountainer
+			}
+		}
+		effect = {
+			culture = montanum
+			any_courtier = {
+				limit = {
+					OR = {
+						culture_group = mountainer
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = montanum
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 
+			}
+			
+			modifier = { 
+				factor = 0
+				top_liege = {
+					OR = {
+						culture_group = mountainer
+					}
+				}
+				NOT ={
+					capital_scope = { culture = montanum }
+				}
+			}
+			
+			modifier = {
+				factor = 1.4
+				liege = { culture = montanum }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = montanum
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = montanum
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = montanum
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = montanum
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = montanum
+				}
+			}
+		}
+	}
 }
