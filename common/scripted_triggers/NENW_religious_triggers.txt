@@ -145,5 +145,9 @@ is_trinitarian_religion_trigger = {
 	religion = trinitarian
 }
 is_kemetic_religion_trigger = {
-	religion = kemetic
+	OR = {
+		religion = kemetic
+		religion = solar
+		religion = amunite
+	}
 }
