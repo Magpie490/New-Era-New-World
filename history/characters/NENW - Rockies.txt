@@ -175,6 +175,10 @@
 	dynasty = 3000798
 	culture = frontranger
 	religion = custodite
+	trait = strong
+	trait = robust
+	trait = duelist
+	trait = charitable
 	2245.1.11 = {
 		birth = yes
 	}
@@ -331,6 +335,10 @@
 	disallow_random_traits = yes
 	2100.1.1 = {
 		birth = yes
+		create_bloodline = {
+			type = helios
+			has_dlc = "Holy Fury"
+		}
 	}
 	2200.1.1 = {
 		death = yes
@@ -610,7 +618,7 @@
 2910030 = {
 	name = "Rage"
 	dynasty = 3000823
-	culture = westsloper
+	culture = neomexicano
 	religion = zenith
 	trait = tough_soldier
 	trait = gregarious
@@ -653,11 +661,16 @@
 	trait = stubborn
 	trait = berserker
 	trait = one_eyed
+	trait = strong
 	2299.1.1 = {
 		birth = yes
 	}
 	2320.1.1 = {
 		employer = 2910003
+		effect = {
+			add_friend = 2910003
+			add_friend = 2910033
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -672,11 +685,19 @@
 	trait = chaste
 	trait = craven
 	trait = cynical
+	trait = erudite
+	trait = frail
 	2301.1.1 = {
 		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
 	}
 	2320.1.1 = {
 		employer = 2910003
+		effect = {
+			add_friend = 2910003
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -719,6 +740,31 @@
 	2284.1.1 = {
 		birth = yes
 		culture = westsloper
+	}
+	2308.1.1 = {
+		effect = {
+			add_friend = 2910004
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910036 = {
+	name = "Theodoros"
+	dynasty = 3000806
+	culture = trinitean
+	religion = zenith
+	trait = grey_eminence
+	trait = gregarious
+	trait = poet
+	trait = honest
+	2299.1.1 = {
+		birth = yes
+		culture = kolorantoi
+	}
+	2320.1.1 = {
+		employer = 2910000
 	}
 	2666.1.1 = {
 		death = yes
