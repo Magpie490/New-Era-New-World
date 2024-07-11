@@ -694,6 +694,58 @@ targetted_decisions = {
 					has_dlc = "Mystics" 
 					is_in_society = no
 					OR = {
+						religion = insular
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_insular
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
+						religion = omniaveritatis
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_omniaveritatis
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
+						religion = exovedate
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_exovedate
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
+						religion = bracero
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_bracero
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
 						religion = old_hindu
 						religion = agamatirta
 						religion = sikh 
@@ -736,6 +788,17 @@ targetted_decisions = {
 			}
 			if = {
 				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = madonnite
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_madonnite
+				}
+			}
+			if = {
+				limit = {
 					any_realm_lord = { is_theocracy = yes religion = ROOT }
 				}
 				custom_tooltip = { text = tooltip_vows_monk_goes_to_theocracy }

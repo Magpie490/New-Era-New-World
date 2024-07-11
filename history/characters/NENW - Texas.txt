@@ -902,15 +902,18 @@
 	trait = baptized_by_satan
 	trait = genius
 	trait = strong
-	trait = cynical
+	trait = arbitrary
+	trait = shrewd
+	trait = robust
 	trait = poet
+	trait = impaler
 	#trait = immortal
 	diplomacy = 11
 	intrigue = 11
 	martial = 10
 	stewardship = 10
 	learning = 11
-	health = 6.6
+	health = 10 #he says he will never die
 	2288.6.6 = {
 		birth = yes
 		effect = {
@@ -921,6 +924,11 @@
 		}
 	}
 	2306.2.15 = {
+		effect={
+			join_society = the_satanists
+			set_society_grandmaster = yes
+			add_society_currency_massive_effect = yes
+		}
 		employer = 2700038
 	}
 	2666.1.1 = {
@@ -940,12 +948,6 @@
 	trait = wroth
 	2288.7.12 = {
 		birth = yes
-	}
-	2306.2.15 = {
-		effect={
-			join_society = the_satanists
-			add_friend=2700037
-		}
 	}
 	2306.2.15 = {
 		effect={
@@ -1413,6 +1415,27 @@
 	}
 	2316.2.15 = {
 		employer = 2700000
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700061 = {
+	dynasty = 3000811
+	name = "Anton"
+	religion = triumphant
+	culture = ranchlander
+	trait = skilled_tactician
+	trait = cruel
+	trait = pale_horse_cult
+	trait = deceitful
+	trait = arbitrary
+	trait = patient
+	trait = quick
+	trait = diligent
+	trait = hunter
+	2290.6.6 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
