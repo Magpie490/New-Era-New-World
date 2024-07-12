@@ -1265,7 +1265,10 @@ ascended_master_male = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	active = {
-		religion = theosophy
+		OR = {
+			religion = theosophy
+			religion = aquarian
+		}
 	}
 	picture = GFX_bloodlines_symbol_bon_candle
 	flags = { bloodline_ascended_master theologian_saintly_bloodline }
@@ -1278,7 +1281,10 @@ ascended_master_female = {
 	inheritance = matrilineal
 	allow_bastards = yes
 	active = {
-		religion = theosophy
+		OR = {
+			religion = theosophy
+			religion = aquarian
+		}
 	}
 	picture = GFX_bloodlines_symbol_bon_candle
 	flags = { bloodline_ascended_master theologian_saintly_bloodline }

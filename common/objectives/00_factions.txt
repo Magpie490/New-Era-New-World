@@ -9373,15 +9373,22 @@ faction_independence = {
 				has_character_modifier = dread_modifier
 			}
 		}
-		modifier = {#Base Thelemics always want to be free
+		modifier = {#Resurrectionists always want to be free
 			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
 			religion = thelemic
 		}
-		modifier = {#Base Thelemics always want to be free
+		modifier = {#Edenites always want to be free
 			factor = 2
 			religion = edenite
 			liege = {
@@ -9513,7 +9520,7 @@ faction_independence = {
 			}
 			NOT = { culture_group = liege }
 		}
-		modifier = {#Jacobinists always want to be free
+		modifier = {#Juggalos always want to be free
 			factor = 2
 			religion = juggalo
 			liege = {
@@ -10342,13 +10349,20 @@ faction_independence = {
 				has_character_modifier = dread_modifier
 			}
 		}
-		modifier = {#Base Thelemics always want to be free
+		modifier = {#Resurrectionists always want to be free
 			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
 			religion = thelemic
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		modifier = {#Orange King always want to be loyal
 			factor = 0.25
@@ -11453,7 +11467,18 @@ faction_claimant = {
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
+			religion = thelemic
+		}
+		modifier = {#Resurrectionists always want to be free
+			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		##
 		modifier = {
@@ -12228,7 +12253,18 @@ faction_claimant = {
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
+			religion = thelemic
+		}
+		modifier = {#Resurrectionists always want to be free
+			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		##
 		modifier = {
@@ -16178,7 +16214,18 @@ faction_increase_council_power = {
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
+			religion = thelemic
+		}
+		modifier = {#Resurrectionists always want to be free
+			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		modifier = {
 			factor = 1.03
@@ -17021,7 +17068,18 @@ faction_increase_council_power = {
 		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
+			religion = thelemic
+		}
+		modifier = {#Resurrectionists always want to be free
+			factor = 2
 			religion = resurrectionist
+			liege = {
+				NOT = { religion = resurrectionist }
+			}
+		}
+		modifier = {#Myriadics always want to be free
+			factor = 2
+			religion = myriadic
 		}
 		##
 		modifier = {

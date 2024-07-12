@@ -3538,6 +3538,37 @@ government_flavor = {
 }
 
 government_flavor = {
+	name = gov_hereditary_zun
+	graphics = GFX_evt_sun_temple
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
+		NOR = { has_law = succ_feudal_elective has_law = succ_hre_elective }
+		mercenary = no
+		religion = zenith
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_electorial_zun
+	graphics = GFX_evt_sun_temple
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
+		OR = { has_law = succ_feudal_elective has_law = succ_hre_elective }
+		religion = zenith
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
 	name = gov_duchy_viceroy
 	graphics = GFX_evt_siege
 	priority = 2

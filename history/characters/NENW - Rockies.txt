@@ -1,16 +1,23 @@
 2910000 = {
-	name = "Giannis" #Duke Giannis of Moffat. A man of Greek heritage using diplomacy to his advantage
+	name = "Zenon" #Duke Zenon of Moffat. A man of Greek heritage using diplomacy to his advantage
 	dynasty = 4023004
 	culture = kolorantoi
 	religion = zenith
+	secret_religion = orthodox
 	trait = grey_eminence
 	trait = patient
 	trait = proud
 	trait = brave
 	trait = gregarious
+	trait = sympathy_christendom
 	disallow_random_traits = yes
 	2285.12.1 = {
 		birth = yes
+	}
+	2307.4.15 = {
+		effect={
+			add_friend=2910001
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -18,8 +25,8 @@
 }
 
 2910001 = {
-	name = "Keegan" #Count Keegan of Yampa. An honest friend of Duke Giannis
-	dynasty = 5123300
+	name = "Keegan" #Count Keegan of Yampa. An honest friend of Duke Zenon
+	dynasty = 5123273
 	culture = westsloper
 	religion = zenith
 	trait = thrifty_clerk
@@ -27,9 +34,15 @@
 	trait = humble
 	trait = content
 	trait = honest
+	trait = sympathy_christendom
 	disallow_random_traits = yes
 	2290.5.1 = {
 		birth = yes
+	}
+	2307.4.15 = {
+		effect={
+			add_friend=2910000
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -37,7 +50,7 @@
 }
 
 2910002 = {
-	name = "Brad" #King Brad of West Slope. A man who has lost a lot but only has one thing keeping him going with full determination. lisa the painful add rest of the party later
+	name = "Brad" #Duke Brad of Mineral Belt. A man who has lost a lot but only has one thing keeping him going with full determination
 	dynasty = 3000798
 	culture = westsloper
 	religion = zenith
@@ -66,7 +79,7 @@
 }
 
 2910003 = {
-	name = "Benny" #Count Benny of Gunnison. A young valiant ruler who is searching for something, lisa the hopeful add the others later
+	name = "Benny" #Count Benny of Gunnison. A young valiant ruler who is searching for something
 	dynasty = 5123289
 	culture = westsloper
 	religion = zenith
@@ -91,7 +104,7 @@
 }
 
 2910004 = {
-	name = "Alex" #Count Alex of Breckendridge. The Mystic of the Wilbur Sin, lisa the pointless add joel and others
+	name = "Alexander" #Count Alex of Breckendridge. The Mystic of the Wilbur Sin, lisa the pointless add joel and others
 	dynasty = 3000805
 	culture = westsloper
 	religion = zenith
@@ -162,6 +175,10 @@
 	dynasty = 3000798
 	culture = frontranger
 	religion = custodite
+	trait = strong
+	trait = robust
+	trait = duelist
+	trait = charitable
 	2245.1.11 = {
 		birth = yes
 	}
@@ -235,7 +252,7 @@
 	trait = zealous
 	disallow_random_traits = yes
 	2280.2.1 = {
-		birth = yes		
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
@@ -255,17 +272,18 @@
 	trait = gregarious
 	disallow_random_traits = yes
 	2290.12.2 = {
-		birth = yes		
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2910013 = {
-	name = "Sterling" #Count Remmington of Silverton. A recently subjugated vassal who dislikes his liege 
+	name = "Phoenix" #Phoenix III, current king of the Sun Kingdom. Working valiantly to ensure the growth of his realm
 	culture = westsloper
-	religion = brighamite
-	dynasty = 5123270
+	religion = zenith
+	dynasty = 5128469
+	father = 2910020
 	trait = tough_soldier
 	trait = scarred
 	trait = patient
@@ -274,7 +292,480 @@
 	trait = zealous
 	disallow_random_traits = yes
 	2300.10.2 = {
-		birth = yes		
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910014 = {
+	name = "Hank" #A man who cares for little besides fighting and killing. Rules somewhere in Nevada
+	culture = battleborn
+	religion = trinitarian
+	dynasty = 5225439
+	trait = tough_soldier
+	trait = cruel
+	trait = patient
+	trait = brave
+	trait = berserker
+	2302.10.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2910015 = {
+	name = "Helios" #A mysterious man who became the founder of the Sun Kingdom. Apparently lived for 100 years before passing
+	culture = neomexicano
+	religion = zenith
+	dynasty = 5128469
+	occluded = yes
+	trait = mastermind_theologian
+	trait = genius
+	trait = mystic
+	trait = charitable
+	trait = patient
+	trait = zealous
+	trait = just
+	trait = ambitious
+	trait = sun_warrior
+	trait = zenith_leader
+	disallow_random_traits = yes
+	2100.1.1 = {
+		birth = yes
+		create_bloodline = {
+			type = helios
+			has_dlc = "Holy Fury"
+		}
+	}
+	2200.1.1 = {
+		death = yes
+	}
+}
+
+2910016 = {
+	name = "Apollo" #Son of Heliogabalus, a rather mythical king whose reign was known for prosperity
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910015
+	occluded = yes
+	trait = midas_touched
+	trait = administrator
+	trait = temperate
+	trait = charitable
+	trait = kind
+	trait = zealous
+	trait = gregarious
+	trait = trusting
+	disallow_random_traits = yes
+	2150.1.1 = {
+		birth = yes
+	}
+	2230.11.3 = {
+		death = yes
+	}
+}
+
+2910017 = {
+	name = "Rex" #Son of Apollo, the first king with substantial evidence of existence. Known for his iron fisted reign
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910016
+	trait = skilled_tactician
+	trait = scarred
+	trait = shrewd
+	trait = falconer
+	trait = diligent
+	trait = zealous
+	trait = proud
+	trait = brave
+	disallow_random_traits = yes
+	2185.4.18 = {
+		birth = yes
+	}
+	2266.2.3 = {
+		death = yes
+	}
+}
+
+2910018 = {
+	name = "Phoenix" #Son of Rex. Known for his reign of domination, but also extreme cruelty to his enemies
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910017
+	trait = skilled_tactician
+	trait = wroth
+	trait = cruel
+	trait = paranoid
+	trait = diligent
+	trait = chaste
+	trait = proud
+	trait = impaler
+	trait = sun_warrior
+	disallow_random_traits = yes
+	2215.6.1 = {
+		birth = yes
+	}
+	2270.3.13 = {
+		death = yes
+	}
+}
+
+2910019 = {
+	name = "Phoenix" #Phoenix II, son of Phoenix I. Known for his ambitious attempt to sack Salt Lake City that ended in disaster, as he died in battle
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910018
+	trait = misguided_warrior
+	trait = groomed
+	trait = envious
+	trait = ambitious
+	trait = diligent
+	trait = stubborn
+	trait = sun_warrior
+	disallow_random_traits = yes
+	2240.7.17 = {
+		birth = yes
+	}
+	2280.1.5 = {
+		death = yes
+	}
+}
+
+2910020 = {
+	name = "Vulcanus" #Vulcanus, son of Phoenix II. A king known for trying to maintain what was left of the kingdom after the disaster at Salt Lake. Numerous tributaries broke away during this time
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910019
+	trait = charismatic_negotiator
+	trait = stressed
+	trait = patient
+	trait = brave
+	trait = gregarious
+	trait = trusting
+	disallow_random_traits = yes
+	2270.10.2 = {
+		birth = yes
+	}
+	2308.1.1 = {
+		death = yes
+	}
+}
+
+2910021 = {
+	name = "Phoenix" #Son of Phoenix III
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910013
+	2320.3.20 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2910022 = {
+	name = "Mercurius" #Second son of Phoenix III
+	culture = westsloper
+	religion = zenith
+	dynasty = 5128469
+	father = 2910013
+	2323.5.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+2910023 = {
+	name = "Richard"
+	dynasty = 3000814
+	culture = westsloper
+	religion = zenith
+	trait = thrifty_clerk
+	2285.1.1 = {
+		birth = yes
+	}
+	2292.1.1 = {
+		effect = {
+			add_friend = 2910002
+			add_friend = 2910024
+			add_friend = 2910025
+		}
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910024 = {
+	name = "Sticky"
+	dynasty = 3000813
+	culture = westsloper
+	religion = zenith
+	2285.1.1 = {
+		birth = yes
+	}
+	2292.1.1 = {
+		effect = {
+			add_friend = 2910002
+			add_friend = 2910025
+		}
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910025 = {
+	name = "Cheeks"
+	dynasty = 3000815
+	culture = westsloper
+	religion = zenith
+	2285.1.1 = {
+		birth = yes
+	}
+	2292.1.1 = {
+		effect = {
+			add_friend = 2910002
+		}
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910026 = {
+	name = "Terry"
+	dynasty = 3000812
+	culture = westsloper
+	religion = zenith
+	trait = kind
+	trait = craven
+	trait = proud
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910027 = {
+	name = "Nern"
+	dynasty = 3000816
+	culture = westsloper
+	religion = zenith
+	trait = socializer
+	trait = gregarious
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910028 = {
+	name = "Olan"
+	dynasty = 3000817
+	culture = westsloper
+	religion = zenith
+	trait = socializer
+	trait = gregarious
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910029 = {
+	name = "Olan"
+	dynasty = 3000817
+	culture = westsloper
+	religion = zenith
+	trait = gregarious
+	trait = content
+	trait = hunter
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910030 = {
+	name = "Rage"
+	dynasty = 3000823
+	culture = neomexicano
+	religion = zenith
+	trait = tough_soldier
+	trait = gregarious
+	trait = brave
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910031 = {
+	name = "Rodriguez"
+	dynasty = 3000824
+	culture = neomexicano
+	religion = rangerite
+	trait = skilled_tactician
+	trait = socializer
+	trait = shrewd
+	2280.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910003
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910032 = {
+	name = "Clyde"
+	dynasty = 3000826
+	culture = trinitean
+	religion = zenith
+	trait = misguided_warrior
+	trait = wroth
+	trait = stubborn
+	trait = berserker
+	trait = one_eyed
+	trait = strong
+	2299.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910003
+		effect = {
+			add_friend = 2910003
+			add_friend = 2910033
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910033 = {
+	name = "Liam"
+	dynasty = 3000825
+	culture = westsloper
+	religion = zenith
+	trait = scholarly_theologian
+	trait = chaste
+	trait = craven
+	trait = cynical
+	trait = erudite
+	trait = frail
+	2301.1.1 = {
+		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
+	}
+	2320.1.1 = {
+		employer = 2910003
+		effect = {
+			add_friend = 2910003
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910034 = {
+	name = "Yogurt"
+	dynasty = 3000827
+	culture = ny_asian
+	religion = mahayana
+	trait = brilliant_strategist
+	trait = duelist
+	trait = proud
+	trait = wuxia_master
+	2284.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910003
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910035 = {
+	name = "Joel" #Holds a unique family heirloom in his possession, he has few bullets tho
+	dynasty = 3000828
+	culture = neomexicano
+	religion = zenith
+	trait = elusive_shadow
+	trait = shrewd
+	trait = kind
+	trait = humble
+	trait = ambitious
+	trait = deceitful
+	trait = just
+	trait = mystic
+	martial = 8
+	disallow_random_traits = yes
+	2284.1.1 = {
+		birth = yes
+		culture = westsloper
+	}
+	2308.1.1 = {
+		effect = {
+			add_friend = 2910004
+			add_artifact = bolt_pistol
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910036 = {
+	name = "Theodoros"
+	dynasty = 3000806
+	culture = trinitean
+	religion = zenith
+	trait = grey_eminence
+	trait = gregarious
+	trait = poet
+	trait = honest
+	2299.1.1 = {
+		birth = yes
+		culture = kolorantoi
+	}
+	2320.1.1 = {
+		employer = 2910000
 	}
 	2666.1.1 = {
 		death = yes

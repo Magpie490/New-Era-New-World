@@ -7959,6 +7959,10 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_trinitarian } }
 		join_society = warrior_lodge_trinitarian
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_kemetic } }
+		join_society = warrior_lodge_kemetic
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -8164,6 +8168,26 @@ join_prev_monastic_order_society = {
 	else_if = {
 		limit = { PREV = { society_member_of = monastic_order_osvicenism } }
 		join_society = monastic_order_osvicenism
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = monastic_order_insular } }
+		join_society = monastic_order_insular
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = monastic_order_omniaveritatis } }
+		join_society = monastic_order_omniaveritatis
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = monastic_order_madonnite } }
+		join_society = monastic_order_madonnite
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = monastic_order_exovedate } }
+		join_society = monastic_order_exovedate
+	}
+	else_if = {
+		limit = { PREV = { society_member_of = monastic_order_bracero } }
+		join_society = monastic_order_bracero
 	}
 }
 
@@ -12963,33 +12987,7 @@ spawn_good_commander_effect = {
 
 		if = {
 			limit = {
-				OR = {
-					religion = thelemic_reformed
-			religion = summer_queen
-			religion = theosophy
-			religion = thelemic
-			religion = orange_king
-			religion = nousthreskeia_reformed
-			religion = nousthreskeia
-			religion = druze
-			religion = alawite
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			religion = neo_zorvanite
-			religion = poseidonian
-			religion = raelian
-			religion = madonnite
-			religion = kemetic
-			religion = solar
-			religion = highmount
-			religion = citrus_scientology
-			religion = shriner
-			has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist_2
-			religion = mandaeanism			
-				}
+				uses_zodiacs = yes
 			}
 			add_western_zodiac_trait_effect = yes
 		}
@@ -13138,32 +13136,7 @@ spawn_great_commander_effect = {
 
 		if = {
 			limit = {
-				OR = {
-					religion = thelemic_reformed
-			religion = summer_queen
-			religion = theosophy
-			religion = thelemic
-			religion = orange_king
-			religion = nousthreskeia_reformed
-			religion = nousthreskeia
-			religion = druze
-			religion = alawite
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			religion = neo_zorvanite
-			religion = poseidonian
-			religion = raelian
-			religion = madonnite
-			religion = kemetic
-			religion = solar
-			religion = highmount
-			religion = citrus_scientology
-			has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist_2
-			religion = mandaeanism				
-				}
+				uses_zodiacs = yes
 			}
 
 			add_western_zodiac_trait_effect = yes
@@ -13461,32 +13434,7 @@ spawn_fantastic_commander_effect = {
 
 		if = {
 			limit = {
-				OR = {
-					religion = thelemic_reformed
-			religion = summer_queen
-			religion = theosophy
-			religion = thelemic
-			religion = orange_king
-			religion = nousthreskeia_reformed
-			religion = nousthreskeia
-			religion = druze
-			religion = alawite
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			religion = neo_zorvanite
-			religion = poseidonian
-			religion = raelian
-			religion = madonnite
-			religion = kemetic
-			religion = solar
-			religion = highmount
-			religion = citrus_scientology
-			has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist_2
-			religion = mandaeanism			
-				}
+				uses_zodiacs = yes
 			}
 
 			add_western_zodiac_trait_effect = yes
@@ -21257,6 +21205,9 @@ add_warrior_lodge_leader_trait_effect = {
 		warrior_lodge_trinitarian = {
 			add_trait = trinitarian_leader
 		}
+		warrior_lodge_kemetic = {
+			add_trait = kemetic_leader
+		}
 	}
 }
 fire_haruspicy_event_effect = {
@@ -22169,32 +22120,7 @@ spawn_debutante_effect = {
 
 		if = {
 			limit = {
-				OR = {
-					religion = thelemic_reformed
-			religion = summer_queen
-			religion = theosophy
-			religion = thelemic
-			religion = orange_king
-			religion = nousthreskeia_reformed
-			religion = nousthreskeia
-			religion = druze
-			religion = alawite
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = starist_pagan
-			religion = starist_pagan_reformed
-			religion = neo_zorvanite
-			religion = poseidonian
-			religion = raelian
-			religion = madonnite
-			religion = kemetic
-			religion = solar
-			religion = highmount
-			religion = citrus_scientology
-			has_religion_feature = religion_astrology
-			has_religion_feature = religion_feature_folklorist_2
-			religion = mandaeanism			
-				}
+				uses_zodiacs = yes
 			}
 
 			add_western_zodiac_trait_effect = yes
