@@ -746,6 +746,19 @@ targetted_decisions = {
 					has_dlc = "Mystics" 
 					is_in_society = no
 					OR = {
+						religion = guadalupano
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_guadalupano
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
 						religion = old_hindu
 						religion = agamatirta
 						religion = sikh 
