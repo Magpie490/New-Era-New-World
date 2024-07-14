@@ -47,6 +47,7 @@ isnt_forced_to_theocracy = {
 			religion = solar
 			religion = triumphant
 			religion = zenith
+			religion = omniaveritatis
 			has_religion_feature = religion_temporal_head
 			AND = {
 				has_religion_features = no
@@ -576,7 +577,7 @@ at_fatima_region_trigger = {
 		}
 	}
 }
-passage_emulation_trigger = {	
+passage_emulation_trigger = {
 	OR = {
 		religion = lutheran
 		religion = adventist
@@ -594,6 +595,8 @@ passage_emulation_trigger = {
 		religion = hussite
 		religion = neodonatists
 		religion = gidoggyo
+		religion = quaker
+		religion = tquaker
 	}
 }
 same_satanist_society_potential = {
@@ -821,6 +824,7 @@ can_use_christian_stuff_trigger = {
 	OR = {
 		religion_group = christian
 		religion_group = syncratic_group
+		religion_group = post_christian_group
 	}
 	NOT = {
 		religion = dahatatta

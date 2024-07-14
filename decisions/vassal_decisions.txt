@@ -524,7 +524,12 @@ targetted_decisions = {
 	
 		from_potential = {
 			is_playable = yes
-			religion = zenith
+			OR = {
+				religion = zenith
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_zun_judgement
+				}
+			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}

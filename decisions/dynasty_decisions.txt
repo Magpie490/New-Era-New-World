@@ -389,6 +389,9 @@ targetted_decisions = {
 				religion = jugoslavist
 				religion = edenite
 				religion = witness
+				religion = penitente
+				religion = macabrist
+				religion = rastafari
 			}
 			father_even_if_dead = {
 				OR = {
@@ -739,6 +742,19 @@ targetted_decisions = {
 				custom_tooltip = { text = tooltip_vows_monk_joins_society }
 				hidden_tooltip = { 
 					join_society = monastic_order_bracero
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					OR = {
+						religion = guadalupano
+					}
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_guadalupano
 				}
 			}
 			if = {
