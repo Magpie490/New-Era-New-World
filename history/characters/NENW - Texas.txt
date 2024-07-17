@@ -154,9 +154,13 @@
 	religion = rangerite
 	culture = dallasian
 	trait = brilliant_strategist
+	trait = fair
+	trait = genius
 	trait = strong
+	trait = duelist
 	trait = kind
-	trait = ambitious	
+	trait = diligent
+	trait = ambitious
 	trait = brave
 	trait = just
 	trait = gregarious
@@ -164,6 +168,8 @@
 	trait = charitable
 	trait = trickster
 	trait = inspiring_leader
+	trait = robust
+	trait = legendary_duelist
 	trait = wuxia_master
 	martial = 11
 	health = 10 #Chuck Norris was once bitten by a Rattle Snake... After 3 Days of suffering the rattle snake died!
@@ -449,6 +455,7 @@
 2700017 = {
 	dynasty = 3000772
 	name = "Dale"
+	father = 2700062
 	religion = lone_star
 	culture = houstonian
 	trait = indulgent_wastrel
@@ -1360,7 +1367,7 @@
 2700058 = { 
 	name = "Michiko"
 	female = yes
-	religion = amidism
+	religion = shinto
 	culture = kanadajin
 	trait = patient
 	2255.5.7 = {
@@ -1375,7 +1382,7 @@
 	dynasty = 3000754
 	father = 2700012
 	mother = 2700058
-	religion = amidism
+	religion = shinto
 	culture = kanadajin
 	trait = charismatic_negotiator
 	trait = legit_bastard
@@ -1383,8 +1390,9 @@
 	trait = kind
 	trait = humble
 	trait = honest
-	trait = barren
-	2290.4.15 = {
+	trait = barren #narrow urethra
+	trait = diligent
+	2283.4.15 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -1413,7 +1421,7 @@
 	dynasty = 3000811
 	name = "Anton"
 	religion = triumphant
-	culture = ranchlander
+	culture = andalu
 	trait = elusive_shadow
 	trait = cruel
 	trait = pale_horse_cult
@@ -1427,6 +1435,42 @@
 	intrigue = 9
 	2290.6.6 = {
 		birth = yes
+		culture = ranchlander
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700062 = {
+	dynasty = 3000772
+	name = "Bug"
+	religion = lone_star
+	culture = houstonian
+	trait = homosexual
+	trait = kind
+	trait = trusting
+	2265.7.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700063 = {
+	name = "Charles Raymond"
+	religion = maaravi
+	culture = buckaroo
+	trait = gregarious
+	trait = kind
+	trait = patient
+	2255.7.12 = {
+		birth = yes
+	}
+	2321.4.15 = {
+		add_spouse=2700016
+		effect={
+			add_lover=2700016
+		}
 	}
 	2666.1.1 = {
 		death = yes
