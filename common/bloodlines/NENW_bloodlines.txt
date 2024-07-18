@@ -161,8 +161,8 @@ memphis_bloodline = {
 	inheritance = patrilineal
 	monthly_character_prestige = 1
 	martial = 1
-	kemetic_opinion = 5
-	solar_opinion = 5
+	kemetic_opinion = 10
+	solar_opinion = 10
 	madonnite_opinion = -10
 	picture = GFX_bloodlines_symbol_ares_helmet
 	flags = { historical_bloodline }
@@ -213,6 +213,14 @@ arthur_bloodline = {
 	monthly_character_piety = 1
 	madonnite_opinion = 10
 	picture = GFX_bloodlines_symbol_roman
+	flags = { historical_bloodline }
+}
+ulysses_hunt_bloodline = {
+	inheritance = patrilineal
+	martial = 2
+	monthly_character_prestige = 1.5
+	mainline_opinion = 10
+	picture = GFX_bloodlines_temp_symbol_2
 	flags = { historical_bloodline }
 }
 kemetic_bloodline = {
@@ -461,7 +469,17 @@ tenskwatawa = {
 	picture = GFX_bloodlines_symbol_benevolent
 	flags = { historical_bloodline }
 }
-
+ras_al_ghul = {
+	intrigue = 1
+	deceitful_opinion = 5
+	plot_power_modifier = 0.15
+	defensive_plot_power_modifier = 0.1
+	bloodline_effect_murder_stalk = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder
+	flags = { historical_bloodline bloodline_murder_stalk bloodline_murderous }
+}
 the_judge = {
 	cruel_opinion = 5
 	red_horse_cult_opinion = 5
@@ -475,7 +493,19 @@ the_judge = {
 	picture = GFX_bloodlines_symbol_murder_war
 	flags = { historical_bloodline bloodline_murder_deflection bloodline_murderous bloodline_phonocratic bloodline_faster_dissent }
 }
-
+chuck_norris = {
+	combat_rating = 15
+	brave_opinion = 5
+	martial = 1
+	bloodline_effect_battle_survivor = 1
+	bloodline_effect_joining_warrior_lodge = 1
+	monthly_character_prestige = 0.1
+	health = 3
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_war
+	flags = { historical_bloodline battle_survivor_bloodline bloodline_legendary_warrior }
+}
 qajar = {
 	shiite_opinion = 5
 	amero_iranic_opinion = 5

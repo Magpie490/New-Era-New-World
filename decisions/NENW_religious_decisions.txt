@@ -124,6 +124,30 @@ decisions = {
             }
 			piety = -1000
 			set_global_flag = proclaimed_golden_horus
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = golden_horus_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_golden_horus"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = golden_horus_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_golden_horus"
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
