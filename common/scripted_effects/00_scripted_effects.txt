@@ -7967,6 +7967,10 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_kemetic } }
 		join_society = warrior_lodge_kemetic
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_emmaean } }
+		join_society = warrior_lodge_emmaean
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -21215,6 +21219,9 @@ add_warrior_lodge_leader_trait_effect = {
 		}
 		warrior_lodge_kemetic = {
 			add_trait = kemetic_leader
+		}
+		warrior_lodge_emmaean = {
+			add_trait = emmaean_leader
 		}
 	}
 }
