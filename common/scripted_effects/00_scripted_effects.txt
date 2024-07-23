@@ -7971,6 +7971,10 @@ join_prev_warrior_lodge_society_effect = {
 		limit = { PREV = { society_member_of = warrior_lodge_emmaean } }
 		join_society = warrior_lodge_emmaean
 	}
+	else_if = {
+		limit = { PREV = { society_member_of = warrior_lodge_resurrectionist } }
+		join_society = warrior_lodge_resurrectionist
+	}
 }
 
 give_this_warrior_lodge_religion_effect = { # Mostly for spawned characters
@@ -13864,7 +13868,7 @@ spawn_elder_effect = {
 					religion = west_african_pagan
 					religion = west_african_pagan_reformed
 					has_religion_feature = religion_animistic
-				has_religion_feature = religion_feature_emmaean
+					has_religion_feature = religion_feature_emmaean
 					has_religion_feature = religion_feature_celtic2
 					religion = kiratist
 					religion = koyapunem
@@ -21222,6 +21226,9 @@ add_warrior_lodge_leader_trait_effect = {
 		}
 		warrior_lodge_emmaean = {
 			add_trait = emmaean_leader
+		}
+		warrior_lodge_resurrectionist = {
+			add_trait = resurrectionist_leader
 		}
 	}
 }
