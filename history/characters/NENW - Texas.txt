@@ -286,8 +286,8 @@
 	dynasty=3000766
 	father=2700024
 	mother=2700025
-	religion = lone_star
-	culture = houstonian
+	religion = millenarian
+	culture = montane
 	trait = scholarly_theologian
 	trait = trusting
 	trait = diligent
@@ -305,6 +305,9 @@
 			add_friend=2700018
 			add_artifact = spectacles
 		}
+	}
+	2304.4.15 = {
+		religion = lone_star
 	}
 	2666.1.1 = {
 		death = yes
@@ -366,6 +369,9 @@
 	}
 	2286.4.15 = {
 		add_spouse=2700032
+		effect = {
+			add_friend = 2700011
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -455,10 +461,12 @@
 2700017 = {
 	dynasty = 3000772
 	name = "Dale"
+	dna = "bibbicbbgdg"
+	properties = "kk0c0k0000f"
 	father = 2700062
 	religion = lone_star
-	culture = houstonian
-	trait = indulgent_wastrel
+	culture = texgerman
+	trait = amateurish_plotter
 	trait = stubborn
 	trait = diligent
 	trait = trusting
@@ -466,11 +474,13 @@
 	intrigue = 1
 	2284.7.12 = {
 		birth = yes
+		culture = houstonian
 	}
 	2294.4.15 = {
 		effect = {	
 			add_friend=2700021
 			add_friend=2700022
+			add_artifact=old_world_shades
 		}
 	}
 	2304.4.15 = {
@@ -538,6 +548,7 @@
 	culture = alabama
 	trait = rowdy
 	trait = playful
+	trait = robust
 	2314.7.12 = {
 		birth = yes
 		culture = houstonian
@@ -562,6 +573,8 @@
 	trait = gluttonous
 	trait = uncouth
 	trait = trusting
+	trait = robust
+	trait = brave
 	2284.7.12 = {
 		birth = yes
 		effect = {
@@ -586,9 +599,11 @@
 2700022 = {
 	dynasty = 3000774
 	name = "Jeffrey"
+	dna = "ajifducbhdr"
+	properties = "qm0c0k"
 	father = 2700035
 	religion = lone_star
-	culture = houstonian
+	culture = texgerman
 	trait = charismatic_negotiator
 	trait = stutter
 	trait = lustful
@@ -599,6 +614,7 @@
 	trait = content
 	2284.7.12 = {
 		birth = yes
+		culture = houstonian
 	}
 	2306.2.15 = {
 		effect={
@@ -625,7 +641,7 @@
 2700024 = {
 	dynasty = 3000766
 	name = "Doc"
-	religion = lone_star
+	religion = millenarian
 	culture = montane
 	2250.4.15 = {
 		birth = yes
@@ -640,7 +656,7 @@
 2700025 = {
 	name = "Maddy"
 	female=yes
-	religion = lone_star
+	religion = millenarian
 	culture = montane
 	trait = chaste
 	2255.4.15 = {
@@ -705,6 +721,7 @@
 	trait = martial_cleric
 	trait = lustful
 	trait = diligent
+	trait = adult_baptized #born again virgin
 	stewardship = 1
 	2306.2.13 = {
 		birth = yes
@@ -726,6 +743,8 @@
 	trait = diligent
 	trait = proud
 	trait = sympathy_buddhism
+	trait = envious
+	trait = scholar
 	disallow_random_traits = yes
 	2284.4.15 = {
 		birth = yes
@@ -1420,6 +1439,8 @@
 2700061 = {
 	dynasty = 3000811
 	name = "Anton"
+	dna = "bfiejtiacah"
+	properties = "ki0d0k"
 	religion = triumphant
 	culture = andalu
 	trait = elusive_shadow
@@ -1446,9 +1467,12 @@
 	name = "Bug"
 	religion = lone_star
 	culture = houstonian
+	trait = tough_soldier
 	trait = homosexual
 	trait = kind
 	trait = trusting
+	trait = craven
+	trait = shy
 	2265.7.12 = {
 		birth = yes
 	}
@@ -1458,6 +1482,7 @@
 }
 2700063 = {
 	name = "Charles Raymond"
+	dynasty = 3000848
 	religion = maaravi
 	culture = buckaroo
 	trait = gregarious
@@ -1471,6 +1496,39 @@
 		effect={
 			add_lover=2700016
 		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700064 = {
+	name = "Karen"
+	female = yes
+	dynasty = 3000849
+	religion = lone_star
+	culture = thunderlander
+	trait = mastermind_theologian
+	trait = gregarious
+	trait = kind
+	trait = patient
+	2284.7.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2700065 = {
+	name = "Thomason"
+	religion = lone_star
+	culture = houstonian
+	trait = scholarly_theologian
+	trait = gregarious
+	trait = slothful
+	trait = patient
+	trait = content
+	2284.7.12 = {
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes

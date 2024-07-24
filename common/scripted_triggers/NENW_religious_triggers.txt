@@ -104,6 +104,17 @@ religion_openly_anishinaabe_or_reformed_trigger = {
 		}
 	}
 }
+religion_openly_emmaean_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_emmaean_or_reformed_trigger
+		hidden_trigger = {
+			OR = {
+				religion = emmaean
+				religion = emmaean_reformed
+			}
+		}
+	}
+}
 
 is_gridiron_religion_trigger = {
 	religion = gridiron
@@ -150,4 +161,7 @@ is_kemetic_religion_trigger = {
 		religion = solar
 		religion = amunite
 	}
+}
+is_resurrectionist_religion_trigger = {
+	religion = resurrectionist
 }
