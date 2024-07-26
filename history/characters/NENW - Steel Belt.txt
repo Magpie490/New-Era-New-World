@@ -83,9 +83,10 @@
 	trait = gregarious
 	trait = trickster
 	trait = flanker
+	disallow_random_traits = yes
 	martial = 7
 	intrigue = 8
-	2294.3.1 = {
+	2291.3.1 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -352,7 +353,7 @@
 	}
 }
 100024 = {
-	name = "Stephen" #Descedant of Charles Hadad, even if heavily 'murican now, former governor of illinoi
+	name = "Stephen" #Descedant of Charles Hadad, even if heavily 'murican now, former governor of illinoi and former chancellor of the empire
 	dynasty = 3000493
 	religion = madonnite
 	culture = prairielander
@@ -367,6 +368,7 @@
 	trait = sympathy_christendom
 	trait = zodiac_leo
 	trait = honest
+	trait = diplomat_2
 	disallow_random_traits = yes
 	2286.5.18 = {
 		birth = yes
@@ -1672,6 +1674,49 @@
 	2079.3.23 = {
 		death = {
 			death_reason = death_rabble
+		}
+	}
+}
+100106 = { #Just a teenage Gaian
+	name = "Meri"
+	female = yes
+	dynasty = 3000373
+	culture = watchers
+	religion = watcher
+	secret_religion = gaian
+	trait = mastermind_theologian
+	trait = fair
+	trait = chaste
+	trait = kind
+	trait = zealous
+	disallow_random_traits = yes
+	father = 100005
+	mother = 100107
+	2308.6.16 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+100107 = { #
+	name = "Lilly"
+	female = yes
+	culture = laikmahn
+	religion = gaian
+	trait = mastermind_theologian
+	trait = fair
+	trait = possessed
+	trait = giant
+	trait = lustful
+	trait = wroth
+	2290.3.21 = {
+		birth = yes
+	}
+	2309.6.19 = {
+		death = {
+			death_reason = death_battle
+			killer = 100005
 		}
 	}
 }
