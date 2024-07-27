@@ -674,6 +674,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_feature_starist
 				has_selected_religion_feature = religion_ritual_sacrifice
+				has_selected_religion_feature = religion_feature_crow_way
 			}
 		}
 		effect = {
@@ -717,6 +718,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_hellenic #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_thuyhoa #Redundant
+				has_selected_religion_feature = religion_feature_crow_way
 			}
 		}
 		effect = {
@@ -1159,6 +1161,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_celtic
 				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_antiquarianist
+				has_selected_religion_feature = religion_feature_blackfoot
 			}
 		}
 		effect = {
@@ -1230,6 +1233,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_tengri #Redundant
 				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
+				has_selected_religion_feature = religion_feature_blackfoot
 			}
 		}
 		effect = {
@@ -1269,6 +1273,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_maunaxite #Redundant
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
+				has_selected_religion_feature = religion_feature_crow_way
 			}
 		}
 		effect = {
@@ -2550,6 +2555,90 @@ religion_doctrine = {
 					garrison_size = 0.4
 					
 					key = "DEF_RELIGION_HOME_TERRITORY"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_crow_way = {
+		picture = GFX_religion_feature_crow_way
+		potential = {
+			has_game_started = yes
+			religion = crow_way_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = crow_way_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_syncretic #redundant
+				has_selected_religion_feature = religion_animistic #redundant
+				has_selected_religion_feature = religion_monastic #redundant
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_syncretic }
+			custom_tooltip = { text = tooltip_religion_feature_land_morale }
+			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
+			custom_tooltip = { text = tooltip_religion_feature_monastic }
+			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
+			custom_tooltip = { text = tooltip_religion_feature_celibate_priests }
+			hidden_tooltip = { 
+				set_unit_modifier = { 
+					land_morale = 0.05
+					key = "ANIMISTIC_RELIGION"
+				}
+				set_can_retire_to_monastery = yes
+				set_priests_can_marry = no
+				set_priests_can_inherit = no
+			}	
+			set_character_modifier = {
+				learning = 2
+				key = "MONASTIC_ATTR_RELIGION"
+			}		
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	religion_feature_kakyosin = {
+		picture = GFX_religion_feature_kakyosin
+		potential = {
+			has_game_started = yes
+			religion = kakyosin_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = kakyosin_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_relentless #redundant
+				has_selected_religion_feature = religion_adventuring
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_adventuring }
+			custom_tooltip = { text = tooltip_religion_feature_pirating }
+			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
+			custom_tooltip = { text = tooltip_religion_feature_offensive }
+			hidden_tooltip = { 
+				enable_prepared_invasion = ROOT
+				set_ignores_defensive_attrition = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "RELENTLESS_RELIGION"
 				}
 			}
 		}
