@@ -4304,6 +4304,7 @@ narrative_event = {
 			maunaxite_reformed     = { maunaxite = { set_flag = has_been_reformed } }
 			nousthreskeia_reformed     = { nousthreskeia = { set_flag = has_been_reformed } }
 			celtic_pagan_reformed     = { celtic_pagan = { set_flag = has_been_reformed } }
+			crow_way_reformed = { crow_way = { set_flag = has_been_reformed } }
 		}
 
 		# Set religion head title as landless if religion has theocratic religion head
@@ -4334,6 +4335,8 @@ narrative_event = {
 				maunaxite_reformed     = { d_maunaxite_reformed = { save_event_target_as = religious_head_title } }
 				nousthreskeia_reformed     = { d_nousthreskeia_reformed = { save_event_target_as = religious_head_title } }
 				celtic_pagan_reformed     = { d_celtic_pagan_reformed = { save_event_target_as = religious_head_title } }
+				crow_way_reformed = { d_crow_way = { save_event_target_as = religious_head_title } }
+				kakyosin_reformed = { d_kakyosin = { save_event_target_as = religious_head_title } }
 			}
 
 			set_title_landless = {
@@ -4380,6 +4383,7 @@ narrative_event = {
 					maunaxite_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
+					crow_way_reformed = {}
 				}
 			}
 			else_if = { # Religion is Matriarchal
@@ -4403,6 +4407,7 @@ narrative_event = {
 					maunaxite_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
+					crow_way_reformed = {}
 				}
 			}
 			else_if = { # Else
@@ -4425,6 +4430,7 @@ narrative_event = {
 					maunaxite_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
+					crow_way_reformed = {}
 				}
 			}
 		}
