@@ -1116,6 +1116,7 @@ character_event = {
 						trait = tough_soldier
 						trait = skilled_tactician
 						trait = brilliant_strategist
+						trait = exalted_warlord
 						trait = strategist
 					}
 				}
@@ -1140,6 +1141,7 @@ character_event = {
 						trait = underhanded_rogue
 						trait = charismatic_negotiator
 						trait = grey_eminence
+						trait = virtuoso_arbitrator
 						trait = socializer
 					}
 				}
@@ -1164,6 +1166,7 @@ character_event = {
 						trait = thrifty_clerk
 						trait = fortune_builder
 						trait = midas_touched
+						trait = golden_sovereign
 						trait = administrator
 						trait = greedy
 						trait = diligent
@@ -1196,6 +1199,7 @@ character_event = {
 						trait = martial_cleric
 						trait = scholarly_theologian
 						trait = mastermind_theologian
+						trait = erudite_oracle
 						trait = scholar
 					}
 				}
@@ -3429,6 +3433,10 @@ character_event = {
 				FROM = { trait = brilliant_strategist }
 			}
 			modifier = {  
+				factor = 0.25
+				FROM = { trait = exalted_warlord }
+			}
+			modifier = {  
 				factor = 0.5
 				FROM = { trait = strategist }
 			}
@@ -3447,6 +3455,10 @@ character_event = {
 			modifier = {  
 				factor = 1.75
 				trait = brilliant_strategist
+			}
+			modifier = {  
+				factor = 1.8
+				trait = exalted_warlord
 			}
 			modifier = {  
 				factor = 0.5
@@ -3776,6 +3788,10 @@ character_event = {
 				factor = 0.5
 				FROM = { trait = grey_eminence }
 			}
+			modifier = {
+				factor = 0.25
+				FROM = { trait = virtuoso_arbitrator }
+			}
 			modifier = {  
 				factor = 0.5
 				FROM = { trait = socializer }
@@ -3904,6 +3920,7 @@ character_event = {
 					trait = thrifty_clerk
 					trait = fortune_builder
 					trait = midas_touched
+					trait = golden_sovereign
 					trait = administrator
 					trait = greedy
 				}
@@ -3919,6 +3936,7 @@ character_event = {
 					trait = thrifty_clerk
 					trait = fortune_builder
 					trait = midas_touched
+					trait = golden_sovereign
 					trait = administrator
 					trait = diligent
 				}
@@ -3934,6 +3952,7 @@ character_event = {
 					trait = thrifty_clerk
 					trait = fortune_builder
 					trait = midas_touched
+					trait = golden_sovereign
 					trait = administrator
 				}
 			}
@@ -4242,6 +4261,10 @@ character_event = {
 			modifier = {  
 				factor = 0.5
 				FROM = { trait = midas_touched }
+			}
+			modifier = {  
+				factor = 0.25
+				FROM = { trait = golden_sovereign }
 			}
 			modifier = {  
 				factor = 0.5
@@ -4640,6 +4663,10 @@ character_event = {
 			modifier = {  
 				factor = 0.5
 				FROM = { trait = mastermind_theologian }
+			}
+			modifier = {  
+				factor = 0.25
+				FROM = { trait = erudite_oracle }
 			}
 			modifier = {  
 				factor = 0.5
@@ -11032,6 +11059,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = { 
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_chaste
 						character_event = { id = HF.21124 days = 12 } 
@@ -11132,6 +11163,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = { 
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_temperate
@@ -11234,6 +11269,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = { 
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_charitable
 						character_event = { id = HF.21124 days = 12 } 
@@ -11335,6 +11374,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = { 
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_diligent
 						character_event = { id = HF.21124 days = 12 } 
@@ -11435,6 +11478,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = { 
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_patient
@@ -11541,6 +11588,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_kind
 						character_event = { id = HF.21124 days = 12 } 
@@ -11641,6 +11692,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_humble
@@ -11751,6 +11806,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 						persistent_event_target:sway_target = { 
 							set_character_flag = flag_sway_turning_lustful
 							character_event = { id = HF.21124 days = 12 } 
@@ -11853,6 +11912,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_gluttonous
 						character_event = { id = HF.21124 days = 12 } 
@@ -11953,6 +12016,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_greedy
@@ -12055,6 +12122,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_slothful
 						character_event = { id = HF.21124 days = 12 } 
@@ -12155,6 +12226,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_wroth
@@ -12257,6 +12332,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_envious
 						character_event = { id = HF.21124 days = 12 } 
@@ -12357,6 +12436,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_proud
@@ -12459,6 +12542,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_ambitious
 						character_event = { id = HF.21124 days = 12 } 
@@ -12559,6 +12646,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_arbitrary
@@ -12661,6 +12752,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_brave
 						character_event = { id = HF.21124 days = 12 } 
@@ -12761,6 +12856,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_content
@@ -12863,6 +12962,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_craven
 						character_event = { id = HF.21124 days = 12 } 
@@ -12963,6 +13066,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_cruel
@@ -13076,6 +13183,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 						persistent_event_target:sway_target = { 
 							set_character_flag = flag_sway_turning_cynical
 							character_event = { id = HF.21124 days = 12 } 
@@ -13177,6 +13288,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_deceitful
@@ -13339,6 +13454,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_gregarious
 						character_event = { id = HF.21124 days = 12 } 
@@ -13439,6 +13558,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_honest
@@ -13541,6 +13664,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_just
 						character_event = { id = HF.21124 days = 12 } 
@@ -13642,6 +13769,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_paranoid
 						character_event = { id = HF.21124 days = 12 } 
@@ -13742,6 +13873,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_shy
@@ -13904,6 +14039,10 @@ character_event = {
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
 					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
+					}
 					persistent_event_target:sway_target = { 
 						set_character_flag = flag_sway_turning_trusting
 						character_event = { id = HF.21124 days = 12 } 
@@ -14024,6 +14163,10 @@ character_event = {
 					modifier = { 
 						factor = 1.5 
 						ROOT = { trait = grey_eminence }
+					}
+					modifier = {
+						factor = 1.75
+						ROOT = { trait = virtuoso_arbitrator }
 					}
 						persistent_event_target:sway_target = { 
 							set_character_flag = flag_sway_turning_zealous
@@ -17169,6 +17312,10 @@ character_event = {
 				factor = 1.5
 				trait = grey_eminence
 			}
+			modifier = {
+				factor = 1.75
+				trait = virtuoso_arbitrator
+			}
 			modifier = {  
 				factor = 1.5
 				trait = intricate_webweaver
@@ -17176,6 +17323,10 @@ character_event = {
 			modifier = {  
 				factor = 1.75
 				trait = elusive_shadow
+			}
+			modifier = {  
+				factor = 2
+				trait = conniving_puppetmaster
 			}
 			modifier = {  
 				factor = 1.75
@@ -17684,6 +17835,10 @@ character_event = {
 			modifier = {  
 				factor = 1.5
 				FROM = { trait = brilliant_strategist }
+			}
+			modifier = {  
+				factor = 1.5
+				FROM = { trait = exalted_warlord }
 			}
 			modifier = {  
 				factor = 1.5
