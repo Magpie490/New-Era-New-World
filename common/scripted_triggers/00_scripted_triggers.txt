@@ -958,6 +958,10 @@ has_crusade_trait_trigger = {
 		limit = { is_resurrectionist_religion_trigger = yes }
 		trait = resurrectionist_crusader
 	}
+	trigger_else_if = {
+		limit = { OR = { religion = crow_way religion = crow_way_reformed} }
+		trait = raven_child
+	}
 	trigger_else = {
 		religion_group = oceanic
 		trait = oceanic_crusader
@@ -4925,6 +4929,8 @@ is_accepting_of_homosexuality_trigger = {
 			religion = thelemic
 			religion = thelemic_reformed
 			religion = theosophy
+			religion = bracero
+			religion = moravian
 			religion = lutheran
 			religion = vagarna
 			religion = katerinist

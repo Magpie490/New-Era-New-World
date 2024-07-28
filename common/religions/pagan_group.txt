@@ -425,6 +425,48 @@ pagan_group = {
 		intermarry = blessing_way
 		intermarry = blessing_way_reformed
 	}
+	raven_tales_reformed = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 208
+		heresy_icon = 209
+		
+		color = { 191 0 0 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_RAVEN_TALES
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_RAVEN
+		
+		god_names = {
+			GOD_RAVEN GOD_THE_CLEVER_ONE GOD_RAVEN_HAIDA GOD_RAVEN_TSIMSHIAN GOD_RAVEN_WAKASHAN GOD_TIA GOD_PROSPERITY_WOMAN GOD_NATSILANE GOD_BLACKFISH GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			GOD_RAVEN GOD_GRAY_EAGLE GOD_TAXET THE_DARK_SPIRITS
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+		intermarry = oceanic
+		intermarry = aurorean
+		intermarry = aurorean_reformed
+		intermarry = waashat
+		intermarry = taalawsohu
+		intermarry = taalawsohu_reformed
+		intermarry = raven_tales
+
+	}
 	raven_tales = {
 		graphical_culture = mesoamericangfx #norsegfx
 
@@ -532,48 +574,6 @@ pagan_group = {
 		intermarry = gaian
 		intermarry = luddite
 	}
-	raven_tales_reformed = {
-		graphical_culture = mesoamericangfx #norsegfx
-
-		icon = 208
-		heresy_icon = 209
-		
-		color = { 191 0 0 }
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_RAVEN_TALES
-		priest_title = SHAMAN
-		piety_name = REVERENCE
-
-		high_god_name = GOD_RAVEN
-		
-		god_names = {
-			GOD_RAVEN GOD_THE_CLEVER_ONE GOD_RAVEN_HAIDA GOD_RAVEN_TSIMSHIAN GOD_RAVEN_WAKASHAN GOD_TIA GOD_PROSPERITY_WOMAN GOD_NATSILANE GOD_BLACKFISH GOD_THE_SPIRITS GOD_THE_ANCESTORS
-		}
-		evil_god_names = {
-			GOD_RAVEN GOD_GRAY_EAGLE GOD_TAXET THE_DARK_SPIRITS
-		}
-
-		allow_rivermovement = yes
-		allow_looting = yes
-		peace_prestige_loss = yes
-		raised_vassal_opinion_loss = no
-		max_consorts = 3
-		priests_can_marry = yes
-		can_demand_religious_conversion = no
-		
-		
-		religious_clothing_head = 15
-		religious_clothing_priest = 15
-		intermarry = peyotist
-		intermarry = oceanic
-		intermarry = aurorean
-		intermarry = aurorean_reformed
-		intermarry = waashat
-		intermarry = taalawsohu
-		intermarry = taalawsohu_reformed
-		intermarry = raven_tales
-
-	}
 	crow_way_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
 
@@ -602,6 +602,12 @@ pagan_group = {
 		max_consorts = 3
 		priests_can_marry = yes
 		can_demand_religious_conversion = no
+		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
@@ -641,6 +647,12 @@ pagan_group = {
 		max_consorts = 3
 		priests_can_marry = yes
 		can_demand_religious_conversion = no
+		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
 		
 		reformed = crow_way_reformed
 		
@@ -653,47 +665,6 @@ pagan_group = {
 		intermarry = peyotist
 		intermarry = crow_way
 		intermarry = oceanic
-	}
-	kakyosin = {
-		graphical_culture = mesoamericangfx #norsegfx
-
-		icon = 164
-		heresy_icon = 165
-		
-		color = { 80 80 114 }
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = BLACKFOOT_BOOK
-		priest_title = SHAMAN
-		piety_name = REVERENCE
-
-		high_god_name = GOD_GOD_BLACKFOOT
-		
-		god_names = {
-			GOD_GOD_BLACKFOOT GOD_APISTOTOKE GOD_SUN_BLACKFOOT GOD_MOON_BLACKFOOT GOD_THUNDER_BLACKFOOT GOD_CROW_BLACKFOOT GOD_SKY_BEINGS_BLACKFOOT
-		}
-		evil_god_names = {
-			GOD_THE_STAAU THE_DARK_SPIRITS
-		}
-
-		allow_rivermovement = yes
-		allow_looting = yes
-		peace_prestige_loss = yes
-		raised_vassal_opinion_loss = no
-		max_consorts = 3
-		priests_can_marry = yes
-		can_demand_religious_conversion = no
-		
-		reformed = kakyosin_reformed
-		
-		religious_clothing_head = 15
-		religious_clothing_priest = 15
-		intermarry = peyotist
-		intermarry = oceanic
-		intermarry = crow_way
-		intermarry = crow_way_reformed
-		intermarry = kakyosin_reformed
-		intermarry = sun_dance
-		intermarry = dreamer
 	}
 	kakyosin_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -723,6 +694,12 @@ pagan_group = {
 		max_consorts = 3
 		priests_can_marry = yes
 		can_demand_religious_conversion = no
+		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
 		
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
@@ -733,6 +710,95 @@ pagan_group = {
 		intermarry = kakyosin
 		intermarry = sun_dance
 		intermarry = waashat
+	}
+	kakyosin = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 164
+		heresy_icon = 165
+		
+		color = { 80 80 114 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = BLACKFOOT_BOOK
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_GOD_BLACKFOOT
+		
+		god_names = {
+			GOD_GOD_BLACKFOOT GOD_APISTOTOKE GOD_SUN_BLACKFOOT GOD_MOON_BLACKFOOT GOD_THUNDER_BLACKFOOT GOD_CROW_BLACKFOOT GOD_SKY_BEINGS_BLACKFOOT
+		}
+		evil_god_names = {
+			GOD_THE_STAAU THE_DARK_SPIRITS
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+
+		hard_to_convert = yes
+		dislike_tribal_organization = yes
+		
+		reformed = kakyosin_reformed
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = peyotist
+		intermarry = oceanic
+		intermarry = crow_way
+		intermarry = crow_way_reformed
+		intermarry = kakyosin_reformed
+		intermarry = sun_dance
+		intermarry = dreamer
+	}
+	blessing_way_reformed = {
+		graphical_culture = mesoamericangfx #norsegfx
+
+		icon = 55
+		heresy_icon = 56
+		
+		color = { 229 206 162 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_NAVAJO_CREATION_MYTH
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+
+		high_god_name = GOD_SUN_NAVAJO
+		
+		god_names = {
+			GOD_SUN_NAVAJO GOD_MOTHER_EARTH_NAVAJO GOD_CHANGING_WOMAN_NAVAJO GOD_HOLY_MAN_NAVAJO GOD_FIRST_MAN_NAVAJO GOD_FIRST_WOMAN_NAVAJO GOD_TALKING_GOD_NAVAJO GOD_WIND_NAVAJO 
+		}
+		evil_god_names = {
+			GOD_MONSTERS_NAVAJO GOD_COYOTE_NAVAJO GOD_FIRST_SCOLDER_NAVAJO GOD_SKINWALKER_NAVAJO
+		}
+
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+
+		intermarry = peyotist
+		intermarry = oceanic
+		intermarry = taalawsohu
+		intermarry = taalawsohu_reformed
+		intermarry = blue_star
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		intermarry = blessing_way
+		intermarry = zenith
 	}
 	blessing_way = {
 		graphical_culture = mesoamericangfx #norsegfx
@@ -776,48 +842,6 @@ pagan_group = {
 		intermarry = tengri_pagan
 		intermarry = tengri_pagan_reformed
 		intermarry = blessing_way_reformed
-		intermarry = zenith
-	}
-	blessing_way_reformed = {
-		graphical_culture = mesoamericangfx #norsegfx
-
-		icon = 55
-		heresy_icon = 56
-		
-		color = { 229 206 162 }
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_NAVAJO_CREATION_MYTH
-		priest_title = SHAMAN
-		piety_name = REVERENCE
-
-		high_god_name = GOD_SUN_NAVAJO
-		
-		god_names = {
-			GOD_SUN_NAVAJO GOD_MOTHER_EARTH_NAVAJO GOD_CHANGING_WOMAN_NAVAJO GOD_HOLY_MAN_NAVAJO GOD_FIRST_MAN_NAVAJO GOD_FIRST_WOMAN_NAVAJO GOD_TALKING_GOD_NAVAJO GOD_WIND_NAVAJO 
-		}
-		evil_god_names = {
-			GOD_MONSTERS_NAVAJO GOD_COYOTE_NAVAJO GOD_FIRST_SCOLDER_NAVAJO GOD_SKINWALKER_NAVAJO
-		}
-
-		allow_rivermovement = yes
-		allow_looting = yes
-		peace_prestige_loss = yes
-		raised_vassal_opinion_loss = no
-		max_consorts = 3
-		priests_can_marry = yes
-		can_demand_religious_conversion = no
-		
-		religious_clothing_head = 15
-		religious_clothing_priest = 15
-
-		intermarry = peyotist
-		intermarry = oceanic
-		intermarry = taalawsohu
-		intermarry = taalawsohu_reformed
-		intermarry = blue_star
-		intermarry = tengri_pagan
-		intermarry = tengri_pagan_reformed
-		intermarry = blessing_way
 		intermarry = zenith
 	}
 	zenith = {

@@ -1727,3 +1727,133 @@ k_omniaveritatis = {
 	
 	caliphate = yes
 }
+d_crow_way = {
+	color = { 42 44 47 }
+	color2 = { 210 210 210 }
+
+	capital = 1
+
+	title = "GREAT_SHAMAN"
+	title_female = "GREAT_SHAMAN"
+	short_name = yes 
+	
+	creation_requires_capital = no
+	
+	allow = {
+		religion = crow_way_reformed
+		num_of_holy_sites = 3
+		piety = 500
+	}
+
+	short_name = yes
+	
+	# Always exists
+	landless = yes	
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	
+	# Controls a religion
+	controls_religion = crow_way_reformed
+	
+	religion = crow_way_reformed
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_kakyosin = {
+	color = { 42 44 47 }
+	color2 = { 210 210 210 }
+
+	capital = 1
+
+	title = "GREAT_SHAMAN"
+	title_female = "GREAT_SHAMAN"
+	short_name = yes 
+	
+	creation_requires_capital = no
+	
+	allow = {
+		religion = kakyosin_reformed
+		num_of_holy_sites = 3
+		piety = 500
+	}
+
+	short_name = yes
+	
+	# Always exists
+	landless = yes	
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	
+	# Controls a religion
+	controls_religion = kakyosin_reformed
+	
+	religion = kakyosin_reformed
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+d_moravian = {
+	color = { 63 191 255 }
+	color2 = { 255 255 255 }
+
+	capital = 983
+
+	title = "PRESIDENT_COLUMB"
+	title_female = "PRESIDENT_COLUMB"
+	foa = "PRESIDENT_COLUMB_FOA"
+
+	landless = yes
+
+	religion = moravian
+	controls_religion = moravian
+
+	dynasty_title_names = no
+
+	primary_title = yes
+}
+d_uniate = {
+	color = { 166 89 255 }
+	color2 = { 255 255 255 }
+
+	capital = 584
+
+	title = "GRAND_PATRIARCH"
+	title_female = "GRAND_PATRIARCH"
+	foa = "GRAND_PATRIARCH_FOA"
+
+	landless = yes
+
+	religion = uniate
+	controls_religion = uniate
+
+	dynasty_title_names = no
+
+	primary_title = yes
+}
+e_custodite = {
+	color = { 0 48 143 }
+	color2 = { 0 0 0 }
+
+	capital = 2019
+
+	creation_requires_capital = no
+
+	allow = {
+		religion = custodite 
+		num_of_holy_sites = 3 
+		piety = 1000
+	}
+
+	short_name = yes
+
+	caliphate = yes
+
+	title = "COMMANDERINCHIEF"
+	title_female = "COMMANDERINCHIEF"
+	foa = "COMMANDER_FOA"
+
+	religion = custodite
+	controls_religion = custodite
+
+	primary_title = yes
+}
