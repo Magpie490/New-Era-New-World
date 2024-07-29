@@ -1439,6 +1439,7 @@ character_event = {
         		OR = {
         			martial = 15
         			trait = brilliant_strategist
+        			trait = exalted_warlord
         			is_smart_trigger = yes
         		}
         	}
@@ -1450,6 +1451,10 @@ character_event = {
         	modifier = {
         		factor = 2
         		trait = brilliant_strategist
+        	}
+        	modifier = {
+        		factor = 2.5
+        		trait = exalted_warlord
         	}
         	modifier = {
         		factor = 1.5
@@ -1501,6 +1506,8 @@ character_event = {
         			intrigue = 15
 					trait = elusive_shadow
 					trait = grey_eminence
+					trait = conniving_puppetmaster
+					trait = virtuoso_arbitrator
         			is_smart_trigger = yes
         		}
         	}
@@ -1514,6 +1521,8 @@ character_event = {
         		OR = {
         			trait = elusive_shadow
 					trait = grey_eminence
+					trait = conniving_puppetmaster
+					trait = virtuoso_arbitrator
         		}
         	}
         	modifier = {
@@ -1567,6 +1576,7 @@ character_event = {
         		OR = {
         			stewardship = 15
 					trait = midas_touched
+					trait = golden_sovereign
         			is_smart_trigger = yes
         		}
         	}
@@ -1577,7 +1587,8 @@ character_event = {
         	factor = 10
         	modifier = {
         		factor = 0.5
-				NOT = { trait = midas_touched } #Basically, to decrease the amount of cookbooks in the world. :D
+				NOR = { trait = midas_touched
+						trait = golden_sovereign } #Basically, to decrease the amount of cookbooks in the world. :D
         	}
         }
 

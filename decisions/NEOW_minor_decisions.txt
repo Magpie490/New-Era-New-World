@@ -49,6 +49,7 @@ decisions = {
 				trait = tough_soldier
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 			NOT = {
 				trait = mountain_terrain_leader
@@ -101,6 +102,7 @@ decisions = {
 			OR = {
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 		}
 		
@@ -126,6 +128,7 @@ decisions = {
 				trait = tough_soldier
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 			NOT = {
 				trait = desert_terrain_leader
@@ -168,6 +171,7 @@ decisions = {
 			OR = {
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 		}
 		
@@ -193,6 +197,7 @@ decisions = {
 				trait = tough_soldier
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 			NOT = {
 				trait = jungle_terrain_leader
@@ -241,6 +246,7 @@ decisions = {
 			OR = {
 				trait = skilled_tactician
 				trait = brilliant_strategist
+				trait = exalted_warlord
 			}
 		}
 		
@@ -996,6 +1002,7 @@ decisions = {
 				trait = flamboyant_schemer
 				trait = intricate_webweaver
 				trait = elusive_shadow
+				trait = conniving_puppetmaster
 				trait = schemer
 			}
 			intrigue = 15
@@ -1526,6 +1533,101 @@ decisions = {
 	}
 }
 targeted_decisions = {
+	claim_control_over_realm = {
+		ai_check_interval = 24
+		filter = realm
+		ai_target_filter = realm
+		
+		from_potential = { 
+			prestige = 500
+			is_incapable = no
+			is_adult = yes
+			prisoner = no
+			war = no
+			OR = {
+				trait = amateurish_plotter
+				trait = flamboyant_schemer
+				trait = intricate_webweaver
+				trait = elusive_shadow
+				trait = conniving_puppetmaster
+				trait = charismatic_negotiator
+				trait = grey_eminence
+				trait = virtuoso_arbitrator
+				trait = schemer
+				trait = deceitful
+				trait = proud
+				trait = ambitious
+			}
+			NOR = {
+				is_father = ROOT
+				is_father_real_father = ROOT
+				is_mother = ROOT
+				is_grandparent_of = ROOT
+				is_friend = ROOT
+			}
+		}
+		potential = {
+			OR = {
+				trait = incapable
+				trait = possessed
+				trait = infirm
+				trait = lunatic
+				trait = imbecile
+				trait = slow
+				trait = dwarf
+				trait = inbred
+				trait = decadent
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = kinslayer
+				trait = tribal_kinslayer
+				is_adult = no
+			}
+			de_facto_liege = FROM
+			has_regent = yes
+			higher_real_tier_than = COUNT
+		}
+		allow = {
+			has_regent = yes
+			FROM = {
+				prestige = 1000
+				is_adult = yes
+				prisoner = no
+				war = no
+				is_incapable = no
+				OR = {
+					trait = amateurish_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+					trait = conniving_puppetmaster
+					trait = grey_eminence
+					trait = virtuoso_arbitrator
+					trait = schemer
+					trait = deceitful
+				}
+				OR = {
+					trait = proud
+					trait = ambitious
+				}
+				NOR = {
+					trait = content
+					trait = humble
+					trait = imbecile
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				primary_title = {
+					add_claim = FROM
+				}
+			}
+			FROM = {
+				prestige = -1000
+			}
+		}
+	}
 	sell_gold = {
 		
 		ai_check_interval = 12
@@ -2402,6 +2504,7 @@ targeted_decisions = {
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									trait = exalted_warlord
 								}
 							}
 						}
@@ -2423,6 +2526,7 @@ targeted_decisions = {
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									trait = exalted_warlord
 								}
 							}
 							TECH_MAJESTY = 4
@@ -2444,6 +2548,7 @@ targeted_decisions = {
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									trait = exalted_warlord
 									martial = 10
 								}
 							}
@@ -2466,6 +2571,7 @@ targeted_decisions = {
 									trait = tough_soldier
 									trait = skilled_tactician
 									trait = brilliant_strategist
+									trait = exalted_warlord
 									martial = 10
 								}
 							}
