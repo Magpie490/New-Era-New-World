@@ -2015,4 +2015,39 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_madonnite_hof = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+
+		potential = {
+			religion = madonnite
+			primary_title = { tier = EMPEROR}
+			NOT = { has_global_flag = madonnite_hof_formed }
+		}
+		allow = {
+			piety = 1000
+			prestige = 500
+			num_of_holy_sites = 3
+		}
+		effect = {
+			set_global_flag = madonnite_hof_formed
+			activate_title = { title = k_madonnite }
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					trait = mastermind_theologian
+					dynasty = none
+					religion = madonnite
+					age = 47
+				}
+				new_character = {
+					k_madonnite = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+	}
 }
