@@ -1,27 +1,32 @@
-namespace = MPE
+namespace = OMNIMP
 
-#Vinlander
+#Canadensium
 character_event = {
-	id = MPE.2333
-	desc = "EVTDESCMPE.2333"
+	id = OMNIMP.1
+	desc = "EVTDESCOMNIMP.1"
 	picture = GFX_evt_emissary
 	
 	only_playable = yes
 	
 	trigger = {
 		OR = {
-			culture = doggerlander
+			culture_group = laurentine_anglo
+			culture_group = plains_canuck
+			culture_group = west_coaster
 		}
 		any_demesne_province = {
 			OR = {
-				culture = vinlander
+				culture = canadensium
 			}
 			any_province_holding = {
 				NOT = { holding_type = nomad }
 			}
 		}
-		NOT = { 
-			controls_religion = yes
+		OR = {
+			NOT = {
+				controls_religion = yes
+			}
+			religion = omniaveritatis
 		}
 	}
 	
@@ -29,7 +34,7 @@ character_event = {
 		months = 1300
 		modifier = {
 			factor = 0.5
-			culture = vinlander
+			culture = canadensium
 		}
 		modifier = {
 			factor = 0.85
@@ -102,51 +107,55 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.9
+			religion = omniaveritatis
+		}
 	}
 
 	option = {
-		name = EVTOPTAMPE.2333
+		name = EVTOPTAOMNIMP.11
 		random_demesne_province = {
 			limit = {
 				OR = {
-					culture = doggerlander
+					culture_group = laurentine_anglo
+					culture_group = plains_canuck
+					culture_group = west_coaster
 				}
 				any_province_holding = {
 					NOT = { holding_type = nomad }
 				}
 			}
-			culture = vinlander
+			culture = canadensium
 		}
 	}
 }
 
 character_event = {
-	id = MPE.2334
-	desc = "EVTDESCMPE.2334"
+	id = OMNIMP.11
+	desc = "EVTDESCOMNIMP.11"
 	picture = GFX_evt_stone_church
 	
 	only_playable = yes
 	
 	trigger = {
 		OR = {
-			culture = doggerlander
-		}
-		NOT = {
-			any_liege = {
-			OR = {
-			culture = newfindler
-			}
-			}
+			culture_group = laurentine_anglo
+			culture_group = plains_canuck
+			culture_group = west_coaster
 		}
 		any_demesne_province = {
-			culture = vinlander
+			culture = canadensium
 			is_capital = yes
 			any_province_holding = {
 				NOT = { holding_type = nomad }
 			}
 		}
-		NOT = { 
-			controls_religion = yes
+		OR = {
+			NOT = {
+				controls_religion = yes
+			}
+			religion = omniaveritatis
 		}
 	}
 	
@@ -219,57 +228,63 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.9
+			religion = omniaveritatis
+		}
 	}
 
 	option = {
-		name = EVTOPTAMPE.2334
-		culture = vinlander
+		name = EVTOPTAOMNIMP.11
+		culture = canadensium
 		prestige = -5
 	}
 
 	option = {
-		name = EVTOPTBMPE.2334
+		name = EVTOPTBOMNIMP.11
 		prestige = 5
 	}
 }
 
-#Vinlander
+#Canadensium
 character_event = {
-	id = MPE.2344
-	desc = "EVTDESCMPE.2344"
+	id = OMNIMP.111
+	desc = "EVTDESCOMNIMP.111"
 	picture = GFX_evt_throne_room
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTAMPE.2344"
-		culture = vinlander
+		name = "EVTOPTAOMNIMP.111"
+		culture = canadensium
 	}
 }
 
-#Marklander
+#Montanum
 character_event = {
-	id = MPE.2444
-	desc = "EVTDESCMPE.2444"
+	id = OMNIMP.2
+	desc = "EVTDESCOMNIMP.2"
 	picture = GFX_evt_emissary
 	
 	only_playable = yes
 	
 	trigger = {
 		OR = {
-			culture = doggerlander
-			culture = vinlander
+			culture_group = mountainer
 		}
 		any_demesne_province = {
 			OR = {
-				culture = marklander
+				culture = montanum
 			}
 			any_province_holding = {
 				NOT = { holding_type = nomad }
 			}
 		}
-		NOT = { 
-			controls_religion = yes
+		OR = {
+			NOT = {
+				controls_religion = yes
+			}
+			religion = omniaveritatis
 		}
 	}
 	
@@ -277,7 +292,7 @@ character_event = {
 		months = 1300
 		modifier = {
 			factor = 0.5
-			culture = marklander
+			culture = montanum
 		}
 		modifier = {
 			factor = 0.85
@@ -350,55 +365,51 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.9
+			religion = omniaveritatis
+		}
 	}
 
 	option = {
-		name = EVTOPTAMPE.2444
+		name = EVTOPTAOMNIMP.21
 		random_demesne_province = {
 			limit = {
 				OR = {
-					culture = doggerlander
-					culture = vinlander
+					culture_group = mountainer
 				}
 				any_province_holding = {
 					NOT = { holding_type = nomad }
 				}
 			}
-			culture = marklander
+			culture = montanum
 		}
 	}
 }
 
 character_event = {
-	id = MPE.2445
-	desc = "EVTDESCMPE.2445"
+	id = OMNIMP.21
+	desc = "EVTDESCOMNIMP.21"
 	picture = GFX_evt_stone_church
 	
 	only_playable = yes
 	
 	trigger = {
 		OR = {
-			culture = doggerlander
-			culture = vinlander
-		}
-		NOT = {
-			any_liege = {
-			OR = {
-			culture = nordien
-			culture = rivierois
-			culture = bucherons
-			}
-			}
+			culture_group = mountainer
 		}
 		any_demesne_province = {
-			culture = marklander
+			culture = montanum
 			is_capital = yes
 			any_province_holding = {
 				NOT = { holding_type = nomad }
 			}
 		}
-		NOT = { 
-			controls_religion = yes
+		OR = {
+			NOT = {
+				controls_religion = yes
+			}
+			religion = omniaveritatis
 		}
 	}
 	
@@ -471,30 +482,34 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.9
+			religion = omniaveritatis
+		}
 	}
 
 	option = {
-		name = EVTOPTAMPE.2445
-		culture = marklander
+		name = EVTOPTAOMNIMP.21
+		culture = montanum
 		prestige = -5
 	}
 
 	option = {
-		name = EVTOPTBMPE.2445
+		name = EVTOPTBOMNIMP.21
 		prestige = 5
 	}
 }
 
-#Marklander
+#montanum
 character_event = {
-	id = MPE.2455
-	desc = "EVTDESCMPE.2455"
+	id = OMNIMP.211
+	desc = "EVTDESCOMNIMP.211"
 	picture = GFX_evt_throne_room
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTAMPE.2455"
-		culture = marklander
+		name = "EVTOPTAOMNIMP.211"
+		culture = montanum
 	}
 }
