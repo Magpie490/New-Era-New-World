@@ -7225,7 +7225,7 @@ province_event = {
 	hide_window = yes	
 	
 	trigger = {
-		religion = thelemic
+		religion = bracero
 		owner = {
 			NOT = {
 				religion = bracero
@@ -7271,6 +7271,31 @@ province_event = {
 	}
 }
 province_event = {
+	id = cleanup.226
+	hide_window = yes	
+	
+	trigger = {
+		religion = rangerite
+		owner = {
+			NOT = {
+				religion = rangerite
+			}
+		}
+		NOT = {
+			has_province_modifier = rangerite_peasant_unrest
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		add_province_modifier = {
+			name = rangerite_peasant_unrest
+			duration = -1
+		}
+	}
+}
+province_event = {
 	id = cleanup.27
 	hide_window = yes	
 	
@@ -7308,6 +7333,26 @@ province_event = {
 	}
 	immediate={
 		remove_province_modifier = juggalo_peasant_unrest
+	}
+}
+province_event = {
+	id = cleanup.227
+	hide_window = yes	
+	
+	trigger = {
+		OR = {
+			owner = {
+				religion = rangerite
+			}
+			NOT = { religion = rangerite }
+		}
+		has_province_modifier = rangerite_peasant_unrest
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate={
+		remove_province_modifier = rangerite_peasant_unrest
 	}
 }
 province_event = {
