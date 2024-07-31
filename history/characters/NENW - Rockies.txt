@@ -350,6 +350,10 @@
 			has_dlc = "Holy Fury"
 		}
 	}
+	2130.1.1 = {
+		remove_trait = mastermind_theologian
+		add_trait = erudite_oracle
+	}
 	2200.1.1 = {
 		death = yes
 	}
@@ -577,12 +581,16 @@
 2910027 = {
 	name = "Nern"
 	dynasty = 3000816
-	culture = westsloper
+	culture = ny_asian
 	religion = zenith
+	trait = charismatic_negotiator
 	trait = socializer
 	trait = gregarious
+	trait = patient
+	trait = erudite
 	2285.1.1 = {
 		birth = yes
+		culture = westsloper
 	}
 	2320.1.1 = {
 		employer = 2910002
@@ -684,6 +692,7 @@
 			add_friend = 2910003
 			add_friend = 2910033
 		}
+		give_nickname = nick_the_cyclops
 	}
 	2666.1.1 = {
 		death = yes
@@ -699,7 +708,7 @@
 	trait = craven
 	trait = cynical
 	trait = erudite
-	trait = frail
+	trait = feeble
 	2301.1.1 = {
 		birth = yes
 		effect = {
@@ -721,15 +730,21 @@
 	dynasty = 3000827
 	culture = ny_asian
 	religion = mahayana
+	father = 2910045
 	trait = brilliant_strategist
 	trait = duelist
 	trait = proud
 	trait = wuxia_master
-	2284.1.1 = {
+	trait = stubborn
+	trait = honest
+	2301.1.1 = {
 		birth = yes
 	}
 	2320.1.1 = {
 		employer = 2910003
+		effect = {
+			add_rival = 2910045
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -854,6 +869,209 @@
 	}
 	2320.1.1 = {
 		employer = 2910014
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910041 = {
+	name = "Bo"
+	dynasty = 3000819
+	culture = westsloper
+	religion = zenith
+	trait = charismatic_negotiator
+	trait = patient
+	trait = bard_sibir
+	trait = content
+	trait = tall
+	trait = humble
+	trait = shy
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+		effect = {
+			add_artifact = record_1
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910042 = {
+	name = "Buffalo"
+	dynasty = 5129929
+	culture = westsloper
+	religion = gridiron
+	trait = brilliant_strategist
+	trait = wroth
+	trait = one_eyed
+	trait = arbitrary
+	trait = strong
+	trait = proud
+	trait = aggressive_leader
+	trait = stubborn
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910043 = {
+	name = "Clint"
+	dynasty = 3000821
+	culture = westsloper
+	religion = zenith
+	trait = charismatic_negotiator
+	trait = fair
+	trait = groomed
+	trait = arbitrary
+	trait = proud
+	trait = stubborn
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910044 = {
+	name = "Crisp"
+	dynasty = 3000822
+	culture = trinitean
+	religion = zenith
+	trait = tough_soldier
+	trait = homosexual
+	trait = kind
+	trait = patient
+	trait = humble
+	trait = duelist
+	2285.1.1 = {
+		birth = yes
+		culture = westsloper
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910045 = {
+	name = "Master"
+	dynasty = 3000827
+	culture = ny_asian
+	religion = mahayana
+	trait = brilliant_strategist
+	trait = duelist
+	trait = proud
+	trait = wuxia_grandmaster
+	trait = patient
+	2274.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910046 = {
+	name = "Reginald"
+	culture = westsloper
+	religion = zenith
+	trait = fotune_builder
+	trait = gregarious
+	2264.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910003
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910047 = {
+	name = "Fly"
+	dynasty = 3000874
+	culture = westsloper
+	religion = zenith
+	trait = thrifty_clerk
+	trait = uncouth
+	trait = envious
+	trait = proud
+	trait = shy
+	trait = stubborn
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910048 = {
+	name = "Rooster"
+	dynasty = 3000875
+	culture = westsloper
+	religion = zenith
+	trait = thrifty_clerk
+	trait = content
+	trait = shy
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910049 = {
+	name = "Ollie"
+	dynasty = 3000876
+	culture = westsloper
+	religion = zenith
+	trait = indulgent_wastrel
+	trait = content
+	trait = shy
+	trait = depressed
+	stewardship = 1 #failed in every business imaginable
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910050 = {
+	name = "Percy"
+	dynasty = 3000877
+	culture = westsloper
+	religion = zenith
+	trait = naive_appeaser
+	trait = content
+	trait = humble
+	trait = craven
+	trait = trusting
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
 	}
 	2666.1.1 = {
 		death = yes
