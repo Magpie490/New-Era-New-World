@@ -374,7 +374,7 @@ decisions = {
 
 	improve_education_trait = {
 		is_high_prio = yes
-		ai_check_interval = 56
+		ai_check_interval = 36
 		
 		potential = {
 			war = no
@@ -426,18 +426,23 @@ decisions = {
 				trait = fortune_builder
 				trait = intricate_webweaver
 				trait = scholarly_theologian
-			}
-			NOR = {
 				trait = grey_eminence
 				trait = brilliant_strategist
 				trait = midas_touched
 				trait = elusive_shadow
 				trait = mastermind_theologian
 			}
+			NOR = {
+				trait = exalted_warlord
+				trait = virtuoso_arbitrator
+				trait = golden_sovereign
+				trait = conniving_puppetmaster
+				trait = erudite_oracle
+			}
 		}
 		allow = {
-			prestige = 750
-			wealth = 500
+			prestige = 150
+			wealth = 250
 			OR = {
 				trait = quick
 				trait = genius
@@ -473,13 +478,88 @@ decisions = {
 			wealth = -500
 			random_list = {
 				50 = {
-					mult_modifier = {
-						factor = 1.25
-						OR = {
-							trait = genius
-							trait = quick
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = genius
+								trait = quick
+								trait = shrewd
+							}
 						}
-					}
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = misguided_warrior
+								trait = tough_soldier
+								trait = skilled_tactician
+								trait = brilliant_strategist
+							}
+							OR = {
+								trait = duelist
+								trait = hunter
+								trait = strategist
+							}
+						}
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = detached_priest
+								trait = martial_cleric
+								trait = scholarly_theologian
+								trait = mastermind_theologian
+							}
+							OR = {
+								trait = mystic
+								trait = scholar
+								trait = theologian	
+							}
+						}
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = indulgent_wastrel
+								trait = thrifty_clerk
+								trait = fortune_builder
+								trait = midas_touched
+							}
+							OR = {
+								trait = administrator
+								trait = architect
+								trait = gardener
+							}
+						}
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = naive_appeaser
+								trait = underhanded_rogue
+								trait = charismatic_negotiator
+								trait = grey_eminence
+							}
+							OR = {
+								trait = gamer	
+								trait = socializer
+								trait = hedonist
+								trait = poet
+								trait = bard_sibir
+								trait = baul
+							}
+						}
+						mult_modifier = {
+							factor = 1.25
+							OR = {
+								trait = amateurish_plotter
+								trait = flamboyant_schemer
+								trait = intricate_webweaver
+								trait = elusive_shadow
+							}
+							OR = {
+								trait = impaler
+								trait = schemer
+								trait = seducer
+								trait = seductress
+							}
+						}
 					long_character_event = { id = WFT.11 days = 270 random = 90 }
 				}
 				50 = {
@@ -609,8 +689,8 @@ decisions = {
 						religion = shaivasiddhanta
 					}
 				}
-				religion = rastafari
 				religion = osvicenism
+				religion = rastafari
 				religion = bahai
 				religion = tquaker
 				religion = adventist
@@ -658,7 +738,43 @@ decisions = {
 			}
 		}
 	}
-
+	
+	dragon_shapeshift = {
+		is_high_prio = yes
+		ai_check_interval = 72
+		
+		potential = {
+			war = no
+			prisoner = no
+			is_incapable = no
+			piety = 100
+			culture = dragon_culture
+			age = 16
+		}
+		allow = {
+			piety = 300
+		}
+		effect = {
+			piety = -300
+			if = {
+				limit = {
+					ROOT = {
+						graphical_culture = dragongfx
+					}
+				}
+				set_graphical_culture = han
+			}
+			else = {
+				set_graphical_culture = dragon_culture
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.85
+			}
+		}
+	}
 	go_questing = {
 		is_high_prio = yes
 		ai_check_interval = 18
@@ -681,6 +797,7 @@ decisions = {
 				religion = loyalist
 				religion = delver_reformed
 				religion = delver
+				religion = rangerite
 			}
 			age = 17
 		}
@@ -949,14 +1066,17 @@ decisions = {
 		allow = {
 			scaled_wealth = 2
 			OR = {
-				realm_diplomacy = 60
+				realm_diplomacy = 55
 				AND = {
-					trait = grey_eminence
-					realm_diplomacy = 55
+					OR = {
+						trait = grey_eminence
+						trait = virtuoso_arbitrator
+					}
+					realm_diplomacy = 50
 				}
 				AND = {
 					trait = socializer
-					realm_diplomacy = 55
+					realm_diplomacy = 50
 				}
 			}
 			ruled_years = 5
@@ -1000,14 +1120,17 @@ decisions = {
 		allow = {
 			scaled_wealth = 2
 			OR = {
-				realm_martial = 60
+				realm_martial = 55
 				AND = {
-					trait = brilliant_strategist
-					realm_martial = 55
+					OR = {
+						trait = brilliant_strategist
+						trait = exalted_warlord
+					}
+					realm_martial = 50
 				}
 				AND = {
 					trait = strategist
-					realm_martial = 55
+					realm_martial = 50
 				}
 			}
 			ruled_years = 5
@@ -1053,14 +1176,17 @@ decisions = {
 		allow = {
 			scaled_wealth = 2
 			OR = {
-				realm_stewardship = 60
+				realm_stewardship = 55
 				AND = {
-					trait = midas_touched
-					realm_stewardship = 55
+					OR = {
+						trait = golden_sovereign
+						trait = midas_touched
+					}
+					realm_stewardship = 50
 				}
 				AND = {
 					trait = administrator
-					realm_stewardship = 55
+					realm_stewardship = 50
 				}
 			}
 			ruled_years = 5
@@ -1106,14 +1232,17 @@ decisions = {
 		allow = {
 			scaled_wealth = 2
 			OR = {
-				realm_intrigue = 60
+				realm_intrigue = 55
 				AND = {
-					trait = elusive_shadow
-					realm_intrigue = 55
+					OR = {
+						trait = elusive_shadow
+						trait = conniving_puppetmaster
+					}
+					realm_intrigue = 50
 				}
 				AND = {
 					trait = schemer
-					realm_intrigue = 55
+					realm_intrigue = 50
 				}
 			}
 			ruled_years = 5
@@ -1161,12 +1290,15 @@ decisions = {
 			OR = {
 				realm_learning = 60
 				AND = {
-					trait = mastermind_theologian
-					realm_learning = 55
+					OR = {
+						trait = mastermind_theologian
+						trait = erudite_oracle
+					}
+					realm_learning = 50
 				}
 				AND = {
 					trait = scholar
-					realm_learning = 55
+					realm_learning = 50
 				}
 			}
 			ruled_years = 5
@@ -1206,7 +1338,10 @@ decisions = {
 			OR = {
 				realm_diplomacy = 40
 				AND = {
-					trait = grey_eminence
+					OR = {
+						trait = grey_eminence
+						trait = virtuoso_arbitrator
+					}
 					realm_diplomacy = 35
 				}
 				AND = {
@@ -1218,7 +1353,10 @@ decisions = {
 					OR = {
 						realm_diplomacy = 35
 						AND = {
-							trait = grey_eminence
+							OR = {
+								trait = grey_eminence
+								trait = virtuoso_arbitrator
+							}
 							realm_diplomacy = 30
 						}
 						AND = {
@@ -1266,7 +1404,10 @@ decisions = {
 			OR = {
 				realm_martial = 40
 				AND = {
-					trait = brilliant_strategist
+					OR = {
+						trait = brilliant_strategist
+						trait = exalted_warlord
+					}
 					realm_martial = 35
 				}
 				AND = {
@@ -1278,7 +1419,10 @@ decisions = {
 					OR = {
 						realm_martial = 35
 						AND = {
-							trait = brilliant_strategist
+							OR = {
+								trait = brilliant_strategist
+								trait = exalted_warlord
+							}
 							realm_martial = 30
 						}
 						AND = {
@@ -1327,7 +1471,10 @@ decisions = {
 			OR = {
 				realm_stewardship = 40
 				AND = {
-					trait = midas_touched
+					OR = {
+						trait = golden_sovereign
+						trait = midas_touched
+					}
 					realm_stewardship = 35
 				}
 				AND = {
@@ -1339,7 +1486,10 @@ decisions = {
 					OR = {
 						realm_stewardship = 35
 						AND = {
-							trait = midas_touched
+							OR = {
+								trait = golden_sovereign
+								trait = midas_touched
+							}
 							realm_stewardship = 30
 						}
 						AND = {
@@ -1389,7 +1539,10 @@ decisions = {
 			OR = {
 				realm_intrigue = 40
 				AND = {
-					trait = elusive_shadow
+					OR = {
+						trait = elusive_shadow
+						trait = conniving_puppetmaster
+					}
 					realm_intrigue = 35
 				}
 				AND = {
@@ -1401,7 +1554,10 @@ decisions = {
 					OR = {
 						realm_intrigue = 35
 						AND = {
-							trait = elusive_shadow
+							OR = {
+								trait = elusive_shadow
+								trait = conniving_puppetmaster
+							}
 							realm_intrigue = 30
 						}
 						AND = {
@@ -1451,7 +1607,10 @@ decisions = {
 			OR = {
 				realm_learning = 40
 				AND = {
-					trait = mastermind_theologian
+					OR = {
+						trait = mastermind_theologian
+						trait = erudite_oracle
+					}
 					realm_learning = 35
 				}
 				AND = {
@@ -1463,7 +1622,10 @@ decisions = {
 					OR = {
 						realm_learning = 35
 						AND = {
-							trait = mastermind_theologian
+							OR = {
+								trait = mastermind_theologian
+								trait = erudite_oracle
+							}
 							realm_learning = 30
 						}
 						AND = {
@@ -6700,10 +6862,12 @@ decisions = {
 			ai = yes
 			wealth = 200
 			OR = {
+				trait = golden_sovereign
 				trait = midas_touched
 				trait = fortune_builder
 				trait = thrifty_clerk
 				trait = mastermind_theologian
+				trait = erudite_oracle
 				trait = scholarly_theologian
 				trait = martial_cleric
 				trait = mystic

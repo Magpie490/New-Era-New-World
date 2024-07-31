@@ -1,5 +1,4 @@
 namespace = MPE
-namespace = OMNIMP
 
 #Vinlander
 character_event = {
@@ -39,6 +38,7 @@ character_event = {
 				trait = underhanded_rogue
 				trait = charismatic_negotiator
 				trait = grey_eminence
+				trait = virtuoso_arbitrator
 			}
 		}
 		modifier = {
@@ -88,6 +88,10 @@ character_event = {
 		modifier = {
 			factor = 2.0
 			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { has_law = tolerance_laws_2 }
 		}
 		modifier = {
 			factor = 0.65
@@ -163,6 +167,7 @@ character_event = {
 				trait = underhanded_rogue
 				trait = charismatic_negotiator
 				trait = grey_eminence
+				trait = virtuoso_arbitrator
 			}
 		}
 		modifier = {
@@ -204,6 +209,10 @@ character_event = {
 		modifier = {
 			factor = 2.0
 			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { has_law = tolerance_laws_2 }
 		}
 		modifier = {
 			factor = 0.65
@@ -285,6 +294,7 @@ character_event = {
 				trait = underhanded_rogue
 				trait = charismatic_negotiator
 				trait = grey_eminence
+				trait = virtuoso_arbitrator
 			}
 		}
 		modifier = {
@@ -334,6 +344,10 @@ character_event = {
 		modifier = {
 			factor = 2.0
 			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { has_law = tolerance_laws_2 }
 		}
 		modifier = {
 			factor = 0.65
@@ -413,6 +427,7 @@ character_event = {
 				trait = underhanded_rogue
 				trait = charismatic_negotiator
 				trait = grey_eminence
+				trait = virtuoso_arbitrator
 			}
 		}
 		modifier = {
@@ -454,6 +469,10 @@ character_event = {
 		modifier = {
 			factor = 2.0
 			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { has_law = tolerance_laws_2 }
 		}
 		modifier = {
 			factor = 0.65
@@ -493,516 +512,5 @@ character_event = {
 	option = {
 		name = "EVTOPTAMPE.2455"
 		culture = marklander
-	}
-}
-
-#omniaveritatis melting pots
-#Canadensium
-character_event = {
-	id = OMNIMP.1
-	desc = "EVTDESCOMNIMP.1"
-	picture = GFX_evt_emissary
-	
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			culture_group = laurentine_anglo
-			culture_group = plains_canuck
-			culture_group = west_coaster
-		}
-		any_demesne_province = {
-			OR = {
-				culture = canadensium
-			}
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
-		}
-		OR = {
-			NOT = {
-				controls_religion = yes
-			}
-			religion = omniaveritatis
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1300
-		modifier = {
-			factor = 0.5
-			culture = canadensium
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = naive_appeaser
-				trait = underhanded_rogue
-				trait = charismatic_negotiator
-				trait = grey_eminence
-			}
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = peasant_leader
-				trait = peasant_noble
-				trait = lowborn
-			}
-		}
-		modifier = {
-			factor = 0.85
-			trait = socializer
-		}
-		modifier = {
-			factor = 0.85
-			trait = hedonist
-		}
-		modifier = {
-			factor = 0.9
-			trait = poet
-		}
-		modifier = {
-			factor = 0.9
-			trait = kind
-		}
-		modifier = {
-			factor = 0.9
-			trait = humble
-		}
-		modifier = {
-			factor = 0.8
-			NOT = { learning = 7 }
-		}
-		modifier = {
-			factor = 0.85
-			NOT = { learning = 15 }
-		}
-		modifier = {
-			factor = 0.75
-			learning = 15
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
-		}
-		modifier = {
-			factor = 0.65
-			OR = {
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots
-				}
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots_and_slower_normal
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			religion = omniaveritatis
-		}
-	}
-
-	option = {
-		name = EVTOPTAOMNIMP.11
-		random_demesne_province = {
-			limit = {
-				OR = {
-					culture_group = laurentine_anglo
-					culture_group = plains_canuck
-					culture_group = west_coaster
-				}
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
-			}
-			culture = canadensium
-		}
-	}
-}
-
-character_event = {
-	id = OMNIMP.11
-	desc = "EVTDESCOMNIMP.11"
-	picture = GFX_evt_stone_church
-	
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			culture_group = laurentine_anglo
-			culture_group = plains_canuck
-			culture_group = west_coaster
-		}
-		any_demesne_province = {
-			culture = canadensium
-			is_capital = yes
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
-		}
-		OR = {
-			NOT = {
-				controls_religion = yes
-			}
-			religion = omniaveritatis
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 150
-		modifier = {
-			factor = 0.75
-			learning = 7
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = naive_appeaser
-				trait = underhanded_rogue
-				trait = charismatic_negotiator
-				trait = grey_eminence
-			}
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = peasant_leader
-				trait = peasant_noble
-				trait = lowborn
-			}
-		}
-		modifier = {
-			factor = 0.85
-			trait = socializer
-		}
-		modifier = {
-			factor = 0.85
-			trait = hedonist
-		}
-		modifier = {
-			factor = 0.9
-			trait = poet
-		}
-		modifier = {
-			factor = 0.9
-			trait = kind
-		}
-		modifier = {
-			factor = 0.9
-			trait = humble
-		}
-		modifier = {
-			factor = 0.75
-			learning = 15
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
-		}
-		modifier = {
-			factor = 0.65
-			OR = {
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots
-				}
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots_and_slower_normal
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			religion = omniaveritatis
-		}
-	}
-
-	option = {
-		name = EVTOPTAOMNIMP.11
-		culture = canadensium
-		prestige = -5
-	}
-
-	option = {
-		name = EVTOPTBOMNIMP.11
-		prestige = 5
-	}
-}
-
-#Canadensium
-character_event = {
-	id = OMNIMP.111
-	desc = "EVTDESCOMNIMP.111"
-	picture = GFX_evt_throne_room
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTAOMNIMP.111"
-		culture = canadensium
-	}
-}
-
-#Montanum
-character_event = {
-	id = OMNIMP.2
-	desc = "EVTDESCOMNIMP.2"
-	picture = GFX_evt_emissary
-	
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			culture_group = mountainer
-		}
-		any_demesne_province = {
-			OR = {
-				culture = montanum
-			}
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
-		}
-		OR = {
-			NOT = {
-				controls_religion = yes
-			}
-			religion = omniaveritatis
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1300
-		modifier = {
-			factor = 0.5
-			culture = montanum
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = naive_appeaser
-				trait = underhanded_rogue
-				trait = charismatic_negotiator
-				trait = grey_eminence
-			}
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = peasant_leader
-				trait = peasant_noble
-				trait = lowborn
-			}
-		}
-		modifier = {
-			factor = 0.85
-			trait = socializer
-		}
-		modifier = {
-			factor = 0.85
-			trait = hedonist
-		}
-		modifier = {
-			factor = 0.9
-			trait = poet
-		}
-		modifier = {
-			factor = 0.9
-			trait = kind
-		}
-		modifier = {
-			factor = 0.9
-			trait = humble
-		}
-		modifier = {
-			factor = 0.8
-			NOT = { learning = 7 }
-		}
-		modifier = {
-			factor = 0.85
-			NOT = { learning = 15 }
-		}
-		modifier = {
-			factor = 0.75
-			learning = 15
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
-		}
-		modifier = {
-			factor = 0.65
-			OR = {
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots
-				}
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots_and_slower_normal
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			religion = omniaveritatis
-		}
-	}
-
-	option = {
-		name = EVTOPTAOMNIMP.21
-		random_demesne_province = {
-			limit = {
-				OR = {
-					culture_group = mountainer
-				}
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
-			}
-			culture = montanum
-		}
-	}
-}
-
-character_event = {
-	id = OMNIMP.21
-	desc = "EVTDESCOMNIMP.21"
-	picture = GFX_evt_stone_church
-	
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			culture_group = mountainer
-		}
-		any_demesne_province = {
-			culture = montanum
-			is_capital = yes
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
-		}
-		OR = {
-			NOT = {
-				controls_religion = yes
-			}
-			religion = omniaveritatis
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 150
-		modifier = {
-			factor = 0.75
-			learning = 7
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = naive_appeaser
-				trait = underhanded_rogue
-				trait = charismatic_negotiator
-				trait = grey_eminence
-			}
-		}
-		modifier = {
-			factor = 0.85
-			OR = {
-				trait = peasant_leader
-				trait = peasant_noble
-				trait = lowborn
-			}
-		}
-		modifier = {
-			factor = 0.85
-			trait = socializer
-		}
-		modifier = {
-			factor = 0.85
-			trait = hedonist
-		}
-		modifier = {
-			factor = 0.9
-			trait = poet
-		}
-		modifier = {
-			factor = 0.9
-			trait = kind
-		}
-		modifier = {
-			factor = 0.9
-			trait = humble
-		}
-		modifier = {
-			factor = 0.75
-			learning = 15
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
-		}
-		modifier = {
-			factor = 0.65
-			OR = {
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots
-				}
-				has_game_rule = {
-					name = culture_conversion
-					value = faster_melting_pots_and_slower_normal
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			religion = omniaveritatis
-		}
-	}
-
-	option = {
-		name = EVTOPTAOMNIMP.21
-		culture = montanum
-		prestige = -5
-	}
-
-	option = {
-		name = EVTOPTBOMNIMP.21
-		prestige = 5
-	}
-}
-
-#montanum
-character_event = {
-	id = OMNIMP.211
-	desc = "EVTDESCOMNIMP.211"
-	picture = GFX_evt_throne_room
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTAOMNIMP.211"
-		culture = montanum
 	}
 }

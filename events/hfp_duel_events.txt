@@ -302,6 +302,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {
@@ -597,6 +598,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {
@@ -939,6 +941,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {
@@ -1084,6 +1087,7 @@ character_event = {
                 OR = {
                     intrigue = 15
                     trait = elusive_shadow
+                    trait = conniving_puppetmaster
                     trait = schemer
                 }
             }
@@ -1093,6 +1097,11 @@ character_event = {
                         has_bottom_tier_education_trait_trigger = no
                         FROM = { has_bottom_tier_education_trait_trigger = yes }
                         factor = 2
+                    }
+					modifier = {
+                        trait = conniving_puppetmaster
+                        FROM = { NOT = { trait = conniving_puppetmaster } }
+                        factor = 2.5
                     }
                     modifier = {
                         trait = elusive_shadow
@@ -1126,6 +1135,11 @@ character_event = {
                         has_bottom_tier_education_trait_trigger = yes
                         FROM = { has_bottom_tier_education_trait_trigger = no }
                         factor = 2
+                    }
+					modifier = {
+                        NOT = { trait = conniving_puppetmaster }
+                        FROM = { trait = conniving_puppetmaster }
+                        factor = 2.5
                     }
                     modifier = {
                         NOT = { trait = elusive_shadow }
@@ -1191,6 +1205,7 @@ character_event = {
         trigger = {
             OR = {
                 intrigue = 15
+                trait = conniving_puppetmaster
                 trait = elusive_shadow
                 trait = schemer
             }
@@ -1657,6 +1672,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {
@@ -2021,6 +2037,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {
@@ -3444,6 +3461,7 @@ character_event = {
 					religion = loyalist
 					religion = delver_reformed
 					religion = delver
+					religion = rangerite
 				}
 			}
 			if = {

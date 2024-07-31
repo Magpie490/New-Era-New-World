@@ -308,8 +308,15 @@
 	trait = patient
 	trait = brave
 	trait = berserker
+	trait = duelist
 	2302.10.2 = {
 		birth = yes
+	}
+	2317.4.15 = {
+		effect={
+			add_friend=2910039
+			add_friend=2910040
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -587,8 +594,9 @@
 	dynasty = 3000817
 	culture = westsloper
 	religion = zenith
-	trait = socializer
 	trait = gregarious
+	trait = content
+	trait = hunter
 	2285.1.1 = {
 		birth = yes
 	}
@@ -600,13 +608,14 @@
 	}
 }
 2910029 = {
-	name = "Olan"
-	dynasty = 3000817
+	name = "Birdie"
+	dynasty = 3000818
 	culture = westsloper
 	religion = zenith
-	trait = gregarious
+	trait = kind
 	trait = content
-	trait = hunter
+	trait = drunkard
+	trait = depressed
 	2285.1.1 = {
 		birth = yes
 	}
@@ -804,6 +813,47 @@
 		birth = yes
 	}
 	2290.1.1 = {
+		death = yes
+	}
+}
+2910039 = {
+	name = "Sanford"
+	culture = battleborn
+	religion = trinitarian
+	trait = tough_soldier
+	trait = proud
+	trait = patient
+	trait = brave
+	2302.10.2 = {
+		birth = yes
+	}
+	2317.4.15 = {
+		effect={
+			add_friend=2910040
+		}
+	}
+	2320.1.1 = {
+		employer = 2910014
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910040 = {
+	name = "Deimos"
+	culture = kolorantoi
+	religion = trinitarian
+	trait = flamboyant_schemer
+	trait = gregarious
+	trait = arbitrary
+	trait = brave
+	2302.10.2 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910014
+	}
+	2666.1.1 = {
 		death = yes
 	}
 }

@@ -325,11 +325,17 @@ spriteTypes = {
 				}
 				3 = {
 					portrait_society_rank = 4
-					portrait_culture_group = byzantine
+					OR = {
+						portrait_culture_group = byzantine
+						portrait_culture_group = amerohellene
+					}
 				}
 				4 = {
 					portrait_society_rank = 4
-					NOT = { portrait_culture_group = byzantine }
+					NOR = {
+						portrait_culture_group = byzantine
+						portrait_culture_group = amerohellene
+					}
 				}
 			}
 			5 = {
@@ -344,11 +350,16 @@ spriteTypes = {
 				}
 				3 = {
 					portrait_society_rank = 4
-					NOT = { portrait_culture_group = east_slavic }
-				}
+					NOR = {
+						portrait_culture_group = east_slavic
+						portrait_culture = doukhobors
+					}
 				4 = {
 					portrait_society_rank = 4
-					portrait_culture_group = east_slavic
+					OR = {
+						portrait_culture_group = east_slavic
+						portrait_culture = doukhobors
+					}
 				}
 			}
 		}
@@ -417,11 +428,17 @@ spriteTypes = {
 				}
 				3 = {
 					portrait_society_rank = 4
-					portrait_culture_group = byzantine
+					OR = {
+						portrait_culture_group = byzantine
+						portrait_culture_group = amerohellene
+					}
 				}
 				4 = {
 					portrait_society_rank = 4
-					NOT = { portrait_culture_group = byzantine }
+					NOR = { 
+						portrait_culture_group = byzantine
+						portrait_culture_group = amerohellene
+					}
 				}
 			}
 			5 = {
@@ -436,11 +453,17 @@ spriteTypes = {
 				}
 				3 = {
 					portrait_society_rank = 4
-					NOT = { portrait_culture_group = east_slavic }
+					NOR = {
+						portrait_culture_group = east_slavic
+						portrait_culture = doukhobors
+					}
 				}
 				4 = {
 					portrait_society_rank = 4
-					portrait_culture_group = east_slavic
+					OR = {
+						portrait_culture_group = east_slavic
+						portrait_culture = doukhobors
+					}
 				}
 			}
 		}
@@ -1569,6 +1592,37 @@ spriteTypes = {
 						portrait_culture_group = amero_lusophone
 						portrait_culture_group = amero_hispanophone
 						portrait_culture_group = alpinian
+						
+						portrait_culture_group = anglo_mississippian
+						portrait_culture_group = appalachian_group
+						portrait_culture_group = yankee
+						portrait_culture_group = francomerican
+						portrait_culture_group = west_texan
+						portrait_culture_group = east_texan
+						portrait_culture_group = chicano
+						portrait_culture_group = north_mexican
+						portrait_culture_group = mexicano
+						portrait_culture_group = laurentine_anglo
+						portrait_culture_group = franco_canadian
+						portrait_culture_group = plains_canuck
+						portrait_culture_group = mountainer
+						portrait_culture_group = neo-latin
+						portrait_culture_group = cascadian
+						portrait_culture_group = californian
+						portrait_culture_group = californio_group
+						portrait_culture_group = great_basin
+						portrait_culture_group = plainslander
+						portrait_culture_group = lakeman
+						portrait_culture_group = southerner
+						portrait_culture_group = west_coaster
+						portrait_culture_group = euro_hispanophone
+						portrait_culture_group = anglo_carribean
+						portrait_culture_group = franco_carribean
+						portrait_culture_group = caribeno
+						portrait_culture_group = amero_goidelic
+						portrait_culture_group = eastern_amero_hispanophone
+						portrait_culture_group = amerogerman
+						portrait_culture_group = rustman
 					}
 				}
 				1 = { # Nordic
@@ -1578,6 +1632,8 @@ spriteTypes = {
 						portrait_culture_group = nord
 						portrait_culture_group = samoyedic
 						portrait_culture_group = anishinaabe
+						portrait_culture_group = amero_nordic
+						portrait_culture_group = amero_finno_ugric
 					}
 				}
 				2 = { # Baltic/Slavic
@@ -1589,6 +1645,8 @@ spriteTypes = {
 						portrait_culture_group = central_slavic
 						portrait_culture_group = yenisean
 						portrait_culture_group = far_east_slavic
+						portrait_culture_group = amero_slavic
+						portrait_culture_group = amero_baltic
 					}
 				}
 				3 = { # Muslim
@@ -1608,6 +1666,10 @@ spriteTypes = {
 						portrait_culture_group = abbala_arabic
 						portrait_culture_group = berber
 						portrait_culture_group = oghur_turkic
+						portrait_culture_group = amero_iranic
+						portrait_culture_group = amero_turkic
+						portrait_culture_group = amero_hebraic
+						portrait_culture_group = amero_arabic
 					}
 				}
 				4 = { # Indian
@@ -1631,6 +1693,9 @@ spriteTypes = {
 						portrait_culture_group = far_west_indo_aryan_group
 						portrait_culture_group = dardic
 						portrait_culture_group = japan_group
+						portrait_culture_group = amero_japonic
+						portrait_culture_group = indo_canadian_group
+						portrait_culture_group = indo_american_group
 					}
 				}
 				5 = { # Central Asian
@@ -1658,6 +1723,7 @@ spriteTypes = {
 						portrait_culture_group = cushitic
 						portrait_culture_group = nilotic
 						portrait_culture_group = amharaic
+						portrait_culture_group = amero_cushitic
 					}
 				}
 				8 = { # Byzantine
@@ -1697,6 +1763,37 @@ spriteTypes = {
 						portrait_culture_group = amero_lusophone
 						portrait_culture_group = amero_hispanophone
 						portrait_culture_group = alpinian
+						
+						portrait_culture_group = anglo_mississippian
+						portrait_culture_group = appalachian_group
+						portrait_culture_group = yankee
+						portrait_culture_group = francomerican
+						portrait_culture_group = west_texan
+						portrait_culture_group = east_texan
+						portrait_culture_group = chicano
+						portrait_culture_group = north_mexican
+						portrait_culture_group = mexicano
+						portrait_culture_group = laurentine_anglo
+						portrait_culture_group = franco_canadian
+						portrait_culture_group = plains_canuck
+						portrait_culture_group = mountainer
+						portrait_culture_group = neo-latin
+						portrait_culture_group = cascadian
+						portrait_culture_group = californian
+						portrait_culture_group = californio_group
+						portrait_culture_group = great_basin
+						portrait_culture_group = plainslander
+						portrait_culture_group = lakeman
+						portrait_culture_group = southerner
+						portrait_culture_group = west_coaster
+						portrait_culture_group = euro_hispanophone
+						portrait_culture_group = anglo_carribean
+						portrait_culture_group = franco_carribean
+						portrait_culture_group = caribeno
+						portrait_culture_group = amero_goidelic
+						portrait_culture_group = eastern_amero_hispanophone
+						portrait_culture_group = amerogerman
+						portrait_culture_group = rustman
 					}
 				}
 				1 = { # Nordic
@@ -1706,6 +1803,8 @@ spriteTypes = {
 						portrait_culture_group = nord
 						portrait_culture_group = samoyedic
 						portrait_culture_group = anishinaabe
+						portrait_culture_group = amero_nordic
+						portrait_culture_group = amero_finno_ugric
 					}					
 				}
 				2 = { # Baltic/Slavic
@@ -1717,6 +1816,8 @@ spriteTypes = {
 						portrait_culture_group = central_slavic
 						portrait_culture_group = yenisean
 						portrait_culture_group = far_east_slavic
+						portrait_culture_group = amero_slavic
+						portrait_culture_group = amero_baltic
 					}
 				}
 				3 = { # Muslim
@@ -1736,6 +1837,10 @@ spriteTypes = {
 						portrait_culture_group = abbala_arabic
 						portrait_culture_group = berber
 						portrait_culture_group = oghur_turkic
+						portrait_culture_group = amero_iranic
+						portrait_culture_group = amero_turkic
+						portrait_culture_group = amero_hebraic
+						portrait_culture_group = amero_arabic
 					}
 				}
 				4 = { # Indian
@@ -1759,6 +1864,9 @@ spriteTypes = {
 						portrait_culture_group = far_west_indo_aryan_group
 						portrait_culture_group = dardic
 						portrait_culture_group = japan_group
+						portrait_culture_group = amero_japonic
+						portrait_culture_group = indo_canadian_group
+						portrait_culture_group = indo_american_group
 					}
 				}
 				5 = { # Central Asian
@@ -1786,6 +1894,7 @@ spriteTypes = {
 						portrait_culture_group = cushitic
 						portrait_culture_group = nilotic
 						portrait_culture_group = amharaic
+						portrait_culture_group = amero_cushitic
 					}
 				}
 				8 = { # Byzantine
@@ -1873,6 +1982,8 @@ spriteTypes = {
 						portrait_culture_group = central_slavic
 						portrait_culture_group = yenisean
 						portrait_culture_group = far_east_slavic
+						portrait_culture_group = amero_slavic
+						portrait_culture_group = amero_baltic
 						
 						portrait_culture_group = altaic
 						portrait_culture_group = arabic
@@ -1889,6 +2000,10 @@ spriteTypes = {
 						portrait_culture_group = abbala_arabic
 						portrait_culture_group = berber
 						portrait_culture_group = oghur_turkic
+						portrait_culture_group = amero_iranic
+						portrait_culture_group = amero_turkic
+						portrait_culture_group = amero_hebraic
+						portrait_culture_group = amero_arabic
 						
 						portrait_culture_group = byzantine
 						portrait_culture_group = caucasian
@@ -1925,6 +2040,37 @@ spriteTypes = {
 						portrait_culture_group = amero_lusophone
 						portrait_culture_group = amero_hispanophone
 						portrait_culture_group = alpinian
+						
+						portrait_culture_group = anglo_mississippian
+						portrait_culture_group = appalachian_group
+						portrait_culture_group = yankee
+						portrait_culture_group = francomerican
+						portrait_culture_group = west_texan
+						portrait_culture_group = east_texan
+						portrait_culture_group = chicano
+						portrait_culture_group = north_mexican
+						portrait_culture_group = mexicano
+						portrait_culture_group = laurentine_anglo
+						portrait_culture_group = franco_canadian
+						portrait_culture_group = plains_canuck
+						portrait_culture_group = mountainer
+						portrait_culture_group = neo-latin
+						portrait_culture_group = cascadian
+						portrait_culture_group = californian
+						portrait_culture_group = californio_group
+						portrait_culture_group = great_basin
+						portrait_culture_group = plainslander
+						portrait_culture_group = lakeman
+						portrait_culture_group = southerner
+						portrait_culture_group = west_coaster
+						portrait_culture_group = euro_hispanophone
+						portrait_culture_group = anglo_carribean
+						portrait_culture_group = franco_carribean
+						portrait_culture_group = caribeno
+						portrait_culture_group = amero_goidelic
+						portrait_culture_group = eastern_amero_hispanophone
+						portrait_culture_group = amerogerman
+						portrait_culture_group = rustman
 					}
 				}
 				1 = { # Nordic
@@ -1934,6 +2080,8 @@ spriteTypes = {
 						portrait_culture_group = nord
 						portrait_culture_group = samoyedic
 						portrait_culture_group = anishinaabe
+						portrait_culture_group = amero_nordic
+						portrait_culture_group = amero_finno_ugric
 					}					
 				}
 				2 = { # Baltic/Slavic
@@ -1945,6 +2093,8 @@ spriteTypes = {
 						portrait_culture_group = central_slavic
 						portrait_culture_group = yenisean
 						portrait_culture_group = far_east_slavic
+						portrait_culture_group = amero_slavic
+						portrait_culture_group = amero_baltic
 					}
 				}
 				3 = { # Muslim
@@ -1964,6 +2114,10 @@ spriteTypes = {
 						portrait_culture_group = abbala_arabic
 						portrait_culture_group = berber
 						portrait_culture_group = oghur_turkic
+						portrait_culture_group = amero_iranic
+						portrait_culture_group = amero_turkic
+						portrait_culture_group = amero_hebraic
+						portrait_culture_group = amero_arabic
 					}
 				}
 				4 = { # Indian
@@ -1987,6 +2141,9 @@ spriteTypes = {
 						portrait_culture_group = far_west_indo_aryan_group
 						portrait_culture_group = dardic
 						portrait_culture_group = japan_group
+						portrait_culture_group = amero_japonic
+						portrait_culture_group = indo_canadian_group
+						portrait_culture_group = indo_american_group
 					}
 				}
 				5 = { # Central Asian
@@ -2014,6 +2171,7 @@ spriteTypes = {
 						portrait_culture_group = cushitic
 						portrait_culture_group = nilotic
 						portrait_culture_group = amharaic
+						portrait_culture_group = amero_cushitic
 					}
 				}
 				8 = { # Byzantine
@@ -2053,6 +2211,37 @@ spriteTypes = {
 						portrait_culture_group = amero_lusophone
 						portrait_culture_group = amero_hispanophone
 						portrait_culture_group = alpinian
+						
+						portrait_culture_group = anglo_mississippian
+						portrait_culture_group = appalachian_group
+						portrait_culture_group = yankee
+						portrait_culture_group = francomerican
+						portrait_culture_group = west_texan
+						portrait_culture_group = east_texan
+						portrait_culture_group = chicano
+						portrait_culture_group = north_mexican
+						portrait_culture_group = mexicano
+						portrait_culture_group = laurentine_anglo
+						portrait_culture_group = franco_canadian
+						portrait_culture_group = plains_canuck
+						portrait_culture_group = mountainer
+						portrait_culture_group = neo-latin
+						portrait_culture_group = cascadian
+						portrait_culture_group = californian
+						portrait_culture_group = californio_group
+						portrait_culture_group = great_basin
+						portrait_culture_group = plainslander
+						portrait_culture_group = lakeman
+						portrait_culture_group = southerner
+						portrait_culture_group = west_coaster
+						portrait_culture_group = euro_hispanophone
+						portrait_culture_group = anglo_carribean
+						portrait_culture_group = franco_carribean
+						portrait_culture_group = caribeno
+						portrait_culture_group = amero_goidelic
+						portrait_culture_group = eastern_amero_hispanophone
+						portrait_culture_group = amerogerman
+						portrait_culture_group = rustman
 					}
 				}
 				1 = { # Nordic
@@ -2062,6 +2251,8 @@ spriteTypes = {
 						portrait_culture_group = nord
 						portrait_culture_group = samoyedic
 						portrait_culture_group = anishinaabe
+						portrait_culture_group = amero_nordic
+						portrait_culture_group = amero_finno_ugric
 					}					
 				}
 				2 = { # Baltic/Slavic
@@ -2073,6 +2264,8 @@ spriteTypes = {
 						portrait_culture_group = central_slavic
 						portrait_culture_group = yenisean
 						portrait_culture_group = far_east_slavic
+						portrait_culture_group = amero_slavic
+						portrait_culture_group = amero_baltic
 					}
 				}
 				3 = { # Muslim
@@ -2092,6 +2285,10 @@ spriteTypes = {
 						portrait_culture_group = abbala_arabic
 						portrait_culture_group = berber
 						portrait_culture_group = oghur_turkic
+						portrait_culture_group = amero_iranic
+						portrait_culture_group = amero_turkic
+						portrait_culture_group = amero_hebraic
+						portrait_culture_group = amero_arabic
 					}
 				}
 				4 = { # Indian
@@ -2115,6 +2312,9 @@ spriteTypes = {
 						portrait_culture_group = far_west_indo_aryan_group
 						portrait_culture_group = dardic
 						portrait_culture_group = japan_group
+						portrait_culture_group = amero_japonic
+						portrait_culture_group = indo_canadian_group
+						portrait_culture_group = indo_american_group
 					}
 				}
 				5 = { # Central Asian
@@ -2142,6 +2342,7 @@ spriteTypes = {
 						portrait_culture_group = cushitic
 						portrait_culture_group = nilotic
 						portrait_culture_group = amharaic
+						portrait_culture_group = amero_cushitic
 					}
 				}
 				8 = { # Byzantine

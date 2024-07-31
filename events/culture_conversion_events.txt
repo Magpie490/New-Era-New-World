@@ -89,6 +89,22 @@ province_event = {
 			factor = 0.75
 			owner = { stewardship >= 15 }
 		}
+		mult_modifier = {
+			factor = 0.75#intolerance
+			owner = { 
+				primary_title = {
+					has_law = tolerance_laws_0
+				}
+			}
+		}
+		mult_modifier = {
+			factor = 1.25#tolerance
+			owner = { 
+				primary_title = {
+					has_law = tolerance_laws_2
+				}
+			}
+		}
 
 		mult_modifier = {
 			factor = 0.95
@@ -252,6 +268,11 @@ province_event = {
 			factor = 0.5
 			liege = { culture = nusayri }
 			location = { county = { religion = alawite } }
+		}
+		mult_modifier = {
+			factor = 0.5
+			liege = { culture_group = neo-latin }
+			location = { county = { religion = omniaveritatis } }
 		}
 		mult_modifier = { 
 			factor = 1.5
@@ -492,6 +513,22 @@ province_event = {
 		mult_modifier = {
 			factor = 0.75
 			owner = { stewardship >= 15 }
+		}
+		mult_modifier = {
+			factor = 0.75#intolerance
+			owner = { 
+				primary_title = {
+					has_law = tolerance_laws_0
+				}
+			}
+		}
+		mult_modifier = {
+			factor = 1.25#tolerance
+			owner = { 
+				primary_title = {
+					has_law = tolerance_laws_2
+				}
+			}
 		}
 
 		mult_modifier = {

@@ -100,3 +100,47 @@ RETTYPE_CUL_TEX_COWBOY =
 		carbineers_offensive = 0.35
 	}
 }
+RETTYPE_REL_LOYALIST = 
+{
+	first_type = 0
+	first_amount = 350
+	second_type = 1
+	second_amount = 50
+	
+	potential = {
+		higher_tier_than = BARON
+		OR = {
+			government = bhutanese_decayed_government
+			government = bhutanese_restored_government
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.5
+		light_infantry_morale = 0.3
+		heavy_infantry_offensive = 0.3
+	}
+}
+RETTYPE_CUL_LAURENTINE = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture_group = laurentine_anglo
+			any_realm_province = {
+				OR = {
+		culture_group = laurentine_anglo
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.4
+		light_infantry_morale = 0.4
+	}
+}

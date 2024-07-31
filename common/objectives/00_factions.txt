@@ -9735,7 +9735,13 @@ faction_independence = {
 				}
 			}
 		}
-		
+		modifier = {#Rangerites want to be free
+			factor = 2
+			religion = rangerite
+			liege = {
+				NOT = { religion = rangerite }
+			}
+		}
 		modifier = {
 			factor = 0.5
 			opinion = { who = LIEGE value = 20 } 			
@@ -10495,6 +10501,13 @@ faction_independence = {
 			}
 		}
 		
+		modifier = {#Rangerites always want to be free
+			factor = 2
+			religion = rangerite
+			liege = {
+				NOT = { religion = rangerite }
+			}
+		}
 		modifier = {
 			factor = 0.5
 			ROOT = {  
