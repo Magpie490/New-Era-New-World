@@ -1390,7 +1390,7 @@
 5023188 = { name="Byrnes" culture=hollerer  }
 5023189 = { name="Finn" culture=hollerer  }
 5023190 = { name="Watts" culture=hollerer  }
-5123191 = { 
+5123191 = {
 	name="Bigfoot"
 	culture=hollerer
 	used_for_random = no
@@ -1407,7 +1407,7 @@
 		}
 	}
 }
-5123192 = { 
+5123192 = {
 	name="Fomorius"
 	culture=hollerer
 	used_for_random = no
@@ -17898,22 +17898,38 @@
 3000792 = { name = "Cooper" culture = houstonian }
 3000793 = { name = "Tucker" culture = houstonian }
 3000794 = { name = "Ross" culture = sunshiner }
-3000795 = { name="Freeman" culture=newmexican } #Half-Life
+3000795 = { 
+	name="Freeman" #Half-Life
+	culture=newmexican
+	used_for_random = no
+	coat_of_arms = {
+		religion = trinitarian
+		template = 0
+		layer = {
+			texture = 16 #NENW_CoAs.tga
+			texture_internal = 330
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 3000796 = { name = "Husite" culture = czexan used_for_random = no }
 3000797 = { name = "Ovce" culture = czexan used_for_random = no }
 3000798 = { name = "Armstrong" 
-			culture = frontranger
-			used_for_random = no
-				coat_of_arms = {
-				religion = custodite
-				template = 0
-				layer = {
-				texture = 16 #NENW_CoAs.tga
-				texture_internal = 299
-				emblem = 0
-				color = 0
-				color = 0
-				color = 0
+	culture = frontranger
+	used_for_random = no
+	coat_of_arms = {
+		religion = custodite
+		template = 0
+		layer = {
+			texture = 16 #NENW_CoAs.tga
+			texture_internal = 299
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
 		}
 	}
 }
@@ -18017,7 +18033,7 @@
 3000878 = { name = "Thompson" culture = westsloper }
 3000879 = { name = "Dickson" culture = westsloper }
 3000880 = { name = "Alibastor" culture = westsloper }
-3000881 = { name = "Mandeep" culture = westsloper }
+3000881 = { name = "Mandeep" culture = kailiphorani used_for_random=no }
 3000882 = { name = "Backluwitz" culture = westsloper }
 3000883 = { name = "Barghouti" culture = westsloper }
 3000884 = { name = "Roger" culture = westsloper }
