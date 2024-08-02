@@ -63,7 +63,6 @@
 	trait = aggressive_leader
 	trait = experimenter
 	trait = depressed
-	trait = tribal_kinslayer
 	trait = legendary_duelist
 	trait = bisexual
 	trait = scarred
@@ -73,6 +72,9 @@
 	father = 2910006
 	2285.1.1 = {
 		birth = yes
+	}
+	2324.1.1 = {
+		trait = tribal_kinslayer
 	}
 	2666.1.1 = {
 		death = yes
@@ -141,6 +143,7 @@
 	trait = one_eyed
 	trait = scarred
 	trait = adopted_child
+	trait = willful
 	disallow_random_traits = yes
 	2315.8.11 = {
 		birth = yes
@@ -175,11 +178,15 @@
 	name = "Truman" #Father of Marty Armstrong, a man who was once famed for his martial arts
 	dynasty = 3000798
 	culture = frontranger
-	religion = custodite
+	religion = cowboy_buddhist
 	trait = strong
 	trait = robust
 	trait = duelist
 	trait = charitable
+	trait = patient
+	trait = just
+	trait = wuxia_grandmaster
+	trait = legendary_duelist
 	2245.1.11 = {
 		birth = yes
 	}
@@ -196,6 +203,9 @@
 	religion = custodite
 	father = 2910007
 	trait = brilliant_strategist
+	trait = ambitious
+	trait = stubborn
+	trait = zealous
 	2266.6.12 = {
 		birth = yes
 	}
@@ -212,6 +222,7 @@
 	culture = westsloper
 	religion = zenith
 	father = 2910006
+	disallow_random_traits = yes
 	2294.1.1 = {
 		birth = yes
 	}
@@ -347,6 +358,10 @@
 			type = helios
 			has_dlc = "Holy Fury"
 		}
+	}
+	2130.1.1 = {
+		remove_trait = mastermind_theologian
+		add_trait = erudite_oracle
 	}
 	2200.1.1 = {
 		death = yes
@@ -575,12 +590,16 @@
 2910027 = {
 	name = "Nern"
 	dynasty = 3000816
-	culture = westsloper
+	culture = ny_asian
 	religion = zenith
+	trait = scholarly_theologian
 	trait = socializer
 	trait = gregarious
+	trait = patient
+	trait = erudite
 	2285.1.1 = {
 		birth = yes
+		culture = westsloper
 	}
 	2320.1.1 = {
 		employer = 2910002
@@ -634,6 +653,7 @@
 	trait = tough_soldier
 	trait = gregarious
 	trait = brave
+	trait = stubborn
 	2290.1.1 = {
 		birth = yes
 	}
@@ -682,6 +702,7 @@
 			add_friend = 2910003
 			add_friend = 2910033
 		}
+		give_nickname = nick_the_cyclops
 	}
 	2666.1.1 = {
 		death = yes
@@ -697,7 +718,7 @@
 	trait = craven
 	trait = cynical
 	trait = erudite
-	trait = frail
+	trait = feeble
 	2301.1.1 = {
 		birth = yes
 		effect = {
@@ -718,16 +739,22 @@
 	name = "Yogurt"
 	dynasty = 3000827
 	culture = ny_asian
-	religion = mahayana
+	religion = cowboy_buddhist
+	father = 2910045
 	trait = brilliant_strategist
 	trait = duelist
 	trait = proud
 	trait = wuxia_master
-	2284.1.1 = {
+	trait = stubborn
+	trait = honest
+	2301.1.1 = {
 		birth = yes
 	}
 	2320.1.1 = {
 		employer = 2910003
+		effect = {
+			add_rival = 2910045
+		}
 	}
 	2666.1.1 = {
 		death = yes
@@ -852,6 +879,512 @@
 	}
 	2320.1.1 = {
 		employer = 2910014
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910041 = {
+	name = "Bo"
+	dynasty = 3000819
+	culture = westsloper
+	religion = zenith
+	trait = charismatic_negotiator
+	trait = patient
+	trait = bard_sibir
+	trait = content
+	trait = tall
+	trait = humble
+	trait = shy
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+		effect = {
+			add_artifact = record_1
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910042 = {
+	name = "Buffalo"
+	dynasty = 5129929
+	culture = westsloper
+	religion = gridiron
+	trait = brilliant_strategist
+	trait = wroth
+	trait = one_eyed
+	trait = arbitrary
+	trait = strong
+	trait = proud
+	trait = aggressive_leader
+	trait = stubborn
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910043 = {
+	name = "Clint"
+	dynasty = 3000821
+	culture = westsloper
+	religion = zenith
+	trait = charismatic_negotiator
+	trait = fair
+	trait = groomed
+	trait = arbitrary
+	trait = proud
+	trait = stubborn
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910044 = {
+	name = "Crisp"
+	dynasty = 3000822
+	culture = trinitean
+	religion = zenith
+	trait = tough_soldier
+	trait = homosexual
+	trait = kind
+	trait = patient
+	trait = humble
+	trait = duelist
+	2285.1.1 = {
+		birth = yes
+		culture = westsloper
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910045 = {
+	name = "Master"
+	dynasty = 3000827
+	culture = ny_asian
+	religion = cowboy_buddhist
+	trait = brilliant_strategist
+	trait = duelist
+	trait = proud
+	trait = wuxia_grandmaster
+	trait = patient
+	2274.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910046 = {
+	name = "Reginald"
+	culture = westsloper
+	religion = zenith
+	trait = fotune_builder
+	trait = gregarious
+	2264.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910003
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910047 = {
+	name = "Fly"
+	dynasty = 3000874
+	culture = westsloper
+	religion = zenith
+	trait = thrifty_clerk
+	trait = uncouth
+	trait = envious
+	trait = proud
+	trait = shy
+	trait = stubborn
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910048 = {
+	name = "Rooster"
+	dynasty = 3000875
+	culture = westsloper
+	religion = zenith
+	trait = thrifty_clerk
+	trait = content
+	trait = shy
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910049 = {
+	name = "Ollie"
+	dynasty = 3000876
+	culture = westsloper
+	religion = zenith
+	trait = indulgent_wastrel
+	trait = content
+	trait = shy
+	trait = depressed
+	stewardship = 1 #failed in every business imaginable
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910050 = {
+	name = "Percy"
+	dynasty = 3000877
+	culture = westsloper
+	religion = zenith
+	trait = naive_appeaser
+	trait = content
+	trait = humble
+	trait = craven
+	trait = trusting
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910051 = {
+	name = "Geese"
+	dynasty = 3000878
+	culture = westsloper
+	religion = zenith
+	trait = elusive_shadow
+	trait = content
+	trait = proud
+	trait = cruel
+	trait = poet
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910052 = {
+	name = "Dick"
+	dynasty = 3000879
+	culture = westsloper
+	religion = zenith
+	trait = charismatic_negotiator
+	trait = content
+	trait = hedonist
+	trait = slothful
+	trait = arbitrary
+	trait = lustful
+	2285.1.1 = {
+		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910054 = {
+	name = "Harvey"
+	dynasty = 3000880
+	culture = westsloper
+	religion = zenith
+	trait = intricate_webweaver
+	trait = quick
+	trait = deceitful
+	trait = ambitious
+	trait = gregarious
+	trait = greedy
+	trait = fisher
+	diplomacy = 8
+	intrigue = 9
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910055 = {
+	name = "Shocklord"
+	culture = westsloper
+	religion = zenith
+	trait = tough_soldier
+	trait = duelist
+	trait = robust
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910056 = {
+	name = "Buzzo"
+	culture = westsloper
+	religion = juggalo
+	trait = brilliant_strategist
+	trait = strong
+	trait = robust
+	trait = duelist
+	trait = legendary_duelist
+	trait = cruel
+	trait = arbitrary
+	trait = brave
+	trait = stubborn
+	2294.1.1 = {
+		birth = yes
+	}
+	2309.1.1 = {
+		effect = {
+			add_rival = 2910002
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910057 = {
+	name = "Rando"
+	culture = westsloper
+	religion = zenith
+	trait = brilliant_strategist
+	trait = strong
+	trait = tall
+	trait = duelist
+	trait = kind
+	trait = shy
+	trait = scarred_high
+	trait = stutter
+	trait = brave
+	2299.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910058 = {
+	name = "Hart"
+	culture = westsloper
+	religion = pagan
+	trait = brilliant_strategist
+	trait = strong
+	trait = tall
+	trait = duelist
+	trait = cruel
+	trait = lustful
+	trait = brave
+	trait = arbitrary
+	trait = stubborn
+	2282.1.1 = {
+		birth = yes
+	}
+	2323.1.1 = {
+		effect = {
+			add_rival = 2910003
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910059 = {
+	name = "Arnold"
+	dynasty = 3000888
+	culture = westsloper
+	religion = marked
+	trait = tough_soldier
+	trait = strong
+	trait = duelist
+	trait = cruel
+	trait = wroth
+	trait = brave
+	trait = arbitrary
+	trait = humble
+	2282.1.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910060 = {
+	name = "Ajeet"
+	dynasty = 3000881
+	culture = kailiphorani
+	religion = sikh
+	trait = tough_soldier
+	trait = just
+	trait = temperate
+	trait = stubborn
+	trait = lustful
+	trait = tall
+	trait = robust
+	trait = groomed
+	trait = khalsa_baptism
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910061 = {
+	name = "Sonny"
+	dynasty = 3000882
+	culture = westsloper
+	religion = zenith
+	trait = tough_soldier
+	trait = duelist
+	trait = proud
+	trait = stubborn
+	trait = wroth
+	trait = lunatic
+	trait = robust
+	trait = berserker
+	2285.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910062 = {
+	name = "Jack"
+	culture = westsloper
+	religion = myriadic
+	trait = detached_priest
+	trait = trusting
+	trait = mystic
+	trait = erudite
+	trait = curious
+	trait = idolizer
+	2311.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910063 = {
+	name = "Yazan"
+	dynasty = 3000883
+	culture = westsloper
+	religion = kemetic
+	trait = duelist
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910064 = {
+	name = "Queen"
+	dynasty = 3000884
+	culture = westsloper
+	religion = zenith
+	trait = tough_soldier
+	trait = duelist
+	trait = stubborn
+	trait = robust
+	trait = wroth
+	trait = homosexual
+	trait = arbitrary
+	trait = brave
+	2290.1.1 = {
+		birth = yes
+	}
+	2320.1.1 = {
+		employer = 2910002
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2910065 = {
+	name = "Chris"
+	dynasty = 3000885
+	culture = westsloper
+	religion = pagan
+	trait = tough_soldier
+	trait = cruel
+	trait = wroth
+	trait = arbitrary
+	trait = brave
+	2285.1.1 = {
+		birth = yes
+	}
+	2300.1.1 = {
+		effect = {
+			add_rival = 2910002
+		}
 	}
 	2666.1.1 = {
 		death = yes

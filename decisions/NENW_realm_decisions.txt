@@ -2032,7 +2032,7 @@ decisions = {
 		}
 		effect = {
 			set_global_flag = madonnite_hof_formed
-			activate_title = { title = k_madonnite }
+			activate_title = { title = k_madonnite status=yes }
 			hidden_tooltip = {
 				create_character = {
 					random_traits = yes
@@ -2048,6 +2048,9 @@ decisions = {
 					set_defacto_liege = ROOT
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }
