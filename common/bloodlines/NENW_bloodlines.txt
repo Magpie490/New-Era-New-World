@@ -23,9 +23,20 @@ dagon_bloodline = {
 	picture = GFX_bloodlines_symbol_midgard
 	flags = { historical_bloodline }
 }
-van_buren_bloodline = { #Geneirco bloodline for lesser presidents
+van_buren_bloodline = {
+	inheritance = patrilineal
+	diplomacy = 1
+	constitutional_opinion = 5
+	custodite_opinion = 5
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.75
+	picture = GFX_bloodlines_president_scion
+	flags = { historical_bloodline }
+}
+president_scion = { #Generic bloodline for lesser presidents
 	inheritance = patrilineal
 	constitutional_opinion = 5
+	custodite_opinion = 5
 	monthly_character_prestige = 0.5
 	picture = GFX_bloodlines_president_scion
 	flags = { historical_bloodline }
