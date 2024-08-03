@@ -4750,7 +4750,10 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				culture_group = arabic
+				OR = {
+					culture_group = arabic
+					culture_group = amero_arabic
+				}
 			}
 			add_trait = maronite_rite
 		}
@@ -4772,6 +4775,8 @@ character_event = {
 					culture_group = tibetan_group
 					culture_group = tanic
 					culture_group = digaric
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
 					culture = angrezi
 				}
 			}
@@ -4792,6 +4797,8 @@ character_event = {
 				OR = {
 					culture_group = near_eastern
 					culture_group = hebrewic
+					culture_group = amero_aramaic
+					culture_group = amero_hebraic
 				}
 			}
 			add_trait = aremaic_rite
@@ -4801,6 +4808,7 @@ character_event = {
 				OR = {
 					culture_group = east_slavic
 					culture_group = central_slavic
+					culture_group = amero_slavic
 				}
 				NOT = {
 					culture = rusyn

@@ -271,11 +271,11 @@ narrative_event = {
 
 	picture = {
 		picture = GFX_evt_council_arabic
-		trigger = { culture_group = arabic }
+		trigger = { OR = { culture_group = arabic culture_group = amero_arabic } }
 	}
 	picture = {
 		picture = GFX_evt_council
-		trigger = { NOT = { culture_group = arabic } }
+		trigger = { NOR = { culture_group = arabic culture_group = amero_arabic } }
 	}
 
 	is_triggered_only = yes

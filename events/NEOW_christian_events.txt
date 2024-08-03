@@ -79,10 +79,13 @@ narrative_event = {
 			    culture = bulgarian
 			}
 		   }
-		   modifier = {
-		    factor = 2
-			   culture_group = baltic
-		   }
+		modifier = {
+			factor = 2
+				OR = {
+					culture_group = baltic
+					culture_group = amero_baltic
+				}
+			}
 	    }
 	    add_trait = orthodox_giorgi
     } 
@@ -107,7 +110,10 @@ narrative_event = {
 		    }
 			modifier = {
 		    factor = 1.5
-			   culture_group = baltic
+			   OR = {
+					culture_group = baltic
+					culture_group = amero_baltic
+				}
 		    }
 	    }
 		narrative_event = { id = AEC.2 }
@@ -135,6 +141,7 @@ narrative_event = {
 			   culture = bielaruskaja
 			   culture_group = west_slavic
 			   culture_group = baltic
+			   culture_group = amero_baltic
 			   }
 			}
 		}

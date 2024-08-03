@@ -3929,7 +3929,10 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 			    				10 = {
 			    					add_artifact = cookbook_3_arabic
 			    					trigger = {
-			    						culture_group = arabic
+			    						OR = {
+											culture_group = arabic
+											culture_group = amero_arabic
+										}
 			    						NOT = {
 				    						any_artifact = {
 												artifact_type = cookbook_3_arabic
@@ -4513,7 +4516,10 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 										has_education_learning_trigger = yes
 									}
 			    					trigger = {
-			    						culture_group = arabic
+			    						OR = {
+											culture_group = arabic
+											culture_group = amero_arabic
+										}
 			    						NOT = {
 											any_artifact = {
 												artifact_type = the_book_of_healing

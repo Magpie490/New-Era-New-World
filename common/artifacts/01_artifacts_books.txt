@@ -1296,7 +1296,11 @@ fifty_shades_of_root = { # Bad Relationship Book
 kama_sutra = { # Masterful Relationship Book
 	quality = 3
 	active = {
-		culture_group = indo_aryan_group
+		OR = {
+			culture_group = indo_aryan_group
+			culture_group = indo_american_group
+			culture_group = indo_canadian_group
+		}
 	}
 	sex_appeal_opinion = 20
 	fertility = 0.25
@@ -1548,7 +1552,10 @@ cookbook_3_arabic = { #Masterful Cookbook (Arabic: Kitab al-Tabikh)
 	stewardship = 2
 	learning = 1
 	active = {
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture_group = amero_arabic
+		}
 	}
 	flags = { about_stewardship cooking book created }
 	picture = "GFX_book_cook_arabic"

@@ -2046,6 +2046,7 @@ character_event = {
 			culture_group = oghur
 			culture_group = arghu
 			culture_group = oghuz
+			culture_group = amero_turkic
 		} 
 		}
 		add_character_modifier = {
@@ -2204,7 +2205,10 @@ character_event = {
 	option = { # Ghormeh sabzi
 		name = "EVTOPTP1000109119"
 		trigger = {
-			culture_group = iranian
+			OR = {
+				culture_group = iranian
+				culture_group = amero_iranic
+			}
 		}
 		add_character_modifier = {
 			name = best_meal_in_ages
@@ -6309,6 +6313,7 @@ character_event = {
 		trigger = {
 			OR = {
 				culture_group = iranian
+				culture_group = amero_iranic
 				religion_group = zoroastrian_group
 			}
 		}
@@ -6337,6 +6342,7 @@ character_event = {
 		trigger = {
 			NOR = {
 				culture_group = iranian
+				culture_group = amero_iranic
 				religion_group = zoroastrian_group
 			}
 		}
