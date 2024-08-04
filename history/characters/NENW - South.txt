@@ -2801,9 +2801,12 @@
 	trait = groomed
 	trait = proud
 	trait = duelist
+	trait = shrewd
+	intrigue = 10
+	martial = 8
 	disallow_random_traits = yes
 	2277.12.20 = {
-		birth = yes		
+		birth = yes
 	}
 	2666.1.1 = {
 		death = yes
@@ -2917,7 +2920,7 @@
 	}
 }
 910146 = {  
-	name = "George" 
+	name = "Giorgos" 
 	dynasty = 3000659
 	culture = florintoi
 	religion = orthodox
@@ -3063,7 +3066,7 @@
 
 910154 = {
 	name = "Damian" #Son of Bruce, born out of an affair with Talia. Currently under the care of Ra's as a protege.
-	dynasty = 5022731 #Wayne
+	dynasty = 3000655
 	culture = southron #For portrait
 	religion = sufi
 	father = 900301
@@ -3071,13 +3074,18 @@
 	trait = willful
 	trait = quick
 	trait = legit_bastard
-	trait = sympathy_christendom
 	2323.8.1 = {
 		birth = yes
 		culture = fluridani		
 	}
 	2323.8.2 = {
 		employer = 910141 #Damian joins the League of Shadows		
+	}
+	2325.1.1 = {
+		effect = {
+			dynasty = 5022731 #Wayne
+		}
+		trait = sympathy_christendom
 	}
 	2666.1.1 = {
 		death = yes
