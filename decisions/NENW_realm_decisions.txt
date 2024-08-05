@@ -1116,6 +1116,31 @@ decisions = {
 				}
 				destroy_landed_title = THIS
 			}
+			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = mississippi_female
+				}
+				new_bloodline = {
+					set_description = "mississippi_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = mississippi_male
+				}
+				new_bloodline = {
+					set_description = "mississippi_male_desc"
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -2022,7 +2047,7 @@ decisions = {
 
 		potential = {
 			religion = madonnite
-			primary_title = { tier = EMPEROR}
+			primary_title = { tier = EMPEROR }
 			NOT = { has_global_flag = madonnite_hof_formed }
 		}
 		allow = {
