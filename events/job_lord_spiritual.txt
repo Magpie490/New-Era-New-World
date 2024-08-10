@@ -601,12 +601,11 @@ character_event = {
 		mult_modifier = {
 			factor = 0.85
 			has_job_action = action_inquisition
-			religion = vagarna
-		}
-		mult_modifier = {
-			factor = 0.85
-			has_job_action = action_inquisition
-			religion = caodai
+			OR = {
+				religion = vagarna
+				religion = raelian
+				religion = caodai
+			}
 		}
 		mult_modifier = {
 			factor = 0.6

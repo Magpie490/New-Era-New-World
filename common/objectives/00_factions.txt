@@ -9215,7 +9215,7 @@ faction_independence = {
 			}
 			religion = loyalist
 		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
+		modifier = {#will not tolerate a sinful liege
 			factor = 2
 			liege = {
 				OR = {
@@ -9230,109 +9230,16 @@ faction_independence = {
 					trait = impaler
 				}
 			}
-			religion = macabrist
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
+			OR = {
+				religion = neohuguenot
+				religion = penitente
+				religion = sarvodaya
+				religion = girondist
+				religion = fidelista
+				religion = scholastic
+				religion = raelian
+				religion = macabrist
 			}
-			religion = neohuguenot
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = penitente
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = sarvodaya
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = girondist
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = fidelista
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = scholastic
 		}
 		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
 			factor = 2
@@ -9532,6 +9439,19 @@ faction_independence = {
 			religion = jacobinist
 			liege = {
 				NOT = { religion = jacobinist }
+			}
+		}
+		modifier = {#Fidelistas will not follow tyrants
+			factor = 2
+			OR = {
+				religion = fidelista
+				religion = scholastic
+				religion = raelian
+				religion = bracero
+				religion = abolitionist
+			}
+			liege = {
+				trait = tyrant
 			}
 		}
 		modifier = {
@@ -10197,7 +10117,7 @@ faction_independence = {
 			}
 			religion = loyalist
 		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
+		modifier = {#will not tolerate a sinful liege
 			factor = 2
 			liege = {
 				OR = {
@@ -10212,109 +10132,16 @@ faction_independence = {
 					trait = impaler
 				}
 			}
-			religion = penitente
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
+			OR = {
+				religion = neohuguenot
+				religion = penitente
+				religion = sarvodaya
+				religion = girondist
+				religion = fidelista
+				religion = scholastic
+				religion = raelian
+				religion = macabrist
 			}
-			religion = macabrist
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = neohuguenot
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = sarvodaya
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = girondist
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = fidelista
-		}
-		modifier = {#Prussianists hate sinful Kaiser more likely to secceed
-			factor = 2
-			liege = {
-				OR = {
-					trait = greedy
-					trait = lustful
-					trait = gluttonous
-					trait = slothful
-					trait = envious
-					trait = wroth
-					trait = proud
-					trait = cruel
-					trait = impaler
-				}
-			}
-			religion = scholastic
 		}
 		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
 			factor = 2
@@ -10506,6 +10333,19 @@ faction_independence = {
 			religion = rangerite
 			liege = {
 				NOT = { religion = rangerite }
+			}
+		}
+		modifier = {#Fidelistas will not follow tyrants
+			factor = 2
+			OR = {
+				religion = fidelista
+				religion = scholastic
+				religion = raelian
+				religion = bracero
+				religion = abolitionist
+			}
+			liege = {
+				trait = tyrant
 			}
 		}
 		modifier = {

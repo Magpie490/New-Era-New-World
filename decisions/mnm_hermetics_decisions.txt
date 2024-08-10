@@ -126,19 +126,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -310,19 +298,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -470,19 +446,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -647,19 +611,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -806,18 +758,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 			}
 			wealth = 100
 		}
@@ -899,6 +840,13 @@ targeted_decisions = {
 					}
 					1 = {
 						add_trait = immortal
+						if = {
+							limit = { has_dlc = "Holy Fury" }
+
+							create_bloodline = {
+								type = immortal_bloodline_01
+							}
+						}
 					}
 				}
 			}
@@ -922,6 +870,13 @@ targeted_decisions = {
 							}
 							1 = {
 								add_trait = immortal
+								if = {
+									limit = { has_dlc = "Holy Fury" }
+
+									create_bloodline = {
+										type = immortal_bloodline_01
+									}
+								}
 							}
 						}
 					}
@@ -934,10 +889,10 @@ targeted_decisions = {
 		ai_will_do = {
 
 			factor = 1
-			modifier = {	
+			modifier = {
 				factor = 0.1
 			}
-			modifier = {	
+			modifier = {
 				factor = 100
 				character = FROM
 			}
@@ -958,19 +913,7 @@ targeted_decisions = {
 
 		from_potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -1477,20 +1420,8 @@ decisions = {
 			ai = yes
 			primary_title = { higher_tier_than = BARON }
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
 				society_member_of = hermetics
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
@@ -1511,19 +1442,7 @@ decisions = {
 					OR = {
 						society_member_of = hermetics
 						is_in_society = no
-						religion = taoist
-						religion = espiritista
-						has_religion_feature = religion_alchemy
-						has_religion_feature = religion_feature_wuist
-						has_religion_feature = religion_feature_delver
-						has_religion_feature = religion_feature_shindo
-						religion = highmount
-						religion = dianic
-						religion = myriadic
-						religion = illustrious
-						religion = el_shaddai
-						religion = thuyhoa_pagan
-						religion = thuyhoa_pagan_reformed
+						uses_alchemy = yes
 						religion_group = muslim
 						religion = yazidi
 						religion = yersenism
@@ -1537,6 +1456,7 @@ decisions = {
 						trait = martial_cleric
 						trait = scholarly_theologian
 						trait = mastermind_theologian
+						trait = erudite_oracle
 					}
 			}
 		}
@@ -1546,19 +1466,7 @@ decisions = {
 					OR = {
 						society_member_of = hermetics
 						is_in_society = no
-						religion = taoist
-						religion = espiritista
-						has_religion_feature = religion_alchemy
-						has_religion_feature = religion_feature_wuist
-						has_religion_feature = religion_feature_delver
-						has_religion_feature = religion_feature_shindo
-						religion = highmount
-						religion = dianic
-						religion = myriadic
-						religion = illustrious
-						religion = el_shaddai
-						religion = thuyhoa_pagan
-						religion = thuyhoa_pagan_reformed
+						uses_alchemy = yes
 						religion_group = muslim
 						religion = yazidi
 						religion = yersenism
@@ -1572,6 +1480,7 @@ decisions = {
 						trait = martial_cleric
 						trait = scholarly_theologian
 						trait = mastermind_theologian
+						trait = erudite_oracle
 					}
 				}
 				give_minor_title = title_hermetics_apprentice
@@ -1591,20 +1500,8 @@ decisions = {
 
 		potential = {
 			OR = {
-				religion = taoist
-				religion = espiritista
-				has_religion_feature = religion_alchemy
-				has_religion_feature = religion_feature_wuist
-				has_religion_feature = religion_feature_delver
-				has_religion_feature = religion_feature_shindo
-				religion = highmount
-				religion = dianic
-				religion = myriadic
-				religion = illustrious
 				society_member_of = hermetics
-				religion = el_shaddai
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				uses_alchemy = yes
 				AND = {
 					OR = {
 						religion_group = muslim
