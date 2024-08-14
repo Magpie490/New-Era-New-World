@@ -20079,4 +20079,239 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	#South West USA Camel Cavalry
+	ca_culture_usa_camel_1 = {
+		desc = ca_culture_usa_camel_1_desc
+		potential = {
+			OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				has_building = ca_culture_usa_camel_1
+			}		
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}			
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		camel_cavalry = 30
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_usa_camel_2 = {
+		desc = ca_culture_usa_camel_1_desc
+		potential = {
+			OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				has_building = ca_culture_usa_camel_1
+				has_building = ca_culture_usa_camel_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		upgrades_from = ca_culture_usa_camel_1
+		gold_cost = 300
+		build_time = 1095
+		camel_cavalry = 40
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_usa_camel_3 = {
+		desc = ca_culture_usa_camel_1_desc
+		potential = {
+			OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				has_building = ca_culture_usa_camel_1
+				has_building = ca_culture_usa_camel_2
+				has_building = ca_culture_usa_camel_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		upgrades_from = ca_culture_usa_camel_2
+		gold_cost = 400
+		build_time = 2190
+		camel_cavalry = 50
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_usa_camel_4 = {
+		desc = ca_culture_usa_camel_1_desc
+		potential = {
+			OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				has_building = ca_culture_usa_camel_1
+				has_building = ca_culture_usa_camel_2
+				has_building = ca_culture_usa_camel_3
+				has_building = ca_culture_usa_camel_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				OR = {
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
+				}
+			}
+		}
+		upgrades_from = ca_culture_usa_camel_3
+		gold_cost = 500
+		build_time = 2190
+		camel_cavalry = 60
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 }

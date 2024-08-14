@@ -21,11 +21,17 @@ RETTYPE_CUL_TEX_FIRE =
 			culture_group = west_texan
 			culture_group = east_texan
 			culture = tejano
+			culture = teksaski
+			culture = czexan
+			culture = texgerman
 			any_realm_province = {
 				OR = {
 			culture_group = west_texan
 			culture_group = east_texan
 			culture = tejano
+			culture = teksaski
+			culture = czexan
+			culture = texgerman
 				}
 			}
 		}
@@ -83,11 +89,9 @@ RETTYPE_CUL_TEX_COWBOY =
 		higher_tier_than = BARON
 		is_nomadic = no
 		OR = {
-			culture_group = west_texan
 			culture_group = east_texan
 			any_realm_province = {
 				OR = {
-			culture_group = west_texan
 			culture_group = east_texan
 				}
 			}
@@ -142,5 +146,47 @@ RETTYPE_CUL_LAURENTINE =
 	modifier = {
 		light_infantry_offensive = 0.4
 		light_infantry_morale = 0.4
+	}
+}
+RETTYPE_SOUTHWEST_CAMEL = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = camel_cavalry
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = chicano
+			culture_group = east_texan
+			culture_group = great_basin
+			culture_group = numic
+			culture_group = southern_athabaskan
+			culture_group = puebloan
+			culture_group = yuman
+			culture_group = hopi_group
+			culture_group = piman
+			any_realm_province = {
+				OR = {
+			culture_group = chicano
+			culture_group = east_texan
+			culture_group = great_basin
+			culture_group = numic
+			culture_group = southern_athabaskan
+			culture_group = puebloan
+			culture_group = yuman
+			culture_group = hopi_group
+			culture_group = piman
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		camel_cavalry_offensive = 0.2
+		camel_cavalry_defensive = 0.3
+		camel_cavalry_morale = 0.2
 	}
 }
