@@ -8915,6 +8915,18 @@ faction_independence = {
 			NOT = { culture = liege }
 		}
 		modifier = {
+			factor = 0.1
+			liege = {
+				is_friend = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.1
+			liege = {
+				is_lover = ROOT
+			}
+		}
+		modifier = {
 			factor = 2.0
 			FROM = { government = kratocratic_government }
 		}
@@ -9606,7 +9618,7 @@ faction_independence = {
 		}
 		
 		modifier = {
-			factor = 0.25
+			factor = 0.2
 			liege = {
 				religion = ROOT
 				culture = ROOT
@@ -9823,6 +9835,18 @@ faction_independence = {
 		modifier = {
 			factor = 1.4
 			government = bhutanese_decayed_government
+		}
+		modifier = {
+			factor = 0.1
+			liege = {
+				is_friend = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.1
+			liege = {
+				is_lover = ROOT
+			}
 		}
 		modifier = {
 			factor = 0.95
@@ -10605,7 +10629,7 @@ faction_independence = {
 		}
 		
 		modifier = {
-			factor = 0.25
+			factor = 0.2
 			liege = {
 				religion = ROOT
 				culture = ROOT
