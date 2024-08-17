@@ -4633,16 +4633,10 @@ RETTYPE_CUL_SCOTTISH =
 		higher_tier_than = BARON
 		is_nomadic = no
 		OR = {
-			culture = scottish
-			culture = oglallan
-			culture = scots
-			culture = prinsesser
+			culture = scotian
 			any_realm_province = {
 				OR = {
-					culture = scottish
-					culture = oglallan
-					culture = scots
-					culture = prinsesser
+					culture = scotian
 				}
 			}
 		}
@@ -4653,6 +4647,31 @@ RETTYPE_CUL_SCOTTISH =
 		heavy_infantry_defensive = 0.2
 		pikemen_morale = 0.15
 		pikemen_defensive = 0.2
+	}
+}
+RETTYPE_CUL_NEWFIE = 
+{
+	first_type = 5
+	first_amount = 150
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = newfindler
+			culture = caillouvian
+			any_realm_province = {
+				OR = {
+					culture = newfindler
+					culture = caillouvian
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.2
+		archers_morale = 0.15
 	}
 }
 RETTYPE_CUL_OLDANGLO = 
