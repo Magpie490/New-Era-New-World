@@ -190,3 +190,88 @@ RETTYPE_SOUTHWEST_CAMEL =
 		camel_cavalry_morale = 0.2
 	}
 }
+RETTYPE_CUL_MISSISSIPPI_ZOUAVE = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture_group = anglo_mississippian
+		culture = illinoisais
+		culture = intianoi
+		culture = ameroassyrian
+			any_realm_province = {
+				OR = {
+		culture_group = anglo_mississippian
+		culture = illinoisais
+		culture = intianoi
+		culture = ameroassyrian
+				}
+			}
+		}
+		NOR = {
+			culture = buckeye
+			culture = watchers
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.4
+		archers_defensive = 0.4
+	}
+}
+RETTYPE_CUL_LUI_ZOUAVE = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = kreyol
+		culture = cajun
+		culture = crawfisher
+			any_realm_province = {
+				OR = {
+		culture = kreyol
+		culture = cajun
+		culture = crawfisher
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.4
+		archers_morale = 0.4
+	}
+}
+RETTYPE_CUL_BOSTON = 
+{
+	first_type = 4
+	first_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = bostonian
+		culture = massachusite
+			any_realm_province = {
+				OR = {
+		culture = bostonian
+		culture = massachusite
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		knights_offensive = 0.25
+		knights_morale = 0.1
+	}
+}
