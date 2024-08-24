@@ -528,12 +528,12 @@ e_lenape = {
 }
 
 e_colorado = {
-		color = { 191 10 48 }
-		color2= { 255 215 0 }		
+	color = { 191 10 48 }
+	color2= { 255 215 0 }		
 
-		capital = 389 # Denver
-		
-		allow = {
+	capital = 389 # Denver
+	
+	allow = {
 		conditional_tooltip = {
 			trigger = {
 				e_colorado = {
@@ -544,13 +544,35 @@ e_colorado = {
 				is_titular = no
 			}
 		}
-		
-		kolorantoi = "Koloránto"
-		westerosi_valyrian = "Koloránto"
-		florintoi = "Koloránto"
-		intianoi = "Koloránto"
-		kanadoi = "Koloránto"
-		minoan = "Koloránto"
+	}
+
+	kolorantoi = "Koloránto"
+	westerosi_valyrian = "Koloránto"
+	florintoi = "Koloránto"
+	intianoi = "Koloránto"
+	kanadoi = "Koloránto"
+	minoan = "Koloránto"
+}
+
+d_exovedate_invaders = {
+	color = { 51 20 204 }
+	color2 = { 255 255 255 }
+
+	capital = 1217 # Montreal
+	
+	landless = yes
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				d_exovedate_invaders = {
+					is_titular = yes
+				}
+			}
+			d_exovedate_invaders = {
+				is_titular = no
+			}
+		}
 	}
 }
 

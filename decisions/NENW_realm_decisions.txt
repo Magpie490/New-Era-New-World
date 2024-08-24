@@ -2078,4 +2078,39 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_exovedate_hof = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+
+		potential = {
+			religion = exovedate
+			NOT = { has_global_flag = exovedate_hof_formed }
+		}
+		allow = {
+			piety = 1000
+			completely_controls = c_hochelaga
+		}
+		effect = {
+			set_global_flag = exovedate_hof_formed
+			activate_title = { title = k_exovedate status=yes }
+			hidden_tooltip = {
+				create_character = {
+					random_traits = yes
+					trait = mastermind_theologian
+					dynasty = none
+					religion = exovedate
+					age = 52
+				}
+				new_character = {
+					k_exovedate = {
+						grant_title = PREV
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

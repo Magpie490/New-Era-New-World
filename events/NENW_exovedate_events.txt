@@ -1,0 +1,174 @@
+namespace = exovedate
+
+narrative_event = { # Exovedates invade Montreal
+    id = exovedate.1
+    title = EVTNAME_exovedate_1
+    desc = EVTDESC_exovedate_1
+	border = GFX_event_narrative_frame_religion
+	picture = GFX_evt_battle
+    major = yes
+    trigger = {
+        year = 2335
+        NOT = { has_global_flag = exovedates_invade }
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+        has_landed_title = k_montreal
+    }
+    mean_time_to_happen = {
+        months = 6
+    }
+    immediate = {
+        set_global_flag = exovedates_invade
+		activate_title = { 
+            title = d_exovedate_invaders 
+            status = yes 
+        }
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				trait = brilliant_strategist
+                trait = holy_warrior
+                attributes = {
+                    martial = 8
+                }
+				dynasty = none
+				religion = exovedate
+                culture = metis
+                female = no
+			}
+			new_character = {
+				d_exovedate_invaders = {
+					grant_title = PREV
+				}
+                save_event_target_as = exovedate_crusader
+                wealth = 750
+                prestige = 500
+                1217 = {
+                    holder_scope = {
+                        event_target:exovedate_crusader = {
+                            unsafe_war = {
+                                target = ROOT
+                                casus_belli = tribal_invasion
+                                thirdparty_title = k_grand_montreal
+                            }
+                        }
+                    }
+                }
+			}
+            d_exovedate_invaders = {
+                holder_scope = {
+			        create_character = {
+			        	random_traits = yes
+			        	trait = brilliant_strategist
+                        trait = holy_warrior
+                        attributes = {
+                            martial = 6
+                        }
+			        	dynasty = none
+			        	religion = exovedate
+                        culture = metis
+                        female = no
+			        }
+			        create_character = {
+			        	random_traits = yes
+			        	trait = brilliant_strategist
+                        trait = holy_warrior
+                        attributes = {
+                            martial = 7
+                        }
+			        	dynasty = none
+			        	religion = exovedate
+                        culture = metis
+                        female = no
+			        }
+	                spawn_unit = {
+	                    province = 632
+	                    troops = {
+			        		light_infantry = { 750 750 }
+			        		archers = { 500 500 }
+			        		heavy_infantry = { 200 200 }
+			        		pikemen = { 350 350 }
+			        		light_cavalry = { 200 200 }
+	                    }
+	                    earmark = exovedate_event_troops
+	                    attrition = 1
+	                    maintenance_multiplier = 0
+	                    reinforces = no
+	                }
+	                spawn_unit = {
+	                    province = 632
+	                    troops = {
+			        		light_infantry = { 750 750 }
+			        		archers = { 500 500 }
+			        		heavy_infantry = { 200 200 }
+			        		pikemen = { 350 350 }
+			        		light_cavalry = { 200 200 }
+	                    }
+	                    earmark = exovedate_event_troops
+	                    attrition = 1
+	                    maintenance_multiplier = 0
+	                    reinforces = no
+	                }
+	                spawn_unit = {
+	                    province = 632
+	                    troops = {
+			        		light_infantry = { 750 750 }
+			        		archers = { 500 500 }
+			        		heavy_infantry = { 200 200 }
+			        		pikemen = { 350 350 }
+			        		light_cavalry = { 200 200 }
+	                    }
+	                    earmark = exovedate_event_troops
+	                    attrition = 1
+	                    maintenance_multiplier = 0
+	                    reinforces = no
+	                }
+                }
+            }
+		}
+    }
+    option = {
+        name = exovedate1OptA
+        trigger = {
+            religion = exovedate
+        }
+    }
+    option = {
+        name = exovedate1OptB
+        trigger = {
+            NOT = { religion = exovedate }
+            NOT = { has_landed_title = k_montreal }
+        }
+    }
+    option = {
+        name = exovedate1OptC
+        trigger = {
+            has_landed_title = k_montreal
+        }
+    }
+    option = {
+        name = exovedate1OptD
+		tooltip_info = yes
+        trigger = {
+            religion = exovedate
+            can_plays_as_invader_trigger = yes
+        }
+		set_player_character = event_target:exovedate_crusader
+    }
+}
+narrative_event = { # Inform Montréal player about invasion
+    id = exovedate.2
+    title = EVTNAME_exovedate_2
+    desc = EVTDESC_exovedate_2
+	border = GFX_event_narrative_frame_religion
+	picture = GFX_evt_battle
+    is_triggered_only = yes
+
+	trigger = {
+		has_landed_title = k_montreal
+		is_save_game = no
+	}
+
+    option = {
+        name = exovedate2OptA
+    }
+}
