@@ -43,12 +43,14 @@ narrative_event = { # Exovedates invade Montreal
                 wealth = 750
                 prestige = 500
                 1217 = {
-                    holder_scope = {
-                        event_target:exovedate_crusader = {
-                            unsafe_war = {
-                                target = ROOT
-                                casus_belli = tribal_invasion
-                                thirdparty_title = k_grand_montreal
+                    kingdom = {
+                        d_exovedate_invaders = {
+                            holder_scope = {
+                                unsafe_war = {
+                                    casus_belli = exovedate_invasion
+                                    target = ROOT
+                                    thirdparty_title = PREVPREV
+                                }
                             }
                         }
                     }
@@ -170,5 +172,68 @@ narrative_event = { # Inform Montréal player about invasion
 
     option = {
         name = exovedate2OptA
+    }
+}
+
+narrative_event = { # Success
+    id = exovedate.3
+    title = EVTNAME_exovedate_3
+    desc = EVTDESC_exovedate_3
+	border = GFX_event_narrative_frame_religion
+	picture = GFX_evt_crusaders
+    is_triggered_only = yes
+    major = yes
+
+    immediate = {
+		set_global_flag = exovedate_hof_formed
+		activate_title = { title = k_exovedate status=yes }
+		create_character = {
+			random_traits = yes
+			trait = mastermind_theologian
+			dynasty = none
+			religion = exovedate
+			age = 52
+		}
+		new_character = {
+			k_exovedate = {
+				grant_title = PREV
+			}
+		}
+    }
+
+    option = {
+        name = exovedate3OptA
+        trigger = {
+            religion = exovedate
+        }
+    }
+    option = {
+        name = exovedate3OptB
+        trigger = {
+            NOT = { religion = exovedate }
+        }
+    }
+}
+
+narrative_event = { # Fail
+    id = exovedate.4
+    title = EVTNAME_exovedate_4
+    desc = EVTDESC_exovedate_4
+	border = GFX_event_narrative_frame_religion
+	picture = GFX_evt_crusaders
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = exovedate4OptA
+        trigger = {
+            religion = exovedate
+        }
+    }
+    option = {
+        name = exovedate4OptB
+        trigger = {
+            NOT = { religion = exovedate }
+        }
     }
 }
