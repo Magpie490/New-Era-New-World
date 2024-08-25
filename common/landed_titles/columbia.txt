@@ -4039,7 +4039,18 @@ e_columbia = {
 		
 		capital = 27
 		
-		allow = { always = no }
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_pennsylvania = {
+						is_titular = yes
+					}
+				}
+				k_pennsylvania = {
+					is_titular = no
+				}
+			}
+		}
 	}
 	k_wabanakik = {
 		color = { 34 235 36 }
@@ -4055,6 +4066,82 @@ e_columbia = {
 					}
 				}
 				k_wabanakik = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_nys = {
+		color = { 4 47 113 }
+		color2 = { 255 255 255 }
+		
+		capital = 10 # Albany
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_nys = {
+						is_titular = yes
+					}
+				}
+				k_nys = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_t_michigan = {
+		color = { 4 47 113 }
+		color2 = { 255 255 255 }
+		
+		capital = 177 #Lansing
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_t_michigan = {
+						is_titular = yes
+					}
+				}
+				k_t_michigan = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_north_dakota = {
+		color = { 0 56 112 }
+		color2 = { 255 255 255 }
+		
+		capital = 403 # Bismarck
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_north_dakota = {
+						is_titular = yes
+					}
+				}
+				k_north_dakota = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	k_south_dakota = {
+		color = { 0 116 168 }
+		color2 = { 255 255 255 }
+		
+		capital = 376 # Yankton
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_south_dakota = {
+						is_titular = yes
+					}
+				}
+				k_south_dakota = {
 					is_titular = no
 				}
 			}

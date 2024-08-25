@@ -1624,6 +1624,300 @@ decisions = {
 			factor = 1
 		}
 	}
+		reorganize_usa = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = e_usa
+			NOT = {
+				has_global_flag = usa_reorganized
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control a bunch of lands
+				completely_controls_region = world_northeast
+				completely_controls_region = world_appalachia
+				completely_controls_region = world_southeast
+				completely_controls_region = world_mississippi
+				completely_controls_region = world_steel_belt
+		}
+
+		effect = {
+			set_global_flag = usa_reorganized
+			
+			d_delaware_valley = { de_jure_liege = k_delaware }
+			
+			d_philadelphia = { de_jure_liege = k_pennsylvania }
+			d_three_mile_island = { de_jure_liege = k_pennsylvania }
+			d_charrland = { de_jure_liege = k_pennsylvania }
+			d_poconos = { de_jure_liege = k_pennsylvania }
+			d_penn_wilds = { de_jure_liege = k_pennsylvania }
+			d_niagara = { de_jure_liege = k_pennsylvania }
+			d_westsylvania = { de_jure_liege = k_pennsylvania }
+			c_rothrock = { de_jure_liege = d_three_mile_island }
+			c_spring_hill = { de_jure_liege = d_three_mile_island }
+			c_laurel_highlands = { de_jure_liege = d_westsylvania }
+			
+			d_jersey = { de_jure_liege = k_jersey }
+			d_cersey = { de_jure_liege = k_jersey }
+			d_north_jersey = { de_jure_liege = k_jersey }
+			d_skylands = { de_jure_liege = k_jersey }
+			
+			d_altamaha = { de_jure_liege = k_georgia }
+			d_eirinn = { de_jure_liege = k_georgia }
+			d_sowega = { de_jure_liege = k_georgia }
+			d_wiregrass = { de_jure_liege = k_georgia }
+			d_blue_ridge = { de_jure_liege = k_georgia }
+			d_peachtree = { de_jure_liege = k_georgia }
+			d_peachfields = { de_jure_liege = k_georgia }
+			
+			d_norwich = { de_jure_liege = k_connecticut }
+			d_hartford = { de_jure_liege = k_connecticut }
+			d_bridgeport = { de_jure_liege = k_connecticut }
+			d_new_haven = { de_jure_liege = k_connecticut }
+			
+			d_massachusetts = { de_jure_liege = k_massachusets }
+			d_boston = { de_jure_liege = k_massachusets }
+			d_plymouth = { de_jure_liege = k_massachusets }
+			d_nantucket = { de_jure_liege = k_massachusets }
+			c_berkshires = { de_jure_liege = d_massachusetts }
+			
+			d_maryland = { de_jure_liege = k_columbia }
+			d_calvert = { de_jure_liege = k_columbia }
+			d_eastshore = { de_jure_liege = k_columbia }
+			d_capital = { de_jure_liege = k_columbia }
+			
+			d_lowcountry = { de_jure_liege = k_palmetto }
+			d_grand_strand = { de_jure_liege = k_palmetto }
+			d_columbia = { de_jure_liege = k_palmetto }
+			d_santee = { de_jure_liege = k_palmetto }
+			d_edisto = { de_jure_liege = k_palmetto }
+			c_keowee = { de_jure_liege = d_santee }
+			c_salkehatchie = { de_jure_liege = d_edisto }
+			
+			d_concord = { de_jure_liege = k_new_hampshire }
+			d_pennacook = { de_jure_liege = k_new_hampshire }
+			
+			d_clinch = { de_jure_liege = k_old_dominion }
+			d_shenandoah = { de_jure_liege = k_old_dominion }
+			d_nova = { de_jure_liege = k_old_dominion }
+			d_piedmont = { de_jure_liege = k_old_dominion }
+			d_southside = { de_jure_liege = k_old_dominion }
+			d_richmond = { de_jure_liege = k_old_dominion }
+			d_tidewater = { de_jure_liege = k_old_dominion }
+			c_pocomoke = { de_jure_liege = d_tidewater }
+			c_bluefield = { de_jure_liege = d_clinch }
+			
+			d_mohawk_valley = { de_jure_liege = k_nys }
+			d_west_hudson = { de_jure_liege = k_nys }
+			d_east_hudson = { de_jure_liege = k_nys }
+			d_catskill = { de_jure_liege = k_nys }
+			d_saratoga = { de_jure_liege = k_nys }
+			d_taconica = { de_jure_liege = k_nys }
+			d_new_york = { de_jure_liege = k_nys }
+			d_long_island = { de_jure_liege = k_nys }
+			d_cayuga = { de_jure_liege = k_nys }
+			d_buffalo_NY = { de_jure_liege = k_nys }
+			d_finger_lakes = { de_jure_liege = k_nys }
+			d_adirondack = { de_jure_liege = k_nys }
+			d_high_peaks = { de_jure_liege = k_nys }
+			d_essex = { de_jure_liege = k_nys }
+			d_champlain = { de_jure_liege = k_nys }
+			c_newburgh = { de_jure_liege = d_west_hudson }
+			c_chautauqua = { de_jure_liege = d_buffalo_NY }
+			c_genesee = { de_jure_liege = d_buffalo_NY }
+			
+			d_outer_banks = { de_jure_liege = k_tarheel }
+			d_inner_banks = { de_jure_liege = k_tarheel }
+			d_triangle = { de_jure_liege = k_tarheel }
+			d_cape_fear = { de_jure_liege = k_tarheel }
+			d_sandhills = { de_jure_liege = k_tarheel }
+			d_piedmont_crescent = { de_jure_liege = k_tarheel }
+			d_bluehills = { de_jure_liege = k_tarheel }
+			d_walhalla = { de_jure_liege = k_tarheel }
+			c_nantahala = { de_jure_liege = d_bluehills }
+			
+			d_rhode_island = { de_jure_liege = k_rhode_island }
+			
+			d_nek = { de_jure_liege = k_vermont }
+			d_unity = { de_jure_liege = k_vermont }
+			d_east_champlain = { de_jure_liege = k_vermont }
+			
+			d_jackson = { de_jure_liege = k_kentucky }
+			d_bourbon = { de_jure_liege = k_kentucky }
+			d_bluegrass = { de_jure_liege = k_kentucky }
+			d_cumberland = { de_jure_liege = k_kentucky }
+			d_pennyrile = { de_jure_liege = k_kentucky }
+			d_shawnee = { de_jure_liege = k_kentucky }
+			d_knobs = { de_jure_liege = k_kentucky }
+			
+			d_west_tennessee = { de_jure_liege = k_tennessee }
+			d_paris = { de_jure_liege = k_tennessee }
+			d_tullahoma = { de_jure_liege = k_tennessee }
+			d_middle_tennessee = { de_jure_liege = k_tennessee }
+			d_sparta = { de_jure_liege = k_tennessee }
+			d_east_tennessee = { de_jure_liege = k_tennessee }
+			d_beans = { de_jure_liege = k_tennessee }
+			d_bristol = { de_jure_liege = k_tennessee }
+			
+			d_toledo = { de_jure_liege = k_ohio }
+			d_columbus = { de_jure_liege = k_ohio }
+			d_cincy = { de_jure_liege = k_ohio }
+			d_miami_valley = { de_jure_liege = k_ohio }
+			d_black_marsh = { de_jure_liege = k_ohio }
+			d_maumee = { de_jure_liege = k_ohio }
+			d_black_diamonds = { de_jure_liege = k_ohio }
+			d_upper_ohio = { de_jure_liege = k_ohio }
+			d_mansfield = { de_jure_liege = k_ohio }
+			d_mahoning = { de_jure_liege = k_ohio }
+			d_ohio = { de_jure_liege = k_ohio }
+			
+			d_vernon = { de_jure_liege = k_louisiana }
+			d_orleans = { de_jure_liege = k_louisiana }
+			d_atchafalaya = { de_jure_liege = k_louisiana }
+			d_acadiana = { de_jure_liege = k_louisiana }
+			d_west_florida = { de_jure_liege = k_louisiana }
+			d_natchitoches = { de_jure_liege = k_louisiana }
+			d_alexandria = { de_jure_liege = k_louisiana }
+			d_ruston = { de_jure_liege = k_louisiana }
+			d_alluvia = { de_jure_liege = k_louisiana }
+			c_caddo = { de_jure_liege = d_natchitoches }
+			
+			d_terre_haute = { de_jure_liege = k_wabash }
+			d_tristatia = { de_jure_liege = k_wabash }
+			d_kentuckiana = { de_jure_liege = k_wabash }
+			d_indianapolis = { de_jure_liege = k_wabash }
+			d_wabash = { de_jure_liege = k_wabash }
+			d_michiana = { de_jure_liege = k_wabash }
+			
+			d_chickasaw = { de_jure_liege = k_magnolia }
+			d_yazoo = { de_jure_liege = k_magnolia }
+			d_vicksburg = { de_jure_liege = k_magnolia }
+			d_choctaw = { de_jure_liege = k_magnolia }
+			d_natchez = { de_jure_liege = k_magnolia }
+			d_pine_belt = { de_jure_liege = k_magnolia }
+			c_arkabutla = { de_jure_liege = d_vicksburg }
+			c_senatobia = { de_jure_liege = d_vicksburg }
+			c_biloxi = { de_jure_liege = d_pine_belt }
+			c_pascagoula = { de_jure_liege = d_pine_belt }
+			
+			d_fox_valley = { de_jure_liege = k_illinois }
+			d_calumet = { de_jure_liege = k_illinois }
+			d_forgottonia = { de_jure_liege = k_illinois }
+			d_ayarvee = { de_jure_liege = k_illinois }
+			d_illinois = { de_jure_liege = k_illinois }
+			d_bottoms = { de_jure_liege = k_illinois }
+			d_little_egypt = { de_jure_liege = k_illinois }
+			d_kankakee = { de_jure_liege = k_illinois }
+			d_champaign = { de_jure_liege = k_illinois }
+			
+			d_mobile = { de_jure_liege = k_alabama }
+			d_conecuh = { de_jure_liege = k_alabama }
+			d_black_belt = { de_jure_liege = k_alabama }
+			d_tuscaloosa = { de_jure_liege = k_alabama }
+			d_birmingham = { de_jure_liege = k_alabama }
+			d_nickajack = { de_jure_liege = k_alabama }
+			c_ringgold = { de_jure_liege = d_nickajack }
+			
+			d_belknap = { de_jure_liege = k_maine }
+			d_lincoln_ME = { de_jure_liege = k_maine }
+			d_machias = { de_jure_liege = k_maine }
+			d_longfellow = { de_jure_liege = k_maine }
+			d_aroostook = { de_jure_liege = k_maine }
+			d_penobscot = { de_jure_liege = k_maine }
+			
+			d_st_louis = { de_jure_liege = k_missouri }
+			d_gateway = { de_jure_liege = k_missouri }
+			d_great_river = { de_jure_liege = k_missouri }
+			d_lead_belt = { de_jure_liege = k_missouri }
+			d_salem = { de_jure_liege = k_missouri }
+			d_boonslick = { de_jure_liege = k_missouri }
+			d_twain = { de_jure_liege = k_missouri }
+			d_chariton = { de_jure_liege = k_missouri }
+			
+			d_ouachitia = { de_jure_liege = k_arkansas }
+			d_timberland = { de_jure_liege = k_arkansas }
+			d_arkansas_post = { de_jure_liege = k_arkansas }
+			d_arkansas = { de_jure_liege = k_arkansas }
+			d_turner_ward_knob = { de_jure_liege = k_arkansas }
+			c_spring = { de_jure_liege = d_turner_ward_knob }
+			c_batesville = { de_jure_liege = d_arkansas }
+			c_crowley = { de_jure_liege = d_arkansas }
+			
+			d_kalamazoo = { de_jure_liege = k_t_michigan }
+			d_grand_rapids = { de_jure_liege = k_t_michigan }
+			d_midmichigan = { de_jure_liege = k_t_michigan }
+			d_west_michigan = { de_jure_liege = k_t_michigan }
+			d_saginaw = { de_jure_liege = k_t_michigan }
+			d_the_thumb = { de_jure_liege = k_t_michigan }
+			d_detroit = { de_jure_liege = k_t_michigan }
+			d_westroit = { de_jure_liege = k_t_michigan }
+			d_soutroit = { de_jure_liege = k_t_michigan }
+			d_upnorth = { de_jure_liege = k_t_michigan }
+			d_thunder_bay = { de_jure_liege = k_t_michigan }
+			d_houghton = { de_jure_liege = k_t_michigan }
+			d_copperland = { de_jure_liege = k_t_michigan }
+			d_marquette = { de_jure_liege = k_t_michigan }
+			d_mackinac = { de_jure_liege = k_t_michigan }
+			d_soo = { de_jure_liege = k_t_michigan }
+			d_manitoulin = { de_jure_liege = k_t_michigan }
+			c_st_joseph = { de_jure_liege = d_grand_rapids }
+			c_bawating = { de_jure_liege = d_algoma }
+			c_manitoulin = { de_jure_liege = d_shield }
+			
+			d_panhandle = { de_jure_liege = k_florida }
+			d_tallahassee = { de_jure_liege = k_florida }
+			d_jaxonville = { de_jure_liege = k_florida }
+			d_citriana = { de_jure_liege = k_florida }
+			d_clearwater_FL = { de_jure_liege = k_florida }
+			d_canaveral = { de_jure_liege = k_florida }
+			d_everglade = { de_jure_liege = k_florida }
+			d_miami = { de_jure_liege = k_florida }
+			
+			d_moingonia = { de_jure_liege = k_iowa }
+			d_driftless = { de_jure_liege = k_iowa }
+			d_iowa = { de_jure_liege = k_iowa }
+			d_loess_hills = { de_jure_liege = k_iowa }
+			
+			d_coulee = { de_jure_liege = k_wisconsin }
+			d_badgerland = { de_jure_liege = k_wisconsin }
+			d_northwoods = { de_jure_liege = k_wisconsin }
+			d_green_bay = { de_jure_liege = k_wisconsin }
+			d_chippewa = { de_jure_liege = k_wisconsin }
+			d_superior = { de_jure_liege = k_wisconsin }
+			
+			d_pembina = { de_jure_liege = k_minnesota }
+			d_arrowhead = { de_jure_liege = k_minnesota }
+			d_saint_cloud = { de_jure_liege = k_minnesota }
+			d_st_anthony = { de_jure_liege = k_minnesota }
+			d_minnesota = { de_jure_liege = k_minnesota }
+			d_buffalo_ridge = { de_jure_liege = k_minnesota }
+			c_cannon = { de_jure_liege = d_minnesota }
+			c_duluth = { de_jure_liege = d_arrowhead }
+			c_mora = { de_jure_liege = d_saint_cloud }
+			
+			d_franklin = { de_jure_liege = k_vandalia }
+			d_petersburg = { de_jure_liege = k_vandalia }
+			d_transallegheny = { de_jure_liege = k_vandalia }
+			d_mountaineer_country = { de_jure_liege = k_vandalia }
+			d_mountain_lakes = { de_jure_liege = k_vandalia }
+			d_mccoy = { de_jure_liege = k_vandalia }
+			
+			d_sheyenne = { de_jure_liege = k_north_dakota }
+			c_bismarck = { de_jure_liege = d_sheyenne }
+			
+			d_yankton = { de_jure_liege = k_south_dakota }
+			d_bismarck = { de_jure_liege = k_south_dakota }
+			c_sisseton = { de_jure_liege = d_yankton }
+		}
+	}
+
+	
 	organize_sixtyninth_infantry_regiment = {
 		only_independent = yes
 		ai_check_interval = 24
