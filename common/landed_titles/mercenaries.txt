@@ -1748,3 +1748,41 @@ d_nut_two = {
 	
 	mercenary_type = nutmegger_composition
 }
+d_cleaners = {
+	color = { 191 30 45 }
+	color2 = { 255 255 255 }
+
+	capital = 63 # Washington
+
+	short_name = yes 
+
+	allow = {
+		society_member_of = the_assassins
+	}
+
+	religon = constitutional
+	culture = federalist
+	
+	mercenary = yes
+	
+	hire_range = 750
+
+	title = "DIRECTOR"
+	foa = "DIRECTOR_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	# Extra income due to donations, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+
+	mercenary_type = cleaners_composition
+}
