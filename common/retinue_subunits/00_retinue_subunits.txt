@@ -1603,26 +1603,82 @@ RETTYPE_CUL_APPALACHIAN =
 }
 
 
-# RETTYPE_CUL_CANADIAN = 
-# {
-	# first_type = 2
-	# first_amount = 250
+RETTYPE_CUL_UPPER_QUEBECOIS = 
+{
+	first_type = 6
+	first_amount = 150
 	
-	# potential = {
-		# higher_tier_than = BARON
-		# is_nomadic = no
-		# OR = {
-			# culture = quebecois
-			# culture = acadien
-		# }
-	# }
+	second_type = 1
+	second_amount = 200
 	
-	# modifier = {
-		# pikemen_offensive = 0.2
-		# pikemen_defensive = 0.2
-		# pikemen_morale = 0.2
-	# }
-# }
+	special_troops = chariots
+	
+	 potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			culture = quebecois
+			culture = montrealais
+			culture = ontarois
+		any_realm_province = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				}
+			}
+		}
+	 }
+	
+	 modifier = {
+		chariots_offensive = 0.2
+		chariots_morale = 0.1
+		heavy_infantry_offensive = 0.2
+		heavy_infantry_morale = 0.1
+	}
+}
+RETTYPE_CUL_LOWER_QUEBECOIS = 
+{
+	first_type = 6
+	first_amount = 150
+	
+	second_type = 0
+	second_amount = 200
+	
+	special_troops = chariots
+	
+	 potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			culture = aroostois
+			culture = brayonne
+			culture = bucherons
+			culture = acadian
+			culture = rivierois
+			culture = nordien
+			culture = caillouvian
+		any_realm_province = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				}
+			}
+		}
+	 }
+	
+	 modifier = {
+		chariots_offensive = 0.2
+		chariots_morale = 0.1
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.1
+	}
+}
 RETTYPE_CUL_SIPAHI = 
 {
 	first_type = 4
@@ -4659,11 +4715,9 @@ RETTYPE_CUL_NEWFIE =
 		is_nomadic = no
 		OR = {
 			culture = newfindler
-			culture = caillouvian
 			any_realm_province = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}

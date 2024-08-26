@@ -7144,7 +7144,6 @@ castle = {
 		potential = {
 			OR = {
 				culture = newfindler
-				culture = caillouvian
 				has_building = ca_culture_newfie_1
 			}
 		}
@@ -7152,7 +7151,6 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
@@ -7161,14 +7159,13 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
 		prerequisites = { ca_wall_2 }
 		gold_cost = 200
 		build_time = 730
-		archers = 10
+		archers = 20
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 101
@@ -7181,7 +7178,6 @@ castle = {
 		potential = {
 			OR = {
 				culture = newfindler
-				culture = caillouvian
 				has_building = ca_culture_newfie_1
 				has_building = ca_culture_newfie_2
 			}
@@ -7190,7 +7186,6 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
@@ -7199,14 +7194,13 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
 		upgrades_from = ca_culture_newfie_1
 		gold_cost = 300
 		build_time = 1095
-		archers = 10
+		archers = 25
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 100
@@ -7219,7 +7213,6 @@ castle = {
 		potential = {
 			OR = {
 				culture = newfindler
-				culture = caillouvian
 				has_building = ca_culture_newfie_1
 				has_building = ca_culture_newfie_2
 				has_building = ca_culture_newfie_3
@@ -7229,7 +7222,6 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
@@ -7238,14 +7230,13 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
 		upgrades_from = ca_culture_newfie_2
 		gold_cost = 400
 		build_time = 2190
-		archers = 15
+		archers = 30
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 99
@@ -7258,7 +7249,6 @@ castle = {
 		potential = {
 			OR = {
 				culture = newfindler
-				culture = caillouvian
 				has_building = ca_culture_newfie_1
 				has_building = ca_culture_newfie_2
 				has_building = ca_culture_newfie_3
@@ -7269,7 +7259,6 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
@@ -7278,17 +7267,422 @@ castle = {
 			ROOT = {
 				OR = {
 					culture = newfindler
-					culture = caillouvian
 				}
 			}
 		}
 		upgrades_from = ca_culture_newfie_3
 		gold_cost = 500
 		build_time = 2190
-		archers = 20
+		archers = 40
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	ca_culture_upper_quebecois_1 = {
+		desc = ca_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = ca_culture_upper_quebecois_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		chariots = 10
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 20
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_upper_quebecois_2 = {
+		desc = ca_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = ca_culture_upper_quebecois_1
+				has_building = ca_culture_upper_quebecois_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = ca_culture_upper_quebecois_1
+		gold_cost = 300
+		build_time = 1095
+		chariots = 15
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 25
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_upper_quebecois_3 = {
+		desc = ca_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = ca_culture_upper_quebecois_1
+				has_building = ca_culture_upper_quebecois_2
+				has_building = ca_culture_upper_quebecois_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = ca_culture_upper_quebecois_2
+		gold_cost = 400
+		build_time = 2190
+		chariots = 20
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_upper_quebecois_4 = {
+		desc = ca_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = ca_culture_upper_quebecois_1
+				has_building = ca_culture_upper_quebecois_2
+				has_building = ca_culture_upper_quebecois_3
+				has_building = ca_culture_upper_quebecois_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = ca_culture_upper_quebecois_3
+		gold_cost = 500
+		build_time = 2190
+		chariots = 30
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		ai_creation_factor = 98
+		heavy_infantry = 40
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	 ca_culture_lower_quebecois_1 = {
+		desc = ca_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = ca_culture_lower_quebecois_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		chariots = 10
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 20
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lower_quebecois_2 = {
+		desc = ca_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = ca_culture_lower_quebecois_1
+				has_building = ca_culture_lower_quebecois_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = ca_culture_lower_quebecois_1
+		gold_cost = 300
+		build_time = 1095
+		chariots = 15
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 25
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lower_quebecois_3 = {
+		desc = ca_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = ca_culture_lower_quebecois_1
+				has_building = ca_culture_lower_quebecois_2
+				has_building = ca_culture_lower_quebecois_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = ca_culture_lower_quebecois_2
+		gold_cost = 400
+		build_time = 2190
+		chariots = 20
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 30
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_lower_quebecois_4 = {
+		desc = ca_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = ca_culture_lower_quebecois_1
+				has_building = ca_culture_lower_quebecois_2
+				has_building = ca_culture_lower_quebecois_3
+				has_building = ca_culture_lower_quebecois_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = ca_culture_lower_quebecois_3
+		gold_cost = 500
+		build_time = 2190
+		chariots = 30
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		ai_creation_factor = 98
+		light_infantry = 40
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 1
 		
 		extra_tech_building_start = 0.8
 		tax_income = -0.2

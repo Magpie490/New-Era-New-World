@@ -441,7 +441,7 @@ tribal = {
 		
 		prestige_cost = 100
 		build_time = 365
-		archers = 5
+		archers = 10
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 101
@@ -478,7 +478,7 @@ tribal = {
 		upgrades_from = tb_culture_newfie_1
 		prestige_cost = 200
 		build_time = 547
-		archers = 7
+		archers = 10
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 100
@@ -518,7 +518,7 @@ tribal = {
 		upgrades_from = tb_culture_newfie_2
 		prestige_cost = 300
 		build_time = 730
-		archers = 13
+		archers = 15
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 99
@@ -557,12 +557,422 @@ tribal = {
 		upgrades_from = tb_culture_newfie_3
 		prestige_cost = 400
 		build_time = 1095
-		archers = 15
+		archers = 20
 		archers_offensive = 0.15
 		archers_morale = 0.1
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_newfie_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_upper_quebecois_1 = {
+		desc = tb_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = tb_culture_upper_quebecois_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		chariots = 5
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 10
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_upper_quebecois_2 = {
+		desc = tb_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = tb_culture__1
+				has_building = tb_culture__2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = tb_culture_upper_quebecois_1
+		prestige_cost = 200
+		build_time = 547
+		chariots = 10
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 15
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_upper_quebecois_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_upper_quebecois_3 = {
+		desc = tb_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois 
+				culture = montrealais
+				culture = ontarois
+				has_building = tb_culture_upper_quebecois_1
+				has_building = tb_culture_upper_quebecois_2
+				has_building = tb_culture_upper_quebecois_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = tb_culture_upper_quebecois_2
+		prestige_cost = 300
+		build_time = 730
+		chariots = 15
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 20
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_upper_quebecois_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_upper_quebecois_4 = {
+		desc = tb_culture_upper_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = quebecois
+				culture = montrealais
+				culture = ontarois
+				has_building = tb_culture_upper_quebecois_1
+				has_building = tb_culture_upper_quebecois_2
+				has_building = tb_culture_upper_quebecois_3
+				has_building = tb_culture_upper_quebecois_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = quebecois
+					culture = montrealais
+					culture = ontarois
+				}
+			}
+		}
+		upgrades_from = tb_culture_upper_quebecois_3
+		prestige_cost = 400
+		build_time = 1095
+		chariots = 20
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_upper_quebecois_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_lower_quebecois_1 = {
+		desc = tb_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = tb_culture_lower_quebecois_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		chariots = 5
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 10
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_lower_quebecois_2 = {
+		desc = tb_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = tb_culture__1
+				has_building = tb_culture__2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = tb_culture_lower_quebecois_1
+		prestige_cost = 200
+		build_time = 547
+		chariots = 10
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 15
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_lower_quebecois_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_lower_quebecois_3 = {
+		desc = tb_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = tb_culture_lower_quebecois_1
+				has_building = tb_culture_lower_quebecois_2
+				has_building = tb_culture_lower_quebecois_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = tb_culture_lower_quebecois_2
+		prestige_cost = 300
+		build_time = 730
+		chariots = 15
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 20
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_lower_quebecois_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_lower_quebecois_4 = {
+		desc = tb_culture_lower_quebecois_1_desc
+		potential = {
+			OR = {
+				culture = aroostois
+				culture = brayonne
+				culture = bucherons
+				culture = acadian
+				culture = rivierois
+				culture = nordien
+				culture = caillouvian
+				has_building = tb_culture_lower_quebecois_1
+				has_building = tb_culture_lower_quebecois_2
+				has_building = tb_culture_lower_quebecois_3
+				has_building = tb_culture_lower_quebecois_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = aroostois
+					culture = brayonne
+					culture = bucherons
+					culture = acadian
+					culture = rivierois
+					culture = nordien
+					culture = caillouvian
+				}
+			}
+		}
+		upgrades_from = tb_culture_lower_quebecois_3
+		prestige_cost = 400
+		build_time = 1095
+		chariots = 20
+		chariots_offensive = 0.15
+		chariots_morale = 0.1
+		light_infantry = 30
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_lower_quebecois_2
 		
 		extra_tech_building_start = 0.8
 	}
