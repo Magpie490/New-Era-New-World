@@ -546,6 +546,9 @@ d_hashshashin = {
 	religion = constitutional
 	culture = federalist
 
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
 	holy_order = yes
 
 	capital = 63
@@ -555,4 +558,92 @@ d_hashshashin = {
 	monthly_income = 5
 
 	mercenary_type = cia_composition
+}
+d_nauvoo_legion = {
+	color = { 255 102 191 }
+	color2={ 255 255 255 }
+
+	allow = {
+		always = no
+	}
+
+	short_name = yes
+
+	religion = community_of_christ
+	culture = goldmen
+
+	title = "LIEUTENANTGENERAL"
+	title_female = "LIEUTENANTGENERAL"
+	foa = "COMMANDER_FOA"
+
+	holy_order = yes
+
+	capital = 1079 # Nauvoo / La Moine
+
+	landless = yes
+	primary = yes
+	monthly_income = 5
+
+	mercenary_type = nauvoo_composition
+}
+d_mormon_order = {
+	color={ 255 210 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 430 # Salt Lake
+	
+	title = "GRANDMASTER"
+	title_female = "GRANDMISTRESS"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	
+	short_name = yes
+	
+	culture = utahn
+	
+	# Parent Religion 
+	religion = mormon
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+}
+d_knights_templar = {
+	color={ 230 230 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 505 # Spokane Valley
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	
+	short_name = yes
+	
+	culture = lincolnite
+	
+	# Parent Religion 
+	religion = templarist
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
 }
