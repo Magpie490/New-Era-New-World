@@ -2,13 +2,16 @@ upper_mississippi_way = {
 wealth = 20			# Total base wealth of silk route
 	trade_post_display_trigger = {
 		OR = {
-			province_id = 1055 ##cairo
-			province_id = 1024
-			province_id = 1127
-			province_id = 1124 ##new orleans
-			province_id = 3341
-			province_id = 1285
-			province_id = 777
+			province_id = 263
+			province_id = 209
+			province_id = 215
+			province_id = 1050
+			province_id = 376
+			province_id = 252
+			province_id = 170
+			province_id = 1071
+			province_id = 1056
+			province_id = 1055
 		}
 	}
 
@@ -24,53 +27,32 @@ wealth = 20			# Total base wealth of silk route
 	}
 
 	start = {				# Start provinces of trade route
+		263
+		1050
+	}
+	start = {
+		376
+		1050
+	}
+	start = { 
+		170
+		1050
+	}
+	start = {
+		1050
 		1055
-		1024
-	}
-	start = {
-		1024
-		1132
-	}
-	start = {
-		1132
-		1127
-	}
-	start = {
-		1127
-		1125
-	}
-	start = {
-		1125
-		1124
-	}
-	start = {
-		3341
-		1132
-	}
-	start = {
-		1285
-		1125
 	}
 #Main route
     path = {
-		1055 1018 1023 1024
+		263 264 265 209 210 211 213 215 885 1050 ##twin cities to st louis
 	}
 	path = {
-		1024 1131 1132
+		376 1691 363 299 253 252 255 216 886 214 925 1050 ##yankton to st louis
 	}
 	path = {
-		1132 1133 1127 
+		170 865 1071 866 1078 859 1050 ##chicago to st louis
 	}
 	path = {
-		1127 1126 1125
-	}
-	path = {
-		1125 773 1119 1124
-	}
-	path = {
-		3341 243 236 875 232 1132
-	}
-	path = {
-		1285 779 778 777 1267 1125
+		1050 1056 857 1055 ##st Louis to Cairo
 	}
 }

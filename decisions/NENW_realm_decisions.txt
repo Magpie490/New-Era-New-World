@@ -177,6 +177,18 @@ decisions = {
 				}
 				activate_title = { title = e_columbia  status = no }
 			}
+			if = {
+				limit = {
+					ROOT = {
+						religion = custodite
+					}
+				}
+				constitutional = {
+					make_reformer_head_of_religion = yes
+					set_religion_head = e_usa
+				}
+				activate_title = { title = e_custodite  status = no }
+			}
 		}
 		revoke_allowed = {
 			always = no
