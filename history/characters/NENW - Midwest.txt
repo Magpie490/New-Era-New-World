@@ -759,24 +759,29 @@
 	}
 }
 
-2720032 = { # The Horde of Rosebud. Descendant of a great Lakota leader, he may one day see his people united.
+2720032 = { # The Horde of Rosebud. Descendant of the most important leader of the Lakotah, he may one day see his people united.
 	name = "Frederick"
 	dynasty = 7123900
 	culture = lakota
 	religion = peyotist
-	diplomacy = 4
-	martial = 5
+	diplomacy = 5
+	martial = 6
 	stewardship = 4 
 	intrigue = 5
 	learning = 6
-	trait = underhanded_rogue
-	trait = gregarious
+	trait = brilliant_strategist
+	trait = flat_terrain_leader
+	trait = brave
 	trait = kind
-	trait = trusting
+	trait = gregarious
 	trait = patient
 	disallow_random_traits = yes
 	2302.7.20 = {
 		birth = yes
+		create_bloodline = {
+			type = sitting_bull
+			has_dlc = "Holy Fury"
+		}
 	}
 	2500.1.1 = {
 		death = yes
