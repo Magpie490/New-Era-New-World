@@ -1977,6 +1977,30 @@ RETTYPE_CUL_MIKMAQ =
 	}
 }
 
+RETTYPE_CUL_PENOBSCOT =
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = penobscot
+			any_realm_province = {
+				OR = {
+		culture = penobscot
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.3
+		archers_defensive = 0.3
+	}
+}
+
 # Horde
 
 HORDE_RETTYPE_CAV1 = 

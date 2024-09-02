@@ -2838,6 +2838,148 @@ castle = {
 		tax_income = -0.2
 	}
 	
+	 ca_culture_penobscot_1 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_penobscot_2 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_1
+		gold_cost = 300
+		build_time = 1095
+		archers = 40
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_penobscot_3 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+				has_building = ca_culture_penobscot_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_2
+		gold_cost = 400
+		build_time = 2190
+		archers = 45
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_penobscot_4 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+				has_building = ca_culture_penobscot_3
+				has_building = ca_culture_penobscot_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_3
+		gold_cost = 500
+		build_time = 2190
+		archers = 50
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
 	 ca_culture_newfie_1 = {
 		desc = ca_culture_newfie_1_desc
 		potential = {

@@ -2859,6 +2859,151 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	
+	tb_culture_penobscot_1 = {
+		desc = tb_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = tb_culture_penobscot_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers = 20
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_penobscot_2 = {
+		desc = tb_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = tb_culture__1
+				has_building = tb_culture__2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		upgrades_from = tb_culture_penobscot_1
+		prestige_cost = 200
+		build_time = 547
+		archers = 25
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_penobscot_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_penobscot_3 = {
+		desc = tb_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = tb_culture_penobscot_1
+				has_building = tb_culture_penobscot_2
+				has_building = tb_culture_penobscot_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		upgrades_from = tb_culture_penobscot_2
+		prestige_cost = 300
+		build_time = 730
+		archers = 25
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_penobscot_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_penobscot_4 = {
+		desc = tb_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = tb_culture_penobscot_1
+				has_building = tb_culture_penobscot_2
+				has_building = tb_culture_penobscot_3
+				has_building = tb_culture_penobscot_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		upgrades_from = tb_culture_penobscot_3
+		prestige_cost = 400
+		build_time = 1095
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_penobscot_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
 	# Cossack Hopak Fields
 	tb_culture_cossacks_1 = {
 		desc = ca_culture_cossacks_1_desc
