@@ -2695,6 +2695,149 @@ castle = {
 		tax_income = -0.2
 	}
 	
+	 ca_culture_mikmaq_1 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 20
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mikmaq_2 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 25
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mikmaq_3 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+				has_building = ca_culture_mikmaq_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 30
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_mikmaq_4 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+				has_building = ca_culture_mikmaq_3
+				has_building = ca_culture_mikmaq_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 40
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		light_infantry_morale = 1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
 	 ca_culture_newfie_1 = {
 		desc = ca_culture_newfie_1_desc
 		potential = {
@@ -3521,18 +3664,14 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3540,9 +3679,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3571,9 +3708,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3581,9 +3716,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3602,9 +3735,7 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 				has_building = ca_culture_cossacks_2
 				has_building = ca_culture_cossacks_3
@@ -3613,9 +3744,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3623,9 +3752,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3644,9 +3771,7 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 				has_building = ca_culture_cossacks_2
 				has_building = ca_culture_cossacks_3
@@ -3656,9 +3781,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -3666,9 +3789,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}

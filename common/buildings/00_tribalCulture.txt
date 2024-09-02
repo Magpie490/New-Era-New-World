@@ -2714,23 +2714,18 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	
-	# Cossack Hopak Fields
-	tb_culture_cossacks_1 = {
-		desc = ca_culture_cossacks_1_desc
+	tb_culture_mikmaq_1 = {
+		desc = tb_culture_mikmaq_1_desc
 		potential = {
 			OR = {
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
-				has_building = tb_culture_cossacks_1
+				culture = mikmaq
+				has_building = tb_culture_mikmaq_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+				culture = mikmaq
 				}
 			}
 		}
@@ -2738,9 +2733,153 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+				culture = mikmaq
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		pikemen = 15
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_mikmaq_2 = {
+		desc = tb_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = tb_culture__1
+				has_building = tb_culture__2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = tb_culture_mikmaq_1
+		prestige_cost = 200
+		build_time = 547
+		pikemen = 15
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_mikmaq_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_mikmaq_3 = {
+		desc = tb_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = tb_culture_mikmaq_1
+				has_building = tb_culture_mikmaq_2
+				has_building = tb_culture_mikmaq_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = tb_culture_mikmaq_2
+		prestige_cost = 300
+		build_time = 730
+		pikemen = 20
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_mikmaq_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_mikmaq_4 = {
+		desc = tb_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = tb_culture_mikmaq_1
+				has_building = tb_culture_mikmaq_2
+				has_building = tb_culture_mikmaq_3
+				has_building = tb_culture_mikmaq_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = tb_culture_mikmaq_3
+		prestige_cost = 400
+		build_time = 1095
+		pikemen = 25
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_mikmaq_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Cossack Hopak Fields
+	tb_culture_cossacks_1 = {
+		desc = ca_culture_cossacks_1_desc
+		potential = {
+			OR = {
+				culture = preriyskiy
+				has_building = tb_culture_cossacks_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = preriyskiy
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2758,9 +2897,7 @@ tribal = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = {
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = tb_culture_cossacks_1
 				has_building = tb_culture_cossacks_2
 			}
@@ -2768,9 +2905,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2778,9 +2913,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2800,9 +2933,7 @@ tribal = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = {
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = tb_culture_cossacks_1
 				has_building = tb_culture_cossacks_2
 				has_building = tb_culture_cossacks_3
@@ -2811,9 +2942,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2821,9 +2950,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1 
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2841,9 +2968,7 @@ tribal = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = {
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = tb_culture_cossacks_1
 				has_building = tb_culture_cossacks_2
 				has_building = tb_culture_cossacks_3
@@ -2853,9 +2978,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -2863,9 +2986,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
