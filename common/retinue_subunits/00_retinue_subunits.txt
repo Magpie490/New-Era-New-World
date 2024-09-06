@@ -2001,6 +2001,88 @@ RETTYPE_CUL_PENOBSCOT =
 	}
 }
 
+RETTYPE_CUL_WAMPANOAG =
+{
+	first_type = 5
+	first_amount = 300
+	
+	second_type = 2
+	second_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = wampanoag
+			any_realm_province = {
+				OR = {
+		culture = wampanoag
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.3
+		archers_morale = 0.3
+		pikemen_offensive = 0.3
+		pikemen_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_MOHICAN =
+{
+	first_type = 1
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = mohican
+			any_realm_province = {
+				OR = {
+		culture = mohican
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_defensive = 0.2
+		heavy_infantry_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_LENAPE =
+{
+	first_type = 1
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = lenape
+			any_realm_province = {
+				OR = {
+		culture = lenape
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
+		archers_offensive = 0.25
+		archers_morale = 0.2
+	}
+}
+
 # Horde
 
 HORDE_RETTYPE_CAV1 = 
