@@ -6256,6 +6256,7 @@ castle = {
 		potential = {
 			OR = {
 				culture_group = amero_baltic
+				culture_group = amero_finno_ugric
 				has_building = ca_culture_group_baltic_1
 			}
 		}
@@ -6263,6 +6264,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}				
 			}
 		}
@@ -6273,6 +6275,7 @@ castle = {
 					culture_group = baltic
 					culture_group = finno_ugric
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6291,6 +6294,7 @@ castle = {
 		potential = {
 			OR = {
 				culture_group = amero_baltic
+				culture_group = amero_finno_ugric
 				has_building = ca_culture_group_baltic_1
 				has_building = ca_culture_group_baltic_2
 			}
@@ -6299,6 +6303,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6307,6 +6312,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6325,6 +6331,7 @@ castle = {
 		potential = {
 			OR = {
 				culture_group = amero_baltic
+				culture_group = amero_finno_ugric
 				has_building = ca_culture_group_baltic_1
 				has_building = ca_culture_group_baltic_2
 				has_building = ca_culture_group_baltic_3
@@ -6334,6 +6341,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6342,6 +6350,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6360,6 +6369,7 @@ castle = {
 		potential = {
 			OR = {
 				culture_group = amero_baltic
+				culture_group = amero_finno_ugric
 				has_building = ca_culture_group_baltic_1
 				has_building = ca_culture_group_baltic_2
 				has_building = ca_culture_group_baltic_3
@@ -6370,6 +6380,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6378,6 +6389,7 @@ castle = {
 			ROOT = {
 				OR = {
 					culture_group = amero_baltic
+					culture_group = amero_finno_ugric
 				}
 			}
 		}
@@ -6623,6 +6635,478 @@ castle = {
 		archers_morale = 0.05
 		heavy_infantry_morale = 0.05
 		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	#Caucasian Abreks
+	ca_culture_chechen_1 = {
+		desc = ca_culture_chechen_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_armenian
+				culture_group = armenian_group
+				culture = alan
+					culture = scythian
+				culture = balkar
+				has_building = ca_culture_chechen_1				
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_defensive = 0.2
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_chechen_2 = {
+		desc = ca_culture_chechen_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_armenian
+				culture_group = armenian_group
+				culture = alan
+					culture = scythian
+				culture = balkar
+				has_building = ca_culture_chechen_1
+				has_building = ca_culture_chechen_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		upgrades_from = ca_culture_chechen_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_defensive = 0.2
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_chechen_3 = {
+		desc = ca_culture_chechen_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_armenian
+				culture_group = armenian_group
+				culture = alan
+				culture = scythian
+				culture = balkar
+				has_building = ca_culture_chechen_1
+				has_building = ca_culture_chechen_2
+				has_building = ca_culture_chechen_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		upgrades_from = ca_culture_chechen_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 50
+		light_infantry_defensive = 0.2
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_chechen_4 = {
+		desc = ca_culture_chechen_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_armenian
+				culture_group = armenian_group
+				culture = alan
+					culture = scythian
+				culture = balkar
+				has_building = ca_culture_chechen_1
+				has_building = ca_culture_chechen_2
+				has_building = ca_culture_chechen_3
+				has_building = ca_culture_chechen_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = amero_armenian
+					culture_group = armenian_group
+					culture = alan
+					culture = scythian
+					culture = balkar
+				}
+			}
+		}
+		upgrades_from = ca_culture_chechen_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 60
+		light_infantry_defensive = 0.2
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	#Russian Armories
+	ca_culture_russian_1 = {
+		desc = ca_culture_russian_1_desc
+		potential = {
+			OR = { 
+				culture_group = central_slavic
+				culture_group = east_slavic
+				culture_group = oghur
+				culture = lytsvin
+				culture = adessite
+				culture = gottonsk
+				culture = tatarian
+				culture = crimean_tatar
+				culture = bashkir
+				has_building = ca_culture_russian_1
+			}
+			NOR = {
+				culture = cossack
+				culture = rus_cossack
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 30
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_russian_2 = {
+		desc = ca_culture_russian_1_desc
+		potential = {
+			OR = { 
+				culture_group = central_slavic
+				culture_group = east_slavic
+				culture_group = oghur
+				culture = lytsvin
+				culture = adessite
+				culture = gottonsk
+				culture = tatarian
+				culture = crimean_tatar
+				culture = bashkir
+				has_building = ca_culture_russian_1
+				has_building = ca_culture_russian_2
+			}
+			NOR = {
+				culture = cossack
+				culture = rus_cossack
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		upgrades_from = ca_culture_russian_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 40
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_russian_3 = {
+		desc = ca_culture_russian_1_desc
+		potential = {
+			OR = { 
+				culture_group = central_slavic
+				culture_group = east_slavic
+				culture_group = oghur
+				culture = lytsvin
+				culture = adessite
+				culture = gottonsk
+				culture = tatarian
+				culture = crimean_tatar
+				culture = bashkir
+				has_building = ca_culture_russian_1
+				has_building = ca_culture_russian_2
+				has_building = ca_culture_russian_3
+			}
+			NOR = {
+				culture = cossack
+				culture = rus_cossack
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		upgrades_from = ca_culture_russian_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 50
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_russian_4 = {
+		desc = ca_culture_russian_1_desc
+		potential = {
+			OR = { 
+				culture_group = central_slavic
+				culture_group = east_slavic
+				culture_group = oghur
+				culture = lytsvin
+				culture = adessite
+				culture = gottonsk
+				culture = tatarian
+				culture = crimean_tatar
+				culture = bashkir
+				has_building = ca_culture_russian_1
+				has_building = ca_culture_russian_2
+				has_building = ca_culture_russian_3
+				has_building = ca_culture_russian_4
+			}
+			NOR = {
+				culture = cossack
+				culture = rus_cossack
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+					culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = oghur
+					culture = lytsvin
+					culture = adessite
+					culture = gottonsk
+					culture = tatarian
+				culture = crimean_tatar
+					culture = bashkir
+				}
+				NOR = {
+					culture = cossack
+					culture = rus_cossack
+				}
+			}
+		}
+		upgrades_from = ca_culture_russian_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 60
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 98
 		
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
@@ -8776,6 +9260,1545 @@ castle = {
 		tax_income = -0.2
 	}
 	
+	ca_culture_mikmaq_1 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = mikmaq
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 20
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mikmaq_2 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 25
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mikmaq_3 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+				has_building = ca_culture_mikmaq_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 30
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mikmaq_4 = {
+		desc = ca_culture_mikmaq_1_desc
+		potential = {
+			OR = {
+				culture = mikmaq
+				has_building = ca_culture_mikmaq_1
+				has_building = ca_culture_mikmaq_2
+				has_building = ca_culture_mikmaq_3
+				has_building = ca_culture_mikmaq_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = mikmaq
+				}
+			}
+		}
+		upgrades_from = ca_culture_mikmaq_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 40
+		pikemen_offense = 0.2
+		pikemen_morale = 0.1
+		light_infantry_morale = 1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	ca_culture_penobscot_1 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = penobscot
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_penobscot_2 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_1
+		gold_cost = 300
+		build_time = 1095
+		archers = 40
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_penobscot_3 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+				has_building = ca_culture_penobscot_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_2
+		gold_cost = 400
+		build_time = 2190
+		archers = 45
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_penobscot_4 = {
+		desc = ca_culture_penobscot_1_desc
+		potential = {
+			OR = {
+				culture = penobscot
+				has_building = ca_culture_penobscot_1
+				has_building = ca_culture_penobscot_2
+				has_building = ca_culture_penobscot_3
+				has_building = ca_culture_penobscot_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = penobscot
+				}
+			}
+		}
+		upgrades_from = ca_culture_penobscot_3
+		gold_cost = 500
+		build_time = 2190
+		archers = 50
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_wampanoag_1 = {
+		desc = ca_culture_wampanoag_1_desc
+		potential = {
+			OR = {
+				culture = wampanoag
+				has_building = ca_culture_wampanoag_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = wampanoag
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = wampanoag
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		pikemen = 25
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_wampanoag_2 = {
+		desc = ca_culture_wampanoag_1_desc
+		potential = {
+			OR = {
+				culture = wampanoag
+				has_building = ca_culture_wampanoag_1
+				has_building = ca_culture_wampanoag_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		upgrades_from = ca_culture_wampanoag_1
+		gold_cost = 300
+		build_time = 1095
+		archers = 40
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		pikemen = 30
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_wampanoag_3 = {
+		desc = ca_culture_wampanoag_1_desc
+		potential = {
+			OR = {
+				culture = wampanoag
+				has_building = ca_culture_wampanoag_1
+				has_building = ca_culture_wampanoag_2
+				has_building = ca_culture_wampanoag_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		upgrades_from = ca_culture_wampanoag_2
+		gold_cost = 400
+		build_time = 2190
+		archers = 45
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		pikemen = 35
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_wampanoag_4 = {
+		desc = ca_culture_wampanoag_1_desc
+		potential = {
+			OR = {
+				culture = wampanoag
+				has_building = ca_culture_wampanoag_1
+				has_building = ca_culture_wampanoag_2
+				has_building = ca_culture_wampanoag_3
+				has_building = ca_culture_wampanoag_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = wampanoag
+				}
+			}
+		}
+		upgrades_from = ca_culture_wampanoag_3
+		gold_cost = 500
+		build_time = 2190
+		archers = 50
+		archers_offensive = 0.15
+		archers_defensive = 0.15
+		pikemen = 40
+		pikemen_offensive = 0.15
+		pikemen_morale = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_mohican_1 = {
+		desc = ca_culture_mohican_1_desc
+		potential = {
+			OR = {
+				culture = mohican
+				has_building = ca_culture_mohican_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mohican
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = mohican
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 20
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.2
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mohican_2 = {
+		desc = ca_culture_mohican_1_desc
+		potential = {
+			OR = {
+				culture = mohican
+				has_building = ca_culture_mohican_1
+				has_building = ca_culture_mohican_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		upgrades_from = ca_culture_mohican_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 30
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.2
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mohican_3 = {
+		desc = ca_culture_mohican_1_desc
+		potential = {
+			OR = {
+				culture = mohican
+				has_building = ca_culture_mohican_1
+				has_building = ca_culture_mohican_2
+				has_building = ca_culture_mohican_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		upgrades_from = ca_culture_mohican_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 40
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.2
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_mohican_4 = {
+		desc = ca_culture_mohican_1_desc
+		potential = {
+			OR = {
+				culture = mohican
+				has_building = ca_culture_mohican_1
+				has_building = ca_culture_mohican_2
+				has_building = ca_culture_mohican_3
+				has_building = ca_culture_mohican_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = mohican
+				}
+			}
+		}
+		upgrades_from = ca_culture_mohican_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 50
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.2
+		pikemen_morale = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_lenape_1 = {
+		desc = ca_culture_lenape_1_desc
+		potential = {
+			OR = {
+				culture = lenape
+				has_building = ca_culture_lenape_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = lenape
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = lenape
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 20
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 15
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lenape_2 = {
+		desc = ca_culture_lenape_1_desc
+		potential = {
+			OR = {
+				culture = lenape
+				has_building = ca_culture_lenape_1
+				has_building = ca_culture_lenape_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		upgrades_from = ca_culture_lenape_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 30
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 20
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_lenape_3 = {
+		desc = ca_culture_lenape_1_desc
+		potential = {
+			OR = {
+				culture = lenape
+				has_building = ca_culture_lenape_1
+				has_building = ca_culture_lenape_2
+				has_building = ca_culture_lenape_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		upgrades_from = ca_culture_lenape_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 40
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 35
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_lenape_4 = {
+		desc = ca_culture_lenape_1_desc
+		potential = {
+			OR = {
+				culture = lenape
+				has_building = ca_culture_lenape_1
+				has_building = ca_culture_lenape_2
+				has_building = ca_culture_lenape_3
+				has_building = ca_culture_lenape_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = lenape
+				}
+			}
+		}
+		upgrades_from = ca_culture_lenape_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 50
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 40
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	# Jewish Heavy Infantry
+	ca_culture_jewish_1 = {
+		desc = ca_culture_jewish_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_hebraic
+				has_building = ca_culture_jewish_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_jewish_2 = {
+		desc = ca_culture_jewish_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_hebraic
+				has_building = ca_culture_jewish_1
+				has_building = ca_culture_jewish_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		upgrades_from = ca_culture_jewish_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_jewish_3 = {
+		desc = ca_culture_jewish_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_hebraic
+				has_building = ca_culture_jewish_1
+				has_building = ca_culture_jewish_2
+				has_building = ca_culture_jewish_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		upgrades_from = ca_culture_jewish_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 50
+		light_infantry_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_jewish_4 = {
+		desc = ca_culture_jewish_1_desc
+		potential = {
+			OR = {
+				culture_group = amero_hebraic
+				has_building = ca_culture_jewish_1
+				has_building = ca_culture_jewish_2
+				has_building = ca_culture_jewish_3
+				has_building = ca_culture_jewish_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture_group = amero_hebraic
+			}
+		}
+		upgrades_from = ca_culture_jewish_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 60
+		light_infantry_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	# Indian war elephant pens
+	ca_culture_indian_1 = {
+		desc = ca_culture_indian_1_desc
+		potential = {
+			OR = {
+				culture_group = west_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+				culture_group = central_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = angrezi
+				culture = domba
+				has_building = ca_culture_indian_1
+			}
+			NOT = {culture = brahui}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+					culture_group = salic
+					culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		war_elephants = 6
+		war_elephants_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_indian_2 = {
+		desc = ca_culture_indian_2_desc
+		potential = {
+			OR = {
+				culture_group = west_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+				culture_group = central_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = angrezi
+				culture = domba
+				has_building = ca_culture_indian_1
+				has_building = ca_culture_indian_2
+			}
+			NOT = {culture = brahui}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		upgrades_from = ca_culture_indian_1
+		gold_cost = 300
+		build_time = 1095
+		war_elephants = 10
+		war_elephants_offensive = 0.05
+		war_elephants_defensive = 0.10
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_indian_3 = {
+		desc = ca_culture_indian_3_desc
+		potential = {
+			OR = {
+				culture_group = west_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+				culture_group = central_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = angrezi
+				culture = domba
+				has_building = ca_culture_indian_1
+				has_building = ca_culture_indian_2
+				has_building = ca_culture_indian_3
+			}
+			NOT = {culture = brahui}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		upgrades_from = ca_culture_indian_2
+		gold_cost = 400
+		build_time = 2190
+		war_elephants = 22
+		war_elephants_offensive = 0.05
+		war_elephants_defensive = 0.10
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_indian_4 = {
+		desc = ca_culture_indian_4_desc
+		potential = {
+			OR = {
+				culture_group = west_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+				culture_group = central_indo_aryan_group
+				culture_group = northern_dravidian_group
+				culture_group = eastern_dravidian_group
+				culture_group = southern_dravidian_group
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = angrezi
+				culture = domba
+				has_building = ca_culture_indian_1
+				has_building = ca_culture_indian_2
+				has_building = ca_culture_indian_3
+				has_building = ca_culture_indian_4
+			}
+				NOT = {culture = brahui}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = eastern_indo_aryan_group
+				culture_group = salic
+				culture_group = manipuric
+					culture_group = central_indo_aryan_group
+					culture_group = northern_dravidian_group
+					culture_group = eastern_dravidian_group
+					culture_group = southern_dravidian_group
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = angrezi
+					culture = domba
+				}
+				NOT = {culture = brahui}
+			}
+		}
+		upgrades_from = ca_culture_indian_3
+		gold_cost = 500
+		build_time = 2190
+		war_elephants = 22
+		war_elephants_offensive = 0.05
+		war_elephants_defensive = 0.10
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+
+	# Nubian warrior barracks
+	ca_culture_nubian_1 = {
+		desc = ca_culture_nubian_1_desc
+		potential = {
+			OR = { 
+				culture = nubian 
+				has_building = ca_culture_nubian_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = nubian
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				culture = nubian
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 10
+		light_infantry = 20
+		archers = 20
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_nubian_2 = {
+		desc = ca_culture_nubian_1_desc
+		potential = {
+			OR = { 
+				culture = nubian 
+				has_building = ca_culture_nubian_1
+				has_building = ca_culture_nubian_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = nubian
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = nubian
+			}
+		}
+		upgrades_from = ca_culture_nubian_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 15
+		light_infantry = 25
+		archers = 25
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_nubian_3 = {
+		desc = ca_culture_nubian_1_desc
+		potential = {
+			OR = { 
+				culture = nubian 
+				has_building = ca_culture_nubian_1
+				has_building = ca_culture_nubian_2
+				has_building = ca_culture_nubian_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = nubian
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture = nubian
+			}
+		}
+		upgrades_from = ca_culture_nubian_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 15
+		light_infantry = 30
+		archers = 30
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_nubian_4 = {
+		desc = ca_culture_nubian_1_desc
+		potential = {
+			OR = { 
+				culture = nubian 
+				has_building = ca_culture_nubian_1
+				has_building = ca_culture_nubian_2
+				has_building = ca_culture_nubian_3
+				has_building = ca_culture_nubian_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = nubian
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture = nubian
+			}
+		}
+		upgrades_from = ca_culture_nubian_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 20
+		light_infantry = 40
+		archers = 40
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+
+	#Germanic Halberdiers
+	ca_culture_germanic_heavy_1 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				has_building = ca_culture_germanic_heavy_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}	
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_germanic_heavy_2 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				has_building = ca_culture_germanic_heavy_1
+				has_building = ca_culture_germanic_heavy_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}	
+		}
+		upgrades_from = ca_culture_germanic_heavy_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 40
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_germanic_heavy_3 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				has_building = ca_culture_germanic_heavy_1
+				has_building = ca_culture_germanic_heavy_2
+				has_building = ca_culture_germanic_heavy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}	
+		}
+		upgrades_from = ca_culture_germanic_heavy_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_germanic_heavy_4 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				has_building = ca_culture_germanic_heavy_1
+				has_building = ca_culture_germanic_heavy_2
+				has_building = ca_culture_germanic_heavy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				culture = german
+				culture = low_german
+				culture = hessian
+				culture = bavarian
+				culture = rheinlander
+				culture = swabian
+				culture = danzigian
+				culture = saxon
+				}
+			}	
+		}
+		upgrades_from = ca_culture_germanic_heavy_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 60
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+	
 	 ca_culture_newfie_1 = {
 		desc = ca_culture_newfie_1_desc
 		potential = {
@@ -9602,18 +11625,14 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9621,9 +11640,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9652,9 +11669,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9662,9 +11677,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9683,9 +11696,7 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 				has_building = ca_culture_cossacks_2
 				has_building = ca_culture_cossacks_3
@@ -9694,9 +11705,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9704,9 +11713,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9725,9 +11732,7 @@ castle = {
 		desc = ca_culture_cossacks_1_desc
 		potential = {
 			OR = { 
-				culture = cossack
-				culture = rus_cossack
-				culture = sazzac
+				culture = preriyskiy
 				has_building = ca_culture_cossacks_1
 				has_building = ca_culture_cossacks_2
 				has_building = ca_culture_cossacks_3
@@ -9737,9 +11742,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
@@ -9747,9 +11750,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
 				OR = {
-					culture = cossack
-					culture = rus_cossack
-					culture = sazzac
+					culture = preriyskiy
 				}
 			}
 		}
