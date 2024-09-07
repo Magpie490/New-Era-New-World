@@ -1,0 +1,205 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_clonative_male_clothes_behind"
+		texturefile = "gfx\\characters\\native_male\\native_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clonative_male_headgear_behind"
+		texturefile = "gfx\\characters\\native_male\\native_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clonative_male_clothes"
+		texturefile = "gfx\\characters\\native_male\\native_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clonative_male_headgear_mid"
+		texturefile = "gfx\\characters\\native_male\\native_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clonative_male_clothes_infront"
+		texturefile = "gfx\\characters\\native_male\\native_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clonative_male_headgear"
+		texturefile = "gfx\\characters\\native_male\\native_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	###
+	spriteType = {
+		name = "GFX_clonative_female_clothes_behind"
+		texturefile = "gfx\\characters\\native_female\\native_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clonative_female_headgear_behind"
+		texturefile = "gfx\\characters\\native_female\\native_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clonative_female_clothes"
+		texturefile = "gfx\\characters\\native_female\\native_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clonative_female_headgear_mid"
+		texturefile = "gfx\\characters\\native_female\\native_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clonative_female_headgear"
+		texturefile = "gfx\\characters\\native_female\\native_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+		
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_clonative_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = plains_apache
+					portrait_culture = shawnee
+					portrait_culture = fox
+					portrait_culture = miami
+					portrait_culture = osage
+					portrait_culture = potawatomi
+					portrait_culture = kiowa
+					portrait_culture = arapaho
+					portrait_culture = cheyenne
+					portrait_culture = comanche
+					portrait_culture = jicarilla
+					portrait_culture = lenape
+					portrait_culture = chiwere
+					portrait_culture = winnebago
+					portrait_culture = dakota
+					portrait_culture = lakota
+					portrait_culture = northern_cheyenne
+					portrait_culture = crow
+					portrait_culture = hidatsa
+					portrait_culture = gros_ventre
+					portrait_culture = arikara
+					portrait_culture = eastern_shoshone
+					portrait_culture = northern_arapaho
+					portrait_culture = navajo
+					portrait_culture = western_apache
+					portrait_culture = zuni
+					portrait_culture = keres
+					portrait_culture = towa
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_clonative_male_clothes_behind:p3:c0"
+            "GFX_clonative_male_clothes:p3:c2"
+			"GFX_clonative_male_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_clonative_male_headgear:p5:c5"
+            "GFX_clonative_male_headgear_behind:p5:c1"
+            "GFX_clonative_male_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_clonative_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = plains_apache
+					portrait_culture = shawnee
+					portrait_culture = fox
+					portrait_culture = miami
+					portrait_culture = osage
+					portrait_culture = potawatomi
+					portrait_culture = kiowa
+					portrait_culture = arapaho
+					portrait_culture = cheyenne
+					portrait_culture = comanche
+					portrait_culture = jicarilla
+					portrait_culture = lenape
+					portrait_culture = chiwere
+					portrait_culture = winnebago
+					portrait_culture = dakota
+					portrait_culture = lakota
+					portrait_culture = northern_cheyenne
+					portrait_culture = crow
+					portrait_culture = hidatsa
+					portrait_culture = gros_ventre
+					portrait_culture = arikara
+					portrait_culture = eastern_shoshone
+					portrait_culture = northern_arapaho
+					portrait_culture = navajo
+					portrait_culture = western_apache
+					portrait_culture = zuni
+					portrait_culture = keres
+					portrait_culture = towa
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_clonative_female_clothes_behind:p3:c0"
+            "GFX_clonative_female_clothes:p3:c2"
+			"GFX_clonative_male_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_clonative_female_headgear:p5:c5"
+            "GFX_clonative_female_headgear_behind:p5:c1"
+            "GFX_clonative_female_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}

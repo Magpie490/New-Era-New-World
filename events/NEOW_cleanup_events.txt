@@ -4,34 +4,27 @@ namespace=razumist
 namespace=sufist
 namespace=gods
 
-character_event = { # Give Indian characters appropriate schools at game start
-	id = cleanup.1
-	hide_window = yes
-
-	is_triggered_only = yes
+province_event = {
+	id = cleanup.6776
+	hide_window = yes	
 	
 	trigger = {
+		climate = severe_winter
+		terrain = mountain
 		OR = {
-			religion = parabrahmanist
-			religion = neovedantic
-		}
-		is_landed = yes#to keep it simple, we'll make all unlanded courtiers forcibly convert to the same school as their liege
-		is_save_game = no#shouldn't happen when you reload a save
-		NOR = {
-			trait = shaktist_hindu
-			trait = smartist_hindu
-			trait = vaishna_ganda_hindu
-			trait = brahamo_hindu
-			trait = ramakrishna_hindu
-			trait = bhagavanist_gandhi
-			trait = bhagavanist_shivaji
-			trait = bhagavanist_akbar
-			trait = bhagavanist_jagadisha
-			trait = bhagavanist_rajaraja
+			month == 10
+			month == 11
 		}
 	}
-	immediate = {
-		character_event = { id = RoI.30120 }
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate={
+		add_province_modifier = {
+			name = snowblockspasses_modifier
+			stacking = no
+			duration = 50
+		}
 	}
 }
 character_event = { 
