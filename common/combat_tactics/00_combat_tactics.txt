@@ -4462,7 +4462,10 @@ pike_column_advance_tactic = {
 		pikemen = 0.01
 		flank_has_leader = yes
 		leader = { 
-			culture_group = apeninian 
+			OR = {
+				culture_group = apeninian
+				culture_group = amero_italic
+			}
 		}
 	}
 

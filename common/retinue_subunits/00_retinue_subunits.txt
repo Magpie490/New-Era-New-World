@@ -1398,6 +1398,61 @@ RETTYPE_CUL_BALT =
 	}
 }
 
+RETTYPE_CUL_IBER = 
+{
+	first_type = 3
+	first_amount = 400
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = hispanophone
+			culture_group = lusophone
+			any_realm_province = {
+				OR = {
+			culture_group = hispanophone
+			culture_group = lusophone
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.2
+		light_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_ITA = 
+{
+	first_type = 2
+	first_amount = 400
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = apeninian
+			culture_group = amero_italic
+			culture = furlan
+			any_realm_province = {
+				OR = {
+			culture_group = apeninian
+			culture_group = amero_italic
+			culture = furlan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.2
+		pikemen_defensive = 0.2
+		pikemen_morale = 0.4
+	}
+}
+
 RETTYPE_CUL_POL = 
 { # reuse for amero-poles maybe?
 	first_type = 3
