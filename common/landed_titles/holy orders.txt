@@ -230,7 +230,7 @@ k_watchers_in_the_dark = {
 	# Parent Religion
 	religion = watcher
 
-	culture = buckeye
+	culture = watchers
 
 	# Cannot be held as a secondary title
 	primary = yes
@@ -953,6 +953,35 @@ d_knights_of_st_john = {
 	
 	# Parent Religion 
 	religion = columbian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_knights_of_st_john_2 = {
+	color = { 204 0 0 }
+	color2={ 255 255 255 }
+	
+	capital = 102 #Cleveland
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_hospitaler_composition
+	
+	short_name = yes
+	
+	culture = buckeye
+	
+	# Parent Religion 
+	religion = watcher
 	
 	# Cannot be held as a secondary title
 	primary = yes

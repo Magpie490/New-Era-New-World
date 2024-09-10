@@ -2314,16 +2314,10 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			has_landed_title = d_knights_hospitaler
-			liege = { has_landed_title = d_knights_hospitaler }
-			has_landed_title = d_knights_hospitaler_1
-			liege = { has_landed_title = d_knights_hospitaler_1 }
-			has_landed_title = d_knights_hospitaler_2
-			liege = { has_landed_title = d_knights_hospitaler_2 }
-			has_landed_title = d_knights_hospitaler_3
-			liege = { has_landed_title = d_knights_hospitaler_3 }
-			has_landed_title = k_hospitaller_state
-			liege = { has_landed_title = k_hospitaller_state }
+			has_landed_title = d_knights_of_st_john
+			liege = { has_landed_title = d_knights_of_st_john }
+			has_landed_title = d_knights_of_st_john_2
+			liege = { has_landed_title = d_knights_of_st_john_2 }
 		}
 		NOT = { trait = true_christian_knight_hospitaller }
 	}
@@ -2337,11 +2331,8 @@ character_event = {
 						limit = {
 							liege = { 
 								OR = {	
-									has_landed_title = d_knights_hospitaler
-									has_landed_title = d_knights_hospitaler_1
-									has_landed_title = d_knights_hospitaler_2
-									has_landed_title = d_knights_hospitaler_3
-									has_landed_title = k_hospitaller_state
+									has_landed_title = d_knights_of_st_john
+									has_landed_title = d_knights_of_st_john_2
 								}
 							}
 							NOR = { 
