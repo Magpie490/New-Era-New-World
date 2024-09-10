@@ -165,6 +165,68 @@ FEUDAL_PIETY_RET_1 = {
 	}
 }
 
+FEUDAL_PRESTIGE_RET_1 = {
+	first_type = 6
+	first_amount = 150
+	
+	special_troops = superheavy_infantry
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		is_tribal = no
+		OR = {
+			prestige = 1500
+			trait = summer_queen_1_honour
+			trait = summer_queen_2_honour
+			trait = summer_queen_3_honour
+		}
+		OR = {
+			prestige = 2000
+			trait = brilliant_strategist
+			trait = skilled_tactician
+			trait = exalted_warlord
+			trait = socializer
+			trait = administrator
+			trait = strategist
+			trait = gregarious
+			trait = summer_queen_1_honour
+			trait = summer_queen_2_honour
+			trait = summer_queen_3_honour
+		}
+	}
+	
+	modifier = {
+	}
+}
+
+FEUDAL_ART_RET_1 = {
+	first_type = 6
+	first_amount = 100
+	
+	special_troops = heavy_artillery
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		is_tribal = no
+		OR = {
+			trait = administrator
+			trait = strategist
+			trait = architect
+			trait = siege_leader
+			trait = sapper
+		}
+		OR = {
+			trait = brilliant_strategist
+			trait = skilled_tactician
+			trait = exalted_warlord
+		}
+	}
+	
+	modifier = {
+	}
+}
 TRIBAL_RET_1 = {
 	first_type = 0
 	first_amount = 150
