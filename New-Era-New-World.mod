@@ -15,6 +15,7 @@ replace_path="common/trade_routes"
 replace_path="gfx/flags"
 replace_path="decisions"
 replace_path="events"
+replace_path="music"
 picture="ATEOWICON.png"
 tags=
 {
