@@ -1287,25 +1287,25 @@ RETTYPE_DEBTCOLLECTORS =
 }
 RETTYPE_KGB_AGENTS = 
 { # rework for CIA
-	first_type = 0
+	first_type = 5
 	first_amount = 250
 	
-	second_type = 5
+	second_type = 6
 	second_amount = 100
+	special_troops = superheavy_infantry
 
-	special_troops = gunmen
 	
 	potential = {
 		higher_tier_than = BARON
 		is_nomadic = no
 		society_member_of = the_assassins
 	}
-	maintenance_multiplier = 1.75
+	maintenance_multiplier = 1.25
 	
 	modifier = {
 		light_infantry_offensive = 0.3
 		light_infantry_morale = 0.35
-		archers_offensive = 0.25
+		superheavy_infantry_offensive = 0.25
 	}
 }
 
