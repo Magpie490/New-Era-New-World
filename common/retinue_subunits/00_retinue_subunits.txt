@@ -2200,6 +2200,35 @@ RETTYPE_CUL_LENAPE =
 	}
 }
 
+RETTYPE_CUL_CREE =
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture_group = cree
+			any_realm_province = {
+				OR = {
+		culture_group = cree
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
+		archers_offensive = 0.25
+		archers_morale = 0.2
+	}
+}
+
 # Horde
 
 HORDE_RETTYPE_CAV1 = 

@@ -10361,6 +10361,160 @@ castle = {
 		tax_income = -0.2
 	}
 	
+		ca_culture_cree_1 = {
+		desc = ca_culture_cree_1_desc
+		potential = {
+			OR = {
+				culture_group = cree
+				has_building = ca_culture_cree_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = cree
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = cree
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 25
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_cree_2 = {
+		desc = ca_culture_cree_1_desc
+		potential = {
+			OR = {
+				culture_group = cree
+				has_building = ca_culture_cree_1
+				has_building = ca_culture_cree_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		upgrades_from = ca_culture_cree_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 35
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_cree_3 = {
+		desc = ca_culture_cree_1_desc
+		potential = {
+			OR = {
+				culture_group = cree
+				has_building = ca_culture_cree_1
+				has_building = ca_culture_cree_2
+				has_building = ca_culture_cree_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		upgrades_from = ca_culture_cree_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 50
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 45
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_cree_4 = {
+		desc = ca_culture_cree_1_desc
+		potential = {
+			OR = {
+				culture_group = cree
+				has_building = ca_culture_cree_1
+				has_building = ca_culture_cree_2
+				has_building = ca_culture_cree_3
+				has_building = ca_culture_cree_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = cree
+				}
+			}
+		}
+		upgrades_from = ca_culture_cree_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 50
+		light_infantry_offensive = 0.2
+		light_infantry_morale = 0.15
+		archers = 45
+		archers_offensive = 0.2
+		archers_morale = 0.15
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
 	# Jewish Heavy Infantry
 	ca_culture_jewish_1 = {
 		desc = ca_culture_jewish_1_desc
