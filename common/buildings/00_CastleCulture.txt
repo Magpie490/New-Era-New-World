@@ -14967,8 +14967,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-				culture = bostonian
-				culture = massachusite
+				culture = nutmegger
 				}
 			}
 		}		
@@ -15011,6 +15010,164 @@ castle = {
 			}
 		}
 		upgrades_from = ca_culture_connec_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 65
+		gunmen = 10
+		pikemen_defensive = 0.1
+		gunmen_defensive = 0.1
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_angcarib_1 = {
+		desc = ca_culture_angcarib_1_desc
+		potential = {
+			OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				has_building = ca_culture_angcarib_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 30
+		gunmen = 10
+		pikemen_defensive = 0.1
+		gunmen_defensive = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_angcarib_2 = {
+		desc = ca_culture_angcarib_1_desc
+		potential = {
+			OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				has_building = ca_culture_angcarib_1
+				has_building = ca_culture_angcarib_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		upgrades_from = ca_culture_angcarib_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 40
+		gunmen = 10
+		pikemen_defensive = 0.1
+		gunmen_defensive = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_angcarib_3 = {
+		desc = ca_culture_angcarib_1_desc
+		potential = {
+			OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				has_building = ca_culture_angcarib_1
+				has_building = ca_culture_angcarib_2
+				has_building = ca_culture_angcarib_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}		
+		upgrades_from = ca_culture_angcarib_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 50
+		gunmen = 10
+		pikemen_defensive = 0.1
+		gunmen_defensive = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_angcarib_4 = {
+		desc = ca_culture_angcarib_1_desc
+		potential = {
+			OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				has_building = ca_culture_angcarib_1
+				has_building = ca_culture_angcarib_2
+				has_building = ca_culture_angcarib_3
+				has_building = ca_culture_angcarib_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+				culture = caribbanglo
+				culture = kairebiyan
+				}
+			}
+		}
+		upgrades_from = ca_culture_angcarib_3
 		gold_cost = 500
 		build_time = 2190
 		pikemen = 65
