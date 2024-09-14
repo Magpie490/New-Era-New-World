@@ -66,6 +66,26 @@ e_canada = {
 	kanadoi = "Kanadás"
 	minoan = "Kanadás"
 }
+e_texas = {
+	color = { 12 51 127 }
+	color2= { 255 255 20 }
+
+	culture = houstonian
+	capital = 1235 # Travis
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_texas = {
+					is_titular = yes
+				}
+			}
+			e_texas = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 e_grand_orient_host = {
 	color = { 240 240 240 }
 	color2 = { 152 196 21 }
