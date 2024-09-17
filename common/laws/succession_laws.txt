@@ -1230,42 +1230,18 @@ succession_laws = {
 		potential = {
 			holder_scope = {
 				OR = {
-					title = e_carolina
-					title = e_pennsylvania
-					title = e_acadia
-					title = e_magna_virginia
-					title = e_nys
-					title = e_new_england
-					title = e_colorado
+					has_landed_title = e_carolina
+					has_landed_title = e_pennsylvania
+					has_landed_title = e_acadia
+					has_landed_title = e_magna_virginia
+					has_landed_title = e_nys
+					has_landed_title = e_columbia_non
+					has_landed_title = e_new_england
+					has_landed_title = e_colorado
 					should_have_byz_elective_trigger = yes
-					AND = {
-						higher_real_tier_than = KING
-						NOR = {
-							government = eastern_feudal
-							government = chinese_imperial_government
-							government = bhutanese_decayed_government
-							government = bhutanese_restored_government
-							government = neoziamet_government
-							government = oligarchic_republic
-							government = merchant_republic_government
-							government = federal_government
-						}
-						has_law = ze_administration_laws_2
-						OR = {
-							has_law = crown_authority_3
-							has_law = crown_authority_4
-							has_law = centralization_3
-							has_law = centralization_4
-						}
-					}
 				}
 				NOR = { 
 					religion_group = muslim
-					religion = sarvodaya
-					religion = jacobinist
-					religion = titoist
-					religion = stalinist
-					religion = trotskyite
 					has_religion_feature = religion_ritual_sacrifice
 				}
 				is_merchant_republic = no
