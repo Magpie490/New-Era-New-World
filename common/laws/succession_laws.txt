@@ -1288,7 +1288,11 @@ succession_laws = {
 	succ_dynastic_meritocratic = {
 		potential = {
 			holder_scope = {
-				government = mandate_heaven
+				OR = {
+					government = mandate_heaven
+					government = eastern_feudal
+					government = ethiopian_imperial_government
+				}
 				is_merchant_republic = no
 				is_patrician = no
 				OR = {
