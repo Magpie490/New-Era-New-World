@@ -1,0 +1,32 @@
+seventy_west = {
+	wealth = 20			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 252
+			province_id = 344
+			province_id = 351
+			province_id = 389
+			province_id = 424
+		}
+	}
+	
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.04
+		city_tax_modifier = 0.04
+		temple_tax_modifier = 0.04
+		tribal_tax_modifier = 0.04
+		trade_route_value = 3
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.08
+		icon = 61
+	}
+
+	start = {
+		252
+		424
+	}
+#Main route
+	path = {
+		252 250 344 347 352 351 392 949 389 390 966 427 424 ##bluffwoods to mesa
+	}
+}

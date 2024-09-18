@@ -1,0 +1,29 @@
+salihi_path = {
+	wealth = 20			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 263
+			province_id = 209
+		}
+	}
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.04
+		city_tax_modifier = 0.04
+		temple_tax_modifier = 0.04
+		tribal_tax_modifier = 0.04
+		trade_route_value = 3
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.08
+		icon = 61
+	}
+
+	start = {
+		263
+		209
+	}
+#Main route
+	path = {
+		263 264 265 209 ##twin cities to decorah
+	}
+}
