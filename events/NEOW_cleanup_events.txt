@@ -673,6 +673,11 @@ character_event = {
 				add_law = succ_byzantine_elective
 			}
 		}
+		remove_character_modifier = bhutan_crumbled_diplomacy
+		remove_character_modifier = bhutan_crumbled_martial
+		remove_character_modifier = bhutan_crumbled_stewardship
+		remove_character_modifier = bhutan_crumbled_intrigue
+		remove_character_modifier = bhutan_crumbled_learning
 		e_columbia = {
 			show_scope_change = no
 			destroy_landed_title = THIS
@@ -741,6 +746,16 @@ character_event = {
 				add_law = succ_byzantine_elective
 			}
 		}
+		set_global_flag = bhutan_reformed_diplo
+		add_character_modifier = { name = bhutan_reformed_diplomacy duration = -1 }
+		set_global_flag = bhutan_reformed_martial
+		add_character_modifier = { name = bhutan_reformed_martial duration = -1 }
+		set_global_flag = bhutan_reformed_stewardship
+		add_character_modifier = { name = bhutan_reformed_stewardship duration = -1 }
+		set_global_flag = bhutan_reformed_intrigue
+		add_character_modifier = { name = bhutan_reformed_intrigue duration = -1 }
+		set_global_flag = bhutan_reformed_learning
+		add_character_modifier = { name = bhutan_reformed_learning duration = -1 }
 		e_columbia_non = {
 			show_scope_change = no
 			destroy_landed_title = THIS
