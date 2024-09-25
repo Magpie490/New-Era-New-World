@@ -1,0 +1,24 @@
+namespace = zenith
+
+character_event = { #Sun Eater for killing the Sun King
+	id = zenith.100
+	hide_window = yes
+	trigger = {
+		NOT = {
+			trait = sun_eater
+		}
+		any_kill_list_character = {
+			OR = {
+				has_landed_title = e_zenith
+				trait = golden_horus
+				trait = descendant_golden_horus
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		add_trait = sun_eater
+	}
+}
