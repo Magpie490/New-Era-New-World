@@ -2,6 +2,150 @@
  # start trigger is in title scope.
 
 tribal = {
+	#Germanic Halberdiers
+	tb_culture_germanic_heavy_1 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				has_building = tb_culture_germanic_heavy_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}	
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		heavy_infantry = 20
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_germanic_heavy_2 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				has_building = tb_culture_germanic_heavy_1
+				has_building = tb_culture_germanic_heavy_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}	
+		}
+		upgrades_from = tb_culture_germanic_heavy_1
+		prestige_cost = 200
+		build_time = 547
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_germanic_heavy_3 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				has_building = tb_culture_germanic_heavy_1
+				has_building = tb_culture_germanic_heavy_2
+				has_building = tb_culture_germanic_heavy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}	
+		}
+		upgrades_from = tb_culture_germanic_heavy_2
+		gold_cost = 300
+		build_time = 730
+		heavy_infantry = 35
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		convert_to_castle = ca_culture_germanic_heavy_1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_germanic_heavy_4 = {
+		desc = ca_culture_germanic_heavy_1_desc
+		potential = {
+			OR = {
+				culture_group = amerogerman
+				has_building = tb_culture_germanic_heavy_1
+				has_building = tb_culture_germanic_heavy_2
+				has_building = tb_culture_germanic_heavy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+				culture_group = amerogerman
+				}
+			}	
+		}
+		upgrades_from = tb_culture_germanic_heavy_3
+		prestige_cost = 400
+		build_time = 1095
+		heavy_infantry = 40
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		convert_to_castle = ca_culture_germanic_heavy_2
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+
 	tb_culture_newfie_1 = {
 		desc = tb_culture_newfie_1_desc
 		potential = {
