@@ -785,7 +785,22 @@ title_despot = {
 			female_can_hold_minor_title_trigger = yes
 			has_law = true_cognatic_succession
 		}
-		is_close_relative = FROM
+		OR = {
+			is_close_relative = FROM
+			is_friend = FROM
+			AND = {
+				FROM = {
+					trait = democrat_sen
+				}
+				trait = democrat_sen
+			}
+			AND = {
+				FROM = {
+					trait = republican_sen
+				}
+				trait = republican_sen
+			}
+		}
 		NOT = { trait = monk }
 		NOT = { trait = nun }
 		NOT = { trait = eunuch }
@@ -794,18 +809,7 @@ title_despot = {
 	
 	allowed_to_grant = {
 		is_feudal = yes
-		OR = {
-			has_landed_title = e_byzantium
-			has_landed_title = e_roman_empire
-			has_landed_title = e_marblists
-		}
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			religion_group = pagan_group
-			religion_group = syncratic_group
-			religion = poseidonian
-		}
+		has_landed_title = e_columbia
 	}
 	
 	gain_effect = {

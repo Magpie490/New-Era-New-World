@@ -127,6 +127,72 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = cleanup.9993
+	desc = "replacegrandmistress"
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = d_stewardess
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 30
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 35
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 40
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 45
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 50
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 55
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				religion = gaian
+				culture = laikhman
+				female = yes
+				age = 60
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
 province_event = {
 	id = cleanup.6777
 	hide_window = yes	
@@ -835,7 +901,7 @@ character_event = {
 	hide_window = yes
 
 	trigger = {
-		has_landed_title = d_orleanist_order
+		has_landed_title = d_gaian_order
 	}
 	
 	option = {
@@ -843,50 +909,50 @@ character_event = {
 		random_list = {
 			10 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 30
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 35
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 40
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 45
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 50
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 55
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
-				religion = orleanist
-				culture = french
+				religion = gaian
+				culture = laikhman
 				female = yes
 				age = 60
 			} }
@@ -1133,7 +1199,7 @@ character_event = {
 	
 	trigger = {
 		NOR = {
-			religion = orleanist
+			religion = gaian
 			religion = novelist
 			religion = novelist_reformed
 			religion = summer_queen
@@ -1257,49 +1323,49 @@ character_event = {
 			10 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 30
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 35
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 40
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 45
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 50
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 55
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				religion = raelian
-				culture = french
+				culture = laikhman
 				female = yes
 				age = 60
 			} }
@@ -5430,7 +5496,7 @@ province_event = {
 	hide_window = yes	
 	
 	trigger = {
-		religion = orleanist
+		religion = gaian
 		owner = {
 			OR = {
 				religion = thelemic_reformed
@@ -5439,7 +5505,7 @@ province_event = {
 			}
 		}
 		NOT = {
-			has_province_modifier = orleanist_peasant_unrest
+			has_province_modifier = gaian_peasant_unrest
 		}
 	}
 	mean_time_to_happen = {
@@ -5447,7 +5513,7 @@ province_event = {
 	}
 	immediate={
 		add_province_modifier = {
-			name = orleanist_peasant_unrest
+			name = gaian_peasant_unrest
 			duration = -1
 		}
 	}
@@ -5464,16 +5530,16 @@ province_event = {
 					religion = orange_king
 					religion = summer_queen
 				}
-				NOT = { religion = orleanist }
+				NOT = { religion = gaian }
 			}
 		}
-		has_province_modifier = orleanist_peasant_unrest
+		has_province_modifier = gaian_peasant_unrest
 	}
 	mean_time_to_happen = {
 		days = 1
 	}
 	immediate={
-		remove_province_modifier = orleanist_peasant_unrest
+		remove_province_modifier = gaian_peasant_unrest
 	}
 }
 province_event = {
