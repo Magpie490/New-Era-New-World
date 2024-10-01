@@ -1,0 +1,587 @@
+namespace = abolitionists
+
+# JOHN BROWN TIME
+narrative_event = {
+	id = abolitionists.1
+	title = EVTNAMEABOLITIONIST1
+	desc = EVTDESCABOLITIONIST1
+	picture = GFX_evt_abolitionist_revolution_john_brown
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	only_playable = yes
+	only_independent = yes
+	portrait = event_target:abolitionist_invasion_leader
+	show_ROOT = yes
+	trigger = {
+		abolitionist_revolution_trigger = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 3000
+		modifier = {
+			factor = 0.25
+			c_atlanta = {
+				holder_scope = {
+					same_realm = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			year = 2600
+		}
+		modifier = {
+			factor = 2.0
+			year = 2700
+		}
+		modifier = {
+			factor = 2.0
+			year = 2800
+		}
+		modifier = {
+			factor = 2.0
+			year = 2900
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 10.0
+			ai = no
+		}
+	}
+	
+	immediate = {
+		set_character_flag = abolitionist_revolt
+		set_global_flag = abolitionist_revolt_ongoing
+		random_realm_province = {
+			limit = {
+				kingdom = {
+					OR = {
+						has_holder = no
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					num_title_realm_provs = {
+						who = ROOT
+						value = 4
+					}
+				}
+			}
+			preferred_limit = {
+				ROOT = {
+					ai = yes
+					capital_scope = {
+						province = PREVPREV
+					}
+				}
+			}
+			preferred_limit = {
+				kingdom = {
+					num_title_realm_provs = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			preferred_limit = {
+				kingdom = {
+					num_title_realm_provs = {
+						who = ROOT
+						value = 6
+					}
+				}
+			}
+			save_event_target_as = spawn_province
+		}		
+		event_target:spawn_province = {
+	
+			religion = abolitionist
+			
+		
+			ROOT = {
+				create_character = {
+					dynasty = random
+					religion = abolitionist
+					culture = ROOT
+					female = no
+					age = 19
+					health = 7
+					fertility = 0.7
+					random_traits = yes
+					attributes = {
+						learning = 4
+						diplomacy = 4
+						martial = 6
+						stewardship = 4
+						intrigue = 4
+					}
+				}
+				
+				new_character = {
+					set_character_flag = abolitionist_leader
+					save_global_event_target_as = abolitionist_invasion_leader
+					remove_trait = slow
+					remove_trait = imbecile
+					remove_trait = dull
+					remove_lifestyle_trait_effect = yes
+					remove_trait = craven
+					remove_trait = ugly
+					remove_trait = uncouth
+					remove_trait = feeble
+					remove_trait = dwarf
+					remove_trait = giant
+					remove_trait = clubfooted
+					remove_trait = harelip
+					remove_trait = hunchback
+					remove_trait = lisp
+					remove_trait = weak
+					remove_trait = lunatic
+					remove_trait = shrewd
+					remove_trait = quick
+					remove_trait = genius
+					remove_trait = strong
+					remove_trait = cynical
+					remove_trait = content
+					remove_trait = fair
+					remove_trait = barren
+					remove_trait = haemophiliac
+					random_list = {
+						1 = { change_learning = 2 }
+						1 = { change_diplomacy = 2 }
+						1 = { change_stewardship = 2 }
+						1 = { change_intrigue = 2 }
+						1 = { change_martial = 2 }
+					}
+					random_list = {
+						1 = { change_learning = 3 }
+						1 = { change_diplomacy = 3 }
+						1 = { change_stewardship = 3 }
+						1 = { change_intrigue = 3 }
+						1 = { change_martial = 3 }
+					}
+					random_list = {
+						5 = { }
+						15 = { add_trait = strong }
+						30 = { add_trait = fair }
+						3 = { add_trait = strong add_trait = fair }
+					}
+					random_list = {
+						5 = { }
+						15 = { add_trait = shrewd }
+						30 = { add_trait = quick }
+						3 = { add_trait = genius }
+					}
+					remove_education_effect = yes
+					random_list = {
+						10 = { add_trait = scholarly_theologian }
+						20 = { add_trait = mastermind_theologian }
+					}
+					random_list = {
+						10 = { change_learning = 2 }
+						10 = { add_trait = theologian }
+						10 = { add_trait = scholar }
+						20 = { add_trait = mystic }
+					}
+					add_trait = zealous
+					if = {
+						limit = { ROOT = { ai = yes } }
+						wealth = 1000
+					}
+					if = {
+						limit = { ROOT = { ai = no } }
+						wealth = 250
+					}
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = yes
+						culture = ROOT
+						name = ABOLITIONIST_REVOLUTION
+						holder = THIS
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						trait = brilliant_strategist
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 27
+						trait = brilliant_strategist
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 25
+						trait = skilled_tactician
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						trait = skilled_tactician
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 27
+						trait = skilled_tactician
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								disband_on_peace = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								disband_on_peace = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 24
+						trait = skilled_tactician
+					}
+					new_character = {
+						if = {
+							limit = { ROOT = { ai = yes } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.25
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								disband_on_peace = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.33
+							}
+						}
+						if = {
+							limit = { ROOT = { ai = no } }
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								match_character = PREVPREV
+								match_mult = 0.15
+								match_min = 500
+								match_max = 2000
+								attrition = 0.5
+								cannot_inherit = yes
+								disband_on_peace = yes
+								reinforces = yes
+								reinforce_rate_multiplier = 0.25
+							}
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 32
+						trait = brilliant_strategist
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							match_character = PREVPREV
+							match_mult = 0.2
+							match_min = 500
+							match_max = 2000
+							attrition = 0.0
+							cannot_inherit = yes
+							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 25
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							match_character = PREVPREV
+							match_mult = 0.2
+							match_min = 500
+							match_max = 2000
+							attrition = 0.0
+							cannot_inherit = yes
+							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 28
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							match_character = PREVPREV
+							match_mult = 0.2
+							match_min = 500
+							match_max = 2000
+							attrition = 0.0
+							cannot_inherit = yes
+							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					war = {
+						target = ROOT
+						casus_belli = jacobin_rising
+						thirdparty_title = PREVPREV
+						tier = KING
+					}
+					save_persistent_event_target = { name = abolitionist_revolution_target scope = PREVPREV }
+					add_character_modifier = { name = abolitionist_revolution_leader duration = -1 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAJB1"
+		trigger = {
+			has_character_flag = abolitionist_revolt 
+		}
+		clr_character_flag = abolitionist_revolt
+	}
+	
+	option = {
+		name = "EVTOPTBJB1"
+		trigger = {
+			religion = abolitionist
+		}
+	}
+	option = {
+		name = "EVTOPTCJB1"
+		trigger = {
+			NOT = { religion = abolitionist }
+			NOT = { has_character_flag = abolitionist_revolt }
+		}
+	}
+	option = {
+		name = "EVTOPTDJB1"
+		tooltip_info = yes
+		trigger = {
+			can_plays_as_invader_trigger = yes
+		}
+		clr_character_flag = abolitionist_revolt
+		play_as_jacobin_invasion_leader_effect = yes
+	}
+}
