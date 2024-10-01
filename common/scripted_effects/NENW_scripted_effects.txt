@@ -1,0 +1,14 @@
+play_as_abolitionist_invasion_leader_effect = {
+	if = {
+		limit = {
+			event_target:abolitionist_invasion_leader = {
+				ai = yes
+				is_playable = yes
+			}
+		}
+		custom_tooltip = {
+			text = player_character_invasion_leader_TT
+			set_player_character = event_target:abolitionist_invasion_leader
+		}
+	}
+}
