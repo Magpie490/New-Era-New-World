@@ -84,7 +84,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 14
 		modifier = {
 			factor = 0.05
 			OR = {
@@ -536,21 +536,13 @@ character_event = {
 						}
 						primary_title = {
 							OR = {
-								has_law = feudal_obligations_1
-								has_law = feudal_obligations_2
-								has_law = feudal_obligations_3
-								has_law = feudal_obligations_4
-								has_law = iqta_obligations_1
-								has_law = iqta_obligations_2
-								has_law = iqta_obligations_3
-								has_law = iqta_obligations_4
 								AND = {
 									ROOT = { is_tribal = yes }
 									OR = {
-										has_law = tribal_obligations_1
-										has_law = tribal_obligations_2
-										has_law = tribal_obligations_3
-										has_law = tribal_obligations_4
+										has_law = tribal_contract_0
+										has_law = tribal_contract_1
+										has_law = tribal_contract_2
+										has_law = tribal_contract_3
 									}
 								}
 							}
@@ -586,15 +578,15 @@ character_event = {
 						}
 						primary_title = {
 							OR = {
-								has_law = city_obligations_1
-								has_law = city_obligations_2
-								has_law = city_obligations_3
-								has_law = city_obligations_4
-								has_law = feudal_obligations_4
-								has_law = iqta_obligations_4
+								has_law = city_contract_0
+								has_law = city_contract_1
+								has_law = city_contract_2
+								has_law = city_contract_3
+								has_law = feudal_contract_3
+								has_law = iqta_contract_3
 								AND = {
 									ROOT = { is_tribal = yes }
-									has_law = tribal_obligations_4
+									has_law = tribal_contract_3
 								}
 							}
 						}
@@ -647,15 +639,15 @@ character_event = {
 						}
 						primary_title = {
 							OR = {
-								has_law = feudal_obligations_3
-								has_law = feudal_obligations_4
-								has_law = iqta_obligations_3
-								has_law = iqta_obligations_4
+								has_law = feudal_contract_2
+								has_law = feudal_contract_3
+								has_law = iqta_contract_2
+								has_law = iqta_contract_3
 								AND = {
 									ROOT = { is_tribal = yes }
 									OR = {
-										has_law = tribal_obligations_3
-										has_law = tribal_obligations_4
+										has_law = tribal_contract_2
+										has_law = tribal_contract_3
 									}
 								}
 							}
@@ -709,10 +701,15 @@ character_event = {
 						}
 						primary_title = {
 							OR = {
-								has_law = temple_obligations_1
-								has_law = temple_obligations_2
-								has_law = temple_obligations_3
-								has_law = temple_obligations_4
+								has_law = tax_levy_law_theocracy_0
+								has_law = tax_levy_law_theocracy_1
+								has_law = tax_levy_law_theocracy_2
+								has_law = tax_levy_law_theocracy_3
+								has_law = tax_levy_law_theocracy_4
+								has_law = tax_levy_law_theocracy_5
+								has_law = tax_levy_law_theocracy_6
+								has_law = tax_levy_law_theocracy_7
+								has_law = tax_levy_law_theocracy_8
 								has_title_flag = former_gavelkind
 								has_title_flag = former_seniority
 								has_title_flag = former_primogeniture
@@ -4608,14 +4605,14 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = feudal_obligations_1
-						has_law = feudal_obligations_2
-						has_law = feudal_obligations_3
-						has_law = feudal_obligations_4
-						has_law = iqta_obligations_1
-						has_law = iqta_obligations_2
-						has_law = iqta_obligations_3
-						has_law = iqta_obligations_4
+						has_law = feudal_contract_0
+						has_law = feudal_contract_1
+						has_law = feudal_contract_2
+						has_law = feudal_contract_3
+						has_law = iqta_contract_0
+						has_law = iqta_contract_1
+						has_law = iqta_contract_2
+						has_law = iqta_contract_3
 					}
 				}
 			}
@@ -4639,8 +4636,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_1
-							has_law = iqta_obligations_1
+							has_law = feudal_contract_0
+							has_law = iqta_contract_0
 						}	
 					}
 				}
@@ -4650,8 +4647,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_2
-							has_law = iqta_obligations_2
+							has_law = feudal_contract_1
+							has_law = iqta_contract_1
 						}	
 					}
 				}
@@ -4661,8 +4658,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_3
-							has_law = iqta_obligations_3
+							has_law = feudal_contract_2
+							has_law = iqta_contract_2
 						}	
 					}
 				}
@@ -4672,8 +4669,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_4
-							has_law = iqta_obligations_4
+							has_law = feudal_contract_3
+							has_law = iqta_contract_3
 						}	
 					}
 				}
@@ -4684,10 +4681,10 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = feudal_obligations_3
-							has_law = iqta_obligations_3
-							has_law = feudal_obligations_4
-							has_law = iqta_obligations_4
+							has_law = feudal_contract_2
+							has_law = iqta_contract_2
+							has_law = feudal_contract_3
+							has_law = iqta_contract_3
 						}	
 					}
 				}
@@ -4782,10 +4779,10 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = tribal_obligations_1
-						has_law = tribal_obligations_2
-						has_law = tribal_obligations_3
-						has_law = tribal_obligations_4
+						has_law = tribal_contract_0
+						has_law = tribal_contract_1
+						has_law = tribal_contract_2
+						has_law = tribal_contract_3
 					}
 				}
 			}
@@ -4808,7 +4805,7 @@ character_event = {
 				factor = 0.5
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_1	
+						has_law = tribal_contract_0	
 					}
 				}
 			}
@@ -4816,7 +4813,7 @@ character_event = {
 				factor = 1.25
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_2	
+						has_law = tribal_contract_1	
 					}
 				}
 			}
@@ -4824,7 +4821,7 @@ character_event = {
 				factor = 1.5
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_3
+						has_law = tribal_contract_2
 					}
 				}
 			}
@@ -4832,7 +4829,7 @@ character_event = {
 				factor = 2.0
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_4	
+						has_law = tribal_contract_3	
 					}
 				}
 			}
@@ -4842,8 +4839,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = tribal_obligations_3
-							has_law = tribal_obligations_4
+							has_law = tribal_contract_2
+							has_law = tribal_contract_3
 						}	
 					}
 				}
@@ -4886,10 +4883,10 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = city_obligations_1
-						has_law = city_obligations_2
-						has_law = city_obligations_3
-						has_law = city_obligations_4
+						has_law = city_contract_0
+						has_law = city_contract_1
+						has_law = city_contract_2
+						has_law = city_contract_3
 					}
 				}
 			}
@@ -4912,7 +4909,7 @@ character_event = {
 				factor = 0.5
 				liege = {
 					primary_title = {
-						has_law = city_obligations_1	
+						has_law = city_contract_0	
 					}
 				}
 			}
@@ -4920,7 +4917,7 @@ character_event = {
 				factor = 1.25
 				liege = {
 					primary_title = {
-						has_law = city_obligations_2	
+						has_law = city_contract_1	
 					}
 				}
 			}
@@ -4928,7 +4925,7 @@ character_event = {
 				factor = 1.5
 				liege = {
 					primary_title = {
-						has_law = city_obligations_3	
+						has_law = city_contract_2	
 					}
 				}
 			}
@@ -4936,7 +4933,7 @@ character_event = {
 				factor = 2.0
 				liege = {
 					primary_title = {
-						has_law = city_obligations_4	
+						has_law = city_contract_3	
 					}
 				}
 			}
@@ -4946,8 +4943,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = city_obligations_3
-							has_law = city_obligations_4
+							has_law = city_contract_2
+							has_law = city_contract_3
 						}	
 					}
 				}
@@ -5098,10 +5095,15 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = temple_obligations_1
-						has_law = temple_obligations_2
-						has_law = temple_obligations_3
-						has_law = temple_obligations_4
+						has_law = tax_levy_law_theocracy_0
+						has_law = tax_levy_law_theocracy_1
+						has_law = tax_levy_law_theocracy_2
+						has_law = tax_levy_law_theocracy_3
+						has_law = tax_levy_law_theocracy_4
+						has_law = tax_levy_law_theocracy_5
+						has_law = tax_levy_law_theocracy_6
+						has_law = tax_levy_law_theocracy_7
+						has_law = tax_levy_law_theocracy_8
 					}
 				}
 			}
@@ -5112,7 +5114,10 @@ character_event = {
 				factor = 0
 				liege = {
 					primary_title = {
-						NOT = { has_law = temple_obligations_4 }
+						NOR = { 
+							has_law = tax_levy_law_theocracy_7
+							has_law = tax_levy_law_theocracy_8
+						}
 					}
 				}
 			}
@@ -5152,14 +5157,14 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = feudal_obligations_1
-						has_law = feudal_obligations_2
-						has_law = feudal_obligations_3
-						has_law = feudal_obligations_4
-						has_law = iqta_obligations_1
-						has_law = iqta_obligations_2
-						has_law = iqta_obligations_3
-						has_law = iqta_obligations_4
+						has_law = feudal_contract_0
+						has_law = feudal_contract_1
+						has_law = feudal_contract_2
+						has_law = feudal_contract_3
+						has_law = iqta_contract_0
+						has_law = iqta_contract_1
+						has_law = iqta_contract_2
+						has_law = iqta_contract_3
 					}
 				}
 			}
@@ -5171,8 +5176,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = feudal_obligations_4
-							has_law = iqta_obligations_4
+							has_law = feudal_contract_3
+							has_law = iqta_contract_3
 						}	
 					}
 				}
@@ -5214,10 +5219,10 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = tribal_obligations_1
-						has_law = tribal_obligations_2
-						has_law = tribal_obligations_3
-						has_law = tribal_obligations_4
+						has_law = tribal_contract_0
+						has_law = tribal_contract_1
+						has_law = tribal_contract_2
+						has_law = tribal_contract_3
 					}
 				}
 			}
@@ -5228,7 +5233,7 @@ character_event = {
 				factor = 0
 				liege = {
 					primary_title = {
-						NOT = { has_law = tribal_obligations_4 }
+						NOT = { has_law = tribal_contract_3 }
 					}
 				}
 			}
@@ -5282,14 +5287,24 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = feudal_obligations_1
-						has_law = feudal_obligations_2
-						has_law = feudal_obligations_3
-						has_law = feudal_obligations_4
-						has_law = iqta_obligations_1
-						has_law = iqta_obligations_2
-						has_law = iqta_obligations_3
-						has_law = iqta_obligations_4
+						has_law = tax_levy_law_feudal_0
+						has_law = tax_levy_law_feudal_1
+						has_law = tax_levy_law_feudal_2
+						has_law = tax_levy_law_feudal_3
+						has_law = tax_levy_law_feudal_4
+						has_law = tax_levy_law_feudal_5
+						has_law = tax_levy_law_feudal_6
+						has_law = tax_levy_law_feudal_7
+						has_law = tax_levy_law_feudal_8
+						has_law = tax_levy_law_iqta_0
+						has_law = tax_levy_law_iqta_1
+						has_law = tax_levy_law_iqta_2
+						has_law = tax_levy_law_iqta_3
+						has_law = tax_levy_law_iqta_4
+						has_law = tax_levy_law_iqta_5
+						has_law = tax_levy_law_iqta_6
+						has_law = tax_levy_law_iqta_7
+						has_law = tax_levy_law_iqta_8
 					}
 				}
 			}
@@ -5301,10 +5316,10 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = feudal_obligations_3
-							has_law = iqta_obligations_3
-							has_law = feudal_obligations_4
-							has_law = iqta_obligations_4
+							has_law = tax_levy_law_feudal_7
+							has_law = tax_levy_law_iqta_7
+							has_law = tax_levy_law_feudal_8
+							has_law = tax_levy_law_iqta_8
 						}	
 					}
 				}
@@ -5314,8 +5329,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_3
-							has_law = iqta_obligations_3
+							has_law = tax_levy_law_feudal_7
+							has_law = tax_levy_law_iqta_7
 						}	
 					}
 				}
@@ -5338,8 +5353,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = feudal_obligations_3
-							has_law = iqta_obligations_3
+							has_law = tax_levy_law_feudal_7
+							has_law = tax_levy_law_iqta_7
 						}	
 					}
 				}
@@ -5364,10 +5379,10 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = tribal_obligations_1
-						has_law = tribal_obligations_2
-						has_law = tribal_obligations_3
-						has_law = tribal_obligations_4
+						has_law = tribal_contract_0
+						has_law = tribal_contract_1
+						has_law = tribal_contract_2
+						has_law = tribal_contract_3
 					}
 				}
 			}
@@ -5379,8 +5394,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = tribal_obligations_3
-							has_law = tribal_obligations_4
+							has_law = tribal_contract_2
+							has_law = tribal_contract_3
 						}
 					}
 				}
@@ -5389,7 +5404,7 @@ character_event = {
 				factor = 0.5
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_3	
+						has_law = tribal_contract_2	
 					}
 				}
 			}
@@ -5410,7 +5425,7 @@ character_event = {
 				has_character_flag = faction_is_angry
 				liege = {
 					primary_title = {
-						has_law = tribal_obligations_3	
+						has_law = tribal_contract_2	
 					}
 				}
 			}
@@ -5680,10 +5695,15 @@ character_event = {
 			liege = {
 				primary_title = {
 					OR = {
-						has_law = temple_obligations_1
-						has_law = temple_obligations_2
-						has_law = temple_obligations_3
-						has_law = temple_obligations_4
+						has_law = tax_levy_law_theocracy_0
+						has_law = tax_levy_law_theocracy_1
+						has_law = tax_levy_law_theocracy_2
+						has_law = tax_levy_law_theocracy_3
+						has_law = tax_levy_law_theocracy_4
+						has_law = tax_levy_law_theocracy_5
+						has_law = tax_levy_law_theocracy_6
+						has_law = tax_levy_law_theocracy_7
+						has_law = tax_levy_law_theocracy_8
 					}
 				}
 			}
@@ -5706,7 +5726,10 @@ character_event = {
 				factor = 0.5
 				liege = {
 					primary_title = {
-						has_law = temple_obligations_1	
+						OR = {
+							has_law = tax_levy_law_theocracy_0
+							has_law = tax_levy_law_theocracy_1
+						}
 					}
 				}
 			}
@@ -5714,7 +5737,7 @@ character_event = {
 				factor = 1.25
 				liege = {
 					primary_title = {
-						has_law = temple_obligations_2	
+						has_law = temple_contract_1	
 					}
 				}
 			}
@@ -5722,7 +5745,7 @@ character_event = {
 				factor = 1.5
 				liege = {
 					primary_title = {
-						has_law = temple_obligations_3	
+						has_law = temple_contract_2	
 					}
 				}
 			}
@@ -5730,7 +5753,7 @@ character_event = {
 				factor = 2.0
 				liege = {
 					primary_title = {
-						has_law = temple_obligations_4	
+						has_law = temple_contract_3	
 					}
 				}
 			}
@@ -5740,8 +5763,8 @@ character_event = {
 				liege = {
 					primary_title = {
 						NOR = {
-							has_law = temple_obligations_3
-							has_law = temple_obligations_4
+							has_law = temple_contract_2
+							has_law = temple_contract_3
 						}	
 					}
 				}

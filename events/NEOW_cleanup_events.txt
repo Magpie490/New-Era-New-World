@@ -5433,51 +5433,6 @@ province_event = {
 	trigger = {
 		OR = {
 			owner = {
-				religion = rangerite
-			}
-			NOT = { religion = rangerite }
-		}
-		has_province_modifier = rangerite_peasant_unrest
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate={
-		remove_province_modifier = rangerite_peasant_unrest
-	}
-}
-province_event = {
-	id = cleanup.226
-	hide_window = yes	
-	
-	trigger = {
-		religion = edenite
-		owner = {
-			NOT = {
-				religion = edenite
-			}
-		}
-		NOT = {
-			has_province_modifier = edenite_peasant_unrest
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate={
-		add_province_modifier = {
-			name = edenite_peasant_unrest
-			duration = -1
-		}
-	}
-}
-province_event = {
-	id = cleanup.227
-	hide_window = yes	
-	
-	trigger = {
-		OR = {
-			owner = {
 				religion = edenite
 			}
 			NOT = { religion = edenite }
