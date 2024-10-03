@@ -357,6 +357,28 @@ e_pennsylvania = {
 		}
 	}
 }
+e_florida = {
+	color={ 255 216 0 }
+	color2={ 220 220 0 }
+	
+	capital = 1046 # Tallahassee
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_florida = {
+					is_titular = yes
+				}
+			}
+			e_florida = {
+				is_titular = no
+			}
+		}
+	}
+}
 e_maritimes = {
 	color = { 131 62 168 }
 	color2= { 220 220 0 }
