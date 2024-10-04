@@ -895,6 +895,7 @@ the_assassins = {
 			AND = {
 				religion_group = old_world_cultist_group
 				NOT = { trait = zealous }
+				NOT = { religion = fidelista }
 			}
 			AND = {
 				trait = sympathy_old_world_cultist
@@ -966,7 +967,10 @@ the_assassins = {
 			society_member_of = the_assassins #You can always see the society you are a part of
 			
 				OR = {
-					religion_group = old_world_cultist_group
+					AND = {
+						religion_group = old_world_cultist_group
+						NOT = { religion = fidelista }
+					}
 					secret_religion = constitutional
 					AND = {
 						ai = no
