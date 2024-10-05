@@ -1,0 +1,163 @@
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eirescots_male_clothes_behind"
+		texturefile = "gfx\\characters\\eirescots_male\\eirescots_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_eirescots_male_headgear_behind"
+		texturefile = "gfx\\characters\\eirescots_male\\eirescots_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_eirescots_male_clothes"
+		texturefile = "gfx\\characters\\eirescots_male\\eirescots_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "GFX_eirescots_male_headgear"
+		texturefile = "gfx\\characters\\eirescots_male\\eirescots_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "GFX_eirescots_female_clothes_behind"
+		texturefile = "gfx\\characters\\eirescots_female\\eirescots_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_eirescots_female_headgear_behind"
+		texturefile = "gfx\\characters\\eirescots_female\\eirescots_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_eirescots_female_clothes"
+		texturefile = "gfx\\characters\\eirescots_female\\eirescots_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_eirescots_female_headgear"
+		texturefile = "gfx\\characters\\eirescots_female\\eirescots_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_eirescots_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = bostonian
+					portrait_culture = massachusite
+					portrait_culture = nutmegger
+					portrait_culture = albmonter
+					portrait_culture = vermonter
+					portrait_culture = lobsterfolk
+					portrait_culture = mainer
+					portrait_culture = aroostois
+					portrait_culture = wicker
+					portrait_culture = scotian
+					portrait_culture = acadian
+					portrait_culture = bucherons
+					portrait_culture = brayonne
+					portrait_culture = rivierois
+					portrait_culture = nordien
+					portrait_culture = caillouvian
+					portrait_culture = newfindler
+					portrait_culture = mikmaq
+					portrait_culture = brettonnach
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = {
+			"GFX_eirescots_male_clothes_behind:p3:c0"
+            "GFX_eirescots_male_clothes:p3:c2"
+            "GFX_empty:c3"
+            "GFX_eirescots_male_headgear:p5:c5"
+            "GFX_eirescots_male_headgear_behind:p5:c1"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 4 7 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_eirescots_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = bostonian
+					portrait_culture = massachusite
+					portrait_culture = nutmegger
+					portrait_culture = albmonter
+					portrait_culture = vermonter
+					portrait_culture = lobsterfolk
+					portrait_culture = mainer
+					portrait_culture = aroostois
+					portrait_culture = wicker
+					portrait_culture = scotian
+					portrait_culture = acadian
+					portrait_culture = bucherons
+					portrait_culture = brayonne
+					portrait_culture = rivierois
+					portrait_culture = nordien
+					portrait_culture = caillouvian
+					portrait_culture = newfindler
+					portrait_culture = mikmaq
+					portrait_culture = brettonnach
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = {
+			"GFX_eirescots_female_clothes_behind:p3:c0"
+            "GFX_eirescots_female_clothes:p3:c2"
+            "GFX_empty:c3"
+            "GFX_eirescots_female_headgear:p5:c5"
+            "GFX_eirescots_female_headgear_behind:p5:c1
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+
+}
