@@ -15084,6 +15084,481 @@ castle = {
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
+	
+		ca_culture_vermont_1 = {
+		desc = ca_culture_vermont_1_desc
+		potential = {
+			OR = {
+				culture = vermonter
+				has_building = ca_culture_vermont_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = vermonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = vermonter
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		archers = 15
+		archers_offensive = 0.15
+		archers_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_vermont_2 = {
+		desc = ca_culture_vermont_1_desc
+		potential = {
+			OR = {
+				culture = vermonter
+				has_building = ca_culture_vermont_1
+				has_building = ca_culture_vermont_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_vermont_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		archers = 25
+		archers_offensive = 0.15
+		archers_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_vermont_3 = {
+		desc = ca_culture_vermont_1_desc
+		potential = {
+			OR = {
+				culture = vermonter
+				has_building = ca_culture_vermont_1
+				has_building = ca_culture_vermont_2
+				has_building = ca_culture_vermont_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_vermont_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		archers = 30
+		archers_offensive = 0.15
+		archers_morale = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_vermont_4 = {
+		desc = ca_culture_vermont_1_desc
+		potential = {
+			OR = {
+				culture = vermonter
+				has_building = ca_culture_vermont_1
+				has_building = ca_culture_vermont_2
+				has_building = ca_culture_vermont_3
+				has_building = ca_culture_vermont_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = vermonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_vermont_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		archers = 30
+		archers_offensive = 0.15
+		archers_morale = 0.1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_albmonter_1 = {
+		desc = ca_culture_albmonter_1_desc
+		potential = {
+			OR = {
+				culture = albmonter
+				has_building = ca_culture_albmonter_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = albmonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = albmonter
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		light_cavalry = 15
+		light_cavalry_offensive = 0.15
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_albmonter_2 = {
+		desc = ca_culture_albmonter_1_desc
+		potential = {
+			OR = {
+				culture = albmonter
+				has_building = ca_culture_albmonter_1
+				has_building = ca_culture_albmonter_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_albmonter_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		light_cavalry = 25
+		light_cavalry_offensive = 0.15
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_albmonter_3 = {
+		desc = ca_culture_albmonter_1_desc
+		potential = {
+			OR = {
+				culture = albmonter
+				has_building = ca_culture_albmonter_1
+				has_building = ca_culture_albmonter_2
+				has_building = ca_culture_albmonter_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_albmonter_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		light_cavalry = 30
+		light_cavalry_offensive = 0.15
+		light_cavalry_morale = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_albmonter_4 = {
+		desc = ca_culture_albmonter_1_desc
+		potential = {
+			OR = {
+				culture = albmonter
+				has_building = ca_culture_albmonter_1
+				has_building = ca_culture_albmonter_2
+				has_building = ca_culture_albmonter_3
+				has_building = ca_culture_albmonter_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = albmonter
+				}
+			}
+		}
+		upgrades_from = ca_culture_albmonter_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_morale = 0.1
+		light_cavalry = 30
+		light_cavalry_offensive = 0.15
+		light_cavalry_morale = 0.1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_mainer_1 = {
+		desc = ca_culture_mainer_1_desc
+		potential = {
+			OR = {
+				culture = mainer
+				culture = lobsterfolk
+				has_building = ca_culture_mainer_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = mainer
+				culture = lobsterfolk
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = mainer
+				culture = lobsterfolk
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 30
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.1
+		archers = 15
+		archers_offensive = 0.15
+		archers_defensive = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mainer_2 = {
+		desc = ca_culture_mainer_1_desc
+		potential = {
+			OR = {
+				culture = mainer
+				culture = lobsterfolk
+				has_building = ca_culture_mainer_1
+				has_building = ca_culture_mainer_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		upgrades_from = ca_culture_mainer_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.1
+		archers = 25
+		archers_offensive = 0.15
+		archers_defensive = 0.1
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_mainer_3 = {
+		desc = ca_culture_mainer_1_desc
+		potential = {
+			OR = {
+				culture = mainer
+				culture = lobsterfolk
+				has_building = ca_culture_mainer_1
+				has_building = ca_culture_mainer_2
+				has_building = ca_culture_mainer_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		upgrades_from = ca_culture_mainer_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.1
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.1
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	 ca_culture_mainer_4 = {
+		desc = ca_culture_mainer_1_desc
+		potential = {
+			OR = {
+				culture = mainer
+				culture = lobsterfolk
+				has_building = ca_culture_mainer_1
+				has_building = ca_culture_mainer_2
+				has_building = ca_culture_mainer_3
+				has_building = ca_culture_mainer_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = mainer
+					culture = lobsterfolk
+				}
+			}
+		}
+		upgrades_from = ca_culture_mainer_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 45
+		light_infantry_offensive = 0.15
+		light_infantry_defensive = 0.1
+		archers = 30
+		archers_offensive = 0.15
+		archers_defensive = 0.1
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
 	ca_culture_angcarib_1 = {
 		desc = ca_culture_angcarib_1_desc
 		potential = {

@@ -1084,6 +1084,96 @@ RETTYPE_CUL_VIET =
 		# heavy_infantry_morale = 0.2
 	# }
 # }
+
+RETTYPE_CUL_VERMONT =
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = vermonter
+			any_realm_province = {
+				OR = {
+		culture = vermonter
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
+		archers_offensive = 0.25
+		archers_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_ALBMONT =
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 3
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture = albmonter
+			any_realm_province = {
+				OR = {
+		culture = albmonter
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_MAINE =
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = mainer
+			culture = lobsterfolk
+			any_realm_province = {
+				OR = {
+			culture = mainer
+			culture = lobsterfolk
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_defensive = 0.2
+		archers_offensive = 0.25
+		archers_defensive = 0.2
+	}
+}
+
 RETTYPE_CUL_SOUTHERN = 
 {
 	first_type = 4
