@@ -1494,6 +1494,86 @@ decisions = {
 			d_lowcountry = { de_jure_liege = k_gullah }
 		}
 	}
+	form_three_fires = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture_group = ojibwe
+			e_three_fires = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_upnord
+			completely_controls = k_superior
+			completely_controls = k_aurora
+			completely_controls = k_soo
+			completely_controls = k_ottawa
+			completely_controls = k_ontario
+		}
+		effect = {
+			e_three_fires = { gain_empire_effect = yes }
+			k_upnord = { de_jure_liege = e_three_fires }
+			k_superior = { de_jure_liege = e_three_fires }
+			k_aurora = { de_jure_liege = e_three_fires }
+			k_soo = { de_jure_liege = e_three_fires }
+			k_ottawa = { de_jure_liege = e_three_fires }
+			k_ontario = { de_jure_liege = e_three_fires }
+			if = {
+				limit = { completely_controls = k_midmishigan }
+				k_midmishigan = { de_jure_liege = e_three_fires }
+			}
+			if = {
+				limit = { completely_controls = k_michigan }
+				k_michigan = { de_jure_liege = e_three_fires }
+			}
+			if = {
+				limit = { completely_controls = k_mishiana }
+				k_mishiana = { de_jure_liege = e_three_fires }
+			}
+			if = {
+				limit = { completely_controls = k_windgarden }
+				k_windgarden = { de_jure_liege = e_three_fires }
+			}
+		}
+	}
+	form_haudenosaunee = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture_group = haudenosaunee
+			e_haudenosaunee = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_buffalo
+			completely_controls = k_adirondack
+		}
+		effect = {
+			e_haudenosaunee = { gain_empire_effect = yes }
+			k_buffalo = { de_jure_liege = e_haudenosaunee }
+			k_adirondack = { de_jure_liege = e_haudenosaunee }
+			if = {
+				limit = { completely_controls = d_mohawk_valley }
+				d_mohawk_valley = { de_jure_liege = k_adirondack }
+			}
+ 			if = {
+				limit = { completely_controls = d_catskill }
+				d_catskill = { de_jure_liege = k_buffalo }
+			}
+		}
+	}
 	form_wabanaki = {
 		is_high_prio = yes
 		only_playable = yes
