@@ -1065,25 +1065,160 @@ RETTYPE_CUL_VIET =
 	}
 }
 
-# RETTYPE_CUL_YANKEE = 
-# {
-	# first_type = 1
-	# first_amount = 200
+RETTYPE_CUL_HIGH_AMERICAN = 
+{
+	first_type = 6
+	first_amount = 150
 	
-	# potential = {
-		# higher_tier_than = BARON
-		# is_nomadic = no
-		# OR = {
-			# culture = maritimer
-			# culture = newfie
-		# }
-	# }
+	special_troops = gunmen
 	
-	# modifier = {
-		# heavy_infantry_defensive = 0.4
-		# heavy_infantry_morale = 0.2
-	# }
-# }
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = high_american
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				any_realm_province = {
+				OR = {
+				culture_group = high_american
+				culture = amherican
+				culture = chamerian
+				culture = hindi
+				}
+			}
+		}
+				NOR = {
+				culture = keystoner
+				culture = ballimorian
+				culture = southron
+				culture = desi
+				}
+			 any_realm_province = {
+				NOR = {
+				culture = keystoner
+				culture = ballimorian
+				culture = southron
+				culture = desi
+			}
+		}
+	}
+	
+	 modifier = {
+		gunmen_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_HELLFIGHTER = 
+{
+	first_type = 6
+	first_amount = 150
+	
+	special_troops = gunmen
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			culture_group = afronortherner
+			culture = ballimorian
+			 any_realm_province = {
+				OR = {
+				culture_group = afronortherner
+				culture = ballimorian
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		gunmen_offensive = 0.3
+		gunmen_morale = 0.25
+	}
+}	
+
+RETTYPE_CUL_HUDSUNITE = 
+{
+	first_type = 1
+	first_amount = 350
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = hudsunite
+			 any_realm_province = {
+				OR = {
+			culture = hudsunite
+				}
+			}
+		 }
+	 }
+	
+	 modifier = {
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_offensive = 0.25
+		archers_defensive = 0.3
+		archers_offensive = 0.25
+	}
+}
+
+RETTYPE_CUL_CATSKILLER = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = catskiller
+			 any_realm_province = {
+				OR = {
+			culture = catskiller
+				}
+			}
+		 }
+	 }
+	
+	 modifier = {
+		archers_defensive = 0.3
+		archers_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_FINGERLAKER = 
+{
+	first_type = 0
+	first_amount = 300
+
+	second_type = 5
+	second_amount = 250
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = finger_laker
+			 any_realm_province = {
+				OR = {
+			culture = finger_laker
+				}
+			}
+		 }
+	 }
+	
+	 modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_morale = 0.25
+		archers_offensive = 0.3
+		archers_morale = 0.25
+	}
+}
 
 RETTYPE_CUL_VERMONT =
 {
@@ -2312,6 +2447,32 @@ RETTYPE_CUL_LENAPE =
 		heavy_infantry_morale = 0.2
 		archers_offensive = 0.25
 		archers_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_HAUDENOSAUNEE =
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = superheavy_infantry
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		culture_group = haudenosaunee
+			any_realm_province = {
+				OR = {
+		culture_group = haudenosaunee
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		superheavy_infantry_offensive = 0.3
+		superheavy_infantry_morale = 0.3
 	}
 }
 
