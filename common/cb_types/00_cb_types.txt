@@ -3359,6 +3359,13 @@ crusade = {
 					}
 				}
 				trigger_else_if = {
+					limit = { religion = columbian }
+					custom_tooltip = {
+						text = CTT_COLUMBIAN_CRUSADES_UNLOCKED
+						has_global_flag = columbian_crusades_unlocked
+					}
+				}
+				trigger_else_if = {
 					limit = { religion = sedevacantist }
 					custom_tooltip = {
 						text = CTT_GALLICANIST_CRUSADES_UNLOCKED
