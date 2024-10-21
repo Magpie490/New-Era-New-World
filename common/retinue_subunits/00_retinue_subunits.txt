@@ -1220,6 +1220,32 @@ RETTYPE_CUL_FINGERLAKER =
 	}
 }
 
+RETTYPE_CUL_KEYSTONER = 
+{
+	first_type = 6
+	first_amount = 150
+	
+	special_troops = gunmen
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = keystoner
+				any_realm_province = {
+				OR = {
+				culture = keystoner
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		gunmen_offensive = 0.2
+		gunmen_morale = 0.2
+	}
+}
+
 RETTYPE_CUL_VERMONT =
 {
 	first_type = 0
