@@ -5464,6 +5464,233 @@ tribal = {
 		tax_income = -0.2
 	}
 	
+	tb_culture_southern_1 = {
+		desc = ca_culture_southern_1_desc
+		potential = {
+			OR = { 
+				culture_group = southerner
+				has_building = tb_culture_southern_1
+			}
+			NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		prestige_cost = 100
+		build_time = 365
+		knights = 25
+		superheavy_infantry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.1
+		superheavy_infantry_offensive = 0.15
+		superheavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_southern_2 = {
+		desc = ca_culture_southern_1_desc
+		potential = {
+			OR = { 
+				culture_group = southerner
+				has_building = tb_culture_southern_1
+				has_building = tb_culture_southern_2
+			}
+			NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		upgrades_from = tb_culture_southern_1
+		prestige_cost = 200
+		build_time = 547
+		knights = 25
+		superheavy_infantry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.1
+		superheavy_infantry_offensive = 0.15
+		superheavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_southern_3 = {
+		desc = ca_culture_southern_1_desc
+		potential = {
+			OR = { 
+				culture_group = southerner
+				has_building = tb_culture_southern_1
+				has_building = tb_culture_southern_2
+				has_building = tb_culture_southern_3
+			}
+			NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		upgrades_from = tb_culture_southern_2
+		prestige_cost = 300
+		build_time = 730
+		knights = 35
+		superheavy_infantry = 20
+		knights_offensive = 0.15
+		knights_morale = 0.1
+		superheavy_infantry_offensive = 0.15
+		superheavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	tb_culture_southern_4 = {
+		desc = ca_culture_southern_1_desc
+		potential = {
+			OR = { 
+				culture_group = southerner
+				has_building = tb_culture_southern_1
+				has_building = tb_culture_southern_2
+				has_building = tb_culture_southern_3
+				has_building = tb_culture_southern_4
+			}
+			NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = {
+				OR = {
+				culture_group = southerner
+				}
+				NOR = {
+				culture = lumbee
+				culture = arkensawyer
+				culture = crabber
+				culture = hoi_toider
+				}
+			}
+		}
+		upgrades_from = tb_culture_southern_3
+		prestige_cost = 400
+		build_time = 1095
+		knights = 25
+		superheavy_infantry = 10
+		knights_offensive = 0.15
+		knights_morale = 0.1
+		superheavy_infantry_offensive = 0.15
+		superheavy_infantry_morale = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 	
 	tb_culture_hellfighters_1 = {
 		desc = ca_culture_hellfighters_1_desc
