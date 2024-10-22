@@ -22,13 +22,18 @@ narrative_event = { #Columbian Crusades Start - New York City is reclaimed from 
 		}
 		controls_religion = yes
 		NOT = { has_global_flag = columbian_crusades_unlocked }
-		d_new_york = {
-			owner = { top_liege = { religion = columbian } }
-		}		
+		OR = {
+			d_new_york = {
+				owner = { top_liege = { religion = columbian } }
+			}
+			c_manhattan = {
+				owner = { top_liege = { religion = columbian } }
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 24
+		days = 30
 	}
 	
 	immediate = {
