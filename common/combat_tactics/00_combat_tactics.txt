@@ -3673,49 +3673,6 @@ clever_ambush_tactic = {
 				value = 0.2
 			}
 		}
-		modifier = {
-			factor = 1.5
-			flank_has_leader = yes
-			leader = {
-				martial = 14
-			}
-			OR = {
-				troops = {
-					who = light_cavalry
-					value = 0.2
-				}
-				troops = {
-					who = camel_cavalry
-					value = 0.2
-				}
-			}
-			troops = {
-				who = light_infantry
-				value = 0.2
-			}
-		}
-		modifier = {
-			factor = 3
-			flank_has_leader = yes
-			leader = {
-				martial = 14
-				trait = trickster
-			}
-			OR = {
-				troops = {
-					who = light_cavalry
-					value = 0.2
-				}
-				troops = {
-					who = camel_cavalry
-					value = 0.2
-				}
-			}
-			troops = { 
-				who = light_infantry
-				value = 0.2
-			}
-		}
 	}
 
 	light_cavalry_offensive = 0.6
