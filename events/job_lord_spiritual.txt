@@ -1040,6 +1040,22 @@ character_event = {
 				region = world_middle_east
 			}
 		}
+
+		# Some religions are just better at conversion/resistance
+		mult_modifier = {
+			factor = 1.5
+			has_job_action = action_inquisition
+			OR = {
+				location = { religion = amaitist }
+			}
+		}
+		mult_modifier = {
+			factor = 0.75
+			has_job_action = action_inquisition
+			OR = {
+				religion = amaitist
+			}
+		}
 		
 		mult_modifier = {
 			factor = 1.5
