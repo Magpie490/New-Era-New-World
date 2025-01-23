@@ -230,5 +230,85 @@ decisions = {
 			factor = 1
 		}
 	}
+	employ_soldier_custodite = {
+		ai = no
+		only_playable = yes
+
+		potential = {
+			NOT = {
+				primary_title = { title = e_bhutan }
+			}
+			religion = custodite
+		}
+		allow = {
+			prestige = 25
+			scaled_wealth = { value = 0.25 min = 10 max = 200 }
+			NOT = {
+				has_character_modifier = in_seclusion
+			}
+		}
+		effect = {
+			set_character_flag = recent_minor_decision
+			prestige = -25
+			scaled_wealth = { value = -0.25 min = -10 max = -200 }
+			hidden_tooltip = {
+				if = {
+					limit = { any_owned_bloodline = { has_bloodline_flag = bloodline_inspire_commanders } }
+					random_list = {
+						80 = {
+							spawn_great_commander_effect = yes
+						}
+						20 = {
+							spawn_fantastic_commander_effect = yes
+							new_character = {
+								opinion = {
+			 						modifier = opinion_legendary_commander
+			 						years = 50
+			 		  				who = ROOT
+			 					}
+							}
+						}
+					}
+				}
+				else = {
+					random_list = {
+						30 = { spawn_good_commander_effect = yes }
+						60 = { spawn_great_commander_effect = yes }
+						10 = {
+							spawn_fantastic_commander_effect = yes
+							new_character = {
+								opinion = {
+			 						modifier = opinion_legendary_commander
+			 						years = 50
+			 		  				who = ROOT
+			 					}
+							}
+						}
+					}
+
+				}
+			}
+			custom_tooltip = { text = promoted_commander_TT }
+			character_event = { id = NE.1 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			
+			
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 1095
+					}
+				}
+			}
+		}
+	}
 
 }
