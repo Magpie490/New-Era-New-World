@@ -3046,4 +3046,36 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_e_custodite = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			e_custodite = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+			religion = custodite
+		}
+		allow = {
+			realm_size = 1#50
+			num_of_vassals = 1#3
+		}
+		effect = {
+			gain_title = e_custodite
+			add_law = parliament_laws_custodite_2
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_custodite }
+				}
+				destroy_landed_title = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
 }
