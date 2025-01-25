@@ -2012,6 +2012,22 @@ k_blue_ridge = {
             copy_title_history = PREV
         }
     }
+    e_dixie = {
+            save_persistent_event_target = { name = novelist_title scope = e_the_reach }
+        save_persistent_event_target = { name = non_novelist_title scope = e_dixie_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    e_appalachia = {
+            save_persistent_event_target = { name = novelist_title scope = e_the_vale }
+        save_persistent_event_target = { name = non_novelist_title scope = e_appalachia_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
 
 	}
 }
@@ -2305,6 +2321,18 @@ k_ohio_history = {
                 has_holder = yes
 }
 k_acadiana_history = {
+        has_holder = yes
+            }
+            e_the_reach = {
+                has_holder = yes
+}
+e_dixie_history = {
+        has_holder = yes
+            }
+            e_the_vale = {
+                has_holder = yes
+}
+e_appalachia_history = {
         has_holder = yes
             }
 
@@ -3229,6 +3257,46 @@ if = {
                 }
         }
         k_acadiana_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_the_reach = {
+                        has_holder = yes
+                }
+        }
+        e_the_reach = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_dixie_history = {
+                        has_holder = yes
+                }
+        }
+        e_dixie_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_the_vale = {
+                        has_holder = yes
+                }
+        }
+        e_the_vale = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_appalachia_history = {
+                        has_holder = yes
+                }
+        }
+        e_appalachia_history = {
                 destroy_landed_title = THIS
         }
 }
