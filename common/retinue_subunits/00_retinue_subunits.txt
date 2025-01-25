@@ -2906,6 +2906,116 @@ RETTYPE_CUL_CREE =
 	}
 }
 
+# Custodite Branch Retinues
+
+RETTYPE_CUSTODITE_INFANTRY = {
+	
+	first_type = 1
+	first_amount = 100
+	
+	second_type = 2
+	second_amount = 100		
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		trait = custodite_infantry
+	}
+	modifier = {
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_morale = 0.2
+		pikemen_offensive = 0.25
+		pikemen_morale = 0.2
+	}
+}
+RETTYPE_CUSTODITE_CAVALRY = {
+	
+	first_type = 3
+	first_amount = 150
+	
+	second_type = 6
+	second_amount = 50	
+
+	special_troops = horse_archers	
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		trait = custodite_cavalry
+	}
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.2
+		horse_archers_offensive = 0.25
+		horse_archers_morale = 0.2
+	}
+}
+RETTYPE_CUSTODITE_ARTILLERY = {
+	
+	first_type = 5
+	first_amount = 150
+	
+	second_type = 6
+	second_amount = 50	
+
+	special_troops = heavy_artillery	
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		trait = custodite_artillery
+	}
+	modifier = {
+		archers_offensive = 0.25
+		archers_morale = 0.2
+		heavy_artillery_offensive = 0.25
+		heavy_artillery_morale = 0.2
+	}
+}
+RETTYPE_CUSTODITE_AERIAL = {
+	
+	first_type = 4
+	first_amount = 150
+	
+	second_type = 6
+	second_amount = 50	
+
+	special_troops = chariots
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		trait = custodite_aerial
+	}
+	modifier = {
+		knights_offensive = 0.25
+		knights_morale = 0.2
+		chariots_offensive = 0.25
+		chariots_morale = 0.2
+	}
+}
+RETTYPE_CUSTODITE_MARINE = {
+	
+	first_type = 0
+	first_amount = 150
+	
+	second_type = 6
+	second_amount = 50	
+
+	special_troops = chariots
+
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		trait = custodite_marine
+	}
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
+		chariots_offensive = 0.25
+		chariots_morale = 0.2
+	}
+}
 # Horde
 
 HORDE_RETTYPE_CAV1 = 

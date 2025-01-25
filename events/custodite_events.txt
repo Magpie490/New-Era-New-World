@@ -1,0 +1,88 @@
+namespace = custodite
+
+character_event = {
+	id = custodite.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_custodite_300
+	desc = EVTDESC_custodite_300
+
+	hide_from = yes
+	
+	option = {#Inf
+		name = EVTOPTA_custodite_300
+		add_trait = custodite_infantry
+		clr_character_flag = picking_custodite_branch
+	}
+	
+	option = {#Cav
+		name = EVTOPTB_custodite_300
+		add_trait = custodite_cavalry
+		clr_character_flag = picking_custodite_branch
+	}
+	
+	option = {#Arty
+		name = EVTOPTC_custodite_300
+		add_trait = custodite_artillery
+		clr_character_flag = picking_custodite_branch
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_custodite_300
+		character_event = { id = custodite.301 }
+	}
+}
+character_event = {
+	id = custodite.301
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_custodite_300
+	desc = EVTDESC_custodite_300
+
+	hide_from = yes
+
+	option = {#Mar
+		name = EVTOPTA_custodite_301
+		add_trait = custodite_marine
+		clr_character_flag = picking_custodite_branch
+	}
+	
+	option = {#Air
+		name = EVTOPTB_custodite_301
+		add_trait = custodite_aerial
+		clr_character_flag = picking_custodite_branch
+	}
+	
+	option = {#Army
+		name = EVTOPTC_custodite_301
+		character_event = { id = custodite.300 }
+	}
+	
+	option = {#Cancel
+		name = EVTOPTD_custodite_301
+		piety = 20 #Partial refund so armory can yell at you for losing 5 of Uncle Sam's piety
+		clr_character_flag = picking_custodite_branch
+	}
+}
+letter_event = {
+	id = custodite.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = EVTDESC_custodite_300
+	hide_window = yes
+	option = {
+		name = EVTOPTD_custodite_300
+		random_list = {
+			10 = { add_trait = custodite_infantry }
+			10 = { add_trait = custodite_cavalry }
+			10 = { add_trait = custodite_artillery }
+			10 = { add_trait = custodite_aerial }
+			10 = { add_trait = custodite_marine }
+		}
+	}
+	after = {
+		clr_character_flag = picking_custodite_branch
+	}
+}

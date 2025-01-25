@@ -1169,6 +1169,112 @@ resurrectionist_leader = {
 	}
 }
 
+custodite_infantry = {
+	religious_branch = custodite
+	religious = yes
+	martial = 2
+	global_levy_size = 0.1
+	same_opinion = 20
+	custodite_artillery_opinion = 5
+	custodite_cavalry_opinion = 5
+	custodite_marine_opinion = -15
+	custodite_aerial_opinion = -5
+	command_modifier = {
+		heavy_infantry = 0.2
+		defence = 0.2
+	}
+	opposites =  {
+		custodite_marine
+		custodite_cavalry
+		custodite_artillery
+		custodite_aerial
+	}
+}
+custodite_cavalry = {
+	religious_branch = custodite
+	religious = yes
+	diplomacy = 1
+	monthly_character_prestige = 0.25
+	same_opinion = 10
+	custodite_infantry_opinion = 5
+	custodite_artillery_opinion = 5
+	custodite_marine_opinion = -5
+	custodite_aerial_opinion = -15
+	command_modifier = {
+		light_cavalry = 0.2
+		horse_archers = 0.2
+		speed = 0.2
+		
+	}
+	opposites =  {
+		custodite_infantry
+		custodite_marine
+		custodite_artillery
+		custodite_aerial
+	}
+}
+custodite_artillery = {
+	religious_branch = custodite
+	religious = yes
+	learning = 1
+	tech_growth_modifier = 0.10
+	same_opinion = 10
+	custodite_infantry_opinion = 5
+	custodite_cavalry_opinion = 5
+	custodite_marine_opinion = -5
+	custodite_aerial_opinion = -5
+	command_modifier = {
+		siege = 0.4
+	}
+	opposites =  {
+		custodite_infantry
+		custodite_cavalry
+		custodite_marine
+		custodite_aerial
+	}
+}
+custodite_marine = {
+	religious_branch = custodite
+	religious = yes
+	stewardship = 1
+	global_tax_modifier = 0.10
+	same_opinion = 10
+	opposite_opinion = -5
+	custodite_infantry_opinion = -10
+	command_modifier = {
+		chariots = 0.2
+		morale_offence = 0.2
+	}
+	opposites =  {
+		custodite_infantry
+		custodite_cavalry
+		custodite_artillery
+		custodite_aerial
+	}
+}
+custodite_aerial = {
+	religious_branch = custodite
+	religious = yes
+	intrigue = 1
+	plot_discovery_chance = 0.10
+	same_opinion = 10
+	opposite_opinion = -5
+	custodite_cavalry_opinion = -10
+	trait_effect_capture_commanders = 1
+	command_modifier = {
+		knights = 0.2
+		flank = 0.3
+	}
+	opposites =  {
+		custodite_infantry
+		custodite_cavalry
+		custodite_artillery
+		custodite_marine
+	}
+}
+
+
+
 ## Other Traits ##
 
 sun_eater = {

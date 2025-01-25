@@ -588,7 +588,6 @@ conqueror_force_vassalization = { # New2
 		check_if_crusader_trigger = yes
 		FROM = {
 			show_scope_change = no
-			trait = conqueror
 			ROOT = {
 				show_scope_change = no
 				OR = {
@@ -605,10 +604,7 @@ conqueror_force_vassalization = { # New2
 	on_add = {
 		FROM = {
 			if = {
-				limit = {
-					ROOT = {
-						trait = conqueror
-					}					
+				limit = {					
 					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_antagonize_vassalize_claim } } 
 				}
 				ROOT = {
@@ -627,7 +623,8 @@ conqueror_force_vassalization = { # New2
 					name = jade_dragon_cbs
 					value = off
 				}
-			}	
+			}
+			trait = conqueror	
 			higher_tier_than = BARON
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -745,7 +742,6 @@ force_vassalization = { # New2
 		check_if_crusader_trigger = yes
 		FROM = {
 			show_scope_change = no
-			
 			religion_group = ROOT
 			conditional_tooltip = {
 				trigger = { 
@@ -765,9 +761,6 @@ force_vassalization = { # New2
 			conditional_tooltip = {
 				trigger = { 
 					tier = DUKE
-					NOT = {
-						ROOT = { trait = conqueror }
-					}
 				}
 				ROOT = {
 					show_scope_change = no
@@ -783,9 +776,6 @@ force_vassalization = { # New2
 			conditional_tooltip = {
 				trigger = { 
 					tier = KING
-					NOT = {
-						ROOT = { trait = conqueror }
-					}
 				}
 				ROOT = {
 					show_scope_change = no
@@ -804,14 +794,6 @@ force_vassalization = { # New2
 	on_add = {
 		FROM = {
 			if = {
-				limit = {	
-					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_antagonize_vassalize_claim } } 
-				}
-				ROOT = {
-					prestige = -100
-				}
-			}
-			else_if = {
 				limit = {
 					tier = COUNT					
 					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_antagonize_vassalize_claim } } 
@@ -854,15 +836,15 @@ force_vassalization = { # New2
 		ROOT = {
 			OR = {
 				AND = {
-					tier = COUNT
+					FROM = { tier = COUNT }
 					bhutan_minor_cb = yes
 				}
 				AND = {
-					tier = DUKE
+					FROM = { tier = DUKE }
 					bhutan_medium_cb = yes
 				}
 				AND = {
-					tier = KING
+					FROM = { tier = KING }
 					bhutan_major_cb = yes
 				}
 			}
@@ -875,6 +857,7 @@ force_vassalization = { # New2
 					value = off
 				}
 			}
+			NOT = { trait = conqueror }
 			NOT = {
 				government = bhutanese_decayed_government
 			}
@@ -896,30 +879,14 @@ force_vassalization = { # New2
 		
 		FROM = {
 			lower_tier_than = ROOT
-			conditional_tooltip = {
-				trigger = { 
-					NOT = {
-						ROOT = { trait = conqueror }
-					}
-				}
-				NOT = {
-					realm_size = 31
-				}
-			}
+			NOT = { realm_size = 31	}
 			in_revolt = no
 			is_nomadic = no
 			controls_religion = no
 			holy_order = no
-			conditional_tooltip = {
-				trigger = { 
-					NOT = {
-						ROOT = { trait = conqueror }
-					}
-				}
-				OR = {
-					religion = ROOT
-					culture_group = ROOT
-				}
+			OR = {
+				religion = ROOT
+				culture_group = ROOT
 			}
 			shares_realm_border_with = ROOT
 		}

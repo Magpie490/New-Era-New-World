@@ -1780,6 +1780,119 @@ character_event = { #Gives the Novelist Title
 				copy_title_history = PREV
 			}
 		}
+		k_adirondack = {
+			save_persistent_event_target = { name = novelist_title scope = k_yi_ti }
+			save_persistent_event_target = { name = non_novelist_title scope = k_adirondack_history }
+			persistent_event_target:non_novelist_title = {
+				set_name = PREV
+				copy_title_history = PREV
+			}
+		}
+		k_new_york = {
+			save_persistent_event_target = { name = novelist_title scope = k_braavos }
+			save_persistent_event_target = { name = non_novelist_title scope = k_new_york_history }
+			persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+			}
+		}
+		k_jersey = {
+			save_persistent_event_target = { name = novelist_title scope = k_highgarden }
+			save_persistent_event_target = { name = non_novelist_title scope = k_jersey_history }
+			persistent_event_target:non_novelist_title = {
+				set_name = PREV
+                copy_title_history = PREV
+			}
+		}
+		k_taconica = {
+        save_persistent_event_target = { name = novelist_title scope = k_blackwood_vale }
+        save_persistent_event_target = { name = non_novelist_title scope = k_taconica_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+		}
+		k_eastsylvania = {
+        save_persistent_event_target = { name = novelist_title scope = k_oldtown }
+        save_persistent_event_target = { name = non_novelist_title scope = k_eastsylvania_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+}
+k_columbia = {
+        save_persistent_event_target = { name = novelist_title scope = k_the_crownlands }
+        save_persistent_event_target = { name = non_novelist_title scope = k_columbia_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+}
+k_grand_bermuda = {
+        save_persistent_event_target = { name = novelist_title scope = k_dragonstone }
+        save_persistent_event_target = { name = non_novelist_title scope = k_grand_bermuda_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+}
+k_delmarva = {
+        save_persistent_event_target = { name = novelist_title scope = k_crackclaw_point }
+        save_persistent_event_target = { name = non_novelist_title scope = k_delmarva_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+}
+k_old_dominion = {
+        save_persistent_event_target = { name = novelist_title scope = k_kingswood }
+        save_persistent_event_target = { name = non_novelist_title scope = k_old_dominion_history }
+        persistent_event_target:non_novelist_title = {
+                set_name = PREV
+                copy_title_history = PREV
+        }
+}
+		k_tarheel = {
+            save_persistent_event_target = { name = novelist_title scope = k_rainwood }
+			save_persistent_event_target = { name = non_novelist_title scope = k_tarheel_history }
+			persistent_event_target:non_novelist_title = {
+				set_name = PREV
+				copy_title_history = PREV
+			}
+		}
+k_blue_ridge = {
+            save_persistent_event_target = { name = novelist_title scope = k_vale_of_arryn }
+        save_persistent_event_target = { name = non_novelist_title scope = k_blue_ridge_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_appalachia = {
+            save_persistent_event_target = { name = novelist_title scope = k_strongsong }
+        save_persistent_event_target = { name = non_novelist_title scope = k_appalachia_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_vandalia = {
+            save_persistent_event_target = { name = novelist_title scope = k_runestone }
+        save_persistent_event_target = { name = non_novelist_title scope = k_vandalia_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_allegheny = {
+            save_persistent_event_target = { name = novelist_title scope = k_westmarch }
+        save_persistent_event_target = { name = non_novelist_title scope = k_allegheny_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+
 	}
 }
 
@@ -1900,6 +2013,91 @@ character_event = { #cleanup
 			k_new_acadia_history = {
 				has_holder = yes
 			}
+			k_yi_ti = {
+				has_holder = yes
+			}
+			k_adirondack_history = {
+				has_holder = yes
+			}
+			k_braavos = {
+				has_holder = yes
+			}
+			k_new_york_history = {
+				has_holder = yes
+			}
+			k_highgarden = {
+				has_holder = yes
+			}
+			k_jersey_history = {
+				has_holder = yes
+			}
+			k_blackwood_vale = {
+				has_holder = yes
+			}
+k_taconica_history = {
+        has_holder = yes
+}
+k_oldtown = {
+        has_holder = yes
+}
+k_eastsylvania_history = {
+        has_holder = yes
+}
+k_the_crownlands = {
+        has_holder = yes
+}
+k_columbia_history = {
+        has_holder = yes
+}
+k_dragonstone = {
+        has_holder = yes
+}
+k_grand_bermuda_history = {
+        has_holder = yes
+}
+k_crackclaw_point = {
+        has_holder = yes
+}
+k_delmarva_history = {
+        has_holder = yes
+}
+k_kingswood = {
+        has_holder = yes
+}
+k_old_dominion_history = {
+        has_holder = yes
+}
+            k_rainwood = {
+                has_holder = yes
+}
+k_tarheel_history = {
+        has_holder = yes
+            }
+            k_vale_of_arryn = {
+                has_holder = yes
+}
+k_blue_ridge_history = {
+        has_holder = yes
+            }
+            k_strongsong = {
+                has_holder = yes
+}
+k_appalachia_history = {
+        has_holder = yes
+            }
+            k_runestone = {
+                has_holder = yes
+}
+k_vandalia_history = {
+        has_holder = yes
+            }
+            k_westmarch = {
+                has_holder = yes
+}
+k_allegheny_history = {
+        has_holder = yes
+            }
+
 		}
 	}
 	mean_time_to_happen = { days = 1 }
@@ -2264,6 +2462,287 @@ character_event = { #cleanup
 				destroy_landed_title = THIS
 			}
 		}
+		if = {
+			limit = {	
+				k_yi_ti = {
+					has_holder = yes
+				}
+			}
+			k_yi_ti = {
+				destroy_landed_title = THIS
+			}
+		}
+		if = {
+			limit = {	
+				k_adirondack_history = {
+					has_holder = yes
+				}
+			}
+			k_adirondack_history = {
+				destroy_landed_title = THIS
+			}
+		}
+		if = {
+			limit = {
+                k_braavos = {
+                        has_holder = yes
+                }
+			}
+			k_braavos = {
+                destroy_landed_title = THIS
+			}
+		}
+		if = {
+			limit = {
+                k_new_york_history = {
+                        has_holder = yes
+				}
+			}
+			k_new_york_history = {
+				destroy_landed_title = THIS
+			}
+		}
+		if = {
+        limit = {
+                k_highgarden = {
+                        has_holder = yes
+                }
+        }
+        k_highgarden = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_jersey_history = {
+                        has_holder = yes
+                }
+        }
+        k_jersey_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_blackwood_vale = {
+                        has_holder = yes
+                }
+        }
+        k_blackwood_vale = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_taconica_history = {
+                        has_holder = yes
+                }
+        }
+        k_taconica_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_oldtown = {
+                        has_holder = yes
+                }
+        }
+        k_oldtown = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_eastsylvania_history = {
+                        has_holder = yes
+                }
+        }
+        k_eastsylvania_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_the_crownlands = {
+                        has_holder = yes
+                }
+        }
+        k_the_crownlands = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_columbia_history = {
+                        has_holder = yes
+                }
+        }
+        k_columbia_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_dragonstone = {
+                        has_holder = yes
+                }
+        }
+        k_dragonstone = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_grand_bermuda_history = {
+                        has_holder = yes
+                }
+        }
+        k_grand_bermuda_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_crackclaw_point = {
+                        has_holder = yes
+                }
+        }
+        k_crackclaw_point = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_delmarva_history = {
+                        has_holder = yes
+                }
+        }
+        k_delmarva_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_kingswood = {
+                        has_holder = yes
+                }
+        }
+        k_kingswood = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_old_dominion_history = {
+                        has_holder = yes
+                }
+        }
+        k_old_dominion_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_rainwood = {
+                        has_holder = yes
+                }
+        }
+        k_rainwood = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_tarheel_history = {
+                        has_holder = yes
+                }
+        }
+        k_tarheel_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_vale_of_arryn = {
+                        has_holder = yes
+                }
+        }
+        k_vale_of_arryn = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_blue_ridge_history = {
+                        has_holder = yes
+                }
+        }
+        k_blue_ridge_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_strongsong = {
+                        has_holder = yes
+                }
+        }
+        k_strongsong = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_appalachia_history = {
+                        has_holder = yes
+                }
+        }
+        k_appalachia_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_runestone = {
+                        has_holder = yes
+                }
+        }
+        k_runestone = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_vandalia_history = {
+                        has_holder = yes
+                }
+        }
+        k_vandalia_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_westmarch = {
+                        has_holder = yes
+                }
+        }
+        k_westmarch = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_allegheny_history = {
+                        has_holder = yes
+                }
+        }
+        k_allegheny_history = {
+                destroy_landed_title = THIS
+        }
+}
+
 	}
 }
 
@@ -2299,5 +2778,26 @@ character_event = {
 		any_demesne_title = {
 			novelist_switch_effect = yes
 		}
+	}
+}
+
+character_event = {
+	id = novelist.103
+	hide_window = yes
+ 
+	only_rulers = yes
+ 
+	trigger = {
+		has_landed_title = k_grand_bermuda
+		NOT = { has_global_flag = switch_startup_titles_3 }
+		is_alternate_start = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = switch_startup_titles_3
+		character_event = { id = novelist.102 }
 	}
 }
