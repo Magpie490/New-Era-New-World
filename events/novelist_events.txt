@@ -2028,6 +2028,30 @@ k_blue_ridge = {
             copy_title_history = PREV
         }
     }
+    e_ontario = {
+            save_persistent_event_target = { name = novelist_title scope = e_the_north }
+        save_persistent_event_target = { name = non_novelist_title scope = e_ontario_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    e_caribbean = {
+            save_persistent_event_target = { name = novelist_title scope = e_the_iron_islands }
+        save_persistent_event_target = { name = non_novelist_title scope = e_caribbean_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    e_new_england = {
+            save_persistent_event_target = { name = novelist_title scope = e_the_stormlands }
+        save_persistent_event_target = { name = non_novelist_title scope = e_new_england_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
 
 	}
 }
@@ -2333,6 +2357,24 @@ e_dixie_history = {
                 has_holder = yes
 }
 e_appalachia_history = {
+        has_holder = yes
+            }
+            e_the_north = {
+                has_holder = yes
+}
+e_ontario_history = {
+        has_holder = yes
+            }
+            e_the_iron_islands = {
+                has_holder = yes
+}
+e_caribbean_history = {
+        has_holder = yes
+            }
+            e_the_stormlands = {
+                has_holder = yes
+}
+e_new_england_history = {
         has_holder = yes
             }
 
@@ -3297,6 +3339,66 @@ if = {
                 }
         }
         e_appalachia_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_the_north = {
+                        has_holder = yes
+                }
+        }
+        e_the_north = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_ontario_history = {
+                        has_holder = yes
+                }
+        }
+        e_ontario_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_the_iron_islands = {
+                        has_holder = yes
+                }
+        }
+        e_the_iron_islands = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_caribbean_history = {
+                        has_holder = yes
+                }
+        }
+        e_caribbean_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_the_stormlands = {
+                        has_holder = yes
+                }
+        }
+        e_the_stormlands = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                e_new_england_history = {
+                        has_holder = yes
+                }
+        }
+        e_new_england_history = {
                 destroy_landed_title = THIS
         }
 }
