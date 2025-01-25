@@ -1956,6 +1956,62 @@ k_blue_ridge = {
             copy_title_history = PREV
         }
     }
+    k_jaxland = {
+            save_persistent_event_target = { name = novelist_title scope = k_torentine }
+        save_persistent_event_target = { name = non_novelist_title scope = k_jaxland_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_georgia = {
+            save_persistent_event_target = { name = novelist_title scope = k_crakehall }
+        save_persistent_event_target = { name = non_novelist_title scope = k_georgia_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_dixie = {
+            save_persistent_event_target = { name = novelist_title scope = k_casterly_rock }
+        save_persistent_event_target = { name = non_novelist_title scope = k_dixie_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_alabama = {
+            save_persistent_event_target = { name = novelist_title scope = k_the_crag }
+        save_persistent_event_target = { name = non_novelist_title scope = k_alabama_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_palmetto = {
+            save_persistent_event_target = { name = novelist_title scope = k_mistywood }
+        save_persistent_event_target = { name = non_novelist_title scope = k_palmetto_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_ohio = {
+            save_persistent_event_target = { name = novelist_title scope = k_the_wall }
+        save_persistent_event_target = { name = non_novelist_title scope = k_ohio_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_acadiana = {
+            save_persistent_event_target = { name = novelist_title scope = k_the_neck }
+        save_persistent_event_target = { name = non_novelist_title scope = k_acadiana_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
 
 	}
 }
@@ -2207,6 +2263,48 @@ k_puerto_rico_history = {
                 has_holder = yes
 }
 k_florida_history = {
+        has_holder = yes
+            }
+            k_torentine = {
+                has_holder = yes
+}
+k_jaxland_history = {
+        has_holder = yes
+            }
+            k_crakehall = {
+                has_holder = yes
+}
+k_georgia_history = {
+        has_holder = yes
+            }
+            k_casterly_rock = {
+                has_holder = yes
+}
+k_dixie_history = {
+        has_holder = yes
+            }
+            k_the_crag = {
+                has_holder = yes
+}
+k_alabama_history = {
+        has_holder = yes
+            }
+            k_mistywood = {
+                has_holder = yes
+}
+k_palmetto_history = {
+        has_holder = yes
+            }
+            k_the_wall = {
+                has_holder = yes
+}
+k_ohio_history = {
+        has_holder = yes
+            }
+            k_the_neck = {
+                has_holder = yes
+}
+k_acadiana_history = {
         has_holder = yes
             }
 
@@ -2991,6 +3089,146 @@ if = {
                 }
         }
         k_florida_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_torentine = {
+                        has_holder = yes
+                }
+        }
+        k_torentine = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_jaxland_history = {
+                        has_holder = yes
+                }
+        }
+        k_jaxland_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_crakehall = {
+                        has_holder = yes
+                }
+        }
+        k_crakehall = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_georgia_history = {
+                        has_holder = yes
+                }
+        }
+        k_georgia_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_casterly_rock = {
+                        has_holder = yes
+                }
+        }
+        k_casterly_rock = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_dixie_history = {
+                        has_holder = yes
+                }
+        }
+        k_dixie_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_the_crag = {
+                        has_holder = yes
+                }
+        }
+        k_the_crag = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_alabama_history = {
+                        has_holder = yes
+                }
+        }
+        k_alabama_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_mistywood = {
+                        has_holder = yes
+                }
+        }
+        k_mistywood = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_palmetto_history = {
+                        has_holder = yes
+                }
+        }
+        k_palmetto_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_the_wall = {
+                        has_holder = yes
+                }
+        }
+        k_the_wall = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_ohio_history = {
+                        has_holder = yes
+                }
+        }
+        k_ohio_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_the_neck = {
+                        has_holder = yes
+                }
+        }
+        k_the_neck = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_acadiana_history = {
+                        has_holder = yes
+                }
+        }
+        k_acadiana_history = {
                 destroy_landed_title = THIS
         }
 }
