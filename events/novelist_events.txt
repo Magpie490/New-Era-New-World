@@ -1892,6 +1892,70 @@ k_blue_ridge = {
             copy_title_history = PREV
         }
     }
+    k_cuba = {
+            save_persistent_event_target = { name = novelist_title scope = k_wyk }
+        save_persistent_event_target = { name = non_novelist_title scope = k_cuba_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_jamaica = {
+            save_persistent_event_target = { name = novelist_title scope = k_pyke }
+        save_persistent_event_target = { name = non_novelist_title scope = k_jamaica_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_bahamas = {
+            save_persistent_event_target = { name = novelist_title scope = k_stepstones }
+        save_persistent_event_target = { name = non_novelist_title scope = k_bahamas_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_antilles = {
+            save_persistent_event_target = { name = novelist_title scope = k_lonely_light }
+        save_persistent_event_target = { name = non_novelist_title scope = k_antilles_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_haiti = {
+            save_persistent_event_target = { name = novelist_title scope = k_harlaw }
+        save_persistent_event_target = { name = non_novelist_title scope = k_haiti_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_dominica = {
+            save_persistent_event_target = { name = novelist_title scope = k_blacktyde }
+        save_persistent_event_target = { name = non_novelist_title scope = k_dominica_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_puerto_rico = {
+            save_persistent_event_target = { name = novelist_title scope = k_orkmont }
+        save_persistent_event_target = { name = non_novelist_title scope = k_puerto_rico_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
+    k_florida = {
+            save_persistent_event_target = { name = novelist_title scope = k_sunspear }
+        save_persistent_event_target = { name = non_novelist_title scope = k_florida_history }
+        persistent_event_target:non_novelist_title = {
+            set_name = PREV
+            copy_title_history = PREV
+        }
+    }
 
 	}
 }
@@ -2095,6 +2159,54 @@ k_vandalia_history = {
                 has_holder = yes
 }
 k_allegheny_history = {
+        has_holder = yes
+            }
+            k_wyk = {
+                has_holder = yes
+			}
+k_cuba_history = {
+        has_holder = yes
+            }
+            k_pyke = {
+                has_holder = yes
+}
+k_jamaica_history = {
+        has_holder = yes
+            }
+            k_stepstones = {
+                has_holder = yes
+}
+k_bahamas_history = {
+        has_holder = yes
+            }
+            k_lonely_light = {
+                has_holder = yes
+}
+k_antilles_history = {
+        has_holder = yes
+            }
+            k_harlaw = {
+                has_holder = yes
+}
+k_haiti_history = {
+        has_holder = yes
+            }
+            k_blacktyde = {
+                has_holder = yes
+}
+k_dominica_history = {
+        has_holder = yes
+            }
+            k_orkmont = {
+                has_holder = yes
+}
+k_puerto_rico_history = {
+        has_holder = yes
+            }
+            k_sunspear = {
+                has_holder = yes
+}
+k_florida_history = {
         has_holder = yes
             }
 
@@ -2739,6 +2851,146 @@ if = {
                 }
         }
         k_allegheny_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_wyk = {
+                        has_holder = yes
+                }
+        }
+        k_wyk = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_cuba_history = {
+                        has_holder = yes
+                }
+        }
+        k_cuba_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_pyke = {
+                        has_holder = yes
+                }
+        }
+        k_pyke = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_jamaica_history = {
+                        has_holder = yes
+                }
+        }
+        k_jamaica_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_stepstones = {
+                        has_holder = yes
+                }
+        }
+        k_stepstones = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_bahamas_history = {
+                        has_holder = yes
+                }
+        }
+        k_bahamas_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_harlaw = {
+                        has_holder = yes
+                }
+        }
+        k_harlaw = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_haiti_history = {
+                        has_holder = yes
+                }
+        }
+        k_haiti_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_blacktyde = {
+                        has_holder = yes
+                }
+        }
+        k_blacktyde = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_dominica_history = {
+                        has_holder = yes
+                }
+        }
+        k_dominica_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_orkmont = {
+                        has_holder = yes
+                }
+        }
+        k_orkmont = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_puerto_rico_history = {
+                        has_holder = yes
+                }
+        }
+        k_puerto_rico_history = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_sunspear = {
+                        has_holder = yes
+                }
+        }
+        k_sunspear = {
+                destroy_landed_title = THIS
+        }
+}
+if = {
+        limit = {
+                k_florida_history = {
+                        has_holder = yes
+                }
+        }
+        k_florida_history = {
                 destroy_landed_title = THIS
         }
 }
