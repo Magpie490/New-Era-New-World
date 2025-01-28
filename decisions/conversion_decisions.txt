@@ -80,8 +80,17 @@ targeted_decisions = {
 		
 		effect = {
 			FROM = {
-				prestige = -500
 				piety = 250
+				if = {
+					limit = {
+						any_owned_bloodline = {
+							NOT = {
+								has_bloodline_flag = bloodline_armstrong
+							}
+						}
+					}
+					prestige = -500
+				}
 				if = {
 					limit = { higher_tier_than = BARON }
 					religion_authority = {
@@ -286,8 +295,18 @@ targeted_decisions = {
 		allow = {
 			NOT = { trait = zealous }
 			capital_scope = { ROOTs_religion_is_playable_trigger = yes }
-			piety = 250
 			OR = {
+				piety = 250
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_armstrong
+					bloodline_is_active_for = PREV
+				}
+			}
+			OR = {
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_armstrong
+					bloodline_is_active_for = PREV
+				}
 				AND = {
 					prestige = 500
 					capital_scope = {
@@ -308,6 +327,11 @@ targeted_decisions = {
 					capital_scope = {
 						NOT = { true_religion_group = ROOT }
 					}
+					any_owned_bloodline = {
+						NOT = {
+							has_bloodline_flag = bloodline_armstrong
+						}
+					}
 				}
 				prestige = -1000
 			}
@@ -316,10 +340,24 @@ targeted_decisions = {
 					capital_scope = {
 						true_religion_group = ROOT
 					}
+					any_owned_bloodline = {
+						NOT = {
+							has_bloodline_flag = bloodline_armstrong
+						}
+					}
 				}
 				prestige = -500
 			}
-			piety = -250
+			if = {
+				limit = {
+					any_owned_bloodline = {
+						NOT = {
+							has_bloodline_flag = bloodline_armstrong
+						}
+					}
+				}
+				piety = -250
+			}
 			religion_authority = {
 				modifier = ruler_converted_from
 			}
@@ -373,7 +411,16 @@ targeted_decisions = {
 			NOT = { trait = zealous }
 		}
 		effect = {
-			prestige = -500
+			if = {
+				limit = {
+					any_owned_bloodline = {
+						NOT = {
+							has_bloodline_flag = bloodline_armstrong
+						}
+					}
+				}
+				prestige = -500
+			}
 			piety = 250
 			if = {
 				limit = { higher_tier_than = BARON }
@@ -442,7 +489,16 @@ targeted_decisions = {
 			piety = 50
 		}
 		effect = {
-			piety = -50
+			if = {
+				limit = {
+					any_owned_bloodline = {
+						NOT = {
+							has_bloodline_flag = bloodline_armstrong
+						}
+					}
+				}
+				piety = -50
+			}
 			if = {
 				limit = { religion = celtic_pagan }
 				religion = celtic_pagan_reformed
@@ -714,7 +770,7 @@ targeted_decisions = {
 		}
 	}
 
-	convert_to_spouse_religion= {
+	convert_to_spouse_religion = {
 		only_playable = yes
 		filter = home_court
 		ai_target_filter = home_court
@@ -756,16 +812,33 @@ targeted_decisions = {
 		
 		allow = {
 			FROM = { 
-				NOT = { trait = zealous } 
-				prestige = 500
-				piety = 250
+				NOT = { trait = zealous }
+				OR = {
+					AND = {
+						piety = 250
+						prestige = 500
+					}
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_armstrong
+						bloodline_is_active_for = PREV
+					}
+				}
 			}
 			FROMs_religion_is_playable_trigger = yes
 		}
 		
 		effect = {
 			FROM = {
-				prestige = -500
+				if = {
+					limit = {
+						any_owned_bloodline = {
+							NOT = {
+								has_bloodline_flag = bloodline_armstrong
+							}
+						}
+					}
+					prestige = -500
+				}
 				religion_authority = {
 					modifier = ruler_converted_from
 				}
@@ -826,7 +899,16 @@ targeted_decisions = {
 						modifier = ruler_converted_to
 					}
 				}
-				piety = -250
+				if = {
+					limit = {
+						any_owned_bloodline = {
+							NOT = {
+								has_bloodline_flag = bloodline_armstrong
+							}
+						}
+					}
+					piety = -250
+				}
 			}
 		}
 		
@@ -859,6 +941,10 @@ decisions = {
 				}
 				NOT = { religion_authority = 0.3 }
 				is_nomadic = yes
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_armstrong
+					bloodline_is_active_for = PREV
+				}
 			}
 			controls_religion = no
 			NOT = { has_character_modifier = baptism_request_cooldown }
