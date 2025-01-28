@@ -94,9 +94,6 @@ decisions = {
 			prestige = -500
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -116,19 +113,16 @@ decisions = {
 				trait = desert_terrain_leader
 			}
 			OR = {
-				culture_group = arabic
-				culture_group = dhofaric
-				culture_group = cushitic
-				culture_group = saharan
-				culture_group = egyptian
-				culture_group = maghreb_arabic
-				culture_group = berber
-				culture_group = near_eastern
-				culture_group = hebrewic
-				culture = uyghur
-				culture = turkmen
-				culture = uzbek
-				culture = karakalpak
+				culture_group = amero_arabic
+				culture_group = chicano
+				culture_group = west_texan
+				culture_group = great_basin
+				culture_group = numic
+				culture_group = southern_athabaskan
+				culture_group = puebloan
+				culture_group = yuman
+				culture_group = hopi_group
+				culture_group = piman
 			}
 			can_have_more_leadership_traits = yes
 			age = 25
@@ -163,9 +157,6 @@ decisions = {
 			prestige = -500
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -185,27 +176,10 @@ decisions = {
 				trait = jungle_terrain_leader
 			}
 			OR = {
-				culture_group = northern_dravidian_group
-				culture_group = eastern_dravidian_group
-				culture_group = eastern_indo_aryan_group
-				culture_group = manipuric
-				culture_group = borneonic
-				culture_group = bali_sumbawa
-				culture_group = iban_dayakic
-				culture_group = mon_group
-				culture_group = mundic
-				culture_group = sumatric
-				culture_group = tanjia
-				culture_group = viet
-				culture_group = mokenic
-				culture_group = burmic
-				culture_group = malay_group
-				culture_group = aslian
-				culture_group = celebic
-				culture_group = papuan
-				culture_group = west_papuan
-				culture_group = abun_mpuric
-				culture_group = sulawesic
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = nashvillian
+				culture = tennessee_korean
 			}
 			can_have_more_leadership_traits = yes
 			age = 25
@@ -240,9 +214,6 @@ decisions = {
 			prestige = -500
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -456,9 +427,6 @@ decisions = {
 			}
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -559,16 +527,13 @@ decisions = {
 			is_playable = yes
 			is_nomadic = no
 			has_dlc = "Sons of Abraham"
-			capital_scope = {
-				region = custom_arhavi_region
-			}
+			#capital_scope = {
+			#	region = custom_arhavi_region
+			#}
 			NOT = {	religion_group = jewish_group }
 			NOR = {
-				secret_religion = jewish
-				secret_religion = mikraist
 				secret_religion = maaravi
 				secret_religion = hasidic
-				secret_religion = haymanot
 				secret_religion = congregationist
 				secret_religion = federationist
 			}
@@ -593,9 +558,6 @@ decisions = {
 			wealth = 300
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -662,9 +624,6 @@ decisions = {
 			}
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -996,9 +955,6 @@ decisions = {
 		effect = {
 			add_trait = gentleman_thief
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1020,6 +976,10 @@ decisions = {
 				region = world_rockies
 				region = world_mississippi
 				}
+			}
+			OR = {
+				NOT = { has_dlc = "Way of Life" }
+				has_focus = focus_hunting
 			}
 		}
 		allow = {
@@ -1069,10 +1029,41 @@ decisions = {
 					}
 				}
 			}
+			if = {
+				limit = { 
+					primary_title = {
+						has_law = vassal_wars_law_0
+					}
+					independent = yes
+					is_landed = yes
+				}
+				primary_title = {
+				set_the_kings_peace = yes
+				set_the_kings_full_peace = yes
+				}
+				character_event = {
+					id = cleanup.5588
+					months = 2
+				}
+			}
+			if = {
+				limit = { 
+					primary_title = {
+						has_law = vassal_wars_law_1
+					}
+					independent = yes
+					is_landed = yes
+				}
+				primary_title = {
+				set_the_kings_full_peace = yes
+				}
+				character_event = {
+					id = cleanup.5589
+					months = 2
+				}
+			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -1132,9 +1123,6 @@ decisions = {
 			hidden_tooltip = { 
 				add_character_modifier = { name = hidden_timer_modif duration = 60 hidden = yes} 
 			}
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0.5
@@ -1198,7 +1186,9 @@ decisions = {
 		}
 		allow = {
 			piety = 1000
-			has_landed_title = e_egypt
+			any_demesne_title = {
+				limit = { tier = EMPEROR }
+			}
 			OR = {
 				owns = 802 # alexandria
 				any_realm_lord = {
@@ -1222,7 +1212,7 @@ decisions = {
 						wealth = 500
 					}
 					set_preferred_capital = c_alexandria
-					set_defacto_liege = e_egypt
+					set_defacto_liege = FROM
 				}
 			}
 		}
@@ -1305,9 +1295,6 @@ decisions = {
 			}
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
 		
 		ai_will_do = {
 			factor = 1
@@ -1343,9 +1330,6 @@ decisions = {
 					give_nickname = nick_gold_hand
 				}
 			}
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -1421,9 +1405,6 @@ decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			
@@ -1467,9 +1448,6 @@ decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			
@@ -1503,9 +1481,6 @@ decisions = {
 		effect = {
 			wealth = -75
 			add_artifact = prosthetic_leg_artifact
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -1632,9 +1607,6 @@ targeted_decisions = {
 			wealth = 500
 			destroy_artifact = gold_bar
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1717,9 +1689,6 @@ targeted_decisions = {
 		effect = {
 			wealth = 350
 			destroy_artifact = silver_bar
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -1807,9 +1776,6 @@ targeted_decisions = {
 			destroy_artifact = durandal_hilt
 			destroy_artifact = durandal_blade
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1858,12 +1824,9 @@ targeted_decisions = {
 			piety = 150
 			OR = {
 				religion = bezpopotvsy
-				religion = prussianist
-				religion = vostokist
 				religion = macabrist
 				religion = zenith
 				has_religion_feature = religion_self_immolate
-				religion = red_cult
 				religion = marked
 			}
 			
@@ -1994,9 +1957,6 @@ targeted_decisions = {
 			}
 			else = {
 			}
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -2592,9 +2552,6 @@ targeted_decisions = {
 			}
 			opinion = { modifier = opinion_released_tributary who = FROM }
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 1
 			
@@ -2689,9 +2646,6 @@ targeted_decisions = {
 				prestige = -1000
 			}
 			opinion = { modifier = opinion_released_tributary who = FROM }
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -2813,9 +2767,6 @@ title_decisions = {
 			FROM = {
 				wealth = -400
 			}
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 1
