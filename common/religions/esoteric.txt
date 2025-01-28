@@ -25,7 +25,7 @@ esoteric = {
 		interface_skin = { thelemite_interface zun_interface pagan_interface }
 		high_god_name = GOD_OSIRIS
 		god_names = {
-			GOD_OSIRIS GOD_ISIS GOD_HORUS_RA GOD_LINKON GOD_THOTH GOD_HATHOR GOD_SEKHMET GOD_ANUBIS
+			GOD_OSIRIS GOD_ISIS_FANCY GOD_HORUS_RA GOD_LINKON GOD_THOTH GOD_HATHOR GOD_SEKHMET GOD_ANUBIS
 		}
 		evil_god_names = {
 			SATAN THE_DEVIL GOD_APOPHIS GOD_ISFET
@@ -1309,5 +1309,43 @@ esoteric = {
 		religious_clothing_priest = 16
 
 	}	
+	baphometist = { #Mom, can we have some Hislop? No, we have Hislop at home. The Hislop at home:
+		graphical_culture = thelemagfx
+		icon = 258
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 108 0 0 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+		high_god_name = GOD_BAPHOMET
+		god_names = {
+			GOD_DAGON GOD_ISIS GOD_MERDOAK GOD_TAMMUZ GOD_NINUS GOD_SEMIRAMIS GOD_ASTARTE GOD_BELSHAZZAR
+		}
+		evil_god_names = {
+			GOD_JESUS
+		}
+		character_modifier = {
+			christian_opinion = -10
+			infidel_opinion = -10 #Yeah they dont get along
+			intrigue = 2
+		}
+		piety_name = MAGICK
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_MYSTERIES
+		priest_title = PRIEST
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_in_ruler_designer = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
 
+	}
 }
