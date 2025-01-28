@@ -188,6 +188,17 @@ action_squeeze_peasants = {
 		any_province_lord = {
 			character = FROM
 		}
+		
+		NOT = {
+			FROM = {
+				any_courtier = {
+					location = {
+						province = ROOT
+					}
+					has_job_action = action_squeeze_peasants
+				}
+			}
+		}
 	}
 
 	events = {
@@ -629,6 +640,17 @@ action_train_troops = {
 		any_province_lord = {
 			character = FROM
 		}
+		
+		NOT = {
+			FROM = {
+				any_courtier = {
+					location = {
+						province = ROOT
+					}
+					has_job_action = action_train_troops
+				}
+			}
+		}
 	}
 	
 	display_on_map = {
@@ -704,6 +726,17 @@ action_assist_arrest = {
 			OR = {
 				character = FROM
 				is_liege_or_above = FROM
+			}
+		}
+		
+		NOT = {
+			FROM = {
+				any_courtier = {
+					location = {
+						province = ROOT
+					}
+					has_job_action = action_assist_arrest
+				}
 			}
 		}
 		trigger_if = {
@@ -804,17 +837,7 @@ action_inquisition = {
 
 		trigger = {
 			NOT = { religion = FROM }
-
-			any_province_lord = {
-				OR = {
-					character = FROM
-					is_liege_or_above = FROM
-					AND = {
-						higher_tier_than = COUNT
-						character = FROM
-					}
-				}
-			}
+				always = yes
 		}
 		color = { 0 255 0 }
 	}
@@ -842,7 +865,7 @@ action_improve_rel_relations = {
 
 	potential = {
 		FROM = {
-			NOR = { religion_group = muslim is_communist_religion_trigger = yes religion = shriner }
+			NOR = { religion_group = muslim is_communist_religion_trigger = yes }
 		}
 	}
 
@@ -929,7 +952,7 @@ action_charity = {
 	local_revolt_risk = -0.01
 
 	potential = {
-		FROM = { OR = { religion_group = muslim is_communist_religion_trigger = yes religion = shriner } }
+		FROM = { OR = { religion_group = muslim is_communist_religion_trigger = yes } }
 	}
 
 	trigger = {
