@@ -470,5 +470,99 @@ decisions = {
 				}
 			}
 		}
-	}	
+	}
+	choose_aquarian_guru = {
+		potential = {
+			is_playable = yes
+			religion = aquarian
+			NOR = {
+				trait = aquarian_jesus
+				trait = aquarian_buddha
+				trait = aquarian_gaia
+				trait = aquarian_carina
+			}
+			NOT = { has_character_flag = choosing_aquarian_guru }
+		}
+		allow = {
+			is_adult = yes
+			is_incapable = no
+			prisoner = no
+			has_regent = no
+			piety = 50
+		}
+		effect = {
+			character_event = { id = aqua.100 }
+			set_character_flag = choosing_aquarian_guru
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+		}
+	}			
+}
+targeted_decisions = {
+	aquarian_perform_scrying = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 10
+		
+		potential = {
+			character = FROM
+			is_playable = yes
+			religion = aquarian			
+		}
+		allow = {
+			piety = 50
+			custom_tooltip = {
+				text = hermetics_scrying_cooldown_tooltip
+				has_an_omen_modifier_trigger = no
+				NOT = { has_character_modifier = scrying_cooldown }
+			}
+		}
+		effect = {
+			piety = -50
+			hidden_effect = {
+				add_character_modifier = {
+					name = scrying_cooldown
+					years = 1
+					hidden = yes
+				}
+				character_event = { id = MNM.1200 days = 1 }
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 0.5
+				is_dumb_trigger = yes
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.5
+				trait = zealous
+			}
+		}
+	}
 }

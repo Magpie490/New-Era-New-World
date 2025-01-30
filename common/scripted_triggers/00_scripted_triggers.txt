@@ -2794,7 +2794,10 @@ proselytize_convert_independent_trigger = {
 			religion = vagarna
 			religion = bushism
 		}
-		year = 2850
+		OR = {
+			year = 2380
+			FROM = { religion = aquarian }
+		}
 		is_reformed_religion = no
 		capital_scope = {
 			province = ROOT

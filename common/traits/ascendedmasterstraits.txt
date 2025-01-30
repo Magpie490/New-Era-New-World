@@ -147,3 +147,54 @@ theo_saint_germain = {
 	religious_branch = theosophy
 	random = no
 }
+aquarian_jesus = {
+	learning = 2
+	global_revolt_risk = -0.01
+	monthly_character_piety = 0.1
+	tolerates_christian_group = yes
+	religious = yes
+	opposites = {
+		aquarian_buddha
+		aquarian_gaia
+		aquarian_carina
+	}
+	religious_branch = aquarian
+}
+aquarian_buddha = {
+	stewardship = 2
+	health = 0.5
+	monthly_character_piety = 0.1
+	tolerates_buddhist_group = yes
+	religious = yes
+	opposites = {
+		aquarian_jesus
+		aquarian_gaia
+		aquarian_carina
+	}
+	religious_branch = aquarian
+}
+aquarian_gaia = {
+	intrigue = 2
+	fertility = 0.15
+	monthly_character_piety = 0.1
+	tolerates_pagan_group = yes
+	religious = yes
+	opposites = {
+		aquarian_buddha
+		aquarian_jesus
+		aquarian_carina
+	}
+	religious_branch = aquarian
+}
+aquarian_carina = {
+	diplomacy = 2
+	same_religion_opinion = 10
+	monthly_character_piety = 1
+	religious = yes
+	opposites = {
+		aquarian_buddha
+		aquarian_gaia
+		aquarian_jesus
+	}
+	religious_branch = aquarian
+}
