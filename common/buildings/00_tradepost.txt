@@ -1147,4 +1147,22 @@ trade_post = {
 
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
+	amaitist_forum = {
+		desc = amaitist_forum_desc
+		potential = {
+			FROM = { religion = amaitist }
+		}
+		trigger = {
+			TECH_TRADE_PRACTICES = 1
+		}		
+		gold_cost = 200
+		build_time = 250
+		ai_creation_factor = 95
+		add_number_to_name = no
+		
+		monthly_character_piety = 0.25
+		tradevalue = 25
+		tax_income = -0.2		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
 }
