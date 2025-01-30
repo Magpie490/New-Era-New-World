@@ -1077,7 +1077,16 @@ character_event = {
 				value = slower
 			}
 		}
-
+		mult_modifier = {
+			factor = 0.9
+			religion = amaitist
+			location = {
+				OR = {
+					trade_post_has_building = amaitist_forum
+					any_neighbor_province = { trade_post_has_building = amaitist_forum }
+				}
+			}
+		}
 	}
 
 	option = {
