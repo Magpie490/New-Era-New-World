@@ -711,6 +711,26 @@ e_millenarian_host = { # Joshua's empire
 	allow = { always = no }
 }
 
+e_redcoats = { 
+	color={ 150 50 50 }
+	color2={ 255 255 255 }
+
+	capital = 69 # Boston
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_redcoats = {
+					is_titular = yes
+				}
+			}
+			e_redcoats = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
