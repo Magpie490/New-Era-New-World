@@ -1,0 +1,972 @@
+namespace = gplains
+
+# Invasion setup
+character_event = {
+    id = gplains.1
+
+    hide_window = yes
+    is_triggered_only = yes
+
+	only_playable = yes
+	religion = catholic
+	min_age = 16
+    
+	trigger = {
+		OR = {
+			year = 2500
+			AND = {
+				has_game_rule = {
+					name = mongol_invasion
+					value = random
+				}
+				total_years_played = 50
+			}
+			AND = {
+				has_game_rule = {
+					name = mongol_invasion
+					value = delayed_random
+				}
+				year = 2400
+				total_years_played = 50
+			}
+		}
+		NOR = { 
+			year = 2550
+			has_game_rule = {
+				name = mongol_invasion
+				value = off
+			}
+		}
+		controls_religion = yes # Let it happen for the Pope. He's always around.
+		NOT = {
+			has_global_flag = joshua_arrival
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			year = 2505
+		}
+		modifier = {
+			factor = 5
+			year = 2510
+		}
+		modifier = {
+			factor = 100 #If game has historical rule, ensure that the Mongol Invasion WILL happen when the time comes.
+			has_game_rule = {
+				name = mongol_invasion
+				value = historical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_game_rule = {
+				name = mongol_invasion
+				value = random
+			}
+			NOT = { total_years_played = 100 }
+		}
+		modifier = {
+			factor = 0.5
+			has_game_rule = {
+				name = mongol_invasion
+				value = delayed_random
+			}
+			NOT = { total_years_played = 100 }
+		}
+		modifier = {
+			factor = 0.5
+			has_game_rule = {
+				name = mongol_invasion
+				value = random
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_game_rule = {
+				name = mongol_invasion
+				value = delayed_random
+			}
+		}
+	}
+    immediate = {
+        random_province = {
+            limit = {
+                OR = {
+                    de_jure_liege_or_above = k_lakotah
+                    de_jure_liege_or_above = k_big_sky
+                    de_jure_liege_or_above = k_alberta
+                    de_jure_liege_or_above = k_saskatchewan
+                    de_jure_liege_or_above = k_manitoba
+                }
+            }
+            save_global_event_target_as = joshua_origin
+        }
+        narrative_event = { id = gplains.2 }
+    }
+}
+
+# Joshua Crossbearer appears
+narrative_event = {
+	id = gplains.2
+	title = "EVTNAME_GPLAINS_2"
+	desc = "EVTDESC_GPLAINS_2"
+	major = yes
+	hide_from = yes
+	
+	picture = "GFX_evt_mongols"
+	border = "GFX_event_narrative_frame_war"
+    
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = joshua_arrival }
+			}
+			set_global_flag = joshua_arrival
+			activate_title = { title = e_millenarian_host status = yes }
+			
+			if = {
+				limit = {
+					NOT = {
+						e_millenarian_host = {
+							holder_scope = { always = yes }
+						}
+					}
+				}
+				create_character = {
+					name="Joshua"
+					dynasty=2239451
+                    give_nickname = nick_christus
+					age = 29
+					attributes = {
+						martial=10
+						diplomacy=8
+						intrigue=8
+						stewardship=9
+					}
+					health = 7
+					fertility = 0.7
+					religion="millenarian"
+					culture=event_target:joshua_origin
+					trait="brave"
+					trait="ambitious"
+					trait="diligent"
+					trait="strategist"
+					trait="cavalry_leader"
+                    trait="conqueror"
+					trait="exalted_warlord"
+				}
+				new_character = {
+					set_character_flag = is_joshua
+					if = {
+						limit = {
+							has_dlc = "Holy Fury"
+							NOT = {
+								any_owned_bloodline = {
+									has_bloodline_flag = genghis_khan_line
+								}
+							}
+						}
+						create_bloodline = {
+							type = genghis_khan
+						}
+					}
+					e_millenarian_host = {
+						set_title_landless = { title = THIS status = yes }
+						set_title_flag = temporary_landless_title
+						grant_title = PREV
+					}
+					set_defacto_liege = THIS
+					if = {
+						limit = {
+							has_dlc = "Horse Lords"
+						}
+						set_government_type = nomadic_government
+					}
+					if = {
+						limit = {
+							NOT = { has_dlc = "Horse Lords" }
+						}
+						set_government_type = tribal_government
+					}
+					wealth = 12000
+					prestige = 10000
+					set_character_flag = horde_invader
+					character_event = { id = gplains.3 } # Spawn generals
+					character_event = { id = gplains.4 } # Spawn courtiers
+					character_event = { id = gplains.5 } # Spawn troops
+					character_event = { id = gplains.6 days = 1 } # Spawn population
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Horse Lords"
+				}				
+				event_target:joshua_origin = { # Invade province of origin
+					kingdom = {
+						e_millenarian_host = {
+							holder_scope = {
+								unsafe_war = {
+									casus_belli = nomad_invasion
+									target = PREVPREVPREV # The top liege of the owner of the province
+									thirdparty_title = PREVPREV # The de jure kingdom
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Horse Lords" }
+				}				
+				event_target:joshua_origin = {
+					kingdom = {
+						e_millenarian_host = {
+							holder_scope = {
+								unsafe_war = {
+									casus_belli = tribal_invasion
+									target = PREVPREVPREV # The top liege of the owner of the province
+									thirdparty_title = PREVPREV # The de jure kingdom
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { ai = no }
+			if = {
+				limit = {
+					OR = {
+						has_power_omen_modifier_trigger = yes
+						has_battle_omen_modifier_trigger = yes
+					}
+				}
+				set_character_flag = negative_event_flag # For the scrying outcome calculation...
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA60500"
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = pagan_group
+			}
+			NOT = { government = nomadic_government }
+			has_power_omen_modifier_trigger = no
+			has_battle_omen_modifier_trigger = no
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB60500"
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = pagan_group }
+			NOT = { government = nomadic_government }
+			has_power_omen_modifier_trigger = no
+			has_battle_omen_modifier_trigger = no
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC60500"
+		trigger = {
+			government = nomadic_government
+			has_power_omen_modifier_trigger = no
+			has_battle_omen_modifier_trigger = no
+		}
+	}
+
+	option = { # scrying omen included
+		name = "EVTOPTA60500"
+
+		if = { #in case this does not run in the immediate due to "major = yes"
+			limit = {
+				OR = {
+					has_power_omen_modifier_trigger = yes
+					has_battle_omen_modifier_trigger = yes
+				}
+			}
+			set_character_flag = negative_event_flag # For the scrying outcome calculation...
+		}
+
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = pagan_group
+			}
+			NOT = { government = nomadic_government }
+			OR = {
+				has_power_omen_modifier_trigger = yes
+				has_battle_omen_modifier_trigger = yes
+			}
+		}
+	}
+	
+	option = { # scrying omen included
+		name = "EVTOPTB60500"
+
+		if = { #in case this does not run in the immediate due to "major = yes"
+			limit = {
+				OR = {
+					has_power_omen_modifier_trigger = yes
+					has_battle_omen_modifier_trigger = yes
+				}
+			}
+			set_character_flag = negative_event_flag # For the scrying outcome calculation...
+		}
+		
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { religion_group = muslim }
+			NOT = { religion_group = pagan_group }
+			NOT = { government = nomadic_government }
+			OR = {
+				has_power_omen_modifier_trigger = yes
+				has_battle_omen_modifier_trigger = yes
+			}
+		}
+	}
+	
+	option = { # scrying omen included
+		name = "EVTOPTC60500"
+
+		if = { #in case this does not run in the immediate due to "major = yes"
+			limit = {
+				OR = {
+					has_power_omen_modifier_trigger = yes
+					has_battle_omen_modifier_trigger = yes
+				}
+			}
+			set_character_flag = negative_event_flag # For the scrying outcome calculation...
+		}
+
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+
+		trigger = {
+			government = nomadic_government
+			OR = {
+				has_power_omen_modifier_trigger = yes
+				has_battle_omen_modifier_trigger = yes
+			}
+		}
+	}
+}
+# Spawn millenarian leaders
+character_event = {
+	id = gplains.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			age = 35
+			religion="millenarian"
+			culture=ROOT
+			attributes = {
+				martial=10
+				diplomacy=4
+				intrigue=6
+				stewardship=6
+			}
+			trait="brave"
+			trait="strong"
+			trait="quick"
+			trait="diligent"
+			trait="brilliant_strategist"
+			trait="trickster"
+		}
+		create_character = {
+			age = 50
+			dynasty = random
+			religion="millenarian"
+			culture=ROOT
+			attributes = {
+				martial=10
+				diplomacy=5
+				intrigue=5
+				stewardship=4
+			}
+			trait="skilled_tactician"
+			trait="brave"
+		}
+	}
+}
+# Spawn extra courtiers
+character_event = {
+	id = gplains.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 27
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 51
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 44
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = millenarian
+			culture = ROOT
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+	}
+}
+# Spawn troops
+character_event = {
+	id = gplains.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		spawn_unit = {
+			province = event_target:joshua_origin
+			troops =
+			{
+				light_cavalry = { 2750 2750 }
+				horse_archers = { 2250 2250 }
+				knights = { 500 500 }
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+			spawn_unit = {
+				province = event_target:joshua_origin
+				troops =
+				{
+					light_cavalry = { 2750 2750 }
+					horse_archers = { 2250 2250 }
+					knights = { 500 500 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = gplains.6
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		population = 120000
+		add_character_modifier = {
+			modifier = invading_population_halt
+			duration = 10950
+			hidden = yes
+		}
+		character_event = {
+			id = gplains.7
+			days = 365
+		}
+	}
+}
+
+character_event = {
+	id = gplains.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { government = nomadic_government }
+				NOT = { has_character_modifier = invading_population_halt }
+			}
+			remove_character_modifier = invading_population_halt
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { population_factor = 1 }
+			}
+			population = 80000
+			if = {
+				limit = {
+					population = 350000
+				}
+				character_event = {
+					id = gplains.8
+					days = 365
+				}
+				break = yes
+			}
+		}
+		repeat_event = { 
+			id = gplains.7
+			days = 365
+		}
+	}
+}
+
+character_event = {
+	id = gplains.8
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { government = nomadic_government }
+				NOT = { has_character_modifier = invading_population_halt }
+			}
+			remove_character_modifier = invading_population_halt
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { population_factor = 1 }
+			}
+			remove_character_modifier = invading_population_halt
+			break = yes
+		}
+		repeat_event = {
+			id = gplains.8
+			days = 365
+		}
+	}
+}
+
+### finish this when decision to become joshua exists
+
+# Notify world about the greatest of Khans
+#narrative_event = {
+#	id = gplains.9
+#	title = EVTNAME60520
+#	desc = EVTDESC60520
+#	is_triggered_only = yes
+#	
+#	picture = GFX_evt_mongols
+#	border = GFX_event_narrative_frame_war
+#
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				OR = {
+#					has_power_omen_modifier_trigger = yes
+#					has_battle_omen_modifier_trigger = yes
+#				}
+#			}
+#			set_character_flag = negative_event_flag # For the scrying outcome calculation...
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_60520
+#		trigger = {
+#			primary_title = {
+#				title = e_millenarian_host
+#			}
+#			has_power_omen_modifier_trigger = no
+#			has_battle_omen_modifier_trigger = no
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTB_60520
+#		trigger = {
+#			NOT = {
+#				primary_title = {
+#					title = e_millenarian_host
+#				}
+#			}
+#			NOT = {
+#				any_liege = {
+#					primary_title = {
+#						title = e_millenarian_host
+#					}
+#				}
+#			}
+#			has_power_omen_modifier_trigger = no
+#			has_battle_omen_modifier_trigger = no
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTC_60520
+#		trigger = {
+#			any_liege = {
+#				primary_title = {
+#					title = e_millenarian_host
+#				}
+#			}
+#			has_power_omen_modifier_trigger = no
+#			has_battle_omen_modifier_trigger = no
+#		}
+#	}
+#
+#	option = { # scrying omen included
+#		name = EVTOPTA_60520
+#
+#		calculate_scrying_outcome_effect = yes
+#		remove_scrying_omen_modifiers_effect = yes
+#		tooltip_info = yes
+#
+#		trigger = {
+#			primary_title = {
+#				title = e_millenarian_host
+#			}
+#			OR = {
+#				has_power_omen_modifier_trigger = yes
+#				has_battle_omen_modifier_trigger = yes
+#			}
+#		}
+#	}
+#	
+#	option = { # scrying omen included
+#		name = EVTOPTB_60520
+#
+#		calculate_scrying_outcome_effect = yes
+#		remove_scrying_omen_modifiers_effect = yes
+#		tooltip_info = yes
+#
+#		trigger = {
+#			NOT = {
+#				primary_title = {
+#					title = e_millenarian_host
+#				}
+#			}
+#			NOT = {
+#				any_liege = {
+#					primary_title = {
+#						title = e_millenarian_host
+#					}
+#				}
+#			}
+#			OR = {
+#				has_power_omen_modifier_trigger = yes
+#				has_battle_omen_modifier_trigger = yes
+#			}
+#		}
+#	}
+#	
+#	option = { # scrying omen included
+#		name = EVTOPTC_60520
+#
+#		calculate_scrying_outcome_effect = yes
+#		remove_scrying_omen_modifiers_effect = yes
+#		tooltip_info = yes
+#
+#		trigger = {
+#			any_liege = {
+#				primary_title = {
+#					title = e_millenarian_host
+#				}
+#			}
+#			OR = {
+#				has_power_omen_modifier_trigger = yes
+#				has_battle_omen_modifier_trigger = yes
+#			}
+#		}
+#	}
+#}
+## Ai - reinforcement event for Genghis decision
+#character_event = {
+#	id = 60530
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		capital_scope = {
+#			ROOT = {
+#				spawn_unit = {
+#					province = PREV
+#					troops =
+#					{
+#						light_cavalry = { 2750 2750 }
+#						horse_archers = { 2250 2250 }
+#						knights = { 500 500 }
+#					}
+#				}
+#				spawn_unit = {
+#					province = PREV
+#					troops =
+#					{
+#						light_cavalry = { 2750 2750 }
+#						horse_archers = { 2250 2250 }
+#						knights = { 500 500 }
+#					}
+#				}
+#				spawn_unit = {
+#					province = PREV
+#					troops =
+#					{
+#						light_cavalry = { 2750 2750 }
+#						horse_archers = { 2250 2250 }
+#						knights = { 500 500 }
+#					}
+#				}
+#				spawn_unit = {
+#					province = PREV
+#					troops =
+#					{
+#						light_cavalry = { 2750 2750 }
+#						horse_archers = { 2250 2250 }
+#						knights = { 500 500 }
+#					}
+#				}
+#			}
+#		}
+#	}
+#}

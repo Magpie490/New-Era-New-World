@@ -218,6 +218,7 @@ esoteric = {
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = columbian
+		intermarry = ophite
 	}
 	aquarian = {
 		graphical_culture = jaingfx
@@ -282,6 +283,8 @@ esoteric = {
 		intermarry = waashat
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
+		intermarry = baphometist
+		intermarry = ophite
 	}
 	dianic = {
 		graphical_culture = jaingfx
@@ -346,6 +349,8 @@ esoteric = {
 		intermarry = waashat
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
+		intermarry = baphometist
+		intermarry = ophite
 	}
 	myriadic = {
 		graphical_culture = norsegfx
@@ -411,6 +416,8 @@ esoteric = {
 		intermarry = waashat
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
+		intermarry = baphometist
+		intermarry = ophite
 	}
 	shriner = {
 		graphical_culture = muslimgfx #Because of Shriner's Middle Eastern theme
@@ -973,7 +980,7 @@ esoteric = {
 		
 		aggression = 1.1
 		priests_can_marry = yes
-        female_temple_holders = yes
+        	female_temple_holders = yes
 		allow_rivermovement = yes
 		max_consorts = 3 #can take concubines
 		defensive_attrition = yes
@@ -1082,7 +1089,7 @@ esoteric = {
 		secondary_event_pictures = sunni
 
 		icon = 98
-        heresy_icon = 99
+        	heresy_icon = 99
 
 		color = { 53 178 53 }
 		
@@ -1165,7 +1172,7 @@ esoteric = {
 		secondary_event_pictures = sunni
 
 		icon = 98
-        heresy_icon = 99
+        	heresy_icon = 99
 		parent = gaian
 		color = { 77 216 65 }
 		
@@ -1347,5 +1354,54 @@ esoteric = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 
+		intermarry = ophite
+		intermarry = dianic
+		intermarry = myriadic
+		intermarry = arcadian
+		intermarry = aquarian
+	}
+	ophite = {
+		graphical_culture = thelemagfx
+		icon = 215
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 127 38 69 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+		high_god_name = GOD_THE_ONE
+		god_names = {
+			GOD_THE_ONE GOD_THE_FATHER GOD_THE_SERPENT GOD_LOGOS GOD_THE_GOOD_SHEPHERD
+		}
+		evil_god_names = {
+			GOD_THE_COVETOUS_ONE GOD_THE_TYRANTS GOD_TEACHERS_OF_LAW
+		}
+		character_modifier = {
+			christian_opinion = -5
+			learning = 1
+		}
+		piety_name = ENLIGHTENMENT
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_OPHITE_GOSPEL
+		priest_title = PRIEST
+		priests_can_marry = yes
+		pacifist = yes
+		hard_to_convert = yes
+		feminist = yes
+		can_retire_to_monastery = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		allow_in_ruler_designer = yes
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+
+		intermarry = amaitist
+		intermarry = baphometist
+		intermarry = aquarian
+		intermarry = technopolitan
+		intermarry = dianic
+		intermarry = myriadic
+		intermarry = scholastic
 	}
 }
