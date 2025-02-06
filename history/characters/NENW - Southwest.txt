@@ -27,7 +27,7 @@
 	properties="jo0dmk"
 	dynasty = 5128851
 	culture = texgerman
-	religion = penitente
+	religion = blue_star
 	trait = mastermind_theologian
 	trait = quick
 	trait = diligent
@@ -73,7 +73,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = penitente
+	religion = blue_star
 	trait = fortune_builder
 	2287.8.11 = {
 		birth = yes
@@ -88,7 +88,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = texgerman #For portrait
-	religion = penitente
+	religion = blue_star
 	trait = stutter
 	2308.7.8 = {
 		birth = yes
@@ -105,7 +105,7 @@
 	father = 2710001
 	mother = 2710002
 	culture = texgerman #For portrait
-	religion = penitente
+	religion = blue_star
 	2324.2.16 = {
 		birth = yes
 		culture = neomexicano
@@ -114,40 +114,8 @@
 		death = yes
 	}
 }
-2710005 = { # A shady lawyer currently employed by Duke Walter
-	name = "James"
-	dynasty = 5226492
-	father = 100100
-	mother = 100101
-	culture = windlander
-	religion = madonnite
-	trait = intricate_webweaver
-	trait = quick
-	trait = deceitful
-	trait = ambitious
-	trait = gregarious
-	trait = greedy
-	trait = socializer
-	diplomacy = 8
-	intrigue = 9
-	2277.11.12 = {
-		birth = yes
-	}
-	2313.8.2 = {
-		culture = newmexican
-		religion = penitente
-		effect = {
-			set_name = Saul
-			dynasty = 5128853	# Goodman
-		}
-		trait = sympathy_judaism
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
 2710006 = {
-	name = "Jesé" #Business partner and friend of Walter, currently ruler of Escondida
+	name = "José Miguel" #Business partner and friend of Walter, currently ruler of Escondida
 	dynasty = 5128854
 	culture = newmexican
 	religion = bracero
@@ -170,50 +138,6 @@
 		death = yes
 	}
 }
-2710007 = {
-	name = "Hank" #A diligent but somewhat clueless warrior who seeks justice with some success
-	dynasty = 5128855
-	culture = newmexican
-	religion = trinitarian
-	trait = tough_soldier
-	trait = gregarious
-	trait = brave
-	trait = sturdy
-	trait = diligent
-	trait = proud
-	trait = just
-	trait = trusting
-	disallow_random_traits = yes
-	2283.3.24 = {
-		birth = yes
-	}
-	2304.4.15 = {
-		add_spouse=2710009
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
-2710008 = {
-	name = "Thomas" #A fighter and enforcer who currently serves under Duke Walter
-	dynasty = 5128856
-	culture = newmexican
-	religion = trinitarian
-	trait = brilliant_strategist
-	trait = patient
-	trait = brave
-	trait = cynical
-	trait = deceitful
-	trait = marshal_3
-	trait = strategist
-	trait = sympathy_christendom
-	2260.9.24 = {
-		birth = yes
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
 2710009 = {
 	name = "Marie"
 	female = yes
@@ -221,7 +145,7 @@
 	father = 2710010
 	mother = 2710011
 	culture = newmexican
-	religion = penitente
+	religion = bracero
 	trait = amateurish_plotter
 	trait = deceitful
 	trait = greedy
@@ -237,7 +161,7 @@
 	name = "George"
 	dynasty = 5226491
 	culture = newmexican
-	religion = penitente
+	religion = bracero
 	2250.8.11 = {
 		birth = yes
 	}
@@ -252,7 +176,7 @@
 	name = "Holly"
 	female = yes
 	culture = newmexican
-	religion = penitente
+	religion = bracero
 	2250.8.11 = {
 		birth = yes
 	}
@@ -281,17 +205,17 @@
 	disallow_random_traits = yes
 	2294.9.24 = {
 		birth = yes
-		culture = neomexicano
+		culture = tejano
 	}
 	2666.1.1 = {
 		death = yes
 	}
 }
 2710013 = {
-	name = "Gordon" #A mastermind of a person who rarely speaks
+	name = "Jordan" #A mastermind of a person who rarely speaks
 	dynasty = 3000795
 	culture = newmexican
-	religion = trinitarian
+	religion = blue_star
 	trait = mastermind_theologian
 	trait = quick
 	trait = diligent
@@ -305,8 +229,6 @@
 		birth = yes
 		effect={
 			add_artifact = spectacles
-			add_claim = c_capulin
-			add_claim = c_raton
 		}
 	}
 	2313.2.15 = {
@@ -316,27 +238,6 @@
 		}
 	}
 	2666.1.1 = {
-		death = yes
-	}
-}
-2710014 = {
-	name = "Matt"
-	dynasty = 5128856
-	father = 2710008
-	culture = newmexican
-	religion = trinitarian
-	trait = skilled_tactician
-	trait = just
-	trait = brave
-	trait = diligent
-	trait = stubborn
-	2280.9.24 = {
-		birth = yes
-	}
-	2306.4.15 = {
-		add_spouse=2710015
-	}
-	2320.1.1 = {
 		death = yes
 	}
 }
@@ -352,27 +253,12 @@
 		death = yes
 	}
 }
-2710016 = {
-	name = "Kaylee"
-	female = yes
-	dynasty = 5128856
-	father = 2710014
-	mother = 2710015
-	culture = newmexican
-	religion = trinitarian
-	2316.9.24 = {
-		birth = yes
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
 
 2710017 = {
 	name = "Ethan" #A devoted christian man keeping his spirits high with prayer
 	dynasty = 5128902
 	culture = mescalero
-	religion = penitente
+	religion = trinitarian
 	trait = scholarly_theologian
 	trait = theologian
 	trait = chaste
@@ -383,31 +269,6 @@
 	trait = zealous
 	disallow_random_traits = yes
 	2290.3.2 = {
-		birth = yes
-	}
-	2666.1.1 = {
-		death = yes
-	}
-}
-
-2710018 = {
-	name = "Tuco" #A somewhat unhinged merchant eager to enact revenge on anyone who crosses him
-	dynasty = 5128701
-	culture = norteno
-	religion = trinitarian
-	trait = fortune_builder
-	trait = lunatic
-	trait = groomed
-	trait = diligent
-	trait = greedy
-	trait = wroth
-	trait = ambitious
-	trait = arbitrary
-	trait = deceitful
-	trait = gregarious
-	trait = paranoid
-	disallow_random_traits = yes
-	2289.2.2 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -432,7 +293,7 @@
 	name = "Raimundo" #Duke Raimundo of Santa Fe. A charismatic and kind hearted ruler known for his tolerance
 	dynasty = 5128425
 	culture = neomexicano
-	religion = penitente
+	religion = bracero
 	trait = charismatic_negotiator
 	trait = poet
 	trait = patient
@@ -476,7 +337,7 @@
 	name = "Alberto" #Count Alberto, a vassal under Raimundo. A warrior given lands on the frontier to fight off nomadic raiders
 	dynasty = 5128470
 	culture = neomexicano
-	religion = penitente
+	religion = bracero
 	trait = skilled_tactician
 	trait = duelist
 	trait = humble
@@ -666,6 +527,177 @@
 	culture = norteno
 	religion = bracero
 	2288.2.22 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710034 = {
+	name = "Viola"
+	dynasty = 5001784
+	culture = jicarilla
+	religion = peyotist
+	female = yes
+	2275.6.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+			death = yes
+	}
+}
+2710035 = {
+	name = "Mireille"
+	dynasty = 5001785
+	culture = arizonense
+	religion = trinitarian
+	female = yes
+	2276.8.21 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710036 = {
+	name = "Kaibab"
+	dynasty = 5001786
+	culture = buckaroo
+	religion = blue_star
+	2276.6.4 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710037 = {
+	name = "Chol"
+	dynasty = 5001787
+	culture = buckaroo
+	religion = trinitarian
+	2269.8.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710038 = {
+	name = "Wassaja"
+	dynasty = 5001788
+	culture = yavapai
+	religion = trinitarian
+	2271.3.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710039 = {
+	name = "Geronimo"
+	dynasty = 5001789
+	culture = western_apache
+	religion = trinitarian
+	2273.2.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710040 = {
+	name = "Gene"
+	dynasty = 5001790
+	culture = navajo
+	religion = blessing_way
+	2275.3.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710041 = { #king of the Navajo
+	name = "Atsidi"
+	dynasty = 5001791
+	culture = navajo
+	religion = blessing_way
+	2289.7.22 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710042 = {
+	name = "David"
+	dynasty = 5001792
+	culture = navajo
+	religion = blessing_way
+	2279.1.22 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710043 = {
+	name = "Hastiin"
+	dynasty = 5001793
+	culture = navajo
+	religion = blessing_way
+	2282.4.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710044 = {
+	name = "Jose"
+	dynasty = 5001794
+	culture = arizonense
+	religion = blue_star
+	2277.1.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710045 = {
+	name = "Chato"
+	dynasty = 5001795
+	culture = chiricahua
+	religion = trinitarian #taalawsohu
+	2278.1.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710046 = {
+	name = "Cliff"
+	dynasty = 5001796
+	culture = towa
+	religion = taalawsohu
+	2283.5.19 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+2710047 = {
+	name = "Vera"
+	dynasty = 5001797
+	culture = keres
+	religion = taalawsohu
+	female = yes
+	2285.8.11 = {
 		birth = yes
 	}
 	2666.1.1 = {

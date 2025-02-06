@@ -1,296 +1,7 @@
 namespace = holyorder
 #mostly miscellaneous ones we haven't added yet
 
-
-
-# narrative_event = {#The Formation of the Blue Stripes
-	# id = holyorder.1
-	# title = "EVTNAME_BS_creation"
-	# desc = "EVTDESC_BS_creation"
-	# picture = "GFX_evt_crusaders"
-	# border = "GFX_event_narrative_frame_religion"
-	
-	# major = yes
-	# only_playable = yes
-		
-	# trigger = {
-		# NOT = { #immersion-breaking
-			# has_alternate_start_parameter = { key = religion_names value = random }
-		# }
-		# religion = folklorist_reformed
-		# is_heretic = no	
-		
-		# NOT = { is_title_active = d_blue_stripes }	
-			# 395 = { # North Dvina/Archangelsk
-				# owner = { religion = folklorist_reformed }
-			# }
-		# }
-		
-		# mean_time_to_happen = {
-			# months = 6
-		# }
-		
-		# immediate = {
-			# activate_title = { title = d_blue_stripes status = yes }
-			# create_character = {
-				# dynasty = random
-				# random_traits = yes
-				# trait = zealous
-				# trait = mastermind_theologian
-				# religion = folklorist_reformed
-				# culture = pomoran
-				# female = no
-			# }
-			# new_character = {
-				# d_blue_stripes = {
-					# grant_title = PREV
-				# }
-				# set_defacto_liege = THIS
-				# new_order_effect = yes
-			# }
-			
-			# religion_authority = {
-				# modifier = religious_order_formed
-				# years = 10
-			# }
-		# }
-		# option = {
-			# name = "EVTOPTA_BS_creation"
-			# trigger = {
-				# religion = folklorist_reformed
-			# }
-		# }
-		# option = {
-			# name = "EVTOPTB_BS_creation"
-			# trigger = {
-				# NOT = { religion_group = pagan_group }
-			# }
-		# }
-		# option = {
-			# name = "EVTOPTC_BS_creation"
-			# trigger = {
-				# religion_group = pagan_group
-				# NOT = { religion = folklorist_reformed }
-			# }
-		# }
-	# }
-
-# narrative_event = {#The Formation of the Strugglers
-	# id = holyorder.2
-	# title = "EVTNAME_STR_creation"
-	# desc = "EVTDESC_STR_creation"
-	# picture = "GFX_evt_crusaders"
-	# border = "GFX_event_narrative_frame_religion"
-	
-	# major = yes
-	# only_playable = yes
-	# only_men = yes
-		
-	# trigger = {
-		# NOT = { #immersion-breaking
-			# has_alternate_start_parameter = { key = religion_names value = random }
-		# }
-		# religion = maunaxite_reformed
-		# is_heretic = no	
-		
-		# NOT = { is_title_active = d_strugglers }	
-		# 1252 = { # Barasuru
-			# owner = { religion = maunaxite_reformed }
-		# }
-	# }
-		
-	# mean_time_to_happen = {
-		# months = 6
-	# }
-	
-	# immediate = {
-		# activate_title = { title = d_strugglers status = yes }
-		# create_character = {
-			# dynasty = random
-			# random_traits = yes
-			# trait = zealous
-			# trait = mastermind_theologian
-			# religion = maunaxite_reformed
-			# culture=oriya
-			# female = no
-		# }
-		# new_character = {
-			# d_strugglers = {
-				# grant_title = PREV
-			# }
-			# set_defacto_liege = THIS
-			# new_order_effect = yes
-		# }
-		
-		# religion_authority = {
-			# modifier = religious_order_formed
-			# years = 10
-		# }
-	# }
-	# option = {
-		# name = "EVTOPTA_STR_creation"
-		# trigger = {
-			# religion = maunaxite_reformed
-		# }
-	# }
-	# option = {
-		# name = "EVTOPTB_STR_creation"
-		# trigger = {
-			# NOT = { religion_group = indian_group }
-		# }
-	# }
-	# option = {
-		# name = "EVTOPTC_STR_creation"
-		# trigger = {
-			# religion_group = indian_group
-			# NOT = { religion = maunaxite_reformed }
-		# }
-	# }
-# }
-
-character_event = {
-	id = holyorder.3
-	desc = "DEBUG"
-	picture = GFX_evt_pagan_reformation
-	hide_window = yes
-	is_triggered_only = yes
-	only_playable = yes
-	trigger = {
-		OR = {
-			has_landed_title = c_gozo
-			has_landed_title = d_knights_hospitaler
-			has_landed_title = d_knights_hospitaler_2
-			has_landed_title = d_holy_sepulchre
-			has_landed_title = d_hashshashin
-			has_landed_title = d_saint_basil
-		}
-		is_save_game = no
-	}
-
-	option = {
-		trigger = { 
-			has_landed_title = d_knights_hospitaler
-		}
-		d_knights_hospitaler = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government	
-	}
-	option = {
-		trigger = { 
-			has_landed_title = d_knights_hospitaler_2
-		}
-		d_knights_hospitaler_2 = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government	
-	}
-	option = {
-		trigger = { 
-			has_landed_title = c_gozo
-		}
-		c_gozo = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government	
-	}
-	option = {
-		trigger = { 
-			has_landed_title = d_holy_sepulchre
-		}
-		d_holy_sepulchre = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government
-	}
-	option = {
-		trigger = { 
-			has_landed_title = d_hashshashin
-		}
-		d_hashshashin = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government
-	}
-	option = {
-		trigger = { 
-			has_landed_title = d_saint_basil
-		}
-		d_saint_basil = {
-			show_scope_change = no
-			make_primary_title = yes
-		}
-		set_government_type = order_government
-	}
-}
-character_event = {
-	id = holyorder.4
-	desc = "DEBUG"
-	picture = GFX_evt_pagan_reformation
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		OR = {
-			has_landed_title = k_hospitaller_state
-			has_landed_title = k_sepulchre_state
-			has_landed_title = k_KGB_state
-		}
-		NOT = {
-			realm_size = 10
-		}
-	}
-
-	option = {
-		trigger = { 
-			has_landed_title = k_hospitaller_state
-		}
-		k_hospitaller_state = {
-			unsafe_destroy_landed_title = k_hospitaller_state
-			activate_title = { title = k_hospitaller_state status = no }
-		}
-		set_government_type = order_government
-		d_knights_hospitaler = {
-			gain_title_effect = yes
-			show_scope_change = no
-			make_primary_title = yes
-		}
-	}
-	option = {
-		trigger = { 
-			has_landed_title = k_sepulchre_state
-		}
-		k_sepulchre_state = {
-			unsafe_destroy_landed_title = k_sepulchre_state
-			activate_title = { title = k_sepulchre_state status = no }
-		}
-		set_government_type = order_government
-		d_holy_sepulchre = {
-			gain_title_effect = yes
-			show_scope_change = no
-			make_primary_title = yes
-		}
-	}
-	option = {
-		trigger = { 
-			has_landed_title = k_KGB_state
-		}
-		k_KGB_state = {
-			unsafe_destroy_landed_title = k_KGB_state
-			activate_title = { title = k_KGB_state status = no }
-		}
-		set_government_type = order_government
-		d_hashshashin = {
-			gain_title_effect = yes
-			show_scope_change = no
-			make_primary_title = yes
-		}
-	}
-}
+#removed OW 1-4 and 24-26
 
 # The son of a ruler volunteers to join the Holy Order
 character_event = {
@@ -314,21 +25,6 @@ character_event = {
 			one_holy_order_avalaible_trigger = yes
 			two_holy_order_avalaible_trigger = yes
 			AND = {
-				NOT = { has_character_modifier = expelled_d_legion_of_mary }
-				NOT = {
-					any_liege = {
-						has_character_modifier = expelled_d_legion_of_mary
-					}
-				}
-				is_title_active = d_legion_of_mary
-				OR = {
-					religion = catholic
-					religion = cadaverist
-					religion = fraticelli
-					religion = hussite
-				}
-			}
-			AND = {
 				NOT = { has_character_modifier = expelled_d_knights_templar }
 				NOT = {
 					any_liege = {
@@ -351,21 +47,6 @@ character_event = {
 					}
 				}
 				is_title_active = d_knights_hospitaler
-				OR = {
-					religion = catholic
-					religion = cadaverist
-					religion = fraticelli
-					religion = hussite
-				}
-			}
-			AND = {
-				NOT = { has_character_modifier = expelled_d_knights_lazarus }
-				NOT = {
-					any_liege = {
-						has_character_modifier = expelled_d_knights_lazarus
-					}
-				}
-				is_title_active = d_knights_lazarus
 				OR = {
 					religion = catholic
 					religion = cadaverist
@@ -521,31 +202,6 @@ character_event = {
 			}
 			10 = {
 				trigger = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					is_title_active = d_legion_of_mary
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				modifier = {
-					factor = 5
-					OR = {
-					culture_group = goidelic
-					culture_group = brythonic
-					}
-				}
-				d_legion_of_mary = { save_event_target_as = holy_order_to_join }
-			}
-			10 = {
-				trigger = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
 					NOT = {
 						any_liege = {
@@ -583,24 +239,6 @@ character_event = {
 					}
 				}
 				d_knights_hospitaler = { save_event_target_as = holy_order_to_join }
-			}
-			15 = {
-				trigger = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					is_title_active = d_knights_lazarus
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				d_knights_lazarus = { save_event_target_as = holy_order_to_join }
 			}
 		}
 		liege = {
@@ -907,29 +545,6 @@ character_event = {
 				}
 			}
 			AND = {
-				NOT = { has_character_modifier = expelled_d_legion_of_mary }
-				NOT = {
-					any_liege = {
-						has_character_modifier = expelled_d_legion_of_mary
-					}
-				}
-				d_legion_of_mary = {
-					holder_scope = {
-						wealth = 300
-						NOT = {
-							realm_size = 10
-						}
-						ai = yes
-					}
-				}
-				OR = {
-					religion = catholic
-					religion = cadaverist
-					religion = fraticelli
-					religion = hussite
-				}
-			}
-			AND = {
 				NOT = { has_character_modifier = expelled_d_knights_templar }
 				NOT = {
 					any_liege = {
@@ -959,28 +574,6 @@ character_event = {
 					}
 				}
 				d_knights_hospitaler = {
-					holder_scope = { ai = yes
-						wealth = 300
-						NOT = {
-							realm_size = 10
-						}
-					}
-				}
-				OR = {
-					religion = catholic
-					religion = cadaverist
-					religion = fraticelli
-					religion = hussite
-				}
-			}
-			AND = {
-				NOT = { has_character_modifier = expelled_d_knights_lazarus }
-				NOT = {
-					any_liege = {
-						has_character_modifier = expelled_d_knights_lazarus
-					}
-				}
-				d_knights_lazarus = {
 					holder_scope = { ai = yes
 						wealth = 300
 						NOT = {
@@ -1043,25 +636,6 @@ character_event = {
 					}
 				}
 				AND = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					d_legion_of_mary = {
-						holder_scope = { ai = yes
-							NOT = { demesne_size = 1 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
 					NOT = {
 						any_liege = {
@@ -1088,25 +662,6 @@ character_event = {
 						}
 					}
 					d_knights_hospitaler = {
-						holder_scope = { ai = yes
-							NOT = { demesne_size = 1 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					d_knights_lazarus = {
 						holder_scope = { ai = yes
 							NOT = { demesne_size = 1 } wealth = 300
 						}
@@ -1144,25 +699,6 @@ character_event = {
 					}
 				}
 				AND = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					d_legion_of_mary = {
-						holder_scope = { ai = yes
-							NOT = { demesne_size = 2 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
 					NOT = {
 						any_liege = {
@@ -1189,25 +725,6 @@ character_event = {
 						}
 					}
 					d_knights_hospitaler = {
-						holder_scope = { ai = yes
-							NOT = { demesne_size = 2 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					d_knights_lazarus = {
 						holder_scope = { ai = yes
 							NOT = { demesne_size = 2 } wealth = 300
 						}
@@ -1246,25 +763,6 @@ character_event = {
 					}
 				}
 				AND = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					d_legion_of_mary = {
-						holder_scope = { ai = yes
-							NOT = { num_of_count_titles = 1 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
 					NOT = {
 						any_liege = {
@@ -1291,25 +789,6 @@ character_event = {
 						}
 					}
 					d_knights_hospitaler = {
-						holder_scope = { ai = yes
-							NOT = { num_of_count_titles = 1 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					d_knights_lazarus = {
 						holder_scope = { ai = yes
 							NOT = { num_of_count_titles = 1 } wealth = 300
 						}
@@ -1347,25 +826,6 @@ character_event = {
 					}
 				}
 				AND = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					d_legion_of_mary = {
-						holder_scope = { ai = yes
-							NOT = { realm_size = 5 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
 					NOT = {
 						any_liege = {
@@ -1392,25 +852,6 @@ character_event = {
 						}
 					}
 					d_knights_hospitaler = {
-						holder_scope = { ai = yes
-							NOT = { realm_size = 5 } wealth = 300
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				AND = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					d_knights_lazarus = {
 						holder_scope = { ai = yes
 							NOT = { realm_size = 5 } wealth = 300
 						}
@@ -1522,58 +963,6 @@ character_event = {
 				}
 				religion_scope = { persistent_event_target:two_holy_order = { save_event_target_as = holy_order_to_build } }
 			}
-			10 = {
-				trigger = {
-					NOT = { has_character_modifier = expelled_d_legion_of_mary }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_legion_of_mary
-						}
-					}
-					d_legion_of_mary = {
-						holder_scope = { ai = yes
-							wealth = 300
-							NOT = {
-								realm_size = 10
-							}
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				modifier = {
-					factor = 5
-					any_province = {
-						region = world_europe_west_brittania
-						has_empty_holding = yes
-					}
-				}
-				modifier = {
-					factor = 5
-					d_legion_of_mary = { holder_scope = { NOT = { demesne_size = 1 } } }
-				}
-				modifier = {
-					factor = 3
-					d_legion_of_mary = { holder_scope = { NOT = { demesne_size = 1 } } }
-				}
-				modifier = {
-					factor = 3
-					d_legion_of_mary = { holder_scope = { NOT = { demesne_size = 2 } } }
-				}
-				modifier = {
-					factor = 3
-					d_legion_of_mary = { holder_scope = { NOT = { num_of_count_titles = 1 } } }
-				}
-				modifier = {
-					factor = 3
-					d_legion_of_mary = { holder_scope = { NOT = { demesne_size = 5 } } }
-				}
-				d_legion_of_mary = { save_event_target_as = holy_order_to_build }
-			}
 			15 = {
 				trigger = {
 					NOT = { has_character_modifier = expelled_d_knights_templar }
@@ -1663,55 +1052,10 @@ character_event = {
 				}
 				d_knights_hospitaler = { save_event_target_as = holy_order_to_build }
 			}
-			15 = {
-				trigger = {
-					NOT = { has_character_modifier = expelled_d_knights_lazarus }
-					NOT = {
-						any_liege = {
-							has_character_modifier = expelled_d_knights_lazarus
-						}
-					}
-					d_knights_lazarus = {
-						holder_scope = { ai = yes
-							wealth = 300
-							NOT = {
-								realm_size = 10
-							}
-						}
-					}
-					OR = {
-						religion = catholic
-						religion = cadaverist
-						religion = fraticelli
-						religion = hussite
-					}
-				}
-				modifier = {
-					factor = 3
-					d_knights_lazarus = { holder_scope = { NOT = { demesne_size = 1 } } }
-				}
-				modifier = {
-					factor = 3
-					d_knights_lazarus = { holder_scope = { NOT = { demesne_size = 2 } } }
-				}
-				modifier = {
-					factor = 3
-					d_knights_lazarus = { holder_scope = { NOT = { num_of_count_titles = 1 } } }
-				}
-				modifier = {
-					factor = 3
-					d_knights_lazarus = { holder_scope = { NOT = { demesne_size = 5 } } }
-				}
-				d_knights_lazarus = { save_event_target_as = holy_order_to_build }
-			}
 		}
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
-				region = world_europe_west_brittania
-				event_target:holy_order_to_build = { title = d_legion_of_mary }
 			}
 			preferred_limit = {
 				region = world_europe_west_francia
@@ -1941,10 +1285,8 @@ character_event = {
 				has_character_modifier = borrowed_from_haruriyyah
 				has_character_modifier = expelled_one_holy_order
 				has_character_modifier = expelled_two_holy_order
-				has_character_modifier = expelled_d_legion_of_mary
 				has_character_modifier = expelled_d_knights_templar
 				has_character_modifier = expelled_d_knights_hospitaler
-				has_character_modifier = expelled_d_knights_lazarus
 			}
 			primary_title = { title = ROOT_FROM  }
 		}
@@ -1967,10 +1309,8 @@ character_event = {
 		OR = {
 			has_character_modifier = expelled_one_holy_order
 			has_character_modifier = expelled_two_holy_order
-			has_character_modifier = expelled_d_legion_of_mary
 			has_character_modifier = expelled_d_knights_templar
 			has_character_modifier = expelled_d_knights_hospitaler
-			has_character_modifier = expelled_d_knights_lazarus
 		}
 		OR = {
 			is_ruler = no
@@ -2045,265 +1385,6 @@ character_event = {
 	}
 }
 
-narrative_event = { #The Rebirth of the Templars
-	id = holyorder.24
-	title = "EVTTITLE_HOLY_ORDER_24"
-	desc = "EVTDESC_HOLY_ORDER_24"
-	picture = "GFX_evt_crusaders"
-	border = "GFX_event_narrative_frame_religion"
-	
-	major = yes
-	only_playable = yes
-		
-	trigger = {
-		has_landed_title = k_france
-		112 = { #Paris
-			owner = {
-				religion = ROOT
-				OR = {
-					same_realm = ROOT
-					character = ROOT
-				}
-			}
-		}
-		is_heretic = no	
-		OR = {
-			religion = catholic
-			religion = cadaverist
-			religion = fraticelli
-			religion = hussite
-		}
-		NOT = { is_title_active = d_knights_templar }
-	}
-		
-	mean_time_to_happen = {
-		months = 4
-	}
-	
-	immediate = {
-		activate_title = { title = d_knights_templar status = yes }
-		create_character = {
-			name = "Quasimodo"
-			dynasty = random
-			random_traits = yes
-			trait = zealous
-			trait = elusive_shadow
-			religion = ROOT
-			culture = french
-			female = no
-		}
-		new_character = {
-			d_knights_templar = {
-				religion = ROOT
-				grant_title = PREV
-			}
-			set_defacto_liege = ROOT
-			new_order_effect = yes
-			add_artifact = ring_of_elves
-		}
-		
-		religion_authority = {
-			modifier = religious_order_formed
-			years = 10
-		}
-	}
-	option = {
-		name = "EVTOPTA_HOLY_ORDER_24"
-		trigger = {
-			religion = ROOT
-		}
-	}
-	option = {
-		name = "EVTOPTB_HOLY_ORDER_24"
-		trigger = {
-			NOT = { religion_group = christian }
-		}
-	}
-	option = {
-		name = "EVTOPTC_HOLY_ORDER_24"
-		trigger = {
-			religion_group = christian
-			NOT = { religion = ROOT }
-		}
-	}
-}
-
-narrative_event = {#The Formation of the Egyptian Brotherhood in response to the collapse of Egypt
-	id = holyorder.25
-	title = "EVTNAME_EB_creation"
-	desc = "EVTDESC_EB_creation"
-	picture = "GFX_evt_Joust_muslim"
-	border = "GFX_event_narrative_frame_religion"
-	
-	major = yes
-	only_playable = yes
-		
-	trigger = {
-		NOT = { #immersion-breaking
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
-		religion = sunni
-		is_heretic = no	
-		
-		NOT = { is_title_active = d_egyptian_brotherhood }
-		OR = {
-			802 = {#Alexandria
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			794 = {#Aswan
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			796 = {#Cairo
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-			800 = {#Giza
-				NOR = { 
-					owner = { top_liege = { religion_group = muslim } }
-					owner = { top_liege = { religion = koptic }	}#The Copts get a pass						
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 4
-	}
-	
-	immediate = {
-		activate_title = { title = d_egyptian_brotherhood status = yes }
-		create_character = {
-			dynasty = random
-			random_traits = yes
-			trait = zealous
-			trait = skilled_tactician
-			religion = sunni
-			culture = misri
-			female = no
-		}
-		new_character = {
-			d_egyptian_brotherhood = {
-				grant_title = PREV
-			}
-			set_defacto_liege = THIS
-			new_order_effect = yes
-		}
-		
-		religion_authority = {
-			modifier = religious_order_formed
-			years = 10
-		}
-	}
-	option = {
-		name = "EVTOPTA_EB_creation"
-		trigger = {
-			religion_group = muslim
-		}
-	}
-	option = {
-		name = "EVTOPTB_EB_creation"
-		trigger = {
-			religion_group = jewish_group
-		}
-	}
-	option = {
-		name = "EVTOPTC_EB_creation"
-		trigger = {#Non-Jews and Non-Muslims
-			NOR = {
-				religion_group = jewish_group
-				religion_group = muslim
-			}
-		}
-	}
-}
-
-narrative_event = { #Founding
-	id = holyorder.26
-	title = "EVTTITLE_ANGLICAN_HOLY_24"
-	desc = "EVTDESC_ANGLICAN_HOLY_24"
-	picture = "GFX_evt_crusaders"
-	border = "GFX_event_narrative_frame_religion"
-	
-	major = yes
-	only_playable = yes
-		
-	trigger = {
-		OR = {
-			has_landed_title = k_britannia
-			has_landed_title = e_britannia
-		}
-#		2571 = { #London
-#			owner = {
-#				religion = ROOT
-#				OR = {
-#					same_realm = ROOT
-#					character = ROOT
-#				}
-#			}
-#		}
-#		is_heretic = no
-		religion = anglican
-		NOT = { is_title_active = d_army_salvation }
-	}
-
-	mean_time_to_happen = {
-		months = 4
-	}
-	
-	immediate = {
-		activate_title = { title = d_army_salvation status = yes }
-		create_character = {
-			name = "William-Booth"
-			dynasty = random
-			random_traits = yes
-			trait = zealous
-			trait = charitable
-			religion = ROOT
-			culture = westlander
-			female = no
-		}
-		new_character = {
-			d_army_salvation = {
-				religion = ROOT
-				grant_title = PREV
-			}
-			set_defacto_liege = ROOT
-			new_order_effect = yes
-		}
-		
-		religion_authority = {
-			modifier = religious_order_formed
-			years = 10
-		}
-	}
-	option = {
-		name = "EVTOPTA_ANGLICAN_HOLY_24"
-		trigger = {
-			religion = ROOT
-		}
-	}
-	option = {
-		name = "EVTOPTB_ANGLICAN_HOLY_24"
-		trigger = {
-			NOT = { religion_group = christian }
-		}
-	}
-	option = {
-		name = "EVTOPTC_ANGLICAN_HOLY_24"
-		trigger = {
-			religion_group = christian
-			NOT = { religion = ROOT }
-		}
-	}
-}
 # True Christian Knight Trait
 character_event = {
 	id = holyorder.27
