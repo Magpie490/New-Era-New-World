@@ -5,7 +5,7 @@ e_chihuahua = {
 	capital = 408 # c_crownpoint
 	culture = newmexican
 	k_oodham = {
-		color = { 225 247 38 }
+		color = { 215 206 229 }
 		color2 = { 220 220 220 }
 		
 		culture = oodham
@@ -23,34 +23,9 @@ e_chihuahua = {
 			color = { 76 63 45 }
 			color2 = { 220 220 220 }
 			
+			navajo = "Beehai"
+			
 			capital = 414
-			allow = { always = no }
-		}
-		d_san_juan = {
-			color={ 153 127 91 }
-			color2={ 255 255 255 }
-			
-			capital = 408 # c_crownpoint
-			
-			c_crownpoint = { # 408
-				color={ 178 148 108 }
-				color2={ 255 255 255 }
-				
-				b_crownpoint_nmex = {
-				}
-				b_standing_rock_nmex = {
-				}
-				b_brimhall_nizhoni_nmex = {
-				}
-				b_tohatchi_nmex = {
-				}
-				b_nakaibito_nmex = {
-				}
-				b_twin_lakes_nmex = {
-				}
-				b_tohlakai_nmex = {
-				}
-			}
 			c_los_alamos = { # 423
 				color={ 127 106 76 }
 				color2={ 255 255 255 }
@@ -72,28 +47,64 @@ e_chihuahua = {
 				b_rover_nmex = {
 				}
 			}
-			c_shiwinnagin = { # 415
-				color={ 204 170 122 }
+			c_jicarilla = { # 414
+				color={ 76 63 45 }
 				color2={ 255 255 255 }
 				
-				b_shiwinnagin_nmex = {
+				navajo = "Beehai"
+				
+				b_jicarilla_nmex = {
 				}
-				b_vanderwagen_nmex = {
+				b_navajo_dam_nmex = {
 				}
-				b_chi_chil_tah_nmex = {
+				b_archuleta_nmex = {
 				}
-				b_manuelito_nmex = {
+				b_turley_nmex = {
 				}
-				b_defiance_nmex = {
+				b_frances_nmex = {
 				}
-				b_mentmore_nmex = {
+				b_radio_hill_nmex = {
 				}
-				b_allison_nmex = {
+				b_dulce_nmex = {
+				}
+			}
+		}
+		d_san_juan = { #Crownpoint
+			color={ 153 127 91 }
+			color2={ 255 255 255 }
+			
+			capital = 408 # c_crownpoint
+			
+			c_crownpoint = { # 408
+				color={ 178 148 108 }
+				color2={ 255 255 255 }
+				
+				navajo = "T'iists'óóz Ndeeshgizh"
+
+				holy_site = blessing_way
+				
+				b_crownpoint_nmex = {
+				}
+				b_standing_rock_nmex = {
+				}
+				b_brimhall_nizhoni_nmex = {
+				}
+				b_tohatchi_nmex = {
+				}
+				b_nakaibito_nmex = {
+				}
+				b_twin_lakes_nmex = {
+				}
+				b_tohlakai_nmex = {
 				}
 			}
 			c_farmington = { # 3344
 				color={ 102 85 61 }
 				color2={ 255 255 255 }
+				
+				navajo = "Tóta'"
+
+				holy_site = taalawsohu
 				
 				b_farmington_nmex = {
 				}
@@ -114,6 +125,10 @@ e_chihuahua = {
 				color={ 229 191 137 }
 				color2={ 255 255 255 }
 				
+				navajo = "Naatooh Sik'ai'í"
+
+				holy_site = blessing_way
+				
 				b_grants_nmex = {
 				}
 				b_san_mateo_nmex = {
@@ -129,103 +144,47 @@ e_chihuahua = {
 				b_smith_lake_nmex = {
 				}
 			}
-			c_jicarilla = { # 414
-				color={ 76 63 45 }
-				color2={ 255 255 255 }
-				
-				b_jicarilla_nmex = {
-				}
-				b_navajo_dam_nmex = {
-				}
-				b_archuleta_nmex = {
-				}
-				b_turley_nmex = {
-				}
-				b_frances_nmex = {
-				}
-				b_radio_hill_nmex = {
-				}
-				b_dulce_nmex = {
-				}
-			}
 		}
-		d_navajoland = {
+		d_shiprock = {
 			color = { 204 193 163 }
 			color2= { 255 255 255 }
-
-			navajo = "DinÃ© BikÃ©yah"
-
-			capital = 412 # Fort Defiance
-
+			
+			capital = 409 #shiprock
+			
 			c_shiprock = {
 				color = { 178 168 142 }
 				color2= { 255 255 255 }
+				
+				navajo = "Naat'áanii Nééz"
 
 				b_shiprock_NM = {
-					navajo = "Naat'Ã¡anii NÃ©Ã©z"
+					navajo = "Naat'áanii Nééz"
 				}
 				b_beclabito_NM = {
-					navajo = "Bitl'Ã¡Ã¡h Bito'"
+					navajo = "Bitl'ááh Bito'"
 				}
 				b_nenahnezad_NM = {
 					navajo = "Niinahnizaad"
 				}
 				b_huerfano_NM = {
-					navajo = "HanÃ¡Ã¡dli"
+					navajo = "Hanáádli"
 				}
-				#b_kirtland_NM = {
-				#}
+				#b_kirtland_NM = {}
 				b_newcomb_NM = {
-					navajo = "Bis Deez'Ã¡hÃ­"
+					navajo = "Bis Deez'áhí"
 				}
 				b_sanostee_NM = {
-					navajo = "TsÃ©'alnÃ¡ozt'i'Ã­"
+					navajo = "Tsé'alnáozt'i'í"
 				}
-			}
-			c_tuba = {
-				color = { 229 216 183 }
-				color2= { 255 255 255 }
-
-				b_tuba_city_AZ = {
-					used_for_dynasty_names = no
-					navajo = "TÃ³ NaneesdizÃ­"
-				}
-				b_bitter_springs_AZ = {
-					navajo = "DÃ­ch'Ã­Ã­tÃ³"
-				}
-				b_page_AZ = {}
-				b_kaibito_AZ = {
-					navajo = "K'ai'bii'tÃ³"
-				}
-				b_lechee_AZ = {
-					navajo = "LichÃ­i'ii"
-				}
-				b_moenave_AZ = {}
-				b_tonalea_AZ = {
-					navajo = "TÃ³ Neheliih"
-				}
-				b_coppermine_AZ = {}
-			}
-			c_coconino_AZ = {
-				color={ 153 144 122 }
-				color2={ 255 255 255 }
-			
-				b_cameron_AZ = {}
-				b_gray_mountain_AZ = {}
-				b_leupp_AZ = {
-					navajo = "Tsiizizii"
-				}
-				b_canyon_diablo_AZ = {}
-				b_tolani_lake_AZ = {}
-				b_dilkon_AZ = {}
-				b_seba_dalkai_AZ = {}
 			}
 			c_chinle = {
 				color = { 255 240 204 }
 				color2= { 255 255 255 }
+				
+				navajo = "Ch'ínlí"
 
 				b_chinle_AZ = {
-					navajo = "Ch'Ã­nÃ­lÃ­"
+					navajo = "Ch'ínlí"
 				}
 				b_nazlini_AZ = {}
 				b_whippoorwill_AZ = {}
@@ -235,11 +194,75 @@ e_chihuahua = {
 				b_tachee_AZ = {}
 				b_tsaile_AZ = {}
 			}
+		}
+		d_tuba = {
+			color = { 214 183 153 }
+			color2= { 255 255 255 }
+			
+			capital = 410 #tuba
+			
+			c_tuba = {
+				color = { 229 216 183 }
+				color2= { 255 255 255 }
+				
+				navajo = "Tó Naneesdizí"
+
+				b_tuba_city_AZ = {
+					used_for_dynasty_names = no
+					navajo = "Tó Naneesdizí"
+				}
+				b_bitter_springs_AZ = {
+					navajo = "Dích'íító"
+				}
+				b_page_AZ = {}
+				b_kaibito_AZ = {
+					navajo = "K'ai'bii'tó"
+				}
+				b_lechee_AZ = {
+					navajo = "Lichíi'ii"
+				}
+				b_moenave_AZ = {}
+				b_tonalea_AZ = {
+					navajo = "Tó Neheliih"
+				}
+				b_coppermine_AZ = {}
+			}
+			c_coconino_AZ = {
+				color={ 153 144 122 }
+				color2={ 255 255 255 }
+				
+				navajo = "Na'ní'á Hasání"
+			
+				b_cameron_AZ = {
+					navajo = "Na'ní'á Hasání"
+				}
+				b_gray_mountain_AZ = {}
+				b_leupp_AZ = {
+					navajo = "Tsiizizii"
+				}
+				b_canyon_diablo_AZ = {}
+				b_tolani_lake_AZ = {}
+				b_dilkon_AZ = {}
+				b_seba_dalkai_AZ = {}
+			}
+		}
+		d_navajoland = { #Fort Defiance
+			color = { 204 193 163 }
+			color2= { 255 255 255 }
+
+			navajo = "Tséhootsooí"
+
+			capital = 412 # Fort Defiance
+			
 			c_petrified_forest_AZ = {
 				color={ 127 120 102 }
 				color2={ 255 255 255 }
+				
+				navajo = "Sahdii Bisí"
 			
-				b_holbrook_AZ = {}
+				b_holbrook_AZ = {
+						navajo = "T'iisyaakin"
+				}
 				b_joseph_city_AZ = {}
 				b_sun_valley_AZ = {}
 				b_indian_wells_AZ = {}
@@ -250,30 +273,61 @@ e_chihuahua = {
 			c_fort_defiance = {
 				color = { 255 247 229 }
 				color2= { 255 255 255 }
+				
+				navajo = "Tséhootsooí"
+
+				holy_site = blessing_way
 
 				b_window_rock_AZ = {
 					used_for_dynasty_names = no
-					navajo = "TsÃ©ghÃ¡hoodzÃ¡nÃ­"
+					navajo = "Tségháhoodzání"
 				}
 				b_fort_defiance_AZ = {
 					used_for_dynasty_names = no
-					navajo = "TsÃ©hootsooÃ­"
+					navajo = "Tséhootsooí"
 				}
 				b_nakaibito_NM = {
 					navajo = "Naakaii Bito'"
 				}
 				b_tohatchi_NM = {
-					navajo = "TÃ³ Haach'i'"
+					navajo = "Tó Haach'i'"
 				}
 				b_kinlichee_AZ = {}
 				b_jeddito_AZ = {}
 				b_cornfields_AZ = {}
 				b_whitecone_AZ = {}
 			}
+			c_shiwinnagin = { # 415
+				color={ 204 170 122 }
+				color2={ 255 255 255 }
+				
+				zuni = "Halona Idiwan'a"
+				navajo = "Naasht'ézhí"
+				
+				holy_site = taalawsohu
+				
+				b_shiwinnagin_nmex = {
+				}
+				b_vanderwagen_nmex = {
+				}
+				b_chi_chil_tah_nmex = {
+				}
+				b_manuelito_nmex = {
+				}
+				b_defiance_nmex = {
+				}
+				b_mentmore_nmex = {
+				}
+				b_allison_nmex = {
+				}
+			}
 		}
 		d_hopi = {
 			color = { 204 161 102 }
 			color2= { 255 255 255 }
+			
+			hopi = "Hopitutskwa"
+			navajo = "Oozéí Bikéyah"
 
 			culture = hopi
 
@@ -282,21 +336,26 @@ e_chihuahua = {
 			c_hopituskwa = {
 				color = { 229 181 114 }
 				color2= { 255 255 255 }
+				
+				hopi = "Hopitutskwa"
+				navajo = "Oozéí Bikéyah"
+
+				holy_site = taalawsohu
 
 				culture = hopi
 
 				b_kykotsmovi_AZ = {
-					hopi = "KiqÃ¶tsmovi"
+					hopi = "Kiqötsmovi"
 				}
 				b_oraibi_AZ = {
 					hopi = "Orayvi"
 				}
 				b_walpi_AZ = {
-					hopi = "WÅ•lpi"
-					navajo = "Deez'Ã¡ahji'"
+					hopi = "Wàlpi"
+					navajo = "Deez'áahji'"
 				}
 				b_shongopovi_AZ = {
-					hopi = "SongÅˆopavi"
+					hopi = "Songòopavi"
 				}
 				b_polacca_AZ = {}
 				b_hotevilla_AZ = {
@@ -305,11 +364,11 @@ e_chihuahua = {
 				b_keams_canyon_AZ = {
 					used_for_dynasty_names = no
 					hopi = "Pongsikya"
-					navajo = "LÃ³k'aa'deeshjin"
+					navajo = "Lók'aa'deeshjin"
 				}
 				b_moenkopi_AZ = {
-					hopi = "MÅ¯nqapi"
-					navajo = "OozÃ©Ã­ HayÃ¡zhÃ­"
+					hopi = "Mùnqapi"
+					navajo = "Oozéí Hayázhí"
 				}
 			}
 		}
@@ -321,7 +380,27 @@ e_chihuahua = {
 		culture = buckaroo
 
 		capital = 439 # Phoenix
-		
+		d_canyon_runners = {
+			color = { 208 54 20 }
+			color2 = { 220 220 220 }
+			capital = 440
+			allow = { always = no }
+			short_name = yes
+		}
+		d_sun_birds = {
+			color = { 236 36 55 }
+			color2 = { 220 220 220 }
+			capital = 439
+			allow = { always = no }
+			short_name = yes
+		}
+		d_gold_snakes = {
+			color = { 245 220 0 }
+			color2 = { 220 220 220 }
+			capital = 419
+			allow = { always = no }
+			short_name = yes
+		}
 		d_gadsden = { #REPLACE WITH TUCSON
 			color = { 153 38 0 }
 			color2= { 255 255 255 }
@@ -471,6 +550,8 @@ e_chihuahua = {
 				color = { 102 40 10 }
 				color2= { 255 255 255 }
 
+				holy_site = blessing_way
+
 				b_flagstaff_AZ = {}
 				b_williams_AZ = {}
 				b_fredonia_AZ = {}
@@ -518,7 +599,6 @@ e_chihuahua = {
 				}
 				b_goodyear_AZ = {}
 			}
-			
 			c_yavapai_AZ = {
 				color={ 255 63 25 }
 				color2={ 255 255 255 }
@@ -531,7 +611,6 @@ e_chihuahua = {
 				b_wilhoit_AZ = {}
 				b_mayer_AZ = {}
 			}
-			
 			c_gila = {
 				color = { 204 51 20 }
 				color2= { 255 255 255 }
@@ -674,6 +753,8 @@ e_chihuahua = {
 			c_acoma = { # 416
 				color={ 15 46 76 }
 				color2={ 255 255 255 }
+
+				holy_site = taalawsohu
 				
 				b_acoma_nmex = {
 				}
@@ -719,6 +800,8 @@ e_chihuahua = {
 			c_san_antonio = { # 3347
 				color={ 108 171 216 }
 				color2={ 255 255 255 }
+
+				holy_site = blessing_way
 				
 				b_san_antonio_nmex = {
 				}
