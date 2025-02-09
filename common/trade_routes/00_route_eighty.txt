@@ -1,0 +1,39 @@
+route_eighty = {
+	wealth = 20
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 296
+			province_id = 353
+			province_id = 430
+			province_id = 476
+			province_id = 2068
+			province_id = 2046
+			province_id = 2031
+		}
+	}
+	
+	modifier = {
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.2
+		disease_defence = -0.05
+		culture_flex = -0.2
+		religion_flex = -0.2
+		local_build_cost_modifier = -0.1
+		local_build_time_modifier = -0.1
+		tech_growth_modifier = 0.2
+		icon = 61
+	}
+	
+	start = {
+		169
+		2031
+	}
+	
+	path = {
+		169	1054 865 863 211 212 256 296 298 299 353 947 357 361 360 476 475 1703 474 445 444 1827 430 432 997 1676 458 2067 1681 2068 2064 2047 2046 2042 2032 2031
+	}
+}
