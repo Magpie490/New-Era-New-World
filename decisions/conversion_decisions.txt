@@ -471,7 +471,6 @@ targeted_decisions = {
 				religion = hellenic_pagan
 				religion = nousthreskeia
 				religion = starist_pagan
-				religion = tengri_pagan
 				religion = numic
 				religion = aurorean
 				religion = taalawsohu
@@ -1211,267 +1210,267 @@ decisions = {
 		}
 	}
 	# Roman Emperor may restore Roman Culture
-	roman_renaissance = {
-		ai_check_interval = 120 #check only once every 120 months.
-		only_playable = yes
-		is_high_prio = yes
+	# roman_renaissance = {
+		# ai_check_interval = 120 #check only once every 120 months.
+		# only_playable = yes
+		# is_high_prio = yes
 		
-		potential = {
-			is_playable = yes
-			OR = { 
-				culture_group = transnistrian
-				culture_group = byzantine
-				culture_group = apeninian
-			}
-			has_dlc = "Holy Fury"
-			OR = {
-				has_landed_title = e_roman_empire
-				has_landed_title = e_roman_republic
-			}
-			NOT = { government = chinese_imperial_government }
-			NOT = { has_global_flag = flag_started_roman_renaissance }
-			NOT = {
-				has_alternate_start_parameter = { key = culture_names value = random }
-			}
-		}
-		allow = {
-			show_only_failed_conditions = yes
-			OR = {
-				religion_group = christian
-				religion_group = syncratic_group
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-				religion = poseidonian
-			}
-			capital_scope = { province = 333 }
-			ruled_years = 10
-			war = no
-		}
-		effect = {
-			set_global_flag = flag_started_roman_renaissance
-			culture = roman
-			hidden_tooltip = {
-				any_courtier_or_vassal = { 
-					limit = { lower_tier_than = COUNT }
-					culture = roman
-				}
-			}
-			capital_scope = { culture = roman }
-			custom_tooltip = {
-				text = tooltip_roman_culture_starts_spreading
-				hidden_tooltip = {
-					any_realm_province = {
-						if = {
-							limit = { any_neighbor_province = { province = 333 } }
-							culture = roman
-						}
-						if = {
-							limit = { 
-								culture_group = apeninian
-								NOT = { distance = { where = 333 distance = 100 } } 
-							}
-							random = { 
-								chance = 40 
-								culture = roman 
-							}
-						}
-						if = {
-							limit = { 
-								culture_group = transnistrian
-								NOT = { distance = { where = 333 distance = 200 } } 
-							}
-							random = { 
-								chance = 20 
-								culture = roman 
-							}
-						}
-						if = {
-							limit = { 
-								culture_group = transnistrian
-								NOT = { distance = { where = 333 distance = 400 } } 
-							}
-							random = { 
-								chance = 5
-								culture = roman 
-							}
-						}
-					}
-				}
-			}
-			hidden_tooltip = {
-				if = { #Hellenic Emperor gets chance to spread Hellenism a bit alongside the culture.
-					limit = { OR = { religion = hellenic_pagan religion = hellenic_pagan_reformed } }
-					any_realm_province = {
-						if = {
-							limit = { any_neighbor_province = { province = 333 } }
-							religion = ROOT
-						}
-						if = {
-							limit = { 
-								culture = roman
-								NOT = { distance = { where = 333 distance = 100 } } 
-							}
-							random = { 
-								chance = 10 
-								religion = ROOT
-							}
-						}
-						if = {
-							limit = { 
-								culture = roman
-								NOT = { distance = { where = 333 distance = 200 } } 
-							}
-							random = { 
-								chance = 5 
-								religion = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				religion = hellenic_pagan_reformed
-			}
-			modifier = {
-				factor = 0.01 #Would consider it a step down.
-				culture_group = byzantine
-			}
-		}
-	}
-	embrace_roman_culture = {
-		ai_check_interval = 120 #check only once every 120 months.
-		only_playable = yes
+		# potential = {
+			# is_playable = yes
+			# OR = { 
+				# culture_group = transnistrian
+				# culture_group = byzantine
+				# culture_group = apeninian
+			# }
+			# has_dlc = "Holy Fury"
+			# OR = {
+				# has_landed_title = e_roman_empire
+				# has_landed_title = e_roman_republic
+			# }
+			# NOT = { government = chinese_imperial_government }
+			# NOT = { has_global_flag = flag_started_roman_renaissance }
+			# NOT = {
+				# has_alternate_start_parameter = { key = culture_names value = random }
+			# }
+		# }
+		# allow = {
+			# show_only_failed_conditions = yes
+			# OR = {
+				# religion_group = christian
+				# religion_group = syncratic_group
+				# religion = hellenic_pagan
+				# religion = hellenic_pagan_reformed
+				# religion = poseidonian
+			# }
+			# capital_scope = { province = 333 }
+			# ruled_years = 10
+			# war = no
+		# }
+		# effect = {
+			# set_global_flag = flag_started_roman_renaissance
+			# culture = roman
+			# hidden_tooltip = {
+				# any_courtier_or_vassal = { 
+					# limit = { lower_tier_than = COUNT }
+					# culture = roman
+				# }
+			# }
+			# capital_scope = { culture = roman }
+			# custom_tooltip = {
+				# text = tooltip_roman_culture_starts_spreading
+				# hidden_tooltip = {
+					# any_realm_province = {
+						# if = {
+							# limit = { any_neighbor_province = { province = 333 } }
+							# culture = roman
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = apeninian
+								# NOT = { distance = { where = 333 distance = 100 } } 
+							# }
+							# random = { 
+								# chance = 40 
+								# culture = roman 
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = transnistrian
+								# NOT = { distance = { where = 333 distance = 200 } } 
+							# }
+							# random = { 
+								# chance = 20 
+								# culture = roman 
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = transnistrian
+								# NOT = { distance = { where = 333 distance = 400 } } 
+							# }
+							# random = { 
+								# chance = 5
+								# culture = roman 
+							# }
+						# }
+					# }
+				# }
+			# }
+			# hidden_tooltip = {
+				# if = { #Hellenic Emperor gets chance to spread Hellenism a bit alongside the culture.
+					# limit = { OR = { religion = hellenic_pagan religion = hellenic_pagan_reformed } }
+					# any_realm_province = {
+						# if = {
+							# limit = { any_neighbor_province = { province = 333 } }
+							# religion = ROOT
+						# }
+						# if = {
+							# limit = { 
+								# culture = roman
+								# NOT = { distance = { where = 333 distance = 100 } } 
+							# }
+							# random = { 
+								# chance = 10 
+								# religion = ROOT
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture = roman
+								# NOT = { distance = { where = 333 distance = 200 } } 
+							# }
+							# random = { 
+								# chance = 5 
+								# religion = ROOT
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 3
+				# religion = hellenic_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0.01 #Would consider it a step down.
+				# culture_group = byzantine
+			# }
+		# }
+	# }
+	# embrace_roman_culture = {
+		# ai_check_interval = 120 #check only once every 120 months.
+		# only_playable = yes
 		
-		potential = {
-			is_playable = yes
-			NOT = { culture = roman }
-			OR = { 
-				culture_group = transnistrian 
-				culture_group = byzantine
-				culture_group = apeninian
-			}
-			has_dlc = "Holy Fury"
-			NOT = { government = chinese_imperial_government }
-			has_global_flag = flag_started_roman_renaissance
-			NOT = {
-				has_alternate_start_parameter = { key = culture_names value = random }
-			}
-			top_liege = { OR = { has_landed_title = e_roman_empire has_landed_title = e_roman_republic } }
-		}
-		allow = {
-			show_only_failed_conditions = yes
-			OR = { 
-				culture_group = transnistrian 
-				culture_group = byzantine
-				culture_group = apeninian
-			}
-		}
-		effect = {
-			culture = roman
-			hidden_tooltip = {
-				any_courtier_or_vassal = { 
-					limit = { lower_tier_than = COUNT }
-					culture = roman
-				}
-			}
-			capital_scope = { culture = roman }
-			custom_tooltip = {
-				text = tooltip_roman_culture_spreads
-				hidden_tooltip = {
-					any_demesne_province = {
-						if = {
-							limit = { any_neighbor_province = { province = 333 } }
-							culture = roman
-						}
-						if = {
-							limit = { 
-								culture_group = apeninian
-								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
-							}
-							random = { 
-								chance = 40 
-								culture = roman 
-							}
-						}
-						if = {
-							limit = { 
-								culture_group = transnistrian
-								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
-							}
-							random = { 
-								chance = 20 
-								culture = roman 
-							}
-						}
-						if = {
-							limit = { 
-								culture_group = transnistrian
-								capital_scope = { NOT = { distance = { where = PREV distance = 400 } } } 
-							}
-							random = { 
-								chance = 5
-								culture = roman 
-							}
-						}
-					}
-				}
-			}
-			if = { #Hellenic Emperor gets chance to spread Hellenism a bit alongside the culture.
-				limit = { OR = { religion = hellenic_pagan religion = hellenic_pagan_reformed } }
-				hidden_tooltip = {
-					any_demesne_province = {
-						if = {
-							limit = { any_neighbor_province = { province = 333 } }
-							religion = ROOT
-						}
-						if = {
-							limit = { 
-								culture = roman
-								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
-							}
-							random = { 
-								chance = 10 
-								religion = ROOT
-							}
-						}
-						if = {
-							limit = { 
-								culture = roman
-								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
-							}
-							random = { 
-								chance = 5 
-								religion = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				religion = hellenic_pagan_reformed
-			}
-			modifier = {
-				factor = 3
-				capital_scope = { culture = roman } 
-			}
-			modifier = {
-				factor = 0.01 #Would consider it a step down.
-				culture_group = byzantine
-			}
-		}
-	}
+		# potential = {
+			# is_playable = yes
+			# NOT = { culture = roman }
+			# OR = { 
+				# culture_group = transnistrian 
+				# culture_group = byzantine
+				# culture_group = apeninian
+			# }
+			# has_dlc = "Holy Fury"
+			# NOT = { government = chinese_imperial_government }
+			# has_global_flag = flag_started_roman_renaissance
+			# NOT = {
+				# has_alternate_start_parameter = { key = culture_names value = random }
+			# }
+			# top_liege = { OR = { has_landed_title = e_roman_empire has_landed_title = e_roman_republic } }
+		# }
+		# allow = {
+			# show_only_failed_conditions = yes
+			# OR = { 
+				# culture_group = transnistrian 
+				# culture_group = byzantine
+				# culture_group = apeninian
+			# }
+		# }
+		# effect = {
+			# culture = roman
+			# hidden_tooltip = {
+				# any_courtier_or_vassal = { 
+					# limit = { lower_tier_than = COUNT }
+					# culture = roman
+				# }
+			# }
+			# capital_scope = { culture = roman }
+			# custom_tooltip = {
+				# text = tooltip_roman_culture_spreads
+				# hidden_tooltip = {
+					# any_demesne_province = {
+						# if = {
+							# limit = { any_neighbor_province = { province = 333 } }
+							# culture = roman
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = apeninian
+								# capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
+							# }
+							# random = { 
+								# chance = 40 
+								# culture = roman 
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = transnistrian
+								# capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
+							# }
+							# random = { 
+								# chance = 20 
+								# culture = roman 
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture_group = transnistrian
+								# capital_scope = { NOT = { distance = { where = PREV distance = 400 } } } 
+							# }
+							# random = { 
+								# chance = 5
+								# culture = roman 
+							# }
+						# }
+					# }
+				# }
+			# }
+			# if = { #Hellenic Emperor gets chance to spread Hellenism a bit alongside the culture.
+				# limit = { OR = { religion = hellenic_pagan religion = hellenic_pagan_reformed } }
+				# hidden_tooltip = {
+					# any_demesne_province = {
+						# if = {
+							# limit = { any_neighbor_province = { province = 333 } }
+							# religion = ROOT
+						# }
+						# if = {
+							# limit = { 
+								# culture = roman
+								# capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
+							# }
+							# random = { 
+								# chance = 10 
+								# religion = ROOT
+							# }
+						# }
+						# if = {
+							# limit = { 
+								# culture = roman
+								# capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
+							# }
+							# random = { 
+								# chance = 5 
+								# religion = ROOT
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 3
+				# religion = hellenic_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 3
+				# capital_scope = { culture = roman } 
+			# }
+			# modifier = {
+				# factor = 0.01 #Would consider it a step down.
+				# culture_group = byzantine
+			# }
+		# }
+	# }
 }
