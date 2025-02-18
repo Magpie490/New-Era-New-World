@@ -3651,12 +3651,15 @@ decisions = {
 			OR = {
 				religion = constitutional
 			}
-			NOR = {
-				has_character_flag = picking_study_america
-				has_character_modifier = studied_pragmatism
-				has_character_modifier = studied_jingoism
-				has_character_modifier = studied_transcendantalism
-				has_character_modifier = studied_foundationalism
+			NOT = { has_character_flag = picking_study_america }
+			OR = {
+				NOR = {
+					has_character_modifier = studied_pragmatism
+					has_character_modifier = studied_jingoism
+					has_character_modifier = studied_transcendantalism
+					has_character_modifier = studied_foundationalism
+				}
+				had_character_flag = { flag = studied_american_philosophy years = 3 }
 			}
 			is_adult = yes
 			is_incapable = no
@@ -3668,6 +3671,8 @@ decisions = {
 		}
 		effect = {
 			set_character_flag = picking_study_america
+			clr_character_flag = studied_american_philosophy
+			set_character_flag = studied_american_philosophy
 			hidden_tooltip = { character_event = { id = america.26 } }
 			piety = -10	
 		}
