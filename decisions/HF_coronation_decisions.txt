@@ -22,7 +22,7 @@ decisions = {
 			NOT = { trait = crowned_by_bishop_rd }
 			NOT = { trait = crowned_by_pope_rd }
 			NOT = { government = order_government }
-			NOT = { government = oligarchic_republic }
+			NOT = { OR = { government = oligarchic_republic government = consular_republic } }
 		} 
 		allow = { 
 			OR = { 

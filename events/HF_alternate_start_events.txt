@@ -2265,7 +2265,7 @@ character_event = { # Alternate Start general maintenance
 					limit = {
 						OR = {
 							is_republic = yes
-							government = oligarchic_republic
+							OR = { government = oligarchic_republic government = consular_republic }
 						}
 					}
 					remove_trait = shaykh
@@ -2331,7 +2331,7 @@ character_event = { # Alternate Start general maintenance
 							spouse = { 
 								OR = {
 									is_republic = yes
-									government = oligarchic_republic
+									OR = { government = oligarchic_republic government = consular_republic }
 								} 
 							}
 						}
@@ -2402,7 +2402,7 @@ character_event = { # Alternate Start general maintenance
 					limit = {
 						OR = {
 							is_republic = yes
-							government = oligarchic_republic
+							OR = { government = oligarchic_republic government = consular_republic }
 						}
 					}
 					remove_trait = kshatriya
@@ -2469,7 +2469,7 @@ character_event = { # Alternate Start general maintenance
 							spouse = { 
 								OR = {
 									is_republic = yes
-									government = oligarchic_republic
+									OR = { government = oligarchic_republic government = consular_republic }
 								} 
 							}
 						}

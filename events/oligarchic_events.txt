@@ -10,7 +10,7 @@ province_event = {
 				OR = {
 					independent = yes
 					liege = {
-						NOT = { government = oligarchic_republic }
+						NOT = { OR = { government = oligarchic_republic government = consular_republic } }
 					}
 				}
 			}
