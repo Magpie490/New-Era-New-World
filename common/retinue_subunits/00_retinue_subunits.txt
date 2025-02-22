@@ -2260,6 +2260,31 @@ RETTYPE_CUL_ARAB =
 	}
 }
 
+RETTYPE_CUL_SOOMALI = {
+
+	first_type = 6
+	first_amount = 200
+	
+	special_troops = superheavy_infantry
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = somali
+		}
+		any_realm_province = {
+			OR = {
+			culture = somali
+			}
+		}
+	}
+	
+	modifier = {
+		superheavy_infantry_offensive = 0.35
+	}
+}
+
 RETTYPE_CUL_BYZ1 = 
 { # reuse for amero-grik, need to consult which ones
 	first_type = 4
@@ -2412,13 +2437,11 @@ RETTYPE_CUL_ETHIO =
 			culture_group = east_african
 			culture = beta_israeli
 			culture_group = nilotic
-			culture_group = amero_cushitic
 			any_realm_province = {
 				OR = {
 			culture_group = east_african
 			culture = beta_israeli
 			culture_group = nilotic
-			culture_group = amero_cushitic
 				}
 			}
 		}
@@ -2514,6 +2537,72 @@ RETTYPE_CUL_HAUSA = {
 		light_cavalry_offensive = 0.25
 		gunmen_defensive = 0.2
 		gunmen_offensive = 0.2
+	}
+}
+
+RETTYPE_CUL_BADGER = {
+	first_type = 0
+	first_amount = 300
+	
+		potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = badgerlander	
+			any_realm_province = {
+				OR = {
+			culture = badgerlander
+				}
+			}
+		}
+	}
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.25
+
+	}
+}
+
+RETTYPE_CUL_THUNDERLANDER = {
+	first_type = 1
+	first_amount = 300
+	
+		potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = thunderlander	
+			any_realm_province = {
+				OR = {
+			culture = thunderlander
+				}
+			}
+		}
+	}
+	modifier = {
+		light_infantry_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_PLAINSLANDER = {
+	first_type = 3
+	first_amount = 300
+	
+		potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture_group = plainslander	
+			any_realm_province = {
+				OR = {
+			culture_group = plainslander
+				}
+			}
+		}
+	}
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.25
 	}
 }
 
