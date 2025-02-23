@@ -729,6 +729,29 @@ e_redcoats = {
 	}
 }
 
+e_lone_star_rep = {
+	color = {  0 7 77 }
+	color2= { 255 255 20 }
+
+	culture = houstonian
+	capital = 1235 # Travis
+	short_name = yes
+	title = "HIGH_CONSUL_TITLE"
+	title_female = "HIGH_CONSUL_TITLE"
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_lone_star_rep = {
+					is_titular = yes
+				}
+			}
+			e_lone_star_rep = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
