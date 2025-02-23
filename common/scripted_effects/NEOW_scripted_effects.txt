@@ -2220,6 +2220,24 @@ set_feudal_government_effect = {
 	}
 	else_if = {
 		limit = {
+			is_government_potential = technocratic_government
+		}
+		set_government_type = technocratic_government
+	}
+	else_if = {
+		limit = {
+			is_government_potential = oligarchic_republic
+		}
+		set_government_type = oligarchic_republic
+	}
+	else_if = {
+		limit = {
+			is_government_potential = consular_republic
+		}
+		set_government_type = consular_republic
+	}
+	else_if = {
+		limit = {
 			is_government_potential = indian_feudal
 		}
 		set_government_type = indian_feudal
