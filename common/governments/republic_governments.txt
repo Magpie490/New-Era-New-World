@@ -17,6 +17,7 @@ republic_governments = {
 			republic_government
 			confederation_government
 			oligarchic_republic
+			consular_republic
 			eastern_feudal
 			japanese_feudal
 			colonial_government
@@ -135,10 +136,10 @@ republic_governments = {
 			OR = {
                 NOR = {
                     top_liege = {
-                        government = oligarchic_republic
+                        OR = { government = oligarchic_republic government = consular_republic }
                     }
                     liege = {
-                        government = oligarchic_republic
+                        OR = { government = oligarchic_republic government = consular_republic }
                     }
                 }
                 capital_scope = {
@@ -187,6 +188,7 @@ republic_governments = {
 			republic_government
 			confederation_government
 			oligarchic_republic
+			consular_republic
 			eastern_feudal
 			japanese_feudal
 			colonial_government
@@ -201,6 +203,7 @@ republic_governments = {
 			NOR = { 
 				is_government_potential = merchant_republic_government
 				is_government_potential = oligarchic_republic 
+				is_government_potential = consular_republic
 				is_government_potential = colonial_government
 				}
 			NOT = { higher_tier_than = BARON }

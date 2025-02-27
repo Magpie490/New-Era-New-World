@@ -91,7 +91,7 @@ title_master_of_the_audit = {
 			government = federal_government
 			government = neoziamet_government
 			government = ethiopian_imperial_government
-			government = oligarchic_republic
+			OR = { government = oligarchic_republic government = consular_republic }
 			government = merchant_republic_government
 			government = mandala_government
 		}
@@ -1119,6 +1119,7 @@ title_constitutional_member_parliament = {
 	allowed_to_grant = {
 		OR = {
 			religion = constitutional
+			government = consular_republic
 		}
 		OR = {
 			is_feudal = yes
@@ -1194,6 +1195,7 @@ title_constitutional_member_parliament_1 = {
 	allowed_to_grant = {
 		OR = {
 			religion = constitutional
+			government = consular_republic
 		}
 		OR = {
 			is_feudal = yes
@@ -1268,6 +1270,7 @@ title_constitutional_member_parliament_2 = {
 	allowed_to_grant = {
 		OR = {
 			religion = constitutional
+			government = consular_republic
 		}
 		OR = {
 			is_feudal = yes

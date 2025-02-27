@@ -34,6 +34,53 @@ province_event = {
 	}
 }
 character_event = { 
+	id = cleanup.9196
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = has_bubonic_plague
+		calc_true_if = {
+			amount = 20
+			random_province = {
+				disease = bubonic_plague
+			}
+		}
+		real_tier = EMPEROR
+	}
+	immediate = {
+		random_list = {
+			95 = {
+			
+			}
+			5 = {
+				primary_title = {
+					destroy_landed_title = THIS
+				}
+				current_heir = {
+					limit = {
+						ai = no
+					}
+					character_event = { id = cleanup.9186 }
+				}
+			}
+		}
+	}
+}
+character_event = { 
+	id = cleanup.9186
+	desc = "cleanupDesc9186"
+	only_rulers = yes
+	is_triggered_only = yes
+	picture = GFX_evt_burning_castle_hf
+	border = GFX_event_normal_frame_diplomacy
+
+	option = {
+		name = cleanup9186OPTA
+	}
+}
+character_event = { 
 	id = cleanup.21001
 	hide_window = yes
 	
@@ -188,6 +235,7 @@ character_event = {
 		NOT = {
 			trait = conqueror
 		}
+		independent = yes
 		NOR = {
 			trait = hunchback
 			trait = harelip
@@ -927,7 +975,7 @@ character_event = {
 				copy_title_history = PREV
 				add_law = ze_administration_laws_2
 				add_law = vice_royalty_2
-				add_law = succ_byzantine_elective
+				add_law = succ_federal_elective
 			}
 		}
 		set_global_flag = bhutan_reformed_diplo
@@ -1684,7 +1732,7 @@ character_event = {
 			limit = {
 				OR = {
 					is_republic = yes
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 				}
 			}
 			remove_trait = brahmin
@@ -1801,7 +1849,7 @@ character_event = {
 			limit = {
 				OR = {
 					is_republic = yes
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 				}
 			}
 			remove_trait = pyir
@@ -2096,7 +2144,7 @@ character_event = {
 			government = federal_government
 			government = neoziamet_government
 			government = ethiopian_imperial_government
-			government = oligarchic_republic
+			OR = { government = oligarchic_republic government = consular_republic }
 			government = merchant_republic_government
 			government = mandala_government
 		}
@@ -3195,6 +3243,125 @@ character_event = {#ensures each newly formed Oligarchic Republic has the Oligar
 		}
 	}
 }
+character_event = {#ensures each newly formed Oligarchic Republic has the Oligarchic Elective government
+	id = cleanup.9112
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = consular_republic
+		any_demesne_title = {
+			NOR = {
+				confederation_title_trigger = yes
+				has_law = succ_consular_elective
+				has_law = succ_papal_succession
+				has_law = succ_offmap_succession
+				has_law = succ_byzantine_elective
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOR = {
+					confederation_title_trigger = yes
+					has_law = succ_consular_elective
+					has_law = succ_papal_succession
+					has_law = succ_offmap_succession
+					has_law = succ_byzantine_elective
+				}
+			}
+			add_law = {
+				law = succ_consular_elective
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = law_voting_power_1
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = war_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = revoke_title_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = imprison_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = grant_title_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = banish_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = execution_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+			add_law = {
+				law = succession_voting_power
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+
+character_event = {#ensures each newly formed Oligarchic Republic has the Oligarchic Elective government
+	id = cleanup.9113
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = technocratic_government
+		any_demesne_title = {
+			NOR = {
+				confederation_title_trigger = yes
+				has_law = succ_consular_elective
+				has_law = succ_papal_succession
+				has_law = succ_offmap_succession
+				has_law = succ_byzantine_elective
+				has_law = succ_dynastic_meritocratic
+				has_law = succ_meritocratic
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOR = {
+					confederation_title_trigger = yes
+					has_law = succ_consular_elective
+					has_law = succ_papal_succession
+					has_law = succ_offmap_succession
+					has_law = succ_byzantine_elective
+					has_law = succ_dynastic_meritocratic
+					has_law = succ_meritocratic
+				}
+			}
+			add_law = {
+				law = succ_meritocratic
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
 character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
 	id = cleanup.6
 	hide_window = yes
@@ -3316,7 +3483,7 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	trigger = {
 		religion = sarvodaya
 		NOR = {
-			government = oligarchic_republic
+			OR = { government = oligarchic_republic government = consular_republic }
 			is_republic = yes
 		}
 		any_demesne_title = {
@@ -4182,7 +4349,7 @@ character_event = {
 					value = limited
 				}
 				OR = {
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = confucian_bureaucracy
 				}
 			}
@@ -4256,7 +4423,7 @@ character_event = {
 				}
 			}
 		}
-		government = oligarchic_republic
+		OR = { government = oligarchic_republic government = consular_republic }
 	}
 	mean_time_to_happen = {
 		days = 1

@@ -58,6 +58,14 @@ government_flavor = {
 		government = oligarchic_republic
 	}
 }
+government_flavor = {
+	name = gov_consular_republic
+	graphics = GFX_evt_texas_gov
+	priority = 1
+	trigger = {
+		government = consular_republic
+	}
+}
 
 government_flavor = {
 	name = gov_soviet_republic
@@ -140,6 +148,14 @@ government_flavor = {
 	priority = 1
 	trigger = {
 		government = calvinist_government
+	}
+}
+government_flavor = {
+	name = gov_technocratic
+	graphics = GFX_evt_council
+	priority = 1
+	trigger = {
+		government = technocratic_government
 	}
 }
 government_flavor = {
@@ -3574,6 +3590,7 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		is_vice_royalty = yes
+		government = viceroyal_government
 		tier = DUKE
 		NOT = { culture_group = byzantine }
 		NOT = { culture = roman }
@@ -3586,6 +3603,32 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		is_vice_royalty = yes
+		government = viceroyal_government
+		tier = KING
+		NOT = { culture_group = byzantine }
+		NOT = { culture = roman }
+	}
+}
+government_flavor = {
+	name = gov_duchy_viceroy_decayed
+	graphics = GFX_evt_siege
+	priority = 2
+	trigger = {
+		is_vice_royalty = no
+		government = viceroyal_government
+		tier = DUKE
+		NOT = { culture_group = byzantine }
+		NOT = { culture = roman }
+	}
+}
+
+government_flavor = {
+	name = gov_king_viceroy_decayed
+	graphics = GFX_evt_spymaster
+	priority = 2
+	trigger = {
+		is_vice_royalty = no
+		government = viceroyal_government
 		tier = KING
 		NOT = { culture_group = byzantine }
 		NOT = { culture = roman }

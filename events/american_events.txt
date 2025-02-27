@@ -12,13 +12,17 @@ character_event = {
 
 	immediate = {
 		set_character_flag = picking_study_america
+		remove_character_modifier = studied_pragmatism
+		remove_character_modifier = studied_jingoism
+		remove_character_modifier = studied_transcendantalism
+		remove_character_modifier = studied_foundationalism
 	}
 	
 	option = {#Pragmatism
 		name = EVTOPTA_america26
 			add_character_modifier = {
 				name = studied_pragmatism
-				years = 3
+				duration = -1
 			}
 	}
 	
@@ -26,7 +30,7 @@ character_event = {
 		name = EVTOPTB_america26
 			add_character_modifier = {
 				name = studied_jingoism
-				years = 3
+				duration = -1
 			}
 	}
 	
@@ -34,7 +38,7 @@ character_event = {
 		name = EVTOPTC_america26
 			add_character_modifier = {
 				name = studied_transcendantalism
-				years = 3
+				duration = -1
 			}
 	}
 	
@@ -42,7 +46,7 @@ character_event = {
 		name = EVTOPTD_america26
 			add_character_modifier = {
 				name = studied_foundationalism
-				years = 3
+				duration = -1
 			}
 	}	
 	
@@ -547,3 +551,36 @@ letter_event = {
 		clr_character_flag = picking_mainline_church
 	}
 }
+narrative_event = {
+	id = america.40
+	title = EVTNAME_america_40
+	desc = EVTDESC_america_40
+	is_triggered_only = yes
+	picture = GFX_evt_american_gov
+	
+	major = yes
+
+	option = {
+		trigger = { religion = constitutional }
+		name = EVTOPTA_america40
+	}
+	option = {
+		trigger = { religion = custodite }
+		name = EVTOPTB_america40
+	}
+	option = {
+		trigger = { religion = pagan } #THE FEDS!
+		name = EVTOPTC_america40
+	}
+	option = {
+		trigger = {
+			NOR = {
+				religion = constitutional
+				religion = custodite
+				religion = pagan
+			}
+		}
+		name = EVTOPTD_america40
+	}
+}
+

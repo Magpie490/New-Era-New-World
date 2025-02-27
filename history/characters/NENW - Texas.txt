@@ -76,8 +76,8 @@
 	dynasty = 3000756
 	female = yes
 	name = "Jane"
-	religion = edenite
-	culture = dallasian
+	religion = lone_star
+	culture = chilangos #portrait
 	trait = midas_touched
 	trait = fair
 	trait = groomed
@@ -94,6 +94,7 @@
 	disallow_random_traits = yes
 	2298.5.8 = {
 		birth = yes
+		culture = dallasian
 		effect = {
 			wealth = 300
 		}
@@ -131,7 +132,7 @@
 2700004 = { #Ambitious member of the Metroplex leadership.
 	dynasty = 3000758
 	name = "Gerard"
-	religion = edenite
+	religion = texolatry
 	culture = dallasian
 	trait = intricate_webweaver
 	trait = lefthanded
@@ -153,31 +154,18 @@
 }
 2700005 = { #Member of an ancient line of Texas Rangers
 	dynasty = 3000759
-	name = "Carlos Ray"
+	name = "Charles"
 	dna="acabeucaebz"
 	properties="0m0dak"
 	religion = rangerite
 	culture = dallasian
 	trait = brilliant_strategist
-	trait = fair
-	trait = genius
 	trait = strong
 	trait = duelist
-	trait = kind
-	trait = diligent
 	trait = ambitious
-	trait = brave
-	trait = just
-	trait = gregarious
-	trait = honest
-	trait = charitable
-	trait = trickster
 	trait = inspiring_leader
 	trait = robust
-	trait = legendary_duelist
-	trait = wuxia_master
-	martial = 11
-	health = 10 #Chuck Norris was once bitten by a Rattle Snake... After 3 Days of suffering the rattle snake died!
+	martial = 10
 	disallow_random_traits = yes
 	2296.3.10 = {
 		birth = yes
@@ -185,12 +173,9 @@
 	2318.3.10 = {
 		effect={
 			join_society = warrior_lodge_texas_ranger
-			set_society_grandmaster = yes
 			add_society_currency_massive_effect = yes
+			}
 		}
-		remove_trait = brilliant_strategist
-		add_trait = exalted_warlord
-	}
 	2666.1.1 = {
 		death = yes
 	}
@@ -637,7 +622,7 @@
 2700023 = {
 	dynasty = 3000777
 	name = "Joshua"
-	religion = edenite
+	religion = texolatry
 	culture = trinitean
 	2284.7.12 = {
 		birth = yes
@@ -1451,11 +1436,10 @@
 	name = "Anton"
 	dna = "bfiejtiacah"
 	properties = "ki0d0k"
-	religion = triumphant
+	religion = rangerite
 	culture = andalu
 	trait = elusive_shadow
 	trait = cruel
-	trait = pale_horse_cult
 	trait = deceitful
 	trait = arbitrary
 	trait = patient

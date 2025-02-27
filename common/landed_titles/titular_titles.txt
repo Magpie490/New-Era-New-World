@@ -94,6 +94,16 @@ k_interlake_hetmanate = {
 	
 	capital = 584 #Winnipeg
 }
+
+k_tricities = {
+	color = { 234 115 11 }
+	color2={ 255 255 255 }	
+
+	short_name = yes
+	manzanero = Tres-Ciudades
+	
+	capital = 1172 #Kennewic
+}
 ### titular duchies
 
 d_erie = {
@@ -335,6 +345,18 @@ d_la_gallega = {
 	title_prefix = "THE"
 }
 
+d_bulwark = {
+	color = { 59 149 185 }
+	color2={ 255 255 255 }
+	
+	tribe = yes
+	
+	allow = {
+		always = no
+	}
+	
+	capital = 466 # Sublette
+}
 d_fortcarson = {
 	color = { 0 122 0 }
 	color2={ 255 255 255 }
@@ -359,6 +381,20 @@ d_dakelhne = {
 	title = Keyohwhudachun
 }
 
+d_novaya_molochnaya = {
+	color = { 46 86 52 }
+	color2={ 255 255 255 }
+	
+	
+	capital = 571 # Arrowhead
+}
+
+d_warm_springs = {
+	color = { 114 174 224 }
+	color2={ 255 255 255 }
+	
+	capital = 1173 # Morrow
+}
 ## plains nomads
 
 e_siksika = {
@@ -485,7 +521,7 @@ e_the_range = {
 }
 
 e_tsehestano = {
-	color = { 0 83 255 }
+	color = { 0 130 205 }
 	color2= { 255 255 20 }
 
 	capital = 482 #Fallon Prarie
@@ -530,4 +566,148 @@ e_wazi_ahanhan = {
 
 	capital = 382 #Porcupine
 	
+}
+
+e_greys = {
+	color = { 135 204 40 }
+	color2 = { 255 255 255 }
+			
+	capital = 3359 # Roswell
+	short_name = yes
+	allow = { always = no }
+}
+
+e_gold_snakes = {
+	color = { 245 220 0 }
+	color2 = { 220 220 220 }
+	capital = 419
+	allow = { always = no }
+	short_name = yes
+}
+
+e_wichita = {
+		color = { 0 165 110 }
+		color2 = { 255 255 255 }
+			
+		capital = 348 # Wichita
+
+}
+
+e_smoky_hills = {
+		color = { 228 128 128 }
+		color2 = { 255 255 255 }
+			
+		capital = 351
+
+}
+
+e_flyover = {
+		color = { 246 176 0 }
+		color2 = { 255 255 255 }
+			
+		capital = 970 # Baca
+
+}
+
+e_platte = {
+		color = { 219 187 129 }
+		color2 = { 255 255 255 }
+			
+		capital = 357 # Kearny
+
+}
+
+e_numunuu_sokobitu = {
+		color = { 185 0 36 }
+		color2 = { 255 255 255 }
+			
+		capital = 318 # Amarillo
+
+}
+
+e_hinonoeino_biitoowu = {
+		color = { 96 0 0 }
+		color2 = { 255 255 255 }
+			
+		capital = 945 # Floyd
+
+}
+
+e_heevahhetaneoo = {
+		color = { 0 83 255 }
+		color2 = { 255 255 255 }
+			
+		capital = 972 # Brownfield
+
+}
+
+e_panhandle = {
+		color = { 229 153 0 }
+		color2 = { 255 255 255 }
+			
+		capital = 943 # Hutchinson
+
+}
+
+e_blud_cult = {
+	color = { 255 0 0 }
+	color2 = { 255 255 255 }
+}
+
+e_last_mountain = {
+		color = { 63 128 64 }
+		color2 = { 255 255 255 }
+			
+		capital = 1715 # Diefenbaker
+
+}
+
+e_cossax = {
+		color = { 204 153 51 }
+		color2 = { 255 255 255 }
+			
+		capital = 578 #Kenosee
+		
+		short_name = yes
+		title = Hetman
+}
+
+e_ghost_trail = {
+		color = { 112 12 13 }
+		color2 = { 255 255 255 }
+			
+		capital = 576 # Javia
+
+}
+
+e_mikisiw_sipisis = {
+		color = { 224 208 139 }
+		color2 = { 255 255 255 }
+			
+		capital = 1716 # Eagle Creek
+
+}
+
+e_tunnel_snakes = {
+		color = { 0 0 0 }
+		color2 = { 255 255 255 }
+			
+		capital = 997 # Wendover
+		assimilate = no # Duchies cannot de jure drift IN or OUT of this title
+		primary = yes
+		short_name = yes
+	
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_tunnel_snakes = {
+					is_titular = yes
+				}
+			}
+			e_tunnel_snakes = {
+				is_titular = no
+			}
+		}
+	}
 }

@@ -304,25 +304,25 @@ e_edenite = {
 	
 	dignity = 200
 }
-d_armenianapostolic = {
+d_thaddean = {
 	color={ 162 62 230 }
 	color2={ 255 255 255 }
 	
 	capital = 672 # Dwin
 	
-	title = "CATHOLICOS"
-	title_female = "CATHOLICOS_FEMALE"
+	title = "PATRIARCH"
+	title_female = "PATRIARCH_FEMALE"
 	foa = "POPE_FOA"
 	
 	# Always exists
 	landless = yes
 	
 	# Controls a religion
-	controls_religion = armenianapostolic
+	controls_religion = thaddean
 	
-	religion = armenianapostolic
+	religion = thaddean
 	
-	culture = armenian
+	culture = valleyan
 	
 	# Cannot be held as a secondary title
 	primary = yes
@@ -334,25 +334,6 @@ d_armenianapostolic = {
 	
 	dignity = 200
 	
-	# Regnal names
-	male_names = {
-		Abraham Aghaton Aleksandr Aristakes Asdvadzadur 
-		Baghdasar Boghos
-		Daniel Davit 
-		Garegin Gevorg Gosdantin Grigor 
-		Hakob Hayk Hovhannes Hovsep Husik 
-		Kapriel Karapet Khachig Kristapor
-		Lazar Levon
-		Margos Matevos Mikayel Movses
-		Nahabed Nazar Nerses
-		Pavel Petros
-		Rafayel Ruben
-		Sahak Samvel Sargis Simeon Spartak Stepan
-		Tigran Toros Tovmas Trdat
-		Vrtanes
-		Yeghishe
-		Zakare
-	}
 }
 d_emmaean = {
 	color = { 141 130 77 }
@@ -1636,7 +1617,7 @@ e_lone_star = {
 	}
 
 	allow = {
-		religion = lone_star
+		religion = texolatry
 		num_of_holy_sites = 3 
 		piety = 1000
 		NOT = { has_landed_title = e_texas }
@@ -1650,8 +1631,8 @@ e_lone_star = {
 	title_female = "REVEREND-EMPRESS"
 	foa = "POPE_FOA"
 
-	religion = lone_star
-	controls_religion = lone_star
+	religion = texolatry
+	controls_religion = texolatry
 
 	primary = yes
 }

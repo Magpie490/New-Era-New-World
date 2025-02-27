@@ -672,12 +672,6 @@ decisions = {
 		ai_check_interval = 36
 		
 		potential = {
-			war = no
-			is_pilgrim = no
-			in_command = no
-			prisoner = no
-			is_incapable = no
-			age = 18
 			OR = {
 				trait = quick
 				trait = genius
@@ -737,6 +731,12 @@ decisions = {
 			}
 		}
 		allow = {
+			war = no
+			is_pilgrim = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+			age = 18
 			prestige = 150
 			wealth = 250
 			OR = {
@@ -1715,6 +1715,16 @@ decisions = {
 			set_global_flag = bhutan_reformed_diplo
 			remove_character_modifier = bhutan_crumbled_diplomacy
 			add_character_modifier = { name = bhutan_reformed_diplomacy duration = -1 }
+			if = {
+				limit = {
+					has_global_flag = bhutan_reformed_diplo
+					has_global_flag = bhutan_reformed_martial
+					has_global_flag = bhutan_reformed_stewardship
+					has_global_flag = bhutan_reformed_intrigue
+					has_global_flag = bhutan_reformed_learning
+				}
+				narrative_event = { id = america.40 }
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1783,6 +1793,16 @@ decisions = {
 
 			remove_character_modifier = bhutan_crumbled_martial
 			add_character_modifier = { name = bhutan_reformed_martial duration = -1 }
+			if = {
+				limit = {
+					has_global_flag = bhutan_reformed_diplo
+					has_global_flag = bhutan_reformed_martial
+					has_global_flag = bhutan_reformed_stewardship
+					has_global_flag = bhutan_reformed_intrigue
+					has_global_flag = bhutan_reformed_learning
+				}
+				narrative_event = { id = america.40 }
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1850,7 +1870,16 @@ decisions = {
 			
 			remove_character_modifier = bhutan_crumbled_stewardship
 			add_character_modifier = { name = bhutan_reformed_stewardship duration = -1 }
-			
+			if = {
+				limit = {
+					has_global_flag = bhutan_reformed_diplo
+					has_global_flag = bhutan_reformed_martial
+					has_global_flag = bhutan_reformed_stewardship
+					has_global_flag = bhutan_reformed_intrigue
+					has_global_flag = bhutan_reformed_learning
+				}
+				narrative_event = { id = america.40 }
+			}			
 		}
 		revoke_allowed = {
 			always = no
@@ -1918,7 +1947,16 @@ decisions = {
 			
 			remove_character_modifier = bhutan_crumbled_intrigue
 			add_character_modifier = { name = bhutan_reformed_intrigue duration = -1 }
-			
+			if = {
+				limit = {
+					has_global_flag = bhutan_reformed_diplo
+					has_global_flag = bhutan_reformed_martial
+					has_global_flag = bhutan_reformed_stewardship
+					has_global_flag = bhutan_reformed_intrigue
+					has_global_flag = bhutan_reformed_learning
+				}
+				narrative_event = { id = america.40 }
+			}			
 		}
 		revoke_allowed = {
 		always = no
@@ -1986,6 +2024,16 @@ decisions = {
 
 			remove_character_modifier = bhutan_crumbled_learning
 			add_character_modifier = { name = bhutan_reformed_learning duration = -1 }
+			if = {
+				limit = {
+					has_global_flag = bhutan_reformed_diplo
+					has_global_flag = bhutan_reformed_martial
+					has_global_flag = bhutan_reformed_stewardship
+					has_global_flag = bhutan_reformed_intrigue
+					has_global_flag = bhutan_reformed_learning
+				}
+				narrative_event = { id = america.40 }
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -2021,7 +2069,7 @@ decisions = {
 				# has_landed_title = e_latin_empire
 			# }
 			# NOT = {
-				# government = oligarchic_republic
+				# OR = { government = oligarchic_republic government = consular_republic }
 			# }
 			# NOT = {
 				# OR = {
@@ -5928,7 +5976,7 @@ decisions = {
 		# ai_check_interval = 24
 		# potential = {
 			# form_empire_potential = yes
-			# government = oligarchic_republic
+			# OR = { government = oligarchic_republic government = consular_republic }
 			# OR = {
 				# culture_group = francophone
 				# culture = toccitan
@@ -5981,7 +6029,7 @@ decisions = {
 		# ai_check_interval = 24
 		# potential = {
 			# form_empire_potential = yes
-			# government = oligarchic_republic
+			# OR = { government = oligarchic_republic government = consular_republic }
 			# culture_group = apeninian
 			# e_roman_republic = {
 				# is_titular = yes
@@ -6061,7 +6109,7 @@ decisions = {
 		# ai_check_interval = 24
 		# potential = {
 			# form_empire_potential = yes
-			# government = oligarchic_republic
+			# OR = { government = oligarchic_republic government = consular_republic }
 			# culture_group = east_slavic
 			# e_russian_republic = {
 				# is_titular = yes
@@ -6135,7 +6183,7 @@ decisions = {
 		# ai_check_interval = 24
 		# potential = {
 			# form_empire_potential = yes
-			# government = oligarchic_republic
+			# OR = { government = oligarchic_republic government = consular_republic }
 			# culture_group = byzantine
 			# e_hellenic_republic = {
 				# is_titular = yes
@@ -6216,7 +6264,7 @@ decisions = {
 		# ai_check_interval = 24
 		# potential = {
 			# form_empire_potential = yes
-			# government = oligarchic_republic
+			# OR = { government = oligarchic_republic government = consular_republic }
 			# culture_group = oghuz
 			# e_turkish_republic = {
 				# is_titular = yes

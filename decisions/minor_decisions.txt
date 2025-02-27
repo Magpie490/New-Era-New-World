@@ -1995,7 +1995,7 @@ decisions = {
 				government = japanese_feudal
 				government = indian_feudal
 				government = phonocratic_government
-				government = eastern_feudal
+				OR = { government = eastern_feudal government = technocratic_government }
 				government = mandate_heaven
 				government = chinese_imperial_government
 				government = order_government
@@ -2116,7 +2116,7 @@ decisions = {
 			}
 			OR = {
 				is_republic = yes
-				government = oligarchic_republic
+				OR = { government = oligarchic_republic government = consular_republic }
 				is_merchant_republic = yes
 			}
 			has_dlc = "Rajas of India"
@@ -2235,7 +2235,7 @@ decisions = {
 				government = japanese_feudal
 				government = indian_feudal
 				government = phonocratic_government
-				government = eastern_feudal
+				OR = { government = eastern_feudal government = technocratic_government }
 				government = mandate_heaven
 				government = chinese_imperial_government
 				government = order_government
@@ -2364,7 +2364,7 @@ decisions = {
 			}
 			OR = {
 				is_republic = yes
-				government = oligarchic_republic
+				OR = { government = oligarchic_republic government = consular_republic }
 				is_merchant_republic = yes
 			}
 			has_dlc = "Rajas of India"

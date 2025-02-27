@@ -140,7 +140,7 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_tribal = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -266,7 +266,7 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_tribal = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -447,7 +447,7 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_tribal = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -634,7 +634,7 @@ succession_laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -809,7 +809,7 @@ succession_laws = {
 				title = k_bakufu
 				title = k_pretender_bakufu
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1016,7 +1016,7 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1139,7 +1139,7 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1199,7 +1199,7 @@ succession_laws = {
 				is_tribal_type_title = yes
 				temporary = yes
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1216,7 +1216,7 @@ succession_laws = {
 		effect = {
 			succession = {
 				base_type = feudal_elective
-				voting_rules = byzantine_elective
+				voting_rules = federal_elective
 			}
 		}
 		revoke_allowed = {
@@ -1262,7 +1262,7 @@ succession_laws = {
 				is_tribal_type_title = yes
 				temporary = yes
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1294,6 +1294,7 @@ succession_laws = {
 					government = mandate_heaven
 					government = eastern_feudal
 					government = ethiopian_imperial_government
+					government = technocratic_government
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -1311,7 +1312,7 @@ succession_laws = {
 				is_tribal_type_title = yes
 				temporary = yes
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1329,6 +1330,50 @@ succession_laws = {
 			succession = {
 				base_type = tanistry
 				voting_rules = byzantine_elective_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	succ_meritocratic = {
+		potential = {
+			holder_scope = {
+				government = technocratic_government
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
+			}
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic } } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = byzantine_elective_3
 			}
 		}
 		revoke_allowed = {
@@ -1428,7 +1473,7 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -1561,7 +1606,7 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1758,7 +1803,7 @@ succession_laws = {
 					has_law = succ_hre_elective
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1828,7 +1873,7 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1899,7 +1944,7 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
@@ -1938,7 +1983,7 @@ succession_laws = {
 				title = k_gallicanist
 				title = d_fraticelli
 				title = k_serbia_triumvirate
-				title = d_armenianapostolic
+				title = d_thaddean
 				title = d_cao_dai
 				title = k_katoliko
 				title = k_aglipayan
@@ -1968,11 +2013,11 @@ succession_laws = {
 					}
 					AND = {
 						government = republic_government
-						liege = { government = oligarchic_republic }
+						liege = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } }
 					}
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -2001,7 +2046,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = feudal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = japanese_feudal } }
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 		}
@@ -2043,6 +2088,31 @@ succession_laws = {
 		}		
 	}	
 	
+	succ_consular_elective = {
+		potential = {
+			holder_scope = {
+				OR = {
+				government = consular_republic
+					AND = {
+						top_liege = { is_real_offmap_governor = yes }
+						government = confucian_bureaucracy # To use this with future offmap powers, use an OR clause here with the new government types
+					}
+				}
+			}
+		}
+		allow = {			
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = consular_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}		
+	}	
+	
 	succ_open_elective = {
 		potential = {
 			NOR = {
@@ -2052,7 +2122,7 @@ succession_laws = {
 				title = d_gelugpa
 				title = d_yersenism
 				title = k_serbia_triumvirate
-				title = d_armenianapostolic
+				title = d_thaddean
 				title = e_juche
 				title = d_cao_dai
 				title = k_katoliko
@@ -2108,7 +2178,7 @@ succession_laws = {
 				}				
 				NAND = {
 					government = republic_government
-					liege = { government = oligarchic_republic }
+					liege = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } }
 				}
 			}
 			NAND = { 
@@ -2118,7 +2188,7 @@ succession_laws = {
 					has_law = succ_hre_elective
 				}
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -2210,7 +2280,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = agrarian_feudal_government } }
 			NOT = { holder_scope = { government = japanese_feudal } }
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = order_government } }
@@ -2261,7 +2331,7 @@ succession_laws = {
 				}
 			}
 			is_primary_type_title = no
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
@@ -2291,7 +2361,7 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = yes
 			}
-			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }

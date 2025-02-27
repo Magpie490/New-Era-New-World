@@ -16,7 +16,11 @@ narrative_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = {
 			has_alternate_start_parameter = {
@@ -583,7 +587,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		trait = poet
 	}
 	
@@ -607,7 +615,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -636,6 +648,20 @@ character_event = {
 
 		scaled_wealth = 0.1
 	}
+
+	option = { #Gambler-exclusive option
+		name = EVTOPTCTENHARM86320
+		tooltip_info = greedy
+
+		trigger = {
+			AND = {
+				trait = greedy
+				religion = gambler
+			}
+		}
+
+		piety = 25
+	}
 }
 
 # Hadith - Protect from laziness, cowardice etc
@@ -648,7 +674,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -689,7 +719,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -730,7 +764,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -771,7 +809,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -812,7 +854,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -853,7 +899,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -894,7 +944,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir
@@ -935,7 +989,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		
-		religion = harmonic
+		OR = {
+			religion = harmonic
+			religion = gambler
+			religion = cineaste
+		}
 		any_courtier_or_vassal = {
 			has_minor_title = title_court_bard
 			trait = bard_sibir

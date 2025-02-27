@@ -692,7 +692,7 @@ safe_has_heresies = {
 		religion = khanist
 		religion = maoist
 		religion = red_cult
-		religion = armenianapostolic
+		religion = thaddean
 		religion = osvicenism
 		religion = navayana
 		religion = combuddhist
@@ -769,7 +769,7 @@ should_have_coronation = {
 		trait = crowned_by_bishop_rd
 		trait = crowned_by_pope_rd
 		government = order_government
-		government = oligarchic_republic
+		OR = { government = oligarchic_republic government = consular_republic }
 	}
 }
 is_cardinal_trigger = {
@@ -778,7 +778,7 @@ is_cardinal_trigger = {
 		has_minor_title = title_fraticelli_cardinal
 		has_minor_title = title_gallicanist_cardinal
 		has_minor_title = title_jugoslavist_cardinal
-		has_minor_title = title_armenianapostolic_cardinal
+		has_minor_title = title_thaddean_cardinal
 		has_minor_title = title_caodai_cardinal
 		has_minor_title = title_katoliko_cardinal
 		has_minor_title = title_aglipayan_cardinal

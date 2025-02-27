@@ -205,7 +205,7 @@ e_bloody_bisons = {
 	}
 }
 e_laurel_lords = {
-	color={ 0 109 192 }
+	color={ 143 0 4 }
 	color2={ 220 220 0 }
 	capital = 89
 	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
@@ -1208,6 +1208,29 @@ e_redcoats = {
 				}
 			}
 			e_redcoats = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_lone_star_rep = {
+	color = {  0 7 77 }
+	color2= { 255 255 20 }
+
+	culture = houstonian
+	capital = 1235 # Travis
+	short_name = yes
+	title = "HIGH_CONSUL_TITLE"
+	title_female = "HIGH_CONSUL_TITLE"
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_lone_star_rep = {
+					is_titular = yes
+				}
+			}
+			e_lone_star_rep = {
 				is_titular = no
 			}
 		}

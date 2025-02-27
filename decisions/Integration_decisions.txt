@@ -76,7 +76,7 @@ decisions = {
 					limit = {
 						NOT = {
 							num_of_government_vassals = {
-								government = oligarchic_republic
+								OR = { government = oligarchic_republic government = consular_republic }
 								value = 1
 							}
 						}
@@ -280,7 +280,7 @@ decisions = {
 					limit = {
 						NOT = {
 							num_of_government_vassals = {
-								government = oligarchic_republic
+								OR = { government = oligarchic_republic government = consular_republic }
 								value = 1
 							}
 						}

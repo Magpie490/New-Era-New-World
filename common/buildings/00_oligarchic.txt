@@ -3,17 +3,17 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 				has_building = or_retinue_1 
 			}
 		}
 		is_active_trigger = {
-			FROM = { government = oligarchic_republic }
+			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 0 
 			ROOT = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 			}
 		}
 		prerequisites = { ct_wall_2 }
@@ -33,18 +33,18 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 			}
 		}
 		is_active_trigger = {
-			FROM = { government = oligarchic_republic }
+			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 1 
 			ROOT = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 			}
 		}
 		upgrades_from = or_retinue_1
@@ -64,19 +64,19 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 				has_building = or_retinue_3
 			}
 		}
 		is_active_trigger = {
-			FROM = { government = oligarchic_republic }
+			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 2 
 			ROOT = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 			}
 		}
 		upgrades_from = or_retinue_2
@@ -96,7 +96,7 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 				has_building = or_retinue_3
@@ -104,12 +104,12 @@ city = {
 			}
 		}
 		is_active_trigger = {
-			FROM = { government = oligarchic_republic }
+			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 4
 			ROOT = {
-				FROM = { government = oligarchic_republic }
+				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
 			}
 		}
 		upgrades_from = or_retinue_3
@@ -125,10 +125,148 @@ city = {
 		tax_income = -0.25
 	}
 	
+	ca_rangerstation_1 = {
+		potential = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2 
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		desc = rangerstation_1_desc
+		gold_cost = 150
+		build_time = 730
+		local_tax_modifier = 0.01
+		levy_reinforce_rate = 0.05
+		light_cavalry = 15
+		light_cavalry_offensive = 0.075
+		carbineers = 15
+		carbineers_offensive = 0.075
+		ai_creation_factor = 95
+		extra_tech_building_start = 0.2
+		tax_income = -0.25
+	}
+	ca_rangerstation_2 = {
+		potential = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		upgrades_from = ca_rangerstation_1
+		desc = rangerstation_1_desc
+		gold_cost = 200
+		build_time = 730
+		local_tax_modifier = 0.01
+		levy_reinforce_rate = 0.05
+		light_cavalry = 15
+		light_cavalry_offensive = 0.075
+		carbineers = 15
+		carbineers_offensive = 0.075
+		ai_creation_factor = 95
+
+		extra_tech_building_start = 0.2
+		tax_income = -0.25
+	}
+	ca_rangerstation_3 = {
+		potential = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 6 
+			FROM = { 
+				OR = {
+					government = consular_republic
+					liege = {
+						government = consular_republic
+					}
+				}
+			}
+		}
+		upgrades_from = ca_rangerstation_2
+		desc = rangerstation_1_desc
+		gold_cost = 300
+		build_time = 730
+		local_tax_modifier = 0.01
+		levy_reinforce_rate = 0.05
+		light_cavalry = 15
+		light_cavalry_offensive = 0.075
+		carbineers = 15
+		carbineers_offensive = 0.075
+		ai_creation_factor = 95
+		extra_tech_building_start = 0.2
+		tax_income = -0.25
+	}
 	or_headquarters_1 = {
 		potential = {
 			FROM = { 
-				government = oligarchic_republic 
+				OR = { government = oligarchic_republic government = consular_republic } 
 				independent = yes
 				capital_holding = {
 						title = FROMFROM
@@ -153,7 +291,7 @@ city = {
 	or_headquarters_2 = {
 		potential = {
 			FROM = { 
-				government = oligarchic_republic 
+				OR = { government = oligarchic_republic government = consular_republic } 
 				independent = yes
 				capital_holding = {
 						title = FROMFROM
@@ -180,7 +318,7 @@ city = {
 	or_headquarters_3 = {
 		potential = {
 			FROM = { 
-				government = oligarchic_republic 
+				OR = { government = oligarchic_republic government = consular_republic } 
 				independent = yes
 				capital_holding = {
 						title = FROMFROM
@@ -208,9 +346,9 @@ city = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -228,7 +366,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -237,9 +375,9 @@ city = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -257,7 +395,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -267,9 +405,9 @@ city = {
 			TECH_CITY_CONSTRUCTION = 2 
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -287,7 +425,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -308,9 +446,9 @@ city = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -328,7 +466,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -337,9 +475,9 @@ city = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -357,7 +495,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -367,9 +505,9 @@ city = {
 			TECH_CITY_CONSTRUCTION = 4 
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -387,7 +525,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -410,9 +548,9 @@ city = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -430,7 +568,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -439,9 +577,9 @@ city = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -459,7 +597,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -469,9 +607,9 @@ city = {
 			TECH_CASTLE_CONSTRUCTION = 6
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -489,7 +627,7 @@ city = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -513,9 +651,9 @@ castle = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -533,7 +671,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -542,9 +680,9 @@ castle = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -562,7 +700,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -572,9 +710,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2 
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -592,7 +730,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -613,9 +751,9 @@ castle = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -633,7 +771,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -642,9 +780,9 @@ castle = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -662,7 +800,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -672,9 +810,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4 
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -692,7 +830,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -715,9 +853,9 @@ castle = {
 		potential = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -735,7 +873,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -744,9 +882,9 @@ castle = {
 		is_active_trigger = {
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -764,7 +902,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -774,9 +912,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 6 
 			FROM = { 
 				OR = {
-					government = eastern_feudal
+					OR = { government = eastern_feudal government = technocratic_government }
 					liege = {
-						government = eastern_feudal
+						OR = { government = eastern_feudal government = technocratic_government }
 					}
 					government = chinese_imperial_government
 					government = bhutanese_decayed_government
@@ -794,7 +932,7 @@ castle = {
 						government = ethiopian_imperial_government
 					}
 					government = neoziamet_government
-					government = oligarchic_republic
+					OR = { government = oligarchic_republic government = consular_republic }
 					government = merchant_republic_government
 					government = mandala_government
 				}
@@ -951,4 +1089,5 @@ castle = {
 		extra_tech_building_start = 0.2
 		tax_income = -0.25
 	}
+	
 }
