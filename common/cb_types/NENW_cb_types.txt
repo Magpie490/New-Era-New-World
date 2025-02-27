@@ -135,6 +135,7 @@ columbian_anti_protestant_holy_war = {
 		ROOT = {
 			OR = {
 				religion = columbian
+				religion = camelotist
 			}
 			NOT = { government = confederation_government }
 			FROM = {
@@ -225,6 +226,7 @@ columbian_anti_protestant_holy_war = {
 		ROOT = {
 			OR = {
 				religion = columbian
+				religion = camelotist
 			}
 			NOT = { government = confederation_government }
 			FROM = {
@@ -245,6 +247,7 @@ columbian_anti_protestant_holy_war = {
 					religion = tquaker
 					religion = mainline
 					religion = adventist
+					religion = dominionist
 				}
 			}
 			OR = {
@@ -304,7 +307,8 @@ columbian_anti_protestant_holy_war = {
 				limit = {
 					NOR = {
 						has_character_modifier = known_satanist
-					religion = columbian
+						religion = columbian
+						religion = camelotist
 					}
 				}
 				religion_authority = {

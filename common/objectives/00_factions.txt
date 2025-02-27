@@ -10284,6 +10284,15 @@ faction_independence = {
 				}
 			}
 		}
+		modifier = {#camelotists do not care for constitutionalists
+			factor = 2
+			religion = camelotist
+			liege = {
+				OR = {
+					religion = constitutional
+				}
+			}
+		}
 		modifier = {#Base Thelemics always want to be free
 			factor = 2
 			religion = thelemic
