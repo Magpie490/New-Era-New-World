@@ -752,6 +752,39 @@ e_lone_star_rep = {
 	}
 }
 
+e_atlantis = {
+	color={ 0 128 128 }
+	color2={ 255 255 255 }
+
+	culture = shastan
+	capital = 2060 # Mount Shasta
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_atlantis = {
+					is_titular = yes
+				}
+			}
+			e_atlantis = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_jefferson_history = {
+	color = { 0 163 178 }
+	color2 = { 220 220 220 }
+	
+	capital = 2059 # c_redding
+	short_name = yes
+	
+	allow = {
+		always = no
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
