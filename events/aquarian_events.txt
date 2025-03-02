@@ -32,5 +32,29 @@ character_event = {
 		add_trait = aquarian_gaia
 		clr_character_flag = choosing_aquarian_guru
 	}	
+}
 
+character_event = { #Jefferson becomes Atlantis if held by an Aquarian
+	id = aquarian.200
+	is_triggered_only = yes
+	hide_window = yes
+	hide_from = yes
+
+	religion = catholic
+	only_playable = yes
+	min_age = 16
+
+	trigger = {
+		controls_religion = yes
+	}
+	immediate = {
+		e_jefferson = {
+			save_persistent_event_target = { name = aquarian_title scope = e_atlantis }
+			save_persistent_event_target = { name = non_aquarian_title scope = e_jefferson_history }
+			persistent_event_target:non_aquarian_title = {
+				set_name = PREV
+				copy_title_history = PREV
+			}
+		}
+	}
 }
