@@ -146,16 +146,16 @@ character_event = { #Reiki
 				years = 3
 			}
 			random_list = {
-				60 = {
+				25 = {
 					add_character_modifier = {
 						name = aquarian_null_vibes
 						years = 3
 					}
 				}
-				30 = {
+				50 = {
 
 				}
-				10 = {
+				25 = {
 					add_character_modifier = {
 						name = aquarian_bad_vibes
 						years = 3
@@ -182,12 +182,12 @@ character_event = { #Crystals
 			text = crystal_tooltip
 			hidden_tooltip = {
 				random_list = {
-					80 = { 
-						health = -0.5
-						change_stewardship = -1
-					}
-					15 = {  }
-					5 = { 
+#					80 = { 
+#						health = -0.5
+#						change_stewardship = -1
+#					}
+					80 = {  }
+					20 = { 
 						health = -1
 						change_stewardship = -2
 					}
@@ -260,7 +260,7 @@ character_event = { #Channeling
 		custom_tooltip = {
 			text = channeling_tooltip
 			hidden_tooltip = {
-				random = { chance = 30 add_trait = possessed }
+				random = { chance = 10 add_trait = possessed }
 				random_list = {
 					50 = { piety = 40 }
 					10 = { add_trait = erudite }
@@ -277,14 +277,14 @@ character_event = { #Channeling
 		custom_tooltip = {
 			text = channeling_tooltip
 			hidden_tooltip  = {
-				random = { chance = 40 add_trait = possessed }
+				random = { chance = 20 add_trait = possessed }
 				random_list = {
-					50 = { piety = 40 }
+					60 = { piety = 40 }
 					10 = { add_trait = shrewd }
 					10 = { add_trait = robust }
 					10 = { add_trait = groomed }
-					10 = { add_trait = feeble }
-					10 = { add_trait = infirm }
+					5 = { add_trait = feeble }
+					5 = { add_trait = infirm }
 				}
 			}
 		}
@@ -305,8 +305,9 @@ character_event = { #Carnal contemplation
 			text = carnality_tooltip
 			hidden_tooltip = {
 				random = { chance = 50 remove_trait = stressed }
-				random = { chance = 20 add_trait = lovers_pox }
-				random = { chance = 20 add_trait = lustful }
+				random = { chance = 5 add_trait = lovers_pox }
+				random = { chance = 25 add_trait = lustful }
+				random = { chance = 1 add_trait = syphilitic }
 			}
 			add_character_modifier = {
 				name = aquarian_good_vibes
@@ -348,6 +349,8 @@ character_event = { #Yoga
 			hidden_tooltip = { 
 				random = { chance = 20 remove_trait = stressed } 
 				random = { chance = 20 remove_trait = feeble } 
+				random = { chance = 5 remove_trait = infirm } 
+				random = { chance = 10 add_trait = wounded }
 			}
 			add_character_modifier = {
 				name = aquarian_good_vibes
