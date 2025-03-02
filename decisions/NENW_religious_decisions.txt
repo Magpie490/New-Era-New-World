@@ -531,7 +531,7 @@ decisions = {
 			piety = 50
 		}
 		effect = {
-			character_event = { id = aqua.100 }
+			character_event = { id = aquarian.100 }
 			set_character_flag = choosing_aquarian_guru
 		}
 		ai_will_do = {
@@ -545,6 +545,43 @@ decisions = {
 				trait = cynical
 			}
 		}
+	}
+	aquarian_mysticism = {
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			religion = aquarian
+			OR = {
+				NOT = { has_character_flag = aquarian_mysticism_flag }
+				had_character_flag = {
+					flag = aquarian_mysticism_flag
+					years = 3
+				}
+			}
+		}
+		allow = {
+			is_adult = yes
+			is_incapable = no
+			prisoner = no
+			has_regent = no
+			piety = 100
+		}
+		effect = {
+			character_event = { id = aquarian.300 }
+			clr_character_flag = aquarian_mysticism_flag
+			set_character_flag = aquarian_mysticism_flag
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+		}		
 	}			
 }
 targeted_decisions = {

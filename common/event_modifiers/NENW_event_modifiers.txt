@@ -1,3 +1,20 @@
 abolitionist_revolution_leader = {
 	icon = 31
 }
+aquarian_good_vibes = {	#always shows up with Aquarian vibe stuff
+	icon = 95
+	health = 1
+	monthly_character_piety = 0.2
+}
+	
+aquarian_null_vibes = {	#hidden modifier if Aquarian vibe stuff is nonsense
+	icon = 95
+	health = -1
+	is_visible = { always = no }
+}
+aquarian_bad_vibes = {	#hidden modifier if Aquarian vibe stuff went wrong
+	icon = 95
+	health = -2
+	show_value = no
+	is_visible = { always = no }
+}
