@@ -2481,7 +2481,7 @@ gender_laws = {
 		default_selection = {
 			factor = 10
 			modifier = {
-				factor = 0
+				factor = 0.1
 				holder_scope = {
 					is_feminist_religion = yes
 				}
@@ -2536,6 +2536,8 @@ gender_laws = {
 							controls_religion = no
 						}
 						religion = hussite
+						is_feminist_culture = yes
+						is_feminist_religion = yes
 					}
 				}
 			}
@@ -2712,6 +2714,7 @@ gender_laws = {
 					OR = {
 						has_religion_feature = religion_equal
 						religion = bahai
+						is_feminist_religion = yes
 					}
 				}
 			}
