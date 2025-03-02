@@ -123,6 +123,14 @@ narrative_event = {
 				}
 				
 				new_character = {
+					if = {
+						limit = {
+							has_dlc = "Holy Fury"
+						}
+						create_bloodline = {
+							type = liberator_bloodline
+						}
+					}
 					set_character_flag = abolitionist_leader
 					save_global_event_target_as = abolitionist_invasion_leader
 					remove_trait = slow
