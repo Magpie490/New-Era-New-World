@@ -1,0 +1,40 @@
+namespace = arcadian
+character_event = { #assign seasonal birth traits
+	id = arcadian.100
+	hide_window = yes
+	
+	trigger = {
+		religion = arcadian
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					month_of_birth = 12
+					NOT = { month_of_birth = 3 }
+				}
+			}
+			add_trait = arcadian_winter
+		}
+		else_if = {
+			limit = {
+				month_of_birth = 3
+				NOT = { month_of_birth = 6 }
+			}
+			add_trait = arcadian_spring
+		}
+		else_if = {
+			limit = {
+				month_of_birth = 6
+				NOT = { month_of_birth = 9 }
+			}
+			add_trait = arcadian_summer
+		}
+		else = {
+			add_trait = arcadian_fall
+		}
+	}
+}

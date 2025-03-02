@@ -1273,7 +1273,67 @@ custodite_aerial = {
 	}
 }
 
-
+arcadian_winter = {
+	religious_branch = arcadian
+	religious = yes
+	intrigue = 1
+	plot_power_modifier = 0.10
+	command_modifier = {
+		religious_enemy = 0.10
+	}
+	infidel_opinion = -20
+	same_opinion = 10
+	opposite_opinion = -5
+	ai_zeal = 50
+	opposites = {
+		arcadian_spring
+		arcadian_summer
+		arcadian_fall
+	}
+}
+arcadian_spring = {
+	religious_branch = arcadian
+	religious = yes
+	learning = 1
+	build_cost_modifier = -0.10
+	health = 0.25
+	infidel_opinion = 10
+	same_opinion = 10
+	opposite_opinion = -5
+	opposites = {
+		arcadian_winter
+		arcadian_summer
+		arcadian_fall
+	}
+}
+arcadian_summer = {
+	religious_branch = arcadian
+	religious = yes
+	martial = 1
+	levy_reinforce_rate = 0.10
+	monthly_character_prestige = 0.25
+	same_opinion = 10
+	opposite_opinion = -5
+	opposites = {
+		arcadian_spring
+		arcadian_winter
+		arcadian_fall
+	}
+}
+arcadian_fall = {
+	religious_branch = arcadian
+	religious = yes
+	diplomacy = 1
+	global_revolt_risk = -0.01
+	monthly_character_piety = 0.25
+	same_opinion = 10
+	opposite_opinion = -5
+	opposites = {
+		arcadian_spring
+		arcadian_summer
+		arcadian_winter
+	}
+}
 
 ## Other Traits ##
 

@@ -582,6 +582,28 @@ decisions = {
 				trait = cynical
 			}
 		}		
+	}
+	arcadian_season_trait = {
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			religion = arcadian
+			NOR = {
+				trait = arcadian_winter
+				trait = arcadian_spring
+				trait = arcadian_summer
+				trait = arcadian_fall
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = arcadian.100 }
+		}
+		ai_will_do = {
+			factor = 1
+		}		
 	}			
 }
 targeted_decisions = {
