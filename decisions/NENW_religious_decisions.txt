@@ -604,7 +604,135 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 		}		
-	}			
+	}
+	# Brighamite > LDS = Brighamite becomes parent
+	mend_brighamite_schism = {
+		ai_check_interval = 24
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			religion = brighamite
+			is_heretic = no
+			NOT = { has_global_flag = brighamite_schism_mended }
+			NOT = { has_global_flag = mormon_brighamite_schism_mended }
+			d_mormon = {
+				holder_scope = {
+					is_heretic = no # If the President (and thus Latter Day Saints) is heretical, mending the schism is no longer possible
+				}
+			}
+		}
+		allow = {
+			real_tier = EMPEROR
+			piety = 2000
+			religion_authority = 0.75
+			completely_controls = c_salt_lake
+			b_salt_lake_city_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_provo
+			b_provo_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_zion
+			b_virgin_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_moks
+			b_independence_MO = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_gem_canyon
+			b_caldwell_ID = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = nenwschism.1 tooltip = EVTTOOLTIP_NENWSCHISM.1}
+			set_global_flag = brighamite_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# LDS > Brighamite LDS becomes parent
+	mend_mormon_brighamite_schism = {
+		ai_check_interval = 24
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			religion = mormon
+			num_of_emperor_titles = 1
+			is_heretic = no
+			NOT = { has_global_flag = brighamite_schism_mended }
+			NOT = { has_global_flag = mormon_brighamite_schism_mended }
+		}
+		allow = {
+			real_tier = EMPEROR
+			piety = 2000
+			religion_authority = 0.75
+			completely_controls = c_salt_lake
+			completely_controls = c_salt_lake
+			b_salt_lake_city_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_provo
+			b_provo_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_zion
+			b_virgin_UT = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_moks
+			b_independence_MO = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			completely_controls = c_gem_canyon
+			b_caldwell_ID = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = nenwschism.2 tooltip = EVTTOOLTIP_NENWSCHISM.2}
+			set_global_flag = mormon_brighamite_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
 }
 targeted_decisions = {
 	aquarian_perform_scrying = {

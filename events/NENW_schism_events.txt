@@ -1,0 +1,131 @@
+namespace = nenwschism
+
+### Schism Mended
+
+# Brighamite > LDS = Brighamite becomes parent
+narrative_event = {
+	id = nenwschism.1
+	title = EVTNAME_brighamite_mend_schism
+	desc = EVTDESC_brighamite_mend_schism
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_brighamite_mend_schism
+
+		if = {
+			limit = {
+				religion = brighamite
+			}
+			set_parent_religion = { religion = mormon parent = brighamite }
+		}
+		set_global_flag = brighamite_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = mormon
+					controls_religion = no
+				}
+				narrative_event = { id = nenwschism.3 }
+			}
+		}
+	}
+}
+
+# LDS > Brighamite = LDS becomes parent
+narrative_event = {
+	id = nenwschism.2
+	title = EVTNAME_mormon_mend_schism
+	desc = EVTDESC_mormon_mend_schism
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nenwschism_2
+
+		if = {
+			limit = {
+				religion = mormon
+			}
+			set_parent_religion = { religion = brighamite parent = mormon }
+		}
+		set_global_flag = mormon_brighamite_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = brighamite
+					controls_religion = no
+				}
+				narrative_event = { id = nenwschism.4 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = nenwschism.3
+	title = EVTNAME_brighamite_schism_convert
+	desc = EVTDESC_brighamite_schism_convert
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTA_brighamite_schism_convert
+		ai_chance = { factor = 60 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = mormon
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTB_brighamite_schism_convert
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = nenwschism.4
+	title = EVTNAME_mormon_schism_convert
+	desc = EVTDESC_mormon_schism_convert
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTA_mormon_schism_convert
+		ai_chance = { factor = 60 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = brighamite
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTB_mormon_schism_convert
+		ai_chance = { factor = 40 }
+	}
+}
