@@ -216,3 +216,23 @@ abolitionist_revolution_trigger = {
 		NOT = { has_global_flag = abolitionist_revolt_ongoing }
 	}
 }
+aquarian_switch_trigger = {
+	OR = {
+		should_switch_to_aquarian_trigger = yes
+		should_switch_to_non_aquarian_trigger = yes
+	}
+}
+should_switch_to_aquarian_trigger = {
+	persistent_event_target:aquarian_title = { always = yes }
+	NOT = { has_title_flag = aquarian_title }
+	PREV = {
+		religion = aquarian
+	}
+}
+should_switch_to_non_aquarian_trigger = {
+	persistent_event_target:non_aquarian_title = { always = yes }
+	has_title_flag = aquarian_title
+	PREV = {
+		NOT = { religion = aquarian }
+	}
+}

@@ -2999,6 +2999,163 @@ RETTYPE_CUL_CREE =
 	}
 }
 
+RETTYPE_CUL_SIOUX = {
+	first_type = 4
+	first_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		OR = {
+			culture_group = siouan
+			any_realm_province = {
+				OR = {
+				culture_group = siouan
+				}
+			}
+		}
+		NOT = {
+				culture = crow
+			any_realm_province = {
+				NOT = {
+				culture = crow
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		knights_offensive = 0.3
+		knights_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_CROW = {
+	first_type = 3
+	first_amount = 250
+	
+	second_type = 6
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = crow
+			any_realm_province = {
+				culture = crow
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.2
+		horse_archers_offensive = 0.25
+		horse_archers_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_CHEYENNE = {
+	first_type = 3
+	first_amount = 250
+	
+	second_type = 2
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = cheyenne
+			culture = northern_cheyenne
+			any_realm_province = {
+				culture = cheyenne
+				culture = northern_cheyenne
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.2
+		pikemen_offensive = 0.25
+		pikemen_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_GROS_VENTRE = {
+	first_type = 3
+	first_amount = 250
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = gros_ventre
+			any_realm_province = {
+				culture = gros_ventre
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_defensive = 0.25
+		light_cavalry_morale = 0.2
+		archers_defensive= 0.25
+		archers_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_BLACKFOOT = {
+	first_type = 4
+	first_amount = 250
+	
+	second_type = 2
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = blackfoot
+			any_realm_province = {
+				culture = blackfoot
+			}
+		}
+	}
+	
+	modifier = {
+		knights_morale = 0.3
+		heavy_infantry_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_NORTHERN_ATHABASKAN = {
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		OR = {
+			culture_group = northern_athabaskan
+			any_realm_province = {
+				culture_group = northern_athabaskan
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.3
+		archers_morale = 0.3
+	}
+}
+
+
 # Custodite Branch Retinues
 
 RETTYPE_CUSTODITE_INFANTRY = {

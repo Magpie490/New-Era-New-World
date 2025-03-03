@@ -4,7 +4,7 @@ narrative_event = {#Setup event that fires and results in the creation of the in
 	id = redcoat.1
 	
 	title = redcoat1TITLE
-	picture = GFX_evt_aztec_arrival
+	picture = GFX_evt_fogwatchers
 	border = GFX_event_narrative_frame_religion
 	
 	major = yes
@@ -64,16 +64,51 @@ narrative_event = {#Setup event that fires and results in the creation of the in
 	mean_time_to_happen = {
 		days = 710
 	}
-	option = { #Strange
+	option = { #And?
 		name = redcoat1OPTA	
 		trigger = {
-			primary_title = { title = e_columbia }
+			capital_scope = { 
+				NOR = {
+					region = world_central_canada
+					region = custom_atlantic
+				}
+			}	
+			NOR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = constitutional
+			}
 		}
 	}
-	option = {#And?
+	option = { # Pirates?
 		name = redcoat1OPTB
 		trigger = {
-			NOT = { primary_title = { title = e_columbia } }
+			capital_scope = { 
+				OR = {
+					region = world_central_canada
+					region = custom_atlantic
+				}
+			}		
+			NOR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = constitutional
+			}
+		}
+	}
+	option = {
+		name = redcoat1OPTC
+		trigger = {
+			OR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+			}
+		}
+	}
+	option = {
+		name = redcoat1OPTD
+		trigger = {
+			religion = constitutional
 		}
 	}
 }
@@ -81,9 +116,9 @@ narrative_event = {#Setup event that fires and results in the creation of the in
 narrative_event = {#The Invasion actually happens
 	id = redcoat.2
 	
-	title = america19Title
-	picture = GFX_evt_aztec_arrival
-	border = GFX_event_narrative_frame_religion
+	title = redcoat2TITLE
+	picture = GFX_evt_rule_the_waves
+	border = GFX_event_narrative_frame_war
 	
 	major = yes
 	
@@ -420,22 +455,55 @@ narrative_event = {#The Invasion actually happens
 	}
 	}
 	}
-	option = {#Oh no
-		name = redcoat2OPTA
+	option = {
+		name = redcoat2OPTA	
 		trigger = {
-			primary_title = { title = e_columbia }
+			capital_scope = { 
+				NOR = {
+					region = world_central_canada
+					region = custom_atlantic
+				}
+			}	
+			NOR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = constitutional
+			}
 		}
 	}
-	option = {#Who?
+	option = {
 		name = redcoat2OPTB
 		trigger = {
-			NOT = {
-				primary_title = { title = e_columbia }
+			capital_scope = { 
+				OR = {
+					region = world_central_canada
+					region = custom_atlantic
+				}
+			}		
+			NOR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				religion = constitutional
 			}
 		}
 	}
 	option = {
 		name = redcoat2OPTC
+		trigger = {
+			OR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+			}
+		}
+	}
+	option = {
+		name = redcoat2OPTD
+		trigger = {
+			religion = constitutional
+		}
+	}
+	option = {
+		name = redcoat2OPTE
 		tooltip_info = yes
 		trigger = {
 			can_plays_as_invader_trigger = yes

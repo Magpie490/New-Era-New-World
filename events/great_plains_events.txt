@@ -116,7 +116,7 @@ narrative_event = {
 	major = yes
 	hide_from = yes
 	
-	picture = "GFX_evt_mongols"
+	picture = GFX_evt_crossbearer
 	border = "GFX_event_narrative_frame_war"
     
 	is_triggered_only = yes
@@ -162,6 +162,7 @@ narrative_event = {
 				}
 				new_character = {
 					set_character_flag = is_joshua
+					save_global_event_target_as = invasion_leader
 					if = {
 						limit = {
 							has_dlc = "Holy Fury"
@@ -254,125 +255,56 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA60500"
+		name = "EVTOPTA_GPLAINS_2"
 		trigger = {
-			OR = {
-				religion_group = christian
-				religion_group = muslim
-				religion_group = pagan_group
-			}
-			NOT = { government = nomadic_government }
-			has_power_omen_modifier_trigger = no
-			has_battle_omen_modifier_trigger = no
+			religion = millenarian
 		}
 	}
-	
 	option = {
-		name = "EVTOPTB60500"
+		name = "EVTOPTB_GPLAINS_2"
 		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan_group }
-			NOT = { government = nomadic_government }
-			has_power_omen_modifier_trigger = no
-			has_battle_omen_modifier_trigger = no
+			capital_scope = {
+				region = world_great_plainsUS
+			}
+			NOT = {
+				religion = millenarian
+			}
 		}
 	}
-	
 	option = {
-		name = "EVTOPTC60500"
+		name = "EVTOPTC_GPLAINS_2"
 		trigger = {
-			government = nomadic_government
-			has_power_omen_modifier_trigger = no
-			has_battle_omen_modifier_trigger = no
-		}
-	}
-
-	option = { # scrying omen included
-		name = "EVTOPTA60500"
-
-		if = { #in case this does not run in the immediate due to "major = yes"
-			limit = {
-				OR = {
-					has_power_omen_modifier_trigger = yes
-					has_battle_omen_modifier_trigger = yes
+			NOT = {
+				capital_scope = {
+					region = world_great_plainsUS
 				}
 			}
-			set_character_flag = negative_event_flag # For the scrying outcome calculation...
+			religion_group = christian
 		}
-
-		calculate_scrying_outcome_effect = yes
-		remove_scrying_omen_modifiers_effect = yes
-		tooltip_info = yes
-
+	}
+	option = {
+		name = "EVTOPTD_GPLAINS_2"
 		trigger = {
-			OR = {
+			NOR = {
+				capital_scope = {
+					region = world_great_plainsUS
+				}
 				religion_group = christian
-				religion_group = muslim
-				religion_group = pagan_group
+				religion = millenarian
 			}
-			NOT = { government = nomadic_government }
-			OR = {
-				has_power_omen_modifier_trigger = yes
-				has_battle_omen_modifier_trigger = yes
+		}
+	}
+	option = {
+		name = "EVTOPTE_GPLAINS_2"
+		trigger = {
+			tooltip_info = yes
+			trigger = {
+				can_plays_as_invader_trigger = yes
 			}
+			play_as_invasion_leader_effect = yes
 		}
 	}
 	
-	option = { # scrying omen included
-		name = "EVTOPTB60500"
-
-		if = { #in case this does not run in the immediate due to "major = yes"
-			limit = {
-				OR = {
-					has_power_omen_modifier_trigger = yes
-					has_battle_omen_modifier_trigger = yes
-				}
-			}
-			set_character_flag = negative_event_flag # For the scrying outcome calculation...
-		}
-		
-		calculate_scrying_outcome_effect = yes
-		remove_scrying_omen_modifiers_effect = yes
-		tooltip_info = yes
-
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan_group }
-			NOT = { government = nomadic_government }
-			OR = {
-				has_power_omen_modifier_trigger = yes
-				has_battle_omen_modifier_trigger = yes
-			}
-		}
-	}
-	
-	option = { # scrying omen included
-		name = "EVTOPTC60500"
-
-		if = { #in case this does not run in the immediate due to "major = yes"
-			limit = {
-				OR = {
-					has_power_omen_modifier_trigger = yes
-					has_battle_omen_modifier_trigger = yes
-				}
-			}
-			set_character_flag = negative_event_flag # For the scrying outcome calculation...
-		}
-
-		calculate_scrying_outcome_effect = yes
-		remove_scrying_omen_modifiers_effect = yes
-		tooltip_info = yes
-
-		trigger = {
-			government = nomadic_government
-			OR = {
-				has_power_omen_modifier_trigger = yes
-				has_battle_omen_modifier_trigger = yes
-			}
-		}
-	}
 }
 # Spawn millenarian leaders
 character_event = {
