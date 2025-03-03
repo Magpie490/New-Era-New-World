@@ -95,6 +95,12 @@ character_event = { #decide what kind of Aquarian mysticism to experiment with
 	}
 	option = { # Crystals!
 		name = EVTOPTB_aquarian_301
+		trigger = {
+			NOR = {
+				has_artifact = aquarian_crystal
+				has_artifact = aquarian_crystal_bad
+			}
+		}
 		character_event = { id = aquarian.3012 }
 	}
 	option = { # Channeling
@@ -176,20 +182,17 @@ character_event = { #Crystals
 
 	option = {
 		name = EVTOPTA_aquarian_3012
-		add_artifact = aquarian_crystal
 		wealth = -5
 		custom_tooltip = {
 			text = crystal_tooltip
 			hidden_tooltip = {
 				random_list = {
-#					80 = { 
-#						health = -0.5
-#						change_stewardship = -1
-#					}
-					80 = {  }
-					20 = { 
-						health = -1
-						change_stewardship = -2
+					30 = { 
+						add_artifact = aquarian_crystal
+					}
+					40 = {  }
+					30 = { 
+						add_artifact = aquarian_crystal_bad
 					}
 				}
 			}
@@ -202,12 +205,19 @@ character_event = { #destroys crystals on death, really because my way of making
 	hide_window = yes
 
 	trigger = {
-		has_artifact = aquarian_crystal
+		OR = {
+			has_artifact = aquarian_crystal
+			has_artifact = aquarian_crystal_bad
+		}
 	}
 
 	immediate = {
 		any_artifact = {
 			limit = { artifact_type = aquarian_crystal }
+			destroy_artifact = yes
+		}
+		any_artifact = {
+			limit = { artifact_type = aquarian_crystal_bad }
 			destroy_artifact = yes
 		}
 	}
