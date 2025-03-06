@@ -1396,8 +1396,9 @@ succession_laws = {
 						}
 					}
 				}
-				NOR = { religion_group = muslim
-						religion = jacobinist
+				NOR = {
+					religion_group = muslim
+					religion = jacobinist
 					religion = titoist	
 					religion = sarvodaya
 					religion = stalinist
@@ -1410,20 +1411,19 @@ succession_laws = {
 				is_merchant_republic = no					
 				is_patrician = no
 				OR = {
-					OR = {
 					government = agrarian_feudal_government
 					culture_group = goidelic
 					culture_group = brythonic
 					culture_group = amero_goidelic
 					culture_group = appalachian_group
 					culture_group = north_atlantic_anglophone
-					}
+					culture_group = yankee
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
 					}
 					AND = {
-					society_member_of = hermetics
-					society_rank = 4
+						society_member_of = hermetics
+						society_rank = 4
 					}
 				}
 				OR = {
@@ -1444,19 +1444,17 @@ succession_laws = {
 			OR = {
 				holder_scope = {
 					OR = {
-						OR = {
 						culture_group = goidelic
 						culture_group = brythonic
 						culture_group = amero_goidelic
 						culture_group = appalachian_group
 						culture_group = yankee
-						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_tanistry
 						}
 						AND = {
-						society_member_of = hermetics
-						society_rank = 4
+							society_member_of = hermetics
+							society_rank = 4
 						}
 					}
 				}
