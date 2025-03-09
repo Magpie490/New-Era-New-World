@@ -4303,6 +4303,11 @@ monastic_elective_2 = {
 			primary_title = { real_tier = COUNT }			
 		}		
 		additive_modifier = {
+			value = 20
+			vassal_of = FROMFROM 
+			religion = ROOT
+		}
+		additive_modifier = {
 			value = -100
 			FROMFROM = { 
 				holder_scope = { NOT = { religion = ROOT } }
@@ -4311,6 +4316,22 @@ monastic_elective_2 = {
 		additive_modifier = {
 			value = -5
 			is_nomadic = yes
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 10
+			vassal_of = FROMFROM 
+			OR = { 
+				has_job_title = job_chancellor
+				has_job_title = job_marshal
+				has_job_title = job_treasurer
+				has_job_title = job_spymaster
+				has_job_title = job_spiritual
+				has_minor_title = title_councilmember_king #Generic advisors
+				has_minor_title = title_councilmember_emperor
+				has_job_title = job_first_magistrate #Generic advisors
+				has_job_title = job_second_magistrate
+				has_job_title = job_third_magistrate
+			}
 		}
 	}
 	candidate_vote_score = {
@@ -7475,31 +7496,7 @@ monastic_elective_2 = {
 				}
 				any_claim = { title = ROOT_FROMFROM }
 			}
-					government = theodemocratic
-			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
-				AND = {
-					is_ruler = yes
-					is_landed = yes
-					is_republic = no
-					is_merchant_republic = no
-					is_theocracy = no
-				}
-				NOR = {
-					any_heir_title = {
-						is_republic = yes
-					}
-					any_heir_title = {
-						is_merchant_republic = yes
-					}
-					any_heir_title = {
-						is_theocracy = yes
-					}
-				}
-			}
-			OR = {
-				is_adult = yes
-				ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-			}
+			government = theodemocratic
 			religion = ROOT
 			NOR = {
 				trait = horse
@@ -7507,11 +7504,6 @@ monastic_elective_2 = {
 				is_theocracy = yes
 				is_republic = yes
 				is_merchant_republic = yes
-				AND = {
-					trait = bastard 
-					is_ruler = no
-					ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-				}
 			}
 		}		
 	}
