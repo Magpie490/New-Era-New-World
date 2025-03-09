@@ -4287,37 +4287,6 @@ monastic_elective_2 = {
 				holder_scope = { character = ROOT }
 			}
 		}
-		additive_modifier = { #Then the Marshal and Court Chaplain.
-			value = 15
-			vassal_of = FROMFROM
-			OR = { 
-				has_job_title = job_marshal
-				has_job_title = job_spiritual
-				AND = {
-					has_minor_title = title_commander
-					FROMFROM = { holder_scope = { government = order_government } }
-				}
-				AND = {
-					FROMFROM = { holder_scope = { spouse = { character = ROOT } } }
-					FROMFROM = { holder_scope = { government = calvinist_government } }
-				}
-				AND = {
-					FROMFROM = { holder_scope = { OR = { primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-				}
-				AND = {
-					FROMFROM = {
-						OR = {
-						title = d_knights_lazarus
-						title = d_knights_hospitaler_1
-						title = d_knights_hospitaler_2
-						title = d_knights_hospitaler_3
-						title = d_knights_hospitaler
-						}
-					}
-					has_minor_title = title_court_physician
-				}
-			}
-		}
 		additive_modifier = { #Then Kings
 			value = 20
 			vassal_of = FROMFROM 
@@ -4338,18 +4307,6 @@ monastic_elective_2 = {
 			FROMFROM = { 
 				holder_scope = { NOT = { religion = ROOT } }
 			}
-		}
-		additive_modifier = {
-			value = -5
-			is_republic = yes
-		}
-		additive_modifier = {
-			value = -5
-			is_merchant_republic = yes
-		}
-		additive_modifier = {
-			value = -5
-			is_tribal = yes
 		}
 		additive_modifier = {
 			value = -5
