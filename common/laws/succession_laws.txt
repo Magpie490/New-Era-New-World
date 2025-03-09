@@ -145,6 +145,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			#NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
 		}
@@ -270,6 +271,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { has_landed_title = d_athos } }
 			NOT = { holder_scope = { has_landed_title = k_athos } }
@@ -450,6 +452,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -636,6 +639,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
 			NOT = { holder_scope = { controls_religion = no religion = calvinist higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
@@ -810,6 +814,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
 			NOT = { holder_scope = { controls_religion = no religion = calvinist higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
@@ -1016,6 +1021,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOR = {  #Special Elective.
 				has_title_flag = alternate_hre
 			}
@@ -1137,6 +1143,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = federal_government } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -1196,6 +1203,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -1259,6 +1267,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -1309,6 +1318,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -1353,6 +1363,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		allow = {
@@ -1396,8 +1407,9 @@ succession_laws = {
 						}
 					}
 				}
-				NOR = { religion_group = muslim
-						religion = jacobinist
+				NOR = {
+					religion_group = muslim
+					religion = jacobinist
 					religion = titoist	
 					religion = sarvodaya
 					religion = stalinist
@@ -1410,20 +1422,19 @@ succession_laws = {
 				is_merchant_republic = no					
 				is_patrician = no
 				OR = {
-					OR = {
 					government = agrarian_feudal_government
 					culture_group = goidelic
 					culture_group = brythonic
 					culture_group = amero_goidelic
 					culture_group = appalachian_group
 					culture_group = north_atlantic_anglophone
-					}
+					culture_group = yankee
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
 					}
 					AND = {
-					society_member_of = hermetics
-					society_rank = 4
+						society_member_of = hermetics
+						society_rank = 4
 					}
 				}
 				OR = {
@@ -1444,19 +1455,17 @@ succession_laws = {
 			OR = {
 				holder_scope = {
 					OR = {
-						OR = {
 						culture_group = goidelic
 						culture_group = brythonic
 						culture_group = amero_goidelic
 						culture_group = appalachian_group
 						culture_group = yankee
-						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_tanistry
 						}
 						AND = {
-						society_member_of = hermetics
-						society_rank = 4
+							society_member_of = hermetics
+							society_rank = 4
 						}
 					}
 				}
@@ -1470,6 +1479,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 
 		}
@@ -1604,6 +1614,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
 		}
@@ -1801,6 +1812,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		effect = {
@@ -1870,6 +1882,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		effect = {
@@ -1941,6 +1954,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		effect = {
@@ -2012,6 +2026,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 		}
 		effect = {
 			succession = appointment
@@ -2047,6 +2062,36 @@ succession_laws = {
 			succession = {
 				base_type = feudal_elective
 				voting_rules = monastic_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	succ_theodemocratic_elective = {
+		potential = {
+			holder_scope = {
+				OR = {
+					government = theodemocratic
+					AND = {
+						holy_order = yes
+						government = order_government
+					}
+				}
+			}
+			NOT = { holder_scope = { government = feudal_government } }
+			NOT = { holder_scope = { government = agrarian_feudal_government } }
+			NOT = { holder_scope = { government = japanese_feudal } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+		}
+		allow = {
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = monastic_elective_2
 			}
 		}
 		revoke_allowed = {
@@ -2183,6 +2228,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { has_landed_title = d_athos } }
 			NOT = { holder_scope = { has_landed_title = k_athos } }
@@ -2273,6 +2319,7 @@ succession_laws = {
 			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOR = {  #Special Elective.
 				has_title_flag = alternate_hre
@@ -2325,6 +2372,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { has_landed_title = d_athos } }
 			NOT = { holder_scope = { has_landed_title = k_athos } }
@@ -2355,6 +2403,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
 		effect = {

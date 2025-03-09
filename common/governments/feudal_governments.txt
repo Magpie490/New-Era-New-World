@@ -19,6 +19,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			theocratic_feudal_government
 			roman_imperial_government
 			ethiopian_imperial_government
@@ -64,6 +65,7 @@ feudal_governments = {
 				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = japanese_feudal
@@ -131,6 +133,7 @@ feudal_governments = {
 			viceroyal_government
 			japanese_feudal
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -178,6 +181,7 @@ feudal_governments = {
 				is_government_potential = confederation_government
 				is_government_potential = kratocratic_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
@@ -264,6 +268,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			theocratic_feudal_government
@@ -389,6 +394,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			theocratic_feudal_government
@@ -507,6 +513,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -548,6 +555,7 @@ feudal_governments = {
 				is_government_potential = chinese_imperial_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
@@ -654,6 +662,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -761,6 +770,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			agrarian_feudal_government
 			theocratic_feudal_government
@@ -802,6 +812,7 @@ feudal_governments = {
 				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = makhzen_government
@@ -868,6 +879,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			agrarian_feudal_government
@@ -916,6 +928,7 @@ feudal_governments = {
 				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = ghazwa_government
 				is_government_potential = kratocratic_government
@@ -988,6 +1001,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			agrarian_feudal_government
 			theocratic_feudal_government
@@ -1035,6 +1049,7 @@ feudal_governments = {
 				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = ghazwa_government
 				is_government_potential = kratocratic_government
@@ -1146,6 +1161,7 @@ feudal_governments = {
 				is_government_potential = theocratic_feudal_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = indian_feudal
 				is_government_potential = confucian_bureaucracy
@@ -1244,6 +1260,7 @@ feudal_governments = {
 				is_government_potential = phonocratic_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
@@ -1316,6 +1333,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -1356,6 +1374,7 @@ feudal_governments = {
 				is_government_potential = chinese_imperial_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
@@ -1412,6 +1431,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -1489,6 +1509,103 @@ feudal_governments = {
 		capital_move_delay = 600
 	}
 	
+	theodemocratic = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			theocracy_government
+			eastern_feudal
+			technocratic_government
+			japanese_feudal
+			chinese_imperial_government
+			muslim_government
+			makhzen_government
+			neoziamet_government
+			viceroyal_government
+			calvinist_government
+			theodemocratic
+			communal_government
+			theocratic_feudal_government
+			agrarian_feudal_government
+			roman_imperial_government
+			ethiopian_imperial_government
+			federal_government
+			mandate_heaven
+			confederation_government
+			kratocratic_government
+			bhutanese_decayed_government
+			bhutanese_restored_government
+			feudal_government
+			colonial_government
+		}
+		vassal_call_to_arms = {
+			nomadtribal_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+			nomadtribal_government
+		}
+		forced_contract = {
+			viceroyal_government
+		}
+		frame_suffix = "_theodemocratic"
+		title_prefix = "theodemocratic_"
+		potential = {
+			NOR = {
+				is_government_potential = roman_imperial_government
+				is_government_potential = ethiopian_imperial_government
+				is_government_potential = federal_government
+				is_government_potential = mandate_heaven
+				is_government_potential = order_government
+				is_government_potential = bhutanese_restored_government
+				is_government_potential = viceroyal_government
+				is_government_potential = colonial_government
+				is_government_potential = bhutanese_decayed_government
+				is_government_potential = chinese_imperial_government
+				is_government_potential = theocratic_feudal_government
+				is_government_potential = confederation_government
+				is_government_potential = confucian_bureaucracy
+			}
+			primary_title = {
+				NOR = { 
+					title = e_illustrious
+				}
+			}
+			OR = {
+				religion = brighamite
+				primary_title = {
+					title = e_deseret
+				}
+			}
+			higher_tier_than = BARON
+			is_patrician = no
+			has_oligarchy_title_trigger = no
+		}
+		
+		color = { 0 99 255 }
+		
+		uses_piety_for_law_change = yes
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		uses_decadence = yes
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			theocracy_government
+			tribal_government
+			nomadtribal_government
+		}
+		capital_move_delay = 600
+	}
+	
 	communal_government = {
 		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = { 
@@ -1511,6 +1628,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -1548,6 +1666,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			theocratic_feudal_government
 			agrarian_feudal_government
 			roman_imperial_government
@@ -1642,6 +1761,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -1684,6 +1804,7 @@ feudal_governments = {
 				is_government_potential = viceroyal_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = japanese_feudal
 				is_government_potential = kratocratic_government
@@ -1758,6 +1879,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -1801,6 +1923,7 @@ feudal_governments = {
 				is_government_potential = viceroyal_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = japanese_feudal
 				is_government_potential = kratocratic_government
@@ -1883,6 +2006,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -2002,6 +2126,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -2087,6 +2212,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			agrarian_feudal_government
 			theocratic_feudal_government
@@ -2191,6 +2317,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			federal_government
@@ -2342,6 +2469,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -2510,6 +2638,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -2661,6 +2790,7 @@ feudal_governments = {
 			ghazwa_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -2779,6 +2909,7 @@ feudal_governments = {
 			viceroyal_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			roman_imperial_government
@@ -2808,6 +2939,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			theocratic_feudal_government
@@ -2848,6 +2980,7 @@ feudal_governments = {
 			makhzen_government
 			neoziamet_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			theocratic_feudal_government
@@ -2896,6 +3029,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			agrarian_feudal_government
 			theocratic_feudal_government
@@ -2999,6 +3133,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -3106,6 +3241,7 @@ feudal_governments = {
 			technocratic_government
 			japanese_feudal
 			calvinist_government
+			theodemocratic
 			communal_government
 			kratocratic_government
 			confederation_government
@@ -3160,6 +3296,7 @@ feudal_governments = {
 			neoziamet_government
 			viceroyal_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			theocratic_feudal_government
 			agrarian_feudal_government
@@ -3271,6 +3408,7 @@ feudal_governments = {
 			japanese_feudal
 			muslim_government
 			calvinist_government
+			theodemocratic
 			communal_government
 			makhzen_government
 			neoziamet_government
@@ -3313,6 +3451,7 @@ feudal_governments = {
 				is_government_potential = bhutanese_decayed_government
 				is_government_potential = confederation_government
 				is_government_potential = calvinist_government
+				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
 				is_government_potential = confucian_bureaucracy
@@ -3361,114 +3500,6 @@ feudal_governments = {
 		marriage_ignore_religion = yes
 		
 		court_size_modifier = 10
-	}
-	japanese_feudal = {
-		preferred_holdings = { CASTLE CITY }
-		allowed_holdings = { 
-			CASTLE
-			CITY
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			eastern_feudal
-			technocratic_government
-			chinese_imperial_government
-			muslim_government
-			makhzen_government
-			neoziamet_government
-			viceroyal_government
-			calvinist_government
-			communal_government
-			theocratic_feudal_government
-			roman_imperial_government
-			ethiopian_imperial_government
-			federal_government
-			mandate_heaven
-			agrarian_feudal_government
-			confederation_government
-			kratocratic_government
-			bhutanese_decayed_government
-			bhutanese_restored_government
-			japanese_feudal
-			feudal_government
-			colonial_government
-			mandala_government
-			merchant_republic_government
-			oligarchic_republic
-			consular_republic
-		}
-		vassal_call_to_arms = {
-			nomadtribal_government
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-			nomadtribal_government
-		}
-		forced_contract = {
-			viceroyal_government
-		}
-		potential = {
-			is_patrician = no
-			NOR = {
-				is_government_potential = roman_imperial_government
-				is_government_potential = ethiopian_imperial_government
-				is_government_potential = federal_government
-				is_government_potential = mandate_heaven
-				is_government_potential = order_government
-				is_government_potential = bhutanese_restored_government
-				is_government_potential = colonial_government
-				is_government_potential = bhutanese_decayed_government
-				is_government_potential = viceroyal_government
-				is_government_potential = confederation_government
-				is_government_potential = calvinist_government
-				is_government_potential = communal_government
-				is_government_potential = kratocratic_government
-				is_government_potential = confucian_bureaucracy
-				is_government_potential = mandala_government
-			}
-			primary_title = {
-				NOR = { 
-					title = e_illustrious
-				}
-			}
-			uses_japanese_feudal_trigger = yes
-		}
-		character_modifier = {
-			city_tax_modifier = -0.15
-			city_levy_size = -0.15
-		}
-		
-		color = { 200 55 55 }
-		frame_suffix = "_japanese"
-		
-		dukes_called_kings = yes
-		barons_need_dynasty = yes
-		can_demand_religious_conversion = no 
-		gets_religion_opinion_penalties = no 
-		gives_religion_opinion_penalties = no 
-		vassal_government_opinion_penalties = no 
-		can_grant_kingdoms_and_empires_to_other_government_group = no
-		allow_title_revokation = no
-		can_revoke_without_reason = no
-		uses_decadence = yes
-		uses_prestige_for_law_change = yes
-
-		free_levies_in_offensive_war = yes
-
-		can_build_tribal = no
-		
-		ignore_in_vassal_limit_calculation = {
-			tribal_government
-			nomadtribal_government
-		}
-		capital_move_delay = 600
-
-		## Modifiers
-		court_size_modifier = 15
 	}
 }
 

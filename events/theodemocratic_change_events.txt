@@ -1,0 +1,4284 @@
+namespace = THEODEMO
+
+#Inefficiency event on check or if the title is new
+
+character_event = {
+	id = THEODEMO.999 
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		primary_title = {
+			temporary = no
+			is_tribal = no
+			is_nomadic = no
+		}
+		is_nomadic = no
+		is_tribal = no
+		government = theodemocratic
+		independent = yes
+	}
+	
+	immediate = {
+		primary_title = { save_event_target_as = government_balance_title }
+		
+		character_event = { id = THEODEMO.1001 days = 1 }
+		
+		# remove the corruption modifier from the former owner, if alive
+	}
+}
+
+# Main corruption event upon an imperial title being inherited/usurped
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = THEODEMO.1000 
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			FROMFROM = { always = yes } #If there is a FROMFROM
+			FROM = {
+				independent = yes
+				temporary = no
+				is_tribal = no
+				is_nomadic = no
+				is_primary_holder_title = yes
+				government = theodemocratic
+			}
+			is_nomadic = no
+			is_tribal = no
+		}
+	}
+	
+	immediate = {
+		FROM = { save_event_target_as = government_balance_title }
+		
+		character_event = { id = THEODEMO.1001 days = 1 }
+		
+		# remove the corruption modifier from the former owner, if alive
+		FROMFROM = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				remove_character_modifier = government_balance_0
+				remove_character_modifier = government_balance_1
+				remove_character_modifier = government_balance_2
+				remove_character_modifier = government_balance_3
+				remove_character_modifier = government_balance_4
+				remove_character_modifier = government_balance_5
+				remove_character_modifier = government_balance_6
+				remove_character_modifier = government_balance_7
+				remove_character_modifier = government_balance_8
+				remove_character_modifier = government_balance_9
+				remove_character_modifier = government_balance_10
+			}
+		}
+	}
+}
+
+# ROOT/FROM is the character, FROMFROM is the title, FROMFROMFROM is the old holder
+character_event = {
+	id = THEODEMO.1001
+	
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = event_target:government_balance_title
+		is_nomadic = no
+		is_tribal = no
+	}
+	
+	immediate = {
+		event_target:government_balance_title = {
+			
+			# reset the corruption value to 0, in case it's negative
+			if = {
+				limit = { NOT = { check_variable = { which = "government_balance" value = 0.5 } } }
+				set_variable = { which = "government_balance" value = 0 }
+			}
+			
+			# set new ruler corruption to 0
+			set_variable = { which = "government_balance" value = 50 }
+			
+			#determine how much the realm size should change it
+			
+			#Check realm stewardship
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 10 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 20 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 30 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 40 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 50 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 60 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 10 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 20 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 30 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 40 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 50 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 60 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 10 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 20 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 30 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 40 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 50 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 60 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 10 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 20 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 30 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 40 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 50 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 60 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = hedonist } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = gluttonous } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = greedy } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = slothful } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = wroth } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = envious } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = proud } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = lustful } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = chaste } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = temperate } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = charitable } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = diligent } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = patient } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = kind } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = humble } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = zealous } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = trusting } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = erudite } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = just } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = pilgrim } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = gregarious } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = ambitious } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = naive_appeaser } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = underhanded_rogue } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = charismatic_negotiator } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = grey_eminence } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { trait = misguided_warrior } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = tough_soldier } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = skilled_tactician } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = brilliant_strategist } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { trait = groomed } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = duelist } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = hunter } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = gamer } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = hunter } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = strategist } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = theologian } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = mystic } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = gardener } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = architect } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = administrator } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = scholar } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = indulgent_wastrel } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = thrifty_clerk } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = fortune_builder } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { trait = midas_touched } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { trait = detached_priest } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = martial_cleric } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = scholarly_theologian } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { trait = mastermind_theologian } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 5 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 10 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 15 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 20 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 25 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 30 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 35 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 40 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 45 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 50 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 55 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 60 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 65 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 70 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 75 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 80 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 85 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 90 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 95 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 100 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			####
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 5 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 10 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 15 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 20 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 25 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 30 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 35 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 40 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 45 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 50 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 55 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 60 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 65 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 70 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 75 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 80 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 85 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 90 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 95 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 100 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { check_variable = { which = "government_balance" value = 100.5 } }
+				set_variable = { which = "government_balance" value = 100 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { which = "government_balance" value = 0.5 } } }
+				set_variable = { which = "government_balance" value = 0 }
+			}
+		}
+		
+		# change the corruption modifier
+		character_event = { id = THEODEMO.1002 }
+		clear_event_target = government_balance_title
+	}
+}
+
+# Notification of corruption change and adding the proper corruption modifier
+character_event = {
+	id = THEODEMO.1002
+	desc = EVTDESC_THEODEMO.1002
+	picture = "GFX_evt_diplomat_hf"
+	
+	hide_window = yes
+	is_triggered_only = yes
+	notification = yes
+	
+	immediate = {
+		# remove old corruption modifier and add the new one
+		remove_character_modifier = government_balance_0
+		remove_character_modifier = government_balance_1
+		remove_character_modifier = government_balance_2
+		remove_character_modifier = government_balance_3
+		remove_character_modifier = government_balance_4
+		remove_character_modifier = government_balance_5
+		remove_character_modifier = government_balance_6
+		remove_character_modifier = government_balance_7
+		remove_character_modifier = government_balance_8
+		remove_character_modifier = government_balance_9
+		remove_character_modifier = government_balance_10
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 0 }
+					NOT = { check_variable = { which = "government_balance" value = 5 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_0
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 5 }
+					NOT = { check_variable = { which = "government_balance" value = 15 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_1
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 15 }
+					NOT = { check_variable = { which = "government_balance" value = 25 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_2
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 25 }
+					NOT = { check_variable = { which = "government_balance" value = 35 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_3
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 35 }
+					NOT = { check_variable = { which = "government_balance" value = 45 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_4
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 45 }
+					NOT = { check_variable = { which = "government_balance" value = 55 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_5
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 55 }
+					NOT = { check_variable = { which = "government_balance" value = 65 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_6
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 65 }
+					NOT = { check_variable = { which = "government_balance" value = 75 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_7
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 75 }
+					NOT = { check_variable = { which = "government_balance" value = 85 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_8
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 85 }
+					NOT = { check_variable = { which = "government_balance" value = 95 } }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_9
+				duration = -1
+			}
+		} 
+		if = {
+			limit = {
+				primary_title = {
+					check_variable = { which = "government_balance" value = 95 }
+				}
+			}
+			add_character_modifier = {
+				name = government_balance_10
+				duration = -1
+			}
+		} 
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+###Setup corruption at startup
+character_event = {
+	id = THEODEMO.1003
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			ROOT = {
+				primary_title = {
+					temporary = no
+				}
+				independent = yes
+				is_nomadic = no
+				is_tribal = no
+				government = theodemocratic
+			}
+			FROM = {
+				primary_title = {
+					temporary = no
+				}
+				independent = yes
+				is_nomadic = no
+				is_tribal = no
+				government = theodemocratic
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				primary_title = {
+					temporary = no
+				}
+				is_nomadic = no
+				is_tribal = no
+				independent = yes
+				government = theodemocratic
+			}
+			primary_title = { save_event_target_as = government_balance_title }
+			character_event = { id = THEODEMO.1004 days = 1 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = {
+						temporary = no
+					}
+					is_nomadic = no
+					is_tribal = no
+					independent = yes
+					government = theodemocratic
+				}
+			}
+			FROM = {
+				primary_title = { save_event_target_as = government_balance_title }
+				character_event = { id = THEODEMO.1004 days = 1 }
+			}
+		}
+	}
+}
+
+
+character_event = {
+	id = THEODEMO.1004
+	
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = event_target:government_balance_title
+		is_nomadic = no
+		is_tribal = no
+	}
+	
+	immediate = {
+		event_target:government_balance_title = {
+			
+			# reset the corruption value to 0, in case it's negative
+			if = {
+				limit = { NOT = { check_variable = { which = "government_balance" value = 0.5 } } }
+				set_variable = { which = "government_balance" value = 0 }
+			}
+			
+			# set new ruler corruption to 0
+			set_variable = { which = "government_balance" value = 50 }
+			
+			#determine how much the realm size should change it
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 10 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 20 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 30 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 40 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 50 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_diplomacy = 60 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 10 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 20 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 30 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 40 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 50 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_martial = 60 } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 10 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 20 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 30 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 40 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 50 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_stewardship = 60 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 10 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 20 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 30 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 40 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 50 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { realm_learning = 60 } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = hedonist } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = gluttonous } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = greedy } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = slothful } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = wroth } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = envious } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = proud } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = lustful } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = chaste } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = temperate } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = charitable } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = diligent } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = patient } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = kind } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = humble } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = zealous } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = trusting } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = erudite } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = just } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = pilgrim } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = gregarious } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = ambitious } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = naive_appeaser } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = underhanded_rogue } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = charismatic_negotiator } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = grey_eminence } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { trait = misguided_warrior } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { trait = tough_soldier } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = skilled_tactician } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { trait = brilliant_strategist } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { trait = groomed } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = duelist } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = hunter } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = gamer } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = hunter } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = strategist } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { trait = theologian } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = mystic } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = gardener } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = architect } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = administrator } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = scholar } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = indulgent_wastrel } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = thrifty_clerk } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = fortune_builder } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { trait = midas_touched } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { trait = detached_priest } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { trait = martial_cleric } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { trait = scholarly_theologian } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { trait = mastermind_theologian } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_treasurer = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_treasurer = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spymaster = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spymaster = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_marshal = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_marshal = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_chancellor = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_chancellor = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 10 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 20 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 30 } } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_diplomacy = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 10 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 20 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 30 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 40 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 50 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_martial = 60 } } }  }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_stewardship = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 10 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 20 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 30 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 40 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 50 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { NOT = { ROOT = { job_spiritual = { realm_learning = 60 } } }  }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hedonist } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gluttonous } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = greedy } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = slothful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = wroth } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = envious } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = proud } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = lustful } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = chaste } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = temperate } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = charitable } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = diligent } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = patient } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = kind } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = humble } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = zealous } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = trusting } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = erudite } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = just } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = pilgrim } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gregarious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = ambitious } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = naive_appeaser } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = underhanded_rogue } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = charismatic_negotiator } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = grey_eminence } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = misguided_warrior } } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = tough_soldier } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = skilled_tactician } } }
+				change_variable = { which = "government_balance" value = -15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = brilliant_strategist } } }
+				change_variable = { which = "government_balance" value = -20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = groomed } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = duelist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gamer } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = hunter } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = strategist } } }
+				change_variable = { which = "government_balance" value = -10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = theologian } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = mystic } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = gardener } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = architect } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = administrator } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = scholar } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = indulgent_wastrel } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = thrifty_clerk } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = fortune_builder } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = midas_touched } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = detached_priest } } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = martial_cleric } } }
+				change_variable = { which = "government_balance" value = 10 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = scholarly_theologian } } }
+				change_variable = { which = "government_balance" value = 15 }
+			}
+			if = {
+				limit = { ROOT = { job_spiritual = { trait = mastermind_theologian } } }
+				change_variable = { which = "government_balance" value = 20 }
+			}
+			#####
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 5 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 10 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 15 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 20 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 25 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 30 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 35 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 40 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 45 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 50 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 55 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 60 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 65 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 70 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 75 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 80 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 85 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 90 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 95 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_castles = 100 } }
+				change_variable = { which = "government_balance" value = -5 }
+			}
+			####
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 5 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 10 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 15 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 20 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 25 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 30 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 35 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 40 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 45 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 50 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 55 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 60 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 65 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 70 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 75 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 80 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 85 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 90 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 95 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			if = {
+				limit = { ROOT = { num_of_subrealm_temples = 100 } }
+				change_variable = { which = "government_balance" value = 5 }
+			}
+			
+			###Put any more startups here for the special councillors 
+			
+			if = {
+				limit = { check_variable = { which = "government_balance" value = 100.5 } }
+				set_variable = { which = "government_balance" value = 100 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { which = "government_balance" value = 0.5 } } }
+				set_variable = { which = "government_balance" value = 0 }
+			}		
+		}
+		
+		# change the corruption modifier
+		character_event = { id = THEODEMO.1002 }
+		clear_event_target = government_balance_title
+	}
+}

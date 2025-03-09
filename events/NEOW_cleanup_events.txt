@@ -3437,6 +3437,35 @@ character_event = {#ensures each newly formed Holy Order has the Monastic Electi
 	}
 }
 character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
+	id = cleanup.44
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = theodemocratic
+		any_demesne_title = {
+			NOR = {
+				has_law = succ_theodemocratic_elective
+			}
+		}
+	}
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				NOR = {
+					has_law = succ_theodemocratic_elective
+				}
+			}
+			add_law = {
+				law = succ_theodemocratic_elective
+				cooldown = no
+				opinion_effect = no
+			}
+		}
+	}
+}
+character_event = {#ensures each newly formed Holy Order has the Monastic Elective government
 	id = cleanup.71
 	hide_window = yes
 	
