@@ -2051,6 +2051,36 @@ succession_laws = {
 			always = no
 		}
 	}
+	succ_theodemocratic_elective = {
+		potential = {
+			holder_scope = {
+				OR = {
+					government = theodemocratic
+					AND = {
+						holy_order = yes
+						government = order_government
+					}
+				}
+			}
+			NOT = { holder_scope = { government = feudal_government } }
+			NOT = { holder_scope = { government = agrarian_feudal_government } }
+			NOT = { holder_scope = { government = japanese_feudal } }
+			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+		}
+		allow = {
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = monastic_elective_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
 	succ_oligarchic_elective = {
 		potential = {
 			holder_scope = {
