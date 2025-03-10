@@ -1000,6 +1000,13 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		}
 	}
 	trigger_else_if = {
+		PREV = { true_religion_group_new_age_group_trigger = yes }
+		OR = {
+			trait = sympathy_new_age_group
+			trait = blorg_tolerations
+		}
+	}
+	trigger_else_if = {
 		PREV = { true_religion_group_mormonic_trigger = yes }
 		OR = {
 			trait = sympathy_mormon
@@ -1172,6 +1179,13 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		limit = { ROOT = { true_religion_group_post_christian_trigger = yes } }
 		OR = {
 			trait = sympathy_post_christian
+			trait = blorg_tolerations
+		}
+	}
+	trigger_else_if = {
+		limit = { ROOT = { true_religion_group_new_age_group_trigger = yes } }
+		OR = {
+			trait = sympathy_new_age_group
 			trait = blorg_tolerations
 		}
 	}
@@ -1352,6 +1366,13 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		}
 	}
 	trigger_else_if = {
+		PREV = { religion_group = new_age_group }
+		OR = {
+			trait = sympathy_new_age_group
+			trait = blorg_tolerations
+		}
+	}
+	trigger_else_if = {
 		PREV = { religion_group = mormonic }
 		OR = {
 			trait = sympathy_mormon
@@ -1387,6 +1408,7 @@ is_catholic_branch = {
 		religion = fraticelli
 		religion = cadaverist
 		religion = columbian
+		religion = camelotist
 		religion = sedevacantist
 	}
 }
@@ -1398,6 +1420,7 @@ is_catholic_true_branch = {
 		true_religion = fraticelli
 		true_religion = cadaverist
 		true_religion = columbian
+		true_religion = camelotist
 		true_religion = sedevacantist
 	}
 }
@@ -1409,6 +1432,7 @@ is_catholic_secret_branch = {
 		secret_religion = fraticelli
 		secret_religion = cadaverist
 		secret_religion = columbian
+		secret_religion = camelotist
 		secret_religion = sedevacantist
 	}
 }

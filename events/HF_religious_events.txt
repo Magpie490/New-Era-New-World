@@ -486,7 +486,7 @@ character_event = {
 		}
 	}
 	
-	option = { #old_world_cultist, Esoterics and Syncretics.
+	option = { #old_world_cultist, Esoterics, New Age and Syncretics.
 		name = EVTOPTAHF23006
 		hidden_tooltip = { character_event = { id = HF.23300 } }
 		ai_chance = { 
@@ -498,6 +498,7 @@ character_event = {
 						trait = sympathy_old_world_cultist
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -508,6 +509,7 @@ character_event = {
 						trait = sympathy_old_world_cultist
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -518,6 +520,7 @@ character_event = {
 						trait = sympathy_old_world_cultist
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -555,6 +558,18 @@ character_event = {
 				factor = 1.5
 				any_courtier_or_vassal = { 
 					religion_group = syncratic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = new_age_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = { 
+					religion_group = new_age_group
 				}
 			}
 		}
@@ -604,6 +619,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -620,6 +636,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -636,6 +653,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -686,6 +704,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -702,6 +721,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -718,6 +738,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -768,6 +789,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -784,6 +806,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -800,6 +823,7 @@ character_event = {
 						trait = sympathy_esoteric
 						trait = sympathy_syncratic
 						trait = sympathy_oceanic
+						trait = sympathy_new_age_group
 					}
 				}
 			}
@@ -1359,6 +1383,76 @@ character_event = {
 				factor = 1.5
 				any_courtier_or_vassal = { 
 					religion_group = syncratic_group
+				}
+			}
+		}
+	}
+	option = { #New Age
+		name = {
+			text = EVTOPTCHF23005
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTBHF23005_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		trigger = {
+			NOT = { religion_group = new_age_group } #Random World safety check.
+		}
+		add_trait = sympathy_new_age_group
+		clr_character_flag = flag_picking_sympathy
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0 
+				liege = { 
+					trait = sympathy_new_age_group
+				}
+			}
+			modifier = { 
+				factor = 0 
+				top_liege = { 
+					trait = sympathy_new_age_group
+				}
+			}
+			modifier = { 
+				factor = 0.25
+				spouse = { 
+					trait = sympathy_new_age_group
+				}
+			}
+			modifier = { 
+				factor = 0 
+				liege = { 
+					trait = sympathy_pagans 
+				}
+			}
+			modifier = { 
+				factor = 0 
+				top_liege = { 
+					trait = sympathy_pagans 
+				}
+			}
+			modifier = { 
+				factor = 0.25
+				spouse = { 
+					trait = sympathy_pagans 
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = new_age_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = { 
+					religion_group = new_age_group
 				}
 			}
 		}

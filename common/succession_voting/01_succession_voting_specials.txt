@@ -3238,6 +3238,7 @@ monastic_elective = {
 					trait = sympathy_synth
 					trait = sympathy_chinese
 					trait = sympathy_shinto
+					trait = sympathy_new_age_group
 				}
 			}
 		}
@@ -3838,14 +3839,14 @@ monastic_elective_2 = {
 			days = 5#one elector, five votes
 		
 		additive_modifier = { #The current Grandmaster has fifty extra votes
-			value = 1
+			value = 5
 			localisation_key = tooltip_grandmasters_influence
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 			}
 		}
 		additive_modifier = { #Grandmaster gets more votes if he knows what he's doing
-			value = 1
+			value = 5
 			localisation_key = tooltip_grandmaster_martial_education_good
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3858,7 +3859,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Grandmaster gets more votes if he knows what he's doing
-			value = 1
+			value = 5
 			localisation_key = tooltip_grandmaster_learning_education_good
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3870,7 +3871,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Grandmaster penalised for incompetence - if he at least has a relevant education
-			value = -1
+			value = -5
 			localisation_key = tooltip_grandmaster_martial_education_bad
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3884,7 +3885,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Grandmaster penalised for incompetence - if he at least has a relevant education
-			value = -1
+			value = -5
 			localisation_key = tooltip_grandmaster_learning_education_bad
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3898,7 +3899,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Grandmaster not respected if he's too young
-			value = -1
+			value = -5
 			localisation_key = tooltip_grandmaster_whippersnapper
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3908,7 +3909,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Grandmaster gets bonus for age
-			value = 1
+			value = 5
 			localisation_key = tooltip_grandmaster_venerable
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3916,7 +3917,7 @@ monastic_elective_2 = {
 			age = 50
 		}
 		additive_modifier = { #Zeal admired in Grandmaster
-			value = 1
+			value = 5
 			localisation_key = tooltip_grandmaster_zeal
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3924,7 +3925,7 @@ monastic_elective_2 = {
 			trait = zealous
 		}
 		additive_modifier = { #Unbelief in a Grandmaster is scandalous
-			value = -1 
+			value = -5
 			localisation_key = tooltip_grandmaster_cynical
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -3934,7 +3935,7 @@ monastic_elective_2 = {
 		
 		#For electors only
 		additive_modifier = { #Get more votes for being 30 - 40
-			value = 1
+			value = 5
 			localisation_key = tooltip_age_1
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -3946,7 +3947,7 @@ monastic_elective_2 = {
 			NOT = { age = 40 }			
 		}
 		additive_modifier = { #Get more votes for being 40 - 50
-			value = 1
+			value = 5
 			localisation_key = tooltip_age_2
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -3958,7 +3959,7 @@ monastic_elective_2 = {
 			NOT = { age = 50 }			
 		}
 		additive_modifier = { #Get more votes for being 50+
-			value = 1
+			value = 5
 			localisation_key = tooltip_age_3
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -3969,7 +3970,7 @@ monastic_elective_2 = {
 			age = 50
 		}
 		additive_modifier = { #Elector gets more votes if he knows what he's doing
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_martial_education
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -3985,7 +3986,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #Elector gets more votes if he knows what he's doing
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_learning_education
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -4000,7 +4001,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #penalised for incompetence - if he at least has a relevant education
-			value = -1
+			value = -5
 			localisation_key = tooltip_me_martial_education_bad
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -4017,7 +4018,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #penalised for incompetence - if he at least has a relevant education
-			value = -1
+			value = -5
 			localisation_key = tooltip_me_learning_education_bad
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -4034,7 +4035,7 @@ monastic_elective_2 = {
 			}
 		}
 		additive_modifier = { #seriously penalised for not having a martial or learning education, unless he's just that good
-			value = -1
+			value = -5
 			localisation_key = tooltip_me_wrong_education
 			vassal_of = FROMFROM 
 			NOT = { 
@@ -4051,7 +4052,7 @@ monastic_elective_2 = {
 		}
 		##MODIFIERS THAT APPLY TO BOTH GRANDMASTER AND ELECTORS EQUALLY
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_chaste_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4063,7 +4064,7 @@ monastic_elective_2 = {
 		}
 		
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_temperate_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4074,7 +4075,7 @@ monastic_elective_2 = {
 			trait = temperate
 		}
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_charitable_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4085,7 +4086,7 @@ monastic_elective_2 = {
 			trait = charitable
 		}
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_diligent_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4096,7 +4097,7 @@ monastic_elective_2 = {
 			trait = diligent
 		}
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_patient_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4107,7 +4108,7 @@ monastic_elective_2 = {
 			trait = patient
 		}
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_kind_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4118,7 +4119,7 @@ monastic_elective_2 = {
 			trait = kind
 		}
 		additive_modifier = { #virtuous rulers are listened to
-			value = 1 # Humility especially valued
+			value = 5 # Humility especially valued
 			localisation_key = tooltip_feudal_elector_vote_humble_positive
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4129,7 +4130,7 @@ monastic_elective_2 = {
 			trait = humble
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_lustful_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4140,7 +4141,7 @@ monastic_elective_2 = {
 			trait = lustful
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_gluttonous_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4151,7 +4152,7 @@ monastic_elective_2 = {
 			trait = gluttonous
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_greedy_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4162,7 +4163,7 @@ monastic_elective_2 = {
 			trait = greedy
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 #Especially unfit 
+			value = -5 #Especially unfit 
 			localisation_key = tooltip_feudal_elector_vote_slothful_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4173,7 +4174,7 @@ monastic_elective_2 = {
 			trait = slothful
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4184,7 +4185,7 @@ monastic_elective_2 = {
 			trait = wroth
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_envious_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4195,7 +4196,7 @@ monastic_elective_2 = {
 			trait = envious
 		}
 		additive_modifier = { #vicious rulers generally not listened to as much
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_feudal_elector_vote_proud_negative
 			OR = {#we're presuming that a holy order's electors will all be of the right religion, so if they're Christian, they're impressing other Christians, if pagan, other pagans, etc
 				religion_group = christian
@@ -4207,7 +4208,7 @@ monastic_elective_2 = {
 		}		
 
 		additive_modifier = { #Zeal rewarded
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_feudal_elector_vote_zealous_positive
 			NOT = { 
 				FROMFROM = { 
@@ -4217,7 +4218,7 @@ monastic_elective_2 = {
 			trait = zealous
 		}
 		additive_modifier = { #Unbelief unwelcome
-			value = -1 
+			value = -5 
 			localisation_key = tooltip_me_cynical
 			NOT = { 
 				FROMFROM = { 
@@ -4227,45 +4228,31 @@ monastic_elective_2 = {
 			trait = cynical
 		}			
 		additive_modifier = { #Owning baronies but not counties gives extra power
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_me_baron
 			is_landed = yes
 			primary_title = { real_tier = BARON }
 		}
 		additive_modifier = { #Counts have extra power
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_me_count
 			is_landed = yes
 			primary_title = { real_tier = COUNT }
 		}
 		additive_modifier = { #Dukes have extra power
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_me_duke
 			is_landed = yes
 			primary_title = { real_tier = DUKE }
 		}
 		additive_modifier = { #Kings have extra power
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_me_king
 			is_landed = yes
 			primary_title = { real_tier = KING }
 		}		
-		additive_modifier = { #Being a physician earns influence among the Hospitalers and Lazareans
-			value = 1 
-			localisation_key = tooltip_me_physician
-			FROMFROM = {
-				OR = {
-					title = d_knights_hospitaler
-					title = d_knights_hospitaler_1
-					title = d_knights_hospitaler_2
-					title = d_knights_hospitaler_3
-					title = d_knights_lazarus
-				}
-			}
-			trait = physician
-		}
 		additive_modifier = { #Being a crusader is respected
-			value = 1 
+			value = 5 
 			localisation_key = tooltip_me_crusader
 			FROMFROM = { 
 				holder_scope = { religion = ROOT }#if you're the same religion as the ruler
@@ -4273,7 +4260,7 @@ monastic_elective_2 = {
 			has_crusade_trait_trigger = yes
 		}
 		additive_modifier = { #Being a commander
-			value = 1
+			value = 5
 			localisation_key = tooltip_me_commander
 			has_minor_title = title_commander
 		}
@@ -4285,37 +4272,6 @@ monastic_elective_2 = {
 			value = 30
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
-			}
-		}
-		additive_modifier = { #Then the Marshal and Court Chaplain.
-			value = 15
-			vassal_of = FROMFROM
-			OR = { 
-				has_job_title = job_marshal
-				has_job_title = job_spiritual
-				AND = {
-					has_minor_title = title_commander
-					FROMFROM = { holder_scope = { government = order_government } }
-				}
-				AND = {
-					FROMFROM = { holder_scope = { spouse = { character = ROOT } } }
-					FROMFROM = { holder_scope = { government = calvinist_government } }
-				}
-				AND = {
-					FROMFROM = { holder_scope = { OR = { primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-				}
-				AND = {
-					FROMFROM = {
-						OR = {
-						title = d_knights_lazarus
-						title = d_knights_hospitaler_1
-						title = d_knights_hospitaler_2
-						title = d_knights_hospitaler_3
-						title = d_knights_hospitaler
-						}
-					}
-					has_minor_title = title_court_physician
-				}
 			}
 		}
 		additive_modifier = { #Then Kings
@@ -4334,6 +4290,11 @@ monastic_elective_2 = {
 			primary_title = { real_tier = COUNT }			
 		}		
 		additive_modifier = {
+			value = 20
+			vassal_of = FROMFROM 
+			religion = ROOT
+		}
+		additive_modifier = {
 			value = -100
 			FROMFROM = { 
 				holder_scope = { NOT = { religion = ROOT } }
@@ -4341,19 +4302,23 @@ monastic_elective_2 = {
 		}
 		additive_modifier = {
 			value = -5
-			is_republic = yes
-		}
-		additive_modifier = {
-			value = -5
-			is_merchant_republic = yes
-		}
-		additive_modifier = {
-			value = -5
-			is_tribal = yes
-		}
-		additive_modifier = {
-			value = -5
 			is_nomadic = yes
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 10
+			vassal_of = FROMFROM 
+			OR = { 
+				has_job_title = job_chancellor
+				has_job_title = job_marshal
+				has_job_title = job_treasurer
+				has_job_title = job_spymaster
+				has_job_title = job_spiritual
+				has_minor_title = title_councilmember_king #Generic advisors
+				has_minor_title = title_councilmember_emperor
+				has_job_title = job_first_magistrate #Generic advisors
+				has_job_title = job_second_magistrate
+				has_job_title = job_third_magistrate
+			}
 		}
 	}
 	candidate_vote_score = {
@@ -7009,6 +6974,7 @@ monastic_elective_2 = {
 					trait = sympathy_synth
 					trait = sympathy_chinese
 					trait = sympathy_shinto
+					trait = sympathy_new_age_group
 				}
 			}
 		}
@@ -7518,31 +7484,6 @@ monastic_elective_2 = {
 				}
 				any_claim = { title = ROOT_FROMFROM }
 			}
-					government = theodemocratic
-			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
-				AND = {
-					is_ruler = yes
-					is_landed = yes
-					is_republic = no
-					is_merchant_republic = no
-					is_theocracy = no
-				}
-				NOR = {
-					any_heir_title = {
-						is_republic = yes
-					}
-					any_heir_title = {
-						is_merchant_republic = yes
-					}
-					any_heir_title = {
-						is_theocracy = yes
-					}
-				}
-			}
-			OR = {
-				is_adult = yes
-				ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-			}
 			religion = ROOT
 			NOR = {
 				trait = horse
@@ -7550,11 +7491,6 @@ monastic_elective_2 = {
 				is_theocracy = yes
 				is_republic = yes
 				is_merchant_republic = yes
-				AND = {
-					trait = bastard 
-					is_ruler = no
-					ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-				}
 			}
 		}		
 	}
@@ -11748,6 +11684,7 @@ byzantine_elective = {
 					trait = sympathy_synth
 					trait = sympathy_chinese
 					trait = sympathy_shinto
+					trait = sympathy_new_age_group
 				}
 			}
 		}
@@ -12928,6 +12865,10 @@ hre_feudal_elective = {
 				AND = {
 					trait = sympathy_esoteric
 					FROM = { religion_group = esoteric }
+				}
+				AND = {
+					trait = sympathy_new_age_group
+					FROM = { religion_group = new_age_group }
 				}
 				AND = {
 					trait = sympathy_syncratic
@@ -15319,6 +15260,7 @@ hre_feudal_elective = {
 					trait = sympathy_synth
 					trait = sympathy_chinese
 					trait = sympathy_shinto
+					trait = sympathy_new_age_group
 				}
 			}
 		}
@@ -20050,6 +19992,7 @@ federal_elective = {
 					trait = sympathy_synth
 					trait = sympathy_chinese
 					trait = sympathy_shinto
+					trait = sympathy_new_age_group
 				}
 			}
 		}
