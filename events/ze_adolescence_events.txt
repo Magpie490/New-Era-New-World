@@ -3724,6 +3724,7 @@ character_event = {
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
 						trait = sympathy_indian
+						trait = sympathy_new_age_group
 					}
 				}
 				set_character_flag = curious_sympathy_religion
@@ -3826,6 +3827,22 @@ character_event = {
 					}
 				}
 				10 = {
+					set_character_flag = add_sympathy_new_age_group
+					modifier = {
+						factor = 0
+						religion_group = new_age_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = new_age_group }
+							location = { religion_group = new_age_group } 
+							any_friend = { religion_group = new_age_group }
+							any_sibling = { religion_group = new_age_group }
+						}
+					}
+				}
+				10 = {
 					set_character_flag = add_sympathy_pagans
 					modifier = {
 						factor = 0
@@ -3916,6 +3933,7 @@ character_event = {
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
 						trait = sympathy_indian
+						trait = sympathy_new_age_group
 					}
 					OR = {
 						trait = shrewd
@@ -4038,6 +4056,12 @@ character_event = {
 			remove_trait = curious
 			add_trait = sympathy_post_christian
 			clr_character_flag = add_sympathy_post_christian
+		}
+		if = {
+			limit = { has_character_flag = add_sympathy_new_age_group }
+			remove_trait = curious
+			add_trait = sympathy_new_age_group
+			clr_character_flag = add_sympathy_new_age_group
 		}
 		if = {
 			limit = { has_character_flag = add_sympathy_pagans }
@@ -4184,6 +4208,14 @@ character_event = {
 				}
 			}
 			tooltip = { FROM = { remove_trait = curious add_trait = sympathy_post_christian } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_character_flag = add_sympathy_new_age_group
+				}
+			}
+			tooltip = { FROM = { remove_trait = curious add_trait = sympathy_new_age_group } }
 		}
 		if = {
 			limit = {
@@ -4401,6 +4433,11 @@ character_event = {
 			clr_character_flag = add_sympathy_post_christian
 		}
 		if = {
+			limit = { has_character_flag = add_sympathy_new_age_group }
+			add_trait = sympathy_new_age_group
+			clr_character_flag = add_sympathy_new_age_group
+		}
+		if = {
 			limit = { has_character_flag = add_sympathy_pagans }
 			add_trait = sympathy_pagans
 			clr_character_flag = add_sympathy_pagans
@@ -4484,6 +4521,7 @@ character_event = {
 						trait = sympathy_mormon
 						trait = sympathy_apocalyptic
 						trait = sympathy_post_christian
+						trait = sympathy_new_age_group
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism
@@ -4539,6 +4577,7 @@ character_event = {
 						trait = sympathy_mormon
 						trait = sympathy_apocalyptic
 						trait = sympathy_post_christian
+						trait = sympathy_new_age_group
 						trait = sympathy_pagans
 						trait = sympathy_zoroastrianism
 						trait = sympathy_judaism

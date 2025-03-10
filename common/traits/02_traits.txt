@@ -611,6 +611,29 @@ sympathy_esoteric = {
 	child_insult_adj = INSULT_STUPID
 }
 
+sympathy_new_age_group = {
+	opposites =  {
+		zealous
+	}
+	
+	potential = {
+		NOT = { religion_group = new_age_group }
+	}
+
+	tolerates_new_age_group = yes		# Tolerates and is tolerated by New Age religions
+	
+	same_opinion_if_same_religion = 5
+	
+	customizer = yes
+	random = no
+	plot_power_modifier = 0.1
+	male_insult = INSULT_LOVER_OF_HEATHENS
+	female_insult = INSULT_LOVER_OF_HEATHENS
+	male_insult_adj = INSULT_UNPRINCIPLED
+	female_insult_adj = INSULT_UNPRINCIPLED
+	child_insult_adj = INSULT_STUPID
+}
+
 sympathy_syncratic = {
 	opposites =  {
 		zealous

@@ -807,6 +807,7 @@ character_event = {
 						esoteric      = { ROOT = { add_trait = sympathy_esoteric } }
 						syncratic_group      = { ROOT = { add_trait = sympathy_syncratic } }
 						oceanic      = { ROOT = { add_trait = sympathy_oceanic } }
+						new_age_group      = { ROOT = { add_trait = sympathy_new_age_group } }
 					}
 				}
 			}
@@ -854,6 +855,7 @@ character_event = {
 						sympathy_esoteric      = { ROOT = { add_trait = sympathy_esoteric } }
 						sympathy_syncratic      = { ROOT = { add_trait = sympathy_syncratic } }
 						sympathy_oceanic      = { ROOT = { add_trait = sympathy_oceanic } }
+						sympathy_new_age_group      = { ROOT = { add_trait = sympathy_new_age_group } }
 				}
 			}
 		}
@@ -938,6 +940,10 @@ character_event = {
 						trigger_else_if = {
 							limit = { religion_group = post_christian_group }
 							ROOT = { trait = sympathy_post_christian }
+						}
+						trigger_else_if = {
+							limit = { religion_group = new_age_group }
+							ROOT = { trait = sympathy_new_age_group }
 						}
 						trigger_else_if = {
 							limit = { religion_group = pagan_group }
@@ -1053,6 +1059,7 @@ character_event = {
 							if = { limit = { trait = sympathy_mormon }          remove_trait = sympathy_mormon }
 							if = { limit = { trait = sympathy_apocalyptic }          remove_trait = sympathy_apocalyptic }
 							if = { limit = { trait = sympathy_post_christian }          remove_trait = sympathy_post_christian }
+							if = { limit = { trait = sympathy_new_age_group }          remove_trait = sympathy_new_age_group }
 							if = { limit = { trait = sympathy_pagans }         remove_trait = sympathy_pagans }
 							if = { limit = { trait = sympathy_zoroastrianism } remove_trait = sympathy_zoroastrianism }
 							if = { limit = { trait = sympathy_old_world_cultist }        remove_trait = sympathy_old_world_cultist }
@@ -1077,6 +1084,7 @@ character_event = {
 										mormonic            = { ROOT = { show_scope_change = no add_trait = sympathy_mormon } }
 										apocalyptic            = { ROOT = { show_scope_change = no add_trait = sympathy_apocalyptic } }
 										post_christian_group            = { ROOT = { show_scope_change = no add_trait = sympathy_post_christian } }
+										new_age_group            = { ROOT = { show_scope_change = no add_trait = sympathy_new_age_group } }
 										pagan_group       = { ROOT = { show_scope_change = no add_trait = sympathy_pagans } }
 										zoroastrian_group = { ROOT = { show_scope_change = no add_trait = sympathy_zoroastrianism } }
 										jewish_group      = { ROOT = { show_scope_change = no add_trait = sympathy_judaism } }
