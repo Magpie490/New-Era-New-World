@@ -1516,6 +1516,10 @@ letter_event = {
 						trait = sympathy_oceanic
 						event_target:sponsoring_king = { religion_group = oceanic }
 					}
+					AND = {
+						trait = sympathy_new_age_group
+						event_target:sponsoring_king = { religion_group = new_age_group }
+					}
 				}
 			}
 		} 
@@ -1937,6 +1941,17 @@ narrative_event = {
 			limit = { 
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = new_age_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_new_age_group
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = pagan_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2064,6 +2079,17 @@ narrative_event = {
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
 			add_trait = sympathy_post_christian
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = new_age_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_new_age_group
 		}
 		if = { 
 			limit = { 
@@ -2434,6 +2460,17 @@ narrative_event = {
 			limit = { 
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = new_age_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_new_age_group
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = pagan_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2583,6 +2620,17 @@ narrative_event = {
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
 			add_trait = sympathy_post_christian
+		}
+		if = { 
+			limit = { 
+				trait = zealous
+				religion_group = new_age_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_new_age_group
 		}
 		if = { 
 			limit = { 
