@@ -13,7 +13,7 @@ decisions = {
 				port = yes
 				NOT = { region = world_east_asia }
 			}
-			NOT = { religion = brethren }
+			NOT = { religion = buccaneer }
 		}
 		allow = {
 			wealth <= -10
@@ -22,41 +22,7 @@ decisions = {
 			NOT = { trait = zealous }
 		}
 		effect = {
-			religion = brethren
-			prestige = -500
-		}
-		ai_will_do = {
-			factor = 0.1
-			modifier = {
-				factor = 0
-				has_unpleasant_trait_trigger = no
-			}
-		}
-	}
-	become_east_pirate = {
-		only_playable = yes
-		only_independent = yes
-		ai_check_interval = 24
-		potential = {
-			lower_tier_than = KING
-			independent = yes
-			controls_religion = no
-			mercenary = no
-			holy_order = no
-			capital_scope = {
-				port = yes
-				region = world_east_asia
-			}
-			NOT = { religion = east_brethren }
-		}
-		allow = {
-			wealth <= -10
-			prestige = 500
-			has_benevolent_trait_trigger = no
-			NOT = { trait = zealous }
-		}
-		effect = {
-			religion = east_brethren
+			religion = buccaneer
 			prestige = -500
 		}
 		ai_will_do = {
@@ -74,7 +40,7 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			religion = brethren
+			religion = buccaneer
 			e_high_seas = {
 				has_holder = no
 			}
