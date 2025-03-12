@@ -868,6 +868,58 @@ syncratic_group = {
 		features = { religion_haruspicy }
 	}
 	
+	orleanist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		icon = 21
+		heresy_icon = 21
+		
+		color = { 255 190 0 }
+		
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PRIESTESS
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_CREATOR GOD_ERU_LAUTEUR GOD_THE_SON GOD_THE_BLESSED_VIRGIN GOD_JEANNE GOD_FRATERNITY GOD_EQUALITY GOD_MARIANNE GOD_CHARLEMAGNE GOD_ROLAND
+		}
+		
+		evil_god_names = {
+			SATAN GOD_BRITAIN GOD_THE_QUEEN
+		}
+		character_modifier = {
+			martial = 1
+			catholic_opinion = -5 #"Hey if you could tone down on your Jeanne worship it would be cool thanks"
+			sevillian_opinion = -10 #"You're no better than those Catholics"
+			thelemic_reformed_opinion = -15 #Of course they would hate Thelema
+			orange_king_opinion = -15 #Same reason as above
+		}
+	
+		aggression = 1.3
+		can_call_crusade = yes
+		can_excommunicate = yes
+		can_have_antipopes = no
+		can_grant_invasion_cb = yes
+		can_grant_divorce = yes
+		priests_can_inherit = yes
+		allow_rivermovement = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_looting = yes
+		ignores_defensive_attrition = yes
+		defensive_attrition = yes
+		priests_can_marry = yes
+		feminist = yes
+		hard_to_convert = yes
+		female_temple_holders = yes
+		male_temple_holders = no
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
+	
+	}
 	gaiwiio = {
 		graphical_culture = westerngfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
@@ -980,6 +1032,106 @@ syncratic_group = {
 		intermarry = bushism
 		intermarry = muwahidunna
 	}
+	dahatatta = {
+		graphical_culture = othermuslimgfx
+		interface_skin = { muslim_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 18
+		heresy_icon = 18
+
+		color = { 75 242 128 }
+
+		crusade_name = JIHAD
+		scripture_name = THE_SONGS
+		priest_title = IMAM_PRIEST
+				
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST GOD_GOD
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		aggression = 0.8
+		autocephaly = yes
+		priests_can_marry = yes
+		psc_marriage = no
+		can_call_crusade = yes
+		max_wives = 1
+		men_can_take_consorts = yes
+		max_consorts = 2
+		matrilineal_marriages = no
+		peace_piety_gain = 1.0
+		allow_rivermovement = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		can_grant_divorce = yes
+		character_modifier = {
+			indian_group_opinion = 5
+			muslim_opinion = 5
+			diplomacy = 1
+			religion_flex = -0.5
+		}
+		unit_home_modifier = {
+			land_morale = 0.2
+		}
+	}
+	akjang = { 
+	
+		graphical_culture = mongolgfx
+
+		icon = 30
+		heresy_icon = 30
+		
+		color = { 0.1 0.3 0.6 }
+		
+		high_god_name = GOD_UCH_KURBUSTAN
+		
+		god_names = {
+			GOD_UCH_KURBUSTAN GOD_TENGRI GOD_GALDEN_OIRAT GOD_AMURSANA GOD_SHUNU GOD_AK_BURKHAN GOD_JAJYK GOD_UMAI GOD_OT_ENE
+		}
+		evil_god_names = {
+			ERLIK KOMUR_HAN
+		}
+		
+		unit_modifier = {
+			levy_size = 0.1
+			
+			light_cavalry_offensive = 0.3
+			light_cavalry_defensive = 0.3
+		}
+	
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = YARLIKCHI
+		
+		allow_rivermovement = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		autocephaly = yes
+		can_grant_divorce = yes
+		can_excommunicate = yes
+		priests_can_marry = yes
+		allow_looting = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		hard_to_convert = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		
+		short_reign_opinion_year_mult = 1.5
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 4
+	}
 	islamity = {
 		graphical_culture = othermuslimgfx
 		interface_skin = { muslim_interface }
@@ -1076,6 +1228,122 @@ syncratic_group = {
 		intermarry = zoroastrian_group
 		intermarry = bracero
 		intermarry = rastafari
+	}
+
+	muwahidunna = {
+		graphical_culture = othermuslimgfx
+		interface_skin = { muslim_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 107
+		heresy_icon = 107
+
+		color = { 0.37 0.72 0.63 }
+
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST GOD_JESUS GOD_GOD
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN THE_DEVIL
+		}
+		
+		
+		priests_can_marry = yes
+		psc_marriage = no
+		can_call_crusade = yes
+		max_wives = 4
+		
+		aggression = 1.2
+		allow_looting = yes
+		landed_kin_prestige_bonus = no
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		allow_viking_invasion = yes
+		raised_vassal_opinion_loss = no
+		allow_rivermovement = yes
+		defensive_attrition = yes
+		can_retire_to_monastery = yes
+		hard_to_convert = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		character_modifier = {
+			christian_opinion = 5
+			muslim_opinion = 5
+			religion_flex = -0.5
+		}
+		intermarry = sevillian
+		intermarry = jewish_group
+		intermarry = syncratic_group
+		intermarry = bahai
+		intermarry = islamity
+		intermarry = apostolic
+		intermarry = raelian
+		intermarry = sikh
+		intermarry = oceanic
+		intermarry = zoroastrian_group
+		intermarry = muslim
+		intermarry = koptic
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+	}
+
+	jugoslavist = {
+		graphical_culture = westerngfx
+		interface_skin = { jugoslavist_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 61
+		heresy_icon = 62
+		
+		color = { 0.1 0.8 0.5 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_KNIJGA 
+		priest_title = PRIEST
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_PROPHET
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		character_modifier = {
+			christian_opinion = 5
+			muslim_opinion = 5
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		uses_decadence = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		max_wives = 4
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
 	}
 	
 	bahai = {
@@ -1178,6 +1446,59 @@ syncratic_group = {
 		intermarry = amidism
 		intermarry = mahayana
 		intermarry = bracero
+	}
+
+	vagarna = {
+		graphical_culture = norsegfx
+		interface_skin = { OWC_interface pagan_interface }
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 138
+		heresy_icon = 139
+		
+		color = { 0.1 0.5 0.8 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_BIBLE
+		priest_title = ELDER
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS THE_HIDDEN_FOLK GRANDFATHER_YULE OLAF_PROTECTOR THE_KONGEFAMILIEN HERMANN GOD_STORM_BROTHERS GOD_ONE_EYED_RAVEN GOD_THE_SEIDHR_WITCH GOD_BALDUR_ANNOINTED GOD_VIDHARR GOD_THRUDH
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_HIDDEN_FOLK GOD_VIDHARR GOD_THE_ENTANGLER GOD_THE_SEIDHR_WITCH
+		}
+		
+		character_modifier = {
+			lutheran_opinion = 15
+			gnostic_opinion = 15
+			hussite_opinion = 15			
+		}
+
+		aggression = 0.7
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		dislike_tribal_organization = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		can_demand_religious_conversion = no
+		female_temple_holders = yes	
+		has_heir_designation = yes #Buffing em
+		landed_kin_prestige_bonus = yes
+		hard_to_convert = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		short_reign_opinion_year_mult = 1.1
+		
+		unit_home_modifier = {
+			land_morale = 0.2
+			religion_flex = -0.25
+		}
 	}
 	bushism = {
 		graphical_culture = africangfx
