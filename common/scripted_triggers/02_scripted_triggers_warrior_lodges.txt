@@ -508,24 +508,7 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 		}
 		trigger_else_if = {
 			limit = { 
-				OR = { 
-					religion = brethren
-					any_vassal = { religion = brethren }
-					any_liege = { religion = brethren }
-					any_neighbor_independent_ruler = { religion = brethren } 
-					AND = {
-						culture = doggerlander
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = brethren }
-							}
-							AND = {
-								trait = zealous
-								religion = brethren
-							}
-						}
-					}
+				OR = {
 					religion = buccaneer
 					any_vassal = { religion = buccaneer }
 					any_liege = { religion = buccaneer }
@@ -865,23 +848,6 @@ has_religion_matching_available_warrior_lodge_trigger = {
 	trigger_else_if = {
 		limit = { 
 				OR = { 
-					religion = brethren
-					any_vassal = { religion = brethren }
-					any_liege = { religion = brethren }
-					any_neighbor_independent_ruler = { religion = brethren } 
-					AND = {
-						culture = doggerlander
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = brethren }
-							}
-							AND = {
-								trait = zealous
-								religion = brethren
-							}
-						}
-					}
 					religion = buccaneer
 					any_vassal = { religion = buccaneer }
 					any_liege = { religion = buccaneer }
@@ -1188,24 +1154,7 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 		}
 		trigger_else_if = {
 			limit = { 
-				OR = { 
-					religion = brethren
-					any_vassal = { religion = brethren }
-					any_liege = { religion = brethren }
-					any_neighbor_independent_ruler = { religion = brethren } 
-					AND = {
-						culture = doggerlander
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = brethren }
-							}
-							AND = {
-								trait = zealous
-								religion = brethren
-							}
-						}
-					}
+				OR = {
 					religion = buccaneer
 					any_vassal = { religion = buccaneer }
 					any_liege = { religion = buccaneer }
@@ -1541,24 +1490,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 	}
 	trigger_else_if = {
 		limit = { 
-			OR = { 
-				religion = brethren
-				any_vassal = { religion = brethren }
-				any_liege = { religion = brethren }
-				any_neighbor_independent_ruler = { religion = brethren } 
-				AND = {
-					culture = doggerlander
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { religion = brethren }
-						}
-						AND = {
-							trait = zealous
-							religion = brethren
-						}
-					}
-				}
+			OR = {
 				religion = buccaneer
 				any_vassal = { religion = buccaneer }
 				any_liege = { religion = buccaneer }
@@ -2004,24 +1936,7 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 	}
 	trigger_else_if = {
 		limit = { 
-			OR = { 
-				religion = brethren
-				any_vassal = { religion = brethren }
-				any_liege = { religion = brethren }
-				any_neighbor_independent_ruler = { religion = brethren } 
-				AND = {
-					culture = doggerlander
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { religion = brethren }
-						}
-						AND = {
-							trait = zealous
-							religion = brethren
-						}
-					}
-				}
+			OR = {
 				religion = buccaneer
 				any_vassal = { religion = buccaneer }
 				any_liege = { religion = buccaneer }
@@ -2529,24 +2444,6 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_sea_creed_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { 
-							OR = {
-								religion = brethren
-								culture = doggerlander
-							}
-						}
-						any_liege = { 
-							OR = {
-								religion = brethren
-								culture = doggerlander
-							}  
-						}
-						any_neighbor_independent_ruler = { 
-							OR = {
-								religion = brethren
-								culture = doggerlander
-							}  
-						}
 						any_vassal = { 
 							OR = {
 								religion = buccaneer
