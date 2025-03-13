@@ -51,11 +51,11 @@ decisions = {
 		}
 
 		allow = {
-			custom_tooltip = {
-				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
-			}
 			form_empire_allow = yes
 			#Control a bunch of lands
+			custom_tooltip = {
+				text = all_american_duchies_owned
+				
 				d_capital = { show_scope_change = no province_completely_controls_trigger = yes } # DC
 				d_black_belt = { show_scope_change = no province_completely_controls_trigger = yes } # Montgomery, AL
 				d_timberland = { show_scope_change = no province_completely_controls_trigger = yes } # Little Rock, AR
@@ -88,6 +88,7 @@ decisions = {
 				d_nek = { show_scope_change = no province_completely_controls_trigger = yes } # Montpelier, VT
 				d_mountain_lakes = { show_scope_change = no province_completely_controls_trigger = yes } # Charleston, WV
 				d_coulee = { show_scope_change = no province_completely_controls_trigger = yes } # Madison, WI
+			}
 		}
 
 		effect = {
