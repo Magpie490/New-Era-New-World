@@ -155,6 +155,30 @@ d_chapel_hill = {
 	}
 }
 
+e_el_gibbor = {
+	color = { 186 159 93 }
+	color2 = { 255 255 255 }
+
+	capital = 100 # Land-of-Sky
+
+	title = "GIANT_KING"
+	title_female = "GIANT_QUEEN"
+	short_name = yes
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_el_gibbor = {
+					is_titular = yes
+				}
+			}
+			e_el_gibbor = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 d_rephaites = {
 	color = { 16 86 171 }
 	color2 = { 152 196 21 }
@@ -167,7 +191,7 @@ d_rephaites = {
 d_sasquatch = {
 	color = { 100 100 100 }
 	color2 = { 152 196 21 }
-	capital = 98 # Galax
+	capital = 3315 # Mountain City
 
 	allow = {
 		always = no
@@ -176,7 +200,7 @@ d_sasquatch = {
 d_fomoria = {
 	color = { 0 108 108 }
 	color2 = { 152 196 21 }
-	capital = 98 # Galax
+	capital = 81 # Bluefield
 
 	allow = {
 		always = no

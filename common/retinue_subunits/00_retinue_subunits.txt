@@ -2606,6 +2606,55 @@ RETTYPE_CUL_PLAINSLANDER = {
 	}
 }
 
+RETTYPE_CUL_OZARKS = {
+	first_type = 4
+	first_amount = 300
+	
+		potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = leadmen
+			culture = mississippian
+			any_realm_province = {
+				OR = {
+				culture = leadmen
+				culture = mississippian
+				}
+			}
+		}
+	}
+	modifier = {
+		knights_defensive = 0.25
+		knights_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_ARKENSAW = {
+	first_type = 0
+	first_amount = 250
+	
+	second_type = 2
+	second_amount = 150
+	
+		potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = arkensawyer
+			any_realm_province = {
+				OR = {
+				culture = arkensawyer
+				}
+			}
+		}
+	}
+	modifier = {
+		light_infantry_morale = 0.3
+		pikemen_morale = 0.3
+	}
+}
+
 RETTYPE_CUL_BRITISH = 
 {
 	first_type = 6
