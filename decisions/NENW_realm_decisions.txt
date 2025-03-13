@@ -726,6 +726,79 @@ decisions = {
 			# }
 		}
 	}
+
+	form_el_gibbor = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			religion = gibborim
+			e_el_gibbor = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			prestige = 5000
+			completely_controls = k_blue_ridge
+			completely_controls = k_vandalia
+			completely_controls = k_appalachia
+			OR = {
+				AND = {
+					completely_controls = k_kentucky
+					completely_controls = k_tennessee
+				}
+				completely_controls = k_dixie
+			}
+		}
+		effect = {
+			e_el_gibbor = {
+				gain_empire_effect = yes
+			}
+			k_blue_ridge = { de_jure_liege = e_el_gibbor }
+			k_vandalia = { de_jure_liege = e_el_gibbor }
+			k_appalachia = { de_jure_liege = e_el_gibbor }
+			if = {
+				limit = { completely_controls = k_kentucky }
+				k_kentucky = { de_jure_liege = e_el_gibbor }
+			}
+			if = { 
+				limit = { completely_controls = k_tennessee }
+				k_tennessee = { de_jure_liege = e_el_gibbor }
+			}
+			if = {
+				limit = { completely_controls = k_dixie }
+				k_dixie = { de_jure_liege = e_el_gibbor }
+			}
+			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = el_gibbor_female
+				}
+				new_bloodline = {
+					set_description = "el_gibbor_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = el_gibbor_male
+				}
+				new_bloodline = {
+					set_description = "el_gibbor_male_desc"
+				}
+			}
+		}
+	}
 	
 	form_colorado = {
 		is_high_prio = yes

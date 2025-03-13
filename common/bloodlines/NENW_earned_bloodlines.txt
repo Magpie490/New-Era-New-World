@@ -243,3 +243,35 @@ mississippi_female = {
 	picture = GFX_bloodlines_symbol_roman
 	flags = { created_bloodline brooke_blood }
 }
+el_gibbor_male = {
+	gibborim_opinion = 10
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	combat_rating = 10
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_temp_symbol_2
+	flags = { created_bloodline }
+	active = {
+		OR = {
+			religion = gibborim
+			religion = marked
+		}
+	}
+}
+el_gibbor_female = {
+	gibborim_opinion = 10
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	combat_rating = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_temp_symbol_2
+	flags = { created_bloodline }
+	active = {
+		OR = {
+			religion = gibborim
+			religion = marked
+		}
+	}
+}
