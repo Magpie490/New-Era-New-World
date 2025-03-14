@@ -727,14 +727,14 @@ decisions = {
 		}
 	}
 
-	form_el_gibbor = {
+	form_canaan = {
 		is_high_prio = yes
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
 			religion = gibborim
-			e_el_gibbor = {
+			e_canaan = {
 				has_holder = no
 			}
 			prisoner = no
@@ -754,23 +754,23 @@ decisions = {
 			}
 		}
 		effect = {
-			e_el_gibbor = {
+			e_canaan = {
 				gain_empire_effect = yes
 			}
-			k_blue_ridge = { de_jure_liege = e_el_gibbor }
-			k_vandalia = { de_jure_liege = e_el_gibbor }
-			k_appalachia = { de_jure_liege = e_el_gibbor }
+			k_blue_ridge = { de_jure_liege = e_canaan }
+			k_vandalia = { de_jure_liege = e_canaan }
+			k_appalachia = { de_jure_liege = e_canaan }
 			if = {
 				limit = { completely_controls = k_kentucky }
-				k_kentucky = { de_jure_liege = e_el_gibbor }
+				k_kentucky = { de_jure_liege = e_canaan }
 			}
 			if = { 
 				limit = { completely_controls = k_tennessee }
-				k_tennessee = { de_jure_liege = e_el_gibbor }
+				k_tennessee = { de_jure_liege = e_canaan }
 			}
 			if = {
 				limit = { completely_controls = k_dixie }
-				k_dixie = { de_jure_liege = e_el_gibbor }
+				k_dixie = { de_jure_liege = e_canaan }
 			}
 			
 			if = {
@@ -779,10 +779,10 @@ decisions = {
 					has_dlc = "Holy Fury"
 				}
 				create_bloodline = {
-					type = el_gibbor_female
+					type = canaan_female
 				}
 				new_bloodline = {
-					set_description = "el_gibbor_female_desc"
+					set_description = "canaan_female_desc"
 				}
 			}
 			if = {
@@ -791,10 +791,10 @@ decisions = {
 					has_dlc = "Holy Fury"
 				}
 				create_bloodline = {
-					type = el_gibbor_male
+					type = canaan_male
 				}
 				new_bloodline = {
-					set_description = "el_gibbor_male_desc"
+					set_description = "canaan_male_desc"
 				}
 			}
 		}
