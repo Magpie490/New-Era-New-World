@@ -59,6 +59,110 @@ pagan_group = {
 		dynamic_cult = no
 		secret_religion = no
 	}
+	delver_reformed = { # Gamer
+		graphical_culture = nobeliangfx
+
+		icon = 49
+		heresy_icon = 50
+		
+		color = { 20 102 78 }
+		
+		interface_skin = { novelist_interface pagan_interface }
+
+		high_god_name = GOD_THE_SLEEPER
+
+		god_names = {
+			GOD_THE_SLEEPER GOD_PAUL_BUNYAN GOD_CONAN GOD_GANDALF GOD_THE_HEROES GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			GOD_CHAOS GOD_THE_OLD_GODS GOD_THE_FIENDS
+		}
+		character_modifier = {
+			diplomacy = 2
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_OLD_LORE
+		priest_title = LIBRARIAN
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		female_temple_holders = yes
+		allow_in_ruler_designer = no
+		
+		aggression = 1.5 # AI aggression factor
+		hard_to_convert = yes
+
+		intermarry = delver
+		intermarry = oceanic
+		intermarry = emmaean
+		intermarry = emmaean_reformed
+		intermarry = antiquarianist
+		intermarry = antiquarianist_reformed
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+		intermarry = novelist
+		intermarry = novelist_reformed
+		intermarry = madonnite
+		intermarry = dianic
+		intermarry = myriadic
+		intermarry = gaian
+		intermarry = luddite
+	}
+	delver = { # Gamer
+		graphical_culture = nobeliangfx
+
+		icon = 49
+		heresy_icon = 50
+		
+		color = { 20 102 78 }
+		
+		interface_skin = { novelist_interface pagan_interface }
+
+		high_god_name = GOD_THE_SLEEPER
+
+		god_names = {
+			GOD_THE_SLEEPER GOD_PAUL_BUNYAN GOD_CONAN GOD_GANDALF GOD_THE_HEROES GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			GOD_CHAOS GOD_THE_OLD_GODS GOD_THE_FIENDS
+		}
+		character_modifier = {
+			diplomacy = 2
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_OLD_LORE
+		priest_title = LIBRARIAN
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
+		female_temple_holders = yes
+		reformed = delver_reformed
+		
+		aggression = 1.5 # AI aggression factor
+		
+		can_demand_religious_conversion = no
+		hard_to_convert = yes
+
+		intermarry = delver_reformed
+		intermarry = oceanic
+		intermarry = emmaean
+		intermarry = emmaean_reformed
+		intermarry = antiquarianist
+		intermarry = antiquarianist_reformed
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+		intermarry = novelist
+		intermarry = novelist_reformed
+		intermarry = madonnite
+		intermarry = dianic
+		intermarry = myriadic
+		intermarry = gaian
+		intermarry = luddite
+	}
 	numic_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
 
