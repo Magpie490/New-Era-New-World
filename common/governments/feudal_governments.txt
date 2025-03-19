@@ -1478,17 +1478,7 @@ feudal_governments = {
 					title = e_illustrious
 				}
 			}
-			OR = {
-				religion = calvinist
-				religion = neohuguenot
-				religion = evangelical
-				religion = resurrectionist
-				religion = edenite
-				religion = witness
-				primary_title = {
-					title = e_lone_star
-				}
-			}
+			uses_calvinist_trigger = yes
 			higher_tier_than = BARON
 			is_patrician = no
 			has_oligarchy_title_trigger = no
@@ -1704,22 +1694,7 @@ feudal_governments = {
 					title = e_illustrious
 				}
 			}
-			OR = {
-				religion = bracero
-				religion = millenarian
-				religion = doukhobor
-				religion = myriadic
-				religion = fidelista
-				religion = abolitionist
-				AND = {
-					religion = santeria
-					OR = {
-						culture = cubano
-						culture = oriental
-						culture = minoan
-					}
-				}
-			}
+			uses_communal_trigger = yes
 			higher_tier_than = BARON
 			is_patrician = no
 			has_oligarchy_title_trigger = no

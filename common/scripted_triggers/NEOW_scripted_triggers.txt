@@ -1266,10 +1266,38 @@ uses_eastern_feudal_trigger = {
 		has_religion_feature = religion_feature_satsana_phi
 	}
 }
-uses_japanese_feudal_trigger = {
+uses_communal_trigger = {
 	OR = {
-		culture_group = japan_group
-		culture_group = amero_japonic
+		religion = bracero
+		religion = millenarian
+		religion = doukhobor
+		religion = myriadic
+		religion = fidelista
+		religion = abolitionist
+		religion = indian_shaker
+		AND = {
+			religion = santeria
+			OR = {
+				culture = cubano
+				culture = oriental
+				culture = minoan
+			}
+		}
+	}
+}
+
+uses_calvinist_trigger = {
+	OR = {
+		religion = calvinist
+		religion = neohuguenot
+		religion = evangelical
+		religion = resurrectionist
+		religion = edenite
+		religion = witness
+		religion = dominionist
+		primary_title = {
+			title = e_lone_star
+		}
 	}
 }
 uses_phonocracy_trigger = {

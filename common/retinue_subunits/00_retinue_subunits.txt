@@ -3133,6 +3133,135 @@ RETTYPE_CUL_CHEYENNE = {
 	}
 }
 
+RETTYPE_CUL_PLAINS_OJIBWE = {
+	first_type = 0
+	first_amount = 250
+	
+	second_type = 3
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = shawnee
+			culture = potawatomi
+			culture = miami
+			culture = peoria
+			any_realm_province = {
+				culture = shawnee
+				culture = potawatomi
+				culture = miami
+				culture = peoria
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.25
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_CADDO = {
+	first_type = 2
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		OR = {
+			culture_group = caddoan
+			any_realm_province = {
+				OR = {
+				culture_group = caddoan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.25
+		pikemen_morale = 0.25
+		archers_offensive = 0.25
+		archers_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_KIOWA = {
+	first_type = 1
+	first_amount = 300
+	
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = kiowa
+			any_realm_province = {
+				culture = kiowa
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_MUSKOGEAN = {
+	first_type = 5
+	first_amount = 300
+	
+	second_type = 3
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		OR = {
+			culture_group = muskogean
+			any_realm_province = {
+				culture_group = muskogean
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.25
+		archers_morale = 0.25
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_FOX = {
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = fox
+			any_realm_province = {
+				culture = fox
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive= 0.25
+		archers_defensive = 0.2
+	}
+}
+
 RETTYPE_CUL_GROS_VENTRE = {
 	first_type = 3
 	first_amount = 250
