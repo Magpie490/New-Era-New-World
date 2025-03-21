@@ -1078,5 +1078,15 @@ e_deseret = { # we will be back for you
 		realm_size = 100
 		num_of_holy_sites = 3
 		religion_group = mormonic
+		conditional_tooltip = {
+			trigger = {
+				e_deseret = {
+					is_titular = yes
+				}
+			}
+			e_deseret = {
+				is_titular = no
+			}
+		}
 	}
 }
