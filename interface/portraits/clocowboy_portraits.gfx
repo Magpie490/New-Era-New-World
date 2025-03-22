@@ -1,0 +1,70 @@
+spriteTypes = {
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_vaquero_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_culture_group = west_texan
+					portrait_culture_group = east_texan
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_vaquero_male_clothes_behind:p3:c0"
+            "GFX_vaquero_male_clothes:p3:c2"
+			"GFX_vaquero_male_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_vaquero_male_headgear:p5:c5"
+            "GFX_vaquero_male_headgear_behind:p5:c1"
+            "GFX_vaquero_male_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_clowestern_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture_group = west_texan
+					portrait_culture_group = east_texan
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_vaquero_female_clothes_behind:p3:c0"
+            "GFX_vaquero_female_clothes:p3:c2"
+			"GFX_vaquero_female_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_vaquero_female_headgear:p5:c5"
+            "GFX_vaquero_female_headgear_behind:p5:c1"
+            "GFX_vaquero_female_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}
