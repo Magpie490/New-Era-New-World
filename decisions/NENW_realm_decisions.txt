@@ -1683,6 +1683,39 @@ decisions = {
 			}
 		}
 	}
+	form_sioux_nation = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = dakota
+				culture = lakota
+			}
+			e_sioux = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_dakota
+			completely_controls = k_lakotah
+			completely_controls = k_nebraska
+			completely_controls = k_wyoming
+			completely_controls = k_minnesota
+		}
+		effect = {
+			e_sioux = { gain_empire_effect = yes }
+			k_dakota = { de_jure_liege = e_sioux }
+			k_lakotah = { de_jure_liege = e_sioux }
+			k_nebraska = { de_jure_liege = e_sioux }
+			k_wyoming = { de_jure_liege = e_sioux }
+			k_minnesota = { de_jure_liege = e_sioux }
+		}
+	}
 	form_wabanaki = {
 		is_high_prio = yes
 		only_playable = yes

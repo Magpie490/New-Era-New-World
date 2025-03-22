@@ -598,6 +598,26 @@ e_three_fires = {
 		}
 	}
 }
+e_sioux = {
+	color = { 234 235 236 }
+	color2 = { 220 220 220 }
+	
+	capital = 384 # Black Hills
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_sioux = {
+					is_titular = yes
+				}
+			}
+			e_sioux = {
+				is_titular = no
+			}
+		}
+	}
+}
 e_haudenosaunee = {
 	color = { 89 62 182 }
 	color2 = { 255 255 255 }
