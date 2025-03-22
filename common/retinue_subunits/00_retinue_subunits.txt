@@ -1808,6 +1808,55 @@ RETTYPE_CUL_LOWER_QUEBECOIS =
 	}
 }
 
+RETTYPE_CUL_ALBERTAN = {
+	first_type = 1
+	first_amount = 300
+	
+	second_type = 2
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+				culture = albertan
+			any_realm_province = {
+				OR = {
+				culture = albertan
+				}
+			}
+		}
+	}
+	modifier = {
+			heavy_infantry_defensive = 0.3
+			heavy_infantry_morale = 0.3
+			pikemen_defensive = 0.3
+			pikemen_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_FLATLANDER = {
+	first_type = 3
+	first_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+				culture = albertan
+			any_realm_province = {
+				OR = {
+				culture = albertan
+				}
+			}
+		}
+	}
+	modifier = {
+			light_cavalry_offensive = 0.3
+			light_cavalry_morale = 0.3
+	}
+}
+
 RETTYPE_CUL_WICKER =
 {
 	first_type = 1
@@ -2540,6 +2589,32 @@ RETTYPE_CUL_HAUSA = {
 	}
 }
 
+RETTYPE_CUL_MOUNTAINER = {
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no 
+		OR = {
+			culture_group = mountainer
+			any_realm_province = {
+				culture_group = mountainer
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_defensive = 0.25
+		archers_offensive = 0.25
+		archers_defensive = 0.25
+	}
+}
+
 RETTYPE_CUL_BADGER = {
 	first_type = 0
 	first_amount = 300
@@ -2862,6 +2937,33 @@ RETTYPE_CUL_BRAZILIAN =
 	}
 }
 
+RETTYPE_CUL_MICHIF = {
+	first_type = 0
+	first_amount = 250
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+				culture = michif
+			any_realm_province = {
+				OR = {
+				culture = michif
+				}
+			}
+		}
+	}
+	modifier = {
+			light_infantry_defensive = 0.3
+			light_infantry_morale = 0.3
+			archers_defensive = 0.3
+			archers_morale = 0.3
+	}
+}
+
 
 RETTYPE_CUL_MIKMAQ =
 {
@@ -3048,6 +3150,36 @@ RETTYPE_CUL_CREE =
 	}
 }
 
+RETTYPE_CUL_OJIBWE = {
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+				culture = algonquin
+				culture = nipissing
+				culture = chippewa
+				culture = oji-cree
+				culture = saulteaux
+			any_realm_province = {
+				OR = {
+				culture = algonquin
+				culture = nipissing
+				culture = chippewa
+				culture = oji-cree
+				culture = saulteaux
+				}
+			}
+		}
+	}
+	modifier = {
+			archers_morale = 0.3
+			archers_offensive = 0.25
+	}
+}
+
 RETTYPE_CUL_SIOUX = {
 	first_type = 4
 	first_amount = 250
@@ -3130,6 +3262,34 @@ RETTYPE_CUL_CHEYENNE = {
 		light_cavalry_morale = 0.2
 		pikemen_offensive = 0.25
 		pikemen_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_ARAPAHO = {
+	first_type = 4
+	first_amount = 250
+	
+	second_type = 0
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = arapaho
+			culture = northern_arapaho
+			any_realm_province = {
+				culture = arapaho
+				culture = northern_arapaho
+			}
+		}
+	}
+	
+	modifier = {
+		knights_offensive = 0.25
+		knights_morale = 0.2
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.2
 	}
 }
 
