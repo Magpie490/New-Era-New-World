@@ -1729,11 +1729,50 @@ decisions = {
 				text = controlling_wyoming_and_minnesota_will_integrate
  				if = {
 					limit = { completely_controls = k_wyoming }
-					k_wyoming = { de_jure_liege = e_sioux }
+					k_wyoming = { de_jure_liege = e_oceti_sakowin }
 				}
  				if = {
 					limit = { completely_controls = k_minnesota }
-					k_minnesota = { de_jure_liege = e_sioux }
+					k_minnesota = { de_jure_liege = e_oceti_sakowin }
+				}
+			}
+		}
+	}
+	form_iron_confederacy = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			OR = {
+				culture = assiniboine
+				culture = plains_cree
+				culture = michif
+				culture = nakoda
+				culture = saulteaux
+			}
+			e_iron_confederacy = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no 
+		}
+		allow = {
+			completely_controls = k_big_sky
+			completely_controls = k_saskatchewan
+			completely_controls = k_manitoba
+		}
+		effect = {
+			e_iron_confederacy = { gain_empire_effect = yes }
+			k_big_sky = { de_jure_liege = e_iron_confederacy }
+			k_saskatchewan = { de_jure_liege = e_iron_confederacy }
+			k_manitoba = { de_jure_liege = e_iron_confederacy }
+			custom_tooltip = {
+				text = controlling_kenora_will_integrate
+ 				if = {
+					limit = { completely_controls = k_kenora }
+					k_kenora = { de_jure_liege = e_iron_confederacy }
 				}
 			}
 		}

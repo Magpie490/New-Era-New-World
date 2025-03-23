@@ -618,6 +618,26 @@ e_oceti_sakowin = {
 		}
 	}
 }
+e_iron_confederacy = {
+	color = { 220 20 60 }
+	color2 = { 255 255 255 }
+	
+	capital = 486 # Fort Peck
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_iron_confederacy = {
+					is_titular = yes
+				}
+			}
+			e_iron_confederacy = {
+				is_titular = no
+			}
+		}
+	}
+}
 e_haudenosaunee = {
 	color = { 89 62 182 }
 	color2 = { 255 255 255 }
