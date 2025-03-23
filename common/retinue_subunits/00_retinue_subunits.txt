@@ -1453,6 +1453,144 @@ RETTYPE_CUL_MAINE =
 	}
 }
 
+RETTYPE_CUL_GOLDENGATER =
+{
+	first_type = 0
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = goldengater
+			any_realm_province = {
+				OR = {
+			culture = goldengater
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_VALLEYAN =
+{
+	first_type = 3
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = valleyan
+			any_realm_province = {
+				OR = {
+			culture = valleyan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		light_cavalry_morale = 0.3
+		archers_offensive = 0.3
+		archers_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_SILICONITE =
+{
+	first_type = 1
+	first_amount = 300
+	
+	second_type = 2
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = siliconite
+			any_realm_province = {
+				OR = {
+			culture = siliconite
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.3
+		pikeman_defensive = 0.3
+		pikeman_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_WINELANDER =
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = siliconite
+			any_realm_province = {
+				OR = {
+			culture = siliconite
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		archers_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_JEFFERSONIAN = {
+	first_type = 3
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = shastan
+			culture = redwood
+			any_realm_province = {
+				OR = {
+					culture = shastan
+					culture =redwood
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		light_cavalry_defensive = 0.3
+		archers_offensive = 0.3
+		archers_defensive = 0.3
+	}
+}
+
 RETTYPE_CUL_SOUTHERN = 
 {
 	first_type = 4
@@ -2137,6 +2275,32 @@ RETTYPE_CUL_BALT =
 	modifier = {
 		heavy_infantry_defensive = 0.3
 		heavy_infantry_morale = 0.1
+	}
+}
+
+RETTYPE_HOCKEY = {
+	first_type = 1
+	first_amount = 250
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = yooper
+			culture = brebharnach
+			culture = nortarian
+			any_realm_province = {
+				OR = {
+				culture = yooper
+				culture = brebharnach
+				culture = nortarian
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.3
 	}
 }
 
