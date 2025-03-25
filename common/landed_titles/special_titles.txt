@@ -837,6 +837,32 @@ e_atlantis = {
 	}
 }
 
+e_zion = { # ultra mormon empire
+	color = { 116 170 252 }
+	color2= { 255 255 255 }
+	
+	capital = 430 # Salt Lake
+
+	culture = utahn
+	creation_requires_capital = yes
+	allow = {
+		piety = 1000
+		realm_size = 100
+		num_of_holy_sites = 3
+		religion_group = mormonic
+		conditional_tooltip = {
+			trigger = {
+				e_zion = {
+					is_titular = yes
+				}
+			}
+			e_zion = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 e_jefferson_history = {
 	color = { 0 163 178 }
 	color2 = { 220 220 220 }
