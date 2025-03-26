@@ -83,7 +83,7 @@ decisions = {
 		is_high_prio = yes
 		religion = solar
 		potential = {
-            is_adult = yes
+		is_adult = yes
 			religion = solar
 			NOT = {
 				has_global_flag = proclaimed_golden_horus
@@ -359,15 +359,45 @@ decisions = {
 			society_is_devil_worshiper = yes
 		}
 		allow = {
+			OR = {
+				religion_group = christian
+				religion_group = post_christian_group
+				religion_group = apocalyptic
+			}
+			NOT = { secret_religion = baphometist }
+			society_is_devil_worshiper = yes
+			OR = {
+				trait = hedonist
+				trait = impaler
+				trait = lunatic
+			}
 			is_incapable = no
 			prisoner = no
 			has_regent = no
+			piety = 250
 		}
 		effect = {
 			set_secret_religion = baphometist
+			piety = -250
 		}
 		ai_will_do = {
 			factor = 0.1
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+			modifier = {
+				factor = 0
+				trait = kind
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}	
+			modifier = {
+				factor = 0
+				trait = charitable
+			}
 		}
 	}
 	religion_hire_bard = {

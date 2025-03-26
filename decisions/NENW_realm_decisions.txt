@@ -2445,6 +2445,154 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_zion = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			religion_group = mormonic
+			e_zion = {
+				has_holder = no
+			}
+			OR = {
+				has_landed_title = e_deseret
+				religion = community_of_christ
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			form_empire_allow = yes
+			piety = 1000
+			realm_size = 100
+			num_of_holy_sites = 5
+			completely_controls = k_yuta
+			completely_controls = k_mojave
+			completely_controls = k_nevada
+			completely_controls = k_allay
+			completely_controls = k_idaho
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_zion_tt
+				e_zion = {
+					gain_empire_effect = yes
+				}
+			}
+			any_demesne_title = {
+				limit = { tier = KING }
+				de_jure_liege = e_zion
+			}
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = zion_female
+				}
+				new_bloodline = {
+					set_description = "zion_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = zion_male
+				}
+				new_bloodline = {
+					set_description = "zion_male_desc"
+				}
+			}
+			hidden_tooltip = {
+				k_yuta = { de_jure_liege = e_zion }
+				k_mojave = { de_jure_liege = e_zion }
+				k_nevada = { de_jure_liege = e_zion }
+				k_allay = { de_jure_liege = e_zion }
+				k_idaho = { de_jure_liege = e_zion }
+				primary_title = {
+					if = {
+						limit = { tier = EMPEROR }
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_zion
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_new_babylon = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			religion = baphometist
+			e_baphometist = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			form_empire_allow = yes
+			piety = 1000
+			realm_size = 150
+			num_of_holy_sites = 3
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_new_babylon_tt
+				e_baphometist = {
+					gain_empire_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = living_baphomet_female
+				}
+				new_bloodline = {
+					set_description = "living_baphomet_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = living_baphomet_male
+				}
+				new_bloodline = {
+					set_description = "living_baphomet_male_desc"
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	reorganize_usa = {
 		is_high_prio = yes
 		only_playable = yes

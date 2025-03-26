@@ -12,8 +12,10 @@ narrative_event = {
 	hide_from = yes
 	show_root = no
 	portrait = event_target:ashtari_invasion_leader
+    religion = catholic
 	
     trigger = {
+        controls_religion = yes
         NOT = { has_global_flag = ashtari_invasion }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
     }
