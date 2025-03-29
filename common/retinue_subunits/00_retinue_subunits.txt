@@ -1591,6 +1591,139 @@ RETTYPE_CUL_JEFFERSONIAN = {
 	}
 }
 
+RETTYPE_CUL_CALIFORNIO = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 3
+	second_amount = 150
+	
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = californio_group
+				any_realm_province = {
+				OR = {
+				culture_group = californio_group
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_defensive = 0.3
+		light_cavalry_offensive = 0.3
+		light_infantry_defensive = 0.3
+	}
+}
+
+RETTYPE_CUL_HMONG = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 2
+	second_amount = 150
+	
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = hmong
+				any_realm_province = {
+				OR = {
+				culture = hmong
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_defensive = 0.3
+		light_infantry_morale = 0.3
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_AMERO_JAPONIC = 
+{
+	first_type = 1
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = amero_japonic
+				any_realm_province = {
+				OR = {
+				culture_group = amero_japonic
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.3
+
+	}
+}
+
+RETTYPE_CUL_PINOY = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = pinoy
+				any_realm_province = {
+				OR = {
+				culture = pinoy
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_COPTIFORNIAN = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = coptifornian
+				any_realm_province = {
+				OR = {
+				culture = coptifornian
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikeman_defensive = 0.3
+		pikemen_infantry_morale = 0.3
+	}
+}
+
 RETTYPE_CUL_SOUTHERN = 
 {
 	first_type = 4
