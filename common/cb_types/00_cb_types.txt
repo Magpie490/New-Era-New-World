@@ -3351,6 +3351,13 @@ crusade = {
 					}
 				}
 				trigger_else_if = {
+					limit = { religion = templarist }
+					custom_tooltip = {
+						text = CTT_TEMPLARIST_CRUSADES_UNLOCKED
+						has_global_flag = templarist_crusades_unlocked
+					}
+				}
+				trigger_else_if = {
 					limit = { religion = sedevacantist }
 					custom_tooltip = {
 						text = CTT_GALLICANIST_CRUSADES_UNLOCKED
@@ -3369,7 +3376,6 @@ crusade = {
 						religion = gnostic
 						religion = texolatry
 						religion = pusaka
-						religion = templarist
 					}
 				}
 			}
