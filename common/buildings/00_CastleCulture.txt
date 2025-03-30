@@ -23709,6 +23709,304 @@ castle = {
 		tax_income = -0.2
 	}
 	
+		ca_culture_cascadian_1 = {
+		desc = ca_culture_cascadian_1_desc
+		potential = {
+			OR = {
+				culture_group = cascadian
+				has_building = ca_culture_cascadian_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = cascadian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = cascadian
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_cavalry = 30
+		heavy_cavalry_offensive = 0.075
+		heavy_cavalry_defensive = 0.075
+		archers = 15
+		archers_offensive = 0.075
+		archers_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_cascadian_2 = {
+		desc = ca_culture_cascadian_1_desc
+		potential = {
+			OR = {
+				culture_group = cascadian
+				has_building = ca_culture_cascadian_1
+				has_building = ca_culture_cascadian_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		upgrades_from = ca_culture_cascadian_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_cavalry = 30
+		heavy_cavalry_offensive = 0.075
+		heavy_cavalry_defensive = 0.075
+		archers = 15
+		archers_offensive = 0.075
+		archers_defensive = 0.075
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_cascadian_3 = {
+		desc = ca_culture_cascadian_1_desc
+		potential = {
+			OR = {
+				culture_group = cascadian
+				has_building = ca_culture_cascadian_1
+				has_building = ca_culture_cascadian_2
+				has_building = ca_culture_cascadian_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		upgrades_from = ca_culture_cascadian_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_cavalry = 45
+		heavy_cavalry_offensive = 0.075
+		heavy_cavalry_defensive = 0.075
+		archers = 30
+		archers_offensive = 0.075
+		archers_defensive = 0.075
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_cascadian_4 = {
+		desc = ca_culture_cascadian_1_desc
+		potential = {
+			OR = {
+				culture_group = cascadian
+				has_building = ca_culture_cascadian_1
+				has_building = ca_culture_cascadian_2
+				has_building = ca_culture_cascadian_3
+				has_building = ca_culture_cascadian_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = cascadian
+				}
+			}
+		}
+		upgrades_from = ca_culture_cascadian_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_cavalry = 60
+		heavy_cavalry_offensive = 0.075
+		heavy_cavalry_defensive = 0.075
+		archers = 45
+		archers_offensive = 0.075
+		archers_defensive = 0.075
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
+		ca_culture_neo-latin_1 = {
+		desc = ca_culture_neo-latin_1_desc
+		potential = {
+			OR = {
+				culture_group = neo-latin
+				has_building = ca_culture_neo-latin_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = neo-latin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = neo-latin
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.075
+		heavy_infantry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_neo-latin_2 = {
+		desc = ca_culture_neo-latin_1_desc
+		potential = {
+			OR = {
+				culture_group = neo-latin
+				has_building = ca_culture_neo-latin_1
+				has_building = ca_culture_neo-latin_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		upgrades_from = ca_culture_neo-latin_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.075
+		heavy_infantry_defensive = 0.075
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_neo-latin_3 = {
+		desc = ca_culture_neo-latin_1_desc
+		potential = {
+			OR = {
+				culture_group = neo-latin
+				has_building = ca_culture_neo-latin_1
+				has_building = ca_culture_neo-latin_2
+				has_building = ca_culture_neo-latin_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		upgrades_from = ca_culture_neo-latin_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 45
+		heavy_infantry_offensive = 0.075
+		heavy_infantry_defensive = 0.075
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_neo-latin_4 = {
+		desc = ca_culture_neo-latin_1_desc
+		potential = {
+			OR = {
+				culture_group = neo-latin
+				has_building = ca_culture_neo-latin_1
+				has_building = ca_culture_neo-latin_2
+				has_building = ca_culture_neo-latin_3
+				has_building = ca_culture_neo-latin_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = neo-latin
+				}
+			}
+		}
+		upgrades_from = ca_culture_neo-latin_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 60
+		heavy_infantry_offensive = 0.075
+		heavy_infantry_defensive = 0.075
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	
 		ca_culture_californio_group_1 = {
 		desc = ca_culture_californio_group_1_desc
 		potential = {
