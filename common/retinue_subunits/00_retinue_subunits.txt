@@ -1529,8 +1529,8 @@ RETTYPE_CUL_SILICONITE =
 	modifier = {
 		heavy_infantry_defensive = 0.3
 		heavy_infantry_morale = 0.3
-		pikeman_defensive = 0.3
-		pikeman_morale = 0.3
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.3
 	}
 }
 
@@ -1719,7 +1719,7 @@ RETTYPE_CUL_COPTIFORNIAN =
 	}
 	
 	 modifier = {
-		pikeman_defensive = 0.3
+		pikemen_defensive = 0.3
 		pikemen_infantry_morale = 0.3
 	}
 }
@@ -3787,6 +3787,138 @@ RETTYPE_CUL_NORTHERN_ATHABASKAN = {
 	modifier = {
 		archers_offensive = 0.3
 		archers_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_YOKUTIAN = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = yokutian
+				any_realm_province = {
+				OR = {
+				culture_group = yokutian
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		archers_offensive = 0.3
+		archers_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_POMO = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = pomo
+				any_realm_province = {
+				OR = {
+				culture = pomo
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.25
+		archers_defensive = 0.3
+		archers_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_HUPA = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = hupa
+				any_realm_province = {
+				OR = {
+				culture = hupa
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikemen_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_YUROK = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = yurok
+				any_realm_province = {
+				OR = {
+				culture = yurok
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.3
+		archers_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_KARUK = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = karuk
+				any_realm_province = {
+				OR = {
+				culture = karuk
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_morale = 0.25
+		archers_offensive = 0.3
+		archers_morale = 0.25
 	}
 }
 
