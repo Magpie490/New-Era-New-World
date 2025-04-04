@@ -2656,12 +2656,28 @@ government_flavor = {
 	priority = 3
 	trigger = {
 		OR = {
-			government = roman_imperial_government
-		}
-		OR = {
 			has_law = succ_byzantine_elective
+			has_law = succ_dynastic_meritocratic
 		}
 		is_landed = yes
+		OR = {
+			government = roman_imperial_government
+		}
+	}	
+}
+government_flavor = {
+	name = gov_roman_imperial_government_decayed
+	graphics = GFX_evt_rome_falls
+	priority = 3
+	trigger = {
+		OR = {
+			has_law = succ_byzantine_elective
+			has_law = succ_dynastic_meritocratic
+		}
+		is_landed = yes
+		NOR = {
+			government = roman_imperial_government
+		}
 	}	
 }
 
