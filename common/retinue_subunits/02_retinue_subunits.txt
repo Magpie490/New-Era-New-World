@@ -194,6 +194,36 @@ RETTYPE_SOUTHWEST_CAMEL =
 		camel_cavalry_morale = 0.2
 	}
 }
+RETTYPE_NORTHWEST_CAMEL = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = camel_cavalry
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = cascasian
+			culture_group = west_coaster
+			culture_group = salishan
+			any_realm_province = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		camel_cavalry_offensive = 0.2
+		camel_cavalry_defensive = 0.3
+		camel_cavalry_morale = 0.2
+	}
+}
 RETTYPE_CUL_MISSISSIPPI_ZOUAVE = 
 {
 	first_type = 5

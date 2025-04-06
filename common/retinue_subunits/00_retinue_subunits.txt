@@ -1643,6 +1643,52 @@ RETTYPE_CUL_NEOLATIN= {
 	}
 }
 
+RETTYPE_CUL_DOUKHOBOR= {
+	first_type = 1
+	first_amount = 300
+	
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = doukhobors
+			any_realm_province = {
+				OR = {
+					culture = doukhobors
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_ALASKAN= {
+	first_type = 1
+	first_amount = 300
+	
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = alaskan
+			any_realm_province = {
+				OR = {
+					culture = alaskan
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.3
+	}
+}
+
 RETTYPE_CUL_CALIFORNIO = 
 {
 	first_type = 0
@@ -3895,7 +3941,7 @@ RETTYPE_CUL_POMO =
 	}
 }
 
-RETTYPE_CUL_HUPA = 
+RETTYPE_CUL_PACIFIC_ATHABASKAN = 
 {
 	first_type = 2
 	first_amount = 300
@@ -3904,10 +3950,10 @@ RETTYPE_CUL_HUPA =
 		 higher_tier_than = BARON
 		 is_nomadic = no
 		 OR = {
-			 culture = hupa
+			 culture_group = pacific_athabaskan
 				any_realm_province = {
 				OR = {
-				culture = hupa
+				 culture_group = pacific_athabaskan
 				}
 			}
 		}
@@ -3971,6 +4017,156 @@ RETTYPE_CUL_KARUK =
 		light_infantry_morale = 0.25
 		archers_offensive = 0.3
 		archers_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_SAHAPTIAN = 
+{
+	first_type = 4
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = sahaptian
+				any_realm_province = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		knights_offensive = 0.3
+		knights_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_CHINOOKAN = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = chinookan
+				any_realm_province = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		archers_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_WAKASHAN = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = wakashan
+				any_realm_province = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikemen_offensive = 0.3
+		pikemen_morale = 0.25
+		archers_offensive = 0.3
+		archers_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_TSIMSHIANIC = 
+{
+	first_type = 0
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = tsimshianic
+				any_realm_province = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_defensive = 0.3
+		archers_defensive = 0.3
+	}
+}
+
+RETTYPE_CUL_TLINGIT = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = tlingit
+				any_realm_province = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikemen_morale = 0.3
+	}
+}
+
+RETTYPE_CUL_HAIDA = 
+{
+	first_type = 5
+	first_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = haida
+				any_realm_province = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		archers_offensive = 0.25
+		archers_morale = 0.15
 	}
 }
 
