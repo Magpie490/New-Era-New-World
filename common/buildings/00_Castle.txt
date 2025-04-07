@@ -121,6 +121,7 @@ castle = {
 		build_time = 365
 		fort_level = 0.5
 		levy_size = 0.025
+		garrison_size = 0.05
 		tax_income = 0.2
 		ai_creation_factor = 90
 		
@@ -134,6 +135,7 @@ castle = {
 		build_time = 547 #1.5y
 		fort_level = 0.5
 		levy_size = 0.025
+		garrison_size = 0.05
 		tax_income = 0.2
 		ai_creation_factor = 89
 		
@@ -147,6 +149,7 @@ castle = {
 		build_time = 730 #2y
 		fort_level = 1.0
 		levy_size = 0.05
+		garrison_size = 0.05
 		tax_income = 0.2
 		ai_creation_factor = 88
 
@@ -177,6 +180,7 @@ castle = {
 		build_time = 1095 #3y
 		fort_level = 1.0
 		levy_size = 0.05
+		garrison_size = 0.05
 		tax_income = 0.2
 		ai_creation_factor = 87
 
@@ -211,6 +215,7 @@ castle = {
 		build_time = 1460 #4y
 		fort_level = 1.5
 		levy_size = 0.1
+		garrison_size = 0.05
 		tax_income = 0.5
 		ai_creation_factor = 86
 
@@ -259,27 +264,6 @@ castle = {
 		add_number_to_name = yes
 
 		extra_tech_building_start = 0.2
-	}
-	ca_flaktower = { # flaktowers
-		potential = {
-			FROMFROM = { 
-					OR = {
-					title = b_klosterneuburg
-					title = b_berlin
-					title = b_brunsbuttel
-				}
-			}
-		}
-		desc = ca_flaktower_desc
-		gold_cost = 150
-		build_time = 1460 #4y
-		fort_level = 3.0
-		liege_prestige = 0.2
-		garrison_size = 0.05
-		ai_creation_factor = 86
-		tax_income = -0.25
-
-		extra_tech_building_start = 0.0
 	}
 
 	#Keeps, gives levy and garrison size
