@@ -848,20 +848,6 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					religion = calvinist
-					religion = genevist
-					religion = neohuguenot
-				}
-			}
-			join_society = monastic_order_baptist
-			change_society_currency = {
-				society = monastic_order_baptist
-				value = 350
-			}
-		}
-		else_if = {
-			limit = {
 				religion = insular
 			}
 			join_society = monastic_order_insular
