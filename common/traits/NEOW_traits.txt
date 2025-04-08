@@ -1308,105 +1308,6 @@ rosicrucian = {
 	random = no
 }
 ###
-
-continental = {
-	learning = 1
-	global_revolt_risk = -0.01
-	
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		#continental
-		cal_baptist
-		presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-cal_baptist = {
-	diplomacy = 1
-	vassal_opinion = 5
-	
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		continental
-		#cal_baptist
-		presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-	
-	customizer = no
-	random = no
-}
-
-presbyterian = {
-	martial = 1
-	command_modifier = {
-		morale_defence = 0.12
-	}
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		continental
-		cal_baptist
-		#presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-congregationalist = {
-	stewardship = 1
-	build_cost_modifier = -0.05
-	
-	religious_branch = genevist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		#congregationalist
-		separatist
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-separatist = {
-	intrigue = 1
-	plot_discovery_chance = 0.2
-	
-	religious_branch = genevist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		congregationalist
-		#separatist
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-###
 trimurti_cult_reformed = {
 	diplomacy = 1
 	vassal_opinion = 5
@@ -4202,7 +4103,6 @@ low_anglican = {
 	opposite_opinion = -10
 	
 	diplomacy = 2
-	calvinist_opinion = 5
 	lutheran_opinion = 5
 	baptist_opinion = 5
 	evangelical_opinion = 5
@@ -4271,7 +4171,6 @@ low_anglican2 = {
 	opposite_opinion = -10
 	
 	diplomacy = 2
-	calvinist_opinion = 5
 	lutheran_opinion = 5
 	baptist_opinion = 5
 	evangelical_opinion = 5
@@ -5395,7 +5294,6 @@ mainline_baptist = {
 }
 
 mainline_presbyterian = {
-	calvinist_opinion = 10
 	religious_branch = mainline
 	religious = yes # Lost immediately on religion change
 	
@@ -5409,35 +5307,6 @@ mainline_presbyterian = {
 	opposite_opinion = 0
 	same_opinion = 15
 
-	customizer = no
-	random = no
-}
-calvinist_damned = {
-	calvinist_opinion = -10
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		calvinist_blessed
-	}
-	
-	same_opinion = 5
-	monthly_character_piety = -0.05
-	monthly_character_prestige = -0.05
-	customizer = no
-	random = no
-}
-calvinist_blessed = {
-	calvinist_opinion = 10
-	prevent_decadence = yes
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		calvinist_damned
-	}
-
-	same_opinion = 5
-	monthly_character_piety = 0.05
-	monthly_character_prestige = 0.05
 	customizer = no
 	random = no
 }

@@ -271,26 +271,6 @@ monastic_elective = {
 			trait = chaste
 		}
 		
-		additive_modifier = { #character is blessed
-			value = 50
-			localisation_key = tooltip_character_blessed
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			trait = calvinist_blessed	
-		}
-		additive_modifier = { #character is damned
-			value = -50
-			localisation_key = tooltip_character_damned
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			trait = calvinist_damned
-		}
 		additive_modifier = { #virtuous rulers are listened to
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_temperate_positive
@@ -1176,32 +1156,6 @@ monastic_elective = {
 			this_is_spiritual_culture_trigger = yes
 			FROM = { 
 				trait = curious
-			}
-		}
-		additive_modifier = {
-			value = -50
-			localisation_key = tooltip_electee_character_damned
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			FROM = { 
-				trait = calvinist_damned
-			}
-		}
-		additive_modifier = {
-			value = 50
-			localisation_key = tooltip_electee_character_blessed
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			FROM = { 
-				trait = calvinist_blessed
 			}
 		}
 		additive_modifier = {
@@ -4912,32 +4866,6 @@ monastic_elective_2 = {
 			this_is_spiritual_culture_trigger = yes
 			FROM = { 
 				trait = curious
-			}
-		}
-		additive_modifier = {
-			value = -50
-			localisation_key = tooltip_electee_character_damned
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			FROM = { 
-				trait = calvinist_damned
-			}
-		}
-		additive_modifier = {
-			value = 50
-			localisation_key = tooltip_electee_character_blessed
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = {
-			religion = calvinist
-			religion = neohuguenot
-			religion = genevist
-			}
-			FROM = { 
-				trait = calvinist_blessed
 			}
 		}
 		additive_modifier = {
