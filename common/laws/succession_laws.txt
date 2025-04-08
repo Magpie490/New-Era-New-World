@@ -275,7 +275,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { has_landed_title = d_athos } }
 			NOT = { holder_scope = { has_landed_title = k_athos } }
-			NOT = { holder_scope = { controls_religion = no religion = calvinist higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
 		}
 		allow = {
 			conditional_tooltip = {
@@ -642,7 +642,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
-			NOT = { holder_scope = { controls_religion = no religion = calvinist higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
 		}
 		
 		allow = {
@@ -817,7 +817,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 			NOT = { holder_scope = { government = blorg_government } }
-			NOT = { holder_scope = { controls_religion = no religion = calvinist higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
 		}
 		allow = {
 			conditional_tooltip = {
@@ -2189,16 +2189,7 @@ succession_laws = {
 			OR = {
 				is_landless_type_title = yes
 				holder_scope = { is_theocracy = no }
-				holder_scope = { 
-					has_investiture_trigger = no
-					NAND = {
-						higher_tier_than = BARON
-						OR = {
-						religion = calvinist
-						religion = neohuguenot
-						}
-					}
-				}
+				holder_scope = { has_investiture_trigger = no }
 			}
 			holder_scope = { 
 				is_patrician = no
