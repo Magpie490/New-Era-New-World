@@ -6532,6 +6532,22 @@ add_crusade_trait_effect = {
 		add_trait = crusader_sarnaist
 	}
 	else_if = {
+		limit = { religion = resurrectionist }
+		add_trait = resurrectionist_crusader
+	}
+	else_if = {
+		limit = { religion = triumphant }
+		add_trait = triumphant_crusader
+	}
+	else_if = {
+		limit = { OR = { religion = crow_way religion = crow_way_reformed} }
+		add_trait = raven_child
+	}
+	else_if = {
+		limit = { OR = { religion = kakyosin religion = kakyosin_reformed} }
+		add_trait = kakyosin_crusader
+	}
+	else_if = {
 		limit = { religion_group = oceanic }
 		add_trait = oceanic_crusader
 	}

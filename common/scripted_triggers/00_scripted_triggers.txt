@@ -963,16 +963,20 @@ has_crusade_trait_trigger = {
 		trait = crusader_sarnaist
 	}
 	trigger_else_if = {
-		limit = { is_triumphant_religion_trigger = yes }
+		limit = { religion = triumphant }
 		trait = triumphant_crusader
 	}
 	trigger_else_if = {
-		limit = { is_resurrectionist_religion_trigger = yes }
+		limit = { religion = resurrectionist }
 		trait = resurrectionist_crusader
 	}
 	trigger_else_if = {
 		limit = { OR = { religion = crow_way religion = crow_way_reformed} }
 		trait = raven_child
+	}
+	trigger_else_if = {
+		limit = { OR = { religion = kakyosin religion = kakyosin_reformed} }
+		trait = kakyosin_crusader
 	}
 	trigger_else = {
 		religion_group = oceanic
