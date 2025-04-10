@@ -6492,8 +6492,8 @@ add_crusade_trait_effect = {
 		add_trait = novelist_crusader
 	}
 	else_if = {
-		limit = { religion_openly_maunaxite_or_reformed_trigger = yes }
-		add_trait = maunaxite_crusader
+		limit = { religion_openly_arcadian_or_reformed_trigger = yes }
+		add_trait = arcadian_crusader
 	}
 	else_if = {
 		limit = { religion_openly_maoist_trigger = yes }
@@ -7814,8 +7814,8 @@ join_prev_warrior_lodge_society_effect = {
 		join_society = warrior_lodge_folklorist
 	}
 	else_if = {
-		limit = { PREV = { society_member_of = warrior_lodge_maunaxite } }
-		join_society = warrior_lodge_maunaxite
+		limit = { PREV = { society_member_of = warrior_lodge_arcadian } }
+		join_society = warrior_lodge_arcadian
 	}
 	else_if = {
 		limit = { PREV = { society_member_of = warrior_lodge_bon } }
@@ -10542,9 +10542,9 @@ add_ascetic_trait_effect = {
 					religion = kalikula
 					religion = shaivasiddhanta
 					religion = jain
-					religion = maunaxite_reformed
+					religion = arcadian_reformed
 					religion = koyapunem
-					religion = maunaxite
+					religion = arcadian
 					religion = agamatirta
 				} 
 			}
@@ -10577,9 +10577,9 @@ add_ascetic_trait_effect = {
 					religion = kalikula
 					religion = shaivasiddhanta
 					religion = jain
-					religion = maunaxite_reformed
+					religion = arcadian_reformed
 					religion = koyapunem
-					religion = maunaxite
+					religion = arcadian
 					religion = agamatirta
 				} 
 			}
@@ -13938,7 +13938,7 @@ spawn_elder_effect = {
 					has_religion_feature = religion_feature_celtic2
 					religion = kiratist
 					religion = koyapunem
-					has_religion_feature = religion_feature_maunaxite
+					has_religion_feature = religion_feature_arcadian
 					has_religion_feature = religion_feature_inuit_pagan
 					has_religion_feature = religion_feature_anishinaabe
 					has_religion_feature = religion_feature_celtic
@@ -21158,8 +21158,8 @@ add_warrior_lodge_leader_trait_effect = {
 		warrior_lodge_folklorist = {
 			add_trait = folklorist_leader
 		}
-		warrior_lodge_maunaxite = {
-			add_trait = maunaxite_leader
+		warrior_lodge_arcadian = {
+			add_trait = arcadian_leader
 		}
 		warrior_lodge_novelist = {
 			add_trait = novelist_leader

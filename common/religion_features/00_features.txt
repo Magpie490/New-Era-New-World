@@ -596,7 +596,7 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_patriarchal # Incompatible
 				has_selected_religion_feature = religion_matriarchal # Incompatible
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant	
+				has_selected_religion_feature = religion_feature_arcadian #Redundant	
 				has_selected_religion_feature = religion_feature_starist #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
@@ -707,8 +707,8 @@ religion_doctrine = {
 			NOT = { religion = inuit_pagan_reformed } #Core feature of the religion itself.
 			NOT = { religion = celtic_pagan } #Core feature of the religion itself.
 			NOT = { religion = celtic_pagan_reformed } #Core feature of the religion itself.
-			NOT = { religion = maunaxite } #Core feature of the religion itself.
-			NOT = { religion = maunaxite_reformed } #Core feature of the religion itself.
+			NOT = { religion = arcadian } #Core feature of the religion itself.
+			NOT = { religion = arcadian_reformed } #Core feature of the religion itself.
 		}
 		trigger = {
 			NOR = {
@@ -1030,7 +1030,7 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_matriarchal
 				has_selected_religion_feature = religion_patriarchal
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_bon
 				has_selected_religion_feature = religion_feature_satsana_phi #Redundant
 				trigger_if = {
@@ -1268,7 +1268,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_animistic
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_crow_way
@@ -1353,7 +1353,7 @@ religion_doctrine = {
 		trigger = {
 			religion = sarna_pagan_reformed
 			NOR = {
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 				has_selected_religion_feature = religion_haruspicy #Redundant
 				has_selected_religion_feature = religion_beatification
@@ -2300,17 +2300,17 @@ religion_doctrine = {
 		}
 	}	
 	
-	religion_feature_maunaxite = {
-		picture = GFX_religion_feature_maunaxite
+	religion_feature_arcadian = {
+		picture = GFX_religion_feature_arcadian
 		potential = {
 			has_game_started = yes
-			religion = maunaxite_reformed
+			religion = arcadian_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = maunaxite_reformed
+			religion = arcadian_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_animistic #redundant
 				has_selected_religion_feature = religion_equal #redundant
@@ -2322,7 +2322,8 @@ religion_doctrine = {
 			custom_tooltip = { text = tooltip_religion_feature_land_morale }
 			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
 			custom_tooltip = { text = tooltip_religion_feature_feminist }
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			custom_tooltip = { text = tooltip_religion_feature_monastic }
+			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
 			hidden_tooltip = { 
 				set_unit_modifier = { 
 					land_morale = 0.05
@@ -2334,36 +2335,12 @@ religion_doctrine = {
 				set_men_can_take_consorts = yes
 				set_female_temple_holders = yes
 				set_male_temple_holders = yes
-				set_heir_designation = yes
-				#FROM = { any_demesne_title = { add_law = status_of_women_4 } } 
-			}			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
-	religion_feature_starist = {
-		picture = GFX_religion_feature_astrology
-		potential = {
-			has_game_started = yes
-			religion = starist_pagan_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
+				set_can_retire_to_monastery = yes
 			}
-		}
-		trigger = {
-			religion = starist_pagan_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_monastic #redundant
-				has_selected_religion_feature = religion_meritocratic #redundant
-				has_selected_religion_feature = religion_ritual_sacrifice
+			set_character_modifier = {
+				learning = 2
+				key = "MONASTIC_ATTR_RELIGION"
 			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
-			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
-
 		}
 		ai_will_do = {
 			factor = 50
@@ -2880,7 +2857,7 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = maunaxite
+							religion = arcadian
 						}
 					}
 					OR = {
@@ -2901,7 +2878,7 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = maunaxite
+							religion = arcadian
 						}
 					}
 				}
