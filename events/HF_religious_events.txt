@@ -11913,8 +11913,8 @@ character_event = {
 						ROOT = { religion_openly_folklorist_or_reformed_trigger = no }
 					}
 					AND = {
-						has_province_flag = flag_great_pillar_maunaxite
-						ROOT = { religion_openly_maunaxite_or_reformed_trigger = no }
+						has_province_flag = flag_great_pillar_arcadian
+						ROOT = { religion_openly_arcadian_or_reformed_trigger = no }
 					}
 					AND = {
 						has_province_flag = flag_great_pillar_nousthreskeia
@@ -12069,12 +12069,12 @@ character_event = {
 				}
 				if = { 
 					limit = {
-						location = { has_province_flag = flag_great_pillar_maunaxite }
+						location = { has_province_flag = flag_great_pillar_arcadian }
 					}
 					location = { 
-						clr_province_flag = flag_great_pillar_maunaxite
+						clr_province_flag = flag_great_pillar_arcadian
 					}
-					maunaxite = {
+					arcadian = {
 						religion_authority = {
 							modifier = destroyed_great_pillar
 							years = 10
@@ -12083,7 +12083,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = maunaxite
+								religion = arcadian
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -14738,7 +14738,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 				religion = kiratist
 				religion = koyapunem
-				has_religion_feature = religion_feature_maunaxite
+				has_religion_feature = religion_feature_arcadian
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic2
 				has_religion_feature = religion_feature_sarna
@@ -14756,7 +14756,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 				religion = kiratist
 				religion = koyapunem
-				has_religion_feature = religion_feature_maunaxite
+				has_religion_feature = religion_feature_arcadian
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic2
 				has_religion_feature = religion_feature_sarna
@@ -14783,7 +14783,7 @@ character_event = {
 			has_religion_feature = religion_feature_emmaean
 			religion = kiratist
 				religion = koyapunem
-			has_religion_feature = religion_feature_maunaxite
+			has_religion_feature = religion_feature_arcadian
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic2
 			has_religion_feature = religion_feature_sarna
@@ -14956,7 +14956,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 				religion = kiratist
 				religion = koyapunem
-				has_religion_feature = religion_feature_maunaxite
+				has_religion_feature = religion_feature_arcadian
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic2
 				has_religion_feature = religion_feature_sarna
@@ -14974,7 +14974,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 				religion = kiratist
 				religion = koyapunem
-				has_religion_feature = religion_feature_maunaxite
+				has_religion_feature = religion_feature_arcadian
 				has_religion_feature = religion_feature_inuit_pagan
 				has_religion_feature = religion_feature_celtic2
 				has_religion_feature = religion_feature_sarna
@@ -15357,7 +15357,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 			religion = kiratist
 				religion = koyapunem
-			has_religion_feature = religion_feature_maunaxite
+			has_religion_feature = religion_feature_arcadian
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic2
 			has_religion_feature = religion_feature_sarna
@@ -15392,7 +15392,7 @@ character_event = {
 				has_religion_feature = religion_feature_emmaean
 			religion = kiratist
 				religion = koyapunem
-			has_religion_feature = religion_feature_maunaxite
+			has_religion_feature = religion_feature_arcadian
 			has_religion_feature = religion_feature_inuit_pagan
 			has_religion_feature = religion_feature_celtic2
 			has_religion_feature = religion_feature_sarna
