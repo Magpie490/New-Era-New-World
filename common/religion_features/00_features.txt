@@ -622,7 +622,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_stable
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_moism
+				has_selected_religion_feature = religion_feature_numic
 				has_selected_religion_feature = religion_feature_finnish
 				has_selected_religion_feature = religion_feature_nousthreskeia
 				has_selected_religion_feature = religion_feature_novelist_2
@@ -799,7 +799,7 @@ religion_doctrine = {
 						religion = folklorist
 						religion = inuit_pagan
 						religion = wuist
-						religion = mo_pagan
+						religion = numic
 						religion = bungan_pagan
 						religion = kaharingan_pagan
 						religion = thuyhoa_pagan
@@ -970,7 +970,7 @@ religion_doctrine = {
 						religion = finnish_pagan
 						religion = sarna_pagan
 						religion = wuist
-						religion = mo_pagan
+						religion = numic
 						religion = bungan_pagan
 						religion = kaharingan_pagan
 						religion = thuyhoa_pagan
@@ -1846,17 +1846,17 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_moism = {
-		picture = GFX_religion_feature_moism
+	religion_feature_numic = {
+		picture = GFX_religion_feature_numic
 		potential = {
 			has_game_started = yes
-			religion = mo_pagan_reformed
+			religion = numic_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = mo_pagan_reformed
+			religion = numic_reformed
 			NOR = {
 				has_selected_religion_feature = religion_stable
 				has_selected_religion_feature = religion_meritocratic
