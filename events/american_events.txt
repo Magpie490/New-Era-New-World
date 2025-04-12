@@ -584,3 +584,53 @@ narrative_event = {
 	}
 }
 
+narrative_event = {
+	id = america.41
+	is_triggered_only = yes # on_game_started
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = e_columbia
+	}
+
+	immediate = {
+		e_columbia = {
+			set_variable = { 
+				which = electionStatus 
+				value = 1
+			}
+		}
+	}
+}
+
+character_event = { # If you keep electing the same dynasty a civil war has a higher chance to occur
+	id = america.42
+	is_triggered_only = yes # on_death
+	only_rulers = yes
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = e_columbia
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				current_heir = { dynasty = ROOT }
+			}
+			e_columbia = {
+				change_variable = {
+					which = electionStatus
+					value = 1
+				}
+			}
+			break = yes
+		}
+		e_columbia = {
+			set_variable = {
+				which = electionStatus
+				value = 1
+			}
+		}
+	}
+}

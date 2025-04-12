@@ -596,7 +596,7 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_patriarchal # Incompatible
 				has_selected_religion_feature = religion_matriarchal # Incompatible
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant	
+				has_selected_religion_feature = religion_feature_arcadian #Redundant	
 				has_selected_religion_feature = religion_feature_starist #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
@@ -622,7 +622,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_stable
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_moism
+				has_selected_religion_feature = religion_feature_numic
 				has_selected_religion_feature = religion_feature_finnish
 				has_selected_religion_feature = religion_feature_nousthreskeia
 				has_selected_religion_feature = religion_feature_novelist_2
@@ -707,8 +707,8 @@ religion_doctrine = {
 			NOT = { religion = inuit_pagan_reformed } #Core feature of the religion itself.
 			NOT = { religion = celtic_pagan } #Core feature of the religion itself.
 			NOT = { religion = celtic_pagan_reformed } #Core feature of the religion itself.
-			NOT = { religion = maunaxite } #Core feature of the religion itself.
-			NOT = { religion = maunaxite_reformed } #Core feature of the religion itself.
+			NOT = { religion = arcadian } #Core feature of the religion itself.
+			NOT = { religion = arcadian_reformed } #Core feature of the religion itself.
 		}
 		trigger = {
 			NOR = {
@@ -717,7 +717,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_folklorist # Redundant Doctrine
 				has_selected_religion_feature = religion_feature_hellenic #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
-				has_selected_religion_feature = religion_feature_thuyhoa #Redundant
+				has_selected_religion_feature = religion_feature_blessing_way #Redundant
 				has_selected_religion_feature = religion_feature_crow_way
 			}
 		}
@@ -799,10 +799,10 @@ religion_doctrine = {
 						religion = folklorist
 						religion = inuit_pagan
 						religion = wuist
-						religion = mo_pagan
+						religion = numic
 						religion = bungan_pagan
 						religion = kaharingan_pagan
-						religion = thuyhoa_pagan
+						religion = blessing_way
 						religion = satsana_pi_pagan
 					}
 				}
@@ -814,8 +814,8 @@ religion_doctrine = {
 		potential = {
 			NOT = { religion = taoist } #Core feature of the religion itself.
 			NOT = { religion = el_shaddai } #Core feature of the religion itself.
-			NOT = { religion = thuyhoa_pagan } #Core feature of the religion itself.
-			NOT = { religion = thuyhoa_pagan_reformed } #Core feature of the religion itself.
+			NOT = { religion = blessing_way } #Core feature of the religion itself.
+			NOT = { religion = blessing_way_reformed } #Core feature of the religion itself.
 		}
 		trigger = {
 		}
@@ -970,10 +970,10 @@ religion_doctrine = {
 						religion = finnish_pagan
 						religion = sarna_pagan
 						religion = wuist
-						religion = mo_pagan
+						religion = numic
 						religion = bungan_pagan
 						religion = kaharingan_pagan
-						religion = thuyhoa_pagan
+						religion = blessing_way
 						religion = satsana_pi_pagan
 					}
 				}
@@ -1030,7 +1030,7 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_matriarchal
 				has_selected_religion_feature = religion_patriarchal
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_bon
 				has_selected_religion_feature = religion_feature_satsana_phi #Redundant
 				trigger_if = {
@@ -1268,7 +1268,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_animistic
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_crow_way
@@ -1353,7 +1353,7 @@ religion_doctrine = {
 		trigger = {
 			religion = sarna_pagan_reformed
 			NOR = {
-				has_selected_religion_feature = religion_feature_maunaxite #Redundant
+				has_selected_religion_feature = religion_feature_arcadian #Redundant
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant
 				has_selected_religion_feature = religion_haruspicy #Redundant
 				has_selected_religion_feature = religion_beatification
@@ -1846,17 +1846,17 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_moism = {
-		picture = GFX_religion_feature_moism
+	religion_feature_numic = {
+		picture = GFX_religion_feature_numic
 		potential = {
 			has_game_started = yes
-			religion = mo_pagan_reformed
+			religion = numic_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = mo_pagan_reformed
+			religion = numic_reformed
 			NOR = {
 				has_selected_religion_feature = religion_stable
 				has_selected_religion_feature = religion_meritocratic
@@ -1898,6 +1898,55 @@ religion_doctrine = {
 		}
 		ai_will_do = {
 			factor = 50
+		}
+	}
+	
+	religion_feature_raven_tales_1 = { # Combines Warmongering with Unrelenting
+		picture = GFX_religion_feature_aztec # placeholder
+		potential = {
+			has_game_started = yes
+			religion = raven_tales_reformed
+		}
+		trigger = {
+			religion = raven_tales_reformed
+			NOT = { has_selected_religion_feature = religion_warlike }
+			NOT = { has_selected_religion_feature = religion_relentless }
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_adventuring }
+			custom_tooltip = { text = tooltip_religion_feature_war_levies }
+			custom_tooltip = { text = tooltip_religion_feature_crusade }
+			custom_tooltip = { text = tooltip_religion_feature_warlike }
+			custom_tooltip = { text = tooltip_religion_feature_prestige_loss }
+			hidden_tooltip = {
+				set_pacifist = no
+				enable_prepared_invasion = yes
+				set_allow_looting = yes
+				set_hard_to_convert = no
+				set_peace_piety_gain = 0
+				set_raised_vassal_opinion_loss = no
+				set_piety_loss_for_attacking_same_religion = no
+				set_peace_prestige_loss = yes
+				set_convert_other_groups = 0
+				set_convert_same_group = 1
+				set_ai_aggression = 2.0
+				set_ignores_defensive_attrition = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "RELENTLESS_RELIGION"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25 #unlikely
 		}
 	}
 	religion_feature_finnish = {
@@ -2251,17 +2300,17 @@ religion_doctrine = {
 		}
 	}	
 	
-	religion_feature_maunaxite = {
-		picture = GFX_religion_feature_maunaxite
+	religion_feature_arcadian = {
+		picture = GFX_religion_feature_arcadian
 		potential = {
 			has_game_started = yes
-			religion = maunaxite_reformed
+			religion = arcadian_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = maunaxite_reformed
+			religion = arcadian_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_animistic #redundant
 				has_selected_religion_feature = religion_equal #redundant
@@ -2273,7 +2322,8 @@ religion_doctrine = {
 			custom_tooltip = { text = tooltip_religion_feature_land_morale }
 			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
 			custom_tooltip = { text = tooltip_religion_feature_feminist }
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			custom_tooltip = { text = tooltip_religion_feature_monastic }
+			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
 			hidden_tooltip = { 
 				set_unit_modifier = { 
 					land_morale = 0.05
@@ -2285,36 +2335,12 @@ religion_doctrine = {
 				set_men_can_take_consorts = yes
 				set_female_temple_holders = yes
 				set_male_temple_holders = yes
-				set_heir_designation = yes
-				#FROM = { any_demesne_title = { add_law = status_of_women_4 } } 
-			}			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
-	religion_feature_starist = {
-		picture = GFX_religion_feature_astrology
-		potential = {
-			has_game_started = yes
-			religion = starist_pagan_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
+				set_can_retire_to_monastery = yes
 			}
-		}
-		trigger = {
-			religion = starist_pagan_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_monastic #redundant
-				has_selected_religion_feature = religion_meritocratic #redundant
-				has_selected_religion_feature = religion_ritual_sacrifice
+			set_character_modifier = {
+				learning = 2
+				key = "MONASTIC_ATTR_RELIGION"
 			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
-			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_learning_boost }
-
 		}
 		ai_will_do = {
 			factor = 50
@@ -2500,60 +2526,38 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_thuyhoa = {
-		picture = GFX_religion_feature_thuyhoa
+	religion_feature_blessing_way = {
+		picture = GFX_religion_feature_blessing_way
 		potential = {
 			has_game_started = yes
-			religion = thuyhoa_pagan_reformed
+			religion = blessing_way_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = thuyhoa_pagan_reformed
+			religion = blessing_way_reformed
 			NOR = { 
-				has_selected_religion_feature = religion_defensive #redundant
 				has_selected_religion_feature = religion_syncretic #redundant
 			}
 		}
 		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_defensive }
+			custom_tooltip = { text = tooltip_religion_feature_feminist }
 			custom_tooltip = { text = tooltip_religion_feature_hard_conversion }
 			custom_tooltip = { text = tooltip_religion_feature_syncretic }
 			custom_tooltip = { text = tooltip_religion_feature_meliorism }
+			custom_tooltip = { text = tooltip_religion_feature_alchemy }
 			hidden_tooltip = {
-				set_pacifist = no
-				set_peace_piety_gain = 0
-				set_raised_vassal_opinion_loss = yes
-				set_piety_loss_for_attacking_same_religion = no
-				set_peace_prestige_loss = no
-				set_allow_looting = yes
+				set_allows_matrilineal_marriage = yes
+				set_feminist = yes
+				set_women_can_take_consorts = yes
+				set_men_can_take_consorts = yes
+				set_female_temple_holders = yes
+				set_male_temple_holders = yes
 				set_hard_to_convert = yes
 				set_convert_other_groups = 1
 				set_convert_same_group = 1
 				set_ai_aggression = 0.5
-				set_unit_modifier = {		
-					garrison_size = 0.3
-					levy_size = 0.2
-					
-					key = "DEF_RELIGION"
-				}
-				set_unit_home_modifier = {
-					land_morale = 0.8
-					light_infantry_defensive = 0.8
-					heavy_infantry_defensive = 0.8
-					pikemen_defensive = 0.8
-					light_cavalry_defensive = 0.8
-					knights_defensive = 0.8
-					archers_defensive = 0.8
-					horse_archers_defensive = 0.8
-					camel_cavalry_defensive = 0.8
-					war_elephants_defensive = 0.8
-					
-					garrison_size = 0.4
-					
-					key = "DEF_RELIGION_HOME_TERRITORY"
-				}
 			}
 		}
 		ai_will_do = {
@@ -2831,7 +2835,7 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = maunaxite
+							religion = arcadian
 						}
 					}
 					OR = {
@@ -2852,7 +2856,7 @@ religion_leadership = {
 						OR = {
 							religion = finnish_pagan
 							religion = folklorist
-							religion = maunaxite
+							religion = arcadian
 						}
 					}
 				}

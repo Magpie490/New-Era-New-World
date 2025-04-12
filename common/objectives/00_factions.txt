@@ -10255,7 +10255,6 @@ faction_independence = {
 				}
 			}
 			OR = {
-				religion = neohuguenot
 				religion = penitente
 				religion = sarvodaya
 				religion = risala
@@ -17763,6 +17762,76 @@ faction_powerful_vassal_takeover = {
 			factor = 4.0
 			FROM = { trait = ambitious }
 		}
+		modifier = {
+			factor = 1.5
+			FROM = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			FROM = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 4
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			FROM = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			FROM = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 6
+					}
+				}
+			}
+		}
 	}
 	
 	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
@@ -18315,6 +18384,76 @@ faction_powerful_vassal_takeover = {
 		modifier = {
 			factor = 4.0
 			trait = ambitious
+		}
+		modifier = {
+			factor = 1.5
+			ROOT = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			ROOT = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 4
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			ROOT = {
+				liege = {
+					has_landed_title = e_columbia
+				}
+				e_columbia = {
+					check_variable = {
+						which = electionStatus
+						value >= 6
+					}
+				}
+			}
 		}
 	}
 	

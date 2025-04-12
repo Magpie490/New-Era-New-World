@@ -8412,18 +8412,18 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	
-	tb_culture_hupa_1 = {
-		desc = ca_culture_hupa_1_desc
+	tb_culture_pacific_athabaskan_1 = {
+		desc = ca_culture_pacific_athabaskan_1_desc
 		potential = {
 			OR = {
-				culture = hupa
-				has_building = tb_culture_hupa_1
+				culture = pacific_athabaskan
+				has_building = tb_culture_pacific_athabaskan_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
@@ -8431,7 +8431,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
@@ -8444,19 +8444,19 @@ tribal = {
 		
 		extra_tech_building_start = 0.8
 	}
-	tb_culture_hupa_2 = {
-		desc = ca_culture_hupa_1_desc
+	tb_culture_pacific_athabaskan_2 = {
+		desc = ca_culture_pacific_athabaskan_1_desc
 		potential = {
 			OR = {
-				culture = hupa
-				has_building = tb_culture_hupa_1
-				has_building = tb_culture_hupa_2
+				culture = pacific_athabaskan
+				has_building = tb_culture_pacific_athabaskan_1
+				has_building = tb_culture_pacific_athabaskan_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
@@ -8464,11 +8464,11 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
-		upgrades_from = tb_culture_hupa_1
+		upgrades_from = tb_culture_pacific_athabaskan_1
 		prestige_cost = 200
 		build_time = 547
 		pikemen = 30
@@ -8477,20 +8477,20 @@ tribal = {
 		
 		extra_tech_building_start = 0.8
 	}
-	tb_culture_hupa_3 = {
-		desc = ca_culture_hupa_1_desc
+	tb_culture_pacific_athabaskan_3 = {
+		desc = ca_culture_pacific_athabaskan_1_desc
 		potential = {
 			OR = {
-				culture = hupa
-				has_building = tb_culture_hupa_1
-				has_building = tb_culture_hupa_2
-				has_building = tb_culture_hupa_3
+				culture = pacific_athabaskan
+				has_building = tb_culture_pacific_athabaskan_1
+				has_building = tb_culture_pacific_athabaskan_2
+				has_building = tb_culture_pacific_athabaskan_3
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
@@ -8498,36 +8498,36 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
-		upgrades_from = tb_culture_hupa_2
+		upgrades_from = tb_culture_pacific_athabaskan_2
 		prestige_cost = 300
 		build_time = 730
 		pikemen = 45
 		pikemen_offensive = 0.15
 		ai_creation_factor = 99
 		
-		convert_to_castle = ca_culture_hupa_1
+		convert_to_castle = ca_culture_pacific_athabaskan_1
 		
 		extra_tech_building_start = 0.8
 	}
-	tb_culture_hupa_4 = {
-		desc = ca_culture_hupa_1_desc
+	tb_culture_pacific_athabaskan_4 = {
+		desc = ca_culture_pacific_athabaskan_1_desc
 		potential = {
 			OR = {
-				culture = hupa
-				has_building = tb_culture_hupa_1
-				has_building = tb_culture_hupa_2
-				has_building = tb_culture_hupa_3
-				has_building = tb_culture_hupa_4
+				culture = pacific_athabaskan
+				has_building = tb_culture_pacific_athabaskan_1
+				has_building = tb_culture_pacific_athabaskan_2
+				has_building = tb_culture_pacific_athabaskan_3
+				has_building = tb_culture_pacific_athabaskan_4
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
@@ -8535,18 +8535,18 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-				culture = hupa
+				culture = pacific_athabaskan
 				}
 			}
 		}
-		upgrades_from = tb_culture_hupa_3
+		upgrades_from = tb_culture_pacific_athabaskan_3
 		prestige_cost = 400
 		build_time = 1095
 		pikemen = 60
 		pikemen_offensive = 0.15
 		ai_creation_factor = 98
 		
-		convert_to_castle = ca_culture_hupa_2
+		convert_to_castle = ca_culture_pacific_athabaskan_2
 		
 		extra_tech_building_start = 0.8
 	}
@@ -8849,6 +8849,880 @@ tribal = {
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_karuk_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_sahaptian_1 = {
+		desc = ca_culture_sahaptian_1_desc
+		potential = {
+			OR = {
+				culture_group = sahaptian
+				has_building = tb_culture_sahaptian_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		knights = 30
+		knights_offensive = 0.075
+		knights_morale = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_sahaptian_2 = {
+		desc = ca_culture_sahaptian_1_desc
+		potential = {
+			OR = {
+				culture_group = sahaptian
+				has_building = tb_culture_sahaptian_1
+				has_building = tb_culture_sahaptian_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		upgrades_from = tb_culture_sahaptian_1
+		prestige_cost = 200
+		build_time = 547
+		knights = 30
+		knights_offensive = 0.075
+		knights_morale = 0.075
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_sahaptian_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_sahaptian_3 = {
+		desc = ca_culture_sahaptian_1_desc
+		potential = {
+			OR = {
+				culture_group = sahaptian
+				has_building = tb_culture_sahaptian_1
+				has_building = tb_culture_sahaptian_2
+				has_building = tb_culture_sahaptian_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		upgrades_from = tb_culture_sahaptian_2
+		prestige_cost = 300
+		build_time = 730
+		knights = 45
+		knights_offensive = 0.075
+		knights_morale = 0.075
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_sahaptian_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_sahaptian_4 = {
+		desc = ca_culture_sahaptian_1_desc
+		potential = {
+			OR = {
+				culture_group = sahaptian
+				has_building = tb_culture_sahaptian_1
+				has_building = tb_culture_sahaptian_2
+				has_building = tb_culture_sahaptian_3
+				has_building = tb_culture_sahaptian_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = sahaptian
+				}
+			}
+		}
+		upgrades_from = tb_culture_sahaptian_3
+		prestige_cost = 400
+		build_time = 1095
+		knights = 60
+		knights_offensive = 0.075
+		knights_morale = 0.075
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_sahaptian_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_chinookan_1 = {
+		desc = ca_culture_chinookan_1_desc
+		potential = {
+			OR = {
+				culture_group = chinookan
+				has_building = tb_culture_chinookan_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers = 30
+		archers_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_chinookan_2 = {
+		desc = ca_culture_chinookan_1_desc
+		potential = {
+			OR = {
+				culture_group = chinookan
+				has_building = tb_culture_chinookan_1
+				has_building = tb_culture_chinookan_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		upgrades_from = tb_culture_chinookan_1
+		prestige_cost = 200
+		build_time = 547
+		archers = 30
+		archers_morale = 0.15
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_chinookan_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_chinookan_3 = {
+		desc = ca_culture_chinookan_1_desc
+		potential = {
+			OR = {
+				culture_group = chinookan
+				has_building = tb_culture_chinookan_1
+				has_building = tb_culture_chinookan_2
+				has_building = tb_culture_chinookan_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		upgrades_from = tb_culture_chinookan_2
+		prestige_cost = 300
+		build_time = 730
+		archers = 45
+		archers_morale = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_chinookan_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_chinookan_4 = {
+		desc = ca_culture_chinookan_1_desc
+		potential = {
+			OR = {
+				culture_group = chinookan
+				has_building = tb_culture_chinookan_1
+				has_building = tb_culture_chinookan_2
+				has_building = tb_culture_chinookan_3
+				has_building = tb_culture_chinookan_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = chinookan
+				}
+			}
+		}
+		upgrades_from = tb_culture_chinookan_3
+		prestige_cost = 400
+		build_time = 1095
+		archers = 60
+		archers_morale = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_chinookan_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_wakashan_1 = {
+		desc = ca_culture_wakashan_1_desc
+		potential = {
+			OR = {
+				culture_group = wakashan
+				has_building = tb_culture_wakashan_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		pikemen = 30
+		pikemen_offensive = 0.075
+		pikemen_morale = 0.075
+		archers = 15
+		archers_offensive = 0.075
+		archers_morale = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_wakashan_2 = {
+		desc = ca_culture_wakashan_1_desc
+		potential = {
+			OR = {
+				culture_group = wakashan
+				has_building = tb_culture_wakashan_1
+				has_building = tb_culture_wakashan_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		upgrades_from = tb_culture_wakashan_1
+		prestige_cost = 200
+		build_time = 547
+		pikemen = 30
+		pikemen_offensive = 0.075
+		pikemen_morale = 0.075
+		archers = 15
+		archers_offensive = 0.075
+		archers_morale = 0.075
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_wakashan_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_wakashan_3 = {
+		desc = ca_culture_wakashan_1_desc
+		potential = {
+			OR = {
+				culture_group = wakashan
+				has_building = tb_culture_wakashan_1
+				has_building = tb_culture_wakashan_2
+				has_building = tb_culture_wakashan_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		upgrades_from = tb_culture_wakashan_2
+		prestige_cost = 300
+		build_time = 730
+		pikemen = 45
+		pikemen_offensive = 0.075
+		pikemen_morale = 0.075
+		archers = 30
+		archers_offensive = 0.075
+		archers_morale = 0.075
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_wakashan_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_wakashan_4 = {
+		desc = ca_culture_wakashan_1_desc
+		potential = {
+			OR = {
+				culture_group = wakashan
+				has_building = tb_culture_wakashan_1
+				has_building = tb_culture_wakashan_2
+				has_building = tb_culture_wakashan_3
+				has_building = tb_culture_wakashan_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = wakashan
+				}
+			}
+		}
+		upgrades_from = tb_culture_wakashan_3
+		prestige_cost = 400
+		build_time = 1095
+		pikemen = 60
+		pikemen_offensive = 0.075
+		pikemen_morale = 0.075
+		archers = 45
+		archers_offensive = 0.075
+		archers_morale = 0.075
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_wakashan_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_tsimshianic_1 = {
+		desc = ca_culture_tsimshianic_1_desc
+		potential = {
+			OR = {
+				culture_group = tsimshianic
+				has_building = tb_culture_tsimshianic_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		light_infantry = 30
+		light_infantry_defensive = 0.15
+		archers = 15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tsimshianic_2 = {
+		desc = ca_culture_tsimshianic_1_desc
+		potential = {
+			OR = {
+				culture_group = tsimshianic
+				has_building = tb_culture_tsimshianic_1
+				has_building = tb_culture_tsimshianic_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		upgrades_from = tb_culture_tsimshianic_1
+		prestige_cost = 200
+		build_time = 547
+		light_infantry = 30
+		light_infantry_defensive = 0.15
+		archers = 15
+		archers_defensive = 0.15
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_tsimshianic_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tsimshianic_3 = {
+		desc = ca_culture_tsimshianic_1_desc
+		potential = {
+			OR = {
+				culture_group = tsimshianic
+				has_building = tb_culture_tsimshianic_1
+				has_building = tb_culture_tsimshianic_2
+				has_building = tb_culture_tsimshianic_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		upgrades_from = tb_culture_tsimshianic_2
+		prestige_cost = 300
+		build_time = 730
+		light_infantry = 45
+		light_infantry_defensive = 0.15
+		archers = 30
+		archers_defensive = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_tsimshianic_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tsimshianic_4 = {
+		desc = ca_culture_tsimshianic_1_desc
+		potential = {
+			OR = {
+				culture_group = tsimshianic
+				has_building = tb_culture_tsimshianic_1
+				has_building = tb_culture_tsimshianic_2
+				has_building = tb_culture_tsimshianic_3
+				has_building = tb_culture_tsimshianic_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture_group = tsimshianic
+				}
+			}
+		}
+		upgrades_from = tb_culture_tsimshianic_3
+		prestige_cost = 400
+		build_time = 1095
+		light_infantry = 60
+		light_infantry_defensive = 0.15
+		archers = 45
+		archers_defensive = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_tsimshianic_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_tlingit_1 = {
+		desc = ca_culture_tlingit_1_desc
+		potential = {
+			OR = {
+				culture = tlingit
+				has_building = tb_culture_tlingit_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		pikemen = 30
+		pikemen_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tlingit_2 = {
+		desc = ca_culture_tlingit_1_desc
+		potential = {
+			OR = {
+				culture = tlingit
+				has_building = tb_culture_tlingit_1
+				has_building = tb_culture_tlingit_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		upgrades_from = tb_culture_tlingit_1
+		prestige_cost = 200
+		build_time = 547
+		pikemen = 30
+		pikemen_morale = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tlingit_3 = {
+		desc = ca_culture_tlingit_1_desc
+		potential = {
+			OR = {
+				culture = tlingit
+				has_building = tb_culture_tlingit_1
+				has_building = tb_culture_tlingit_2
+				has_building = tb_culture_tlingit_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		upgrades_from = tb_culture_tlingit_2
+		prestige_cost = 300
+		build_time = 730
+		pikemen = 45
+		pikemen_morale = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_tlingit_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_tlingit_4 = {
+		desc = ca_culture_tlingit_1_desc
+		potential = {
+			OR = {
+				culture = tlingit
+				has_building = tb_culture_tlingit_1
+				has_building = tb_culture_tlingit_2
+				has_building = tb_culture_tlingit_3
+				has_building = tb_culture_tlingit_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = tlingit
+				}
+			}
+		}
+		upgrades_from = tb_culture_tlingit_3
+		prestige_cost = 400
+		build_time = 1095
+		pikemen = 60
+		pikemen_morale = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_tlingit_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_haida_1 = {
+		desc = ca_culture_haida_1_desc
+		potential = {
+			OR = {
+				culture = haida
+				has_building = tb_culture_haida_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers = 30
+		archers_offensive = 0.1
+		archers_morale = 0.05
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_haida_2 = {
+		desc = ca_culture_haida_1_desc
+		potential = {
+			OR = {
+				culture = haida
+				has_building = tb_culture_haida_1
+				has_building = tb_culture_haida_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		upgrades_from = tb_culture_haida_1
+		prestige_cost = 200
+		build_time = 547
+		archers = 30
+		archers_offensive = 0.1
+		archers_morale = 0.05
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_haida_3 = {
+		desc = ca_culture_haida_1_desc
+		potential = {
+			OR = {
+				culture = haida
+				has_building = tb_culture_haida_1
+				has_building = tb_culture_haida_2
+				has_building = tb_culture_haida_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		upgrades_from = tb_culture_haida_2
+		prestige_cost = 300
+		build_time = 730
+		archers = 45
+		archers_offensive = 0.1
+		archers_morale = 0.05
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_haida_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_haida_4 = {
+		desc = ca_culture_haida_1_desc
+		potential = {
+			OR = {
+				culture = haida
+				has_building = tb_culture_haida_1
+				has_building = tb_culture_haida_2
+				has_building = tb_culture_haida_3
+				has_building = tb_culture_haida_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = haida
+				}
+			}
+		}
+		upgrades_from = tb_culture_haida_3
+		prestige_cost = 400
+		build_time = 1095
+		archers = 60
+		archers_offensive = 0.1
+		archers_morale = 0.05
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_haida_2
 		
 		extra_tech_building_start = 0.8
 	}
@@ -13436,6 +14310,169 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	
+	tb_culture_pnw_camel_1 = {
+		desc = ca_culture_pnw_camel_1_desc
+		potential = {
+			OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				has_building = tb_culture_pnw_camel_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		camel_cavalry = 15
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pnw_camel_2 = {
+		desc = ca_culture_pnw_camel_1_desc
+		potential = {
+			OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				has_building = tb_culture_pnw_camel_1
+				has_building = tb_culture_pnw_camel_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		upgrades_from = tb_culture_pnw_camel_1
+		prestige_cost = 200
+		build_time = 547
+		camel_cavalry = 20
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		convert_to_castle = ca_culture_pnw_camel_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pnw_camel_3 = {
+		desc = ca_culture_pnw_camel_1_desc
+		potential = {
+			OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				has_building = tb_culture_pnw_camel_1
+				has_building = tb_culture_pnw_camel_2
+				has_building = tb_culture_pnw_camel_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		upgrades_from = tb_culture_pnw_camel_2
+		prestige_cost = 300
+		build_time = 730
+		camel_cavalry = 25
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pnw_camel_4 = {
+		desc = ca_culture_pnw_camel_1_desc
+		potential = {
+			OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				has_building = tb_culture_pnw_camel_1
+				has_building = tb_culture_pnw_camel_2
+				has_building = tb_culture_pnw_camel_3
+				has_building = tb_culture_pnw_camel_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = cascasian
+				culture_group = west_coaster
+				culture_group = salishan
+				}
+			}
+		}
+		upgrades_from = tb_culture_pnw_camel_3
+		prestige_cost = 400
+		build_time = 1095
+		camel_cavalry = 30
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		convert_to_castle = ca_culture_pnw_camel_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
 	tb_culture_boston_1 = {
 		desc = ca_culture_boston_1_desc
 		potential = {
@@ -15322,6 +16359,284 @@ tb_culture_goldengater_1 = {
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_neo-latin_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_doukhobors_1 = {
+		desc = ca_culture_doukhobors_1_desc
+		potential = {
+			OR = {
+				culture = doukhobors
+				has_building = tb_culture_doukhobors_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		heavy_infantry = 30
+		heavy_infantry_morale = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_doukhobors_2 = {
+		desc = ca_culture_doukhobors_1_desc
+		potential = {
+			OR = {
+				culture = doukhobors
+				has_building = tb_culture_doukhobors_1
+				has_building = tb_culture_doukhobors_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		upgrades_from = tb_culture_doukhobors_1
+		prestige_cost = 200
+		build_time = 547
+		heavy_infantry = 30
+		heavy_infantry_morale = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_doukhobors_3 = {
+		desc = ca_culture_doukhobors_1_desc
+		potential = {
+			OR = {
+				culture = doukhobors
+				has_building = tb_culture_doukhobors_1
+				has_building = tb_culture_doukhobors_2
+				has_building = tb_culture_doukhobors_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		upgrades_from = tb_culture_doukhobors_2
+		prestige_cost = 300
+		build_time = 730
+		heavy_infantry = 45
+		heavy_infantry_morale = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_doukhobors_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_doukhobors_4 = {
+		desc = ca_culture_doukhobors_1_desc
+		potential = {
+			OR = {
+				culture = doukhobors
+				has_building = tb_culture_doukhobors_1
+				has_building = tb_culture_doukhobors_2
+				has_building = tb_culture_doukhobors_3
+				has_building = tb_culture_doukhobors_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = doukhobors
+				}
+			}
+		}
+		upgrades_from = tb_culture_doukhobors_3
+		prestige_cost = 400
+		build_time = 1095
+		heavy_infantry = 60
+		heavy_infantry_morale = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_doukhobors_2
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	tb_culture_alaskan_1 = {
+		desc = ca_culture_alaskan_1_desc
+		potential = {
+			OR = {
+				culture = alaskan
+				has_building = tb_culture_alaskan_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_alaskan_2 = {
+		desc = ca_culture_alaskan_1_desc
+		potential = {
+			OR = {
+				culture = alaskan
+				has_building = tb_culture_alaskan_1
+				has_building = tb_culture_alaskan_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		upgrades_from = tb_culture_alaskan_1
+		prestige_cost = 200
+		build_time = 547
+		heavy_infantry = 30
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_alaskan_3 = {
+		desc = ca_culture_alaskan_1_desc
+		potential = {
+			OR = {
+				culture = alaskan
+				has_building = tb_culture_alaskan_1
+				has_building = tb_culture_alaskan_2
+				has_building = tb_culture_alaskan_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		upgrades_from = tb_culture_alaskan_2
+		prestige_cost = 300
+		build_time = 730
+		heavy_infantry = 45
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 99
+		
+		convert_to_castle = ca_culture_alaskan_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_alaskan_4 = {
+		desc = ca_culture_alaskan_1_desc
+		potential = {
+			OR = {
+				culture = alaskan
+				has_building = tb_culture_alaskan_1
+				has_building = tb_culture_alaskan_2
+				has_building = tb_culture_alaskan_3
+				has_building = tb_culture_alaskan_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+				culture = alaskan
+				}
+			}
+		}
+		upgrades_from = tb_culture_alaskan_3
+		prestige_cost = 400
+		build_time = 1095
+		heavy_infantry = 60
+		heavy_infantry_offensive = 0.15
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_alaskan_2
 		
 		extra_tech_building_start = 0.8
 	}

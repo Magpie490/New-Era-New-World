@@ -228,16 +228,16 @@ tribal = {
 		ai_creation_factor = 92
 		add_number_to_name = no
 	}
-	tb_great_pillar_maunaxite = {
-		desc = tb_great_pillar_maunaxite_desc
+	tb_great_pillar_arcadian = {
+		desc = tb_great_pillar_arcadian_desc
 		potential = { 
-			location = { has_province_flag = flag_great_pillar_maunaxite } 
+			location = { has_province_flag = flag_great_pillar_arcadian } 
 			FROM = { #Owner and his liege must be of the founding religion, otherwise the building becomes inactive.
 				is_tribal = yes 
-				religion = maunaxite
+				religion = arcadian
 				liege = { 
 					is_tribal = yes 
-					religion = maunaxite
+					religion = arcadian
 				} 
 			}
 		}
@@ -252,17 +252,17 @@ tribal = {
 		ai_creation_factor = 92
 		add_number_to_name = no
 	}
-	tb_great_pillar_maunaxite_empty = { #Switch to the one giving no bonus if under infidel control.
-		desc = tb_great_pillar_maunaxite_empty_desc
+	tb_great_pillar_arcadian_empty = { #Switch to the one giving no bonus if under infidel control.
+		desc = tb_great_pillar_arcadian_empty_desc
 		potential = { 
-			location = { has_province_flag = flag_great_pillar_maunaxite } 
+			location = { has_province_flag = flag_great_pillar_arcadian } 
 			NOT = { 
 				FROM = { 
 					is_tribal = yes 
-					religion = maunaxite
+					religion = arcadian
 					liege = { 
 						is_tribal = yes 
-						religion = maunaxite
+						religion = arcadian
 					}
 				}
 			} 

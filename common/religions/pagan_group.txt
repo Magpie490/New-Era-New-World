@@ -304,6 +304,7 @@ pagan_group = {
 		intermarry = illustrious
 		intermarry = raven_tales
 		intermarry = raven_tales_reformed
+		intermarry = arcadian_reformed
 		intermarry = arcadian
 		intermarry = sun_dance
 		intermarry = dreamer
@@ -377,6 +378,7 @@ pagan_group = {
 		intermarry = illustrious
 		intermarry = raven_tales
 		intermarry = raven_tales_reformed
+		intermarry = arcadian_reformed
 		intermarry = arcadian
 		intermarry = sun_dance
 		intermarry = dreamer
@@ -613,6 +615,56 @@ pagan_group = {
 		intermarry = taalawsohu_reformed
 		intermarry = raven_tales_reformed
 	}
+	arcadian_reformed = {
+		graphical_culture = buddhistgfx
+
+		icon = 208
+		heresy_icon = 209
+		
+		color = { 60 193 95 }
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+	
+		high_god_name = GOD_THE_HORNED_GOD
+
+		god_names = {
+			GOD_THE_HORNED_GOD GOD_PAN GOD_HERMES GOD_PUSHAN GOD_DIONYSUS GOD_THE_CHINOOKS GOD_THE_SATYRS GOD_THE_DRYADS GOD_THE_SPIRITS
+		}
+
+		evil_god_names = {
+			GOD_THE_MAN GOD_THE_ROT GOD_THE_INDUSTRY_DEVILS THE_DARK_SPIRITS
+		}
+		
+		character_modifier = {
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LOST_ARCADIA
+		priest_title = MAGE
+		piety_name = MAGICK
+		
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		
+		#religious_clothing_head = 15
+		#religious_clothing_priest = 15
+		intermarry = peyotist
+		intermarry = oceanic
+		intermarry = arcadian_reformed
+		intermarry = arcadian
+		intermarry = aurorean
+		intermarry = aurorean_reformed
+		intermarry = waashat
+		intermarry = taalawsohu
+		intermarry = taalawsohu_reformed
+		intermarry = raven_tales
+
+	}
 	arcadian = {
 		graphical_culture = buddhistgfx
 		icon = 186
@@ -643,21 +695,15 @@ pagan_group = {
 		priest_title = MAGE
 		piety_name = MAGICK
 		
-		women_can_take_consorts = yes
-		max_consorts = 3
-		allow_rivermovement = yes		
-		can_grant_divorce = yes
-		can_grant_claim = yes
-		can_excommunicate = yes
-		can_retire_to_monastery = yes
-		feminist = yes
+		allow_rivermovement = yes
 		allow_looting = yes
-		seafarer = yes
-		female_temple_holders = yes
-		priests_can_inherit = no
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
 		priests_can_marry = yes
-		autocephaly = yes
-		divine_blood = yes
+		can_demand_religious_conversion = no
+		
+		reformed = arcadian_reformed
 		
 		aggression = 1.2 # AI aggression factor
 		
@@ -671,6 +717,8 @@ pagan_group = {
 		intermarry = ibadi
 		intermarry = shinto
 		intermarry = oceanic
+		intermarry = arcadian_reformed
+		intermarry = arcadian
 		intermarry = aurorean
 		intermarry = aurorean_reformed
 		intermarry = dianic
@@ -3078,135 +3126,6 @@ pagan_group = {
 		
 		religious_clothing_head = 14
 		religious_clothing_priest = 3
-		can_demand_religious_conversion = no
-	}
-	thuyhoa_pagan_reformed = {
-		graphical_culture = reformedpagangfx
-		alternate_start = { always = no }
-		secondary_event_pictures = finnish_pagan
-		interface_skin = { pagan_interface }
-
-		icon = 184
-		heresy_icon = 185
-		
-		color = { 252 125 180 }
-		
-		high_god_name = GOD_XA
-		
-		god_names = {
-			GOD_SDET_FAI GOD_SDET_NAM 
-		}
-		evil_god_names = {
-			GOD_THE_WEST GOD_YELLOW_EMP GOD_RED_EMP
-		}
-
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
-		priest_title = PUTAO
-		
-		allow_rivermovement = yes
-		priests_can_marry = yes
-		priests_can_inherit = yes
-		female_temple_holders = yes
-		defensive_attrition = yes
-		ignores_defensive_attrition = yes
-		allow_looting = yes
-		max_consorts = 3
-		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		
-		#unit_modifier = {
-		#	garrison_size = 0.4
-		#	
-		#	key = "DEF_RELIGION"
-		#}
-		#unit_home_modifier = {
-		#	land_morale = 0.8
-		#	light_infantry_defensive = 0.8
-		#	heavy_infantry_defensive = 0.8
-		#	pikemen_defensive = 0.8
-		#	light_cavalry_defensive = 0.8
-		#	knights_defensive = 0.8
-		#	archers_defensive = 0.8
-		#	horse_archers_defensive = 0.8
-		#	camel_cavalry_defensive = 0.8
-		#	war_elephants_defensive = 0.8
-		#	
-		#	garrison_size = 0.4
-		#	
-		#	key = "DEF_RELIGION_HOME_TERRITORY"
-		#}
-		
-		can_call_crusade = yes
-		join_crusade_if_bordering_hostile = yes
-		
-		religious_clothing_head = 10
-		religious_clothing_priest = 10
-		
-		
-		allow_in_ruler_designer = no
-	}
-	thuyhoa_pagan = {
-		graphical_culture = reformedpagangfx
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-		interface_skin = { pagan_interface }
-		
-		reformed = thuyhoa_pagan_reformed 
-
-		icon = 184
-		heresy_icon = 185
-		
-		color = { 255 64 180 }
-		
-		high_god_name = GOD_XA
-		
-		god_names = {
-			GOD_SDET_FAI GOD_SDET_NAM 
-		}
-		evil_god_names = {
-			GOD_THE_WEST GOD_YELLOW_EMP GOD_RED_EMP
-		}
-
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LEGENDS
-		priest_title = PUTAO
-		
-		aggression = 1.0
-		priests_can_marry = yes
-		priests_can_inherit = no
-		female_temple_holders = yes
-		defensive_attrition = yes
-		ignores_defensive_attrition = yes
-		allow_looting = yes
-		max_consorts = 3
-		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		
-		unit_modifier = {
-			garrison_size = 0.4
-			
-			key = "DEF_RELIGION"
-		}
-		unit_home_modifier = {
-			land_morale = 0.8
-			light_infantry_defensive = 0.8
-			heavy_infantry_defensive = 0.8
-			pikemen_defensive = 0.8
-			light_cavalry_defensive = 0.8
-			knights_defensive = 0.8
-			archers_defensive = 0.8
-			horse_archers_defensive = 0.8
-			camel_cavalry_defensive = 0.8
-			war_elephants_defensive = 0.8
-			
-			garrison_size = 0.4
-			
-			key = "DEF_RELIGION_HOME_TERRITORY"
-		}
-		
-		religious_clothing_head = 10
-		religious_clothing_priest = 10
-		
-		
 		can_demand_religious_conversion = no
 	}
 	satsana_pi_pagan_reformed = {

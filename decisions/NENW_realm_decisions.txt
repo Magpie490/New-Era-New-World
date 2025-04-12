@@ -1316,7 +1316,11 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			government = mandala_government
+			OR = {
+				government = mandala_government
+				has_landed_title = e_north_mississippi
+				has_landed_title = e_south_mississippi
+			}
 			e_mississippi = {
 				OR = {
 					is_titular = yes
@@ -1330,6 +1334,12 @@ decisions = {
 		allow = {
 			form_empire_allow = yes
 			OR = {
+				AND = {
+					NOT = {
+						government = mandala_government
+					}
+					prestige = 5000
+				}
 				has_character_modifier = government_legitimacy_7
 				has_character_modifier = government_legitimacy_8
 				has_character_modifier = government_legitimacy_9

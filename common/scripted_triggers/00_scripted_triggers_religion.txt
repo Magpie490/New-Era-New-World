@@ -164,17 +164,8 @@ true_religion_oldbeliever_trigger = {
 true_religion_bezpopotvsy_trigger = {
 	true_religion = bezpopotvsy
 }
-true_religion_calvinist_trigger = {
-	true_religion = calvinist
-}
-true_religion_genevist_trigger = {
-	true_religion = genevist
-}
 true_religion_chaldean_trigger = {
 	true_religion = chaldean
-}
-true_religion_nasrini_trigger = {
-	true_religion = nasrini
 }
 
 true_religion_koptic_trigger = {
@@ -220,11 +211,11 @@ true_religion_mainline_trigger = {
 true_religion_sikh_trigger = {
 	true_religion = sikh
 }
-true_religion_maunaxite_reformed_trigger = {
-	true_religion = maunaxite_reformed
+true_religion_arcadian_reformed_trigger = {
+	true_religion = arcadian_reformed
 }
-true_religion_maunaxite_trigger = {
-	true_religion = maunaxite
+true_religion_arcadian_trigger = {
+	true_religion = arcadian
 }
 true_religion_parabrahmanist_trigger = {
 	true_religion = parabrahmanist
@@ -782,6 +773,13 @@ is_tengri_secret_religious_society_member_trigger = {
 	}
 }
 
+is_raven_secret_religious_society_member_trigger = {
+	society_member_of = secret_religious_cult
+	OR = {
+		society_member_of = secret_religious_society_raven_tales_reformed
+		society_member_of = secret_religious_society_raven_tales
+	}
+}
 is_baltic_secret_religious_society_member_trigger = {
 	society_member_of = secret_religious_cult
 	OR = {
@@ -1601,13 +1599,13 @@ religion_openly_sarnaist_or_reformed_trigger = {
 		}
 	}
 }
-religion_openly_moist_or_reformed_trigger = {
+religion_openly_numic_or_reformed_trigger = {
 	custom_tooltip = {
-		text = religion_openly_mo_or_reformed_tooltip
+		text = religion_openly_numic_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = mo_pagan
-				religion = mo_pagan_reformed
+				religion = numic
+				religion = numic_reformed
 			}
 		}
 	}
@@ -1623,13 +1621,13 @@ religion_openly_wuist_or_reformed_trigger = {
 		}
 	}
 }
-religion_openly_thuyhoa_pagan_or_reformed_trigger = {
+religion_openly_blessing_way_or_reformed_trigger = {
 	custom_tooltip = {
-		text = religion_openly_thuyhoa_pagan_or_reformed_tooltip
+		text = religion_openly_blessing_way_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = thuyhoa_pagan
-				religion = thuyhoa_pagan_reformed
+				religion = blessing_way
+				religion = blessing_way_reformed
 			}
 		}
 	}

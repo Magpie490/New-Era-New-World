@@ -232,8 +232,7 @@ targetted_decisions = {
 				religion = espiritista
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
-				has_religion_feature = religion_feature_moism
-				religion = nasrini
+				has_religion_feature = religion_feature_numic
 				religion = sisukkuus
 				religion = rastafari
 				religion = marapu
@@ -243,7 +242,6 @@ targetted_decisions = {
 				religion = memorialist
 				religion = community_of_christ
 				religion = constitutional
-				religion = gidoggyo
 				religion = gridiron
 				religion = tridemism
 				religion = cowboy_buddhist
@@ -504,8 +502,7 @@ targetted_decisions = {
 				religion = espiritista
 				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
-				has_religion_feature = religion_feature_moism
-				religion = nasrini
+				has_religion_feature = religion_feature_numic
 				religion = sisukkuus
 				religion = rastafari
 				religion = malikite
@@ -518,7 +515,6 @@ targetted_decisions = {
 				religion = marapu
 				religion = tridemism
 				religion = cowboy_buddhist
-				religion = gidoggyo
 				religion = qingzhen
 				religion = taoist
 				religion = wuxia
@@ -665,7 +661,7 @@ decisions = {
 				has_religion_feature = religion_feature_nousthreskeia
 				has_religion_feature = religion_feature_bungan
 				has_religion_feature = religion_feature_kaharingan
-				has_religion_feature = religion_feature_thuyhoa
+				has_religion_feature = religion_feature_arcadian
 				religion = celtic_pagan
 				religion = gator_pagan
 				religion = gator_pagan_reformed
@@ -682,14 +678,13 @@ decisions = {
 				religion = peyotist
 				religion = harmonic
 				religion = alevi
-				religion = nasrini
 				religion = sisukkuus
 				religion = dahatatta
-				religion = maunaxite
+				religion = arcadian
 				religion = kalikula
 				religion = koyapunem
 				religion = scholastic
-				religion = maunaxite_reformed
+				religion = arcadian_reformed
 				religion = vostokist
 				religion = qingzhen
 				religion = jain
@@ -1918,8 +1913,8 @@ decisions = {
 			NOR = {
 				religion = novelist
 				religion = novelist_reformed
-				religion = maunaxite
-				religion = maunaxite_reformed
+				religion = arcadian
+				religion = arcadian_reformed
 			}
 		}
 		
@@ -2348,8 +2343,8 @@ settlement_decisions = {
 					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_folklorist } }
 				}
 				AND = { 
-					religion = maunaxite
-					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_maunaxite } }
+					religion = arcadian
+					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_arcadian } }
 				}
 				AND = { 
 					religion = nousthreskeia
@@ -2414,7 +2409,7 @@ settlement_decisions = {
 							has_province_flag = flag_great_pillar_lakefolk_pagan
 							has_province_flag = flag_great_pillar_novelist
 							has_province_flag = flag_great_pillar_folklorist
-							has_province_flag = flag_great_pillar_maunaxite
+							has_province_flag = flag_great_pillar_arcadian
 							has_province_flag = flag_great_pillar_nousthreskeia
 							has_province_flag = flag_great_pillar_tengri
 							has_province_flag = flag_great_pillar_baltic
@@ -2510,15 +2505,15 @@ settlement_decisions = {
 					}
 				}
 				if = {  
-					limit = { FROM = { religion = maunaxite } }
+					limit = { FROM = { religion = arcadian } }
 					hidden_tooltip = {
 						location = {
-							set_province_flag = flag_great_pillar_maunaxite
+							set_province_flag = flag_great_pillar_arcadian
 						}
 					}
 					if = { 
-						limit = { NOT = { has_building = tb_great_pillar_maunaxite } } 
-						add_building = tb_great_pillar_maunaxite
+						limit = { NOT = { has_building = tb_great_pillar_arcadian } } 
+						add_building = tb_great_pillar_arcadian
 					}
 				}
 				if = {  
@@ -2661,7 +2656,7 @@ settlement_decisions = {
 					has_province_flag = flag_great_pillar_celtic_pagan
 					has_province_flag = flag_great_pillar_novelist
 					has_province_flag = flag_great_pillar_folklorist
-					has_province_flag = flag_great_pillar_maunaxite
+					has_province_flag = flag_great_pillar_arcadian
 					has_province_flag = flag_great_pillar_nousthreskeia
 					has_province_flag = flag_great_pillar_tengri
 					has_province_flag = flag_great_pillar_baltic
@@ -2746,17 +2741,17 @@ settlement_decisions = {
 				}
 			}
 			if = {  
-				limit = { location = { has_province_flag = flag_great_pillar_maunaxite } }
+				limit = { location = { has_province_flag = flag_great_pillar_arcadian } }
 				hidden_tooltip = {
 					location = {
-						clr_province_flag = flag_great_pillar_maunaxite
+						clr_province_flag = flag_great_pillar_arcadian
 					}
 					any_realm_character = {
-						limit = { religion = maunaxite }
+						limit = { religion = arcadian }
 						character_event = { id = HF.23477 }
 					}
 				}
-				maunaxite = {
+				arcadian = {
 					religion_authority = {
 						modifier = destroyed_great_pillar
 						years = 10

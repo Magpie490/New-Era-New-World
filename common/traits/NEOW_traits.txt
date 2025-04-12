@@ -1065,120 +1065,6 @@ japanese_3_honour = {
 	customizer = no
 	random = no
 }
-trimurti_cult = {
-	diplomacy = 1
-	vassal_opinion = 5
-	global_garrison_size = 0.05
-	
-	religious_branch = maunaxite
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		#trimurti_cult
-		saraswati_cult
-		minor_devi_cult
-		krishna_cult
-		lakshmi_cult
-	}
-	
-	opposite_opinion = -10
-	same_opinion = 5
-	
-	customizer = no
-	random = no
-}
-
-saraswati_cult = {
-	learning = 1
-	global_revolt_risk = -0.01
-	global_movement_speed = 0.05
-	
-	religious_branch = maunaxite
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		trimurti_cult
-		#saraswati_cult
-		minor_devi_cult
-		krishna_cult
-		lakshmi_cult
-	}
-	
-	opposite_opinion = -10
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-minor_devi_cult = {
-	intrigue = 1
-	plot_discovery_chance = 0.2
-	build_cost_modifier = -0.05
-	
-	religious_branch = maunaxite
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		trimurti_cult
-		saraswati_cult
-		#minor_devi_cult
-		krishna_cult
-		lakshmi_cult
-	}
-	
-	opposite_opinion = -10
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-krishna_cult = {
-	martial = 1
-	monthly_character_piety = 0.75
-	monthly_character_prestige = 0.75
-	
-	religious_branch = maunaxite
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		trimurti_cult
-		saraswati_cult
-		minor_devi_cult
-		#krishna_cult
-		lakshmi_cult
-	}
-	
-	opposite_opinion = -10
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-lakshmi_cult = {
-	stewardship = 1
-	short_reign_length = -3
-	fertility = 0.05
-	
-	religious_branch = maunaxite
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		trimurti_cult
-		saraswati_cult
-		minor_devi_cult
-		krishna_cult
-		#lakshmi_cult
-	}
-	
-	opposite_opinion = -10
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
 ####
 ascension_1 = {
 	learning = 2
@@ -1308,111 +1194,12 @@ rosicrucian = {
 	random = no
 }
 ###
-
-continental = {
-	learning = 1
-	global_revolt_risk = -0.01
-	
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		#continental
-		cal_baptist
-		presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-cal_baptist = {
-	diplomacy = 1
-	vassal_opinion = 5
-	
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		continental
-		#cal_baptist
-		presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-	
-	customizer = no
-	random = no
-}
-
-presbyterian = {
-	martial = 1
-	command_modifier = {
-		morale_defence = 0.12
-	}
-	religious_branch = calvinist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		continental
-		cal_baptist
-		#presbyterian
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-congregationalist = {
-	stewardship = 1
-	build_cost_modifier = -0.05
-	
-	religious_branch = genevist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		#congregationalist
-		separatist
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-
-separatist = {
-	intrigue = 1
-	plot_discovery_chance = 0.2
-	
-	religious_branch = genevist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		congregationalist
-		#separatist
-	}
-	
-	opposite_opinion = -6
-	same_opinion = 5
-
-	customizer = no
-	random = no
-}
-###
 trimurti_cult_reformed = {
 	diplomacy = 1
 	vassal_opinion = 5
 	global_garrison_size = 0.05
 	
-	religious_branch = maunaxite_reformed
+	religious_branch = arcadian_reformed
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -1438,7 +1225,7 @@ saraswati_cult_reformed = {
 	global_revolt_risk = -0.01
 	global_movement_speed = 0.05
 	
-	religious_branch = maunaxite_reformed
+	religious_branch = arcadian_reformed
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -1464,7 +1251,7 @@ minor_devi_cult_reformed = {
 	plot_discovery_chance = 0.2
 	build_cost_modifier = -0.05
 	
-	religious_branch = maunaxite_reformed
+	religious_branch = arcadian_reformed
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -1490,7 +1277,7 @@ krishna_cult_reformed = {
 	monthly_character_piety = 0.75
 	monthly_character_prestige = 0.75
 	
-	religious_branch = maunaxite_reformed
+	religious_branch = arcadian_reformed
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -1516,7 +1303,7 @@ lakshmi_cult_reformed = {
 	short_reign_length = -3
 	fertility = 0.05
 	
-	religious_branch = maunaxite_reformed
+	religious_branch = arcadian_reformed
 	religious = yes # Lost immediately on religion change
 	
 	opposites =  {
@@ -3613,47 +3400,6 @@ santiago_el_mayor = {
 	random = no
 }
 #####
-cheonjugyo_sect = {
-	
-	learning = 1
-	katoliko_opinion = 5
-	san_fermin_modifier = 1
-	religious = yes
-	opposites = {
-		#cheonjugyo_sect
-		jangnogyo_sect
-		gamingyo_sect
-	}
-	religious_branch = gidoggyo
-	random = no
-}
-gamingyo_sect = {
-	diplomacy = 1
-	threat_decay_speed = 0.05
-	kirishitan_opinion = 5
-	religious = yes
-	opposites = {
-		cheonjugyo_sect
-		jangnogyo_sect
-		#gamingyo_sect
-	}
-	religious_branch = gidoggyo
-	random = no
-}
-jangnogyo_sect = {
-	martial = 1
-	xinjiao_opinion = 5
-	combat_rating = 5
-	religious = yes
-	opposites = {
-		cheonjugyo_sect
-		#jangnogyo_sect
-		gamingyo_sect
-	}
-	religious_branch = gidoggyo
-	random = no
-}
-#####
 muwa_christian = {
 	stewardship = 2
 	christian_opinion = 10
@@ -4202,7 +3948,6 @@ low_anglican = {
 	opposite_opinion = -10
 	
 	diplomacy = 2
-	calvinist_opinion = 5
 	lutheran_opinion = 5
 	baptist_opinion = 5
 	evangelical_opinion = 5
@@ -4271,7 +4016,6 @@ low_anglican2 = {
 	opposite_opinion = -10
 	
 	diplomacy = 2
-	calvinist_opinion = 5
 	lutheran_opinion = 5
 	baptist_opinion = 5
 	evangelical_opinion = 5
@@ -5395,7 +5139,6 @@ mainline_baptist = {
 }
 
 mainline_presbyterian = {
-	calvinist_opinion = 10
 	religious_branch = mainline
 	religious = yes # Lost immediately on religion change
 	
@@ -5409,35 +5152,6 @@ mainline_presbyterian = {
 	opposite_opinion = 0
 	same_opinion = 15
 
-	customizer = no
-	random = no
-}
-calvinist_damned = {
-	calvinist_opinion = -10
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		calvinist_blessed
-	}
-	
-	same_opinion = 5
-	monthly_character_piety = -0.05
-	monthly_character_prestige = -0.05
-	customizer = no
-	random = no
-}
-calvinist_blessed = {
-	calvinist_opinion = 10
-	prevent_decadence = yes
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		calvinist_damned
-	}
-
-	same_opinion = 5
-	monthly_character_piety = 0.05
-	monthly_character_prestige = 0.05
 	customizer = no
 	random = no
 }

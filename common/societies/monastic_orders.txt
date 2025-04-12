@@ -1080,10 +1080,7 @@ monastic_order_nestorian = {
 			}
 		}
 		age = 16
-		OR = {
-			religion = nasrini
-			religion = chaldean
-		}
+		religion = chaldean
 		NOT = { trait = excommunicated }
 		custom_tooltip = {
 			text = did_not_betray_society
@@ -1101,17 +1098,13 @@ monastic_order_nestorian = {
 
 	show_society = {
 		OR = {
-			religion = nasrini
 			religion = chaldean
 			society_member_of = monastic_order_nestorian
 		}
 	}
 
 	potential = {
-		OR = {
-			religion = nasrini
-			religion = chaldean
-		}
+		religion = chaldean
 	}
 
 	society_rank = {
@@ -1342,10 +1335,7 @@ monastic_order_nestorian = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-			OR = {
-				religion = nasrini
-				religion = chaldean
-			}
+			religion = chaldean
 			age = 16
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
@@ -1400,11 +1390,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			religion = calvinist
-			religion = genevist
-			religion = neohuguenot
-			religion = gidoggyo
-			religion = eastern_lightning
 			AND = {
 				is_heretic = no
 				OR = {
@@ -1433,11 +1418,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			religion = calvinist
-			religion = genevist
-			religion = neohuguenot
-			religion = gidoggyo
-			religion = eastern_lightning
 			AND = {
 				is_heretic = no
 				OR = {
@@ -1454,11 +1434,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			religion = calvinist
-			religion = genevist
-			religion = neohuguenot
-			religion = gidoggyo
-			religion = eastern_lightning
 			AND = {
 				is_heretic = no
 				OR = {
@@ -1680,13 +1655,8 @@ monastic_order_lutheran = {
 	    	controls_religion = no
 			OR = {
 		   	religion = lutheran
-			religion = calvinist
-			religion = genevist
-			religion = neohuguenot
 			religion = baptist
 			religion = xinjiao
-			religion = gidoggyo
-			religion = eastern_lightning
 			}
 			age = 16
 			is_in_society = no
@@ -5791,15 +5761,9 @@ monastic_order_kirishitan = {
 		}
 		age = 16
 		OR = {
-			religion = kirishitan
 			religion = katoliko
-			religion = isukirian 
 			religion = el_shaddai
 			religion = aglipayan
-			AND = {
-				religion = gidoggyo
-				trait = cheonjugyo_sect
-			}
 		}
 		NOT = { trait = excommunicated }
 		custom_tooltip = {
@@ -5818,30 +5782,18 @@ monastic_order_kirishitan = {
 
 	show_society = {
 		OR = {
-			religion = kirishitan
 			religion = katoliko
-			religion = isukirian 
 			religion = el_shaddai
 			religion = aglipayan
-			AND = {
-				religion = gidoggyo
-				trait = cheonjugyo_sect
-			}
 			society_member_of = monastic_order_kirishitan
 		}
 	}
 
 	potential = { 
 		OR = {
-			religion = kirishitan
 			religion = katoliko
-			religion = isukirian 
 			religion = el_shaddai
 			religion = aglipayan
-			AND = {
-				religion = gidoggyo
-				trait = cheonjugyo_sect
-			}
 		} 
 	}
 
@@ -6073,15 +6025,9 @@ monastic_order_kirishitan = {
 			ai = yes
 	    	controls_religion = no
 			OR = {
-				religion = kirishitan
 				religion = katoliko
-				religion = isukirian 
 				religion = el_shaddai
 				religion = aglipayan
-				AND = {
-					religion = gidoggyo
-					trait = cheonjugyo_sect
-				}
 			}
 			age = 16
 			is_in_society = no

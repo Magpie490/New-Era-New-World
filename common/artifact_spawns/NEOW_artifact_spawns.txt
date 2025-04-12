@@ -82,7 +82,34 @@ ancient_artifact = {
 		}
 	}
 }
+hot_airballoon = {
+	max_amount = 25
+	spawn_date = 2554.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
 
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			martial = 12
+			learning = 12
+			OR = {
+				is_feudal = yes
+				is_republic = yes
+			}
+		}
+	}
+
+	artifacts = {
+		hot_airballoon = {
+			value = 1 # rare
+		}
+	}
+}
 
 ate_jewish_artifacts = {
 	max_amount = 5
@@ -181,36 +208,6 @@ ancient_christian_artifacts = {
 					religion = fraticelli
 					religion = sevillian
 					religion = penitente
-				}
-			}
-		}
-	}
-}
-ancient_japanese_christain_artifacts = {
-	max_amount = 4
-	spawn_date = -1.1.1
-	
-	spawn_chance = {
-		value = 100
-	}
-
-	weight = {
-		value = 0
-		additive_modifier = {
-			value = 100
-			religion = isukirian
-			is_landed = yes
-			tier = COUNT
-		}
-	}
-	
-	artifacts = {
-		ear_of_isukiri = {
-			value = 1
-			additive_modifier = {
-				value = 0
-				NOT = {
-					religion = isukirian
 				}
 			}
 		}

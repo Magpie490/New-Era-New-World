@@ -4107,13 +4107,6 @@ new_crusade = {
 					}
 				}
 				trigger_else_if = {
-					limit = { OR = { religion = calvinist religion = neohuguenot } }
-					custom_tooltip = {
-						text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
-						has_global_flag = calvinist_crusades_unlocked
-					}
-				}
-				trigger_else_if = {
 					limit = { religion = columbian }
 					custom_tooltip = {
 						text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
@@ -5703,20 +5696,12 @@ religious = {
 					}
 				}
 				FROM = {
-					OR = {
-						religion = amidism
-						religion = kirishitan
-						religion = isukirian
-					}
+					religion = amidism
 				}
 			}
 			AND = {
 				ROOT = {
-					OR = {
-						religion = amidism
-						religion = kirishitan
-						religion = isukirian
-					}
+					religion = amidism
 				}
 				FROM = {
 					OR = {
@@ -14920,20 +14905,12 @@ buddhist_holy_war = {
 					}
 				}
 				FROM = {
-					OR = {
-						religion = amidism
-						religion = kirishitan
-						religion = isukirian
-					}
+					religion = amidism
 				}
 			}
 			AND = {
 				ROOT = {
-					OR = {
-						religion = amidism
-						religion = kirishitan
-						religion = isukirian
-					}
+					religion = amidism
 				}
 				FROM = {
 					OR = {

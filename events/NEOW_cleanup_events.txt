@@ -34,6 +34,29 @@ province_event = {
 	}
 }
 province_event = { # Give Indian characters appropriate schools at game start
+	id = cleanup.2945
+	hide_window = yes
+
+	
+	trigger = {
+		port = yes
+		NOT = {
+			has_province_modifier = port_modifier
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		add_province_modifier = {
+			name = port_modifier
+			stacking = no
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+province_event = { # Give Indian characters appropriate schools at game start
 	id = cleanup.2244
 	hide_window = yes
 

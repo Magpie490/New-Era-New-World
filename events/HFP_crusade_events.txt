@@ -346,22 +346,6 @@ character_event = {
                     }
 				}
 			}	
-			calvinist = {
-				official_crusade_recipient = {
-                    character = ROOT
-                    NOT = {
-                        religion = calvinist
-                    }
-				}
-			}	
-			neohuguenot = {
-				official_crusade_recipient = {
-                    character = ROOT
-                    NOT = {
-                        religion = neohuguenot
-                    }
-				}
-			}	
 			katoliko = {
 				official_crusade_recipient = {
                     character = ROOT
@@ -391,8 +375,6 @@ character_event = {
     		fraticelli = { d_fraticelli = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
 			sevillian = { k_sevillian = { owner = { character_event = { id = HFP.41000 days = 1 } } } }		
 			cadaverist = { k_ecclesiarchy = { owner = { character_event = { id = HFP.41000 days = 1 } } } }	
-			calvinist = { k_calvinist = { owner = { character_event = { id = HFP.41000 days = 1 } } } }	
-			neohuguenot = { k_jury_god = { owner = { character_event = { id = HFP.41000 days = 1 } } } }	
 			katoliko = { k_katoliko = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
 			aglipayan = { k_aglipayan = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
 			columbian = { d_columbian = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
@@ -424,16 +406,6 @@ character_event = {
 				}
 			}
 			cadaverist = {
-				official_crusade_recipient = {
-                    character = ROOT
-				}
-			}
-			calvinist = {
-				official_crusade_recipient = {
-                    character = ROOT
-				}
-			}
-			neohuguenot = {
 				official_crusade_recipient = {
                     character = ROOT
 				}
@@ -476,12 +448,6 @@ character_event = {
             cadaverist = {
                 set_official_crusade_recipient = NONE
             }
-            calvinist = {
-                set_official_crusade_recipient = NONE
-            }
-            neohuguenot = {
-                set_official_crusade_recipient = NONE
-            }
             sevillian = {
                 set_official_crusade_recipient = NONE
             }
@@ -504,8 +470,6 @@ character_event = {
     		catholic = { k_papacy = { owner = { character_event = { id = HFP.41000 } } } }
     		fraticelli = { d_fraticelli = { owner = { character_event = { id = HFP.41000 } } } }
 			cadaverist = { k_ecclesiarchy = { owner = { character_event = { id = HFP.41000 } } } }
-			calvinist = { k_calvinist = { owner = { character_event = { id = HFP.41000 } } } }
-			neohuguenot = { k_jury_god = { owner = { character_event = { id = HFP.41000 } } } }
 			sevillian = { k_sevillian = { owner = { character_event = { id = HFP.41000 } } } }
 			katoliko = { k_katoliko = { owner = { character_event = { id = HFP.41000 } } } }
 			aglipayan = { k_aglipayan = { owner = { character_event = { id = HFP.41000 } } } }
@@ -527,9 +491,7 @@ character_event = {
     		religion = catholic
     		religion = fraticelli
 			religion = sevillian
-			religion = neohuguenot
 			religion = cadaverist
-			religion = calvinist
 			religion = katoliko
 			religion = aglipayan
 			religion = columbian
@@ -5533,9 +5495,7 @@ character_event = {
             religion = catholic
             religion = fraticelli
 			religion = sevillian
-			religion = neohuguenot
 			religion = cadaverist
-			religion = calvinist
 			religion = katoliko
 			religion = aglipayan
 			religion = columbian
@@ -6548,38 +6508,6 @@ province_event = {
                     character_event = { id = HFP.41143 }
                 }
             }
-        }	
-        if = {
-            limit = {
-                k_jury_god = {
-                    owner = {
-                        any_war = {
-                            using_cb = new_crusade
-                        }
-                    }
-                }
-            }
-            k_jury_god = {
-                owner = {
-                    character_event = { id = HFP.41143 }
-                }
-            }
-        }
-        if = {
-            limit = {
-                k_calvinist = {
-                    owner = {
-                        any_war = {
-                            using_cb = new_crusade
-                        }
-                    }
-                }
-            }
-            k_calvinist = {
-                owner = {
-                    character_event = { id = HFP.41143 }
-                }
-            }
         }
         if = {
             limit = {
@@ -6854,39 +6782,7 @@ province_event = {
                     character_event = { id = HFP.41146 }
                 }
             }
-        }		
-        if = {
-            limit = {
-                k_calvinist = {
-                    owner = {
-                        any_war = {
-                            using_cb = new_crusade
-                        }
-                    }
-                }
-            }
-            k_calvinist = {
-                owner = {
-                    character_event = { id = HFP.41146 }
-                }
-            }
-        }	
-        if = {
-            limit = {
-                k_jury_god = {
-                    owner = {
-                        any_war = {
-                            using_cb = new_crusade
-                        }
-                    }
-                }
-            }
-            k_jury_god = {
-                owner = {
-                    character_event = { id = HFP.41146 }
-                }
-            }
-        }	
+        }
         if = {
             limit = {
                 k_ecclesiarchy = {
