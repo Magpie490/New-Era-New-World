@@ -572,41 +572,6 @@ narrative_event = { # Activate GHW's and holy orders when running randomized rel
 			set_government_type = feudal_government
 		}
 		
-		activate_title = { title = d_bektashi status = yes }
-		create_character = {
-			random_traits = no
-			name = Bektash
-			dynasty = random
-			religion = sunni
-			culture = persian
-			female = no
-			age = 25
-			attributes = {
-				martial = 10
-				diplomacy = 9
-				stewardship = 9
-				intrigue = 7
-				learning = 9
-			}
-			health = 6
-			fertility = 0.5
-			trait = brilliant_strategist
-			trait = sayyid
-			trait = hajjaj
-			trait = hafiz
-			trait = patient
-			trait = zealous
-			trait = scholar
-			trait = temperate
-		}
-		new_character = {
-			wealth = 500
-			d_bektashi = {
-				grant_title = PREV
-			}
-			set_government_type = feudal_government
-		}
-		
 		activate_title = { title = d_holy_sepulchre status = yes }
 		create_character = {
 			random_traits = no
@@ -998,39 +963,7 @@ character_event = { # Alternate Start general maintenance
 				adjective="ALT_MERC_BAND_ADJ"
 				set_random_coa_effect = yes
 			}
-			d_sunni_turkic_company = {
-				holder_scope = {
-					save_event_target_as = renaming_target
-				}
-				set_name="ALT_MERC_COMPANY"
-				adjective="ALT_MERC_COMPANY_ADJ"
-				set_random_coa_effect = yes
-			}
 			d_shiite_turkic_company = {
-				holder_scope = {
-					save_event_target_as = renaming_target
-				}
-				set_name="ALT_MERC_COMPANY"
-				adjective="ALT_MERC_COMPANY_ADJ"
-				set_random_coa_effect = yes
-			}
-			d_sunni_cuman_company = {
-				holder_scope = {
-					save_event_target_as = renaming_target
-				}
-				set_name="ALT_MERC_COMPANY"
-				adjective="ALT_MERC_COMPANY_ADJ"
-				set_random_coa_effect = yes
-			}
-			d_sunni_berber_company = {
-				holder_scope = {
-					save_event_target_as = renaming_target
-				}
-				set_name="ALT_MERC_COMPANY"
-				adjective="ALT_MERC_COMPANY_ADJ"
-				set_random_coa_effect = yes
-			}
-			d_sunni_bedouin_company = {
 				holder_scope = {
 					save_event_target_as = renaming_target
 				}
@@ -1448,17 +1381,7 @@ character_event = { # Alternate Start general maintenance
 		}
 		if = {
 			limit = {
-				sunni = {
-					is_name_randomized = yes
-				}
-			}
-			d_sunni = {
-				set_random_coa_effect = yes
-			}
-		}
-		if = {
-			limit = {
-				sunni = {
+				salihi = {
 					is_name_randomized = yes
 				}
 			}
@@ -1751,21 +1674,6 @@ character_event = { # Alternate Start general maintenance
 				}
 			}
 			d_hashshashin = {
-				holder_scope = {
-					save_event_target_as = renaming_target
-				}
-				set_random_coa_effect = yes
-				set_name="ALT_HO_LOCATION"
-				adjective="ALT_HO_LOCATION_ADJ"
-			}
-		}
-		if = {
-			limit = {
-				sunni = {
-					is_name_randomized = yes
-				}
-			}
-			d_bektashi = {
 				holder_scope = {
 					save_event_target_as = renaming_target
 				}
