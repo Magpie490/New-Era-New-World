@@ -1195,10 +1195,24 @@ character_event = {
 character_event = { 
 	id = MTA.24
 	hide_window = yes
-	ai = no
 	
 	trigger = {
-		has_global_flag = automated_median_titles_flag
+		OR = {
+			ai = no
+			government = oligarchic_republic
+			government = consular_republic
+		}
+		OR = {
+			has_global_flag = automated_median_titles_flag
+			AND = {
+				government = oligarchic_republic
+				ai = yes
+			}
+			AND = {
+				government = consular_republic
+				ai = yes
+			}
+		}
 		NOT = {
 			any_courtier_or_vassal = { 
 				limit = { 
@@ -1248,10 +1262,24 @@ character_event = {
 character_event = { 
 	id = MTA.25
 	hide_window = yes
-	ai = no
 	
 	trigger = {
-		has_global_flag = automated_median_titles_flag
+		OR = {
+			ai = no
+			government = oligarchic_republic
+			government = consular_republic
+		}
+		OR = {
+			has_global_flag = automated_median_titles_flag
+			AND = {
+				government = oligarchic_republic
+				ai = yes
+			}
+			AND = {
+				government = consular_republic
+				ai = yes
+			}
+		}
 		NOT = {
 			any_courtier_or_vassal = { 
 				limit = { 
@@ -1301,10 +1329,24 @@ character_event = {
 character_event = { 
 	id = MTA.26
 	hide_window = yes
-	ai = no
 	
 	trigger = {
-		has_global_flag = automated_median_titles_flag
+		OR = {
+			ai = no
+			government = oligarchic_republic
+			government = consular_republic
+		}
+		OR = {
+			has_global_flag = automated_median_titles_flag
+			AND = {
+				government = oligarchic_republic
+				ai = yes
+			}
+			AND = {
+				government = consular_republic
+				ai = yes
+			}
+		}
 		NOT = {
 			any_courtier_or_vassal = { 
 				limit = { 
