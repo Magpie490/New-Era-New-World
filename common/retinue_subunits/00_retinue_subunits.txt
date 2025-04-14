@@ -2803,6 +2803,29 @@ RETTYPE_CUL_BYZ2 =
 		heavy_infantry_morale = 0.2
 	}
 }
+RETTYPE_REL_ZENITH = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+		religion = zenith
+			any_realm_province = {
+				OR = {
+					religion = zenith
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.25
+		pikemen_morale = 0.15
+	}
+}
 
 RETTYPE_CUL_BYZ3 = 
 {# reuse for amero-grik, need to consult which ones
