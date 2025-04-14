@@ -1076,7 +1076,7 @@ d_railroad = {
 	color = { 178 102 48 }
 	color2 = { 0 0 0 }
 
-	capital = 149
+	capital = 149 # Atlanta
 
 	title = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
@@ -1186,4 +1186,32 @@ d_legion_of_hell = { #Legion of Hell
 	monthly_income = 2 # (Must be an integer between 1 and 512)
 	
 	mercenary_type = knights_hospitaler_composition
+}
+d_soldiers_of_fortune = {
+	color = { 134 36 42 }
+	color2 = { 255 215 0 }
+
+	capital = 2073 # Las Vegas
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = knights_hospitaler_composition
+	
+	short_name = yes
+	
+	culture = mojavean
+	
+	# Parent Religion 
+	religion = gambler
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
 }
