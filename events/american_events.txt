@@ -634,3 +634,46 @@ character_event = { # If you keep electing the same dynasty a civil war has a hi
 		}
 	}
 }
+
+character_event = { #the amish have had it too good for too long
+	id = america.43
+	is_triggered_only = yes
+	title = EVTNAME_america_43
+	desc = EVTDESC_america_43
+	
+	trigger = {
+		has_landed_title = e_columbia
+	}
+	option = {
+		name = EVTOPTA_america43
+		k_eastsylvania = {
+			holder_scope = {
+				character_event = {
+					id = america.44
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+character_event = { #ah fuck -king of the amish
+	id = america.44
+	is_triggered_only = yes
+	title = EVTNAME_america_44
+	desc = EVTDESC_america_44
+
+	option = { #suck the feds off
+		set_defacto_liege = e_columbia
+		name = EVTOPTA_america44
+	}
+	option = { #get killed
+		k_eastsylvania = {
+			reverse_unsafe_war = {
+				target = e_columbia
+				casus_belli = invasion
+			}
+		}
+		name = EVTOPTB_america44
+	}
+}
