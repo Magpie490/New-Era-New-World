@@ -262,9 +262,6 @@ true_religion_jadidist_trigger = {
 true_religion_ovlatii_trigger = {
 	true_religion = ovlatii
 }
-true_religion_wahhabi_trigger = {
-	true_religion = wahhabi
-}
 
 true_religion_malikite_trigger = {
 	true_religion = malikite
@@ -468,11 +465,6 @@ true_religion_fraticelli_trigger = {
 true_religion_orthodox_trigger = {
 	true_religion = orthodox
 }
-
-true_religion_sunni_trigger = {
-	true_religion = sunni
-}
-
 
 true_religion_yazidi_trigger = {
 	true_religion = yazidi
@@ -1679,28 +1671,22 @@ religion_openly_hellenic_or_reformed_trigger = {
 
 is_sunni_branch = {
 	OR = {
-		religion = sunni
 		religion = koranist
 		religion = malikite
-		religion = wahhabi
 	}
 }
 
 is_sunni_true_branch = {
 	OR = {
-		true_religion = sunni
 		true_religion = koranist
 		true_religion = malikite
-		true_religion = wahhabi
 	}
 }
 
 is_sunni_secret_branch = {
 	OR = {
-		secret_religion = sunni
 		secret_religion = koranist
 		secret_religion = malikite
-		secret_religion = wahhabi
 	}
 }
 
@@ -1875,8 +1861,6 @@ is_antipope = {
 		has_claim = k_papacy
 		has_claim = d_fraticelli
 		has_claim = k_koptic
-		has_claim = d_wahhabi
-		has_claim = d_sunni
 		has_claim = d_salihi
 	}
 }

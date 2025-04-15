@@ -7,16 +7,8 @@ character_event = { #Clean up event
 		is_anti_caliph = yes
 		OR = {
 			AND = {
-				NOT = { religion = sunni }
-				has_claim = d_sunni
-			}
-			AND = {
 				NOT = { religion = salihi }
 				has_claim = d_salihi
-			}
-			AND = {
-				NOT = { religion = wahhabi }
-				has_claim = d_wahhabi
 			}
 			AND = {
 				NOT = { religion = deobandi }
@@ -37,16 +29,8 @@ character_event = { #Clean up event
 			end_anti_caliphate_effect = yes
 		}
 			if = {
-				limit = { NOT = { religion = sunni } }
-				remove_claim = d_sunni
-			}
-			if = {
 				limit = { NOT = { religion = salihi } }
 				remove_claim = d_salihi
-			}
-			if = {
-				limit = { NOT = { religion = wahhabi } }
-				remove_claim = d_wahhabi
 			}
 			if = {
 				limit = { NOT = { religion = deobandi } }
@@ -240,15 +224,6 @@ character_event = {
 		any_demesne_title = {
 			limit = { has_title_flag = pretender_caliphate_title }
 			clr_title_flag = pretender_caliphate_title
-		}
-		if = {
-			limit = {
-				independent = yes
-				religion = sunni
-				controls_religion = no
-			}
-			d_sunni = { add_claim = PREV }
-			caliphate_gain_effect = yes
 		}
 		if = {
 			limit = {

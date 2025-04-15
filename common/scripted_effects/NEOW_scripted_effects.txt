@@ -18,10 +18,6 @@
 #################################################################################################
 end_anti_caliphate_effect = {
 	if = {
-		limit = { religion = sunni }
-		remove_claim = d_sunni
-	}
-	if = {
 		limit = { religion = salihi }
 		remove_claim = d_salihi
 	}
@@ -2485,12 +2481,6 @@ abandon_jugo_effect = {
 	}
 	else_if = {
 		limit = {
-			culture = bosnian
-		}
-		religion = sunni
-	}
-	else_if = {
-		limit = {
 			OR = {
 				culture = serbian
 				culture = bulgarian
@@ -2505,9 +2495,6 @@ abandon_jugo_effect = {
 			}
 			40 = {
 				religion = orthodox
-			}
-			20 = {
-				religion = sunni
 			}
 		}
 	}
