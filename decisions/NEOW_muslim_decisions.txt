@@ -26,7 +26,6 @@ decisions = {
 					}
 				}
 			}
-			religion = sunni
 		}
 		allow = {
 			OR = {
@@ -107,16 +106,8 @@ decisions = {
 			set_character_flag = newly_founded_caliphate
 			caliphate_gain_effect = yes
 			if = {
-				limit = { religion = sunni }
-				d_sunni = { add_claim = ROOT }
-			}
-			if = {
 				limit = { religion = salihi }
 				d_salihi = { add_claim = ROOT }
-			}
-			if = {
-				limit = { religion = wahhabi }
-				d_wahhabi = { add_claim = ROOT }
 			}
 			if = {
 				limit = { religion = deobandi }

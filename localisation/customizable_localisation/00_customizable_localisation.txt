@@ -5042,14 +5042,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Salafi
-		trigger = { true_religion_wahhabi_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Malikite
 		trigger = { true_religion_malikite_trigger = yes 
 			NOT = {
@@ -5420,14 +5412,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Paulician
 		trigger = { true_religion_paulician_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Sunni
-		trigger = { true_religion_sunni_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -6074,14 +6058,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Salafi
-		trigger = { true_religion_wahhabi_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Malikite
 		trigger = { true_religion_malikite_trigger = yes 
 			NOT = {
@@ -6452,14 +6428,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Paulician
 		trigger = { true_religion_paulician_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Sunni
-		trigger = { true_religion_sunni_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -7339,14 +7307,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Salafi
-		trigger = { true_religion_wahhabi_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Malikite
 		trigger = { true_religion_malikite_trigger = yes 
 			NOT = {
@@ -7717,14 +7677,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Paulician
 		trigger = { true_religion_paulician_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Sunni
-		trigger = { true_religion_sunni_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -8371,14 +8323,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Salafi
-		trigger = { true_religion_wahhabi_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Malikite
 		trigger = { true_religion_malikite_trigger = yes 
 			NOT = {
@@ -8749,14 +8693,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Paulician
 		trigger = { true_religion_paulician_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Sunni
-		trigger = { true_religion_sunni_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -21279,16 +21215,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				FROM = {
-					OR = { 
-						religion = shiite
-						religion = sunni
-					}
+					religion = shiite
 				}
 				ROOT = {
-					OR = { 
-						religion = shiite
-						religion = sunni
-					}
+					religion = shiite
 				}
 			}
 		}

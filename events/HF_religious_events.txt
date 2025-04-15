@@ -4783,13 +4783,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { sunni = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = sunni }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { shiite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = shiite }
@@ -4919,13 +4912,6 @@ character_event = {
 			limit = { nestorian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = nestorian }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { sunni = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = sunni }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
