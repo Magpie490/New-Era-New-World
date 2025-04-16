@@ -304,6 +304,9 @@ decisions = {
 				culture_group = laurentine_anglo
 				culture_group = north_atlantic_anglophone
 				culture_group = indo_canadian_group
+				culture_group = plains_canuck
+				culture_group = west_canuck
+				culture = cascasian
 				culture = wicker
 				culture = kanadier
 				culture = kanadoi
@@ -357,12 +360,82 @@ decisions = {
 				}
 				AND = {
 					OR = {
+						has_landed_title = e_ontario
+						e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_beecy
+						e_beecy = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_quebec
+						e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_beecy
+						e_beecy = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_maratimes
+						e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_beecy
+						e_beecy = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
 						has_landed_title = e_maratimes
 						e_maratimes = { show_scope_change = no province_completely_controls_trigger = yes }	
 					}
 					OR = {
 						has_landed_title = e_quebec
 						e_quebec = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_ontario
+						e_ontario = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_prairieland
+						e_prairieland = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_quebec
+						e_quebec = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_prairieland
+						e_prairieland = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_maratimes
+						e_maratimes = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_prairieland
+						e_prairieland = { show_scope_change = no province_completely_controls_trigger = yes }				
+					}
+				}
+				AND = {
+					OR = {
+						has_landed_title = e_beecy
+						e_beecy = { show_scope_change = no province_completely_controls_trigger = yes }	
+					}
+					OR = {
+						has_landed_title = e_prairieland
+						e_prairieland = { show_scope_change = no province_completely_controls_trigger = yes }				
 					}
 				}
 			}
@@ -402,7 +475,16 @@ decisions = {
 				k_nova_scotia = { de_jure_liege = e_canada }
 				k_prince_edward_island = { de_jure_liege = e_canada }
 				k_newfoundland = { de_jure_liege = e_canada }
-				k_labrador = { de_jure_liege = e_canada }				
+				k_labrador = { de_jure_liege = e_canada }
+				k_manitoba = { de_jure_liege = e_canada }
+				k_alberta = { de_jure_liege = e_canada }
+				k_saskatchewan = { de_jure_liege = e_canada }
+				k_kootenay = { de_jure_liege = e_canada }
+				k_okanagan = { de_jure_liege = e_canada }
+				k_nechako = { de_jure_liege = e_canada }
+				k_grand_columbia = { de_jure_liege = e_canada }
+				k_haida = { de_jure_liege = e_canada }
+				k_wrangelia = { de_jure_liege = e_canada }
 			}
 			if = {
 				limit = {
