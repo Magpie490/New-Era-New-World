@@ -882,7 +882,6 @@ summer_queen_bad_honour = {
 	
 	potential =  {
 		OR = {
-			religion = orleanist
 			religion = novelist
 			religion = novelist_reformed
 			religion = summer_queen
@@ -906,7 +905,6 @@ summer_queen_1_honour = {
 	
 	potential =  {
 		OR = {
-			religion = orleanist
 			religion = novelist
 			religion = novelist_reformed
 			religion = summer_queen
@@ -931,7 +929,6 @@ summer_queen_2_honour = {
 	
 	potential =  {
 		OR = {
-			religion = orleanist
 			religion = novelist
 			religion = novelist_reformed
 			religion = summer_queen
@@ -958,7 +955,6 @@ summer_queen_3_honour = {
 	
 	potential =  {
 		OR = {
-			religion = orleanist
 			religion = novelist
 			religion = novelist_reformed
 			religion = summer_queen
@@ -4665,91 +4661,6 @@ gentleman_thief = {
 	child_insult_adj = INSULT_STUPID
 	
 	ruler_designer_cost = 0
-	random = no
-}
-#### Arcencist Branches 
-
-cult_marianne = {
-	diplomacy = 1
-	global_revolt_risk = -0.01
-	tolerates_old_world_cultist_group = yes
-	religious_branch = orleanist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		cult_michael
-		cult_charlemagne
-		cult_jeanne
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
-
-cult_michael = {
-	learning = 1
-	command_modifier = {
-		religious_enemy = 0.2
-	}
-	tolerates_christian = yes
-	religious_branch = orleanist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		cult_marianne
-		cult_charlemagne
-		cult_jeanne
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
-
-cult_charlemagne = {
-	stewardship = 1
-	build_cost_modifier = -0.05
-	global_tax_modifier = 0.05
-	tolerates_pagan_group = yes
-	
-	religious_branch = orleanist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		cult_michael
-		cult_marianne
-		cult_jeanne
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
-
-cult_jeanne = {
-	martial = 1
-	attrition = -0.02
-	land_morale = 0.05
-	religious_branch = orleanist
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		cult_michael
-		cult_charlemagne
-		cult_marianne
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
 	random = no
 }
 #### Zarist branches
