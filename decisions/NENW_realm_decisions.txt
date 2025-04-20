@@ -3377,8 +3377,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = sixtyninth_infantry_regiment_founded }
 			
 		}
@@ -3389,13 +3397,35 @@ decisions = {
 					has_landed_title = c_manhattan 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = sixtyninth_infantry_regiment_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_sixtyninth_infantry_regiment status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3429,8 +3459,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = hundredandthird_engineer_battalion_founded }
 			
 		}
@@ -3441,13 +3479,35 @@ decisions = {
 					has_landed_title = c_philadelphia 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = hundredandthird_engineer_battalion_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_hundredandthird_engineer_battalion status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3481,8 +3541,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = nineteenth_special_forces_group_founded }
 			
 		}
@@ -3493,13 +3561,35 @@ decisions = {
 					has_landed_title = c_providence 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = nineteenth_special_forces_group_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_nineteenth_special_forces_group status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3533,8 +3623,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = hundredandsecond_infantry_regiment_founded }
 			
 		}
@@ -3545,13 +3643,35 @@ decisions = {
 					has_landed_title = c_hartford 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = hundredandsecond_infantry_regiment_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_hundredandsecond_infantry_regiment status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3585,8 +3705,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = hundredandfirst_field_artillery_regiment_founded }
 			
 		}
@@ -3597,13 +3725,35 @@ decisions = {
 					has_landed_title = c_boston 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = hundredandfirst_field_artillery_regiment_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_hundredandfirst_field_artillery_regiment status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3637,8 +3787,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = eightysix_infantry_brigade_founded }
 			
 		}
@@ -3649,13 +3807,35 @@ decisions = {
 					has_landed_title = c_montpelier 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = eightysix_infantry_brigade_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_eightysix_infantry_brigade status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3689,8 +3869,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = hundredandninetyseven_artillery_brigade_founded }
 			
 		}
@@ -3701,13 +3889,35 @@ decisions = {
 					has_landed_title = c_concord 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = hundredandninetyseven_artillery_brigade_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_hundredandninetyseven_artillery_brigade status = yes }
 			hidden_tooltip = {
 					create_character = {
@@ -3741,8 +3951,16 @@ decisions = {
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
-			has_landed_title = e_columbia
-			religion = constitutional
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
 			NOT = { has_global_flag = hundredandthirtythree_engineer_battalion_founded }
 			
 		}
@@ -3753,13 +3971,35 @@ decisions = {
 					has_landed_title = c_kennebec 
 				}
 			}
-			prestige = 1500
-			wealth = 1500
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
 		}
 		effect = {
 			set_global_flag = hundredandthirtythree_engineer_battalion_founded
-			prestige = -1500
-			wealth = -1500
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
 			activate_title = { title = d_hundredandthirtythree_engineer_battalion status = yes }
 			hidden_tooltip = {
 					create_character = {
