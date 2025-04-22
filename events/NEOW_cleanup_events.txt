@@ -33,6 +33,38 @@ province_event = {
 		}
 	}
 }
+character_event = { # fix patriarchs
+	id = cleanup.5955
+	hide_window = yes
+
+	
+	trigger = {
+		dynasty = 5128469
+		NOR = {
+			trait = radiant_line
+			trait = solar_descendant
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_landed_title = e_zenith
+				dynasty = 5128469
+			}
+			add_trait = radiant_line
+		}
+		if = {
+			limit = {
+				NOT = { has_landed_title = e_zenith }
+				dynasty = 5128469
+			}
+			add_trait = solar_descendant
+		}
+	}
+}
 province_event = { # Give Indian characters appropriate schools at game start
 	id = cleanup.2945
 	hide_window = yes
