@@ -30388,7 +30388,10 @@ federal_elective = {
 			}
 		}
 		FROM = {
-			religion = constitutional
+			OR = {
+				religion = constitutional
+				religion = ROOT
+			}
 		}
 		FROM = {
 			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
