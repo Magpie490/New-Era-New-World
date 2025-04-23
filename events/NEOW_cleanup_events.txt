@@ -40,9 +40,15 @@ character_event = { # fix patriarchs
 	
 	trigger = {
 		dynasty = 5128469
-		NOR = {
-			trait = radiant_line
-			trait = solar_descendant
+		OR = {
+			NOR = {
+				trait = radiant_line
+				trait = solar_descendant
+			}
+			AND = {
+				trait = solar_descendant
+				has_landed_title = e_zenith
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -55,6 +61,7 @@ character_event = { # fix patriarchs
 				dynasty = 5128469
 			}
 			add_trait = radiant_line
+			remove_trait = solar_descendant
 		}
 		if = {
 			limit = {
