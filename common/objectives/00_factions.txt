@@ -17275,6 +17275,16 @@ faction_powerful_vassal_takeover = {
 			}
 			is_republic = yes
 		}
+		
+		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
+			factor = 2
+			FROM = {
+				religion = constitutional
+				liege = {
+					NOT = { religion = constitutional }
+				}
+			}
+		}
 		modifier = {
 			factor = 1.03
 			FROM = { liege = {
@@ -17829,6 +17839,14 @@ faction_powerful_vassal_takeover = {
 		
 		ATE_OW_factionalism_ROOT_score = yes
 		
+		modifier = {#hadramaudi and afghans want freedom from wrong culture lieges very bad
+			factor = 2
+			
+			religion = constitutional
+			liege = {
+				NOT = { religion = constitutional }
+			}
+		}
 		modifier = {
 			factor = 0.5
 			ROOT = {  
