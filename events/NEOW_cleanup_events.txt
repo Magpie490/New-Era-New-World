@@ -33,40 +33,6 @@ province_event = {
 		}
 	}
 }
-character_event = {
-	id = cleanup.7243
-	
-	hide_window = yes
-	
-	
-	trigger = {
-		NOT = { trait = raider }
-		is_looting = yes
-	}
-	mean_time_to_happen = {
-		days = 0
-	}
-	immediate = {
-		add_trait = raider
-	}
-}
-character_event = {
-	id = cleanup.7244
-	
-	hide_window = yes
-	
-	
-	trigger = {
-		trait = raider
-		is_looting = no
-	}
-	mean_time_to_happen = {
-		days = 0
-	}
-	immediate = {
-		remove_trait = raider
-	}
-}
 character_event = { # fix patriarchs
 	id = cleanup.5955
 	hide_window = yes
