@@ -1,0 +1,1992 @@
+700000 = { #Ruler of Rhode Island republic
+	name = "Roger"
+	dynasty = 5000000 #Williams
+	religion = "scholastic"
+	culture = "bostonian"
+	trait = "zealous"
+	trait = "paranoid"
+	trait = "cruel"
+	2295.2.9={
+		birth=yes
+	}
+	2370.1.1={
+		death=yes
+	}
+}
+700001 = { #Holy Shit Peter Griffin
+	name = "Peter"
+	dynasty = 5000001 #Griffin
+	religion = "macabrist"
+	culture = "bostonian"
+	trait = "slothful"
+	trait = "is_fat"
+	trait = "proud"
+	trait = "arbitrary"
+	2279.1.31 = {
+		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
+	}
+	2299.7.12={
+		add_spouse=700006
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700002 = {
+	name = "George"  #Ambitious (or crazy) king of the Northeast Kingdom
+	dynasty = 5000002 #Aiken
+	religion = "highmount"
+	culture = "vermonter"
+	trait = "flamboyant_schemer"
+	trait = "proud"
+	trait = "greedy"
+	trait = "arbitrary"
+	trait = "gregarious"
+	trait = "stubborn"
+	trait = "ambitious"
+	disallow_random_traits = yes
+	2300.6.19 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700003 = { #Duke of Boston, strongest macabrist
+	name = "John"
+	dynasty = 5000003 #Hathorne
+	religion = "macabrist"
+	culture = "bostonian"
+	trait = "zealous"
+	father = 700068
+	2270.3.8 = {
+		birth = yes
+	}
+	2600.1.1 = {
+		death = yes
+	}
+}
+700004 = { #Scout TF2, adventurer who siezed Worcester
+	name = "Jeremy"
+	dynasty = 5000004 #Irons
+	religion = "macabrist"
+	culture = "bostonian"
+	trait = "adventurer"
+	trait = "lustful"
+	2299.10.10 = {
+		birth = yes
+	}
+	2687.12.4 = {
+		death = yes
+	}
+}
+700005 = { #Count of Plymouth, claims Descent from William Brewster, one of the Pilgrim Fathers
+	name = "Moses"
+	dynasty = 5000005 #Brewster
+	religion = "macabrist"
+	culture = "bostonian"
+	trait = "proud"
+	2284.4.10 = {
+		birth = yes
+	}
+	2284.4.10 ={ 
+		create_bloodline = {
+			type = mayflower_bloodline 
+		}
+	}
+	2666.1.1 = { 
+		death = yes
+	}
+}
+700006 = {
+	name = "Lois"
+	female = yes
+	religion = "macabrist"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "thrifty_clerk"
+	trait = "cruel"
+	trait = "tall"
+	trait = "shrewd"
+	trait = "deceitful"
+	trait = "bisexual"
+	disallow_random_traits=yes
+	2281.1.31 = {
+		birth = yes		
+	}
+	2299.7.12={
+		add_spouse=700001
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700007 = {
+	name = "Meg"
+	female = yes
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "macabrist"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "naive_appeaser"
+	trait = "stressed"
+	trait = "kind"
+	trait = "diligent"
+	trait = "envious"
+	trait = "brave"
+	disallow_random_traits=yes
+	2306.1.31 = {
+		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700008 = {
+	name = "Chris"
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "macabrist"
+	culture = "bostonian"
+	secret_religion = "columbian"
+	trait = "is_fat"
+	trait = "trusting"
+	trait = "kind"
+	trait = "timid"
+	2309.1.31 = {
+		birth = yes
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+700009 = {
+	name = "Stewie"
+	father = 700001
+	mother = 700006
+	dynasty = 5000001 #Griffin
+	religion = "macabrist"
+	culture = "proviguese"
+	secret_religion = "columbian"
+	trait = "genius"
+	2323.1.31 = {
+		birth = yes
+	}
+	#2299.7.12={
+	#	effect = { add_friend=700010 }
+	#}
+	2360.1.1 = {
+		death = yes
+	}
+}
+#700010 = {
+#	name = "Brian"
+#	religion = "macabrist"
+#	culture = "dog_culture"
+#	secret_religion = "columbian"
+#	trait = "poet"
+#	trait = "drunkard"
+#	trait = "shrewd"
+#	trait = "lustful"
+#	2308.1.31 = {
+#		birth = yes
+#	}
+#	2299.7.12={
+#		employer=700001
+#		add_friend=700009
+#	}
+#	2360.1.1 = {
+#		death = yes
+#	}
+#}
+700011 = {
+	name = "Frank"
+	dynasty = 5000009 #Heffley
+	father = 700123
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "diligent"
+	trait = "proud"
+	2284.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2299.7.12={
+		add_spouse=700015
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700012 = {
+	name = "Rodrick"
+	dynasty = 5000009 #Heffley
+	father = 700011
+	mother = 700015
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "poet"
+	trait = "slothful"
+	2308.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2299.7.12={
+		employer=700001
+		effect = { add_friend=700009 }
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700013 = {
+	name = "Greg"
+	dynasty = 5000009 #Heffley
+	father = 700011
+	mother = 700015
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "deceitful"
+	trait = "indolent"
+	trait = "fussy"
+	2310.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700014 = {
+	name = "Manny"
+	dynasty = 5000009 #Heffley
+	father = 700011
+	mother = 700015
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "possessed"
+	2321.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700015 = {
+	name = "Susan"
+	female = yes
+	religion = "columbian"
+	culture = "massachusite"
+	2284.1.31 = {
+		birth = yes
+		effect = {
+			add_artifact = spectacles
+		}
+	}
+	2299.7.12={
+		add_spouse=700011
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700016 = {
+	name = "Homer"
+	dynasty = 5000010 #Simpson
+	religion = "dianic"
+	culture = "roselander"
+	trait = "gluttonous"
+	trait = "is_fat"
+	trait = "slothful"
+	trait = "dull"
+	trait = "wroth"
+	trait = "kind"
+	2285.5.12 = {
+		birth = yes
+		effect = {
+			add_claim = c_springfield
+			add_claim = c_lane
+			add_claim = c_savannah
+			add_claim = c_dayton
+			add_claim = c_windsor
+			add_claim = c_nashville
+			add_claim = c_sangamon
+			add_claim = c_blue_earth
+			add_claim = c_pioneer_valley
+		}
+	}
+	2299.7.12={
+		add_spouse=700020
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700017 = {
+	name = "Bart"
+	dynasty = 5000010 #Simpson
+	father = 700016
+	mother = 700020
+	religion = "columbian"
+	culture = "roselander"
+	trait = "playful"
+	trait = "rowdy"
+	2314.4.1 = {
+		birth = yes
+		effect = {
+			add_claim = c_springfield
+			add_claim = c_lane
+			add_claim = c_savannah
+			add_claim = c_dayton
+			add_claim = c_windsor
+			add_claim = c_nashville
+			add_claim = c_sangamon
+			add_claim = c_blue_earth
+			add_claim = c_pioneer_valley
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700018 = {
+	name = "Lisa"
+	female = yes
+	dynasty = 5000010 #Simpson
+	father = 700016
+	mother = 700020
+	religion = "columbian"
+	culture = "roselander"
+	trait = "quick"
+	trait = "conscientious"
+	2316.5.9 = {
+		birth = yes
+		effect = {
+			add_claim = c_springfield
+			add_claim = c_lane
+			add_claim = c_savannah
+			add_claim = c_dayton
+			add_claim = c_windsor
+			add_claim = c_nashville
+			add_claim = c_sangamon
+			add_claim = c_blue_earth
+			add_claim = c_pioneer_valley
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700019 = {
+	name = "Maggie"
+	female = yes
+	dynasty = 5000010 #Simpson
+	father = 700016
+	mother = 700020
+	religion = "columbian"
+	culture = "roselander"
+	2323.12.17 = {
+		birth = yes
+		effect = {
+			add_claim = c_springfield
+			add_claim = c_lane
+			add_claim = c_savannah
+			add_claim = c_dayton
+			add_claim = c_windsor
+			add_claim = c_nashville
+			add_claim = c_sangamon
+			add_claim = c_blue_earth
+			add_claim = c_pioneer_valley
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700020 = {
+	name = "Marge"
+	female = yes
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "kind"
+	trait = "just"
+	2288.3.19 = {
+		birth = yes
+	}
+	2299.7.12={
+		add_spouse=700016
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700030 = { #Count of the Berkshires
+	name = "Gomez" #Gomez Addams, the patriarch of the Addams family and its values
+	dynasty = 5000012 #Addams
+	religion = "columbian"
+	culture = "proviguese" #For portrait
+	trait = "midas_touched"
+	trait = "shrewd"
+	trait = "groomed"
+	trait = "diligent"
+	trait = "proud"
+	trait = "gregarious"
+	trait = "trusting"
+	trait = "gluttonous"
+	disallow_random_traits = yes
+	2284.7.11 = {
+		birth = yes
+		culture = "massachusite"
+	}
+	2299.7.12={
+		add_spouse=700033
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700031 = {
+	name = "Wednesday"
+	female=yes
+	dynasty = 5000012 #Addams
+	father=700030
+	mother=700033
+	religion = "columbian"
+	culture = "proviguese" #For portrait
+	trait = "quick"
+	trait = "diligent"
+	trait = "cruel"
+	trait = "deceitful"
+	trait = "proud"
+	trait = "erudite"	
+	disallow_random_traits = yes
+	2313.7.11 = {
+		birth = yes
+		culture = "massachusite"
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700032 = {
+	name = "Pugsley"
+	dynasty = 5000012 #Addams
+	father=700030
+	mother=700033
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "gluttonous"
+	trait = "proud"
+	trait = "deceitful"
+	disallow_random_traits = yes
+	2316.7.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700033 = {
+	name = "Morticia"
+	female=yes
+	father=700030
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "elusive_shadow"
+	trait = "tall"
+	trait = "groomed"
+	trait = "schemer"
+	trait = "poet"
+	trait = "patient"
+	trait = "proud"
+	trait = "arbitrary"
+	disallow_random_traits = yes
+	2284.7.11 = {
+		birth = yes
+	}
+	2299.7.12={
+		add_spouse=700030
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700034 = {
+	name = "Thomas" 
+	dynasty = 5000014
+	religion = "scholastic"
+	culture = "massachusite"
+	2287.1.23 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700035 = {
+	name = "Juliana" #Duchess Juliana Coolige, a noblewoman who known for her reserved nature
+	female = yes
+	dynasty = 5000015
+	religion = "highmount"
+	culture = "vermonter"
+	trait = "underhanded_rogue"
+	trait = "groomed"
+	trait = "shy"
+	trait = "humble"
+	trait = "poet"
+	trait = "chaste"
+	trait = "trusting"
+	trait = "content"
+	disallow_random_traits = yes
+	2294.7.23 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700036 = {
+	name = "Robert"
+	dynasty = 5000018
+	religion = "highmount"
+	culture = "albmonter"
+	2274.3.26 = {
+		birth = yes
+	}
+	2666.1.1 ={
+		death = yes
+	}
+}
+700037 = {
+	name = "Preston"
+	dynasty = 5000019 
+	religion = "highmount"
+	culture = "albmonter"
+	2237.11.20 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700038 = {
+	name = "Geegee"
+	dynasty = 5000020
+	religion = "highmount"
+	culture = "albmonter"
+	trait = "possessed"
+	trait = "poet"
+	2296.8.29 = {
+		birth = yes
+	}
+	2296.8.29 = {
+		employer = 700036
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700039 = {
+	name = "Frederick"
+	dynasty = 5000021
+	religion = "scholastic"
+	culture = "albmonter"
+	2281.12.24 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700040 = {
+	name = "Meshech"
+	dynasty = 5000022 
+	religion = "highmount"
+	culture = "albmonter"
+	2276.6.16 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700041 = {
+	name = "Gerald"
+	dynasty = 5000024
+	religion = "macabrist"
+	secret_religion = "columbian"
+	culture = "proviguese"
+	2283.3.11 = {
+		birth = yes
+	}
+	2300.3.6 = {
+		add_spouse = 700042	
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700042 = { 
+	name = "Lea"
+	female = yes
+	religion = "macabrist"
+	secret_religion = "columbian"
+	culture = "proviguese"
+	2282.10.22 = {
+		birth = yes
+	}
+	2300.3.6 = {
+		add_spouse = 700041
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700043 = {
+	name = "Thomas" #A bright and ambitious member of the Kennedy family, seeking to reclaim their family's former glory
+	dynasty = 5000025
+	religion = "camelotist"
+	culture = "bostonian"
+	father = 700122
+	trait = "brilliant_strategist"
+	trait = "siege_leader"
+	trait = "holy_warrior"
+	trait = "adventurer"
+	trait = "tall"
+	trait = "groomed"
+	trait = "falconer"
+	trait = "diligent"
+	trait = "envious"
+	trait = "ambitious"
+	trait = "stubborn"
+	trait = "brave"
+	disallow_random_traits = yes
+	2297.5.24 = {
+		birth = yes
+		create_bloodline = {
+			type = president_scion
+			has_dlc = "Holy Fury"
+		}
+	}	
+	2666.1.1 = {
+		death = yes
+	}
+}
+700044 = {
+	name = "Joseph"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	1952.9.24 = {
+		birth = yes
+	}
+	2037.8.12 = {
+		death = yes
+	}
+}
+700045 = {
+	name = "Joseph"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700044
+	1980.8.4 = {
+		birth = yes
+	}
+	2052.9.22 = {
+		death = yes
+	}
+}
+700046 = {
+	name = "Tashtego"
+	dynasty = 5000028
+	religion = "columbian"
+	culture = "wampanoag"
+	2264.3.5 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700047 = {
+	name = "Joseph Pierre" #A man of mixed Anglo/French heritage. Although tolerated for now, he may outlive his usefulness to the court of Emperor Richard...
+	dynasty = 5000029
+	religion = "ultramontain"
+	culture = "quebecois" #For portrait
+	trait = thrifty_clerk
+	trait = stressed
+	trait = architect
+	trait = humble
+	trait = paranoid
+	trait = diligent
+	disallow_random_traits = yes
+	2294.2.12 = {
+		birth = yes
+		culture = "vermonter"
+	}
+	2666.1.1 = {
+		death = yes 
+	}
+}
+700048 = {
+	name = "Benjamin"
+	dynasty = 5000030
+	religion = "highmount"
+	culture = "vermonter"
+	2251.3.18 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700049 = {
+	name = "Ethan" #Ethan Allen, an ambitious and cunning man eager to storm forts of enemies
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	father = 700116
+	trait = brilliant_strategist
+	trait = shrewd
+	trait = diligent
+	trait = proud
+	trait = ambitious
+	trait = just
+	disallow_random_traits = yes
+	2285.1.21 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700050 = {
+	name = "Massasoit"
+	dynasty = 5000032
+	culture = "wampanoag"
+	religion = "pagan"
+	trait = "charitable"
+	trait = "sympathy_christendom"
+	trait = "kind"
+	trait = "honest"
+	give_nickname = nick_the_great
+	1581.1.1 = {
+		birth = yes
+	}
+	1661.1.1 = {
+		death = yes
+	}
+}
+700051 = {
+	name = "Wamsutta"
+	dynasty = 5000032
+	father = 700050
+	culture = "wampanoag"
+	religion = "pagan"
+	trait = "ill"
+	trait = "sympathy_christendom"
+	1634.1.1 = {
+		birth = yes
+	}
+	1662.1.1 = {
+		death = { death_reason = death_trait }
+	}
+}
+700052 = {
+	name = "Metacomet"
+	dynasty = 5000032
+	father = 700050
+	culture = "wampanoag"
+	religion = "pagan"
+	trait = "paranoid"
+	1638.1.1 = {
+		birth = yes
+	}
+	1676.8.12 = {
+		death = { death_reason = death_battle }
+	}
+}
+700053 = {
+	name = "Annawan"
+	dynasty = 5000033
+	culture = "wampanoag"
+	religion = "pagan"
+	trait = "brilliant_strategist"
+	1607.1.1 = {
+		birth = yes
+	}
+	1676.8.30 = {
+		death = { death_reason = death_execution_beheading }
+	}
+}
+700054 = {
+	name = "Raymond"
+	dynasty = 5000158
+	culture = "bostonian"
+	religion = "pagan"
+	trait = "pirate"
+	trait = "cruel"
+	trait = "deceitful"
+	trait = "wroth"
+	trait = "greedy"
+	trait = "proud"
+	2064.4.19 = {
+		birth = yes
+	}
+	2101.6.15 = {
+		death = { death_reason = death_battle killer = 700060 }
+	}
+}
+700055 = {
+	name = "Corey"
+	dynasty = 5000153
+	culture = bostonian
+	religion = columbian
+	trait = "grey_eminence"
+	trait = "administrator"
+	trait = "just"
+	trait = "ambitious"
+	2031.3.28 = {
+		birth = yes
+	}
+	2082.11.5 = {
+		death = yes
+	}
+}
+700056 = {
+	name = "Jack"
+	dynasty = 5000154
+	culture = bostonian
+	religion = columbian
+	2034.5.18 = {
+		birth = yes
+	}
+	2093.12.3 = {
+		death = yes
+	}
+}
+700057 = {
+	name = "Max"
+	dynasty = 5000155
+	culture = bostonian
+	religion = columbian
+	trait = "skilled_tactician"
+	2042.4.12 = {
+		birth = yes
+	}
+	2099.3.5 = {
+		death = yes
+	}
+}
+700058 = {
+	name = "Aaron"
+	dynasty = 5000156
+	culture = bostonian
+	religion = columbian
+	trait = "midas_touched"
+	trait = "administrator"
+	2046.5.26 = {
+		birth = yes
+	}
+	2108.3.5 = {
+		death = yes
+	}
+}
+700059 = {
+	name = "James"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700045
+	2017.12.20 = {
+		birth = yes
+	}
+	2083.4.27 = {
+		death = yes
+	}
+}
+700060 = {
+	name = "Leon"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700059
+	2058.11.30 = {
+		birth = yes
+	}
+	2134.5.17 = {
+		death = yes
+	}
+}
+700061 = {
+	name = "Matthew"
+	dynasty = 5000157
+	religion = columbian
+	culture = bostonian
+	trait = "deceitful"
+	2084.5.27 = {
+		birth = yes
+	}
+	2140.2.7 = {
+		death = { 
+			death_reason = death_dungeon 
+			killer = 700062
+		}
+	}
+}
+700062 = {
+	name = "Jack"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700060
+	2090.6.17 = {
+		birth = yes
+	}
+	2154.7.27 = {
+		death = yes
+	}
+}
+700063 = {
+	name = "Daniel"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700062
+	2114.6.7 = {
+		birth = yes
+	}
+	2184.8.7 = {
+		death = yes
+	}
+}
+700064 = {
+	name = "James"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700063
+	2148.8.4 = {
+		birth = yes
+	}
+	2203.3.15 = {
+		death = yes
+	}
+}
+700065 = {
+	name = "Joeseph"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700064
+	2169.2.14 = {
+		birth = yes
+	}
+	2231.6.25 = {
+		death = yes
+	}
+}
+700066 = {
+	name = "Andrew"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700065
+	trait = "hedonist"
+	trait = "indulgent_wastrel"
+	2204.4.15 = {
+		birth = yes
+	}
+	2257.9.27 = {
+		death = {
+			death_reason = death_battle
+			killer = 700067
+		}
+	}
+}
+700067 = {
+	name = "Issac"
+	dynasty = 5000003
+	religion = "macabrist"
+	culture = "bostonian"
+	trait = "zealous"
+	trait = "heresiarch"
+	trait = "holy_warrior"
+	trait = "brilliant_strategist"
+	2226.7.3 = {
+		birth = yes
+	}
+	2283.2.17 = {
+		death = yes
+	}
+}
+700068 = {
+	name = "Nathaniel"
+	dynasty = 5000003
+	religion = "macabrist"
+	culture = "bostonian"
+	father = 700067
+	2244.3.6 = {
+		birth = yes
+	}
+	2295.2.8 = {
+		death = yes
+	}
+}
+700069 = {
+	name = "Ishmael"
+	dynasty = 5000159
+	religion = "buccaneer"
+	culture = "massachusite"
+	give_nickname = nick_the_whaler
+	2032.4.18 = {
+		birth = yes
+	}
+	2079.3.7 = {
+		death = {
+			death_reason = death_battle
+			killer = 700057
+		}
+	}
+}
+700070 = {
+	name = "Ahab"
+	dynasty = 5000160
+	religion = "columbian"
+	culture = "massachusite"
+	2294.2.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700071 = {
+	name = "Benjamin"
+	dynasty = 5000162
+	religion = "columbian"
+	culture = "massachusite"
+	2290.4.6 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700072 = {
+	name = "Francis"
+	dynasty = 5000163
+	religion = "scholastic"
+	culture = "bostonian"
+	2284.6.17 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700073 = {
+	name = "Bartholomew"
+	dynasty = 5000164
+	religion = "macabrist"
+	culture = "bostonian"
+	2301.3.27 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700074 = { #Dunwich Horror
+	name = "Wilbur"
+	dynasty = 5000171
+	religion = "celtic_pagan"
+	culture = "mainer"
+	trait = "ugly"
+	trait = "quick"
+	trait = "giant"
+	trait = "mystic"
+	trait = "wroth"
+	trait = "paranoid"
+	trait = "arboreal_old_ones"
+	trait = "elusive_shadow"
+	2303.2.2 = {
+		birth = yes
+	}
+	2322.8.2={
+		add_spouse=700075
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700075 = {
+	name = "Lavinia"
+	female = yes
+	religion = "celtic_pagan"
+	culture = "mainer"
+	trait = "ugly"
+	trait = "erudite"
+	2298.8.8 = {
+		birth = yes
+	}
+	2322.8.2={
+		add_spouse=700074
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700076 = { 
+	name = "Antonio" #
+	dynasty = 5000172
+	religion = "celtic_pagan"
+	culture = "proviguese"
+	trait = "mastermind_theologian"
+	trait = "genius"
+	trait = "adventurer"
+	trait = "ambitious"
+	trait = "arboreal_murican"
+	trait = "diligent"
+	2270.7.20 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700077 = { 
+	name = "Lucas"
+	dynasty = 5000172
+	religion = "celtic_pagan"
+	culture = "proviguese"
+	trait = "fortune_builder"
+	trait = "quick"
+	trait = "proud"
+	trait = "stubborn"
+	father = 700076
+	2292.6.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700078 = { 
+	name = "Obed" #King of Lobsterland, trying to reunite it after it fell apart. Took over from his father who he mangled.
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	martial = 3
+	trait = "tough_soldier"
+	trait = "eccentric"
+	trait = "proud"
+	trait = "seducer"
+	trait = "cruel"
+	trait = "arboreal_architect"
+	trait = "aggressive_leader"
+	disallow_random_traits = yes
+	father = 700084
+	2278.9.15 = {
+		birth = yes
+	}
+	2300.7.7={
+		add_spouse=700079
+		effect = {
+			add_claim = d_new_brunswick
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700079 = {
+	name = "Phoebe"
+	female = yes
+	religion = "celtic_pagan"
+	culture = "mixe"
+	trait = "harelip"
+	trait = "uncouth"
+	2276.1.8 = {
+		birth = yes
+		effect = {
+		}
+		culture = lobsterfolk
+	}
+	2300.7.7={
+		add_spouse=700078
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700080 = {
+	name = "Ephraim" #Loyal subject of Obed, weirdly similar with her daugther
+	dynasty = 5000174
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "scholarly_theologian"
+	trait = "mystic"
+	trait = "lunatic"
+	trait = "ambitious"
+	trait = "arbitrary"
+	2267.1.8 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700081 = {
+	name = "Asenath"
+	female = yes
+	dynasty = 5000174
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "scholarly_theologian"
+	trait = "scholar"
+	trait = "ambitious"
+	trait = "arbitrary"
+	trait = "arboreal_murican"
+	father = 700080
+	2305.5.5 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700082 = {
+	name = "Allen" #Wise old man who likes telling stories of Dagon's conquests
+	dynasty = 5000175
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "charismatic_negotiator"
+	trait = "scholar"
+	trait = "patient"
+	trait = "cynical"
+	trait = "drunkard"
+	trait = "arboreal_old_ones"
+	2261.6.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700083 = {
+	name = "Robert" #A secret descendent of Dagon.
+	dynasty = 5000200
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "skilled_tactician"
+	trait = "shrewd"
+	trait = "patient"
+	trait = "greedy"
+	trait = "paranoid"
+	trait = "trickster"
+	trait = "adventurer"
+	trait = "bastard"
+	trait = "arboreal_old_ones"
+	father = 700084
+	2299.3.6 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700084 = { 
+	name = "Onesiphorus"
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "naive_appeaser"
+	trait = "harelip"
+	trait = "mangled"
+	2258.9.17 = {
+		birth = yes 
+		effect = {
+			create_bloodline = {
+				type = dagon_bloodline
+				has_dlc = "Holy Fury"
+			}
+		}
+	}
+	2366.1.1 = {
+		death = yes
+	}
+}
+700085 = { 
+	name = "Barnabas" #Brother of the King of Lobsterland, was tortured before escaping with his son
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "midas_touched"
+	trait = "harelip"
+	trait = "administrator"
+	trait = "chaste"
+	trait = "shy"
+	trait = "disfigured"
+	trait = "arboreal_architect"
+	father = 700084
+	2281.2.28 = {
+		birth = yes
+		effect = {
+			add_claim = k_lobsterland
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700086 = {
+	name = "Alice"
+	female = yes
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "charismatic_negotiator"
+	trait = "harelip"
+	trait = "temperate"
+	trait = "arboreal_gaian"
+	trait = "feeble"
+	father = 700078
+	mother = 700079
+	2300.2.5 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700087 = {
+	name = "Douglas"
+	dynasty = 5000173
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "scholarly_theologian"
+	trait = "harelip"
+	trait = "temperate"
+	trait = "one_eyed"
+	trait = "fair"
+	father = 700085
+	2302.2.5 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700088 = {
+	name = "Howard"
+	dynasty = 5000176
+	religion = "celtic_pagan"
+	culture = "lobsterfolk"
+	trait = "scholarly_theologian"
+	trait = "scholar"
+	trait = "ugly"
+	trait = "hunchback"
+	trait = "clubfooted"
+	trait = "arboreal_gaian"
+	trait = "quick"
+	trait = "humble"
+	trait = "paranoid"
+	trait = "erudite"
+	2290.8.3 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700089 = {
+	name = "Augustus" #Former vassal of Lobsterland
+	dynasty = 5000177
+	religion = "celtic_pagan"
+	culture = "mixe"
+	trait = "brilliant_strategist"
+	trait = "possessed"
+	trait = "strong"
+	trait = "harelip"
+	trait = "giant"
+	trait = "hunter"
+	trait = "holy_warrior"
+	trait = "siege_leader"
+	trait = "zealous"
+	trait = "lustful"
+	trait = "arboreal_old_ones"
+	2295.5.23 = {
+		birth = yes
+		effect = {
+		}
+		culture = lobsterfolk
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700090 = {
+	name = "Henry" #Miskatonic University
+	dynasty = 5000201
+	religion = "celtic_pagan"
+	secret_religion = scholastic
+	culture = "mainer"
+	trait = "mastermind_theologian"
+	trait = "holy_warrior"
+	trait = "scholar"
+	trait = "genius"
+	trait = "diligent"
+	trait = "temperate"
+	trait = "arboreal_architect"
+	trait = "brave"
+	disallow_random_traits = yes
+	2285.3.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700091 = { 
+	name = "Francis"
+	dynasty = 5000202
+	religion = "celtic_pagan"
+	secret_religion = scholastic
+	culture = "mainer"
+	trait = "skilled_tactician"
+	trait = "scholar"
+	trait = "quick"
+	trait = "temperate"
+	trait = "arboreal_architect"
+	trait = "physician"
+	2298.7.3 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700094 = {
+	name = "Peter" #The current head of the Yugoslav royal family, just hanging out in Boston
+	dynasty = 5000204 
+	religion = "orthodox"
+	culture = "jugoslavenski"
+	trait = "fortune_builder"
+	trait = "brave"
+	trait = "ambitious"
+	trait = "patient"
+	trait = "proud"
+	2290.2.5 = {
+		birth = yes		
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700095 = {
+	name = "Richard" #Emperor Richard, a devoted family man. Somewhat aloof to the outside world
+	dynasty = 5000205
+	religion = highmount
+	culture = vermonter
+	trait = "tough_soldier"
+	trait = "organizer"
+	trait = "proud"
+	trait = "patient"
+	trait = "kind"
+	trait = "honest"
+	trait = "trusting"
+	trait = "sympathy_christendom"
+	trait = "ambitious"
+	disallow_random_traits = yes
+	2284.5.23 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700096 = {
+	name = "Aiden" #Count Aiden, a man who has too much time on his hands
+	dynasty = 5000207
+	religion = scholastic
+	culture = albmonter
+	trait = "detached_priest"
+	trait = "dull"
+	trait = "patient"
+	trait = "gamer"
+	trait = "chaste"
+	trait = "slothful"
+	trait = "arbitrary"
+	disallow_random_traits = yes
+	2301.9.4 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700097 = {
+	name = "Blake"
+	dynasty = 5000208
+	religion = "highmount"
+	culture = "albmonter"
+	2302.9.11 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700098 = {
+	name = "Daniel"
+	dynasty = 5000206
+	religion = "highmount"
+	culture = "vermonter"
+	2295.5.12 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700099 = {
+	name = "Boone"
+	dynasty = 5000235
+	religion = "celtic_pagan"
+	culture = "penobscot"
+	trait = "underhanded_rogue"
+	trait = "robust"
+	trait = "arboreal_architect"
+	2270.5.1 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700100 = {
+	name = "Nahum"
+	dynasty = 5000209
+	religion = "celtic_pagan"
+	culture = "mainer"
+	trait = "feeble"
+	trait = "gardener"
+	trait = "arboreal_architect"
+	trait = "misguided_warrior"
+	2271.8.3 = {
+		birth = yes
+	}
+	2318.7.3={
+		add_spouse=700101
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700101 = {
+	name = "Nabby"
+	female = yes
+	religion = "celtic_pagan"
+	culture = "mainer"
+	2273.3.7 = {
+		birth = yes
+	}
+	2318.7.3={
+		add_spouse=700100
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700105 = {
+	name = "Roupen" #Aroostois king of northern Maine. A man who loves poetry!
+	dynasty = 5000250
+	religion = "celtic_pagan"
+	culture = "aroostois"
+	trait = "grey_eminence"
+	trait = "scholar"
+	trait = "poet"
+	trait = "diligent"
+	2287.7.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700106 = {
+	name = "Durand"
+	dynasty = 5000251
+	religion = "celtic_pagan"
+	culture = "aroostois"
+	2302.3.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700107 = {
+	name = "Walter"
+	dynasty = 5000296
+	religion = scholastic
+	culture = nutmegger
+	2289.4.7 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700108 = {
+	name = "Adelaide"
+	dynasty = 5000298
+	religion = columbian
+	culture = nutmegger
+	female = yes
+	2281.4.17 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700109 = {
+	name = "John"
+	dynasty = 5001002 
+	religion = columbian
+	culture = nutmegger
+	trait = martial_cleric
+	trait = humble
+	trait = shy
+	trait = honest
+	trait = depressed
+	disallow_random_traits = yes
+	2289.5.14 = {
+		birth = yes
+	}
+	2324.1.1 = {
+		add_spouse = 700115
+		effect = {
+			add_rival = 700113
+			add_friend = 700114
+			add_lover = 700115
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700110 = {
+	name = "Benedict"
+	dynasty = 5000301
+	religion = macabrist
+	culture = nutmegger
+	2262.6.23 = {
+		birth = yes
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700111 = {
+	name = "Eliphalet"
+	dynasty = 5000302
+	religion = macabrist
+	culture = nutmegger
+	2278.4.15 = {
+		birth = yes
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700112 = {
+	name = "Amos"
+	dynasty = 5000303
+	religion = macabrist
+	culture = nutmegger
+	2282.7.22 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700113 = {
+	name = "Gary"
+	religion = columbian
+	culture = nutmegger
+	trait = grey_eminence
+	trait = possessed
+	trait = gregarious
+	trait = deceitful
+	trait = proud
+	employer = 700109
+	disallow_random_traits = yes
+	2271.3.23 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700114 = {
+	name = "Garcia"
+	religion = columbian
+	culture = nutmegger
+	trait = tough_soldier 
+	trait = holy_warrior
+	trait = celibate
+	trait = brave
+	trait = diligent
+	trait = stubborn
+	trait = zealous
+	employer = 700109
+	disallow_random_traits = yes
+	2262.11.6 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2324.1.1 = {
+		effect = { add_rival = 700113 }
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+700115 = {
+	name = "Lisa"
+	religion = columbian
+	culture = nutmegger
+	female = yes
+	trait = naive_appeaser
+	trait = fair
+	trait = socializer
+	trait = groomed 
+	trait = kind
+	trait = content
+	trait = trusting
+	2297.8.6 = {
+		birth = yes
+		effect={ dynasty=none }
+	}
+	2555.1.1 = {
+		death = yes
+	}
+}
+
+700116 = {
+	name = "Joseph"#Father of Ethan and Ira Allen
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	2240.1.2 = {
+		birth = yes
+	}
+	2300.1.1 = {
+		death = yes
+	}
+}
+
+700117 = {
+	name = "Ethan Alphonso" #First son of Ethan
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	father = 700049
+	2305.1.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+700118 = {
+	name = "Henry Hitchcock" #Second son of Ethan
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	father = 700049
+	2315.1.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+700119 = {
+	name = "Joseph" #Third son of Ethan
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	father = 700049
+	2318.1.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+700120 = {
+	name = "Henry Michael" #Fourth son of Ethan
+	dynasty = 5000031
+	religion = "highmount"
+	culture = "vermonter"
+	father = 700049
+	2320.1.2 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+700121 = {
+	name = "Zachary"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700066	
+	2235.3.5 = {
+		birth = yes
+	}
+	2290.9.2 = {
+		death = yes
+	}
+}
+
+700122 = {
+	name = "Jordan"
+	dynasty = 5000025
+	religion = "columbian"
+	culture = "bostonian"
+	father = 700121	
+	2270.3.5 = {
+		birth = yes
+	}
+	2320.1.2 = {
+		death = yes
+	}
+}
+
+700123 = { #Grandpa Heffley
+	name = "Gregory"
+	dynasty = 5000009 #Heffley
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "kind"
+	trait = "arbitrary"
+	2254.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+			add_artifact = spectacles
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700124 = {
+	name = "Joe"
+	dynasty = 5000009 #Heffley
+	father = 700123
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "arbitrary"
+	2282.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700125 = {
+	name = "Gary"
+	dynasty = 5000009 #Heffley
+	father = 700123
+	religion = "columbian"
+	culture = "massachusite"
+	trait = "arbitrary"
+	trait = "lustful"
+	trait = "slothful"
+	2289.1.31 = {
+		birth = yes
+		effect = {
+			add_claim = c_worcester
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+700126 = {
+	name = "John"
+	dynasty = 3001646
+	religion = scholastic
+	culture = bostonian
+	2065.5.28 = {
+		birth = yes
+	}
+	2149.3.23 = {
+		death = yes
+	}
+}
+700127 = {
+	name = "Ahab"
+	dynasty = 3001647
+	religion = pagan
+	culture = massachusite
+	2054.6.23 = {
+		birth = yes
+	}
+	2083.6.19 = {
+		death = {
+			death_reason = death_battle
+			killer = 700058
+		}
+	}
+}
+700128 = {
+	name = "Shay"
+	dynasty = 3001648
+	religion = columbian
+	culture = massachusite
+	2129.9.12 = {
+		birth = yes
+	}
+	2163.7.21 = {
+		death = {
+			death_reason = death_battle
+			killer = 700063
+		}
+	}
+}
