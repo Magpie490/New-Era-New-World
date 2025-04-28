@@ -6298,6 +6298,145 @@ castle = {
 		
 		extra_tech_building_start = 0.2
 	}
+	#Welsh and English Longbow archery range
+	ca_culture_saxon_english_1 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = ca_culture_saxon_english_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		archers_offensive = 0.15
+		archers = 60
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_saxon_english_2 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = ca_culture_saxon_english_1
+				has_building = ca_culture_saxon_english_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = ca_culture_saxon_english_1
+		gold_cost = 300
+		build_time = 1095
+		archers_offensive = 0.15
+		archers = 80
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_saxon_english_3 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = ca_culture_saxon_english_1
+				has_building = ca_culture_saxon_english_2
+				has_building = ca_culture_saxon_english_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = ca_culture_saxon_english_2
+		gold_cost = 400
+		build_time = 2190
+		archers_offensive = 0.15
+		archers = 100
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
+	ca_culture_saxon_english_4 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = ca_culture_saxon_english_1
+				has_building = ca_culture_saxon_english_2
+				has_building = ca_culture_saxon_english_3
+				has_building = ca_culture_saxon_english_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = ca_culture_saxon_english_3
+		gold_cost = 500
+		build_time = 2190
+		archers_offensive = 0.15
+		archers = 120
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+		tax_income = -0.2
+	}
 	ca_culture_scottish_1 = {
 		desc = ca_culture_scottish_1_desc
 		potential = {
@@ -23209,7 +23348,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = ca_culture_boston_1
 			}
 		}
@@ -23217,7 +23356,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23226,7 +23365,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23245,7 +23384,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = ca_culture_boston_1
 				has_building = ca_culture_boston_2
 			}
@@ -23254,7 +23393,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23263,7 +23402,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23282,7 +23421,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = ca_culture_boston_1
 				has_building = ca_culture_boston_2
 				has_building = ca_culture_boston_3
@@ -23292,7 +23431,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23301,7 +23440,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}		
@@ -23320,7 +23459,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = ca_culture_boston_1
 				has_building = ca_culture_boston_2
 				has_building = ca_culture_boston_3
@@ -23331,7 +23470,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23340,7 +23479,7 @@ castle = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -23813,7 +23952,7 @@ castle = {
 		desc = ca_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = ca_culture_mainer_1
 			}
@@ -23821,7 +23960,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -23830,7 +23969,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -23853,7 +23992,7 @@ castle = {
 		desc = ca_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = ca_culture_mainer_1
 				has_building = ca_culture_mainer_2
@@ -23862,7 +24001,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
@@ -23871,7 +24010,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1 
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
@@ -23894,7 +24033,7 @@ castle = {
 		desc = ca_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = ca_culture_mainer_1
 				has_building = ca_culture_mainer_2
@@ -23904,7 +24043,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
@@ -23913,7 +24052,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
@@ -23936,7 +24075,7 @@ castle = {
 		desc = ca_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = ca_culture_mainer_1
 				has_building = ca_culture_mainer_2
@@ -23947,7 +24086,7 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
@@ -23956,7 +24095,7 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
 				OR = {
-					culture = mainer
+					OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 					culture = lobsterfolk
 				}
 			}
