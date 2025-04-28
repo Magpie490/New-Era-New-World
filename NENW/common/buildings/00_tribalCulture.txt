@@ -2,6 +2,146 @@
  # start trigger is in title scope.
 
 tribal = {
+
+	#Welsh and English Longbow archery range
+	tb_culture_saxon_english_1 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = tb_culture_saxon_english_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		
+		prestige_cost = 100
+		build_time = 365
+		archers_offensive = 0.15
+		archers = 30
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_saxon_english_2 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = tb_culture_saxon_english_1
+				has_building = tb_culture_saxon_english_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = tb_culture_saxon_english_1
+		prestige_cost = 200
+		build_time = 547
+		archers_offensive = 0.15
+		archers = 40
+		ai_creation_factor = 100
+		
+		convert_to_castle = ca_culture_saxon_english_1
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_saxon_english_3 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = tb_culture_saxon_english_1
+				has_building = tb_culture_saxon_english_2
+				has_building = tb_culture_saxon_english_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = tb_culture_saxon_english_2
+		prestige_cost = 300
+		build_time = 730
+		archers_offensive = 0.15
+		archers = 50
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_saxon_english_4 = {
+		desc = ca_culture_saxon_english_1_desc
+		potential = {
+			OR = {
+				OR = { culture = buckeye culture = ohiwyr }
+				has_building = tb_culture_saxon_english_1
+				has_building = tb_culture_saxon_english_2
+				has_building = tb_culture_saxon_english_3
+				has_building = tb_culture_saxon_english_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					OR = { culture = buckeye culture = ohiwyr }
+				}
+			}
+		}
+		upgrades_from = tb_culture_saxon_english_3
+		prestige_cost = 400
+		build_time = 1095
+		archers_offensive = 0.15
+		archers = 60
+		ai_creation_factor = 98
+		
+		convert_to_castle = ca_culture_saxon_english_2
+		
+		extra_tech_building_start = 0.8
+	}
 	#Germanic Halberdiers
 	tb_culture_germanic_heavy_1 = {
 		desc = ca_culture_germanic_heavy_1_desc
@@ -14478,7 +14618,7 @@ tribal = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = tb_culture_boston_1
 			}
 		}
@@ -14486,7 +14626,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14495,7 +14635,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14513,7 +14653,7 @@ tribal = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = tb_culture_boston_1
 				has_building = tb_culture_boston_2
 			}
@@ -14522,7 +14662,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14531,7 +14671,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14550,7 +14690,7 @@ tribal = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = tb_culture_boston_1
 				has_building = tb_culture_boston_2
 				has_building = tb_culture_boston_3
@@ -14560,7 +14700,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14569,7 +14709,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}		
@@ -14590,7 +14730,7 @@ tribal = {
 		potential = {
 			OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				has_building = tb_culture_boston_1
 				has_building = tb_culture_boston_2
 				has_building = tb_culture_boston_3
@@ -14601,7 +14741,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -14610,7 +14750,7 @@ tribal = {
 			ROOT = {
 				OR = {
 				culture = bostonian
-				culture = massachusite
+				OR = { culture = massachusite culture = taconinach }
 				}
 			}
 		}
@@ -15133,7 +15273,7 @@ tribal = {
 		desc = tb_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = tb_culture_mainer_1
 			}
@@ -15141,7 +15281,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15150,7 +15290,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15172,7 +15312,7 @@ tribal = {
 		desc = tb_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = tb_culture_mainer_1
 				has_building = tb_culture_mainer_2
@@ -15181,7 +15321,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15190,7 +15330,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15214,7 +15354,7 @@ tribal = {
 		desc = tb_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = tb_culture_mainer_1
 				has_building = tb_culture_mainer_2
@@ -15224,7 +15364,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15233,7 +15373,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15257,7 +15397,7 @@ tribal = {
 		desc = tb_culture_mainer_1_desc
 		potential = {
 			OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				has_building = tb_culture_mainer_1
 				has_building = tb_culture_mainer_2
@@ -15268,7 +15408,7 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}
@@ -15277,7 +15417,7 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-				culture = mainer
+				OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 				culture = lobsterfolk
 				}
 			}

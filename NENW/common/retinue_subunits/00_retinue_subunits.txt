@@ -1476,11 +1476,11 @@ RETTYPE_CUL_MAINE =
 		higher_tier_than = BARON
 		is_nomadic = no
 		OR = {
-			culture = mainer
+			OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 			culture = lobsterfolk
 			any_realm_province = {
 				OR = {
-			culture = mainer
+			OR = { culture = massachusite culture = taconinach culture = mainer culture = wickerculture = bostonian}r
 			culture = lobsterfolk
 				}
 			}
@@ -1518,6 +1518,36 @@ RETTYPE_CUL_GOLDENGATER =
 	}
 }
 
+RETTYPE_CUL_OLDWELSH = 
+{
+	first_type = 0
+	first_amount = 375
+	second_type = 5
+	second_amount = 125
+	
+	potential = {
+		higher_tier_than = BARON
+		is_nomadic = no
+		OR = {
+			culture = buckeye
+			culture = ohiwyr
+			any_realm_province = {
+				OR = {
+			culture = buckeye
+			culture = ohiwyr
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_defensive = 0.1
+		light_infantry_morale = 0.2
+		archers_offensive = 0.1
+		archers_morale = 0.1
+	}
+}
 RETTYPE_CUL_VALLEYAN =
 {
 	first_type = 3
