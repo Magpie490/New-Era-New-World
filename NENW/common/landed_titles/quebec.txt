@@ -16,6 +16,24 @@ e_quebec = {
 			
 		}
 	}
+	k_t_quebec = { #not just the City
+		color = { 83 95 255 }
+		color2= { 220 220 0 }
+
+		capital = 1199
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_t_quebec = {
+						is_titular = yes
+					}
+				}
+				k_t_quebec = {
+					is_titular = no
+				}
+			}
+		}
+	}
 	k_grand_montreal = {
 		color = { 200 0 55 }
 		color2= { 220 220 0 }

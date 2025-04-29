@@ -3,7 +3,24 @@ e_ontario = {
 	color2= { 220 220 0 }
 
 	capital = 1271 # Toronto
-		
+	t_t_ontario = {
+		color = { 0 110 19 }
+		color2= { 220 220 0 }
+
+		capital = 1271 # Toronto
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					t_t_ontario = {
+						is_titular = yes
+					}
+				}
+				t_t_ontario = {
+					is_titular = no
+				}
+			}
+		}
+	}
 	k_ontario = { #Yeronia
 		color = { 255 120 30 }
 		color2 = { 210 190 0 }
@@ -670,7 +687,6 @@ e_ontario = {
 				b_palmquist_ON = {}
 			}
 		}
-
 		d_cochrane = {
 			color = { 58 116 58 }
 			color2 = { 255 255 255 }
@@ -714,7 +730,6 @@ e_ontario = {
 				b_petawanga_ON = {}
 			}
 		} #End of d_cochrane
-
 		d_shield = {
 			color = { 80 178 71 }
 			color2= { 255 255 255 }
@@ -1022,7 +1037,6 @@ e_ontario = {
 				b_family_ON = {}
 			}
 		}
-		
 		d_kenora = {
 			color = { 71 33 0 }
 			color2 = { 255 178 0 }
@@ -1185,7 +1199,6 @@ e_ontario = {
 				b_prideaux_ON = {}
 			}			
 		} #End of d_patricia
-
 		d_winisk = {
 		
 			color = { 196 80 126 }
@@ -1252,8 +1265,6 @@ e_ontario = {
 			}
 
 		} #End of d_winisk
-		
-		
 		d_albany = {
 			color = { 153 102 102 }
 			color2 = { 255 255 255 }
@@ -1347,7 +1358,6 @@ e_ontario = {
 			}
         }
 	}
-	
 	k_soo = {
 		color = { 229 195 22 }
 		color2 = { 210 190 0 }

@@ -3373,6 +3373,132 @@ decisions = {
 			}
 		}
 	}
+	reorganize_canada = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			has_landed_title = e_canada
+			NOT = {
+				has_global_flag = canada_reorganized
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control a bunch of lands
+			completely_controls = e_canada
+		}
+
+		effect = {
+			set_global_flag = canada_reorganized
+			d_new_brunswick = { de_jure_liege = k_new_brunswick } 
+			d_petitcodiac = { de_jure_liege = k_new_brunswick } 
+			d_miramichi = { de_jure_liege = k_new_brunswick } 
+			d_restigouche = { de_jure_liege = k_new_brunswick } 
+			
+			d_nova_scotia = { de_jure_liege = k_nova_scotia } 
+			d_halifax = { de_jure_liege = k_nova_scotia }  
+			d_cape_breton = { de_jure_liege = k_nova_scotia } 
+			
+			d_prince_edward_island = { de_jure_liege = k_prince_edward_island }
+			
+			d_avalon = { de_jure_liege = k_newfoundland }
+			d_burin = { de_jure_liege = k_newfoundland }
+			d_newfoundland = { de_jure_liege = k_newfoundland }
+			d_labrador = { de_jure_liege = k_newfoundland }
+			
+			d_minganie = { de_jure_liege = k_t_quebec }
+			d_madeleine_islands = { de_jure_liege = k_t_quebec }
+			d_monteregie = { de_jure_liege = k_t_quebec }
+			d_lanaudiere = { de_jure_liege = k_t_quebec }
+			d_laurentides = { de_jure_liege = k_t_quebec }
+			d_montreal = { de_jure_liege = k_t_quebec }
+			d_outaouais = { de_jure_liege = k_t_quebec }
+			d_sept_rivieres = { de_jure_liege = k_t_quebec }
+			d_la_citadelle = { de_jure_liege = k_t_quebec }
+			d_stadacona = { de_jure_liege = k_t_quebec }
+			d_mauricia = { de_jure_liege = k_t_quebec }
+			d_saguenay = { de_jure_liege = k_t_quebec }
+			d_centre = { de_jure_liege = k_t_quebec }
+			d_appalaches = { de_jure_liege = k_t_quebec }
+			d_estrie = { de_jure_liege = k_t_quebec }
+			d_bas_st_laurent = { de_jure_liege = k_t_quebec }
+			d_gaspesia = { de_jure_liege = k_t_quebec }
+			d_eeyou_istchee = { de_jure_liege = k_t_quebec }
+			d_aurora = { de_jure_liege = k_t_quebec }
+			
+			c_netagamiou = { de_jure_liege = d_monteregie }
+			c_natashquan = { de_jure_liege = d_monteregie }
+			
+			d_mushkegowuk = { de_jure_liege = k_t_ontario }
+			c_little_abitibi = { de_jure_liege = d_mushkegowuk }
+			d_talbot = { de_jure_liege = k_t_ontario }
+			d_huronia = { de_jure_liege = k_t_ontario }
+			d_sexony = { de_jure_liege = k_t_ontario }
+			d_toronto = { de_jure_liege = k_t_ontario }
+			d_golden_horseshoe = { de_jure_liege = k_t_ontario }
+			d_ottawa = { de_jure_liege = k_t_ontario }
+			d_quinte = { de_jure_liege = k_t_ontario }
+			d_kawartha = { de_jure_liege = k_t_ontario }
+			d_midland = { de_jure_liege = k_t_ontario }
+			d_algoma = { de_jure_liege = k_t_ontario }
+			d_cochrane = { de_jure_liege = k_t_ontario }
+			d_shield = { de_jure_liege = k_t_ontario }
+			d_home = { de_jure_liege = k_t_ontario }
+			d_thunder = { de_jure_liege = k_t_ontario }
+			d_kenora = { de_jure_liege = k_t_ontario }
+			d_patricia = { de_jure_liege = k_t_ontario }
+			d_winisk = { de_jure_liege = k_t_ontario }
+			d_albany = { de_jure_liege = k_t_ontario }
+			d_soo = { de_jure_liege = k_t_ontario }
+			d_manitoulin = { de_jure_liege = k_t_ontario }
+			
+			d_winnipeg = { de_jure_liege = k_manitoba }
+			d_the_pas = { de_jure_liege = k_manitoba }
+			d_westman = { de_jure_liege = k_manitoba }
+			d_keeseekoowenin = { de_jure_liege = k_manitoba }
+			d_manto_sakahigan = { de_jure_liege = k_manitoba }
+			
+			d_saskatchewan = { de_jure_liege = k_saskatchewan }
+			d_ghost_trail = { de_jure_liege = k_saskatchewan }
+			d_lakeland = { de_jure_liege = k_saskatchewan }
+			d_perogy_belt = { de_jure_liege = k_saskatchewan }
+			d_saskatoon = { de_jure_liege = k_saskatchewan }
+			d_riverlands = { de_jure_liege = k_saskatchewan }
+			
+			d_the_stampede = { de_jure_liege = k_alberta }
+			d_calgary = { de_jure_liege = k_alberta }
+			d_brazeau = { de_jure_liege = k_alberta }
+			d_lesser_slave = { de_jure_liege = k_alberta }
+			d_peace_AB = { de_jure_liege = k_alberta }
+			d_alberta = { de_jure_liege = k_alberta }
+			c_medicine_hat = { de_jure_liege = d_the_stampede }
+			c_bonnyville_AB = { de_jure_liege = d_lesser_slave }
+			c_lloydminster = { de_jure_liege = d_alberta }
+			
+			d_haida = { de_jure_liege = k_t_beecy }
+			d_sunshine_coast = { de_jure_liege = k_t_beecy }
+			d_vancouver = { de_jure_liege = k_t_beecy }
+			d_fraser_valley = { de_jure_liege = k_t_beecy }
+			d_victoria_strait = { de_jure_liege = k_t_beecy }
+			d_vancouver_strait = { de_jure_liege = k_t_beecy }
+			d_georgia_strait = { de_jure_liege = k_t_beecy }
+			d_north_end = { de_jure_liege = k_t_beecy }
+			d_cariboo  = { de_jure_liege = k_t_beecy }
+			d_bulkley_valley = { de_jure_liege = k_t_beecy }
+			d_peace_river = { de_jure_liege = k_t_beecy }
+			d_fraser_fort_george = { de_jure_liege = k_t_beecy }
+			d_great_valleys = { de_jure_liege = k_t_beecy }
+			d_monashee = { de_jure_liege = k_t_beecy }
+			d_the_coast = { de_jure_liege = k_t_beecy }
+			d_skeena = { de_jure_liege = k_t_beecy }
+			d_kitimat = { de_jure_liege = k_t_beecy }
+		}
+	}
+	
 	##REGIMENTS
 	organize_sixtyninth_infantry_regiment = {
 		only_independent = yes

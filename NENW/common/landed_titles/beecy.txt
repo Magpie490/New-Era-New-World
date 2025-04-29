@@ -6,7 +6,27 @@ e_beecy = {
 	haida="Tlajáng"
 	
 	capital = 548 #Vancouver
-	
+	k_t_beecy = {
+		color = { 7 153 153 }
+		color2 = { 255 255 255 }
+		
+		culture = beesian
+		haida="Tlajáng"
+		
+		capital = 548 #Vancouver
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_t_beecy = {
+						is_titular = yes
+					}
+				}
+				k_t_beecy = {
+					is_titular = no
+				}
+			}
+		}
+	}
 	k_haida = {
 			color={ 133 13 9 }
 			color2={ 255 255 255 }
@@ -373,7 +393,6 @@ e_beecy = {
 				b_leechtown_BC = {}		
 			}
 		}
-
 		d_vancouver_strait = {
 			color = { 40 50 102 }
 			color2 = { 255 255 255 }
@@ -502,7 +521,6 @@ e_beecy = {
 				b_sonora_island_BC = {}
 			}
 		}
-		
 		d_north_end = {
 			color = { 68 122 229 }
 			color2 = { 255 255 255 }
@@ -564,7 +582,6 @@ e_beecy = {
 				b_mahatta_BC = {}
 			}
 		}
-		
 	}
 	k_wrangelia = {
 		color={ 14 100 140 }
