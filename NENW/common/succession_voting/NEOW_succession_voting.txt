@@ -3743,6 +3743,12 @@ confederation_elective = {
 				} 
 			} 
 		} 
+		FROM = {
+			religion_group = ROOT
+			NOT = {
+				is_heretic = yes
+			}
+		}
 		OR = {
 			FROM = { any_claim = { title = ROOT_FROMFROM } }
 			ROOT = { 
