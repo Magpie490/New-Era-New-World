@@ -1795,7 +1795,12 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			culture_group = haudenosaunee
+			OR = {
+				culture = cayuga
+				culture = seneca
+				culture = oneida
+				culture = mohawk
+			}
 			e_haudenosaunee = {
 				is_titular = yes
 				has_holder = no
