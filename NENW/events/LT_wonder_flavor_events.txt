@@ -4686,10 +4686,7 @@ character_event = {
 						has_wonder_flag = Hagia_Sophia_christian_cult
 					}
 				}
-				OR = {
-					religion_group = muslim
-					religion = jugoslavist
-				}
+				religion_group = muslim
 			}
 		}
 		NOT = { has_character_flag = had_chance_to_convert_hagia_sophia }
@@ -4727,12 +4724,7 @@ character_event = {
     				}
     				event_target:target_wonder = {
     					has_wonder_flag = Hagia_Sophia_muslim_cult
-    					location = { 
-							OR = {
-								religion_group = muslim 
-								religion = jugoslavist
-							}
-						}
+    					location = { religion_group = muslim }
     				}
     			}
     		}
@@ -4764,10 +4756,7 @@ character_event = {
 		}
 		else_if = {
 			limit = { 
-				OR = {
-					religion_group = muslim 
-					religion = jugoslavist
-				} 
+				religion_group = muslim
 			}
 			event_target:target_wonder = {
 				set_wonder_flag = Hagia_Sophia_muslim_cult
