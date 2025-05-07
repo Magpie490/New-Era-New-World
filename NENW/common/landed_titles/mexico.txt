@@ -1354,16 +1354,75 @@ e_mexico = {
 			}
 		}
 	}
-#	k_veracruz = { #titular title
+#	k_veracruz = { #titular title intended to merge k_sotavento and k_xalapa
 #		color={ 254 226 69 }
 #		color2={ 255 255 255 }
 #		capital = 3078 #c_xalapa
 #	}
+k_coatzacoalcos = { # Principality titular title for e_mexico
+    color = { 255 255 90 }
+    color2 = { 255 255 255 }
+
+    capital = 3081 # c_coatzacoalcos
+    title = prince_male
+    title_female = prince_female
+    title_prefix = principality_of
+
+    allow = {
+        liege = {
+            has_landed_title = e_mexico
+        }
+
+        OR = {
+            has_landed_title = d_olmeca
+            has_landed_title = c_veracruz
+        }
+
+        NOT = {
+            OR = {
+                tier = king
+                tier = emperor
+            }
+        }
+    }
+}
+	k_veracruz_principality = { #principality titular title for the HME
+		color={ 254 226 69 }
+		color2={ 255 255 255 }
+		
+		capital = 3069 #c_heroica_veracruz
+		title = prince_male
+		title_female = prince_female
+		title_prefix = principality		
+   
+		allow = {
+			liege = {
+				has_landed_title = e_mexico
+			}
+
+			OR = {
+				has_landed_title = d_veracruz
+				has_landed_title = c_heroica_veracruz
+			}
+
+			NOT = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+		}
+	}	
 	k_xalapa = {
 		color = { 168 150 97 }
 		color2 = { 255 255 255 }	
 
 		capital = 3078 # c_xalapa
+
+		title = prince_male
+		title_female = prince_female
+		title_prefix = principality		
+
 		d_las_montanas = { 
 			color = { 168 140 58 }
 			color2 = { 255 255 255 }
@@ -1400,11 +1459,13 @@ e_mexico = {
 				b_ciudad_mendoza_VE = {
 					short_name = yes 
 					used_for_dynasty_names = no
-				}				
+				}					
 				b_ixhuatlancillo_VE = {}	
 				b_zongolica_VE = {}		
 				b_xoxocotla_VE = {}	
 				b_tuxpanguillo_VE = {}
+				b_tlilapan_VE = {}
+				b_mariano_escobedo_VE = {}
 			}			
 			c_xalapa = { # 3078
 				color={ 176 82 94 }
@@ -1476,7 +1537,7 @@ e_mexico = {
 			capital = 3078 # c_xalapa
 			
 
-			c_heroica_veracruz = { # 3079
+			c_heroica_veracruz = { # 3069
 				color={ 218 209 137 }
 				color2={ 255 255 255 }
 				holy_site = sacred_heart
