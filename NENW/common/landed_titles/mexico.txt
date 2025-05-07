@@ -1359,18 +1359,80 @@ e_mexico = {
 #		color2={ 255 255 255 }
 #		capital = 3078 #c_xalapa
 #	}
-	
-	k_sotavento = {
-		color = { 168 161 85 }
-		color2 = { 255 255 255 }
-		
-		capital = 3069 #c_heroica_veracruz
+	k_xalapa = {
+		color = { 168 150 97 }
+		color2 = { 255 255 255 }	
 
-		d_veracruz = {
-			color={ 216 208 129 }
-			color2={ 255 255 255 }
+		capital = 3078 # c_xalapa
+		d_las_montanas = { 
+			color = { 168 140 58 }
+			color2 = { 255 255 255 }
 			
-			capital = 3078 # c_xalapa
+
+			c_las_montanas = { # 3080
+				color={ 149 40 149 }
+				color2={ 255 255 255 }
+				
+				b_cordoba_VE = {}
+				b_fortin_de_las_flores_VE= {}
+				b_amatlan_de_los_reyes_VE = {}
+				b_huatusco_de_chicuellar_VE = {}
+				b_coscomatepec_de_bravo_VE = {}
+				b_chocaman_VE = {}
+				b_comapa_VE = {}
+
+			}
+			c_tezonapa = { #2278
+				color={ 149 40 149 }
+				color2={ 255 255 255 }
+				
+				b_tezonapa_VE = {}
+				b_cosolapa ={}
+				b_yanga_VE = {}
+				b_cuitlahuac_VE = {}
+				b_omealca_VE = {}
+				b_acatlan_de_perez_figueroa_OA ={}
+				b_san_jose_independencia_OA = {}
+			}
+			
+			c_orizaba = { #2277
+				b_orizaba_VE = {}
+				b_ciudad_mendoza_VE = {
+					short_name = yes 
+					used_for_dynasty_names = no
+				}				
+				b_ixhuatlancillo_VE = {}	
+				b_zongolica_VE = {}		
+				b_xoxocotla_VE = {}	
+				b_tuxpanguillo_VE = {}
+			}			
+			c_xalapa = { # 3078
+				color={ 176 82 94 }
+				color2={ 255 255 255 }
+				holy_site = mictlantec
+				holy_site = sol_invicta
+				
+				b_xalapa_VE = {}
+				b_coatepec_VE = {}
+				b_actopan_VE = {}
+				b_xico_VE = {}
+				b_naolinco_de_victoria_VE = {}
+				b_cosautlan_de_carvajal_VE = {}
+				b_teocelo_VE = {}
+				b_tuzamapan_VE = {}
+				b_san_marcos_de_leon_VE = {}
+				b_el_lencero_VE = {}
+				b_altotonga_VE = {}
+				b_el_salado_VE = {}
+				b_miahuatlan_VE = {}
+	
+			}			
+		}
+		d_totonaca = {
+			color = { 198 159 51 }
+			color2 = { 255 255 255 }
+			
+			capital = 3077 #c_totona
 			
 			c_tononaca = { # 3077
 				color={ 106 118 124 }
@@ -1383,7 +1445,37 @@ e_mexico = {
 				b_tecolutla_VE = {}
 				b_lazaro_cardenas_VE = {}
 				b_tenextepec_VE = {}
+			}	
+
+			c_nautla = { #2186
+				color={ 196 99 107 }
+				color2={ 255 255 255 }			
+
+				b_misantla_VE = {}
+				b_martinez_de_la_torre_VE ={}
+				b_tlapacoyan_VE ={}
+				b_laguna_verde_VE ={}
+				b_vega_de_alatorre_VE ={}
+				b_casitas_VE ={}
+				b_nautla_VE ={}
+				b_ayotoxco_de_guerrero_VE ={}
 			}
+		}		
+	}	
+	k_sotavento = {
+		color = { 168 161 85 }
+		color2 = { 255 255 255 }
+		
+		capital = 3069 #c_heroica_veracruz
+
+
+		d_veracruz = {
+			color={ 216 208 129 }
+			color2={ 255 255 255 }
+			
+			capital = 3078 # c_xalapa
+			
+
 			c_heroica_veracruz = { # 3079
 				color={ 218 209 137 }
 				color2={ 255 255 255 }
@@ -1401,44 +1493,6 @@ e_mexico = {
 				b_malibran_de_las_brujas_VE = {}
 				b_cotaxla_VE = {}
 			}
-			c_las_montanas = { # 3080
-				color={ 149 40 149 }
-				color2={ 255 255 255 }
-				
-				b_cordoba_VE = {}
-				b_ixhuatlancillo_VE = {}
-				b_orizaba_VE = {}
-				b_zongolica_VE = {}
-				b_xoxocotla_VE = {}
-				b_ciudad_mendoza_VE = {
-					short_name = yes 
-					used_for_dynasty_names = no
-				}
-				b_tuxpanguillo_VE = {}
-				b_yanga_VE = {}
-			}
-			c_xalapa = { # 3078
-				color={ 176 82 94 }
-				color2={ 255 255 255 }
-				holy_site = mictlantec
-				holy_site = sol_invicta
-				
-				b_xalapa_VE = {}
-				b_coatepec_VE = {}
-				b_actopan_VE = {}
-				b_xico_VE = {}
-				b_huatusco_de_chicuellar_VE = {}
-				b_naolinco_de_victoria_VE = {}
-				b_cosautlan_de_carvajal_VE = {}
-				b_teocelo_VE = {}
-				b_tuzamapan_VE = {}
-				b_san_marcos_de_leon_VE = {}
-				b_el_lencero_VE = {}
-				b_altotonga_VE = {}
-				b_el_salado_VE = {}
-				b_miahuatlan_VE = {}
-	
-			}
 			c_la_antigua = { # 2221
 				color={ 186 92 104 }
 				color2={ 255 255 255 }
@@ -1450,20 +1504,8 @@ e_mexico = {
 				b_rinconada_VE = {}
 				b_puente_nacional_VE = {}
 				b_la_antigua_VE = {}
-			}
-			c_nautla = { #2186
-				color={ 196 99 107 }
-				color2={ 255 255 255 }			
+			}	
 
-				b_misantla_VE = {}
-				b_martinez_de_la_torre_VE ={}
-				b_tlapacoyan_VE ={}
-				b_laguna_verde_VE ={}
-				b_vega_de_alatorre_VE ={}
-				b_casitas_VE ={}
-				b_nautla_VE ={}
-				b_ayotoxco_de_guerrero_VE ={}
-			}
 			c_alvarado = { #2223
 				color={ 190 90 100 }
 				color2={ 255 255 255 }	
