@@ -1,0 +1,772 @@
+decisions = {
+
+	convert_to_oligarchic_republic_indep  = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			government = tribal_government
+			independent = yes
+		}
+		allow = {
+			war = no
+			higher_tier_than = BARON
+			custom_tooltip = {
+				text = TT_NOT_UNREFORMED_PAGAN
+				hidden_tooltip = {
+					OR = {
+						NOT = {
+							religion_group = pagan_group
+						}
+						is_reformed_religion = yes
+						religion = hellenic_pagan
+						religion = novelist
+						religion = zenith
+						religion = kiratist
+						religion = sanamahist
+					}
+				}
+			}
+			OR = {
+				AND = {
+					TECH_LEGALISM = 1
+					primary_title = { has_law = tribal_organization_4 }
+				}
+				AND = {
+					TECH_LEGALISM = 2
+					primary_title = { has_law = tribal_organization_3 }
+				}
+				AND = {
+					TECH_LEGALISM = 3
+					primary_title = { has_law = tribal_organization_2 }
+				}
+				AND = {
+					TECH_LEGALISM = 4
+					primary_title = { has_law = tribal_organization_1 }
+				}
+			}
+			capital_scope = {
+				port = no
+			}
+			capital_holding = {
+				OR = {
+					AND = {
+						holding_type = tribal
+						has_building = tb_market_town_4
+					}
+					capital_scope = {
+						any_province_holding = {
+							holding_type = city
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				
+				set_government_type = oligarchic_republic
+				if = {
+					limit = {
+						ai = no
+					}
+					add_trait = oligarchy_ruler
+					current_heir = {
+						add_trait = oligarchy_ruler
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							num_of_government_vassals = {
+								OR = { government = oligarchic_republic government = consular_republic }
+								value = 1
+							}
+						}
+					}
+					
+				}
+				primary_title = {
+					set_title_flag = new_oligarchic_state
+				}
+				any_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = tribal
+					}
+					convert_to = CITY
+					refill_holding_levy = yes
+					location = { #Clear Tribal Great Pillars
+						clr_province_flag = flag_great_pillar_occultist
+						clr_province_flag = flag_great_pillar_americanist
+						clr_province_flag = flag_great_pillar_celtic_pagan
+						clr_province_flag = flag_great_pillar_inuit_pagan
+						clr_province_flag = flag_great_pillar_lakefolk_pagan
+						clr_province_flag = flag_great_pillar_novelist
+						clr_province_flag = flag_great_pillar_folklorist
+						clr_province_flag = flag_great_pillar_arcadian
+						clr_province_flag = flag_great_pillar_nousthreskeia
+						clr_province_flag = flag_great_pillar_baltic
+						clr_province_flag = flag_great_pillar_finnish
+						clr_province_flag = flag_great_pillar_hellenic
+					}
+					
+					if = {
+						limit = {
+							dejure_liege_title = {
+								holder = ROOT
+								location = {
+									num_of_empty_holdings = 2
+								}
+								NOT = {
+									any_direct_de_jure_vassal_title = {
+										holding_type = castle
+									}
+								}
+							}
+						}
+						location = {
+							build_holding = {
+								type = castle
+							}
+						}
+					}
+					if = {
+						limit = {
+							dejure_liege_title = {
+								holder = ROOT
+								location = {
+									num_of_empty_holdings = 2
+								}
+								NOT = {
+									any_direct_de_jure_vassal_title = {
+										holding_type = temple
+									}
+								}
+							}
+						}
+						location = {
+							build_holding  ={
+								type = temple
+							}
+						}
+					}
+				}
+			}
+			
+			set_government_type = oligarchic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+			}
+			modifier = {
+				factor = 0.01
+				liege = {
+					OR = {
+						NOT = { religion_group = ROOT }
+						AND = {
+							religion_group = pagan_group
+							NOT = { religion = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				liege = {
+					NOT = { culture_group = ROOT }
+				}
+			}
+			
+			modifier = {
+				factor = 0.1
+				liege = {
+					religion_group = ROOT
+					NOT = { religion_group = pagan_group }
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+	convert_to_oligarchic_republic_vassal = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 48
+		
+		potential = {
+			is_playable = yes
+			government = tribal_government
+			independent = no
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = TT_NOT_UNREFORMED_PAGAN
+				hidden_tooltip = {
+					OR = {
+						NOT = {
+							religion_group = pagan_group
+						}
+						is_reformed_religion = yes
+					}
+				}
+			}
+			capital_scope = {
+				port = no
+			}
+			liege = {
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+					AND = {
+						is_theocracy = yes
+						custom_tooltip = {
+							text = TT_NOT_UNREFORMED_PAGAN
+							hidden_tooltip = {
+								OR = {
+									NOT = {
+										religion_group = pagan_group
+									}
+									is_reformed_religion = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				capital_holding = {
+					OR = {
+						AND = {
+							holding_type = tribal
+							has_building = tb_market_town_4
+						}
+						holding_type = city
+					}
+				}
+				AND = {
+					NOT = { tier = BARON }
+					capital_scope = {
+						any_province_holding = {
+							holding_type = city
+							holder_scope = {
+								OR = {
+									character = ROOT
+									is_liege_or_above = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			
+			hidden_tooltip = {
+				
+				set_government_type = oligarchic_republic
+				
+				if = {
+					limit = {
+						ai = no
+					}
+					add_trait = oligarchy_ruler
+					current_heir = {
+						add_trait = oligarchy_ruler
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							num_of_government_vassals = {
+								OR = { government = oligarchic_republic government = consular_republic }
+								value = 1
+							}
+						}
+					}
+					
+				}
+				primary_title = {
+					set_title_flag = new_oligarchic_state
+				}
+				any_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = tribal
+					}
+					convert_to = CITY
+					refill_holding_levy = yes
+					location = { #Clear Tribal Great Pillars
+						clr_province_flag = flag_great_pillar_occultist
+						clr_province_flag = flag_great_pillar_americanist
+						clr_province_flag = flag_great_pillar_celtic_pagan
+						clr_province_flag = flag_great_pillar_inuit_pagan
+						clr_province_flag = flag_great_pillar_lakefolk_pagan
+						clr_province_flag = flag_great_pillar_novelist
+						clr_province_flag = flag_great_pillar_folklorist
+						clr_province_flag = flag_great_pillar_arcadian
+						clr_province_flag = flag_great_pillar_nousthreskeia
+						clr_province_flag = flag_great_pillar_baltic
+						clr_province_flag = flag_great_pillar_finnish
+						clr_province_flag = flag_great_pillar_hellenic
+					}
+					
+					if = {
+						limit = {
+							dejure_liege_title = {
+								holder = ROOT
+								location = {
+									num_of_empty_holdings = 2
+								}
+								NOT = {
+									any_direct_de_jure_vassal_title = {
+										holding_type = castle
+									}
+								}
+							}
+						}
+						location = {
+							build_holding = {
+								type = castle
+							}
+						}
+					}
+					if = {
+						limit = {
+							dejure_liege_title = {
+								holder = ROOT
+								location = {
+									num_of_empty_holdings = 2
+								}
+								NOT = {
+									any_direct_de_jure_vassal_title = {
+										holding_type = temple
+									}
+								}
+							}
+						}
+						location = {
+							build_holding  ={
+								type = temple
+							}
+						}
+					}
+				}
+			}
+			
+			set_government_type = oligarchic_republic
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				liege = {
+					OR = {
+						NOT = { religion_group = ROOT }
+						AND = {
+							religion_group = pagan_group
+							NOT = { religion = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				liege = {
+					NOT = { culture_group = ROOT }
+				}
+			}
+			
+			modifier = {
+				factor = 0.1
+				liege = {
+					religion_group = ROOT
+					NOT = { religion_group = pagan_group }
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+
+}
+settlement_decisions = {
+	excavate_perserved_ruin = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 48
+	
+		from_potential = {
+			ai = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {
+			holder_scope = {
+				character = FROM
+			}
+			location = {
+				OR = {
+					has_province_modifier = perserved_minor_ruin
+					has_province_modifier = perserved_major_ruin
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				wealth = 200
+			}
+			location = {
+				OR = {
+					has_province_modifier = perserved_minor_ruin
+					has_province_modifier = perserved_major_ruin
+				}
+			}
+		}
+		
+		effect = {
+			location = {
+				if = {
+					limit = {
+						has_province_modifier = perserved_minor_ruin
+					}
+					remove_province_modifier = perserved_minor_ruin
+					add_province_modifier = {
+						name = exploited_minor_ruin
+						stacking = no
+						duration = -1
+					}
+					random_list = {
+						50 = {
+							FROM = {
+								character_event = { id = cleanup.2245 days = 60 random = 14 }
+							}
+						}
+						50 = {
+							FROM = {
+								character_event = { id = cleanup.2246 days = 60 random = 14 }
+							}
+						}
+					}
+					wealth = -200
+				}
+				if = {
+					limit = {
+						has_province_modifier = perserved_major_ruin
+					}
+					remove_province_modifier = perserved_major_ruin
+					add_province_modifier = {
+						name = exploited_major_ruin
+						stacking = no
+						duration = -1
+					}
+					random_list = {
+						25 = {
+							FROM = {
+								character_event = { id = cleanup.2245 days = 60 random = 14 }
+							}
+						}
+						75 = {
+							FROM = {
+								character_event = { id = cleanup.2246 days = 60 random = 14 }
+							}
+						}
+					}
+					wealth = -200
+				}
+			}
+		}
+		
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	invite_local = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 48
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {
+			NOT = {
+				holding_type = nomad
+			}
+			holder_scope = {
+				character = FROM
+			}
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.05 min = 5 max = 200 }
+				prestige = 500
+				NOT = {
+					has_character_modifier = in_seclusion
+				}
+			}
+			location = {
+				NAND = {
+					culture = FROM
+					religion = FROM
+				}	
+			}
+		}
+		
+		effect = {
+			FROM = {
+				scaled_wealth = { value = -0.05 min = -5 max = -200 }
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					female = no
+					culture = ROOT
+					religion = ROOT
+				}
+				new_character = {
+					add_trait = lowborn
+					save_event_target_as = invited_character
+				}
+				character_event = { id = NE.1 }
+			}
+		}
+		
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = peasant_noble }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = COUNT
+					num_of_courtiers <= 5
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = DUKE
+					num_of_courtiers <= 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = KING
+					num_of_courtiers <= 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers <= 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = COUNT
+					num_of_courtiers = 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = DUKE
+					num_of_courtiers = 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = KING
+					num_of_courtiers = 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers = 25
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth = 200
+				}
+			}
+		}
+	}
+	
+	
+	invite_local_woman = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 48
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {
+			NOT = {
+				holding_type = nomad
+			}
+			holder_scope = {
+				character = FROM
+			}
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.05 min = 5 max = 200 }
+				prestige = 500
+				NOT = {
+					has_character_modifier = in_seclusion
+				}
+			}
+			location = {
+				NAND = {
+					culture = FROM
+					religion = FROM
+				}	
+			}
+		}
+		
+		effect = {
+			FROM = {
+				scaled_wealth = { value = -0.05 min = -5 max = -200 }
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					female = yes
+					culture = ROOT
+					religion = ROOT
+				}
+				new_character = {
+					add_trait = lowborn
+					save_event_target_as = invited_character
+				}
+				character_event = { id = NE.1 }
+			}
+		}
+		
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = peasant_noble }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = COUNT
+					num_of_courtiers <= 5
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = DUKE
+					num_of_courtiers <= 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = KING
+					num_of_courtiers <= 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers <= 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = COUNT
+					num_of_courtiers = 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = DUKE
+					num_of_courtiers = 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = KING
+					num_of_courtiers = 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers = 25
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth = 200
+				}
+			}
+		}
+	}
+}

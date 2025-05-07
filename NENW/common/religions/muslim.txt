@@ -1,0 +1,428 @@
+muslim = {
+	has_coa_on_barony_only = yes
+	graphical_culture = muslimgfx
+	crusade_cb = crusade
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1 # try to convert if ai_zeal is high
+	ai_fabricate_claims = no
+	
+	color = { 0 0.6 0 }
+	
+	interface_skin = { muslim_interface }
+	
+	# Names given only to Muslim characters (base names)
+	male_names = {
+		Abbas Abuali Abubakr Abdulqadir Abdalrahman Abdul Abdullah Adnan Akbar Ahmad Alaeddin Ali Amin Anwar Anwarullah Asad Azam Azim Aziz 
+		Bilal
+		Fadl Farid Faruq Fateh Faysal Fayiz Firuz Fulad-Khan 
+		Ghazi Ghiyasuddin
+		Hafiz Hajj Hamdan Hamid Harith Hasan Hashim Husam Hussayn 
+		Ihsan Imran Iqbal Islam Ismat 
+		Jabbar Jalal Jalal-Khan Jalaluddin Jamal
+		Khabeeruddin Khaireddin Khalaf-Hasan Khalid Khidr Khwaja-Hasan 
+		Mahdi Mahmud Mahmud-Gawan Mahmudullah Majnun-Sultan Makhdumah-Jahan Maqsud Mir-Ali Mir-Farrukh Mir-Muhammad Mir-Qasim Mirza Muazzam Mubarak Muhammad Mujahid Mukhtar Murad Murshid-Quli Mushtaq Muslihiddin Mustafa Muzaffaraddin 
+		Najib Nasir Nawaz Nazmul Nizam Nuraddin 
+		Qasim Qasim-Beg Qawurd Quli-Sultan 
+		Ramadan Rashid Rifat Rustam-Khan 
+		Sadiq Said Saifaldin Sayid-Hanif Sayid-Husain Sayyid Semseddin Shakib 
+		Tahir Tajuddin Talib Tariq
+		Uthman 
+		Zafar Zahir Zakir Zayn Zeyd Ziaur
+	}
+	
+	# Names given only to Muslim characters (base names)
+	female_names = {
+		Adila Amina Anwara Asima Aziza
+		Fadila Faiza Farida Fatima 
+		Hadiyya Hafsa Halima Hanifa Husna
+		Ibtisam
+		Karima
+		Nafisa Nawra 
+		Rashida
+		Saida
+		Tahira Taliba
+		Wahida
+		Zaynab
+	}
+	
+	sufi = {
+		graphical_culture = othermuslimgfx
+
+		icon = 93
+		heresy_icon = 93
+		
+		color = { 255 76 0 }
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		aggression = 0.9
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		priests_can_marry = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		max_wives = 4
+		matrilineal_marriages = no
+		
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+
+		intermarry = salihi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = oceanic
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = zaydi
+		intermarry = koranist
+		intermarry = thaislam
+	}	
+
+	shiite = {
+		graphical_culture = muslimgfx
+
+		icon = 4
+		heresy_icon = 9
+		
+		color = { 0.1 0.9 0 }
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = MULLAH
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		allow_rivermovement = yes
+		autocephaly = yes
+		priests_can_marry = yes
+		psc_marriage = no
+		max_wives = 4
+		matrilineal_marriages = no
+		can_retire_to_monastery = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		intermarry = salihi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = sufi
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = oceanic
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = zaydi
+		intermarry = koranist
+		intermarry = thaislam
+	}
+	ismaili= {
+		graphical_culture = muslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		secondary_event_pictures = shiite
+		icon = 4
+		heresy_icon = 9
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		
+		color = { 0.35 0.9 0 }
+		parent = shiite
+		
+		character_modifier = {
+			intrigue = 1			
+		}
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		psc_marriage = no
+		max_wives = 1
+		matrilineal_marriages = yes
+		can_retire_to_monastery = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		can_excommunicate = yes
+		can_grant_claim = yes
+		peace_piety_gain = 1.0
+		defensive_attrition = yes
+		pacifist = yes
+		short_reign_opinion_year_mult = 0.5
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		intermarry = salihi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = oceanic
+		intermarry = sufi
+		intermarry = zoroastrian_group
+		intermarry = zaydi
+		intermarry = koranist
+		intermarry = thaislam
+	}
+	zaydi= {
+		graphical_culture = muslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		secondary_event_pictures = shiite
+		icon = 4
+		heresy_icon = 9
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		
+		color = { 0.1 0.9 0.3 }
+		parent = shiite
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		psc_marriage = no
+		max_wives = 4
+		matrilineal_marriages = no
+		landed_kin_prestige_bonus = yes
+		can_retire_to_monastery = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		allow_looting = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		aggression = 0.9 # AI aggression factor
+		independence_war_score_bonus = 45 
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		unit_home_modifier = {
+			land_morale = 0.8
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		intermarry = salihi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = oceanic
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = sufi
+		intermarry = koranist
+		intermarry = thaislam
+	}
+	ahmadiyya = {
+		graphical_culture = othermuslimgfx
+		secondary_event_pictures = sunni
+		
+		pacifist = yes # Makes the AI less likely to start wars, plots and factions
+
+		icon = 91
+		heresy_icon = 91
+		
+		color = { 0.4 0.8 0.8 }
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_PROPHET
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		
+		character_modifier = {
+			diplomacy = 1
+			muslim_opinion = -25
+			ahmadiyya_opinion = 30
+		}
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		max_wives = 4
+		priests_can_inherit = no
+		can_retire_to_monastery = yes
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		intermarry = shaivasiddhanta
+		intermarry = neovedantic
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = kalikula
+		intermarry = salihi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = bahai
+		intermarry = sufi
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = oceanic
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = zaydi
+		intermarry = koranist
+		intermarry = thaislam
+	}
+	syafi = {
+		graphical_culture = muslimgfx
+
+		icon = 191
+		heresy_icon = 192
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+
+		color = { 0 0.6 0.1 }
+		parent = syafi
+		
+		aggression = 1
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		max_wives = 4
+		matrilineal_marriages = no
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = no
+		#peace_prestige_loss = yes
+		#allow_looting = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes 
+		#allow_viking_invasion = yes
+		features = { religion_haruspicy }
+	}
+	salihi = {
+		graphical_culture = xtremuslimgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 72
+		heresy_icon = 72
+		
+		crusade_name = JIHAD
+		scripture_name = THE_KORAN
+		priest_title = IMAM_PRIEST
+		
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		
+		evil_god_names = {
+			IBLIS SHAYTAN
+		}
+		character_modifier = {
+			religion_flex = 0.25
+		}
+
+		color = { 0 114 44 }
+		
+		aggression = 1.5
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		max_wives = 4
+		matrilineal_marriages = no
+		landed_kin_prestige_bonus = yes
+		can_have_antipopes = yes
+		attacking_same_religion_piety_loss = no
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		hard_to_convert = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
+		uses_decadence = yes
+		religious_clothing_priest = 23
+		religious_clothing_head = 23
+		
+		intermarry = sufi
+		intermarry = malikite
+		intermarry = ibadi
+		intermarry = shiite
+		intermarry = bahai
+		intermarry = ahmadiyya
+		intermarry = islamity
+		intermarry = muwahidunna
+		intermarry = sikh
+		intermarry = shangava
+		intermarry = oceanic
+		intermarry = ismaili
+		intermarry = zoroastrian_group
+		intermarry = zaydi
+		intermarry = koranist
+		intermarry = thaislam
+		
+	}
+	
+}

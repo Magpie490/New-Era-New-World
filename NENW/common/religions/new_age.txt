@@ -1,0 +1,577 @@
+new_age_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1	# convert if zeal high
+	ai_fabricate_claims = yes
+	
+	color = { 0.6 0.0 0.0 }
+	
+	interface_skin = { pagan_interface }
+	
+	trayamarga = { 
+		has_coa_on_barony_only = yes
+		graphical_culture = japanesegfx
+		secondary_event_pictures = sunni
+
+		icon = 60
+		heresy_icon = 60
+		
+		color = { 91 22 229 }
+		
+		interface_skin = { buddhist_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_DIVINE
+		
+		god_names = {
+			GOD_THE_DIVINE GOD_DHARMA GOD_THE_BUDDHA GOD_JESUS GOD_THE_GURUS
+		}
+		
+		evil_god_names = {
+			GOD_HARMONIC_IMBALANCE GOD_DISCORD 
+		}		
+		
+		crusade_name = GREAT_HOLY_WAR
+		can_call_crusade = no
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		has_heir_designation = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		max_consorts = 3
+		
+		short_reign_opinion_year_mult = 0 # No short reign penalty
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+
+		scripture_name = THE_THREEFOLD_PATH
+		priest_title = BHIKKHU
+		piety_name = KARMA
+		
+		intermarry = columbian
+		intermarry = quaker
+		intermarry = shinto
+		intermarry = tquaker
+		intermarry = highmount
+		intermarry = scholastic
+		intermarry = united_church
+		intermarry = sedevacantist
+		intermarry = gaian
+		intermarry = luddite
+		intermarry = celtic_pagan
+		intermarry = celtic_pagan_reformed
+		intermarry = postdiluvian
+		intermarry = bahai
+		intermarry = mahayana
+		intermarry = caodai
+		intermarry = hmongism
+		intermarry = taoist
+		intermarry = shangava
+		intermarry = kalikula
+		intermarry = old_hindu
+		intermarry = koyapunem
+		intermarry = shaivasiddhanta
+		intermarry = neovedantic
+		intermarry = jain
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+	}
+	cowboy_buddhist = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = hindugfx
+		secondary_event_pictures = sunni
+
+		icon = 44
+        	heresy_icon = 44
+
+		color = { 84 0 255 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_STAR_FATHER
+		
+		god_names = {
+			GOD_THE_STAR_FATHER GOD_THE_HONOURABLE_DEAD GOD_THE_ANCIENT_MASTERS GOD_THE_ENLIGHTENED_MONKS GOD_THE_PROUD_SOLDIERS GOD_THE_BUSHIDO_CODES GOD_THE_BOUNTY_OF_NATURE
+		}
+		
+		evil_god_names = {
+			GOD_THE_TREACHEROUS_DECEIVERS GOD_THE_SPIRIT_SICKENERS GOD_THE_IMPURITIES GOD_PAI_MEI GOD_THE_CORRUPT_GENERALS GOD_THE_SHOGUN_OF_SHADOWS GOD_THE_WENDIGO
+		}
+		
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 0.9
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		has_heir_designation = yes
+		allow_looting = yes
+		max_consorts = 3
+		
+		unit_modifier = {
+			land_morale = 0.3
+
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_ART_OF_WAR
+		priest_title = FATHER
+		piety_name = KARMA
+
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		intermarry = ironist
+		intermarry = trinitarian
+		intermarry = rangerite
+		intermarry = sun_dance
+		intermarry = peyotist
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = crow_way
+		intermarry = crow_way_reformed
+		intermarry = waashat
+		intermarry = zenith
+	}
+	aquarian = {
+		graphical_culture = jaingfx
+		icon = 79
+		heresy_icon = 79
+		
+		ai_convert_same_group = 1
+		ai_convert_other_group = 2
+		
+		color = { 191 63 255 }
+		
+		interface_skin = { thelemite_interface zun_interface pagan_interface }
+	
+		high_god_name = GOD_THE_DIVINE
+
+		god_names = {
+			GOD_THE_DIVINE GOD_MOTHER_GAIA GOD_THE_BUDDHA GOD_ASHTAR GOD_JESUS GOD_KRISHNA GOD_THOTH GOD_THE_ASCENDED_MASTERS
+		}
+
+		evil_god_names = {
+			GOD_ENTROPY GOD_HATE GOD_DISCORD
+		}
+		
+		character_modifier = {
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_MYSTERIES_OF_THE_DIVINE
+		priest_title = MAGE
+		piety_name = MAGICK
+		
+		women_can_take_consorts = yes
+		max_consorts = 3
+		allow_rivermovement = yes		
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_excommunicate = yes
+		can_retire_to_monastery = yes
+		feminist = yes
+		allow_looting = yes
+		seafarer = yes
+		female_temple_holders = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		autocephaly = yes
+		divine_blood = yes
+		
+		aggression = 1.2 # AI aggression factor
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+
+		intermarry = summer_queen
+		intermarry = thelemic
+		intermarry = theosophy
+		intermarry = orange_king
+		intermarry = oceanic
+		intermarry = delver
+		intermarry = delver_reformed
+		intermarry = myriadic
+		intermarry = illustrious
+		intermarry = waashat
+		intermarry = nousthreskeia
+		intermarry = nousthreskeia_reformed
+		intermarry = baphometist
+		intermarry = ophite
+	}
+	blue_star_reformed = {
+		graphical_culture = mesoamericangfx
+
+		icon = 110
+		heresy_icon = 227
+		
+		color = { 70 114 255 }
+		
+		high_god_name = GOD_SAQUASOHUH
+		
+		god_names = {
+			GOD_SAQUASOHUH GOD_THE_BLUE_STAR GOD_ASHTAR GOD_PAHANA GOD_JESUS GOD_MASAW
+		}
+		evil_god_names = {
+			GOD_THE_RED_STAR GOD_THE_BOMB GOD_COYOTE
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BLUE_STAR_PROPHECY
+		priest_title = PRIEST
+		
+		aggression = 1.4
+		female_temple_holders = yes
+		women_can_take_consorts = yes 
+		defensive_attrition = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+
+		intermarry = oceanic
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
+		intermarry = citrus_scientology
+	}
+	blue_star = {
+		graphical_culture = mesoamericangfx
+
+		icon = 110
+		heresy_icon = 227
+		
+		color = { 50 84 255 }
+		
+		high_god_name = GOD_SAQUASOHUH
+		
+		god_names = {
+			GOD_SAQUASOHUH GOD_THE_BLUE_STAR GOD_ASHTAR GOD_PAHANA GOD_JESUS GOD_MASAW
+		}
+		evil_god_names = {
+			GOD_THE_RED_STAR GOD_THE_BOMB GOD_COYOTE
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BLUE_STAR_PROPHECY
+		priest_title = PRIEST
+		
+		aggression = 1.4
+		female_temple_holders = yes
+		women_can_take_consorts = yes 
+		defensive_attrition = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		reformed = blue_star_reformed
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+
+		intermarry = oceanic
+		intermarry = blessing_way
+		intermarry = blessing_way_reformed
+		intermarry = citrus_scientology
+	}
+	raelian = {
+		graphical_culture = thelemagfx
+		interface_skin = { esoteric_interface zun_interface zoroastrian_interface muslim_interface }
+		icon = 33
+		heresy_icon = 33
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = INTELLIGENT_DESIGN_MESSAGE_FROM_THE_DESIGNER
+		priest_title = PRIEST
+		
+		color = { 6 21 140 }
+		
+		high_god_name = GOD_YAHWEH
+		
+		god_names = {
+			GOD_YAHWEH GOD_THE_ELOHIM GOD_JESUS GOD_MOHAMMED GOD_THE_BUDDHA GOD_JOSEPH_SMITH GOD_RAEL
+		}
+		
+		evil_god_names = {
+			LUCIFER THE_DARK_SPIRITS GOD_THE_ANTIHUMANISTS
+		}
+		
+		piety_name = ENLIGHTENMENT
+		
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		has_heir_designation = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		female_temple_holders = yes
+		psc_marriage = no
+		cousin_marriage = no
+		max_consorts = 4
+		women_can_take_consorts = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		hard_to_convert = yes
+		defensive_attrition = yes
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		character_modifier={
+			fertility = 0.2
+			jewish_group_opinion = 5
+			christian_opinion = 5
+			muslim_opinion = 5
+			buddhist_group_opinion = 5
+			religion_flex = -0.5
+		}
+		
+		
+		intermarry = columbian
+		intermarry = novelist_reformed
+		intermarry = novelist
+		intermarry = sevillian
+		intermarry = lutheran
+		intermarry = orthodox
+		intermarry = chaldean
+		intermarry = anglican
+		intermarry = malikite
+		intermarry = koranist
+		intermarry = muwahidunna
+		intermarry = bahai
+		intermarry = oceanic
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = united_church
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = loyalist
+	}
+	gaian = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = buddhistgfx
+		secondary_event_pictures = sunni
+
+		icon = 98
+        	heresy_icon = 99
+
+		color = { 53 178 53 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_MOTHER_GAIA
+		
+		god_names = {
+			GOD_MOTHER_GAIA GOD_THE_EARTH_MOTHER GOD_THE_GREAT_GODDESS GOD_THE_SPIRITS GOD_HEIKKI_LUNTA GOD_PAUL_BUNYAN
+		}
+		
+		evil_god_names = {
+			GOD_FATHER_INDUSTRY GOD_GREED GOD_THE_WENDIGO GOD_THE_HODAG
+		}
+		character_modifier = {
+		}
+		
+		unit_modifier = {
+			land_morale = 0.2
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 0.8
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		feminist = yes
+		female_temple_holders = yes
+		male_temple_holders = no
+		men_can_take_consorts = no
+		peace_piety_gain = 1.0
+		women_can_take_consorts = yes
+		max_consorts = 3
+		can_demand_religious_conversion = no
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_GAIA_CODEX
+		priest_title = FATHER
+		piety_name = KARMA
+		
+		intermarry = amidism
+		intermarry = mahayana
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+		intermarry = anishinaabe
+		intermarry = anishinaabe_reformed
+		intermarry = delver
+		intermarry = delver_reformed
+		intermarry = arcadian_reformed
+		intermarry = arcadian
+	}
+	luddite = {
+		ai_convert_same_group = 1 # try to convert if ai_zeal is high
+		ai_convert_other_group = 2	# always convert
+
+		graphical_culture = buddhistgfx
+		secondary_event_pictures = sunni
+
+		icon = 98
+        	heresy_icon = 99
+		parent = gaian
+		color = { 77 216 65 }
+		
+		interface_skin = { indian_interface muslim_interface }
+		
+		high_god_name = GOD_MOTHER_GAIA
+		
+		god_names = {
+			GOD_MOTHER_GAIA GOD_THE_EARTH_MOTHER GOD_THE_GREAT_GODDESS GOD_LUDD GOD_THE_BULL_MOOSE
+		}
+		
+		evil_god_names = {
+			GOD_FATHER_INDUSTRY GOD_GREED
+		}
+		character_modifier = {
+		}
+		
+
+		
+		crusade_name = GREAT_HOLY_WAR
+		use_new_crusade = no
+		crusade_cb = crusade
+		
+		aggression = 1.8
+		allow_rivermovement = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		feminist = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		can_demand_religious_conversion = no
+		
+		unit_modifier = {
+			land_morale = 0.2
+		}
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 8
+
+		scripture_name = THE_BOOK_OF_LUDD
+		priest_title = FATHER
+		piety_name = KARMA
+		
+		intermarry = amidism
+		intermarry = mahayana
+		intermarry = lakefolk_pagan
+		intermarry = lakefolk_pagan_reformed
+		intermarry = anishinaabe
+		intermarry = anishinaabe_reformed
+		intermarry = delver
+		intermarry = delver_reformed
+		intermarry = arcadian_reformed
+		intermarry = arcadian
+	}
+	ashtari = {
+		graphical_culture = thelemagfx
+		interface_skin = { esoteric_interface zun_interface zoroastrian_interface muslim_interface }
+		icon = 194
+		heresy_icon = 194
+		
+		crusade_name = GRAND_OFFENSIVE
+		scripture_name = I_RODE_A_FLYING_SAUCER
+		priest_title = PRIEST
+		
+		color = { 61 18 122 }
+		
+		high_god_name = GOD_ASHTAR_SHERAN
+		
+		god_names = {
+			GOD_ASHTAR_SHERAN GOD_THE_UNIVERSAL_MIND GOD_THE_GALACTIC_COMMAND
+		}
+		
+		evil_god_names = {
+			THE_GREAT_BOMB THE_HYDROGEN_ATOM
+		}
+		
+		piety_name = ENLIGHTENMENT
+		
+		aggression = 1.5
+		allow_viking_invasion = yes
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		can_excommunicate = yes
+		has_heir_designation = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		female_temple_holders = yes
+		allow_looting = yes
+		landed_kin_prestige_bonus = yes
+		hard_to_convert = yes
+		rel_head_defense = yes
+		join_crusade_if_bordering_hostile = yes	
+		
+		intermarry = trinitarian
+		intermarry = amaitist
+		intermarry = blue_star
+		intermarry = gambler
+	}
+}

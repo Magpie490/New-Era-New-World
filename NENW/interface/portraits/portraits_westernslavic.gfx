@@ -1,0 +1,178 @@
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_westernslavic_male_clothes_behind"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_westernslavic_male_headgear_behind"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "GFX_westernslavic_male_hair_adornment"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_hair_adornment.dds"
+		noOfFrames = 15
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_westernslavic_male_clothes"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "GFX_westernslavic_male_headgear"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_westernslavic_male_clothes_infront"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_westernslavic_male_headgear_mid"
+		texturefile = "gfx\\characters\\westernslavic_male\\westernslavic_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}	
+	spriteType = {
+		name = "GFX_westernslavic_female_clothes_behind"
+		texturefile = "gfx\\characters\\westernslavic_female\\westernslavic_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_westernslavic_female_headgear_behind"
+		texturefile = "gfx\\characters\\westernslavic_female\\westernslavic_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_westernslavic_female_clothes"
+		texturefile = "gfx\\characters\\westernslavic_female\\westernslavic_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_westernslavic_female_headgear"
+		texturefile = "gfx\\characters\\westernslavic_female\\westernslavic_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_westernslavic_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = gorale
+					portrait_culture = ruten
+					portrait_culture = ukrainer
+					portrait_culture = tutejszy
+					portrait_culture = rusyn
+					portrait_culture = bielaruskaja
+					portrait_culture = tot
+					portrait_culture = kashubian
+					portrait_culture = wendish
+					portrait_culture = silesian
+					portrait_culture = mazovian
+					portrait_culture = greater_polish
+					portrait_culture = slovak
+					portrait_culture = moravian
+					portrait_culture = czech
+					portrait_culture = polish
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_westernslavic_male_clothes_behind:p3:c0"
+            "GFX_westernslavic_male_clothes:p3:c2"
+            "GFX_empty:c3"
+            "GFX_westernslavic_male_headgear:p5:c5"
+            "GFX_westernslavic_male_headgear_behind:p5:c1"
+			"GFX_westernslavic_male_headgear_mid:p5:c3"
+			"GFX_westernslavic_male_hair_adornment:p1:y"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_westernslavic_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = gorale
+					portrait_culture = ruten
+					portrait_culture = ukrainer
+					portrait_culture = tutejszy
+					portrait_culture = rusyn
+					portrait_culture = bielaruskaja
+					portrait_culture = tot
+					portrait_culture = kashubian
+					portrait_culture = wendish
+					portrait_culture = silesian
+					portrait_culture = mazovian
+					portrait_culture = greater_polish
+					portrait_culture = slovak
+					portrait_culture = moravian
+					portrait_culture = czech
+					portrait_culture = polish
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_westernslavic_female_clothes_behind:p3:c0"
+            "GFX_westernslavic_female_clothes:p3:c2"
+            "GFX_empty:c3"
+            "GFX_westernslavic_female_clothes:p5:c5"
+            "GFX_westernslavic_female_headgear_behind:p5:c1"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}

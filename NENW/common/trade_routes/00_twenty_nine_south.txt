@@ -1,0 +1,40 @@
+twenty_nine_south = {
+	wealth = 20			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 376
+			province_id = 252
+		}
+	}
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.4
+		disease_defence = -0.05
+		culture_flex = -0.2
+		religion_flex = -0.2
+		local_build_cost_modifier = -0.1
+		local_build_time_modifier = -0.1
+		tech_growth_modifier = 0.2
+		icon = 136
+	}
+
+	start = {
+		376
+	}
+	
+	start = {
+		299
+	}
+#Main route
+	path = {
+		376 1691 363 299 253 252
+	}
+	path = {
+		299 253 252
+	}
+}

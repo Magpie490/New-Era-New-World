@@ -1,0 +1,100 @@
+castle = {
+	trigger = {
+	}
+}
+
+city = {
+	trigger = {
+	}
+}
+
+temple = {
+	trigger = {
+	}
+}
+
+trade_post = {
+	trigger = {
+		conditional_tooltip = {
+			trigger = {
+				OR = {
+					trade_route = federal_way
+					trade_route = ninety_five_south
+					trade_route = trans_atlantic_crossing
+					trade_route = caribbean_route
+					trade_route = route_10_east
+					trade_route = route_10_west
+					trade_route = west_great_lakes_route
+					trade_route = east_great_lakes_route
+					trade_route = lower_mississippi_way
+					trade_route = upper_mississippi_way
+					trade_route = ninety_five_north
+					trade_route = midwestern_waterway
+					trade_route = route_20_east
+					trade_route = cumberland_trail
+					trade_route = trappers_trail
+					trade_route = ninety_west
+					trade_route = twenty_nine_south
+					trade_route = salihi_path
+					trade_route = seventy_west
+					trade_route = forty_east
+					trade_route = route_five
+					trade_route = route_fifteen
+					trade_route = route_eighty
+					trade_route = transatlantic_route
+					trade_route = texan_route
+					trade_route = trans_canada_route
+				}			
+				OR = {
+					FROM = {
+						is_patrician = no
+					}
+					AND = {
+						port = no
+						FROM = {
+							is_patrician = yes
+						}
+					}
+				}
+			}
+			OR = {
+				silk_road_trade_post_trigger = yes
+				religion = zenith
+				religion = amaitist
+				religion = maaravi
+				FROM = {
+					OR = {
+						government = oligarchic_republic
+						government = technocratic_government
+						government = colonial_government
+					}
+				}
+			}
+		}
+	}
+}
+
+family_palace = {
+	trigger = {
+	}
+}
+
+tribal = {
+	trigger = {
+	}
+}
+
+nomad = {
+	trigger = {
+	}
+}
+
+fort = {
+	trigger = {
+	}
+}
+
+hospital = {
+	trigger = {
+	}
+}

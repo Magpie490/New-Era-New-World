@@ -1,0 +1,129 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_aeslabh_clothes"
+		texturefile = "gfx\\characters\\celtic_male\\celtic_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_clothes_behind"
+		texturefile = "gfx\\characters\\celtic_male\\celtic_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_headgear"
+		texturefile = "gfx\\characters\\celtic_male\\celtic_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_headgear_behind"
+		texturefile = "gfx\\characters\\celtic_male\\celtic_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}	
+	spriteType = {
+		name = "GFX_aeslabh_male_headgear_mid"
+		texturefile = "gfx\\characters\\celtic_male\\celtic_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_clothes_female"
+		texturefile = "gfx\\characters\\celtic_female\\celtic_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_clothes_behind_female"
+		texturefile = "gfx\\characters\\celtic_female\\celtic_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_headgear_female"
+		texturefile = "gfx\\characters\\celtic_female\\celtic_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_aeslabh_female_headgear_mid"
+		texturefile = "gfx\\characters\\celtic_female\\celtic_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_aeslabh_headgear_behind_female"
+		texturefile = "gfx\\characters\\celtic_female\\celtic_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}	
+		
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_aeslabh_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				portrait_culture = aeslabh
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_aeslabh_clothes_behind:p3:c0"
+            "GFX_aeslabh_clothes:p3:c2"
+            "GFX_empty:c3"
+            "GFX_aeslabh_headgear:p5:c5"
+            "GFX_aeslabh_headgear_behind:p5:c1"
+			"GFX_aeslabh_male_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_aeslabh_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				portrait_culture = aeslabh
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_aeslabh_clothes_behind_female:p3:c0"
+            "GFX_aeslabh_clothes_female:p3:c2"
+            "GFX_empty:c3"
+            "GFX_aeslabh_headgear_female:p5:c5"
+            "GFX_aeslabh_headgear_behind_female:p5:c1"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}

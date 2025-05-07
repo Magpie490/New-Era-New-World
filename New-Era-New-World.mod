@@ -1,5 +1,5 @@
 name="New Era New World"
-path="mod/New-Era-New-World"
+path="mod/NENW"
 replace_path="history/characters"
 replace_path="history/provinces"
 replace_path="history/titles"

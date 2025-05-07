@@ -1,0 +1,593 @@
+# don't uncomment this, library slot exists in 01 artifacts books file
+#slots = {
+#	library = 4
+#}
+divine_comedy_1 = { 
+	learning = 1
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	catholic_opinion = 1
+	novelist_opinion = 1
+	novelist_reformed_opinion = 1
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+divine_comedy_2 = { 
+	learning = 1
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.3
+	catholic_opinion = 3
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+divine_comedy_3 = { 
+	learning = 1
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.6
+	catholic_opinion = 6
+	novelist_opinion = 6
+	novelist_reformed_opinion = 6
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+promessi_sposi = { 
+	diplomacy = 1
+	quality = 2
+	flags = { about_relationships fiction book novelist_book }
+	monthly_character_piety = 0.1
+	sex_appeal_opinion = 5
+	italian_opinion = 1
+	novelist_opinion = 2
+	picture = "GFX_book_etiquette_2"
+	slot = library  
+}
+il_principe = { 
+	intrigue = 1
+	diplomacy = 1
+	quality = 2
+	flags = { about_intrigue about_diplomacy book novelist_book }
+	monthly_character_prestige = 0.1
+	italian_opinion = 3
+	vassal_opinion = 5
+	picture = "GFX_book_etiquette_3"
+	slot = library  
+}
+
+#Books that the Novelists really like
+lotr_fellowship_ruined = { #Incomplete version of The Fellowship
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_01"
+	slot = library  
+}
+lotr_towers_ruined = { #Incomplete version of The Two Towers
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_02"
+	slot = library  
+}
+lotr_return_ruined = { #Incomplete version of The Return of the King
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_03"
+	slot = library  
+}
+lotr_fellowship_novelist = { #Mh, yes, this is certainly LOTR's plot
+	quality = 2
+	flags = { about_religion fiction book created novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_01"
+	slot = library  
+}
+lotr_towers_novelist = { #Mh, yes, this is certainly LOTR's plot
+	quality = 2
+	flags = { about_religion fiction book created novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_02"
+	slot = library  
+}
+lotr_return_novelist = { #Mh, yes, this is certainly LOTR's plot
+	quality = 2
+	flags = { about_religion fiction book created novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	picture = "GFX_book_eye_03"
+	slot = library  
+}
+hobbit_ruined = { #Incomplete version of The Hobbit
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	picture = "GFX_book_eye_01"
+	slot = library  
+}
+hobbit_novelist = { #Novelists fixed the book, definitely
+	quality = 2
+	flags = { about_religion fiction book created novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	picture = "GFX_book_eye_01"
+	slot = library  
+}
+silmarillion_ruined = { #Incomplete version of The Silmarillion
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+silmarillion_novelist = { #If this book wasn't ruined and repaired Novelists wouldn't exist
+	quality = 2
+	flags = { about_religion fiction book created novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+
+# Novelists and Christians like those books
+lion_witch_wardrobe = { #Chronicles of Narnia book one
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	christian_opinion = 2
+	picture = "GFX_book_Narnia"
+	slot = library  
+}
+prince_caspian = { #Chronicles of Narnia book two
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	christian_opinion = 2
+	picture = "GFX_book_learnblank_03"
+	slot = library  
+}
+dawn_treader = { #Chronicles of Narnia book three
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	christian_opinion = 2
+	oceanic_opinion = 2
+	picture = "GFX_book_learnblank_03"
+	slot = library  
+}
+silver_chair = { #Chronicles of Narnia book four
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	christian_opinion = 2
+	picture = "GFX_book_learnblank_03"
+	slot = library  
+}
+horse_and_boy = { #Chronicles of Narnia extra 1
+	quality = 1
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.1
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	horse_opinion = 15
+	picture = "GFX_book_learnblank_01"
+	slot = library  
+}
+magician_nephew = { #Chronicles of Narnia extra 2
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.4
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	christian_opinion = 5
+	picture = "GFX_book_learnblank_02"
+	slot = library  
+}
+last_battle = { #Chronicles of Narnia finale
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	christian_opinion = 10
+	picture = "GFX_book_learnblank_03"
+	slot = library  
+}
+
+# Novelists and some/all Francophone cultures like those books
+hunchback_notredame = { #The Hunchback of Notre Dame, not to be confused with the Hunchback of [Capital] created books
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	french_opinion = 5
+	francophone_opinion = 5
+	picture = "GFX_book_hunchback"
+	slot = library  
+}
+three_musketeers = { #The Three Musketeers
+	quality = 2
+	flags = { about_religion about_martial fiction book novelist_book }
+	monthly_character_prestige = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	francophone_opinion = 5
+	picture = "GFX_book_martial_b3"
+	slot = library  
+}
+les_miserables = { #Les Miserables
+	quality = 2
+	flags = { about_religion about_diplomacy fiction book novelist_book }
+	monthly_character_prestige = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	francophone_opinion = 5
+	jacobinist_opinion = 5
+	picture = "GFX_book_etiquette_2"
+	slot = library  
+}
+le_petite_prince = { #Le Petite Prince
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	francophone_opinion = 5
+	temple_opinion = 15
+	picture = "GFX_book_etiquette_3"
+	slot = library  
+}
+20000_leagues = { #20.000 Leagues Under the Sea
+	quality = 2
+	flags = { about_religion about_stewardship fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	oceanic_opinion = 5
+	francophone_opinion = 5
+	city_vassal_opinion = 10
+	picture = "GFX_book_fish_02"
+	slot = library  
+}
+
+# The unholy triad
+
+dracula_stoker = { #Dracula
+	quality = 2
+	flags = { about_religion about_intrigue unholy fiction book novelist_book }
+	monthly_character_piety = -0.5
+	intrigue = 1
+	novelist_opinion = -10
+	novelist_reformed_opinion = -10
+	francophone_opinion = -15
+	irish_opinion = 5
+	high_irish_opinion = 5
+	ulsterian_opinion = 5
+	munsterian_opinion = 5
+	dutch_opinion = 5
+	brittannic_opinion = 5
+	romani_opinion = -5
+	romanian_opinion = 5
+	cannibal_opinion = 5
+	impaler_opinion = 5
+	temple_opinion = -10
+	picture = "GFX_book_sinister"
+	slot = library  
+}
+frankenstein_prometheus = { #Frankenstein
+	quality = 2
+	flags = { about_religion about_relationships unholy fiction book novelist_book }
+	monthly_character_piety = -0.5
+	learning = 1
+	health = 0.25
+	novelist_opinion = -10
+	novelist_reformed_opinion = -10
+	francophone_opinion = -5
+	brittannic_opinion = -5
+	germanic_opinion = -5
+	temple_opinion = -10
+	picture = "GFX_book_sinister"
+	slot = library
+}
+phantom_of_opera = { #The Phantom of the Opera
+	quality = 2
+	flags = { about_religion about_intrigue unholy fiction book novelist_book }
+	monthly_character_piety = -0.5
+	intrigue = 1
+	health = -0.25
+	novelist_opinion = -15
+	novelist_reformed_opinion = -15
+	francophone_opinion = 5
+	brittannic_opinion = -15
+	nord_opinion = -5
+	temple_opinion = -10
+	picture = "GFX_book_sinister"
+	slot = library  
+}
+
+# The five books of stats
+rime_of_ancient_mariner = { #The Rime of the Ancient Mariner
+	quality = 2
+	flags = { about_religion about_stewardship book novelist_book }
+	monthly_character_piety = 0.5
+	stewardship = 1
+	learning = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	oceanic_opinion = 5
+	brittannic_opinion = 5
+	picture = "GFX_book_point_01"
+	slot = library  
+}
+don_quijote = { #Don Quijote de la Mancha
+	quality = 2
+	flags = { about_religion about_martial fiction book novelist_book }
+	monthly_character_piety = 0.5
+	martial = 1
+	learning = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	lunatic_opinion = 5
+	hispanophone_opinion = 5
+	occitanophone_opinion = 5
+	picture = "GFX_book_martial_a2"
+	slot = library  
+}
+jekyll_and_hyde = { #Doctor Jekyll and Mister Hyde
+	quality = 2
+	flags = { about_religion about_intrigue fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	intrigue = 1
+	learning = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	mystic_opinion = 5
+	brittannic_opinion = 5
+	temple_opinion = -1
+	picture = "GFX_book_sinister"
+	slot = library  
+}
+the_metamorphosis = { #Metamorphosis
+	quality = 2
+	flags = { about_religion about_relationship fiction book novelist_book }
+	monthly_character_piety = 0.5
+	diplomacy = 1
+	learning = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	christian_opinion = 5
+	germanic_opinion = 5
+	temple_opinion = -1
+	picture = "GFX_book_sinister"
+	slot = library  
+}
+the_malachite_box = { #The Malachite Box
+	quality = 2
+	flags = { about_religion about_relationship fiction book }
+	monthly_character_piety = 0.5
+	learning = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	east_slavic_opinion = 5
+	folklorist_opinion = 5
+	picture = "GFX_book_learnflower_02"
+	slot = library  
+}
+the_witcher_king = { #The Reign of the Witcher King
+	quality = 2
+	flags = { about_martial about_diplomacy book about_religion }
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	martial = 1
+	diplomacy = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	east_slavic_opinion = 5
+	folklorist_opinion = 5
+	picture = "GFX_book_roots_crown_02"
+	slot = library
+}
+the_white_wolf_book = { #The White Wolf
+	quality = 2
+	flags = { about_martial about_religion book novelist_book }
+	monthly_character_piety = 0.7
+	martial = 1
+	learning = 1
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	east_slavic_opinion = 2
+	west_slavic_opinion = 3
+	folklorist_opinion = 5
+	picture = "GFX_book_martial_a2"
+	slot = library
+}
+alexander_nevsky = { #Alexander Nevsky
+	quality = 2
+	flags = { about_martial about_diplomacy book novelist_book }
+	monthly_character_prestige = 0.5
+	diplomacy = 1
+	martial = 1
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	east_slavic_opinion = 2
+	folklorist_opinion = 5
+	picture = "GFX_book_honor_root_2"
+	slot = library
+}
+warship_potemkin = { #Warship Potemkin
+	quality = 2
+	flags = { about_stewardship about_intrigue book novelist_book }
+	monthly_character_prestige = 0.5
+	stewardship = 1
+	intrigue = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	east_slavic_opinion = 5
+	folklorist_opinion = 5
+	stalinist_opinion = 5
+	zarist_opinion = -10
+	picture = "GFX_book_govt_court"
+	slot = library
+}
+night_on_bald_mountain = { #Night on Bald Mountain
+	quality = 2
+	flags = { about_learning about_diplomacy about_intrigue book novelist_book }
+	monthly_character_prestige = 0.5
+	intrigue = 1
+	learning = 1
+	diplomacy = 1
+	novelist_opinion = 2
+	novelist_reformed_opinion = 2
+	east_slavic_opinion = 5
+	folklorist_opinion = 10
+	picture = "GFX_book_blue_glow"
+	slot = library
+}
+
+# Grimm Fairytales (Novelists and some/all Germanic cultures like those books)
+cinderella = { #Cinderella
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	hessian_opinion = 5
+	germanic_opinion = 5
+	picture = "GFX_book_hunchback"
+	slot = library  
+}
+frog_prince = { #The Frog Prince
+	quality = 2
+	flags = { about_religion about_martial fiction book novelist_book }
+	monthly_character_prestige = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	germanic_opinion = 5
+	picture = "GFX_book_martial_b3"
+	slot = library  
+}
+hansel_and_gretel = { #Hansel and Gretel
+	quality = 2
+	flags = { about_religion about_diplomacy fiction book novelist_book }
+	monthly_character_prestige = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	germanic_opinion = 5
+	jacobinist_opinion = 5
+	picture = "GFX_book_etiquette_2"
+	slot = library
+}
+red_riding_hood = { #Little Red Riding Hood
+	quality = 2
+	flags = { about_religion about_diplomacy fiction book novelist_book }
+	monthly_character_prestige = 0.2
+	novelist_opinion = 5
+	novelist_reformed_opinion = 5
+	germanic_opinion = 5
+	jacobinist_opinion = 5
+	picture = "GFX_book_etiquette_2"
+	slot = library
+}
+rapunzel = { #Rapunzel
+	quality = 2
+	flags = { about_religion fiction book novelist_book }
+	monthly_character_piety = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	germanic_opinion = 5
+	temple_opinion = 15
+	picture = "GFX_book_etiquette_3"
+	slot = library  
+}
+rumpelstiltskin = { #Rumpelstiltskin
+	quality = 2
+	flags = { about_religion about_stewardship fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	germanic_opinion = 5
+	city_vassal_opinion = 10
+	picture = "GFX_book_fish_02"
+	slot = library  
+}
+sleeping_beauty = { #Sleeping Beauty
+	quality = 2
+	flags = { about_religion about_stewardship fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	oceanic_opinion = 5
+	germanic_opinion = 5
+	city_vassal_opinion = 10
+	picture = "GFX_book_fish_02"
+	slot = library  
+}
+snow_white = { #Snow White
+	quality = 2
+	flags = { about_religion about_stewardship fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	oceanic_opinion = 5
+	germanic_opinion = 5
+	city_vassal_opinion = 10
+	picture = "GFX_book_fish_02"
+	slot = library  
+}
+iron_hans = { #Iron Hans
+	quality = 2
+	flags = { about_religion about_stewardship fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	novelist_opinion = 10
+	novelist_reformed_opinion = 10
+	oceanic_opinion = 5
+	germanic_opinion = 5
+	city_vassal_opinion = 10
+	picture = "GFX_book_fish_02"
+	slot = library  
+}
+
+#Misc Fairytales
+
+alice_in_wonderland = { #Alice in Wonderland
+	quality = 2
+	flags = { about_religion about_intrigue fiction book novelist_book }
+	monthly_character_prestige = 0.5
+	learning = 1
+	novelist_opinion = 3
+	novelist_reformed_opinion = 3
+	brittannic_opinion = 5
+	temple_opinion = -1
+	picture = "GFX_book_sinister"
+	slot = library
+}

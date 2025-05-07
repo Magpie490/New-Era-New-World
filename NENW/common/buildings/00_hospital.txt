@@ -1,0 +1,1180 @@
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+
+hospital = {
+
+	
+	ct_dirt_road = {
+		desc = ct_dirt_road_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+		}
+		gold_cost = 250
+		build_time = 730
+		tax_income = -0.1
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.15
+		tradevalue = 15
+		disease_defence = -0.05
+		culture_techpoints = 0.02
+		
+		
+		add_number_to_name = no
+		ai_creation_factor = 93
+		
+		extra_tech_building_start = 1.0
+	}
+	ct_stone_road = {
+		desc = ct_stone_road_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ct_dirt_road
+		gold_cost = 300
+		build_time = 730
+		tax_income = -0.15
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.15
+		tradevalue = 15
+		disease_defence = -0.05
+		culture_techpoints = 0.02
+		prerequisites = { ct_dirt_road }
+		
+		add_number_to_name = no
+		ai_creation_factor = 92
+		
+		extra_tech_building_start = 1.0
+	}
+	ct_stone_highway = {
+		desc = ct_stone_highway_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ct_stone_road
+		gold_cost = 350
+		build_time = 730
+		tax_income = -0.2
+		local_movement_speed = 0.15
+		tech_growth_modifier = 0.15
+		tradevalue = 15
+		disease_defence = -0.05
+		culture_techpoints = 0.02
+		prerequisites = { ct_stone_road }
+		
+		
+		add_number_to_name = no
+		ai_creation_factor = 91
+		
+		extra_tech_building_start = 1.0
+	}
+	ct_tolled_brick_highway = {
+		desc = ct_tolled_brick_highway_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4 
+		}
+		upgrades_from = ct_stone_highway
+		gold_cost = 400
+		build_time = 730
+		tax_income = 1
+		local_movement_speed = 0.2
+		tech_growth_modifier = 0.15
+		tradevalue = 15
+		disease_defence = -0.05
+		culture_techpoints = 0.02
+		prerequisites = { ct_stone_highway }
+		
+		
+		add_number_to_name = no
+		ai_creation_factor = 90
+		
+		extra_tech_building_start = 1.0
+	}
+	ct_waystation_brick_highway = {
+		desc = ct_waystation_brick_highway_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5 
+		}
+		upgrades_from = ct_tolled_brick_highway
+		gold_cost = 450
+		build_time = 730
+		tax_income = 1
+		local_movement_speed = 0.25
+		tech_growth_modifier = 0.15
+		tradevalue = 15
+		disease_defence = -0.05
+		culture_techpoints = 0.02
+		prerequisites = { ct_tolled_brick_highway }
+		
+		
+		add_number_to_name = no
+		ai_creation_factor = 89
+		
+		extra_tech_building_start = 1.0
+	}
+	alcohol_distillery_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = alcohol_distillery_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = 2
+		
+		disease_defence = 0.03
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	alcohol_distillery_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = alcohol_distillery_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = alcohol_distillery_1
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 88
+		tax_income = 2
+		
+		disease_defence = 0.03
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	hospital_garden_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_garden_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = 2
+		
+		disease_defence = 0.03
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	hospital_garden_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_garden_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = hospital_garden_1
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 88
+		tax_income = 2
+		
+		disease_defence = 0.03
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	drinking_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = drinking_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = 1
+		local_tax_modifier = 0.02
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	drinking_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = drinking_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = drinking_1
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 88
+		tax_income = 1
+		local_tax_modifier = 0.02
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	drinking_3 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = drinking_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 6
+		}
+		upgrades_from = drinking_2
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 87
+		tax_income = 1
+		local_tax_modifier = 0.02
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	
+	waste_disposal_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = waste_disposal_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 89
+		land_morale = 0.05
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	waste_disposal_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = waste_disposal_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = waste_disposal_1
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 88
+		land_morale = 0.05
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	waste_disposal_3 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = waste_disposal_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 6
+		}
+		upgrades_from = waste_disposal_2
+		gold_cost = 320
+		build_time = 360
+		ai_creation_factor = 87
+		land_morale = 0.05
+		disease_defence = 0.1
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	animal_pens_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = animal_pens_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = 2
+		
+		disease_defence = -0.05
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	animal_pens_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = animal_pens_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = animal_pens_1
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 88
+		tax_income = 2
+		
+		disease_defence = -0.05
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	bunks_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = bunks_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = 4
+		disease_defence = -0.05
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	bunks_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = bunks_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		upgrades_from = bunks_1
+		gold_cost = 250
+		build_time = 360
+		ai_creation_factor = 88
+		tax_income = 4
+		disease_defence = -0.05
+		add_number_to_name = no
+		
+		extra_tech_building_start = 1.0 # Never get at start of game
+	}
+	hospital_building_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_building_1_desc
+		trigger = {
+			#OR = {
+				TECH_CONSTRUCTION = 2
+			#	owner = { any_realm_province = { owner = { character = ROOT } } }
+			#}
+		}
+		gold_cost = 200
+		build_time = 360
+		ai_creation_factor = 89
+		tax_income = -0.3
+		
+		hospital_level = 1
+		disease_defence = 0.05
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	hospital_building_2 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_building_2_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+		gold_cost = 300
+		build_time = 365
+		upgrades_from = hospital_building_1
+		ai_creation_factor = 88
+		tax_income = -0.3
+		
+		hospital_level = 1
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	hospital_building_3 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_building_3_desc
+		trigger = { TECH_CONSTRUCTION = 4 }
+		gold_cost = 500
+		build_time = 730
+		upgrades_from = hospital_building_2
+		ai_creation_factor = 87
+		tax_income = -0.3
+		
+		hospital_level = 1
+		disease_defence = 0.15
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	hospital_building_4 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_building_4_desc
+		trigger = { TECH_CONSTRUCTION = 5 }
+		gold_cost = 700
+		build_time = 365
+		upgrades_from = hospital_building_3
+		ai_creation_factor = 86
+		tax_income = -0.3
+		
+		hospital_level = 1
+		disease_defence = 0.2
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	hospital_building_5 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		desc = hospital_building_5_desc
+		trigger = { TECH_CONSTRUCTION = 6 }
+		gold_cost = 900
+		build_time = 1095
+		upgrades_from = hospital_building_4
+		ai_creation_factor = 95
+		tax_income = -0.3
+		
+		hospital_level = 1
+		disease_defence = 0.25
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	ct_sauna_russian = {
+		desc = ct_sauna_russian_desc
+		potential = {
+			OR = { 
+				culture_group = central_slavic
+				culture_group = east_slavic
+				culture_group = far_east_slavic
+				has_building = ct_sauna_russian
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = far_east_slavic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CONSTRUCTION = 2 
+			ROOT = {
+				OR = { 
+					culture_group = central_slavic
+					culture_group = east_slavic
+					culture_group = far_east_slavic
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 88
+		
+		tax_income = -0.3
+		disease_defence = 0.05
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	ct_sauna_baltic = {
+		desc = ct_sauna_baltic_desc
+		potential = {
+			OR = { 
+				OR = {
+					culture_group = baltic
+					culture_group = amero_baltic
+				}
+				has_building = ct_sauna_baltic
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = baltic
+					culture_group = amero_baltic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CONSTRUCTION = 2 
+			ROOT = {
+				OR = {
+					culture_group = baltic
+					culture_group = amero_baltic
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 88
+		
+		tax_income = 0.05
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	ct_sauna_finnish = {
+		desc = ct_sauna_finnish_desc
+		potential = {
+			OR = { 
+				culture_group = amero_finno_ugric
+				has_building = ct_sauna_finnish
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = amero_finno_ugric
+				}
+			}
+		}
+		trigger = { 
+			TECH_CONSTRUCTION = 2 
+			ROOT = {
+				OR = { 
+				culture_group = amero_finno_ugric
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 88
+		
+		tax_income = -0.3
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	ct_sauna_greek = {
+		desc = ct_sauna_greek_desc
+		potential = {
+			OR = { 
+				OR = { 
+					culture_group = byzantine
+					culture_group = amerohellene
+				}
+				has_building = ct_sauna_greek
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = byzantine
+					culture_group = amerohellene
+				}
+			}
+		}
+		trigger = { 
+			TECH_CONSTRUCTION = 2 
+			ROOT = {
+				OR = { 
+					culture_group = byzantine
+					culture_group = amerohellene
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 88
+		
+		tax_income = -0.3
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	ct_sauna_arab = {
+		desc = ct_sauna_arab_desc
+		potential = {
+			OR = { 
+				culture_group = arabic
+				culture_group = dhofaric
+				culture_group = maghreb_arabic
+				culture_group = caucasian
+				culture_group = armenian_group
+				culture_group = northern_indo_aryan_group
+				culture_group = salic
+				culture_group = tanic
+				culture_group = digaric
+				culture_group = manipuric
+				culture_group = amero_arabic
+				culture_group = amero_armenian
+				culture_group = amero_turkic
+				culture_group = indo_american_group
+				culture_group = indo_canadian_group
+				culture = arhavi
+				culture_group = amero_hebraic
+				culture_group = amero_aramaic
+				culture_group = dardic
+				culture_group = eastern_indo_aryan_group
+				culture_group = west_indo_aryan_group
+				culture_group = southern_indo_aryan_group
+				culture_group = north_west_indo_aryan_group
+				culture_group = central_indo_aryan_group
+				culture = turkish
+				culture = elbistanli
+				culture = rumeli
+				culture = egeli
+				culture = kapadokyali
+				culture = karadenizci
+				culture_group = near_eastern
+				culture_group = hebrewic
+				has_building = ct_sauna_arab
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = arabic
+				culture_group = dhofaric
+					culture_group = maghreb_arabic
+					culture_group = caucasian
+					culture_group = armenian_group
+					culture_group = northern_indo_aryan_group
+					culture_group = salic
+					culture_group = tanic
+					culture_group = digaric
+					culture_group = manipuric
+					culture_group = amero_arabic
+					culture_group = amero_armenian
+					culture_group = amero_turkic
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = arhavi
+					culture_group = amero_hebraic
+					culture_group = amero_aramaic
+					culture_group = dardic
+					culture_group = eastern_indo_aryan_group
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = central_indo_aryan_group
+					culture = turkish
+					culture = elbistanli
+					culture = rumeli
+					culture = egeli
+					culture = kapadokyali
+					culture = karadenizci
+					culture_group = near_eastern
+					culture_group = hebrewic
+				}
+			}
+		}
+		trigger = { 
+			TECH_CONSTRUCTION = 2 
+			ROOT = {
+				OR = {
+					culture_group = arabic
+				culture_group = dhofaric
+					culture_group = maghreb_arabic
+					culture_group = caucasian
+					culture_group = armenian_group
+					culture_group = northern_indo_aryan_group
+					culture_group = salic
+					culture_group = tanic
+					culture_group = digaric
+					culture_group = manipuric
+					culture_group = amero_arabic
+					culture_group = amero_armenian
+					culture_group = amero_turkic
+					culture_group = indo_american_group
+					culture_group = indo_canadian_group
+					culture = arhavi
+					culture_group = amero_hebraic
+					culture_group = amero_aramaic
+					culture_group = dardic
+					culture_group = eastern_indo_aryan_group
+					culture_group = west_indo_aryan_group
+					culture_group = southern_indo_aryan_group
+					culture_group = north_west_indo_aryan_group
+					culture_group = central_indo_aryan_group
+					culture = turkish
+					culture = elbistanli
+					culture = rumeli
+					culture = egeli
+					culture = kapadokyali
+					culture = karadenizci
+					culture_group = near_eastern
+					culture_group = hebrewic
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 88
+		
+		tax_income = -0.3
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	leper_colony_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_1 }
+		desc = leper_colony_building_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		disease_defence = 0.1
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	soup_kitchen_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_1 }
+		desc = soup_kitchen_building_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		disease_defence = 0.04
+		liege_piety = 0.10
+		church_opinion = 2
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	chapel_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_1 }
+		desc = chapel_building_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		disease_defence = 0.02
+		liege_piety = 0.1
+		church_opinion = 2
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	translation_house_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_2 }
+		desc = translation_house_building_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		liege_prestige = 0.25
+		economy_techpoints = 0.04
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	pilgrims_inn_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_1 }
+		desc = pilgrims_inn_building_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		liege_prestige = 0.25
+		liege_piety = 0.10
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	library_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_1 }
+		desc = library_building_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+		gold_cost = 350
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		tech_growth_modifier = 0.25
+		culture_techpoints = 0.03
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	pharmacology_laboratory_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = { hospital_building_3 }
+		desc = pharmacology_laboratory_building_desc
+		trigger = { TECH_CONSTRUCTION = 4 }
+		gold_cost = 350
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		tech_growth_modifier = 0.25
+		disease_defence = 0.02
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	medical_academy_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = {
+			hospital_building_3
+			library_1
+		}
+		desc = medical_academy_building_desc
+		trigger = { TECH_CONSTRUCTION = 4 }
+		gold_cost = 400
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		disease_defence = 0.02
+		culture_techpoints = 0.03
+		economy_techpoints = 0.03
+		military_techpoints = 0.03
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	observatory_1 = {
+		potential = {
+			has_dlc = "Reapers"
+		}
+		prerequisites = {
+			hospital_building_3
+			pharmacology_laboratory_1
+		}
+		desc = observatory_building_desc
+		trigger = { TECH_CONSTRUCTION = 4 }
+		gold_cost = 400
+		build_time = 365
+		ai_creation_factor = 89
+		tax_income = -0.3
+		add_number_to_name = no
+		
+		culture_techpoints = 0.03
+		military_techpoints = 0.03
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	public_school = {
+		desc = public_school_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 1 
+			FROMFROM = {
+				show_scope_change = no
+				owner = {
+					OR = {
+						religion = scholastic
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROMFROM = {
+					show_scope_change = no
+					owner = {
+						OR = {
+							religion = scholastic
+						}
+					}
+				}
+				has_building = public_school
+			}
+		}
+		is_active_trigger = {
+			FROMFROM = {
+				show_scope_change = no
+				owner = {
+					OR = {
+						religion = scholastic
+					}
+				}
+			}
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		gold_cost = 400
+		build_time = 1095
+		
+		tech_growth_modifier = 0.1
+		economy_techpoints = 0.01
+		culture_techpoints = 0.01
+		military_techpoints = 0.01
+		add_number_to_name = no
+		
+		ai_creation_factor = 89
+		disease_defence = -0.05
+		tax_income = -0.25
+
+		extra_tech_building_start = 1.2
+	}
+	ct_university_0 = {
+		desc = ct_university_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+		gold_cost = 400
+		build_time = 1095
+		
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		tech_growth_modifier = 0.3
+		economy_techpoints = 0.03
+		culture_techpoints = 0.03
+		military_techpoints = 0.03
+		add_number_to_name = no
+		
+		ai_creation_factor = 89
+		disease_defence = -0.05
+		tax_income = -0.25
+
+		extra_tech_building_start = 1.2
+	}
+	ct_university_1 = {
+		desc = ct_university_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+		upgrades_from = ct_university_0
+		gold_cost = 600
+		build_time = 1095
+		
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		tech_growth_modifier = 0.3
+		economy_techpoints = 0.03
+		culture_techpoints = 0.03
+		military_techpoints = 0.03
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+		disease_defence = -0.05
+		tax_income = -0.25
+
+		extra_tech_building_start = 1.2
+	}
+	ct_university_2 = {
+		desc = ct_university_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
+		upgrades_from = ct_university_1
+		gold_cost = 800
+		build_time = 2190
+		
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		tech_growth_modifier = 0.3
+		economy_techpoints = 0.03
+		culture_techpoints = 0.03
+		military_techpoints = 0.03
+		add_number_to_name = no
+		
+		ai_creation_factor = 87
+		disease_defence = -0.05
+		tax_income = -0.25
+
+		extra_tech_building_start = 1.2
+	}
+	ct_university_3 = {
+		desc = ct_university_1_desc
+		trigger = { 
+			OR = {
+				AND = {
+					TECH_CITY_CONSTRUCTION = 7 
+					NOR = {
+						terrain = hills
+						terrain = tells
+						terrain = marsh
+						terrain = mountain
+					}
+				}
+				AND = {
+					TECH_CITY_CONSTRUCTION = 8 
+					OR = {
+						terrain = hills
+						terrain = tells
+						terrain = marsh
+						terrain = mountain
+					}
+				}
+			}   
+		}
+		upgrades_from = ct_university_2
+		gold_cost = 800
+		build_time = 2190
+		
+		is_active_trigger = {
+			NOR = {
+				disease = tuberculosis 
+				disease = typhoid_fever 
+				disease = typhus 
+				disease = bubonic_plague 
+				disease = measles 
+				disease = small_pox 
+				disease = syphilis 
+				disease = dancing_plague 
+			}
+		}
+		tech_growth_modifier = 0.3
+		economy_techpoints = 0.03
+		culture_techpoints = 0.03
+		military_techpoints = 0.03
+		add_number_to_name = no
+		
+		ai_creation_factor = 86
+		disease_defence = -0.05
+		tax_income = -0.25
+
+		extra_tech_building_start = 1.2
+	}
+}

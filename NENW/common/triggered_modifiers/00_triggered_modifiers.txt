@@ -1,0 +1,41 @@
+##################################################
+#
+# STRATEGIC EFFECTS - A.K.A. "TRIGGERED MODIFIERS"
+#
+##################################################
+
+# Bankruptcy
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		NOT = { wealth = 0 }
+	}
+	
+	icon = 24
+	
+	land_morale = -0.25
+	
+	active = no
+}
+
+jacobinist_havent_sacrificed = {
+	potential = {
+		is_playable = yes
+		religion = jacobinist
+	}
+	
+	trigger = {
+		ruled_years = 5
+		NOT = { has_character_modifier = madame_sacrifice_timer_1 }
+		religion = jacobinist
+	}
+	
+	icon = 42
+	
+	monthly_character_piety = -2
+	
+	#active = no
+}

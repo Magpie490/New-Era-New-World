@@ -1,0 +1,43 @@
+route_five = {
+	wealth = 20
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 2019
+			province_id = 2059
+			province_id = 1869 
+			province_id = 534 
+			province_id = 541
+		}
+	}
+	
+		modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.4
+		disease_defence = -0.05
+		culture_flex = -0.2
+		religion_flex = -0.2
+		local_build_cost_modifier = -0.1
+		local_build_time_modifier = -0.1
+		tech_growth_modifier = 0.2
+		icon = 136
+	}
+	
+	start = {
+		2010
+	}
+	start = {
+		2046
+	}
+	
+	
+	path = {
+		2010 1855 2012 2014 1853 2019 965 1849 2022 1879 1881 2035 1885 2038 2041 2045 2046
+	}
+	path = {
+		2046 2047 1865 2050 1864 2059 2060 2061 519 1867 528 529 1869 1874 534 536 1784 541 542 1780 543
+	}
+}

@@ -1,0 +1,205 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_clowestern_male_clothes_behind"
+		texturefile = "gfx\\characters\\western_male\\western_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clowestern_male_headgear_behind"
+		texturefile = "gfx\\characters\\western_male\\western_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clowestern_male_clothes"
+		texturefile = "gfx\\characters\\western_male\\western_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clowestern_male_headgear_mid"
+		texturefile = "gfx\\characters\\western_male\\western_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clowestern_male_clothes_infront"
+		texturefile = "gfx\\characters\\western_male\\western_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clowestern_male_headgear"
+		texturefile = "gfx\\characters\\western_male\\western_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	###
+	spriteType = {
+		name = "GFX_clowestern_female_clothes_behind"
+		texturefile = "gfx\\characters\\western_female\\western_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_clowestern_female_headgear_behind"
+		texturefile = "gfx\\characters\\western_female\\western_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clowestern_female_clothes"
+		texturefile = "gfx\\characters\\western_female\\western_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clowestern_female_headgear_mid"
+		texturefile = "gfx\\characters\\western_female\\western_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_clowestern_female_headgear"
+		texturefile = "gfx\\characters\\western_female\\western_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+		
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_clowestern_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = buffian
+					portrait_culture = motorman
+					portrait_culture = firelander
+					portrait_culture = tuskegean
+					portrait_culture = fiskean
+					portrait_culture = gullah
+					portrait_culture = bahamian
+					portrait_culture = trinitean
+					portrait_culture = kreyol
+					portrait_culture = melungeon
+					portrait_culture = lumbee
+					portrait_culture = issa
+					portrait_culture = ballimorian
+					portrait_culture = seminole
+					portrait_culture = muskogee
+					portrait_culture = tunica-biloxi
+					portrait_culture = natchez
+					portrait_culture = koasati
+					portrait_culture = alabama
+					portrait_culture = quapaw
+					portrait_culture = peoria
+					portrait_culture = lenape
+					portrait_culture = anigiduwagi
+					portrait_culture = omaha
+					portrait_culture = chickasaw
+					portrait_culture = winnebago
+					portrait_culture_group = yokutian
+					portrait_culture_group = pomoan
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_clowestern_male_clothes_behind:p3:c0"
+            "GFX_clowestern_male_clothes:p3:c2"
+			"GFX_clowestern_male_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_clowestern_male_headgear:p5:c5"
+            "GFX_clowestern_male_headgear_behind:p5:c1"
+            "GFX_clowestern_male_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_clowestern_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = buffian
+					portrait_culture = motorman
+					portrait_culture = firelander
+					portrait_culture = tuskegean
+					portrait_culture = fiskean
+					portrait_culture = gullah
+					portrait_culture = bahamian
+					portrait_culture = trinitean
+					portrait_culture = kreyol
+					portrait_culture = melungeon
+					portrait_culture = lumbee
+					portrait_culture = issa
+					portrait_culture = ballimorian
+					portrait_culture = seminole
+					portrait_culture = muskogee
+					portrait_culture = tunica-biloxi
+					portrait_culture = natchez
+					portrait_culture = koasati
+					portrait_culture = alabama
+					portrait_culture = quapaw
+					portrait_culture = peoria
+					portrait_culture = lenape
+					portrait_culture = anigiduwagi
+					portrait_culture = omaha
+					portrait_culture = chickasaw
+					portrait_culture = winnebago
+					portrait_culture_group = yokutian
+					portrait_culture_group = pomoan
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_clowestern_female_clothes_behind:p3:c0"
+            "GFX_clowestern_female_clothes:p3:c2"
+			"GFX_clowestern_male_clothes_infront:p3:c4"
+            "GFX_empty:c3"
+            "GFX_clowestern_female_headgear:p5:c5"
+            "GFX_clowestern_female_headgear_behind:p5:c1"
+            "GFX_clowestern_female_headgear_mid:p5:c3"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+            "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}

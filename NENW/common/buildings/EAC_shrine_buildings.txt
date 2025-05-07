@@ -1,0 +1,487 @@
+temple = {
+	#Wooden Temple
+	tp_wooden_temple = {
+		desc = tp_wooden_temple_desc
+		potential = {
+			FROM = {  
+				OR = {
+					religion = thaislam
+					religion = combuddhist
+					AND = { 
+						OR = {	culture_group = thai
+								culture_group = burmic
+								culture_group = katuic
+								culture_group = khmer_group
+								culture_group = northern_thai
+								culture_group = khasi_palaung_khmuic
+							}
+					religion = theravada
+					}
+				}
+			} 
+		}
+		gold_cost = 350
+		build_time = 50
+		
+		ai_creation_factor = 92
+		add_number_to_name = no
+		liege_piety = 0.02
+		culture_techpoints = 0.01
+		local_revolt_risk = -0.01
+		tax_income = -1
+	}
+}
+temple = {
+	tp_office_trade_management_1 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 1 }
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	tp_office_trade_management_2 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 2 }
+		upgrades_from = tp_office_trade_management_1
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	tp_office_trade_management_3 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 3 }
+		upgrades_from = tp_office_trade_management_2
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	tp_office_trade_management_4 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 4 }
+		upgrades_from = tp_office_trade_management_3
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	tp_office_trade_management_5 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 5 }
+		upgrades_from = tp_office_trade_management_4
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	tp_office_trade_management_6 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 6 }
+		upgrades_from = tp_office_trade_management_5
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+}
+castle = {
+	ca_office_trade_management_1 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 1 }
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ca_office_trade_management_2 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 2 }
+		upgrades_from = ca_office_trade_management_1
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ca_office_trade_management_3 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 3 }
+		upgrades_from = ca_office_trade_management_2
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ca_office_trade_management_4 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 4 }
+		upgrades_from = ca_office_trade_management_3
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ca_office_trade_management_5 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 5 }
+		upgrades_from = ca_office_trade_management_4
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ca_office_trade_management_6 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 6 }
+		upgrades_from = ca_office_trade_management_5
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+}
+city = {
+
+	ct_office_trade_management_1 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 1 }
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ct_office_trade_management_2 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 2 }
+		upgrades_from = ct_office_trade_management_1
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ct_office_trade_management_3 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 3 }
+		upgrades_from = ct_office_trade_management_2
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ct_office_trade_management_4 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 4 }
+		upgrades_from = ct_office_trade_management_3
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ct_office_trade_management_5 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 5 }
+		upgrades_from = ct_office_trade_management_4
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+	ct_office_trade_management_6 = {
+		potential = {
+			FROM = { 
+				OR = {
+					religion = amaitist
+					religion = zenith
+					OR = { religion = maaravi government = oligarchic_republic government = colonial_government government = technocratic_government }
+					
+				}
+				independent = yes
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 6 }
+		upgrades_from = ct_office_trade_management_5
+		desc = office_trade_management_desc
+		gold_cost = 350
+		build_time = 1460
+		ai_creation_factor = 95
+		max_tradeposts = 4
+		extra_tech_building_start = 0.2
+		tax_income = -1
+	}
+}

@@ -1,0 +1,241 @@
+namespace = IE
+
+character_event = {
+	id = IE.1
+	desc = "immolationDesc1"
+	picture = GFX_evt_burning_man_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAIE1
+		trigger = {
+			trait = lustful
+			NOR = {
+				trait = eunuch
+				is_female = yes
+			}
+		}
+		piety = 1200
+		add_trait = eunuch
+		add_trait = chaste
+		remove_trait= lustful
+	}
+	option = {
+		name = EVTOPTBIE1
+		trigger = {
+			trait = wroth
+			NOR = {
+				trait = one_eyed
+				trait = blinded
+			}
+		}
+		
+		piety = 1200
+		add_trait = patient
+		add_trait = one_eyed
+		remove_trait= wroth
+	}
+	option = {
+		name = EVTOPTCIE1
+		trigger = {
+			trait = wroth
+			trait = one_eyed
+			NOT = {
+				trait = blinded
+			}
+		}
+		piety = 1200
+		add_trait = patient
+		add_trait = blinded
+		remove_trait= wroth
+		remove_trait= one_eyed
+	}
+	option = {
+		name = EVTOPTDIE1
+		trigger = {
+			trait = slothful
+			NOT = {
+				trait = disfigured
+			}
+		}
+		piety = 1200
+		add_trait = diligent
+		add_trait = disfigured
+		remove_trait= slothful
+	}
+	option = {
+		name = EVTOPTEIE1
+		trigger = {
+			trait = gluttonous
+			NOT = {
+				trait = one_handed
+			}
+		}
+		piety = 1200
+		add_trait = temperate
+		add_trait = one_handed
+		remove_trait= gluttonous
+	}
+	option = {
+		name = EVTOPTFIE1
+		trigger = {
+			trait = greedy
+			NOT = {
+				trait = one_handed
+			}
+		}
+		piety = 1200
+		add_trait = charitable
+		add_trait = one_handed
+		remove_trait= greedy
+	}
+	option = {
+		name = EVTOPTGIE1
+		trigger = {
+			trait = proud
+			NOT = {
+				trait = disfigured
+			}
+		}
+		piety = 1200
+		add_trait = humble
+		add_trait = disfigured
+		remove_trait= proud
+	}
+	option = {
+		name = EVTOPTHIE1
+		trigger = {
+			trait = envious
+			NOT = {
+				trait = one_legged
+			}
+		}
+		piety = 1200
+		add_trait = kind
+		add_trait = one_legged
+		remove_trait= envious
+	}
+	option = {
+		name = EVTOPTIIE1
+		trigger = {
+			OR = {
+				AND = {
+					is_female = yes
+					trait = lustful
+				}
+				AND = {
+					trait = eunuch
+					trait = lustful
+				}
+				AND = {
+					trait = one_legged
+					trait = envious
+				}
+				AND = {
+					trait = disfigured
+					trait = proud
+				}
+				AND = {
+					trait = disfigured
+					trait = slothful
+				}
+				AND = {
+					trait = one_handed
+					trait = greedy
+				}
+				AND = {
+					trait = blinded
+					trait = wroth
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = IE.2
+	desc = "penitenceDesc1"
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAIE2
+		decadence = -2
+		random_list = {
+			40 = {
+				add_trait = severely_injured
+				set_character_flag = pending_infection
+				character_event = { id = RIP.11000 days = 90 random = 275}
+			}
+			24 = {
+			}
+			36 = {
+				if = {
+					limit = {
+						trait = scarred
+					}
+					add_trait = scarred_mid
+					remove_trait = scarred
+				}
+				else_if = {
+					limit = {
+						trait = scarred_mid
+					}
+					add_trait = scarred_high
+					remove_trait = scarred_mid
+				}
+				else = {
+					add_trait = scarred
+				}
+			}
+		}
+		random_list = {
+			50 = {
+				random = {
+					chance = 10
+					remove_trait = lustful
+					add_trait = chaste
+				}
+				random = {
+					chance = 10
+					remove_trait = gluttonous
+					add_trait = temperate
+				}
+				random = {
+					chance = 10
+					remove_trait = greedy
+					add_trait = charitable
+				}
+				random = {
+					chance = 10
+					remove_trait = slothful
+					add_trait = diligent
+				}
+				random = {
+					chance = 10
+					remove_trait = wroth
+					add_trait = patient
+				}
+				random = {
+					chance = 10
+					remove_trait = envious
+					add_trait = kind
+				}
+				random = {
+					chance = 10
+					remove_trait = proud
+					add_trait = humble
+				}
+			}
+			50 = {
+			}
+		}
+		piety = 200
+		
+	}
+}
+

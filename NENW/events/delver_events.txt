@@ -1,0 +1,417 @@
+namespace = delver
+
+character_event = {
+	id = delver.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_delver_300
+	desc = EVTDESC_delver_300
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_delver_cult
+	}
+	
+	option = {#Nicholas
+		name = EVTOPTA_delver_300
+		if = {
+			limit = { religion = delver }
+			add_trait = triadic_lodge
+		}
+		else = {
+			add_trait = triadic_lodge_reformed
+		}
+	}
+	
+	option = {#Olga
+		name = EVTOPTB_delver_300
+		if = {
+			limit = { religion = delver }
+			add_trait = draconic_lodge
+		}
+		else = {
+			add_trait = draconic_lodge_reformed
+		}
+	}
+	
+	option = {#Load others
+		name = EVTOPTC_delver_300
+		if = {
+			limit = { religion = delver }
+			add_trait = imperial_lodge
+		}
+		else = {
+			add_trait = imperial_lodge_reformed
+		}
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_delver_300
+		if = {
+			limit = { religion = delver }
+			add_trait = chaos_lodge
+		}
+		else = {
+			add_trait = chaos_lodge_reformed
+		}
+	}
+	
+	after = {
+		clr_character_flag = picking_delver_cult
+	}
+}
+
+letter_event = {
+	id = delver.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = delver302Desc
+	hide_window = yes
+	trigger = {
+		religion = delver
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = triadic_lodge
+			trait = chaos_lodge
+			trait = draconic_lodge
+			trait = imperial_lodge
+			trait = triadic_lodge_reformed
+			trait = chaos_lodge_reformed
+			trait = draconic_lodge_reformed
+			trait = imperial_lodge_reformed
+		}
+	}
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = triadic_lodge
+						}
+						mother_even_if_dead = {
+							trait = triadic_lodge
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = triadic_lodge
+								}
+								mother_even_if_dead = {
+									trait = triadic_lodge
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = triadic_lodge
+								}
+								mother_even_if_dead = {
+									trait = triadic_lodge
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = triadic_lodge
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = chaos_lodge
+						}
+						mother_even_if_dead = {
+							trait = chaos_lodge
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = chaos_lodge
+								}
+								mother_even_if_dead = {
+									trait = chaos_lodge
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = chaos_lodge
+								}
+								mother_even_if_dead = {
+									trait = chaos_lodge
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = chaos_lodge
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = draconic_lodge
+						}
+						mother_even_if_dead = {
+							trait = draconic_lodge
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = draconic_lodge
+								}
+								mother_even_if_dead = {
+									trait = draconic_lodge
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = draconic_lodge
+								}
+								mother_even_if_dead = {
+									trait = draconic_lodge
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = draconic_lodge
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = imperial_lodge
+						}
+						mother_even_if_dead = {
+							trait = imperial_lodge
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = imperial_lodge
+								}
+								mother_even_if_dead = {
+									trait = imperial_lodge
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = imperial_lodge
+								}
+								mother_even_if_dead = {
+									trait = imperial_lodge
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = imperial_lodge
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = triadic_lodge_reformed
+						}
+						mother_even_if_dead = {
+							trait = triadic_lodge_reformed
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = triadic_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = triadic_lodge_reformed
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = triadic_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = triadic_lodge_reformed
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = triadic_lodge_reformed
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = chaos_lodge_reformed
+						}
+						mother_even_if_dead = {
+							trait = chaos_lodge_reformed
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = chaos_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = chaos_lodge_reformed
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = chaos_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = chaos_lodge_reformed
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = chaos_lodge_reformed
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = draconic_lodge_reformed
+						}
+						mother_even_if_dead = {
+							trait = draconic_lodge_reformed
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = draconic_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = draconic_lodge_reformed
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = draconic_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = draconic_lodge_reformed
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = draconic_lodge_reformed
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = imperial_lodge_reformed
+						}
+						mother_even_if_dead = {
+							trait = imperial_lodge_reformed
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = imperial_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = imperial_lodge_reformed
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = imperial_lodge_reformed
+								}
+								mother_even_if_dead = {
+									trait = imperial_lodge_reformed
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = imperial_lodge_reformed
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_delver_cult
+	}
+}

@@ -1,0 +1,679 @@
+namespace = america
+
+character_event = {
+	id = america.26
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_america_26
+	desc = EVTDESC_america_26
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_study_america
+		remove_character_modifier = studied_pragmatism
+		remove_character_modifier = studied_jingoism
+		remove_character_modifier = studied_transcendantalism
+		remove_character_modifier = studied_foundationalism
+	}
+	
+	option = {#Pragmatism
+		name = EVTOPTA_america26
+			add_character_modifier = {
+				name = studied_pragmatism
+				duration = -1
+			}
+	}
+	
+	option = {#Jingoism
+		name = EVTOPTB_america26
+			add_character_modifier = {
+				name = studied_jingoism
+				duration = -1
+			}
+	}
+	
+	option = {#Transcendatalism
+		name = EVTOPTC_america26
+			add_character_modifier = {
+				name = studied_transcendantalism
+				duration = -1
+			}
+	}
+	
+	option = {#Foundationalism
+		name = EVTOPTD_america26
+			add_character_modifier = {
+				name = studied_foundationalism
+				duration = -1
+			}
+	}	
+	
+	after = {
+		clr_character_flag = picking_study_america
+	}
+}
+
+character_event = {
+	id = america.27
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_america_27
+	desc = EVTDESC_america_27	
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_lakefolk_branch
+	}
+	
+	option = {#Diviner
+		name = EVTOPTA_america27
+		add_trait = guardians_diviners
+	}
+	
+	option = {#Guardianist
+		name = EVTOPTB_america27
+		add_trait = guardians_guardianists
+	}
+
+	option = {#High Order
+		name = EVTOPTC_america27
+		add_trait = guardians_high_order
+	}
+	
+	after = {
+		clr_character_flag = picking_lakefolk_branch
+	}
+}
+
+letter_event = {
+	id = america.28
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = israelstuff8Desc
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = guardians_high_order
+						}
+						mother_even_if_dead = {
+							trait = guardians_high_order
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_high_order
+								}
+								mother_even_if_dead = {
+									trait = guardians_high_order
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_high_order
+								}
+								mother_even_if_dead = {
+									trait = guardians_high_order
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = guardians_high_order
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = guardians_guardianists
+						}
+						mother_even_if_dead = {
+							trait = guardians_guardianists
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_guardianists
+								}
+								mother_even_if_dead = {
+									trait = guardians_guardianists
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_guardianists
+								}
+								mother_even_if_dead = {
+									trait = guardians_guardianists
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = guardians_guardianists
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = guardians_high_order
+						}
+						mother_even_if_dead = {
+							trait = guardians_high_order
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_high_order
+								}
+								mother_even_if_dead = {
+									trait = guardians_high_order
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_high_order
+								}
+								mother_even_if_dead = {
+									trait = guardians_high_order
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_stewardship_score = yes
+				add_trait = guardians_high_order
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = guardians_diviners
+						}
+						mother_even_if_dead = {
+							trait = guardians_diviners
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_diviners
+								}
+								mother_even_if_dead = {
+									trait = guardians_diviners
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = guardians_diviners
+								}
+								mother_even_if_dead = {
+									trait = guardians_diviners
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = guardians_diviners
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_lakefolk_branch
+	}
+}
+
+character_event = {
+	id = america.29
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_america_29
+	desc = EVTDESC_america_29	
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_mainline_church
+	}
+	
+	option = {#Methodist
+		name = EVTOPTA_america29
+		add_trait = mainline_methodist
+	}
+	
+	option = {#Lutheran
+		name = EVTOPTB_america29
+		add_trait = mainline_lutheran
+	}
+	
+	option = {#Presbyterian
+		name = EVTOPTC_america29
+		add_trait = mainline_presbyterian
+	}
+	
+	option = {#Load others
+		name = EVTOPTD_america29
+		hidden_tooltip = { character_event = { id = america.30 } }
+	}
+	
+	after = {
+		clr_character_flag = picking_mainline_church
+	}
+}
+
+character_event = {
+	id = america.30
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_america_30
+	desc = EVTDESC_america_30	
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_mainline_church
+	}
+	
+	option = {#Baptist
+		name = EVTOPTA_america30
+		add_trait = mainline_baptist
+	}
+	
+	option = {#Episcopal
+		name = EVTOPTB_america30
+		add_trait = mainline_episcopal
+	}
+	
+	option = {#Load others
+		name = EVTOPTC_america30
+		hidden_tooltip = { character_event = { id = america.29 } }
+	}
+	
+	after = {
+		clr_character_flag = picking_mainline_church
+	}
+}
+
+letter_event = {
+	id = america.31
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = israelstuff8Desc
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = mainline_baptist
+						}
+						mother_even_if_dead = {
+							trait = mainline_baptist
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_baptist
+								}
+								mother_even_if_dead = {
+									trait = mainline_baptist
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_baptist
+								}
+								mother_even_if_dead = {
+									trait = mainline_baptist
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_diplomacy_score = yes
+				add_trait = mainline_baptist
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = mainline_episcopal
+						}
+						mother_even_if_dead = {
+							trait = mainline_episcopal
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_episcopal
+								}
+								mother_even_if_dead = {
+									trait = mainline_episcopal
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_episcopal
+								}
+								mother_even_if_dead = {
+									trait = mainline_episcopal
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = mainline_episcopal
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = mainline_lutheran
+						}
+						mother_even_if_dead = {
+							trait = mainline_lutheran
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_lutheran
+								}
+								mother_even_if_dead = {
+									trait = mainline_lutheran
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_lutheran
+								}
+								mother_even_if_dead = {
+									trait = mainline_lutheran
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_stewardship_score = yes
+				add_trait = mainline_lutheran
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = mainline_presbyterian
+						}
+						mother_even_if_dead = {
+							trait = mainline_presbyterian
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_presbyterian
+								}
+								mother_even_if_dead = {
+									trait = mainline_presbyterian
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_presbyterian
+								}
+								mother_even_if_dead = {
+									trait = mainline_presbyterian
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_intrigue_score = yes
+				add_trait = mainline_presbyterian
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = mainline_methodist
+						}
+						mother_even_if_dead = {
+							trait = mainline_methodist
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_methodist
+								}
+								mother_even_if_dead = {
+									trait = mainline_methodist
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = mainline_methodist
+								}
+								mother_even_if_dead = {
+									trait = mainline_methodist
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = mainline_methodist
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_mainline_church
+	}
+}
+narrative_event = {
+	id = america.40
+	title = EVTNAME_america_40
+	desc = EVTDESC_america_40
+	is_triggered_only = yes
+	picture = GFX_evt_american_gov
+	
+	major = yes
+
+	option = {
+		trigger = { religion = constitutional }
+		name = EVTOPTA_america40
+	}
+	option = {
+		trigger = { religion = custodite }
+		name = EVTOPTB_america40
+	}
+	option = {
+		trigger = { religion = pagan } #THE FEDS!
+		name = EVTOPTC_america40
+	}
+	option = {
+		trigger = {
+			NOR = {
+				religion = constitutional
+				religion = custodite
+				religion = pagan
+			}
+		}
+		name = EVTOPTD_america40
+	}
+}
+
+narrative_event = {
+	id = america.41
+	is_triggered_only = yes # on_game_started
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = e_columbia
+	}
+
+	immediate = {
+		e_columbia = {
+			set_variable = { 
+				which = electionStatus 
+				value = 1
+			}
+		}
+	}
+}
+
+character_event = { # If you keep electing the same dynasty a civil war has a higher chance to occur
+	id = america.42
+	is_triggered_only = yes # on_death
+	only_rulers = yes
+	hide_window = yes
+
+	trigger = {
+		has_landed_title = e_columbia
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				current_heir = { dynasty = ROOT }
+			}
+			e_columbia = {
+				change_variable = {
+					which = electionStatus
+					value = 1
+				}
+			}
+			break = yes
+		}
+		e_columbia = {
+			set_variable = {
+				which = electionStatus
+				value = 1
+			}
+		}
+	}
+}
+
+character_event = { #the amish have had it too good for too long
+	id = america.43
+	is_triggered_only = yes
+	title = EVTNAME_america_43
+	desc = EVTDESC_america_43
+	
+	trigger = {
+		has_landed_title = e_columbia
+	}
+	option = {
+		name = EVTOPTA_america43
+		k_eastsylvania = {
+			holder_scope = {
+				character_event = {
+					id = america.44
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+character_event = { #ah fuck -king of the amish
+	id = america.44
+	is_triggered_only = yes
+	title = EVTNAME_america_44
+	desc = EVTDESC_america_44
+
+	option = { #suck the feds off
+		set_defacto_liege = e_columbia
+		name = EVTOPTA_america44
+	}
+	option = { #get killed
+		k_eastsylvania = {
+			reverse_unsafe_war = {
+				target = e_columbia
+				casus_belli = invasion
+			}
+		}
+		name = EVTOPTB_america44
+	}
+}

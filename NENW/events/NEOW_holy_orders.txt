@@ -1,0 +1,1423 @@
+namespace = holyorder
+#mostly miscellaneous ones we haven't added yet
+
+#removed OW 1-4 and 24-26
+
+# The son of a ruler volunteers to join the Holy Order
+character_event = {
+	id = holyorder.5
+	hide_window = yes
+	
+	only_men = yes
+	min_age = 16
+	max_age = 45
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		is_ruler = no
+		has_dlc = "Sons of Abraham"
+		NAND = {
+			has_secret_religion = yes
+			trait = zealous
+		}
+		OR = {
+			one_holy_order_avalaible_trigger = yes
+			two_holy_order_avalaible_trigger = yes
+			AND = {
+				NOT = { has_character_modifier = expelled_d_knights_templar }
+				NOT = {
+					any_liege = {
+						has_character_modifier = expelled_d_knights_templar
+					}
+				}
+				is_title_active = d_knights_templar
+				OR = {
+					religion = catholic
+					religion = cadaverist
+					religion = fraticelli
+					religion = hussite
+				}
+			}
+			AND = {
+				NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+				NOT = {
+					any_liege = {
+						has_character_modifier = expelled_d_knights_hospitaler
+					}
+				}
+				is_title_active = d_knights_hospitaler
+				OR = {
+					religion = catholic
+					religion = cadaverist
+					religion = fraticelli
+					religion = hussite
+				}
+			}
+		}
+		is_heretic = no
+		
+		martial = 5
+		
+		OR = {
+			father_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+			mother_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+		}
+		
+		liege = {
+			holy_order = no
+			NOT = { government = order_government }
+			religion = ROOT
+			liege = {
+				holy_order = no
+				NOT = { government = order_government }
+				liege = {
+					holy_order = no
+					NOT = { government = order_government }
+				}
+			}
+		}
+		
+		NOT = {
+			any_spouse = {
+				OR = {
+					is_landed = yes
+					AND = {
+						is_pregnant = yes
+					father_of_unborn = { character = ROOT } # Won't happen if spouse is pregnant with non-bastard child
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.25
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = celibate
+		}
+		modifier = {
+			factor = 0.5
+			trait = homosexual
+		}
+		modifier = {
+			factor = 0.7
+			trait = content
+		}
+		modifier = {
+			factor = 0.75
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { age = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = cynical
+		}
+		modifier = {
+			factor = 5.0
+			has_secret_religion = yes
+			NOT = { trait = cynical }
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			any_heir_title = {
+				always = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 2
+			any_spouse = {
+				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 0.66
+			one_holy_order_avalaible_trigger = yes
+			two_holy_order_avalaible_trigger = yes
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = catholic
+				religion = cadaverist
+				religion = fraticelli
+				religion = hussite
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				trigger = {
+					one_holy_order_avalaible_trigger = yes
+				}
+				modifier = {
+					factor = 3
+					preferred_by_one_holy_order_trigger = yes
+				}
+				religion_scope = { persistent_event_target:one_holy_order = { save_event_target_as = holy_order_to_join } }
+			}
+			10 = {
+				trigger = {
+					two_holy_order_avalaible_trigger = yes
+				}
+				modifier = {
+					factor = 3
+					preferred_by_two_holy_order_trigger = yes
+				}
+				religion_scope = { persistent_event_target:two_holy_order = { save_event_target_as = holy_order_to_join } }
+			}
+			10 = {
+				trigger = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					is_title_active = d_knights_templar
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				modifier = {
+					factor = 5
+					culture_group = francophone
+				}
+				d_knights_templar = { save_event_target_as = holy_order_to_join }
+			}
+			15 = {
+				trigger = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					is_title_active = d_knights_hospitaler
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				d_knights_hospitaler = { save_event_target_as = holy_order_to_join }
+			}
+		}
+		liege = {
+			character_event = {
+				id = holyorder.6
+			}
+		}
+	}
+}
+
+# Son or brother asks to join the Holy Order
+character_event = {
+	id = holyorder.6
+	desc = EVTDESC_HOLY_ORDER_6
+	picture = {
+		trigger = {
+			OR = {
+				religion = catholic
+				religion = cadaverist
+				religion = fraticelli
+				religion = hussite
+				religion = sevillian
+				religion = transatlantic
+			}
+		}
+		picture = GFX_evt_crusaders
+	}
+	picture = {
+		trigger = {
+			religion_group = christian
+			NOR = {
+				religion = catholic
+				religion = cadaverist
+				religion = fraticelli
+				religion = hussite
+				religion = sevillian
+				religion = transatlantic
+			}
+		}
+		picture = GFX_evt_western_knights_byzantine
+	}
+	picture = {
+		trigger = {
+			OR = {
+				religion_group = muslim
+				religion_group = zoroastrian_group
+			}
+		}
+		picture = GFX_evt_moors
+	}
+	picture = { # Random I hope
+		trigger = {
+			NOR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = zoroastrian_group
+			}
+		}
+		picture = GFX_evt_melee
+	}
+	picture = {
+		trigger = {
+			NOR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = zoroastrian_group
+			}
+		}
+		picture = GFX_evt_throne_room
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1031 # Agree
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = 100
+		}
+		
+		FROM = {
+			character_event = {
+				id = holyorder.7
+				tooltip = EVTTOOLTIP_HOLY_ORDER_7
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1031 # Refuse
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = -100
+		}
+		
+		FROM = {
+			character_event = {
+				id = holyorder.8
+				tooltip = EVTTOOLTIP_SOA_1033
+			}
+		}
+	}
+}
+
+# Son or brother joins the Holy Order
+character_event = {
+	id = holyorder.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:holy_order_to_join = {
+			holder_scope = {
+				save_event_target_as = order_target
+				ROOT = {
+					character_event = { id = SoA.2864 }
+				}
+			}
+		}
+	}
+}
+
+# Liege refuses request to join Holy Order
+character_event = {
+	id = holyorder.8
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_request_holy_order
+		}
+	}
+}
+
+character_event = {
+	id = holyorder.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	religion = catholic
+	only_playable = yes
+	min_age = 16
+	trigger = {
+		controls_religion = yes
+	}
+	immediate = {
+		# First ones
+		zarist = { save_persistent_event_target = { name = one_holy_order scope = d_white_army } }
+		katerinist = { save_persistent_event_target = { name = one_holy_order scope = d_white_army } }
+		petrist = { save_persistent_event_target = { name = one_holy_order scope = d_white_army } }
+		folklorist_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_blue_stripes } }
+		maunaxite_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_strugglers } }
+		sikh = { save_persistent_event_target = { name = one_holy_order scope = d_khalsa_army } }
+		jacobinist = { save_persistent_event_target = { name = one_holy_order scope = d_sans_culottes } }
+		novelist = { save_persistent_event_target = { name = one_holy_order scope = d_musketeers } }
+		novelist_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_musketeers } }
+		thelemic_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		summer_queen = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		thelemic = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		theosophy = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		orange_king = { save_persistent_event_target = { name = one_holy_order scope = d_redcoats } }
+		stalinist = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
+		trotskyite = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
+		titoist = { save_persistent_event_target = { name = one_holy_order scope = d_hashshashin } }
+		sufi = { save_persistent_event_target = { name = one_holy_order scope = d_tijani_order } }
+		mesopotamian = { save_persistent_event_target = { name = one_holy_order scope = d_naqshbandi } }
+		ibadi = { save_persistent_event_target = { name = one_holy_order scope = d_haruriyyah } }
+		zoroastrian = { save_persistent_event_target = { name = one_holy_order scope = d_immortals } }
+		jewish = { save_persistent_event_target = { name = one_holy_order scope = d_zealots } }
+		mikraist = { save_persistent_event_target = { name = one_holy_order scope = d_zealots } }
+		orthodox = { save_persistent_event_target = { name = one_holy_order scope = d_holy_sepulchre } }
+		khanist = { save_persistent_event_target = { name = one_holy_order scope = d_champions_of_the_khan } }
+		tengri_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_sky_lords } }
+		raven_tales_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_taxet_warriors } }
+		baltic_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_chosen_perkunas } }
+		finnish_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_sons_kaleva } }
+		theravada = { save_persistent_event_target = { name = one_holy_order scope = d_ashokas_chosen } }
+		jain = { save_persistent_event_target = { name = one_holy_order scope = d_bulls_rishabha } }
+		hellenic_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_myrmidons } }
+		anglican = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
+		quaker = { save_persistent_event_target = { name = one_holy_order scope = d_army_salvation } }
+		raelian = { save_persistent_event_target = { name = one_holy_order scope = d_raelian_order } }
+		mormon = { save_persistent_event_target = { name = one_holy_order scope = d_mormon_order } }
+		girondist = { save_persistent_event_target = { name = one_holy_order scope = d_girondist_order } }
+		lutheran = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
+		prussianist = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
+		hussite = { save_persistent_event_target = { name = one_holy_order scope = d_knights_hospitaler_3 } }
+		yersenism = { save_persistent_event_target = { name = one_holy_order scope = d_seekers } }
+		yazidi = { save_persistent_event_target = { name = one_holy_order scope = d_seekers } }
+		ahlehaqq = { save_persistent_event_target = { name = one_holy_order scope = d_seekers } }
+		koptic = { save_persistent_event_target = { name = one_holy_order scope = d_saint_anthony } }
+		druze = { save_persistent_event_target = { name = one_holy_order scope = d_warriors_al_atrash } }
+		sevillian = { save_persistent_event_target = { name = one_holy_order scope = d_columbus_knights } }
+		transatlantic = { save_persistent_event_target = { name = one_holy_order scope = d_columbus_knights } }
+		xinjiao = { save_persistent_event_target = { name = one_holy_order scope = d_red_turbans } } 
+		maoist = { save_persistent_event_target = { name = one_holy_order scope = d_frontier } }
+		summer_queen = { save_persistent_event_target = { name = one_holy_order scope = d_excalibur } }
+		ovlatii = { save_persistent_event_target = { name = one_holy_order scope = d_ovlatii_order } }
+		shiite = { save_persistent_event_target = { name = one_holy_order scope = d_shahrbani } }
+		bushism = { save_persistent_event_target = { name = one_holy_order scope = d_liberian_order } }
+		highchurch = { save_persistent_event_target = { name = one_holy_order scope = d_lawrence_order } }
+		nousthreskeia = { save_persistent_event_target = { name = one_holy_order scope = d_nousthreskeia_order } }
+		nousthreskeia_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_nousthreskeia_order } }
+		thaddean = { save_persistent_event_target = { name = one_holy_order scope = d_knights_of_thaddeus } }
+		jadidist = { save_persistent_event_target = { name = one_holy_order scope = d_jadid } }
+		bon = { save_persistent_event_target = { name = one_holy_order scope = d_dralhas_children } }
+		bon_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_dralhas_children } }
+		starist_pagan = { save_persistent_event_target = { name = one_holy_order scope = d_stargazers } }
+		starist_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_stargazers } }
+		baptist = { save_persistent_event_target = { name = one_holy_order scope = d_free_baptist_order } }
+		gridiron = { save_persistent_event_target = { name = one_holy_order scope = d_sec } }
+		chaldean = { save_persistent_event_target = { name = one_holy_order scope = d_knights_of_saint_charbel } }
+		celtic_pagan = { save_persistent_event_target = { name = one_holy_order scope = d_fianna } }
+		celtic_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_fianna } }
+		congregationist = { save_persistent_event_target = { name = one_holy_order scope = d_shomrim } }
+		ahmadiyya = { save_persistent_event_target = { name = one_holy_order scope = d_ahmadi_order } }
+		antiquarianist_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_general_militia } }
+		antiquarianist = { save_persistent_event_target = { name = one_holy_order scope = d_general_militia } }
+		delver_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_jedi_order } }
+		watcher = { save_persistent_event_target = { name = one_holy_order scope = k_watchers_in_the_dark } }
+		delver = { save_persistent_event_target = { name = one_holy_order scope = d_jedi_order } }
+		mahayana = { save_persistent_event_target = { name = one_holy_order scope = d_mahayana_order } }
+		emmaean_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_sword_of_martyr } }
+		gator_pagan_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_raiders_of_caidor } }
+		anishinaabe_reformed = { save_persistent_event_target = { name = one_holy_order scope = d_fire_keepers } }
+		constitutional = { save_persistent_event_target = { name = one_holy_order scope = d_old_guard } }
+		highmount = { save_persistent_event_target = { name = one_holy_order scope = d_mountain_men } }
+		insular = { save_persistent_event_target = { name = one_holy_order scope = d_insular_order } }
+		mainline = { save_persistent_event_target = { name = one_holy_order scope = d_mainline_order } }
+		gaiwiio = { save_persistent_event_target = { name = one_holy_order scope = d_gaiwiio_order } }
+		loyalist = { save_persistent_event_target = { name = one_holy_order scope = d_loyalist_order } }
+		evangelical = { save_persistent_event_target = { name = one_holy_order scope = d_evangelical_order } }
+		columbian = { save_persistent_event_target = { name = one_holy_order scope = d_columbian_order } }
+		gaian = { save_persistent_event_target = { name = one_holy_order scope = d_stewardess } }
+		
+		# Second ones
+		sevillian = { save_persistent_event_target = { name = two_holy_order scope = d_carmelites } }
+		hussite = { save_persistent_event_target = { name = two_holy_order scope = d_hussite_order } }
+		transatlantic = { save_persistent_event_target = { name = two_holy_order scope = d_carmelites } }
+		anglican = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_1 } }
+		quaker = { save_persistent_event_target = { name = two_holy_order scope = d_knights_hospitaler_1 } }
+		orthodox = { save_persistent_event_target = { name = two_holy_order scope = d_saint_basil } }
+	}
+}
+
+# The Grand Master humbly requests the right to build a castle in your demesne
+character_event = {
+	id = holyorder.10
+	hide_window = yes
+	
+	min_age = 16
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				one_holy_order_avalaible_trigger = yes
+				religion_scope = {
+					persistent_event_target:one_holy_order = {
+						holder_scope = { ai = yes
+							wealth = 300
+							NOT = {
+								realm_size = 10
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				two_holy_order_avalaible_trigger = yes
+				religion_scope = {
+					persistent_event_target:two_holy_order = {
+						holder_scope = { ai = yes
+							wealth = 300
+							NOT = {
+								realm_size = 10
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				NOT = { has_character_modifier = expelled_d_knights_templar }
+				NOT = {
+					any_liege = {
+						has_character_modifier = expelled_d_knights_templar
+					}
+				}
+				d_knights_templar = {
+					holder_scope = { ai = yes
+						wealth = 300
+						NOT = {
+							realm_size = 10
+						}
+					}
+				}
+				OR = {
+					religion = catholic
+					religion = cadaverist
+					religion = fraticelli
+					religion = hussite
+				}
+			}
+			AND = {
+				NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+				NOT = {
+					any_liege = {
+						has_character_modifier = expelled_d_knights_hospitaler
+					}
+				}
+				d_knights_hospitaler = {
+					holder_scope = { ai = yes
+						wealth = 300
+						NOT = {
+							realm_size = 10
+						}
+					}
+				}
+				OR = {
+					religion = catholic
+					religion = cadaverist
+					religion = fraticelli
+					religion = hussite
+				}
+			}
+		}
+		NOT = { government = order_government }
+		holy_order = no
+		liege = {
+			holy_order = no
+			NOT = { government = order_government }
+			liege = {
+				holy_order = no
+				NOT = { government = order_government }
+			}
+		}
+		is_heretic = no
+		top_liege = {
+			religion = ROOT
+		}
+		any_demesne_province = {
+			has_empty_holding = yes
+		}
+		
+		has_dlc = "Sons of Abraham"
+	}
+	
+	mean_time_to_happen = {
+		months = 960
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					one_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:one_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { demesne_size = 1 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					two_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:two_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { demesne_size = 1 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					d_knights_templar = {
+						holder_scope = { ai = yes
+							NOT = { demesne_size = 1 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					d_knights_hospitaler = {
+						holder_scope = { ai = yes
+							NOT = { demesne_size = 1 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					one_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:one_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { demesne_size = 2 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					two_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:two_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { demesne_size = 2 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					d_knights_templar = {
+						holder_scope = { ai = yes
+							NOT = { demesne_size = 2 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					d_knights_hospitaler = {
+						holder_scope = { ai = yes
+							NOT = { demesne_size = 2 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+			}
+		
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					one_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:one_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { num_of_count_titles = 1 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					two_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:two_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { num_of_count_titles = 1 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					d_knights_templar = {
+						holder_scope = { ai = yes
+							NOT = { num_of_count_titles = 1 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					d_knights_hospitaler = {
+						holder_scope = { ai = yes
+							NOT = { num_of_count_titles = 1 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					one_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:one_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { realm_size = 5 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					two_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:two_holy_order = {
+							holder_scope = { ai = yes
+								NOT = { realm_size = 5 } wealth = 300
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					d_knights_templar = {
+						holder_scope = { ai = yes
+							NOT = { realm_size = 5 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				AND = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					d_knights_hospitaler = {
+						holder_scope = { ai = yes
+							NOT = { realm_size = 5 } wealth = 300
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.66
+			one_holy_order_avalaible_trigger = yes
+			two_holy_order_avalaible_trigger = yes
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = catholic
+				religion = cadaverist
+				religion = fraticelli
+				religion = hussite
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				trigger = {
+					one_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:one_holy_order = {
+							holder_scope = { ai = yes
+								wealth = 300
+								NOT = {
+									realm_size = 10
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 5
+					religion_scope = { persistent_event_target:one_holy_order = { holder_scope = { NOT = { demesne_size = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:one_holy_order = { holder_scope = { NOT = { demesne_size = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:one_holy_order = { holder_scope = { NOT = { demesne_size = 2 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:one_holy_order = { holder_scope = { NOT = { num_of_count_titles = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:one_holy_order = { holder_scope = { NOT = { demesne_size = 5 } } } }
+				}
+				modifier = {
+					factor = 3
+					preferred_by_one_holy_order_trigger = yes
+				}
+				religion_scope = { persistent_event_target:one_holy_order = { save_event_target_as = holy_order_to_build } }
+			}
+			10 = {
+				trigger = {
+					two_holy_order_avalaible_trigger = yes
+					religion_scope = {
+						persistent_event_target:two_holy_order = {
+							holder_scope = { ai = yes
+								wealth = 300
+								NOT = {
+									realm_size = 10
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 5
+					religion_scope = { persistent_event_target:two_holy_order = { holder_scope = { NOT = { demesne_size = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:two_holy_order = { holder_scope = { NOT = { demesne_size = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:two_holy_order = { holder_scope = { NOT = { demesne_size = 2 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:two_holy_order = { holder_scope = { NOT = { num_of_count_titles = 1 } } } }
+				}
+				modifier = {
+					factor = 3
+					religion_scope = { persistent_event_target:two_holy_order = { holder_scope = { NOT = { demesne_size = 5 } } } }
+				}
+				modifier = {
+					factor = 3
+					preferred_by_two_holy_order_trigger = yes
+				}
+				religion_scope = { persistent_event_target:two_holy_order = { save_event_target_as = holy_order_to_build } }
+			}
+			15 = {
+				trigger = {
+					NOT = { has_character_modifier = expelled_d_knights_templar }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_templar
+						}
+					}
+					d_knights_templar = {
+						holder_scope = { ai = yes
+							wealth = 300
+							NOT = {
+								realm_size = 10
+							}
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				modifier = {
+					factor = 5
+					any_province = {
+						region = world_europe_west_francia
+						has_empty_holding = yes
+					}
+				}
+				modifier = {
+					factor = 3
+					d_knights_templar = { holder_scope = { NOT = { demesne_size = 1 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_templar = { holder_scope = { NOT = { demesne_size = 2 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_templar = { holder_scope = { NOT = { num_of_count_titles = 1 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_templar = { holder_scope = { NOT = { demesne_size = 5 } } }
+				}
+				d_knights_templar = { save_event_target_as = holy_order_to_build }
+			}
+			15 = {
+				trigger = {
+					NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+					NOT = {
+						any_liege = {
+							has_character_modifier = expelled_d_knights_hospitaler
+						}
+					}
+					d_knights_hospitaler = {
+						holder_scope = { ai = yes
+							wealth = 300
+							NOT = {
+								realm_size = 10
+							}
+						}
+					}
+					OR = {
+						religion = catholic
+						religion = cadaverist
+						religion = fraticelli
+						religion = hussite
+					}
+				}
+				modifier = {
+					factor = 3
+					d_knights_hospitaler = { holder_scope = { NOT = { demesne_size = 1 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_hospitaler = { holder_scope = { NOT = { demesne_size = 2 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_hospitaler = { holder_scope = { NOT = { num_of_count_titles = 1 } } }
+				}
+				modifier = {
+					factor = 3
+					d_knights_hospitaler = { holder_scope = { NOT = { demesne_size = 5 } } }
+				}
+				d_knights_hospitaler = { save_event_target_as = holy_order_to_build }
+			}
+		}
+		random_demesne_province = {
+			limit = {
+				has_empty_holding = yes
+			}
+			preferred_limit = {
+				region = world_europe_west_francia
+				event_target:holy_order_to_build = { title = d_knights_templar }
+			}
+			province_event = {
+				id = holyorder.11
+			}
+		}
+	}
+}
+
+province_event = {
+	id = holyorder.11
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:holy_order_to_build = {
+			holder_scope = {
+				character_event = {
+					id = holyorder.12
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = holyorder.12
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			letter_event = {
+				id = holyorder.13
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = holyorder.13
+	desc = EVTDESC_HOLY_ORDER_13
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1023 # Agree
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 2
+				trait = zealous
+				has_secret_religion = no
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+				has_secret_religion = no
+			}
+			modifier = {
+				factor = 0.5
+				has_secret_religion = yes
+			}
+			modifier = {
+				factor = 1.5
+				trait = trusting
+			}
+			modifier = {
+				factor = 0.5
+				trait = paranoid
+			}
+		}
+		
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = holyorder.22 }
+			}
+			FROMFROM = {
+				province_event = { id = holyorder.14 }
+			}
+		}
+		
+		piety = 200
+		wealth = 100
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1153 # Refuse
+		ai_chance = {
+			factor = 20
+		}
+		hidden_tooltip = {
+			FROM = {
+				letter_event = { id = holyorder.21 }
+			}
+		}
+		piety = -100
+	}
+}
+
+# Castle has been erected
+province_event = {
+	id = holyorder.14
+	desc = EVTDESC_HOLY_ORDER_14
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1024
+	}
+}
+
+character_event = {
+	id = holyorder.15
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		wealth = 300
+		FROM = {
+			letter_event = {
+				id = holyorder.16
+			}
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_generous_donation
+		}
+	}
+}
+
+# Notification event when donating money Holy Order
+letter_event = {
+	id = holyorder.16
+	desc = EVTDESC_HOLY_ORDER_16
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Ping event when expelling a Holy Order
+character_event = {
+	id = holyorder.17
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_title_under = {
+			limit = {
+				tier = BARON
+				location = {
+					owner = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			usurp_title = FROM
+		}
+		
+		if = {
+			limit = {
+				is_liege_or_above = FROM
+			}
+			set_defacto_liege = THIS
+		}
+	
+		FROM = {
+			letter_event = {
+				id = holyorder.18
+			}
+		}
+		
+		opinion = {
+			who = FROM
+			modifier = opinion_expelled_from_realm
+		}
+	}
+}
+
+# Notification event when expelling a Holy Order
+letter_event = {
+	id = holyorder.18
+	desc = EVTDESC_HOLY_ORDER_18
+	
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = donated_to_holy_order
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1061
+	}
+}
+
+character_event = {
+	id = holyorder.19
+	desc = "DEBUG"
+	picture = GFX_evt_pagan_reformation
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { religion = FROMFROM }
+		FROMFROM = {
+			OR = {
+				has_character_modifier = borrowed_from_knights_templar
+				has_character_modifier = borrowed_from_bektashi
+				has_character_modifier = borrowed_from_haruriyyah
+				has_character_modifier = expelled_one_holy_order
+				has_character_modifier = expelled_two_holy_order
+				has_character_modifier = expelled_d_knights_templar
+				has_character_modifier = expelled_d_knights_hospitaler
+			}
+			primary_title = { title = ROOT_FROM  }
+		}
+	}
+
+	immediate = {
+		FROMFROM = {
+			conversion_check_holy_order_modifiers_effect = yes
+		}
+	}
+}
+
+character_event = {
+	id = holyorder.20
+	desc = "DEBUG"
+	picture = GFX_evt_pagan_reformation
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_character_modifier = expelled_one_holy_order
+			has_character_modifier = expelled_two_holy_order
+			has_character_modifier = expelled_d_knights_templar
+			has_character_modifier = expelled_d_knights_hospitaler
+		}
+		OR = {
+			is_ruler = no
+			independent = no
+		}
+	}
+
+	immediate = {
+		set_character_flag = coversion_keep_debt
+		conversion_check_holy_order_modifiers_effect = yes
+	}
+}
+
+letter_event = {
+	id = holyorder.21
+	desc = EVTDESC_HOLY_ORDER_21
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_HOLY_ORDER_21
+		opinion = {
+			modifier = refused_castle_construction who = FROM years = 10
+		}
+	}
+}
+
+character_event = {
+	id = holyorder.22
+	desc = EVTDESC_HOLY_ORDER_22
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1024
+		opinion = {
+			modifier = accepted_castle_construction who = FROM years = 5
+		}
+		wealth = -300
+		if = {
+			limit = {
+				realm_size = 10
+			}
+			piety = -200
+		}
+		FROMFROMFROM = {
+			show_scope_change = no
+			build_holding = {
+			   type = castle
+			   holder = ROOT
+			}
+		}
+	}
+}
+
+character_event = {
+	id = holyorder.23
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		FROM = {
+			location = {
+				province_event = { id = holyorder.11 days = 3 random = 3 }
+			}
+		}
+	}
+}
+
+# True Christian Knight Trait
+character_event = {
+	id = holyorder.27
+	hide_window = yes	
+	#only_rulers = yes
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		OR = {
+			has_landed_title = d_knights_of_st_john
+			liege = { has_landed_title = d_knights_of_st_john }
+			has_landed_title = d_knights_of_st_john_2
+			liege = { has_landed_title = d_knights_of_st_john_2 }
+		}
+		NOT = { trait = true_christian_knight_hospitaller }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		any_courtier = {
+						limit = {
+							liege = { 
+								OR = {	
+									has_landed_title = d_knights_of_st_john
+									has_landed_title = d_knights_of_st_john_2
+								}
+							}
+							NOR = { 
+								is_female = yes 
+								age = 17
+							}
+						}
+					add_trait = true_christian_knight_hospitaller
+					remove_trait = zealous
+					remove_trait = cynical
+			}
+		add_trait = true_christian_knight_hospitaller
+		remove_trait = zealous
+		remove_trait = cynical
+	}
+}

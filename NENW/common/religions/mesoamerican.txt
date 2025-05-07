@@ -1,0 +1,504 @@
+mesoamerican_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1	# never try to convert
+	ai_fabricate_claims = no
+	
+	color = { 0.6 0.0 0.0 }
+	
+	interface_skin = { pagan_interface }
+	
+	bichihuari = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 196
+		heresy_icon = 125
+		
+		color = { 17 178 178 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_RIOSI
+		
+		god_names = {
+			GOD_RIOSI GOD_THE_SUN_FATHER GOD_IYERUAME GOD_THE_MOON_MOTHER GOD_THE_SAINTS
+		}
+		
+		evil_god_names = {
+			GOD_RIABLO GOD_THE_CHABOCHI
+		}
+		character_modifier = {
+			religion_flex = -0.25
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormonic
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic 
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = fidelista
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = bracero
+	}
+	
+	erensia = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 197
+		heresy_icon = 125
+		
+		color = { 229 212 22 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_LIVROM
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_ITOM_ACHAI
+		
+		god_names = {
+			GOD_ITOM_ACHAI GOD_ITOM_AYE GOD_HESU_KRIHTO GOD_THE_SPIRITS
+		}
+		
+		evil_god_names = {
+			GOD_APOIN THE_DEVIL
+		}
+		character_modifier = {
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormonic
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic 
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = fidelista
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = bracero
+	}
+	
+	muertista = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 198
+		heresy_icon = 199
+		
+		color = { 84 0 28 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_BOOK_OF_DEATH
+		priest_title = PRIEST
+		
+		high_god_name = GOD_SANTISIMA_MUERTE
+		
+		god_names = {
+			GOD_SANTISIMA_MUERTE GOD_THE_QUEEN_OF_SHADOWS GOD_THE_BLACK_LADY
+		}
+		
+		evil_god_names = {
+			GOD_THE_DARKNESS GOD_THE_WITCHES GOD_THE_NAHUALISTAS
+		}
+		character_modifier = {
+			intrigue = 2
+			catholic_opinion = -30
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormonic
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic 
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = fidelista
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = bracero
+	}
+	
+	yeiyari = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 216
+		heresy_icon = 216
+		
+		color = { 127 210 255 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_TATEWARI
+		
+		god_names = {
+			GOD_TATEWARI GOD_TAKUTSI_NAKAWE GOD_TAYAUPA GOD_TAMATSI_KAUYUMARI GOD_TAMATSI_MAXA_KWAXI GOD_TATEI_UTUANAKA GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		character_modifier = {
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormonic
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic 
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = fidelista
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = bracero
+	}
+	
+	ikikunari = {
+		graphical_culture = mesoamericangfx
+		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 217
+		heresy_icon = 217
+		
+		color = { 255 127 0 }
+		
+		crusade_name = CRUSADE
+		use_new_crusade = no
+		crusade_cb = crusade
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_ERENDIRA_IKIKUNARI
+		
+		god_names = {
+			GOD_ERENDIRA_IKIKUNARI GOD_JURIATA GOD_KURHIKUAERI GOD_CUERAUAPERI
+		}
+		
+		evil_god_names = {
+			GOD_KAPINDIKUA GOD_CHURIKUA
+		}
+		character_modifier = {
+			martial = 2
+			religion_flex = 0.25
+		}
+
+		aggression = 0.8
+		allow_rivermovement = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		attacking_same_religion_piety_loss = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		rel_head_defense = yes
+		priests_can_marry = yes
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormonic
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic 
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = fidelista
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = illustrious
+		intermarry = sun_dance
+		intermarry = bushism
+		intermarry = muwahidunna
+		intermarry = bracero
+	}
+}

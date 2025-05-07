@@ -1,0 +1,925 @@
+# SPECIAL TITLES
+
+e_springfield = {
+	color = { 240 96 0 }
+	color2 = { 152 196 21 }
+	capital = 247 #Springfield
+	
+	culture = massachusite
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_springfield = {
+					is_titular = yes
+				}
+			}
+			e_springfield = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_columbia_non = {
+	color={ 0 13 195 }
+	color2={ 220 220 0 }
+	capital = 63 #Washington
+	creation_requires_capital = yes
+	dynasty_title_names = no
+	short_name = yes
+	purple_born_heirs = yes
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_columbia_non = {
+					is_titular = yes
+				}
+			}
+			e_columbia_non = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_canada = {
+	color = { 214 39 24 }
+	color2= { 220 220 0 }
+
+	capital = 1297 #Ottawa
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_canada = {
+					is_titular = yes
+				}
+			}
+			e_canada = {
+				is_titular = no
+			}
+		}
+	}
+	
+	kolorantoi = "Kanadás"
+	westerosi_valyrian = "Kanadás"
+	florintoi = "Kanadás"
+	intianoi = "Kanadás"
+	kanadoi = "Kanadás"
+	minoan = "Kanadás"
+}
+e_texas = {
+	color = { 12 51 127 }
+	color2= { 255 255 20 }
+
+	culture = houstonian
+	capital = 1235 # Travis
+
+	farsi = "Teksas"
+	czexan = "Czexas"
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_texas = {
+					is_titular = yes
+				}
+			}
+			e_texas = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_grand_orient_host = {
+	color = { 240 240 240 }
+	color2 = { 152 196 21 }
+	capital = 118 # Detroit
+	assimilate = no
+	short_name = yes
+	
+	title = "CONDUCTOR_GENERAL"
+	title_female = "CONDUCTOR_GENERAL"
+	foa = "POPE_FOA"
+	allow = {
+		always = no
+	}
+}
+e_port_au_prince = {
+	color = { 110 13 158 }
+	color2 = { 152 196 21 }
+	culture = haitian
+	capital = 1187 # Port-au-Prince
+	#short_name = yes
+	
+	title = "GWO_JIJ"
+	title_female = "GWO_JIJ"
+	title_prefix = PREFIX_PORTAU
+	allow = {
+		always = no
+	}
+}
+e_puerto_rico = {
+	color = { 173 18 12 }
+	color2 = { 152 196 21 }
+	culture = boricua
+	capital = 1183 # San Juan
+	#short_name = yes
+	
+	title = "GRAN_SENOR"
+	title_female = "GRAN_DAMA"
+	title_prefix = PREFIX_RICO
+	allow = {
+		always = no
+	}
+}
+
+d_newark = {
+	color = { 0 45 105 }
+	color2 = { 152 196 21 }
+	
+	capital = 4
+
+	allow = {
+		always = no
+	}
+}
+
+d_chapel_hill = {
+	color = { 123 175 212 }
+	color2 = { 152 196 21 }
+	
+	capital = 141
+
+	allow = {
+		always = no
+	}
+}
+
+e_canaan = {
+	color = { 186 159 93 }
+	color2 = { 255 255 255 }
+
+	capital = 100 # Land-of-Sky
+
+	title = "GIANT_KING"
+	title_female = "GIANT_QUEEN"
+	short_name = yes
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_canaan = {
+					is_titular = yes
+				}
+			}
+			e_canaan = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+d_rephaites = {
+	color = { 16 86 171 }
+	color2 = { 152 196 21 }
+	capital = 98 # Galax
+
+	allow = {
+		always = no
+	}
+}
+d_sasquatch = {
+	color = { 100 100 100 }
+	color2 = { 152 196 21 }
+	capital = 3315 # Mountain City
+
+	allow = {
+		always = no
+	}
+}
+d_fomoria = {
+	color = { 0 108 108 }
+	color2 = { 152 196 21 }
+	capital = 81 # Bluefield
+
+	allow = {
+		always = no
+	}
+}
+e_bloody_bisons = {
+	color={ 204 0 0 }
+	color2={ 220 220 0 }
+	capital = 376
+	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
+	primary = yes
+	short_name = yes
+	
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_bloody_bisons = {
+					is_titular = yes
+				}
+			}
+			e_bloody_bisons = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_laurel_lords = {
+	color={ 143 0 4 }
+	color2={ 220 220 0 }
+	capital = 89
+	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
+	primary = yes
+	short_name = yes
+	
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_laurel_lords = {
+					is_titular = yes
+				}
+			}
+			e_laurel_lords = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_new_england = {
+	color={ 100 175 145 }
+	color2={ 220 220 0 }
+	capital = 69
+	
+	quebecois = "Nouvelle Angleterre" 	
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_new_england = {
+					is_titular = yes
+				}
+			}
+			e_new_england = {
+				is_titular = no
+			}
+		}
+	}
+}
+k_cree_confed  = {
+	color = { 0 127 70 }
+	color2={ 255 255 255 }
+	
+	#tribe = yes
+	
+	title = "GRAND_CHIEF"
+	title_female = "GRAND_CHIEFTESS"
+	foa = "POPE_FOA"
+	innu = "Eeyou Istchee"
+	moose_cree = "Eeyou Istchee"
+	eastern_cree = "Eeyou Istchee"
+	allow = {
+		always = no
+	}
+	
+	assimilate = no
+	short_name = yes
+	capital = 2098 # Matagami
+	
+}
+k_upnord_confederation = {
+	color={ 48 113 224 }
+	color2={ 220 220 20 }
+		
+	capital = 186
+		
+	allow = {
+		always = no
+	}
+	assimilate = no
+	short_name = yes
+}
+e_great_lakes = {
+	color = { 100 120 200 }
+	color2 = { 255 255 255 }
+	capital = 170 #Chicago
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_great_lakes = {
+					is_titular = yes
+				}
+			}
+			e_great_lakes = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_carolina = {
+	color = { 123 50 220 }
+	color2 = { 220 220 220 }
+	
+	capital = 164
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_carolina = {
+					is_titular = yes
+				}
+			}
+			e_carolina = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_magna_virginia = {
+	color = { 255 0 0 }
+	color2 = { 255 255 255 }
+	
+	capital = 75
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_magna_virginia = {
+					is_titular = yes
+				}
+			}
+			e_magna_virginia = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_pennsylvania = {
+	color = { 75 75 150 }
+	color2 = { 255 255 255 }
+	
+	capital = 83
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_pennsylvania = {
+					is_titular = yes
+				}
+			}
+			e_pennsylvania = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_florida = {
+	color={ 255 216 0 }
+	color2={ 220 220 0 }
+	
+	capital = 1046 # Tallahassee
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+
+	florintoi = "Florinta"
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_florida = {
+					is_titular = yes
+				}
+			}
+			e_florida = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_maritimes = {
+	color = { 131 62 168 }
+	color2= { 220 220 0 }
+		
+	mikmaq = "Mi'kma'ki"
+
+	capital = 1165 # Moncton
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_maritimes = {
+					is_titular = yes
+				}
+			}
+			e_maritimes = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_muntland = {
+	color = { 87 218 220 }
+	color2 = { 255 255 255 }
+		
+	allow = { always = no }
+}
+e_acadia = {
+	color = { 75 255 75 }
+	color2= { 220 220 0 }
+
+	capital = 128 # Kennebec 
+	title = "HIGH_KING_TITLE"
+	title_female = "HIGH_KING_TITLE_FEMALE"
+	title_prefix = "HIGH_KING_TITLE_OF"
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_acadia = {
+					is_titular = yes
+				}
+			}
+			e_acadia = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_nys = {
+	color = { 0 45 114 }
+	color2 = { 220 220 220 }
+	
+	capital = 10 # Albany
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_nys = {
+					is_titular = yes
+				}
+			}
+			e_nys = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_usa = {
+	color = { 0 43 96 }
+	color2 = { 220 220 0 }
+	
+	capital = 63 #Washington
+
+	haida="T'áagwaa Tlagáay"
+	
+	title = "PRESIDENT_COLUMB"
+	foa = "PRESIDENT_COLUMB_FOA"
+	title_female = "PRESIDENT_COLUMB"
+	title_prefix = "UNITED_STATES_OF"
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_usa = {
+					is_titular = yes
+				}
+			}
+			e_usa = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_boswash = {
+	color = { 0 38 255 }
+	color2 = { 220 220 220 }
+	
+	capital = 63 #Washington
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_boswash = {
+					is_titular = yes
+				}
+			}
+			e_boswash = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_mississippi = {
+	color={ 0 131 255 }
+	color2={ 220 220 20 }
+
+	capital = 1056 # Cahokia
+
+	lil_egyptian = "Kemet"
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_mississippi = {
+					is_titular = yes
+				}
+			}
+			e_mississippi = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_new_afrika = {
+	color = { 0 133 63 }
+	color2 = { 220 220 220 }
+	
+	capital = 1128
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_new_afrika = {
+					is_titular = yes
+				}
+			}
+			e_new_afrika = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_wabanakia = {
+	color = { 234 235 236 }
+	color2 = { 220 220 220 }
+	
+	capital = 3696
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_wabanakia = {
+					is_titular = yes
+				}
+			}
+			e_wabanakia = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_three_fires = {
+	color = { 234 235 236 }
+	color2 = { 220 220 220 }
+	
+	capital = 187 # Michilimackinac
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_three_fires = {
+					is_titular = yes
+				}
+			}
+			e_three_fires = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_oceti_sakowin = {
+	color = { 234 235 236 }
+	color2 = { 220 220 220 }
+	
+	capital = 384 # Black Hills
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_oceti_sakowin = {
+					is_titular = yes
+				}
+			}
+			e_oceti_sakowin = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_iron_confederacy = {
+	color = { 220 20 60 }
+	color2 = { 255 255 255 }
+	
+	capital = 486 # Fort Peck
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_iron_confederacy = {
+					is_titular = yes
+				}
+			}
+			e_iron_confederacy = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_haudenosaunee = {
+	color = { 89 62 182 }
+	color2 = { 255 255 255 }
+	
+	capital = 21 # Cortland
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_haudenosaunee = {
+					is_titular = yes
+				}
+			}
+			e_haudenosaunee = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_lenape = {
+	color = { 235 34 36 }
+	color2 = { 220 220 220 }
+		
+	capital = 27
+		
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_lenape = {
+					is_titular = yes
+				}
+			}
+			e_lenape = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+d_exovedate_invaders = {
+	color = { 51 20 204 }
+	color2 = { 255 255 255 }
+
+	capital = 1217 # Montreal
+	
+	landless = yes
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				d_exovedate_invaders = {
+					is_titular = yes
+				}
+			}
+			d_exovedate_invaders = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_colorado = {
+	color = { 191 10 48 }
+	color2= { 255 215 0 }		
+
+	capital = 389 # Denver
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_colorado = {
+					is_titular = yes
+				}
+			}
+			e_colorado = {
+				is_titular = no
+			}
+		}
+	}
+	
+	kolorantoi = "Koloránto"
+	westerosi_valyrian = "Koloránto"
+	florintoi = "Koloránto"
+	intianoi = "Koloránto"
+	kanadoi = "Koloránto"
+	minoan = "Koloránto"
+}
+e_prairieland = {
+	color = { 0 14 59 }
+	color2= { 255 215 0 }		
+
+	capital = 2093 #Edmonton
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_prairieland = {
+					is_titular = yes
+				}
+			}
+			e_prairieland = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_aztlan = {
+	color = { 25 102 51 }
+	color2= { 255 215 0 }		
+
+	capital = 2019 # c_los_angeles
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_aztlan = {
+					is_titular = yes
+				}
+			}
+			e_aztlan = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_millenarian_host = { # Joshua's empire
+	color = { 0 153 204 }
+	color2= { 255 255 255 }
+
+	capital = 449 # Stillwater
+
+	title = "MESSIAH"
+	title_female = "MESSIAH"
+	foa = "POPE_FOA"
+	short_name = yes
+
+	assimilate = no
+	caliphate = yes
+
+	religion = millenarian
+	controls_religion = millenarian
+
+	allow = { always = no }
+}
+
+e_redcoats = { 
+	color={ 150 50 50 }
+	color2={ 255 255 255 }
+
+	capital = 69 # Boston
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_redcoats = {
+					is_titular = yes
+				}
+			}
+			e_redcoats = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_lone_star_rep = {
+	color = {  0 7 77 }
+	color2= { 255 255 20 }
+
+	culture = houstonian
+	capital = 1235 # Travis
+	short_name = yes
+	title = "HIGH_CONSUL_TITLE"
+	title_female = "HIGH_CONSUL_TITLE"
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_lone_star_rep = {
+					is_titular = yes
+				}
+			}
+			e_lone_star_rep = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_atlantis = {
+	color={ 0 128 128 }
+	color2={ 255 255 255 }
+
+	culture = shastan
+	capital = 2060 # Mount Shasta
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_atlantis = {
+					is_titular = yes
+				}
+			}
+			e_atlantis = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_zion = { # ultra mormon empire
+	color = { 116 170 252 }
+	color2= { 255 255 255 }
+	
+	capital = 430 # Salt Lake
+
+	culture = utahn
+	creation_requires_capital = yes
+	allow = {
+		piety = 1000
+		realm_size = 100
+		num_of_holy_sites = 3
+		religion_group = mormonic
+		conditional_tooltip = {
+			trigger = {
+				e_zion = {
+					is_titular = yes
+				}
+			}
+			e_zion = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_jefferson_history = {
+	color = { 0 163 178 }
+	color2 = { 220 220 220 }
+	
+	capital = 2059 # c_redding
+	short_name = yes
+	
+	allow = {
+		always = no
+	}
+}
+
+# NEOW LEFTOVERS
+
+e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
+	color={ 245 240 10 }
+	color2={ 220 220 0 }
+	
+	capital = 3446  # Sao Luis
+	
+	assimilate = no # Duchies cannot de jure drift IN or OUT of this title
+	
+	title_female = "WESTERN_GOVERNOR_FEMALE"
+	title = "WESTERN_GOVERNOR_MALE"
+	foa = "WESTERN_GOVERNOR_TITLE_FOA"
+	short_name = yes
+	#location_ruler_title = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Cannot be vassalized
+	independent = yes
+
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+	
+	can_be_claimed = no
+	can_be_usurped = no
+	
+	extra_ai_eval_troops = 7500
+}

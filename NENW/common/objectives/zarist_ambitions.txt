@@ -1,0 +1,341 @@
+obj_zarist_emulate_peter = {
+	type = character
+	can_cancel = no
+	potential = {
+		OR = {
+			religion = zarist
+			religion = petrist
+		}
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = diligent
+			trait = cruel
+			trait = honest
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_peter
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_zarist_emulate_nicholas = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = zarist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = content
+			trait = humble
+			trait = temperate
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_nicholas
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_zarist_emulate_ivan = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = zarist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = wroth
+			trait = cruel
+			trait = paranoid
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_ivan
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_zarist_emulate_catherine = {
+	type = character
+	can_cancel = no
+	potential = {
+		OR = {
+			religion = zarist
+			religion = katerinist
+		}
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = ambitious
+			trait = lustful
+			trait = deceitful
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_catherine
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_zarist_emulate_alexander = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = zarist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = just
+			trait = kind
+			trait = stubborn
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_alexander
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}
+
+obj_zarist_emulate_alexis = {
+	type = character
+	can_cancel = no
+	potential = {
+		religion = zarist
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { zarist_emulated_trigger = yes }
+		NAND = {
+			trait = gregarious
+			trait = trusting
+			trait = zealous
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.2
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.5
+			is_unimportant_trigger = yes
+		}
+	}
+	creation_effect = {
+		character_event = { id = zarist.100 }
+	}
+	success = {
+		custom_tooltip = {
+			text = zarist_emulate_tt
+			has_character_modifier = zarist_emulated_alexis
+		}
+	}
+	abort_effect = {
+		hidden_tooltip = {
+			emulation_ambition_clear_effect = yes
+		}
+	}
+	effect = {
+		tooltip = {
+			piety = 50
+			prestige = 50
+		}
+		emulation_ambition_clear_effect = yes
+	}
+}

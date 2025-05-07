@@ -1,0 +1,312 @@
+#Traits specific to the Indian region (excludes Bhutanese traits)
+
+
+
+bhagavanist_gandhi = {#ganesha
+	opposites = {
+	    #bhagavanist_gandhi
+	    bhagavanist_shivaji
+		bhagavanist_akbar
+		bhagavanist_jagadisha
+		bhagavanist_rajaraja
+	}
+	same_opinion = 5
+	opposite_opinion = -5
+	vassal_opinion = 5
+	learning = 1
+	potential = {
+		religion = parabrahmanist
+	}
+	religious_branch = parabrahmanist
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+bhagavanist_shivaji = {#shiva
+	opposites = {
+	    bhagavanist_gandhi
+	    #bhagavanist_shivaji
+		bhagavanist_akbar
+		bhagavanist_jagadisha
+		bhagavanist_rajaraja
+	}
+	same_opinion = 5
+	opposite_opinion = -5
+	martial = 1
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	potential = {
+		religion = parabrahmanist
+	}
+	religious_branch = parabrahmanist
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+bhagavanist_akbar = {#surya
+	opposites = {
+	    bhagavanist_gandhi
+	    bhagavanist_shivaji
+		#bhagavanist_akbar
+		bhagavanist_jagadisha
+		bhagavanist_rajaraja
+	}
+	same_opinion = 5
+	opposite_opinion = -5
+	diplomacy = 1
+    tolerates_muslim = yes
+	tolerates_christian = yes
+	tolerates_jewish_group = yes
+	tolerates_pagan_group = yes
+	tolerates_buddhist_group = yes
+	tolerates_syncratic_group = yes
+	potential = {
+		religion = parabrahmanist
+	}
+	religious_branch = parabrahmanist
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+bhagavanist_jagadisha = {#vishnu
+	opposites = {
+	    bhagavanist_gandhi
+	    bhagavanist_shivaji
+		bhagavanist_akbar
+		#bhagavanist_jagadisha
+		bhagavanist_rajaraja
+	}
+	same_opinion = 5
+	opposite_opinion = -5
+	stewardship = 1
+	potential = {
+		religion = parabrahmanist
+	}
+	religious_branch = parabrahmanist
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+bhagavanist_rajaraja = {#shakti
+	opposites = {
+	    bhagavanist_gandhi
+	    bhagavanist_shivaji
+		bhagavanist_akbar
+		bhagavanist_jagadisha
+		#bhagavanist_rajaraja
+	}
+	same_opinion = 5
+	opposite_opinion = -5
+	intrigue = 1
+	combat_rating = 10
+	potential = {
+		religion = parabrahmanist
+	}
+	religious_branch = parabrahmanist
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+crowned_indian_feudal = {
+	potential = {
+		government = indian_feudal
+	}
+	monthly_character_prestige = 0.05
+	vassal_opinion = 15
+	build_cost_modifier	= -0.05
+	local_build_time_modifier = -0.05
+	retinue_maintenence_cost = -0.05
+	random = no
+	ruler_designer_cost = 0
+}
+cricketer = {
+	same_opinion = 10
+	monthly_character_prestige = 0.2
+	ruler_designer_cost = 0
+}
+successor = {
+	martial = 2
+    same_opinion = -80
+	ai_ambition = 99
+	ai_rationality = -99
+	ai_honor = -99
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+	}
+	random = no
+	customizer = no
+}
+khalsa_baptism = { #
+	
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.1
+	martial = 1
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+	}
+	sikh_opinion = 5
+
+	religious = yes
+	customizer = no
+	random = no
+}
+vaishna_ganda_hindu = {#bala-krishna
+	tolerates_muslim = yes
+	tolerates_christian = yes
+	tolerates_jewish_group = yes
+	tolerates_pagan_group = yes
+	tolerates_buddhist_group = yes
+	tolerates_syncratic_group = yes
+	diplomacy = 1
+	religious = yes
+	same_opinion = 5
+	opposite_opinion = -5
+	vassal_opinion = 5
+	opposites = {
+	    #novelist_hindu
+		brahamo_hindu
+		ramakrishna_hindu
+		shaktist_hindu
+		smartist_hindu
+	}
+	religious_branch = neovedantic
+	random = no
+	ruler_designer_cost = 0
+	potential = { 
+		religion = neovedantic 
+	}
+}
+brahamo_hindu = {#gopala-krishna
+	stewardship = 1
+	build_cost_modifier	= -0.1
+	religious = yes
+	opposite_opinion = -5
+	opposites = {
+	    #novelist_hindu
+		vaishna_ganda_hindu
+		ramakrishna_hindu
+		shaktist_hindu
+		smartist_hindu
+	}
+	religious_branch = neovedantic
+	potential = { 
+		religion = neovedantic 
+	}
+	random = no
+	ruler_designer_cost = 0
+}
+ramakrishna_hindu = {#vasudeva-krishna
+	religious = yes
+	opposite_opinion = -5
+	martial = 1
+	combat_rating = 5
+	opposites = {
+	    #novelist_hindu
+		vaishna_ganda_hindu
+		brahamo_hindu
+		shaktist_hindu
+		smartist_hindu
+	}
+	religious_branch = neovedantic
+	potential = { 
+		religion = neovedantic 
+	}
+	random = no
+	ruler_designer_cost = 0
+}
+
+shaktist_hindu = {#radha-krishna
+	opposites = {
+	    #novelist_hindu
+		vaishna_ganda_hindu
+		brahamo_hindu
+		ramakrishna_hindu
+		smartist_hindu
+	}
+
+	opposite_opinion = -5
+	intrigue = 1
+	fertility = 0.2
+
+	potential = { 
+		religion = neovedantic 
+	}
+	
+	religious_branch = neovedantic
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+smartist_hindu = {#bhagavan-Krishna
+	opposites = {
+	    #novelist_hindu
+		vaishna_ganda_hindu
+		brahamo_hindu
+		ramakrishna_hindu
+		shaktist_hindu
+	}
+
+	opposite_opinion = -5
+	learning = 1
+	monthly_character_piety = 0.5
+
+	potential = { 
+		religion = neovedantic 
+	}
+	
+	religious_branch = neovedantic
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+sikh_tolerations = {
+	hidden = yes
+	tolerates_christian = yes
+	tolerates_jewish_group = yes
+	tolerates_muslim = yes
+	tolerates_zoroastrian_group = yes
+	tolerates_indian_group = yes
+	tolerates_buddhist_group = yes
+
+	potential = {
+		religion = sikh
+	}
+	
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+neo_zorvanite_tolerations = {
+	hidden = yes
+	tolerates_christian = yes
+	tolerates_jewish_group = yes
+	tolerates_muslim = yes
+	tolerates_buddhist_group = yes
+
+	potential = { 
+		religion = neo_zorvanite 
+	}
+	
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+osvicenism_tolerations = {
+	hidden = yes
+	tolerates_buddhist_group = yes
+
+	potential = { 
+		religion = osvicenism 
+	}
+	
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}

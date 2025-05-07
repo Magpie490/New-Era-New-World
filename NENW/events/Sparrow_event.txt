@@ -1,0 +1,39 @@
+namespace = SP
+
+character_event = {
+	id = SP.1
+	desc = EVTDESC_SP_1
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		mother_even_if_dead = { num_of_children = 3 }
+		religion = maoist
+		age <= 3
+	}
+	
+	immediate = {
+		add_trait = sparrow
+	}
+	
+}
+
+character_event = {
+	id = SP.2
+	desc = EVTDESC_SP_2
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		father_even_if_dead = { trait = sayyid }
+	}
+	
+	immediate = {
+		add_trait = sayyid
+	}
+	
+}

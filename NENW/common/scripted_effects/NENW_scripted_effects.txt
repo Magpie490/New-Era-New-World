@@ -1,0 +1,62 @@
+play_as_abolitionist_invasion_leader_effect = {
+	if = {
+		limit = {
+			event_target:abolitionist_invasion_leader = {
+				ai = yes
+				is_playable = yes
+			}
+		}
+		custom_tooltip = {
+			text = player_character_invasion_leader_TT
+			set_player_character = event_target:abolitionist_invasion_leader
+		}
+	}
+}
+aquarian_switch_effect = {
+	if = {
+		limit = { should_switch_to_aquarian_trigger = yes }
+		#persistent_event_target:aquarian_title = {
+		#	grant_title = PREVPREV
+		#	save_event_target_as = event_target:title_to_destroy
+		#}
+		persistent_event_target:non_aquarian_title = {
+			copy_title_history = PREV
+			destroy_landed_title = yes
+		}
+		if = {
+			limit = { has_title_flag = aquarian_shortname }
+			set_short_name = yes
+		}
+		else = {
+			set_short_name = no
+		}
+		set_name = persistent_event_target:aquarian_title
+		adjective = "aquarian_title_adjective"
+		set_coa = persistent_event_target:aquarian_title
+		copy_title_history = persistent_event_target:aquarian_title
+		set_title_flag = aquarian_title
+	}
+	else_if = {
+		limit = { should_switch_to_non_aquarian_trigger = yes }
+		#persistent_event_target:non_aquarian_title = {
+		#	grant_title = PREVPREV
+		#	save_event_target_as = event_target:title_to_destroy
+		#}
+		persistent_event_target:aquarian_title = {
+			copy_title_history = PREV
+			destroy_landed_title = yes
+		}
+		if = {
+			limit = { has_title_flag = non_aquarian_shortname }
+			set_short_name = yes
+		}
+		else = {
+			set_short_name = no
+		}
+		set_name = ""
+		adjective = ""
+		reset_coa = THIS
+		copy_title_history = persistent_event_target:non_aquarian_title
+		clr_title_flag = aquarian_title
+	}
+}

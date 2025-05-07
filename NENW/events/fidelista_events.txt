@@ -1,0 +1,184 @@
+namespace = fidelista
+
+character_event = {
+	id = fidelista.300
+	is_triggered_only = yes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	title = EVTNAME_fidelista_300
+	desc = EVTDESC_fidelista_300
+
+	hide_from = yes
+
+	immediate = {
+		set_character_flag = picking_fidelista_cult
+	}
+	
+	
+	option = {#Olga
+		name = EVTOPTA_fidelista_300
+		add_trait = cult_che
+	}
+	
+	option = {#Ivan
+		name = EVTOPTB_fidelista_300
+		add_trait = cult_marti
+	}
+	
+	option = {#Load others
+		name = EVTOPTC_fidelista_300
+		add_trait = cult_cienfuegos
+	}
+	
+	after = {
+		clr_character_flag = picking_fidelista_cult
+	}
+}
+
+letter_event = {
+	id = fidelista.302
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = fidelista302Desc
+	hide_window = yes
+	trigger = {
+		religion = fidelista
+		is_adult = yes
+		is_incapable = no
+		prisoner = no
+		has_regent = no
+		NOR = {
+			trait = cult_che
+			trait = cult_marti
+			trait = cult_cienfuegos
+		}
+	}
+	option = {
+		name = EVTOPTA_israelstuff8A
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = cult_che
+						}
+						mother_even_if_dead = {
+							trait = cult_che
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_che
+								}
+								mother_even_if_dead = {
+									trait = cult_che
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_che
+								}
+								mother_even_if_dead = {
+									trait = cult_che
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_martial_score = yes
+				add_trait = cult_che
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = cult_marti
+						}
+						mother_even_if_dead = {
+							trait = cult_marti
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_marti
+								}
+								mother_even_if_dead = {
+									trait = cult_marti
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_marti
+								}
+								mother_even_if_dead = {
+									trait = cult_marti
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_stewardship_score = yes
+				add_trait = cult_marti
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					OR = {
+						father_even_if_dead = {
+							trait = cult_cienfuegos
+						}
+						mother_even_if_dead = {
+							trait = cult_cienfuegos
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						father_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_cienfuegos
+								}
+								mother_even_if_dead = {
+									trait = cult_cienfuegos
+								}
+							}
+						}
+						mother_even_if_dead = {
+							OR = {
+								father_even_if_dead = {
+									trait = cult_cienfuegos
+								}
+								mother_even_if_dead = {
+									trait = cult_cienfuegos
+								}
+							}
+						}
+					}
+				}
+				job_event_mtth_modifier_inverted_learning_score = yes
+				add_trait = cult_cienfuegos
+			}
+		}
+	}
+	after = {
+		clr_character_flag = picking_fidelista_cult
+	}
+}

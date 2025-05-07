@@ -1,0 +1,28 @@
+# -*- ck2.event_modifiers -*-
+
+
+# For available modifier icons, see: common/event_modifiers/REFERENCE_emf_modifier_icons.txt
+
+# Debug: Set on a faction leader to make all qualifying vassals support their revolt
+emf_faction_rebel_antichrist = { icon = 42 }
+
+## Timers ##
+
+emf_victory_timer = { # Applied whenever a war is won
+	is_visible = { emf_hidden = yes }
+	icon = 135
+}
+emf_holy_victory_timer = { # Applied whenever a religious war is won
+	is_visible = { emf_hidden = yes }
+	icon = 135
+}
+emf_obj_win_war_success = {
+	martial = 1
+	monthly_character_prestige = 0.4
+	icon = 1
+}
+
+emf_objective_timer = { # Times-out AI objectives
+	is_visible = { emf_hidden = yes }
+	icon = 1
+}
