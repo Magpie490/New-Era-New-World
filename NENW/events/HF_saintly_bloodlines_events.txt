@@ -604,9 +604,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_HF_43400
 		trigger = {
-			OR = {
-		religion_group = christian
-		religion = jugoslavist
+			religion_group = christian
 		}
 			is_in_society = no
 			is_heretic = no
@@ -861,16 +859,6 @@ character_event = {
 			join_society = monastic_order_exovedate
 			change_society_currency = {
 				society = monastic_order_exovedate
-				value = 350
-			}
-		}
-		else_if = {
-			limit = {
-				religion = jugoslavist
-			}
-			join_society = monastic_order_jugoslavist
-			change_society_currency = {
-				society = monastic_order_jugoslavist
 				value = 350
 			}
 		}

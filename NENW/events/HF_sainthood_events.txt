@@ -15,10 +15,7 @@ character_event = {
 	trigger = {
 		death_in_china_trigger = no
 		death_no_trace_trigger = no
-		OR = {
-			religion_group = christian
-			religion = jugoslavist
-		}
+		religion_group = christian
 		NOR = {
 			trait = excommunicated
 			trait = drunkard
@@ -102,10 +99,7 @@ character_event = {
         }
         if = {
             limit = {
-                OR = {
-					religion_group = christian
-					religion = jugoslavist
-				}
+                religion_group = christian
             }
             random_realm_character = {
                 limit = {
@@ -612,10 +606,7 @@ character_event = {
     desc = {
         trigger = {
             event_target:saint_person = {
-                OR = {
-					religion_group = christian
-					religion = jugoslavist
-				}
+                religion_group = christian
             }
         }
         text = EVTDESC_HF_40020_A
@@ -641,10 +632,7 @@ character_event = {
 
         if = {
             limit = {
-                OR = {
-					religion_group = christian
-					religion = jugoslavist
-				}
+                religion_group = christian
             }
             custom_tooltip = {
                 text = pope_cannonize_choice_TT
@@ -664,10 +652,7 @@ character_event = {
             if = {
                 limit = {
                     event_target:saint_person = {
-                        OR = {
-							religion_group = christian
-							religion = jugoslavist
-						}
+                        religion_group = christian
                     }
                 }
                 random_list = {
@@ -943,10 +928,7 @@ character_event = {
             event_target:saint_person = {
                 if = {
                     limit = {
-                        OR = {
-							religion_group = christian
-							religion = jugoslavist
-						}
+                        religion_group = christian
                     }
                     remove_trait = beatified
                     add_trait = saint   
@@ -972,10 +954,7 @@ character_event = {
             if = {
                 limit = {
                     event_target:saint_person = {
-                        OR = {
-							religion_group = christian
-							religion = jugoslavist
-						}
+                        religion_group = christian
                     }
                 }
                 #Confirm that a burial site exists, for pilgrimage
@@ -1216,10 +1195,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-                                    OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                    religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -1256,10 +1232,7 @@ character_event = {
                         }
                         OR = {
                             event_target:saint_person = {
-                                OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                religion_group = christian
                             }
                             event_target:saint_person = {
                                 religion = hellenic_pagan_reformed
@@ -1306,10 +1279,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-									OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+									religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -1476,10 +1446,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-                                    OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                    religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -1660,10 +1627,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-                                    OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                    religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -1845,10 +1809,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-                                    OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                    religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -1997,10 +1958,7 @@ character_event = {
                         if = {
                             limit = {
                                 event_target:saint_person = {
-                                    OR = {
-										religion_group = christian
-										religion = jugoslavist
-									}
+                                    religion_group = christian
                                 }
                             }
                             new_bloodline = {
@@ -2072,10 +2030,7 @@ narrative_event = {
     desc = {
         trigger = {
             event_target:saint_person = {
-                OR = {
-						religion_group = christian
-						religion = jugoslavist
-					}
+                religion_group = christian
             }
         }
         text = EVTDESC_HF_40025
@@ -2101,10 +2056,7 @@ narrative_event = {
         if = {
             limit = {
                 event_target:saint_person = {
-                    OR = {
-						religion_group = christian
-						religion = jugoslavist
-					}
+                    religion_group = christian
                 }
             }
             sound_effect = saint_proclaimed
@@ -2128,10 +2080,7 @@ narrative_event = {
             piety = 100
             if = {
                 limit = {
-					OR = {
-						religion_group = christian
-						religion = jugoslavist
-					}
+					religion_group = christian
                 }
                 custom_tooltip = { text = TT_CANONIZATION_FAMILY }
             }
