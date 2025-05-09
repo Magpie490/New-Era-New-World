@@ -15,10 +15,7 @@ character_event = {
     is_triggered_only = yes
     has_dlc = "Holy Fury"
     trigger = {
-		OR = {
 		religion_group = christian
-		religion = jugoslavist
-		}
     	ROOT = {
 	    	OR = {
 		    	any_demesne_province  = {
@@ -151,10 +148,7 @@ character_event = {
     has_dlc = "Holy Fury"
 
     trigger = {
-		OR = {
-			religion_group = christian
-			religion = jugoslavist
-		}
+		religion_group = christian
     	OR = {
 	    	any_demesne_province = {
 	    		has_province_modifier = tomb_of_a_saint
@@ -425,10 +419,7 @@ character_event = {
     has_dlc = "Holy Fury"
 
     trigger = {
-		OR = {
-			religion_group = christian
-			religion = jugoslavist
-		}
+		religion_group = christian
     	trait = cynical
     	OR = {
     		trait = greedy
@@ -664,12 +655,9 @@ character_event = {
     is_triggered_only = yes
     has_dlc = "Holy Fury"
     trigger = {
-    	NOT = {
-    		OR = {
-		religion_group = christian
-		religion = jugoslavist
-		}
-    		has_character_flag = recent_potential_tomb_pillaging
+    	NOR = {
+			religion_group = christian
+			has_character_flag = recent_potential_tomb_pillaging
     	}
     	FROM = {
             location = {
