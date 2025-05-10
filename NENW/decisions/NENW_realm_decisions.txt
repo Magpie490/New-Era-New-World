@@ -988,6 +988,40 @@ decisions = {
 		}
 	}
 	
+	reform_heliarchy = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			NOT = {
+				has_global_flag = reformedzenithempire
+			}
+			has_landed_title = e_zenith
+			war = no
+			in_command = no
+			is_pilgrim = no
+			is_incapable = no
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			wealth = 2000
+			realm_stewardship = 35
+			completely_controls = k_westslope
+			completely_controls = k_frontrange
+		}
+		effect = {
+			set_global_flag = reformedzenithempire
+			wealth = -2000
+			prestige = 1500
+			e_zenith = {
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = revoke_title_law_2
+			}
+			narrative_event = { id = cleanup.8258 }
+		}
+	}
 	form_pennsylvania = {
 		is_high_prio = yes
 		only_playable = yes
