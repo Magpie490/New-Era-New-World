@@ -2902,113 +2902,6 @@ decisions = {
 			factor = 0.5
 		}
 	}
-	choose_muwa_school = {
-		only_playable = yes
-		ai_check_interval = 12
-		min_age = 16
-		potential = {
-			religion = muwahidunna
-			NOT = {
-				has_character_flag = picked_muwa_school
-			}
-			is_adult = yes
-			is_incapable = no
-			prisoner = no
-			has_regent = no
-		}
-		allow = {
-			piety = 50
-		}
-		effect = {
-			set_character_flag = picked_muwa_school
-			hidden_tooltip = { character_event = { id = muwa.1 } }
-			piety = -50			
-		}
-		ai_will_do = {
-			factor = 0.5
-		}
-	}	
-	# jacobinist_sacrifice_peasant = {
-		# only_playable = yes
-		
-		# is_high_prio = yes
-		# ai_check_interval = 6
-	
-		# potential = {
-			# is_playable = yes
-			# religion = jacobinist
-			# prisoner = no
-			# has_regent = no
-			# NOT = { wealth = 300 }
-		# }
-		
-		# allow = {
-			# religion = jacobinist
-			# prestige = 150
-			# custom_tooltip = {
-				# text = JACOBINIST_HAVENT_SACRIFICED
-				# ruled_years = 4
-				# NOT = { has_character_modifier = madame_sacrifice_timer_2 }
-			# }
-		# }
-		
-		# effect = {
-			# prestige = -150
-			# #character_event = { id = yugoslav.8 tooltip = JACOBINIST_GONNA_SACRIFICE_EM}
-			# custom_tooltip = {
-				# text = JACOBINIST_GONNA_SACRIFICE_EM
-			# }
-			# scaled_wealth = { value = 0.75 min = 10 max = 500 }
-			# jacobinist_madame_timer_effect = yes
-		# }
-		
-		# revoke_allowed = {
-			# always = no
-		# }
-		
-		# ai_will_do = {
-			# factor = 1
-			# modifier = {
-				# factor = 0.3 #slow down a bit
-			# }
-			# modifier = {
-				# factor = 0
-				# NOT = {
-					# scaled_wealth = { value = 0.25 min = 10 max = 500 }
-				# }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# war = yes
-			# }
-			# modifier = {
-				# factor = 0.5
-				# any_courtier = {
-					# prisoner = yes
-					# host = { character = ROOT }
-					# NOT = { diplomatic_immunity = yes }
-				# }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# any_courtier = {
-					# count = 2
-					# prisoner = yes
-					# host = { character = ROOT }
-					# NOT = { diplomatic_immunity = yes }
-				# }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# any_courtier = {
-					# count = 3
-					# prisoner = yes
-					# host = { character = ROOT }
-					# NOT = { diplomatic_immunity = yes }
-				# }
-			# }
-		# }
-	# }
 	discern_your_future = {
 		only_playable = yes
 		ai_check_interval = 6
@@ -5378,7 +5271,6 @@ targeted_decisions = {
 				religion = alawite
 				religion = mandaeanism
 				religion = islamity
-				religion = muwahidunna
 				religion = bahai
 			}
 			prisoner = no

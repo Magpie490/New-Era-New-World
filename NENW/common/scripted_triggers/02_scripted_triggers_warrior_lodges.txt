@@ -375,10 +375,6 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_ironist
 		}
 		trigger_else_if = {
-			limit = { is_muwahidunna_religion_trigger = yes }
-			society_member_of = warrior_lodge_muwa
-		}
-		trigger_else_if = {
 			limit = { religion_openly_baltic_or_reformed_trigger = yes }
 			society_member_of = warrior_lodge_baltic
 		}
@@ -721,10 +717,6 @@ has_religion_matching_available_warrior_lodge_trigger = {
 	trigger_else_if = {
 		limit = { is_ironist_religion_trigger = yes }
 		warrior_lodge_ironist = { society_has_members = yes }
-	}
-	trigger_else_if = {
-		limit = { is_muwahidunna_religion_trigger = yes }
-		warrior_lodge_muwa = { society_has_members = yes }
 	}
 	trigger_else_if = {
 		limit = { religion_openly_baltic_or_reformed_trigger = yes }
@@ -1406,10 +1398,6 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_ironist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { is_muwahidunna_religion_trigger = yes }
-		NOT = { warrior_lodge_muwa = { society_has_members = yes } }
-	}
-	trigger_else_if = {
 		limit = { religion_openly_baltic_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_baltic = { society_has_members = yes } }
 	}
@@ -1802,7 +1790,6 @@ has_religion_matching_any_warrior_lodge_trigger = {
 		is_esoteric_religion_trigger = yes
 		is_khanist_religion_trigger = yes
 		is_ironist_religion_trigger = yes
-		is_muwahidunna_religion_trigger = yes
 		religion_openly_baltic_or_reformed_trigger = yes
 		religion_openly_finnish_or_reformed_trigger = yes
 		religion_openly_folklorist_or_reformed_trigger = yes
@@ -1874,10 +1861,6 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 	trigger_else_if = {
 		limit = { is_ironist_religion_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_ironist }
-	}
-	trigger_else_if = {
-		limit = { is_muwahidunna_religion_trigger = yes }
-		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_muwa }
 	}
 	trigger_else_if = {
 		limit = { religion_openly_baltic_or_reformed_trigger = yes }
@@ -2260,19 +2243,6 @@ special_join_warrior_lodge_trigger = {
 						any_vassal = { is_ironist_religion_trigger = yes }
 						any_liege = { is_ironist_religion_trigger = yes }
 						any_neighbor_independent_ruler = { is_ironist_religion_trigger = yes }
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { FROM = { is_society = warrior_lodge_muwa } }
-			custom_tooltip = {
-				text = has_liege_vassal_or_neighbor_of_muwa_religion_tt
-				hidden_trigger = {
-					OR = {
-						any_vassal = { is_muwahidunna_religion_trigger = yes }
-						any_liege = { is_muwahidunna_religion_trigger = yes }
-						any_neighbor_independent_ruler = { is_muwahidunna_religion_trigger = yes }
 					}
 				}
 			}

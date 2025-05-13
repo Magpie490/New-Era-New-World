@@ -3393,72 +3393,6 @@ santiago_el_mayor = {
 	religious_branch = sevillian
 	random = no
 }
-#####
-muwa_christian = {
-	stewardship = 2
-	christian_opinion = 10
-	opposite_opinion = -5
-	religious = yes
-	tolerates_christian = yes		# Tolerates and is tolerated by Christians
-	opposites = {
-		muwa_sunni
-		muwa_shiite
-		muwa_kneeler
-	}
-	religious_branch = muwahidunna
-}
-muwa_sunni = {
-	martial = 2
-	combat_rating = 10
-	christian_opinion = -5
-	shiite_opinion = -5
-	opposite_opinion = -5
-	religious = yes
-	tolerates_muslim = yes		# Tolerates and is tolerated by Muslims
-	potential = {
-		religion = muwahidunna
-	}
-	opposites = {
-		muwa_christian
-		muwa_kneeler
-		muwa_shiite
-	}
-	religious_branch = muwahidunna
-}
-muwa_shiite = {
-	
-	command_modifier = {
-	    morale_defence = 0.1
-	}	
-	intrigue = 2
-	opposite_opinion = -5
-	religious = yes
-	tolerates_muslim = yes		# Tolerates and is tolerated by Muslims
-	potential = {
-		religion = muwahidunna
-	}
-	opposites = {
-		muwa_sunni
-		muwa_christian
-		muwa_kneeler
-	}
-	religious_branch = muwahidunna
-}
-muwa_kneeler = {
-	learning = 2
-	monthly_character_piety = 0.5
-	opposite_opinion = -5
-	religious = yes
-	potential = {
-		religion = muwahidunna
-	}
-	opposites = {
-		muwa_sunni
-		muwa_shiite
-		muwa_christian
-	}
-	religious_branch = muwahidunna
-}
 legendary = {
 	customizer = no
 	random = no
@@ -4901,7 +4835,6 @@ bush_new_way = {
 	diplomacy = 1
 	stewardship = 1
 	christian_opinion = 10
-	muwahidunna_opinion = 10
 	religious_branch = bushism
 	religious = yes # Lost immediately on religion change
 	
