@@ -67,9 +67,6 @@ deciding_upon_saint_effect = {
                         religion = transatlantic
                     }
                     event_target:saint_person = {
-                        religion = jugoslavist
-                    }
-                    event_target:saint_person = {
                         religion = chaldean
                     }
                     event_target:saint_person = {
@@ -215,9 +212,6 @@ deciding_upon_saint_effect = {
                 }
 				event_target:saint_person = {
                     religion = oldbeliever
-                }
-                event_target:saint_person = {
-                    religion = jugoslavist
                 }
                 event_target:saint_person = {
                     religion = chaldean
@@ -440,12 +434,6 @@ deciding_upon_saint_effect = {
                     }
                 }
                 AND = {
-                    religion = jugoslavist
-                    NOT = {
-                        has_global_flag = jugoslavist_saint
-                    }
-                }
-                AND = {
                     religion = chaldean
                     NOT = {
                         has_global_flag = chaldean_saint
@@ -466,7 +454,6 @@ deciding_upon_saint_effect = {
             oldbeliever = { set_global_flag = oldbeliever_saint }
             sevillian = { set_global_flag = sevillian_saint }
             transatlantic = { set_global_flag = transatlantic_saint }
-            jugoslavist = { set_global_flag = jugoslavist_saint }
             chaldean = { set_global_flag = chaldean_saint }
         }
     }
