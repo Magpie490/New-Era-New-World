@@ -8842,34 +8842,6 @@ faction_independence = {
 		
 		ATE_OW_factionalism_ROOT_score = yes
 		
-		modifier = {#Balkan cultures twice as likely to want independence from wrong culture lieges
-			factor = 2
-			FROM = {
-				OR = {
-					NAND = {
-						religion = jugoslavist
-						liege = {
-							religion = jugoslavist
-						}
-					}
-					NAND = {
-						religion = titoist
-						liege = {
-							religion = titoist
-						}
-					}
-				}
-				OR = {
-					culture = croatian
-					culture = serbian
-					culture = montenegrin
-					culture = bulgarian
-					culture = bosnian
-					culture = slovenian
-				}
-				NOT = { culture = liege }
-			}
-		}
 		modifier = {
 			factor = 2.0
 			FROM = { government = kratocratic_government }
@@ -9866,25 +9838,6 @@ faction_independence = {
 		
 		ATE_OW_factionalism_ROOT_score = yes
 		
-		modifier = {#Balkan cultures twice as likely to want independence from wrong culture lieges
-			factor = 2
-			OR = {
-			NAND = {
-				religion = jugoslavist
-				liege = {
-					religion = jugoslavist
-				}
-			}
-			NAND = {
-				religion = titoist
-				liege = {
-					religion = titoist
-				}
-			}
-			}
-			culture_group = south_slavic
-			NOT = { culture = liege }
-		}
 		modifier = {#will not tolerate a sinful liege
 			factor = 2
 			
