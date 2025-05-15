@@ -834,7 +834,7 @@ e_mexico = {
 		
 		capital = 3064 #c_pachuca
 		
-		d_tula = {
+		d_tula = { # titular archbishopric for the HME
 			color = { 243 164 141 }
 			color2 = { 255 255 255 }
 			
@@ -846,8 +846,26 @@ e_mexico = {
 			
 			}
 		}	
+		
+		d_tulancingo = { #titular duchy for the HME
+			color = { 184 126 109 }
+			color2 = { 255 255 255 }
 			
-		d_hidalgo = { #Pachuca
+		
+			capital = 2192 #c_tulancingo
+			
+		}	
+		d_pachuca = { #titular free city for the HME
+			color = { 184 106 69 }
+			color2 = { 255 255 255 }
+			
+			capital = 3064 #c_pachuca
+
+			title = prince_male
+			title_female = prince_female
+			title_prefix = free_city				
+		}
+		d_hidalgo = { 
 			color={ 184 126 49 }
 			color2={ 255 255 255 }
 			
@@ -892,11 +910,7 @@ e_mexico = {
 				b_tecozautla_HI = {}
 				b_tasquillo_HI = {}
 			}
-		}
-		d_tulancingo = {
-			color = { 184 126 109 }
-			color2 = { 255 255 255 }
-			
+		
 			c_tulancingo = { #2192 
 				color = { 156 101 85 }
 				color2 = { 255 255 255 }
@@ -1032,6 +1046,11 @@ e_mexico = {
 		
 		catholic = 5000
 		
+		d_teotihuacan = { #titular archbishopric for the HME
+			color = { 254 180 69 }
+			color2 = { 255 255 255 }
+			
+		}
 		d_edomex = {
 			color={ 221 126 25 }
 			color2={ 255 255 255 }
@@ -1201,12 +1220,7 @@ e_mexico = {
 				b_cu_cdmx = {} #Ciudad Universitaria
 				b_villa_milpa_alta_cmdx = { }		
 				b_san_miguel_topilejo_mexi = {}
-#				b_colonia_ocotla_mexi = {	}
-#				b_cuanejaque_mexi = {}
-#				b_totoapan_mexi = {	}
-#				b_tlalpan_MX = {}
-#				b_arsenal_mexi = {	}
-#				b_tepexomulco_mexi = {}
+
 			}			
 			c_texcoco = { # 678
 				color={ 124 154 31 }
@@ -1482,14 +1496,14 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
         }
     }
 }
-	k_veracruz_principality = { #principality titular title for the HME
+	k_veracruz_principality = { #free city titular title for the HME
 		color={ 254 226 69 }
 		color2={ 255 255 255 }
 		
 		capital = 3069 #c_heroica_veracruz
 		title = prince_male
 		title_female = prince_female
-		title_prefix = principality		
+		title_prefix = free_city		
    
 		allow = {
 			liege = {
@@ -1635,6 +1649,31 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 					is_theocracy = yes
 				}
 			}
+		}	
+		d_tehuacan = { #titular duchy for the HME
+			color = { 77 44 255 }
+			color2 ={ 255 255 255 }
+			
+			capital = 3072 #c_tehuacan
+		}	
+		d_puebla_free_city = { #titular free city for the HME 
+			color={ 98 69 255 }
+			color2={ 255 255 255 }		
+			capital = 3071 # c_puebla
+			
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality			
+		}
+		d_chipilo = { #titular principality for the HME
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 2195 #c_atlixco
+			
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality		
 		}
 		d_puebla = {
 			color={ 120 95 255 }
@@ -1692,16 +1731,7 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_tepeojuma_PU = {}
 				b_san_pedro_benito_juarez_PU = {}
 				b_acteopan_PU = {}
-			}
-			
-		}
-		
-		d_tehuacan = { 
-			color = { 77 44 255 }
-			color2 ={ 255 255 255 }
-			
-			capital = 3072 #c_tehuacan
-			
+			}		
 			c_tecamachalco = { #2189
 				color = { 149 98 255 }
 				color2 = { 255 255 255 }
