@@ -376,14 +376,29 @@ e_mexico = {
 			}
 
 		}
-		d_san_luis_potosi = {
-			color={ 224 52 116 }
-			color2={ 255 255 255 }
+	k_salado =  { #titular kingdom outside the HME 
+		color = { 0 0 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 3037 # c_matehuala
+		
+		#must hold d_matehuala d_salado and d_potosi.
+	}	
+		
+	k_san_luis_potosi = {
+		color = { 64 152 203 }
+		color2 = { 255 255 255 }
+		
+		capital = 3038 #c_san_luis_potosi
+		
+		d_matehuala = {
+			color2 = { 0 101 149 }
+			color2 = { 255 255 255 }
 			
-			capital = 3038 # c_san_luis_potosi
+			capital = 3037 #c_matehuala
 			
 			c_matehuala = { # 3037
-				color={ 194 22 21 }
+				color={ 44 145 203 }
 				color2={ 255 255 255 }
 				
 				b_matehuala_SL = {}
@@ -394,22 +409,30 @@ e_mexico = {
 				b_refugio_de_las_monjas_SL = {}
 				b_san_juan_matanzas_SL = {}
 			}
-			
 			c_salinas_SLP = { #2185
-				color={ 200 20 25 }
+				color={ 0 129 203 }
 				color2={ 255 255 255 }			
 			
 				b_salinas_SL ={}
 				b_charcas_SL ={}
-				b_santo_domingo_SLP = {}
 				b_villa_de_guadalupe_SL ={}
 				b_moctezuma_SL ={}
 				b_venado_SL ={}
 				b_cruces_SL ={}
+				b_illescas_SL = {}
 			}
- 
+ 			
+		}
+		
+		d_san_luis_potosi = {
+			color={ 126 206 255 }
+			color2={ 255 255 255 }
+			
+			capital = 3038 # c_san_luis_potosi
+			
+
 			c_san_luis_potosi = { # 3038
-				color={ 173 185 56 }
+				color={ 84 159 203 }
 				color2={ 255 255 255 }
 				
 					b_san_luis_potosi_SL = {}
@@ -422,7 +445,7 @@ e_mexico = {
 					b_santa_maria_del_rio_SL = {}
 			}
 			c_rioverde= { # 2180
-				color={ 175 189 70 }
+				color={ 156 234 255 }
 				color2={ 255 255 255 }
 				
 				b_rioverde_SL = {}
@@ -431,16 +454,25 @@ e_mexico = {
 					used_for_dynasty_names = no
 				}
 				b_san_ciro_de_acosta_SL = {}
-				b_cerritos_SL = {}
-				b_el_naranjo_SL = {}
-				b_ciudad_del_maiz_SL = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_villa_hidalgo_SL = {}
+				b_rayon_SL = {}				
+				b_santa_catarina_SL = {}
+				b_san_jose_del_tapanco_SL ={}
+				b_la_muralla_SL = {}
+			}		
+			c_guadalcazar = {
+				color = { 125 174 203 }
+				color2 = { 255 255 255 }
+				
 				b_guadalcazar_SL = {}
-			}			
+				b_cerritos_SL = {}		
+				b_villa_juarez_SL = {}
+				b_villa_hidalgo_SL = {}		
+				b_santo_domingo_SLP = {}
+				b_villa_de_arista_SL = {}
+				b_la_polvora_SL = {}
+			}
 		}
+	}
 		d_zacatecas = {
 			color={ 159 20 25 }
 			color2={ 255 255 255 }
@@ -1138,6 +1170,11 @@ e_mexico = {
 				b_tacuba_MX = {}
 				
 			}
+		}
+		
+		d_vallemex = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
 			
 			c_chapultepec = { #2264
 				color = { 175 180 150 }
@@ -1404,11 +1441,15 @@ e_mexico = {
 					short_name = yes
 					used_for_dynasty_names = no
 				}
+				b_el_naranjo_SL = {}
+				b_ciudad_del_maiz_SL = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}				
 				b_aquismon_SL = {}
 				b_cardenas_SL = {}
 				b_tamasopo_SL = {}
-				b_santa_catarina_SL = {}
-				b_rayon_SL = {}
+
 
 			}		
 		}
