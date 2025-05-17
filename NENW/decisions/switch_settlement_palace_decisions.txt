@@ -9,11 +9,8 @@ settlement_decisions = {
 			is_tribal = no
 			is_nomadic = no
 			independent = yes
-			OR = {
-				government = federal_government
-				government = consular_republic
-				government = oligarchic_republic
-				government = roman_imperial_government
+			NOT = {
+				government = merchant_republic_government
 			}
 		}
 		
@@ -93,6 +90,7 @@ settlement_decisions = {
 				government = consular_republic
 				government = oligarchic_republic
 				government = roman_imperial_government
+				government = ethiopian_imperial_government
 			}
 		}
 		
@@ -134,6 +132,7 @@ settlement_decisions = {
 									government = consular_republic
 									government = oligarchic_republic
 									government = roman_imperial_government
+									government = ethiopian_imperial_government
 								}
 							}
 							opinion = {
