@@ -440,26 +440,32 @@ e_rio_bravo = {
 				holy_site = catholic
 				
 				b_monterrey_NL = {}
-				b_ciudad_apodaca_NL = {}
+				b_ciudad_apodaca_NL = {
+					used_for_dynasty_names = no 
+					short_name = yes
+				}
 				b_santa_catarina_NL = {}
 				b_san_nicolas_de_los_garza_NL = {}
 				b_san_pedro_garza_garcia_NL	= {}		
 				b_cadereyta_NL = {}
-				#b_apodaca_NL = {}	
-				b_salinas_victoria_NL = {}
+				b_ciudad_mitras_NL = {
+					used_for_dynasty_names = no 
+					short_name = yes
+				}	
+
 			}
-			c_montemorelos = { # 3028
-				color={ 226 68 86 }
-				color2={ 255 255 255 }
+			c_salinas_victoria = { #2388
+				color = { 232 11 41 }
+				color2 = { 255 255 255 }
 				
-				b_montemorelos_NL = {}
-				b_allende_NL = {} #ciudad allende
-				b_santiago_NL = {}
-				b_san_pedro_NL = {}
-				b_general_teran_NL = {}
-				b_linares_NL = {}
-				b_hualahuises_NL = {}
-				b_huertas_NL = {}
+				b_salinas_victoria_NL = {}
+				b_cienega_de_flores_NL = {}
+				b_doctor_gonzalez_NL = {}
+				b_abasolo_NL = {}
+				b_carmen_NL  = {}
+				b_los_villarreales_NL = {}
+				b_higueras_NL = {}
+				
 			}
 			c_cerralvo = { #1982
 				color={ 226 113 126 }
@@ -480,20 +486,49 @@ e_rio_bravo = {
 				color2 = { 255 255 255 }
 							
 				b_garcia_NL = {}
-				b_maravillas_NL = {}
+				b_hidalgo_NL = {}				
 				b_mina_NL = {}
-				b_hidalgo_NL = {}
+				b_maravillas_NL = {}
+				b_san_antonio_de_arista_NL = {}
 				b_rinconada_NL = {}
 				b_plan_de_guadalupe_NL = {}
-				b_los_villarreales_NL = {}
+				
+
 			}
+			c_villaldama = { #2389
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				b_bustamante_NL = {}
+				b_ciudad_villaldama_NL = { 
+					short_name = yes 
+					used_for_dynasty_names = no
+				}
+				b_santa_isabel_NL = {} 
+				b_potrero_NL = {}
+				b_golondrinas_NL = {}
+				b_el_meson_NL = {}
+				b_la_ventura_NL = {}
+			}
+				
 		}
-		d_rio_bravo_del_norte = {
-			color={ 160 2 0 }
-			color2={ 255 255 255 }
-			
-			capital = 228 # matamoros
-			
+		d_citricia = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+
+			c_montemorelos = { # 3028
+				color={ 226 68 86 }
+				color2={ 255 255 255 }
+				
+				b_montemorelos_NL = {}
+				b_allende_NL = {} #ciudad allende
+				b_santiago_NL = {}
+				b_san_pedro_NL = {}
+				b_general_teran_NL = {}
+				b_linares_NL = {}
+				b_hualahuises_NL = {}
+				b_huertas_NL = {}
+			}		
 			c_falcon = {
 				color = { 223 75 48 }
 				color2= { 255 255 255 }
@@ -514,17 +549,37 @@ e_rio_bravo = {
 				b_valadeces_TAM = {}
 				b_comales_TAM = {}
 			}
+			c_china = {  #1980
+				color={ 188 106 75 }
+				color2={ 255 255 255 }
+	
+				b_china_NL = {}
+				b_los_herrera_NL = {}
+				b_la_barreta_NL = {}
+				b_general_bravo_NL = {}
+				b_doctor_coss_NL = {}
+				b_nueva_presa_NL = {}
+				b_la_crucita_NL = {}
+				b_chivos_NL = {}
+			}			
+		}
+		d_rio_bravo_del_norte = {
+			color={ 160 2 0 }
+			color2={ 255 255 255 }
+			
+			capital = 231 # Laredo
+			
 			c_anahuac_NL = { #1983
 				color = { 255 130 71 }
 				color2 = { 255 255 255 }
 				
 				b_anahuac_NLE = {}
-				b_ciudad_villaldama_NL = { short_name = yes used_for_dynasty_names = no}
 				b_lampazos_de_naranjo_NL = {}
-				b_bustamante_NL = {}
+				b_colombia_NL = {}
 				b_amanda_guajardo_NL = {}
 				b_salinillas_NL = {}
 				b_san_antonio_de_las_lajitas_NL = {}
+				b_camaron_NL = {}
 			}
 			c_sabinas = { # 3022
 				color={ 234 180 143 }
@@ -563,14 +618,14 @@ e_rio_bravo = {
 		capital = 3029 #c_victoria
 		
 		d_tamaulipas = {
-			color= { 168 142 69 }
+			color= { 132 37 0 }
 			color2={ 255 255 255 }
 			
 			capital = 3029 # c_victoria
 			
 			
 			c_victoria = { #3029
-				color = { 0 0 0 }
+				color = { 192 88 48 }
 				color2 = { 255 255 255 }
 			
 				b_guemez_TAM = {}
@@ -582,7 +637,7 @@ e_rio_bravo = {
 				b_guayalejo_TM = {}
 			}
 			c_soto_la_marina = { # 3030
-				color={ 167 155 70 }
+				color={ 254 167 122 }
 				color2={ 255 255 255 }
 				
 				b_soto_la_marina_TM = {}
@@ -595,62 +650,8 @@ e_rio_bravo = {
 				b_la_zamorina_TM = {}
 				b_la_yegua_TM = {}
 			}	
-			c_china = {  #1980
-				color={ 180 160 88 }
-				color2={ 255 255 255 }
-	
-				b_china_NL = {}
-				b_los_herrera_NL = {}
-				b_la_barreta_NL = {}
-				b_general_bravo_NL = {}
-				b_doctor_coss_NL = {}
-				b_nueva_presa_NL = {}
-				b_la_crucita_NL = {}
-				b_chivos_NL = {}
-			}
-			c_matamoros = {
-				color = { 239 228 175 }
-				color2= { 255 255 255 }
-
-				b_matamoros_TAM = {}
-				b_ejido_longoreno_TAM = {
-					short_name = yes
-					used_for_dynasty_names = no
-				
-				}
-				b_valle_hermoso_TAM = {
-					used_for_dynasty_names = no
-				}
-				b_anahuac_TAM = { }
-				b_el_control_TAM = {}
-				b_arojo_del_tigre_TAM = {}
-				b_el_galanero_TAM = {}
-				b_el_ranchito_y_refugio_TAM = {}
-				b_faro_bagdad_TAM = {}
-			}
-			c_reynosa = {
-				color = { 255 242 188 }
-				color2= { 255 255 255 }
-				
-				b_reynosa_TAM = {}
-				b_ciudad_rio_bravo_TAM = {
-					used_for_dynasty_names = no
-					short_name = yes
-				}
-				b_nuevo_progresso_TAM = {
-					used_for_dynasty_names = no
-				}
-				b_ejido_los_cavazos_TAM = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_buenavista_TAM = {}
-				b_balcones_de_alcala_TAM = {}
-				b_el_ebanito_TAM = {}
-				b_alfredo_v_bonfil_TAM = {} 
-			}
 			c_san_fernando = {
-				color = { 217 197 79 }
+				color = { 192 88 48 }
 				color2= { 255 255 255 }
 
 				b_san_fernando_TAM = {}
@@ -667,7 +668,7 @@ e_rio_bravo = {
 				b_el_zacatal_TAM = {}
 			}
 			c_san_carlos = { #1986
-				color = { 215 190 80 }
+				color = { 132 46 13 }
 				color2 = { 255 255 255 }
 				
 				b_burgos_TAM = {}
@@ -677,6 +678,63 @@ e_rio_bravo = {
 				b_villagran_TAM = {}
 				b_mainero_TAM = {}
 				b_hidalgo_TAM = {}
+			}
+		}
+		d_matamoros = { 
+			color = { 188 51 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 228 #c_matamoros
+			
+			c_matamoros = {
+				color = { 255 190 131 }
+				color2= { 255 255 255 }
+
+				b_matamoros_TAM = {}
+				b_ejido_longoreno_TAM = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
+				b_arojo_del_tigre_TAM = {}
+				b_el_control_TAM = {}
+				b_el_galanero_TAM = {}
+				b_el_ranchito_y_refugio_TAM = {}
+				b_faro_bagdad_TAM = {}
+				b_el_ebanito_TAM = {}				
+			}
+			c_reynosa = {
+				color = { 255 134 80 }
+				color2= { 255 255 255 }
+				
+				b_lomas_del_real_TAM = {}
+				b_reynosa_TAM = {}
+				b_balcones_de_alcala_TAM = {}
+				b_ejido_los_cavazos_TAM = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_reynosa_diaz_TAM = {}
+				b_longoria_TAM = {}
+				b_alfredo_v_bonfil_TAM = {} 
+			}
+			
+			c_valle_hermoso = { #2390
+				color = { 252 106 55 }
+				color2 = { 255 255 255 }
+				
+				b_valle_hermoso_TAM = {}				
+				b_ciudad_rio_bravo_TAM = {
+					used_for_dynasty_names = no
+					short_name = yes
+				}	
+				b_nuevo_progresso_TAM = {
+					used_for_dynasty_names = no
+				}	
+				b_anahuac_TAM = { }				
+				b_el_realito_TAM = {}
+				b_santa_apolonia_TAM = {}
+				b_buenavista_TAM = {}
 			}
 		}
 	}
