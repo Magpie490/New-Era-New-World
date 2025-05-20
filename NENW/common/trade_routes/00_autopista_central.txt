@@ -1,0 +1,36 @@
+autopista_central = {
+wealth = 20			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 3040
+			province_id = 3071
+			province_id = 2264
+			province_id = 3116
+			province_id = 3112
+		}
+	}
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.4
+		disease_defence = -0.05
+		culture_flex = -0.2
+		religion_flex = -0.2
+		local_build_cost_modifier = -0.1
+		local_build_time_modifier = -0.1
+		tech_growth_modifier = 0.2
+		icon = 136
+	}
+
+	start = {				# Start provinces of trade route
+		3046
+		3112
+	}
+    path = {
+		3046 2205 2204 3040 3086 2201 2200 3390 3065 3066 2264 3067 678 2194 2215 3071 3072 2277 3080 2221 3079 2223 2224 3081 3121 3122 2265 696 3129 2234 2267 3117 2246 2245 3116 2244 2253 3113 2252 2250 3112
+	}
+}
