@@ -17,7 +17,7 @@ settlement_decisions = {
 		filter = owned
 		ai_target_filter = owned
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 24
 		
 		from_potential = {
 			is_playable = yes
@@ -49,33 +49,17 @@ settlement_decisions = {
 					religion = FROM
 				}
 			}
-			conditional_tooltip = {
-				trigger = {
-					FROM = {
-						NOT = {
-							has_landed_title = e_russia }
-						}
-				}
-				has_building = tb_hillfort_4
+			FROM = {
+				wealth = 250
 			}
-			conditional_tooltip = {
-				trigger = {
-					FROM = {
-						has_landed_title = e_russia
-					}
-				}
-				FROM = {
-					has_landed_title = e_russia
-				}
-				has_building = tb_hillfort_1
-			}
-			wealth = 250
+			has_building = tb_hillfort_4
 		}
 		effect = {
-			convert_to = CASTLE
+			convert_to = castle
 			refill_holding_levy = yes
-			wealth = -250
-			
+			FROM = {
+				wealth = -250
+			}
 			hidden_tooltip = {
 				location = { #Clear Tribal Great Pillars
 					clr_province_flag = flag_great_pillar_norse
@@ -133,9 +117,7 @@ settlement_decisions = {
 			}
 		}
 		
-		revoke_allowed = {
-			always = no
-		}
+		
 		
 		ai_will_do = {
 			factor = 1
@@ -147,7 +129,7 @@ settlement_decisions = {
 		filter = owned
 		ai_target_filter = owned
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 24
 		
 		from_potential = {
 			is_playable = yes
@@ -169,13 +151,17 @@ settlement_decisions = {
 			location = {
 				religion = FROM
 			}
+			FROM = {
+				wealth = 250
+			}
 			has_building = tb_market_town_4
-			wealth = 250
 		}
 		effect = {
-			convert_to = CITY
+			convert_to = city
 			refill_holding_levy = yes
-			wealth = -250
+			FROM = {
+				wealth = -250
+			}
 			
 			hidden_tooltip = {
 				location = { #Clear Tribal Great Pillars
@@ -233,9 +219,7 @@ settlement_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+		
 		ai_will_do = {
 			factor = 1 # On average ca 1 year before taken
 		}
@@ -246,7 +230,7 @@ settlement_decisions = {
 		filter = owned
 		ai_target_filter = owned
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 24
 		
 		from_potential = {
 			is_playable = yes
@@ -273,12 +257,16 @@ settlement_decisions = {
 				religion = FROM
 			}
 			has_building = tb_hillfort_4
-			wealth = 250
+			FROM = {
+				wealth = 250
+			}
 		}
 		effect = {
 			convert_to = temple
 			refill_holding_levy = yes
-			wealth = -250
+			FROM = {
+				wealth = -250
+			}
 			
 			hidden_tooltip = {
 				location = { #Clear Tribal Great Pillars
@@ -336,9 +324,7 @@ settlement_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+		
 		ai_will_do = {
 			factor = 1 # On average ca 1 year before taken
 			modifier = {
