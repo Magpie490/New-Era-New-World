@@ -356,7 +356,7 @@ e_rio_bravo = {
 			}
 
 			c_zaragoza = { #3020
-				color = { 0 0 0 }
+				color = { 153 145 61 }
 				color2 = { 255 255 255 }
 				
 				b_zaragoza_COA = {}
@@ -373,7 +373,7 @@ e_rio_bravo = {
 		}
 
 		d_laguna = { 
-			color = { 0 0 0 }
+			color = { 178 163 133 }
 			color2 = { 255 255 255 }
 			
 			capital = 3019 # c_cuatrocienegas
@@ -629,6 +629,25 @@ e_rio_bravo = {
 				b_el_desierio_TAM = {}
 				b_el_ebano_TAM = {}
 				b_el_urribeno_TAM = {}
+			}
+		}
+	}
+	k_laredos = {
+		color = { 204 61 61 }
+		color2= { 255 255 255 }
+		short_name = yes
+		
+		capital = 231 #c_victoria
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_laredos = {
+						is_titular = yes
+					}
+				}
+				k_laredos = {
+					is_titular = no
+				}
 			}
 		}
 	}
