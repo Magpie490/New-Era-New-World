@@ -177,15 +177,18 @@ decisions = {
 		}
 	
 		allow = {
-			top_liege = {
-				primary_title = {
-					NOR = {
-						has_law = centralization_3
-						has_law = centralization_4
-						has_law = crown_authority_3
-						has_law = crown_authority_4
+			OR = {
+				top_liege = {
+					primary_title = {
+						NOR = {
+							has_law = centralization_3
+							has_law = centralization_4
+							has_law = crown_authority_3
+							has_law = crown_authority_4
+						}
 					}
 				}
+				independent = yes
 			}
 			OR = {
 				AND = {
