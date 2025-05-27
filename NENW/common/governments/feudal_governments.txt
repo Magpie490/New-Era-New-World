@@ -2223,6 +2223,16 @@ feudal_governments = {
 		frame_suffix = "_federal"
 		title_prefix = "federal_"
 		potential = {
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						has_landed_title = e_columbia
+					}
+				}
+				NOT = {
+					has_dynasty_flag = exempt_from_federal_flag
+				}
+			}
 			OR = { 
 				religion = constitutional
 				AND = {
@@ -2535,6 +2545,7 @@ feudal_governments = {
 			nomadtribal_government
 		}
 		frame_suffix = "_viceroyalty"
+		title_prefix = "viceroy_"
 		potential = {		
 			OR = {
 				primary_title = {
@@ -2550,6 +2561,10 @@ feudal_governments = {
 					liege = {
 						government = roman_imperial_government
 					}
+					NOR = {
+						has_dynasty_flag = exempt_from_viceroyal_flag
+						has_character_flag = exempt_from_viceroyal_character_flag
+					}
 				}
 				AND = {
 					OR = {
@@ -2559,10 +2574,14 @@ feudal_governments = {
 					liege = {
 						government = roman_imperial_government
 					}
+					NOR = {
+						has_dynasty_flag = exempt_from_viceroyal_flag
+						has_character_flag = exempt_from_viceroyal_character_flag
+					}
 				}
 			}
 			isnt_forced_to_theocracy = yes
-			NOR = {
+			NOT = {
 				is_government_potential = order_government
 			}
 			is_patrician = no

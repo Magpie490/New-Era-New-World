@@ -138,68 +138,6 @@ narrative_event = {
 	}
 }
 
-narrative_event = {
-	id = MOBS.3
-	title = EVTNAMEMOBS.3
-	desc = EVTDESCMOBS.3
-	
-	picture = GFX_evt_icon
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTALoR.200
-
-		if = {
-			limit = { religion = ROOT }
-			set_parent_religion = { religion = vagarna parent = ROOT }
-		}
-
-		set_global_flag = vagarna_schism_mended
-		give_nickname = nick_the_saint
-		hidden_tooltip = {
-			any_playable_ruler = {
-				limit = {
-					religion = vagarna
-					controls_religion = no
-				}
-				narrative_event = { id = MOBS.31 }
-			}
-		}
-	}
-}
-
-# Convert or Not?
-narrative_event = {
-	id = MOBS.31
-	title = EVTNAMEMOBS.31
-	desc = EVTDESCMOBS.31
-	
-	picture = GFX_evt_icon
-	
-	is_triggered_only = yes
-	
-	option = { # Yes
-		name = EVTOPTALoR.211
-		ai_chance = { factor = 60 }
-		religion = FROM
-		any_courtier = {
-			limit = {
-				religion = vagarna
-				liege = { character = ROOT }
-			}
-			religion = FROM
-		}
-		capital_scope = {
-			religion = FROM
-		}
-	}
-	option = { # No
-		name = EVTOPTBLoR.211
-		ai_chance = { factor = 40 }
-	}
-}
-
 # Catholic > Sevillian = Catholic becomes parent
 narrative_event = {
 	id = MOBS.4
