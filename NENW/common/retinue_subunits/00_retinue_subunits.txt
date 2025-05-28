@@ -1791,6 +1791,71 @@ RETTYPE_CUL_CALIFORNIO =
 	}
 }
 
+RETTYPE_CUL_REGIO = 
+{
+	first_type = 4
+	first_amount = 300
+	
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = regio
+				any_realm_province = {
+				OR = {
+				culture = regio
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		knights_offensive = 0.3
+		knights_defensive = 0.25
+	}
+}
+
+RETTYPE_CUL_NORTENYO = 
+{
+	first_type = 3
+	first_amount = 300
+	
+	second_type = 6
+	second_amount = 150
+	
+	special_troops = horse_archers
+	
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = north_mexican
+				any_realm_province = {
+				OR = {
+				culture_group = north_mexican
+				}
+			}
+		}
+		NOR = {
+			culture = tejano
+			culture = regio
+			any_realm_province = {
+				NOR = {
+				culture = tejano
+				culture = regio
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_cavalry_offensive = 0.3
+		horse_archers_offensive = 0.3
+	}
+}
+
 RETTYPE_CUL_HMONG = 
 {
 	first_type = 0
@@ -4262,6 +4327,62 @@ RETTYPE_CUL_HAIDA =
 	 modifier = {
 		archers_offensive = 0.25
 		archers_morale = 0.15
+	}
+}
+
+RETTYPE_CUL_RARAMURI = 
+{
+	first_type = 0
+	first_amount = 200
+	
+	second_type = 5
+	second_amount = 100
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = raramuri
+				any_realm_province = {
+				OR = {
+				culture = raramuri
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.25
+		archers_offensive = 0.25
+		archers_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_CAHITAN = 
+{
+	first_type = 2
+	first_amount = 300
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = cahitan
+				any_realm_province = {
+				OR = {
+				culture_group = cahitan
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		pikemen_defensive = 0.3
+		archers_defensive = 0.3
 	}
 }
 
