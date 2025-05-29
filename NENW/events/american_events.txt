@@ -665,6 +665,13 @@ character_event = { #ah fuck -king of the amish
 
 	option = { #suck the feds off
 		set_defacto_liege = e_columbia
+		set_dynasty_flag = exempt_from_federal_flag
+		any_realm_character = {
+			limit = {
+				is_landed = yes
+			}
+			set_dynasty_flag = exempt_from_federal_flag
+		}
 		name = EVTOPTA_america44
 	}
 	option = { #get killed
