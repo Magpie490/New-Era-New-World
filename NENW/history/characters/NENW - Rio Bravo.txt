@@ -3,6 +3,8 @@
 	name = "Aurelio"
 	religion = ardentist
 	culture = regio
+	dna="af0ka0i0dc0"
+	properties="vd0bgd000000000000000000000000000000"	
 	trait = charismatic_negotiator
 	trait = greedy
 	trait = deceitful
@@ -18,6 +20,8 @@
 4700001 = { #heir of the Loredos
 	dynasty = 56621513
 	name = "Dario"
+	dna="af0kb0e0dd0"
+	properties="vd0bad000000000000000000000000000000"	
 	religion = ardentist
 	culture = regio
 	trait = elusive_shadow
@@ -37,6 +41,8 @@
 4700002 = { #king of the Monterrey
 	dynasty = 56621512
 	name = "Ignacio"
+	dna="0c00b0g0000"
+	properties="0a00bb000000000000000000000000000000"
 	religion = ardentist
 	culture = regio
 	trait = grey_eminence
@@ -46,7 +52,11 @@
 	trait = brave
 	trait = scarred_mid
 	trait = inspiring_leader
-	2296.1.1 = {
+	father = 4700021
+	mother = 4700028
+	learning = 10
+	martial = 10
+	2280.7.3 = {
 		birth = yes
 	}
 	2666.1.1 = {
@@ -58,6 +68,8 @@
 	name = "Apolonia"
 	religion = ardentist
 	culture = regio
+	dna="af0k00i0dc0"
+	properties="0g0c0d0000000000000000000000000000000"	
 	trait = intricate_webweaver
 	trait = ambitious
 	trait = chaste
@@ -65,7 +77,7 @@
 	trait = shy
 	female = yes
 	father = 4700000
-	2294.1.1 = {
+	2296.1.1 = {
 		birth = yes
 	}
 	2318.1.1 = {
@@ -83,21 +95,34 @@
 	name = "José"
 	religion = guadalupano
 	culture = regio
+	dna="bfjff0ka0a0"
+	properties="0i0jhk0000000l0000000000000000000000"
 	trait = skilled_tactician
+	trait = honest
+	trait = humble
+	trait = shy
+	trait = stubborn
+	trait = one_eyed
+	trait = severely_injured
+	father = 4700015
 	disallow_random_traits=yes
-	2290.1.1 = {
+	2290.10.20 = {
 		birth = yes
 	}
-	2318.1.1 = {
+	2308.1.1 = {
 		add_spouse=4700003
 	}
-	2324.1.1 = {
-		death = yes
+	2324.11.30 = {
+		death = {
+			death_reason = death_battle
+		}	
 	}
 }
 4700005 = { #count of Piedras Negras
 	dynasty = 56621511
 	name = "Santiago"
+	dna="0hdc00ebde0"
+	properties="cc0cid000000000000000000000000000000"
 	religion = guadalupano
 	culture = regio
 	trait = skilled_tactician
@@ -106,10 +131,10 @@
 	trait = shrewd
 	trait = temperate
 	trait = depressed
-	2278.1.1 = {
+	2277.3.23 = {
 		birth = yes
 	}
-	2324.1.1 = {
+	2666.1.1 = {
 		death = yes
 	}
 }
@@ -118,16 +143,724 @@
 	name = "José"
 	religion = guadalupano
 	culture = regio
+	dna="0hfca0ebde0"
+	properties="cf0c0k000000000000000000000000000000"
 	trait = conscientious
 	trait = brooding
 	trait = quick
 	trait = patient
 	trait = ambitious
 	father = 4700005
+	mother = 4700016
 	2310.1.1 = {
 		birth = yes
 	}
-	2324.1.1 = {
+	2320.12.12 = {
+		add_claim = d_nueva_extremadura
+	}	
+	2666.1.1 = {
 		death = yes
+	}
+}
+4700007 = { #Jacobo Sánchez Navarro, heredero de Nueva Extremadura
+	dynasty = 56621510
+	name = "Jacobo"
+	religion = guadalupano
+	culture = regio
+	father = 4700004
+	mother = 4700003
+	dna="bfjff0ka0a0"	
+	disallow_random_traits = yes
+	trait = brooding
+	trait = conscientious
+	2314.6.15 = { birth = yes }
+	2666.1.1 = { death = yes }
+}
+4700008 = { #Carlos Sánchez Navarro, segundo hijo de Nueva Extremadura
+	dynasty = 56621510
+	name = "Carlos"
+	religion = guadalupano
+	culture = regio
+	father = 4700004
+	mother = 4700003
+	disallow_random_traits = yes
+	trait = conscientious
+	trait = timid
+	2317.2.28 = { birth = yes }
+}
+4700009 = { #Hefestión, heir of Monterrey
+	dynasty = 56621512
+	name = "Hefestión"
+	religion = ardentist
+	culture = regio
+	dna="0bjdb0dbde0"
+	properties="cf0bek000000000000000000000000000000"	
+	father = 4700002
+	mother = 4700014
+	trait = charismatic_negotiator
+	trait = robust
+	trait = homosexual
+	trait = gregarious
+	trait = paranoid
+	martial = 10
+	diplomacy = 8
+	stewardship = 4
+	intrigue = 9
+	learning = 7
+	disallow_random_traits = yes
+	2307.10.17 = {
+		birth = yes
+	}
+}
+
+####
+#### DON'T USE IDS 4700010-4700013 as I took them out since there was a bug I need to look for on those added characters (arrange marriage CTD)
+####
+
+4700014 = { #queen consort of Monterrey
+	dynasty = 56621513
+	name = "Soraya"
+	religion = ardentist
+	culture = regio
+	trait = grey_eminence
+	trait = proud
+	trait = patient
+	trait = charitable
+	female = yes
+	father = 4700000
+	2286.4.15 = {
+		birth = yes
+	}
+	2306.5.1 = {
+		add_spouse = 4700002
+	}
+	2666.1.1 = { 
+		death = yes
+	}
+}
+4700015 = { # El viejo duque de Nueva Extremadura
+	dynasty = 56621510
+	name = "Esteban"
+	religion = guadalupano
+	culture = regio
+	trait = tough_soldier
+	trait = just
+	trait = diligent
+	trait = proud
+	2247.1.13 = {
+		birth = yes
+	}
+	2315.6.30 = {
+		death = yes
+	}
+}
+4700016 = { # Hermana mayor de José Sánchez Navarro, esposa de Santiago
+	dynasty = 56621510
+	name = "Leonor"
+	religion = guadalupano
+	culture = regio
+	female = yes
+	trait = kind
+	trait = charitable
+	trait = severely_injured
+	father = 4700015
+	2288.6.5 = {
+		birth = yes
+	}
+	2305.2.14 = {
+		add_spouse = 4700005 # Santiago Vidaurri
+	}
+	2320.12.12 = {
+		death = {
+			death_reason = death_childbirth
+			}
+	}
+}
+4700017 = { #  Hija de Santiago Vidaurri, fallecida a los pocos días de nacer
+	dynasty = 56621511
+	name = "Leonor"
+	religion = guadalupano
+	culture = regio
+	female = yes
+	trait = sickly
+	father = 4700005
+	mother = 4700016
+	2320.12.12= {
+		birth = yes
+	}
+	2321.1.9 = {
+		death = {
+			death_reason = death_sickly_infant
+			}
+	}
+}
+4700018 = { # Lucía daughter of Ignacio
+	dynasty = 56621512
+	name = "Lucía"
+	religion = ardentist
+	culture = regio
+	female = yes
+	father = 4700002 # Ignacio
+	mother = 4700014 # Soraya
+	trait = shy
+	trait = patient
+	trait = temperate
+	trait = conscientious
+	2309.6.12 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+4700019 = { # Elías Garza-García Oroña, segundo hijo del Rey Ignacio
+	dynasty = 56621512
+	name = "Elías"
+	religion = ardentist
+	culture = regio
+	father = 4700002
+	mother = 4700014
+	trait = brooding
+	trait = conscientious
+	trait = patient
+	trait = ambitious
+	trait = temperate
+	2313.11.30 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }	
+}
+4700020 = { # Anahí Garza-García Oroña
+	dynasty = 56621512
+	name = "Anahí"
+	religion = ardentist
+	culture = regio
+	trait = affectionate
+	trait = curious
+	trait = playful
+	trait = trusting
+	trait = fair
+	female = yes
+	father = 4700002 # Ignacio
+	mother = 4700014 # Soraya
+	2316.5.14 = {
+		birth = yes
+	}
+}
+4700021 = { # Rey Hefesto Garza-García Herrera, padre de Ignacio
+	dynasty = 56621512
+	name = "Hefesto"
+	religion = ardentist
+	culture = regio
+	trait = grey_eminence
+	trait = scholar
+	trait = zealous
+	trait = diligent
+	trait = temperate
+	trait = stressed
+	trait = depressed
+	2252.4.4 = {
+		birth = yes
+	}
+	2312.1.1 = {
+		death = {
+			death_reason = death_trait
+		}
+	}
+}
+4700022 = { #Esh-Kodesh, segundo hijo del Rey Hefesto
+	dynasty = 56621512
+	name = "Esh-Kodesh"
+	religion = ardentist
+	culture = regio
+	trait = robust
+	trait = brave
+	trait = zealous
+	trait = inspiring_leader
+	trait = stubborn
+	father = 4700021
+	mother = 4700028
+	2276.3.15 = {
+		birth = yes
+	}
+	2300.1.1 = {
+		add_spouse = 4700033
+	}
+	2310.5.12 = {
+		death = {
+			death_reason = death_accident
+		}
+	}
+}
+
+4700023 = { #Hefesto, primer hijo del Rey Hefesto
+	dynasty = 56621512
+	name = "Hefesto"
+	religion = ardentist
+	culture = regio
+	trait = strong
+	trait = brave
+	trait = zealous
+	trait = duelist
+	trait = scarred
+	father = 4700021
+	mother = 4700028
+	2274.10.21 = {
+		birth = yes
+	}
+	2310.5.12 = {
+		death = {
+			death_reason = death_accident
+		}
+	}
+}
+4700024 = { # Dariana de Monterrey
+	name = "Dariana"
+	dynasty = 56621512
+	female = yes
+	religion = ardentist
+	culture = regio
+	trait = temperate
+	trait = patient
+	trait = just
+	trait = schemer
+	father = 4700023 # Hefesto
+#	mother = xxxxxxx # hija del conde de San Carlos
+	2301.4.19 = {
+		birth = yes
+	}
+	2321.7.1 = {
+		add_spouse = 4700001 # Darío de los Laredos
+		effect = {add_lover = 4700001}
+	}
+	2666.1.1 = {
+		death = yes 
+	}	
+}
+4700025 = { # Nahúm de Monterrey
+	name = "Nahúm"
+	dynasty = 56621512
+	religion = ardentist
+	culture = regio
+	trait = shrewd
+	trait = shy
+	trait = envious
+	trait = ambitious
+	trait = elusive_shadow
+	father = 4700022 # Esh-Kodesh
+	mother = 4700033 # noble menor regiomontana
+	2307.10.8 = {
+		birth = yes
+	}
+	2620.1.1 ={
+		effect = {
+			add_rival = 4700015
+		}
+	}
+	2666.1.1 = {
+		death = yes 
+	}	
+}
+4700026 = { # Xiomara de Monterrey
+	name = "Xiomara"
+	dynasty = 56621512
+	female = yes
+	religion = ardentist
+	culture = regio
+	trait = erudite
+	trait = stubborn
+	trait = ambitious
+	trait = patient
+	father = 4700023
+#	mother = xxxxx # hija del conde san carlos
+	2305.8.27 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes 
+	}	
+}
+4700027 = { # Alina de Monterrey
+	name = "Alina"
+	dynasty = 56621512
+	female = yes
+	religion = ardentist
+	culture = regio
+	trait = patient
+	trait = temperate
+	trait = zealous
+	trait = martial_cleric
+	trait = celibate
+	trait = robust
+	trait = shieldmaiden
+	trait = holy_warrior
+	martial = 8
+	learning = 8
+	father = 4700023
+#	mother = xxxxxxx # hija del conde de San Carlos
+	2297.3.14 = {
+		birth = yes
+	}
+	2666.1.1 = {
+		death = yes 
+	}
+}
+4700028 = { #Regina de la Garza
+	name = "Regina"
+	dynasty = 5128693
+	religion = ardentist
+	culture = regio
+	female = yes
+	trait = charismatic_negotiator
+	trait = gregarious
+	trait = kind
+	trait = honest
+	trait = depressed
+	trait = patient
+	trait = content
+	trait = humble
+	2259.4.4 = {
+		birth = yes
+	}
+	2275.5.12 = {
+		add_spouse = 4700021 # Rey Hefesto
+	}
+	2666.1.1 = { death = yes }
+}
+4700029 = { #Don Esteban Olivares, Conde de China
+	dynasty = 56621553
+	name = "Esteban"
+	religion = guadalupano
+	culture = regio
+	trait = patient
+	trait = temperate
+	trait = deceitful
+	trait = ambitious
+	trait = intricate_webweaver
+	trait = sympathy_christendom
+	trait = sturdy
+	2271.6.12 = {
+		birth = yes
+		religion = ardentist
+	}
+}
+4700030 = { # Jerónimo Olivares
+	dynasty = 56621553
+	name = "Jerónimo"
+	religion = guadalupano
+	culture = regio
+	father = 4700029
+	trait = zealous
+	trait = fortune_builder
+	trait = stubborn
+	trait = diligent
+	2299.6.15 = {
+		birth = yes
+	}
+}
+
+4700031 = { # Beatriz Olivares
+	dynasty = 56621553
+	name = "Beatriz"
+	religion = guadalupano
+	culture = regio
+	female = yes
+	father = 4700029
+	trait = slothful
+	trait = honest
+	trait = gluttonous
+	trait = kind
+	trait = sympathy_for_old_world_cultist
+	2296.3.22 = {
+		birth = yes
+	}
+}
+
+4700032 = { # Clara Olivares
+	dynasty = 56621553
+	name = "Clara"
+	religion = ardentist
+	culture = regio
+	female = yes
+	father = 4700029
+	trait = gregarious
+	trait = ambitious
+	trait = lustful
+	trait = quick
+	trait = socializer
+	2302.11.4 = {
+		birth = yes
+	}
+}
+4700033 = {
+	dynasty = 5128684
+	name = "Vesta"
+	religion = ardentist
+	culture = regio
+	female = yes
+	2282.1.15 = {
+		birth = yes
+	}
+	2666.3.15 = {
+		death| = yes
+	}	
+}
+4700034 = { # Fermín Escandón del Bravo
+	dynasty = 56621554
+	name = "Fermín"
+	religion = guadalupano
+	culture = regio
+	trait = content
+	trait = temperate
+	trait = diligent
+	trait = just
+	trait = proud
+	trait = cynical
+	trait = administrator
+	trait = charismatic_negotiator
+	2269.3.4 = {
+		birth = yes
+	}
+	2666.1.1 = { 
+		death = yes
+	}
+}
+4700035 = { # Ramiro Escandón del Bravo
+	dynasty = 56621554
+	name = "Ramiro"
+	religion = guadalupano
+	culture = regio
+	trait = gregarious
+	trait = ambitious
+	trait = brave
+	trait = diligent
+	trait = fortune_builder
+	trait = envious
+	trait = trusting
+	father = 4700034
+	2295.9.18 = {
+		birth = yes
+	}
+	2666.1.1 = { 
+		death = yes
+	}	
+}
+4700036 = { # Esperanza de Tamaulipas, esposa de Ramiro Escandón
+	dynasty = 56621555
+	name = "Esperanza"
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	female = yes
+	trait = fair
+	trait = chaste
+	trait = patient
+	trait = humble
+	trait = ambitious
+	trait = theologian
+	trait = arrogant
+	trait = naive_appeaser
+	2299.6.12 = {
+		birth = yes
+	}
+	2315.1.1 = {
+		add_spouse = 4700035
+	}
+	2666.1.1 = { 
+		death = yes
+	}		
+}
+4700037 = { # Victor Escandón del Bravo
+	dynasty = 56621554
+	name = "Victor"
+	religion = guadalupano
+	culture = regio
+	father = 4700035
+	mother = 4700036
+	trait = conscientious
+	trait = brooding
+	trait = stressed
+	employer = 4700039 #His grandfather the King of Tamaulipas	
+	2317.1.15 = {
+		birth = yes
+	}
+	2666.1.1 = { 
+		death = yes
+	}		
+}
+4700038 = { # Victoria Escandón del Bravo
+	dynasty = 56621554
+	name = "Victoria"
+	female = yes
+	religion = guadalupano
+	culture = regio
+	father = 4700035
+	mother = 4700036
+	trait = affectionate
+	trait = curious
+	trait = playful
+	trait = quick
+	2319.12.18 = {
+		birth = yes
+	}
+	2666.1.1 = { 
+		death = yes
+	}		
+}
+4700039 = { # Marino Villarreal, Rey de Tamaulipas
+	dynasty = 56621555
+	name = "Marino"
+	religion = guadalupano
+	culture = fronterizo
+	trait = depressed
+	trait = zealous
+	trait = grey_eminence
+	trait = administrator
+	trait = unyielding_leader
+	trait = organizer
+	trait = strong
+	trait = fair
+	2254.3.17 = {
+		birth = yes
+	}
+	2281.8.6 = {
+		add_title = k_tamaulipas
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+4700040 = { # Constanza, Queen consort of Tamaulipas
+#	dynasty = 56621555
+	name = "Constanza"
+	female = yes
+	religion = guadalupano
+	culture = fronterizo
+	trait = kind
+	trait = chaste
+	trait = humble
+	trait = content
+	trait = celibate
+#	trait = depressed
+	trait = infirm
+	2259.8.17 = {
+		birth = yes
+	}
+	2276.4.2 = {
+		add_spouse = 4700039 # Rey Marino Villarreal
+	}
+	2214.11.29 = {
+		death = {
+			death_reason = death_trait
+		}
+	}
+}
+4700041 = { # Mauro Villarreal, hijo del rey Marino
+	dynasty = 56621555
+	name = "Mauro"
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = quick
+	trait = haughty
+	trait = pneumonic
+	2277.5.9 = {
+		birth = yes
+	}
+	2282.8.15 = {
+		death = {
+			death_reason = death_trait
+		}
+	}
+}
+4700042 = { # Jacinta Villarreal, hija del rey Marino
+	dynasty = 56621555
+	name = "Jacinta"
+	female = yes
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = sickly
+	2280.11.3 = {
+		birth = yes
+	}
+	2281.4.26 = {
+		death = {
+			death_reason = death_sickly_infant
+		}
+	}
+}
+4700043 = { # Beltrán Villarreal, hijo del rey Marino
+	dynasty = 56621555
+	name = "Beltrán"
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = affectionate
+	trait = has_measles
+	2285.2.18 = {
+		birth = yes
+	}
+	2291.6.9 = {
+		death = {
+			death_reason = death_trait
+		}
+	}
+}
+4700044 = { # Rosalía Villarreal, hija del rey Marino
+	dynasty = 56621555
+	name = "Rosalía"
+	female = yes
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = sickly	
+	2301.3.5 = {
+		birth = yes
+	}
+	2302.2.21 = {
+		death = {
+			death_reason = death_sickly_infant
+		}
+	}
+}
+
+4700045 = { # Rodrigo Villarreal, hijo del rey Marino
+	dynasty = 56621555
+	name = "Rodrigo"
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = sickly	
+	2303.8.17 = {
+		birth = yes
+	}
+	2309.6.29 = {
+		death = {
+			death_reason = death_sickly_infant
+		}
+	}
+}
+
+4700046 = { # Eustolia Villarreal, hija del rey Marino
+	dynasty = 56621555
+	name = "Eustolia"
+	female = yes
+	religion = guadalupano
+	culture = fronterizo
+	father = 4700039
+	mother = 4700040
+	trait = flu
+	2306.12.1 = {
+		birth = yes
+	}
+	2307.10.12 = {
+		death = {
+			death_reason = death_trait
+		}
 	}
 }
