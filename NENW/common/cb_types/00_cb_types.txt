@@ -12961,7 +12961,6 @@ pagan_county_conquest = {
 						religion = raven_tales
 						religion = raven_tales_reformed
 						religion = gnostic
-						religion = vagarna
 						religion = thelemic
 						AND = {
 							religion = triumphant
@@ -13015,7 +13014,6 @@ pagan_county_conquest = {
 						religion = lakefolk_pagan
 						religion = hellenic_pagan
 						religion = gnostic
-						religion = vagarna
 						religion = thelemic
 						seafaring_doctrine_trigger = yes
 					}
@@ -13058,7 +13056,6 @@ pagan_county_conquest = {
 						religion = aurorean_reformed
 						religion = raven_tales
 						religion = raven_tales_reformed
-						religion = vagarna
 						religion = thelemic
 						AND = {
 							religion = triumphant
@@ -13279,25 +13276,6 @@ pagan_county_conquest = {
 			factor = 3.0
 			ROOT = {
 				religion_group = oceanic
-			}
-			location = { port = yes }
-		}
-		modifier = {
-			factor = 0.01
-			ROOT = {
-				religion = vagarna
-			}
-			NOT = {
-				location = {
-					any_neighbor_province = {
-						owner = {
-							OR = {
-								character = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-					}
-				}
 			}
 			location = { port = yes }
 		}
