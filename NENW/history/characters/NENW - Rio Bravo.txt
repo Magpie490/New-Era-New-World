@@ -541,6 +541,7 @@
 		birth = yes
 		religion = ardentist
 	}
+	2992.1.1 = { add_spouse = 4700051 }
 }
 4700030 = { # Jerónimo Olivares
 	dynasty = 56621553
@@ -548,6 +549,7 @@
 	religion = guadalupano
 	culture = regio
 	father = 4700029
+	mother = 4700051
 	trait = zealous
 	trait = fortune_builder
 	trait = stubborn
@@ -564,11 +566,12 @@
 	culture = regio
 	female = yes
 	father = 4700029
+	mother = 4700051	
 	trait = slothful
 	trait = honest
 	trait = gluttonous
 	trait = kind
-	trait = sympathy_for_old_world_cultist
+	trait = sympathy_old_world_cultist
 	2296.3.22 = {
 		birth = yes
 	}
@@ -581,6 +584,7 @@
 	culture = regio
 	female = yes
 	father = 4700029
+	mother = 4700051	
 	trait = gregarious
 	trait = ambitious
 	trait = lustful
@@ -590,7 +594,7 @@
 		birth = yes
 	}
 }
-4700033 = {
+4700033 = { #Vesta, wife of Esh-Kodesh
 	dynasty = 5128684
 	name = "Vesta"
 	religion = ardentist
@@ -600,7 +604,7 @@
 		birth = yes
 	}
 	2666.3.15 = {
-		death| = yes
+		death = yes
 	}	
 }
 4700034 = { # Fermín Escandón del Bravo
@@ -722,8 +726,8 @@
 	2254.3.17 = {
 		birth = yes
 	}
-	2281.8.6 = {
-		add_title = k_tamaulipas
+	2315.12.12 = {
+		add_spouse = 4700031 #Beatriz Olivares
 	}
 	2666.1.1 = {
 		death = yes
@@ -748,7 +752,7 @@
 	2276.4.2 = {
 		add_spouse = 4700039 # Rey Marino Villarreal
 	}
-	2214.11.29 = {
+	2314.11.29 = {
 		death = {
 			death_reason = death_trait
 		}
@@ -863,4 +867,407 @@
 			death_reason = death_trait
 		}
 	}
+}
+
+4700047 = { # Absalón Estelutsi, padre de Isaya
+	dynasty = 56621556
+	name = "Absalón"
+	religion = guadalupano
+	culture = mascogo
+	trait = desert_father
+	trait = devout
+	trait = patient
+	trait = shrewd
+	trait = humble
+	trait = temperate
+	trait = arbitrary
+	2252.9.14 = { birth = yes }
+	2275.1.1 = { add_consort = 4700048}
+	2666.1.1 = { death = yes }
+}
+
+4700048 = { # Dominga Estelutsi, madre de Isaya
+#	dynasty = 56621556
+	name = "Dominga"
+	religion = guadalupano
+	culture = mascogo
+	female = yes
+	trait = kind
+	trait = humble
+	trait = devout
+	trait = stubborn
+	trait = frail
+	trait = content
+	2259.4.27 = { birth = yes }
+	2666.1.1 = { death = yes }	
+}
+4700049  = { # Isaya Estelutsi, jefe tribal de Múzquiz
+	dynasty = 56621556
+	name = "Isaya"
+	religion = guadalupano
+	culture = mascogo
+	trait = brave
+	trait = just
+	trait = diligent
+	trait = tough_soldier
+	trait = stubborn
+	trait = gluttonous
+	trait = sturdy
+	trait = son_of_consort
+	father = 4700047
+	mother = 4700048
+	2276.6.22 = { birth = yes }
+	2666.1.1 = { death = yes }		
+}
+4700050 = { # Abrám Estelutsi
+	dynasty = 56621556
+	name = "Abrám"
+	religion = guadalupano
+	culture = mascogo
+	trait = patient
+	trait = adventurer
+	trait = tough_soldier
+	trait = sympathy_old_world_cultist
+	trait = arbitrary
+	trait = wroth
+	father = 4700049 # Isaya Estelutsi
+	employer = 950006
+	2306.8.22 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }	#sigue vivo pero es necesario ponerlo para que el engine corra más rápido
+}
+4700051 = { #Doña Jacinta, Condesa de China
+#	dynasty = 56621553
+	name = "Jacinta"
+	religion = guadalupano
+	culture = regio
+	2275.2.14 = {
+		birth = yes
+	}
+}
+4700052 = { # Conde de Acuña
+	dynasty = 56621510
+	name = "Leandro"
+	religion = guadalupano
+	culture = regio
+	father = 4700015	
+	trait = hedonist
+	trait = lustful
+	trait = indulgent_wastrel
+	trait = gregarious
+	trait = groomed
+	trait = content
+	trait = hunter
+	2292.4.3 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700053 = { # Hijo bastardo de Leandro
+	dynasty = 56621510
+	name = "Damián"
+	religion = guadalupano
+	culture = regio
+	trait = bastard
+	trait = ambitious
+	trait = rowdy
+	father = 4700052
+	2309.8.16 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700054 = { # Hijo bastardo de Leandro
+	dynasty = 56621510
+	name = "Leonardo"
+	religion = guadalupano
+	culture = regio
+	trait = bastard
+	trait = curious
+	trait = brooding
+	father = 4700052
+	2312.5.22 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700055 = { # Hija bastarda reconocida, madre Magdalena Escobedo
+	dynasty = 56621510
+	name = "Azalia"
+	religion = guadalupano
+	female = yes
+	culture = regio
+	trait = bastard
+	trait = quick
+	trait = playful
+	trait = lustful
+	father = 4700052
+	mother = 4700056
+	2311.7.9 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700056 = { # Amante principal de Leandro, madre de Isabel
+#	dynasty = 56621570
+	name = "Magdalena"
+	religion = guadalupano
+	culture = regio
+	trait = fair
+	trait = gregarious
+	trait = kind
+	trait = lustful
+	female = yes
+	2298.11.28 = {
+		birth = yes
+	}
+	2310.1.1 = { effect = { add_lover = 4700052} }
+	2666.1.1 = { death = yes }
+}
+4700057 = { # Jared de la Laguna, jefe tribal rebelde y señor de la Laguna
+	dynasty = 56621557
+	name = "Jared"
+	religion = centaurista
+	culture = norteno
+	father = 4700058
+	trait = brave
+	trait = wroth
+	trait = cruel
+	trait = strong
+	trait = scarred
+	trait = hunter
+	trait = stubborn
+	trait = tall
+	trait = unyielding_leader
+	trait = proud
+	trait = experimenter #direct leader
+	trait = desert_expert
+	2296.7.23 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+4700058 = { # Adán de la Laguna, padre de Jared, muerto en escaramuza
+	dynasty = 56621557
+	name = "Adán"
+	religion = centaurista
+	culture = norteno
+	trait = content
+	trait = humble
+	trait = slothful
+	trait = shy
+	trait = misguided_warrior
+	2265.2.10 = {
+		birth = yes
+	}
+	2305.4.28 = {
+		death = {
+			death_reason = death_battle
+			killer = 4700062
+		}
+	}
+}
+
+4700059 = { # Hermano de Jared, carismático y conciliador
+	dynasty = 56621557
+	name = "Natanael"
+	religion = centaurista
+	culture = norteno
+	trait = brave
+	trait = strong
+	trait = gregarious
+	trait = tough_soldier
+	trait = kind
+	trait = tall	
+	father = 4700058
+	2298.1.30 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700060 = { # Hermano de Jared, disciplinado y reservado
+	dynasty = 56621557
+	name = "Misael"
+	religion = centaurista
+	culture = norteno
+	trait = brave
+	trait = diligent
+	trait = patient
+	trait = charismatic_negotiator
+	trait = mystic
+	learning = 8
+	father = 4700058
+	2300.5.17 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+
+4700061 = { # Hermano de Jared, logístico y leal
+	dynasty = 56621557
+	name = "Rubén"
+	religion = centaurista
+	culture = norteno
+	trait = brave
+	trait = organizer
+	trait = temperate
+	trait = content
+	trait = charismatic_negotiator
+	trait = robust
+	father = 4700058
+	2303.9.2 = {
+		birth = yes
+	}
+	2666.1.1 = { death = yes }
+}
+4700062 = { # Tadeo el Empalador, caudillo nómada que usurpó la Laguna
+#	dynasty = 56621581
+	name = "Tadeo"
+	religion = centaurista
+	culture = norteno
+	trait = wroth
+	trait = cruel
+	trait = duelist
+	trait = impaler
+	trait = ambitious
+	trait = arbitrary
+	trait = tough_soldier
+	give_nickname = nick_the_impaler
+	2268.6.4 = {
+		birth = yes
+	}
+	2317.3.12 = {
+		death = {
+			death_reason = death_battle_duel
+			killer = 4700057 # Jared de la Laguna
+		}
+	}
+}
+4700063 = { # Silvano Montellano, Jefe Tribal de Saltillo
+    dynasty = 56621558
+    name = "Silvano"
+    religion = centaurista
+    culture = norteno
+    trait = underhanded_rogue
+    trait = craven
+    trait = patient
+    trait = just
+    trait = temperate
+    trait = sturdy
+    trait = sympathy_for_pagans
+    2296.8.19 = {
+        birth = yes
+		religion = ardentist
+    }
+    2666.1.1 = {
+        death = yes
+    }
+}
+4700064 = { # Esposa de Silvano Montellano
+#   dynasty = 56621560
+    name = "Silvia"
+    religion = ardentist
+    culture = norteno
+    female = yes
+    trait = humble
+    trait = trusting
+    trait = gregarious
+    trait = dutiful
+    trait = content
+    mother = 0
+    father = 0
+    2299.2.14 = {
+        birth = yes
+    }
+    2666.1.1 = {
+        death = yes
+    }
+    2318.7.7 = {
+        add_spouse = 4700063
+    }
+}
+4700065 = { # Hijo mayor de Silvano,  en la corte de Monterrey
+    dynasty = 56621558
+    name = "Átalo"
+    religion = ardentist
+    culture = norteno
+    trait = patient
+    trait = temperate
+    trait = dutiful
+    trait = shy
+    father = 4700063
+    mother = 4700064
+    2319.4.20 = {
+        birth = yes
+    }
+	2324.1.1 = {
+		employer = 4700002 #Rey Ignacio de Monterrey
+	}
+    2666.1.1 = {
+        death = yes
+    }
+}
+
+4700066 = { # Hija de Silvano
+    dynasty = 56621558
+    name = "Alondra"
+    religion = ardentist
+    culture = norteno
+    female = yes
+    trait = curious
+    trait = honest
+    trait = ambitious
+    father = 4700063
+    mother = 4700064
+    2321.6.10 = {
+        birth = yes
+    }
+    2666.1.1 = {
+        death = yes
+    }
+}
+
+4700067 = { # Hijo menor de Silvano
+    dynasty = 56621558
+    name = "Gael"
+    religion = ardentist
+    culture = norteno
+    trait = rowdy
+    trait = playful
+    trait = willful
+    father = 4700063
+    mother = 4700064
+    2323.5.3 = {
+        birth = yes
+    }
+    2666.1.1 = {
+        death = yes
+    }	
+}
+4700068 = { # Horselord of Ocampo
+    dynasty = 56621559
+    name = "Nadal"
+    religion = centaurista
+    culture = norteno
+    trait = robust
+    trait = gregarious
+    trait = proud
+	trait = cavalry_leader
+	trait = skilled_tactician
+	trait = brave
+	trait = honest
+	trait = gluttonous
+	trait = drunkard
+    2293.5.3 = {
+        birth = yes
+    }
+    2666.1.1 = {
+        death = yes
+    }	
 }
