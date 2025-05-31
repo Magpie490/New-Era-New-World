@@ -380,23 +380,10 @@ e_altiplano = {
 				b_guerrero_CH = {}
 				b_la_junta_CH = {}
 				b_agua_caliente_CH = {}
-				b_temosachic_CH = {}
+
 				b_granjas_el_venado_CH = {}
 				b_campo_CH = {}
 				b_el_nogal_CH = {}
-			}
-			c_cuauhtemoc = { #2838
-				color = { 137 118 128 }
-				color2 = { 255 255 255 }
-				
-				b_manitoba_CH = {}
-				b_ciudad_cuauhtemoc_CH = {}
-				b_bachiniva_CH = {}
-				b_riva_palacio_CH1  = {}
-				b_anahuac_CH = {}
-				b_rubio_CH = {
-				}
-				b_la_quemada_CH = {}
 			}
 			c_guachochi = { # 3014
 				color={ 149 103 128 }
@@ -418,10 +405,13 @@ e_altiplano = {
 				b_el_largo_maderal_CH = {}
 				b_ciudad_madera_CH = {}
 				b_nicolas_bravo_CH = {}
-				b_las_varas_CH = {}
-				b_mesa_del_huracan_CH = {}
-				b_la_nortena_CH = {}
+				b_ignacio_zaragoza_CH = {}
+				b_gomez_farias_CH  = {}
+				b_babicora_CH = {}
 				b_nuevo_madera_CH = {}
+#				b_las_varas_CH = {}
+#				b_mesa_del_huracan_CH = {}
+#				b_la_nortena_CH = {}
 			}
 			c_tutuaca = { # 3015
 				color={ 197 152 185 }
@@ -435,6 +425,18 @@ e_altiplano = {
 				b_uruachi_CH = {}
 				b_creel_CH = {}
 			}
+			c_temosachic = { #2394
+				color = { 255 197 213 }
+				color2 = { 255 255 255 }
+				
+				b_temosachic_CH = {}
+				b_matachi_CH = {}
+				b_yepomera_CH = {}
+				b_tejolocachi_CH = {}
+				b_san_isidro_de_lomas_CH = {}
+				b_cocomorachic_CH = {}
+				b_labor_de_purisima_CH = {}
+			}	
 		}
 	}
 	k_chihuahua = {
@@ -449,11 +451,49 @@ e_altiplano = {
 			
 			capital = 3008 # c_chihuahua
 			
+			c_namiquipa = { 2395
+				color = { 213 165 165 }
+				color2 = { 255 255 255 }
+				
+				b_namiquipa_CH = {}
+				b_santa_catalina_de_villela_CH = {}
+				b_el_terrero_CH = {}
+				b_benito_juarez_NAM_CH = {}
+				b_el_molino_CH = {}
+				b_el_tascate_CH = {}
+				b_nueva_namiquipa_CH = {}
+				b_los_campos_CH = {}
+			}
+			
+			c_carretas = { #2396
+				color = { 129 95 100 }
+				color2 = { 255 255 255 }
+				
+				b_san_francisco_de_carretas_CH  ={}
+				b_santa_isabel_CH  ={}
+				b_san_francisco_de_borja_CH  ={}
+				b_colonia_cusi_CH  ={}
+				b_cusihuirachi_CH  ={}
+				b_remedios_CH  ={}
+				b_la_paz_CH  ={}
+			}
+			c_cuauhtemoc = { #2838
+				color = { 137 118 128 }
+				color2 = { 255 255 255 }
+				
+				b_riva_palacio_CH  = {}
+				b_ciudad_cuauhtemoc_CH = {}
+				b_bachiniva_CH = {}
+				b_manitoba_CH = {}
+				b_anahuac_CH = {} 
+				b_rubio_CH = {} #colonia obregon
+				b_la_quemada_CH = {}
+			}
+			
 			c_chihuahua = { # 3008
 				color={ 197 182 185 }
 				color2={ 255 255 255 }
 				
-				b_riva_palacio_CH = {}
 				b_chihuahua_CH = {}
 				b_santa_rosa_CH = {}
 				b_juan_aldama_CH = {}
@@ -461,45 +501,13 @@ e_altiplano = {
 				b_cumbres_de_majalca_CH = {}
 				b_santa_eulalia_CH = {}
 			}
-			c_ahumada = { # 3009
-				color={ 200 109 128 }
-				color2={ 255 255 255 }
-				
-				b_los_medanos_CH = {}
-				b_villa_ahumada_CH = {}
-				b_samalayuca_CH2 = {}
-				b_benito_juarez_CH = {}
-				b_el_dorado_CH = {}
-				b_el_cuarenta_CH = {}
-				b_cabras_CH = {}
-				b_miguel_hidalgo_CH = {}
-			}
-			c_paso_del_norte = { # 800
-					color={ 200 109 128 }
-					color2={ 255 255 255 }
-					
-					b_anapra_CH = {}
-					b_ciudad_juarez_CH = {
-						short_name = yes
-					}
-					b_samalayuca_CH = {}
-					b_sauzal_CH = {}
-					b_san_isidro_CH = {}
-					b_resplandor_de_vida_CH = {}
-					b_granjero_CH = {}
-			}
-			c_ojinaga = { #2828
-				color = { 234 187 197 }
-				color2 = { 255 255 255 }
-				
-				b_ojinaga_CH = {}
-				b_valverde_CH = {}
-				b_la_esmeralda_CH = {}
-				b_el_tecolote_CH = {}
-				b_saburniaga_CH = {}
-				b_santa_teresa_CH = {}
-				b_toribio_ortega_CH = {}
-			}
+		}	
+		d_conchos = {
+			color = { 255 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 3010 #c_parral
+		
 			c_jimenez_CH = { # 2823
 				color = { 255 167 158 }
 				color2 = { 255 255 255 }
@@ -557,18 +565,40 @@ e_altiplano = {
 				b_cuevecillas_CH = {}
 				b_santa_barbara_CH = {}
 				b_rosario_CH = {}
+			}		
+		}
+		d_casas_grandes = {
+			color = { 100 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 3013
+			
+			c_casas_grandes = { #2393
+				color = { 170 110 129 }
+				color2 = { 255 255 255 }
+
+				b_casas_grandes_CH = {}
+				b_nuevo_casas_grandes_CH = {}
+				b_colonia_dublan_CH = {}
+				b_colonia_juarez_CH = {}
+				b_seccion_enriquez_CH = {}
+				b_seccion_hidalgo_CH = {}
+				b_colonia_madero = {}
 			}
+			
 			c_ascension = { # 3013
 				color={ 179 112 112 }
 				color2={ 255 255 255 }
 				
-				b_casas_grandes_CH = {}
 				b_ascension_CH = {}
 				b_palomas_CH = {}
-				b_la_palotada_CH = {}
+				b_entronque_CHI = {}
+				b_victoria_CH = {}
+				b_bismarck_CHI = {}
 				b_el_medio_CH = {}
-				b_colonia_dublan_CH = {}
-				b_buenaventura_CH1 = {}
+				b_manantiales_de_valerio_CH = {}
+			#	b_la_palotada_CH = {}
+			#	b_buenaventura_CH1 = {}
 			}
 			c_janos = { #2832
 				color = { 178 89 89 }
@@ -594,8 +624,54 @@ e_altiplano = {
 				b_le_baron_CH = {}
 				b_constitucion_CH = {}
 				b_flores_magon_CH = {}
+			}			
+		}
+		d_paso_del_norte = {
+			color = { 55 55 55 }
+			color2 = { 255 255 255 }
+			
+			capital = 800
+			
+			c_ahumada = { # 3009
+				color={ 200 109 128 }
+				color2={ 255 255 255 }
+				
+				b_los_medanos_CH = {}
+				b_villa_ahumada_CH = {}
+				b_samalayuca_CH2 = {}
+				b_benito_juarez_CH = {}
+				b_el_dorado_CH = {}
+				b_el_cuarenta_CH = {}
+				b_cabras_CH = {}
+				b_miguel_hidalgo_CH = {}
 			}
-			c_santa_elena = { # 3012
+			c_paso_del_norte = { # 800
+					color={ 200 109 128 }
+					color2={ 255 255 255 }
+					
+					b_anapra_CH = {}
+					b_ciudad_juarez_CH = {
+						short_name = yes
+					}
+					b_samalayuca_CH = {}
+					b_sauzal_CH = {}
+					b_san_isidro_CH = {}
+					b_resplandor_de_vida_CH = {}
+					b_granjero_CH = {}
+			}
+			c_ojinaga = { #2828
+				color = { 234 187 197 }
+				color2 = { 255 255 255 }
+				
+				b_ojinaga_CH = {}
+				b_valverde_CH = {}
+				b_la_esmeralda_CH = {}
+				b_el_tecolote_CH = {}
+				b_saburniaga_CH = {}
+				b_santa_teresa_CH = {}
+				b_toribio_ortega_CH = {}
+			}
+						c_santa_elena = { # 3012
 				color={ 155 112 109 }
 				color2={ 255 255 255 }
 				
