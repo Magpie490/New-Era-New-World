@@ -1559,6 +1559,166 @@ decisions = {
 	}
 }
 targeted_decisions = {
+
+	annex_march_mandala_count = {
+		
+		ai_check_interval = 36
+		filter = independent_rulers
+		ai_target_filter = independent_rulers
+		
+	    diplomacy_icon = GFX_mandala_icon
+		
+		from_potential = { 
+			OR = {
+				government = mandala_government
+				has_landed_title = e_utsmaniyah
+				has_landed_title = e_tang
+			}
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+			prestige = 500
+			OR = {
+				real_tier = KING
+				real_tier = EMPEROR
+			}
+		}
+		potential = {
+			real_tier = COUNT
+			is_tributary = {
+				type = march
+				suzerain = FROM
+			}
+		}
+
+		allow = {
+			FROM = {
+				prestige = 500
+				wealth = 50
+			}
+		}
+		effect = {
+			FROM = {
+				prestige = -500
+				wealth = -50
+			}
+			ROOT = {
+				set_defacto_liege = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	annex_march_mandala_duke = {
+		
+		ai_check_interval = 36
+		filter = independent_rulers
+		ai_target_filter = independent_rulers
+		
+	    diplomacy_icon = GFX_mandala_icon
+		
+		from_potential = { 
+			OR = {
+				government = mandala_government
+				has_landed_title = e_utsmaniyah
+				has_landed_title = e_tang
+			}
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+			prestige = 500
+			OR = {
+				real_tier = KING
+				real_tier = EMPEROR
+			}
+		}
+		potential = {
+			real_tier = DUKE
+			is_tributary = {
+				type = march
+				suzerain = FROM
+			}
+		}
+
+		allow = {
+			FROM = {
+				prestige = 1000
+				wealth = 150
+			}
+		}
+		effect = {
+			FROM = {
+				prestige = -1000
+				wealth = -150
+			}
+			ROOT = {
+				set_defacto_liege = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	annex_march_mandala_king = {
+		
+		ai_check_interval = 36
+		filter = independent_rulers
+		ai_target_filter = independent_rulers
+		
+	    diplomacy_icon = GFX_mandala_icon
+		
+		from_potential = { 
+			OR = {
+				government = mandala_government
+				has_landed_title = e_utsmaniyah
+				has_landed_title = e_tang
+			}
+			war = no
+			in_command = no
+			prisoner = no
+			is_incapable = no
+			prestige = 500
+			real_tier = EMPEROR
+		}
+		potential = {
+			real_tier = KING
+			is_tributary = {
+				type = march
+				suzerain = FROM
+			}
+		}
+
+		allow = {
+			FROM = {
+				prestige = 3000
+				wealth = 250
+			}
+		}	
+		effect = {
+			FROM = {
+				prestige = -3000
+				wealth = -250
+			}
+			ROOT = {
+				set_defacto_liege = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	claim_control_over_realm = {
 		ai_check_interval = 36
 		filter = realm

@@ -1799,20 +1799,25 @@ pagan_group = {
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_PRAIRIE_SONGS
 		priest_title = SHAMAN
+		
 		priests_can_marry = yes
 		allow_looting = yes
-		can_call_crusade = yes
-		join_crusade_if_bordering_hostile = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
 		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = tengri_pagan_reformed
+		ignores_defensive_attrition = yes
 		allow_rivermovement = yes
+		
+		short_reign_opinion_year_mult = 1.5
 		
 		aggression = 2.0 # AI aggression factor
 		
-		short_reign_opinion_year_mult = 1.25
-
 		religious_clothing_head = 13
 		religious_clothing_priest = 4
 		
+		dislike_tribal_organization = yes
 		
 		intermarry = buddhist_group
 		intermarry = ironist
@@ -1857,24 +1862,21 @@ pagan_group = {
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = SHAMAN
-		
 		priests_can_marry = yes
 		allow_looting = yes
-		peace_prestige_loss = yes # Lose Prestige while at peace
-		raised_vassal_opinion_loss = no
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
 		max_consorts = 3
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		ignores_defensive_attrition = yes
 		allow_rivermovement = yes
-		
-		short_reign_opinion_year_mult = 1.5
 		
 		aggression = 2.0 # AI aggression factor
 		
+		short_reign_opinion_year_mult = 1.25
+
 		religious_clothing_head = 13
 		religious_clothing_priest = 4
 		
-		dislike_tribal_organization = yes
+		allow_in_ruler_designer = no
 		
 		intermarry = buddhist_group
 		intermarry = ironist
