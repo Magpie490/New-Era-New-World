@@ -1,0 +1,638 @@
+850000 = { # Caudillo del Paso del Norte
+    dynasty = 56621560
+    name = "Doroteo"
+    religion = centaurista
+    culture = norteno
+    trait = exalted_warlord
+	trait = bastard
+	trait = short	
+    trait = brave
+    trait = proud
+    trait = wroth
+    trait = stubborn
+    trait = lustful
+    trait = strong
+    trait = scarred
+    trait = adventurer
+    trait = cavalry_leader
+    trait = desert_terrain_leader
+	trait = inspiring_leader
+	trait = tengri_leader
+	mother = 850003 #María
+	real_father = 850004
+    2286.3.3 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}
+}
+850001 = { # Aureliano Arango, hijo mayor de Doroteo
+    dynasty = 56621560
+    name = "Aureliano"
+    religion = centaurista
+    culture = norteno
+    trait = willful
+    trait = rowdy
+    trait = strong
+    trait = brave
+    trait = ambitious
+	trait = legit_bastard
+    father = 850000
+#    mother = 0
+    2312.7.14 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}	
+}
+850002 = { # Macario "El Mudo", hijo adoptivo de Doroteo
+    dynasty = 56621560
+    name = "Macario"
+    religion = centaurista
+    culture = norteno
+    trait = pensive
+    trait = shy
+	trait = stutter
+    trait = quick
+    trait = clubfooted
+	trait = adopted_child
+	learning = 7
+    father = 850000
+#   mother = 0
+    2314.2.28 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}	
+}
+850003 = { # María "La Paloma del Sur", madre de Doroteo
+    dynasty = 56621560
+    name = "María"
+	female = yes
+    religion = centaurista
+    culture = norteno
+    trait = lustful
+    trait = brave
+    trait = gregarious
+    trait = deceitful
+    trait = bard
+    2268.4.12 = {
+        birth = yes
+    }
+    2292.9.3 = {
+        death = {
+			death_reason = death_execution #killed by the mexikanischs
+				killer = 850006
+		}
+	}
+}
+850004 = { # Ciprian, padre biológico de Doroteo
+	name = "Ciprian"
+    dynasty = 56621563 # Casa Friesen, Condado de Janos	
+    religion = quaker
+    culture = mexikanisch
+    trait = drunkard
+    trait = slothful
+    trait = gluttonous
+    trait = deceitful
+    trait = dull
+	trait = cynical
+	father = 850016
+    2264.10.28 = {
+        birth = yes
+    }
+    2288.1.5 = {
+        death = { 
+			death_reason = death_trait
+		}	
+    }
+}
+850005 = { # Reinhard Jantzen, Rey de Grosshuuse
+    name = "Reinhard"
+    dynasty = 56621561 # Dinastía Jantzen
+    religion = quaker
+    culture = mexikanisch
+	father = 850006
+	mother = 850007
+    trait = fortune_builder
+    trait = stubborn
+    trait = just
+    trait = zealous
+    trait = temperate
+    trait = cynical
+    trait = tall
+    trait = stressed
+    trait = celibate
+    trait = architect
+    2267.4.15 = {
+        birth = yes
+    }
+}
+850006 = { # Jacob Jantzen, padre de Reinhard
+    name = "Jacob"
+    dynasty = 56621561
+    religion = quaker
+    culture = mexikanisch
+    trait = temperate
+    trait = humble
+    trait = just
+    trait = content
+    trait = gardener
+    2235.11.2 = {
+        birth = yes
+    }
+    2293.6.21 = {
+        death = {
+			death_reason = death_accident
+		}
+    }
+}
+850007 = { # Magdalene Reimer, madre de Reinhard
+    name = "Magdalene"
+	female = yes
+    dynasty = 56621562 # Casa Reimer
+    religion = quaker
+    culture = mexikanisch
+    trait = kind
+    trait = chaste
+    trait = humble
+    trait = patient
+    trait = trusting
+    2238.3.12 = {
+        birth = yes
+    }
+	2260.1.1 = { 
+		add_spouse = 850006
+	}
+    2306.10.5 = {
+        death = yes
+    }
+}
+850008 = { # Sara Friesen, esposa de Reinhard
+    name = "Sara"
+	female = yes
+	father = 850016 #Cornelius
+    dynasty = 56621563 # Casa Friesen, Condado de Janos
+    religion = quaker
+    culture = mexikanisch
+    trait = chaste
+    trait = humble
+    trait = patient
+    trait = shy
+    trait = shrewd
+    2270.6.4 = {
+        birth = yes
+    }
+	2289.1.1 = { add_spouse = 850005 }
+}
+850009 = { # Heinrich Jantzen, primogénito
+    name = "Heinrich"
+    dynasty = 56621561
+    religion = quaker
+    culture = mexikanisch
+    trait = diligent
+    trait = just
+    trait = proud
+    trait = temperate
+    trait = cruel
+    father = 850005
+    mother = 850008
+    2290.2.28 = {
+        birth = yes
+    }
+	2309.1.1 = { add_spouse = 850013}
+}
+850010 = { # Simon Jantzen, segundo hijo
+    name = "Simon"
+    dynasty = 56621561
+    religion = quaker
+    culture = mexikanisch
+    trait = kind
+    trait = shy
+    trait = zealous
+    trait = stressed
+    trait = celibate
+    father = 850005
+    mother = 850008
+    2292.5.16 = {
+        birth = yes
+    }
+#    spouse = 850014
+}
+850011 = { # Daniel Jantzen, tercer hijo
+    name = "Daniel"
+    dynasty = 56621561
+    religion = quaker
+    culture = mexikanisch
+    trait = strong
+    trait = patient
+    trait = gregarious
+    trait = honest
+    father = 850005
+    mother = 850008
+    2294.11.8 = {
+        birth = yes
+    }
+#    spouse = 850015
+}
+850012 = { # Ruth Jantzen, única hija
+    name = "Ruth"
+	female = yes
+    dynasty = 56621561
+    religion = quaker
+    culture = mexikanisch
+    trait = intelligent
+    trait = shy
+    trait = cynical
+    trait = ambitious
+    trait = quick
+    father = 850005
+    mother = 850008
+    2297.1.1 = {
+        birth = yes
+    }
+}
+850013 = { # Gertrud Wall, esposa de Jakob Jantzen
+    name = "Gertrud"
+	female = yes	
+    dynasty = 56621564 # Casa Wall, Condado de Namiquipa
+    religion = quaker
+    culture = norteno
+	father = 850025
+	mother = 850026
+    trait = proud
+    trait = diligent
+    trait = zealous
+    trait = shrewd
+    2291.8.20 = {
+        birth = yes
+		culture = mexikanisch
+    }
+}
+850014 = { # Miriam Guthoffnunging, esposa de Simon Jantzen
+    name = "Miriam"
+	female = yes	
+    dynasty = 56621565 # Casa Guthoffnunging, Condado de Guthoffnungstal
+    religion = quaker
+    culture = mexikanisch
+    trait = shy
+    trait = kind
+    trait = depressed
+    trait = poetic
+    trait = mystic
+	father = 850021
+	mother = 850022
+    2293.11.5 = {
+        birth = yes
+    }
+	2313.1.1 = {
+		add_spouse = 850010
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+850016 = { # Cornelius Friesen, Conde de Janos
+    name = "Cornelius"
+    dynasty = 56621563 # Casa Friesen
+    religion = quaker
+    culture = mexikanisch
+    trait = martial_cleric
+    trait = proud
+    trait = wroth
+    trait = diligent
+    trait = arbitrary
+    trait = zealous
+    trait = strong
+    trait = one-handed
+    trait = gout
+    2238.5.12 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}
+}
+850017 = { # Amram Friesen, heredero de Janos
+    name = "Amram"
+    dynasty = 56621563
+    religion = quaker
+    culture = mexikanisch
+    trait = thrifty_clerk
+    trait = diligent
+    trait = temperate
+    trait = just
+    trait = cynical
+    trait = stressed
+    father = 850016
+    2265.3.1 = {
+        birth = yes
+    }
+	2666.1.1 = { 
+		death = yes
+	}
+}
+850018 = { # Naas Friesen, nieto de Cornelius
+    name = "Naas"
+    dynasty = 56621563
+    religion = quaker
+    culture = mexikanisch
+    trait = patient
+    trait = kind
+    trait = honest
+    trait = shy
+    trait = quick
+    father = 850017
+    2292.7.10 = {
+        birth = yes
+    }
+}
+850019 = { # Ezekiel Friesen, segundo hijo
+    name = "Ezekiel"
+    dynasty = 56621563
+    religion = quaker
+    culture = mexikanisch
+    trait = brave
+    trait = zealous
+    trait = strong
+    trait = arbitrary
+    trait = wroth
+    father = 850017
+    2295.9.21 = {
+        birth = yes
+    }
+}
+850020 = { # Judith Friesen, nieta de Cornelius
+    name = "Judith"
+	female = yes
+    dynasty = 56621563
+    religion = quaker
+    culture = mexikanisch
+    trait = quick
+    trait = zealous
+    trait = shy
+    trait = mystic
+    father = 850017
+    2299.1.17 = {
+        birth = yes
+    }
+	2325.1.1 = {
+		effect = {
+			add_friend = 850012
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+850021 = { # Obadiah Guthoffnunging, Conde de Buenaventura (Guthoffnungstal)
+    name = "Obadiah"
+    dynasty = 56621565
+    religion = quaker
+    culture = mexikanisch
+    trait = mystic
+    trait = patient
+    trait = temperate
+    trait = content
+    trait = erudite
+    trait = chaste
+    2260.2.16 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}
+}
+850022 = { # Anna Thiessen, esposa fallecida de Obadiah 
+    name = "Anna"
+	female = yes
+#   dynasty = 56621567
+    religion = quaker
+    culture = mexikanisch
+    trait = kind
+    trait = humble
+    trait = chaste
+    trait = content
+    trait = zealous
+    2265.8.6 = {
+        birth = yes
+    }
+	2287.1.1 = {
+		add_spouse = 850021
+	}
+    2302.4.13 = {
+        death = yes
+    }
+}
+850023 = { # Joachim Guthoffnunging, hijo mayor de Obadiah
+    name = "Joachim"
+    dynasty = 56621565
+    religion = quaker
+    culture = mexikanisch
+    trait = diligent
+    trait = just
+    trait = ambitious
+    trait = cynical
+    trait = architect
+    father = 850021
+    mother = 850022
+    2289.10.15 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}	
+}
+850024 = { # Malachi Guthoffnunging, hijo menor de Obadiah
+    name = "Malachi"
+    dynasty = 56621565
+    religion = quaker
+    culture = mexikanisch
+    trait = zealous
+    trait = mystic
+    trait = chaste
+    trait = shy
+    trait = possessed
+    father = 850021
+    mother = 850022
+    2295.4.7 = {
+        birth = yes
+    }
+	2666.1.1 = {
+		death = yes
+	}	
+}
+850025 = { # Tomás Wall, Conde de Maniquipa
+    name = "Tomas"
+    dynasty = 56621564
+    religion = quaker
+    culture = mexikanisch
+    trait = skilled_tactician
+    trait = wroth
+    trait = brave
+    trait = just
+    trait = diligent
+    trait = rough_terrain_expert
+    2263.12.19 = {
+        birth = yes
+    }
+}
+850026 = { # Rosa Méndez, esposa norteña de Tomás Wall
+    name = "Rosa"
+	female = yes
+    religion = quaker
+    culture = norteno
+    trait = charismatic_negotiator
+    trait = gregarious
+    trait = lustful
+    trait = sympathy_for_pagans
+    2269.9.2 = {
+        birth = yes
+    }
+}
+850027 = { # Roberto Wall, hijo menor de Tomás y Rosa
+    name = "Roberto"
+    dynasty = 56621564
+    religion = quaker
+    culture = mexikanisch
+    trait = ambitious
+    trait = brave
+    trait = gregarious
+    trait = quick
+    trait = sympathy_for_pagans
+    trait = dutiful_cleric
+    father = 850025
+    mother = 850026
+    2303.6.12 = {
+        birth = yes
+    }
+}
+850028 = { # Esposa norteña de Robert Wall
+    name = "Lina"
+	female = yes
+    religion = quaker
+    culture = norteno
+    trait = charismatic_negotiator
+    trait = gregarious
+    trait = lustful
+    trait = sympathy_for_pagans
+    2305.9.2 = {
+        birth = yes
+    }
+	2324.7.5 = { 
+		add_spouse = 850027
+	}
+}
+850029 = { # Yawí Owiruachi, último jefe ancestral
+    name = "Yawí"
+    dynasty = 56621566
+    religion = bichihuari
+    culture = raramuri
+    trait = mystic
+    trait = zealous
+    trait = patient
+    trait = strong
+    2220.2.28 = {
+        birth = yes
+    }
+    2281.9.14 = {
+        death = yes
+    }
+}
+850030 = { # Akirám Owiruachi, el converso
+    name = "Akirám"
+    dynasty = 56621566
+    religion = bichihuari
+    culture = raramuri
+    trait = content
+    trait = humble
+    trait = stressed
+    trait = zealous
+    trait = brave
+    father = 850029
+    2252.5.4 = {
+        birth = yes
+    }
+	2310.6.7 = { 
+		religion = quaker
+		trait = adult_baptized
+	}
+    2314.6.9 = {
+        death = yes
+    }
+}
+850031 = { # Benjamín Owiruachi, jefe actual
+    name = "Benjamín"
+    dynasty = 56621566
+    religion = bichihuari
+    culture = raramuri
+    trait = just
+    trait = temperate
+    trait = diligent
+    trait = stressed
+    trait = zealous
+    father = 850030
+    2285.3.11 = {
+        birth = yes
+    }
+	2310.6.7 = { 
+		religion = quaker
+		trait = adult_baptized
+	}	
+}
+850032 = {
+    name = "Isaías"
+    dynasty = 56621566
+    religion = quaker
+    culture = raramuri
+    trait = idolizer
+    trait = conscientious
+    trait = quick
+    trait = rowdy
+    father = 850031
+	mother = 850033	
+    2310.12.24 = {
+        birth = yes
+    }	
+}
+850033 = { # Yésika Sawaí, esposa de Benjamín Owiruachi
+    name = "Yésika"
+	female = yes	
+    dynasty = 56621570 # Casa Sawaí, linaje ritual del bosque
+    religion = bichihuari
+    culture = raramuri
+    trait = mystic
+    trait = shy
+    trait = sympathy_for_pagans
+    trait = poetic
+    trait = devout
+    2282.7.18 = {
+        birth = yes
+    }
+	2305.1.1 = {
+		add_spouse = 850031
+	}
+	2310.6.7 = { 
+		religion = quaker
+		trait = adult_baptized
+	}
+}
+850034 = {
+    name = "Rocío"
+	female = yes
+    dynasty = 56621566
+    religion = quaker
+    culture = raramuri
+    trait = curious
+    trait = affectionate
+    trait = timid
+    trait = indolent
+    father = 850031
+	mother = 850033
+    2313.8.3 = {
+        birth = yes
+    }	
+}
