@@ -267,6 +267,7 @@
     trait = diligent
     trait = zealous
     trait = shrewd
+	trait = child_of_consort	
     2291.8.20 = {
         birth = yes
 		culture = mexikanisch
@@ -475,10 +476,13 @@
     trait = brave
     trait = just
     trait = diligent
-    trait = rough_terrain_expert
+    trait = rough_terrain_leader
     2263.12.19 = {
         birth = yes
     }
+	2290.1.1 = {
+		add_consort = 850026
+	}
 }
 850026 = { # Rosa Méndez, esposa norteña de Tomás Wall
     name = "Rosa"
@@ -504,6 +508,7 @@
     trait = quick
     trait = sympathy_for_pagans
     trait = dutiful_cleric
+	trait = child_of_consort
     father = 850025
     mother = 850026
     2303.6.12 = {
@@ -635,4 +640,248 @@
     2313.8.3 = {
         birth = yes
     }	
+}
+850035 = { # Nazario O’ri, Jefe de Caruchi
+    name = "Nazario"
+    dynasty = 56621567
+    religion = bichihuari
+    culture = raramuri
+    trait = tough_soldier
+    trait = brave
+    trait = ambitious
+    trait = arbitrary
+    trait = rough_terrain_leader
+	trait = sympathy_for_pagans
+    2277.9.13 = {
+        birth = yes
+    }
+}
+850036 = { # Jacinto O’ri, hijo de Nazario
+    name = "Jacinto"
+    dynasty = 56621567
+    religion = bichihuari
+    culture = raramuri
+    trait = brave
+    trait = robust
+    trait = wroth
+    trait = lustful
+    trait = desert_warrior
+    trait = shrewd
+    trait = zealous
+    father = 850035
+    2304.2.22 = {
+        birth = yes
+    }
+}
+850037 = { # Teodora O’ri, concubina del caudillo de Shiwas
+    name = "Teodora"
+	female = yes
+    dynasty = 56621567
+    religion = bichihuari
+    culture = raramuri
+    trait = charismatic_negotiator
+    trait = fair
+    trait = shrewd
+    trait = lustful
+    trait = quick
+    trait = sympathy_for_pagans
+    father = 850035
+    2301.3.9 = {
+        birth = yes
+    }
+}
+850038 = { # Cuauhtémoc "el Rojo", Caudillo de Shiwas
+    name = "Cuauhtémoc"
+    dynasty = 56621568 #Salayandía
+    religion = centaurista
+    culture = norteno
+    trait = brilliant_strategist
+    trait = wroth
+    trait = lustful
+    trait = strong
+    trait = quick
+    trait = hunter
+    trait = desert_warrior
+    trait = cruel
+    trait = diligent
+	trait = just
+    2277.6.6 = {
+        birth = yes
+    }
+	2325.1.1 = {
+		give_nickname = nick_el_rojo
+	}
+    2297.6.1 = {
+        add_consort = 850044
+    }
+	2318.1.1 = {
+		add_consort = 850037
+	}
+}
+850039 = { # Tizoc, hijo de Cuauhtémoc y Teodora
+    name = "Tizoc"
+    dynasty = 56621568
+    religion = centaurista
+    culture = raramuri
+    trait = child_of_consort
+    trait = quick
+    trait = strong
+    trait = fussy
+    trait = sympathy_for_pagans
+    father = 850038
+    mother = 850037
+    2320.5.27 = {
+        birth = yes
+		culture = norteno
+    }
+}
+850040 = { # Heliodoro, hijo de Cuauhtémoc
+    name = "Heliodoro"
+    dynasty = 56621568
+    religion = centaurista
+    culture = norteno
+    trait = skilled_tactician
+    trait = proud
+    trait = diligent
+    trait = cruel
+    trait = paranoid
+	trait = stubborn
+	martial = 10
+	diplomacy = 1
+    father = 850038
+	mother = 850043
+    2295.2.17 = {
+        birth = yes
+    }
+}
+850041 = {
+    name = "Nahúm"
+    dynasty = 56621568
+    religion = centaurista
+    culture = norteno
+    trait = flamboyant_schemer
+    trait = lustful
+    trait = ambitious
+    trait = gregarious
+    trait = deceitful
+	trait = envious
+	diplomacy = 9
+	intrigue = 10
+    father = 850038
+	mother = 850044	
+    2298.8.30 = {
+        birth = yes
+    }
+	2325.1.1 = {
+		effect = {
+			add_rival = 850040
+		}
+	}
+}
+850042 = {
+    name = "Liria"
+    dynasty = 56621568
+    religion = centaurista
+    culture = norteno
+    female = yes
+    trait = strong
+    trait = brave
+    trait = rough_terrain_expert
+    trait = temperate
+    trait = celibate
+    father = 850038
+	mother = 850044
+    2300.3.12 = {
+        birth = yes
+    }
+}
+850043 = { # Mayra, esposa oficial de Cuauhtémoc
+    name = "Mayra"
+#   dynasty = 56621569 #Sarabia
+    religion = quaker
+    culture = norteno
+    female = yes
+    trait = zealous
+    trait = just
+    trait = temperate
+    trait = feeble
+    2272.4.9 = {
+        birth = yes
+		culture = mexikanisch
+    }
+    2294.3.12 = {
+        add_spouse = 850038
+    }
+    2323.2.14 = {
+        death = {
+			death_reason = death_trait
+		}
+    }
+}
+850044 = { # Urraca, madre de Nahúm y Liria
+    name = "Urraca"
+    dynasty = 56621574
+    religion = centaurista
+    culture = norteno
+    female = yes
+    trait = ambitious
+    trait = brave
+    trait = cruel
+    trait = shrewd
+    trait = scarred
+    2275.9.1 = {
+        birth = yes
+    }
+}
+850045 = { # Efraín Sarabia, patriarca menonita caído
+    name = "Ephraim"
+    dynasty = 56621569 # Casa Sarabia
+    religion = quaker
+    culture = mexikanisch
+    trait = humble
+    trait = content
+    trait = trusting
+    trait = just
+    2245.5.9 = {
+        birth = yes
+    }
+    2312.6.4 = {
+        death = yes
+    }
+}
+850047 = { # Samuel Sarabia, cuñado y vasallo de Cuauhtémoc
+    name = "Samuel"
+    dynasty = 56621569
+    religion = quaker
+    culture = mexikanisch
+    trait = temperate
+    trait = patient
+    trait = diligent
+    trait = zealous
+    2270.2.15 = {
+        birth = yes
+    }
+}
+850048 = { # Gerbrand Abel, usurpador derrotado
+    name = "Gerbrand"
+    dynasty = 7236982 #Abel
+    religion = quaker
+    culture = mexikanisch
+    trait = ambitious
+    trait = wroth
+    trait = brave
+    trait = cruel
+    trait = duelist
+    trait = zealous
+	trait = severely_injured
+	trait = injured
+    2265.11.11 = {
+        birth = yes
+    }
+    2308.7.30 = {
+        death = {
+            death_reason = death_execution
+			killer = 850038 #Cuauhtémoc
+        }
+    }
 }
