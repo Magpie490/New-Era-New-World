@@ -1107,7 +1107,6 @@ ascension_3 = {
 hermeticist = {
 	learning = 2
 	same_opinion = 5
-	vagarna_opinion = 5
 	health = 0.5
 	religious = yes
 	opposites = {
@@ -4499,81 +4498,6 @@ jewish_dudu = {
 	random = no
 }
 
-#### Vagarna traits
-old_lore = {
-	diplomacy = 1
-	tolerates_old_world_cultist_group = yes
-	religious_branch = vagarna
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		heroic_tales
-		keeper_of_tales
-		treaties_of_state
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
-heroic_tales = {
-	martial = 1
-	catholic_opinion = -30
-	tolerates_pagan_group = yes
-	religious_branch = vagarna
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		old_lore
-		keeper_of_tales
-		treaties_of_state
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-	ai_ambition	= 15
-
-	customizer = no
-	random = no
-}
-keeper_of_tales = {
-	learning = 1
-	lutheran_opinion = 10
-	tolerates_christian = yes
-	religious_branch = vagarna
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		old_lore
-		heroic_tales
-		treaties_of_state
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
-treaties_of_state = {
-	stewardship = 1
-	religious_branch = vagarna
-	religious = yes # Lost immediately on religion change
-	
-	opposites =  {
-		old_lore
-		heroic_tales
-		keeper_of_tales
-	}
-	
-	opposite_opinion = -5
-	same_opinion = 10
-
-	customizer = no
-	random = no
-}
 gentleman_thief = {
 	intrigue = 2
 	monthly_character_prestige = 0.1

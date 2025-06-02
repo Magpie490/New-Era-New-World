@@ -5741,9 +5741,6 @@ religious = {
 				reconquista_check_trigger = yes
 			}
 			NOT = { same_realm = FROM }
-			NOT = {
-				religion = dahatatta
-			}
 			OR = {
 				AND = {##Neovedantics have to use minor holy wars against other religions other than parabrahmanist 
 					NOT = { religion_group = FROM }
@@ -6036,9 +6033,6 @@ religious = {
 			}
 			NOT = { pacifist = yes }
 			NOT = { same_realm = FROM }
-			NOT = {
-				religion = dahatatta
-			}
 			OR = {
 				AND = {##Neovedantics have to use minor holy wars against other religions other than parabrahmanist 
 					NOT = { religion_group = FROM }
@@ -14886,7 +14880,6 @@ buddhist_holy_war = {
 		ROOT = {
 			NOT = { government = viceroyal_government }
 			OR = {
-				religion = dahatatta
 				religion_group = indian_group
 				AND = {
 					religion_group = buddhist_group
@@ -14991,7 +14984,6 @@ buddhist_holy_war = {
 	is_valid = {
 		ROOT = {
 			OR = {
-				religion = dahatatta
 				religion_group = indian_group
 				AND = {
 					religion_group = buddhist_group

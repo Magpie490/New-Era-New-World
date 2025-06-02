@@ -708,54 +708,6 @@ syncratic_group = {
 		intermarry = sun_dance
 		intermarry = bushism
 	}
-	dahatatta = {
-		graphical_culture = othermuslimgfx
-		interface_skin = { muslim_interface }
-		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 18
-		heresy_icon = 18
-
-		color = { 75 242 128 }
-
-		crusade_name = JIHAD
-		scripture_name = THE_SONGS
-		priest_title = IMAM_PRIEST
-				
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_ALLAH GOD_THE_GREATEST GOD_GOD
-		}
-		
-		evil_god_names = {
-			IBLIS SHAYTAN
-		}
-		
-		aggression = 0.8
-		autocephaly = yes
-		priests_can_marry = yes
-		psc_marriage = no
-		can_call_crusade = yes
-		max_wives = 1
-		men_can_take_consorts = yes
-		max_consorts = 2
-		matrilineal_marriages = no
-		peace_piety_gain = 1.0
-		allow_rivermovement = yes
-		landed_kin_prestige_bonus = yes
-		attacking_same_religion_piety_loss = yes
-		can_grant_divorce = yes
-		character_modifier = {
-			indian_group_opinion = 5
-			muslim_opinion = 5
-			diplomacy = 1
-			religion_flex = -0.5
-		}
-		unit_home_modifier = {
-			land_morale = 0.2
-		}
-	}
 	
 	islamity = {
 		graphical_culture = othermuslimgfx
@@ -952,58 +904,6 @@ syncratic_group = {
 		intermarry = bracero
 	}
 
-	vagarna = {
-		graphical_culture = norsegfx
-		interface_skin = { OWC_interface pagan_interface }
-		#alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 138
-		heresy_icon = 139
-		
-		color = { 0.1 0.5 0.8 }
-		
-		crusade_name = CRUSADE
-		use_new_crusade = no
-		crusade_cb = crusade
-		scripture_name = THE_BIBLE
-		priest_title = ELDER
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS THE_HIDDEN_FOLK GRANDFATHER_YULE OLAF_PROTECTOR THE_KONGEFAMILIEN HERMANN GOD_STORM_BROTHERS GOD_ONE_EYED_RAVEN GOD_THE_SEIDHR_WITCH GOD_BALDUR_ANNOINTED GOD_VIDHARR GOD_THRUDH
-		}
-		
-		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL THE_HIDDEN_FOLK GOD_VIDHARR GOD_THE_ENTANGLER GOD_THE_SEIDHR_WITCH
-		}
-		
-		character_modifier = {
-			lutheran_opinion = 15
-			gnostic_opinion = 15
-			hussite_opinion = 15			
-		}
-
-		aggression = 0.7
-		allow_rivermovement = yes
-		priests_can_inherit = yes
-		priests_can_marry = yes
-		dislike_tribal_organization = yes
-		defensive_attrition = yes
-		allow_looting = yes
-		can_demand_religious_conversion = no
-		female_temple_holders = yes	
-		has_heir_designation = yes #Buffing em
-		landed_kin_prestige_bonus = yes
-		hard_to_convert = yes
-		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		short_reign_opinion_year_mult = 1.1
-		
-		unit_home_modifier = {
-			land_morale = 0.2
-			religion_flex = -0.25
-		}
-	}
 	bushism = {
 		graphical_culture = africangfx
 		
