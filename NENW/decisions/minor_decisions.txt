@@ -2229,11 +2229,7 @@ decisions = {
 			is_adult = yes
 			OR = {
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
-				religion = agamatirta
 				religion = arcadian_reformed
 				religion = arcadian
 			}
@@ -2311,11 +2307,7 @@ decisions = {
 						limit = {
 							OR = {
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = agamatirta
 								religion = arcadian_reformed
 								religion = arcadian
 							}
@@ -2362,11 +2354,7 @@ decisions = {
 			is_adult = yes
 			OR = {
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
-				religion = agamatirta
 				religion = arcadian_reformed
 				religion = arcadian
 			}
@@ -2431,11 +2419,7 @@ decisions = {
 						limit = {
 							OR = {	
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = agamatirta
 								religion = arcadian_reformed
 								religion = arcadian
 							}
@@ -2489,8 +2473,6 @@ decisions = {
 			prisoner = no
 			OR = {	
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = shaivasiddhanta
 				religion = jain
 				religion = arcadian_reformed
 				religion = arcadian
@@ -2987,21 +2969,11 @@ decisions = {
 			prisoner = no
 			OR = {	
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
 				religion = arcadian_reformed
 				religion = arcadian
 			}
 			NOT = { trait = incapable }
-			OR = {
-				has_character_modifier = patron_kali
-				religion = kalikula
-				capital_scope = {
-					region = world_india_bengal
-				}
-			}
 			NOT = {
 				has_character_modifier = holding_diwali_feast
 			}

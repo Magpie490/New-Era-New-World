@@ -2332,11 +2332,8 @@ monastic_order_hindu = {
 		age = 16
 		OR = {
 		religion = neovedantic
-		religion = parabrahmanist
 		religion = sarvodaya
-		religion = shaivasiddhanta
 		religion = old_hindu
-		religion = agamatirta
 		}
 		custom_tooltip = {
 			text = did_not_betray_society
@@ -2356,17 +2353,14 @@ monastic_order_hindu = {
 		OR = {
 		OR = {
 		religion = neovedantic
-		religion = parabrahmanist
 		religion = sarvodaya
-		religion = shaivasiddhanta
 		religion = old_hindu
-		religion = agamatirta
 		}
 			society_member_of = monastic_order_hindu
 		}
 	}
 
-	potential = { OR = { religion = neovedantic religion = parabrahmanist religion = old_hindu religion = agamatirta religion = shaivasiddhanta } }
+	potential = { OR = { religion = neovedantic religion = old_hindu } }
 
 	society_rank = {
 		level = 1
@@ -2554,11 +2548,8 @@ monastic_order_hindu = {
 	    	controls_religion = no
 		   	OR = {
 			religion = neovedantic
-			religion = parabrahmanist
 			religion = sarvodaya
-			religion = shaivasiddhanta
 			religion = old_hindu
-			religion = agamatirta
 			}
 			age = 16
 			is_in_society = no
