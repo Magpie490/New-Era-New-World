@@ -204,7 +204,6 @@ decisions = {
 				religion = leninist
 				religion = trotskyite
 				religion = titoist
-				religion = khanist
 				religion = maoist
 				religion = voodun
 				religion = haiti_voodoo
@@ -1318,63 +1317,6 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}
-	}	
-
-	form_mongol_empire = {
-		only_playable = yes
-		is_high_prio = yes
-		ai_check_interval = 24
-		
-		potential = {
-			religion = khanist
-			form_kingdom_potential = yes
-			e_khanist = {
-				has_holder = no
-			}
-			prisoner = no
-			has_regent = no
-		}
-		allow = {
-			OR = {
-				num_of_holy_sites = 3
-				AND = {
-					num_of_holy_sites = 1
-					num_of_count_titles_in_realm = 40
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					is_female = yes
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = great_khanist_female
-				}
-				new_bloodline = {
-					set_description = "bloodline_desc_great_khanist"
-				}
-			}
-			if = {
-				limit = {
-					is_female = no
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = great_khanist_male
-				}
-				new_bloodline = {
-					set_description = "bloodline_desc_great_khanist"
-				}
-			}
-			hidden_tooltip = {
-				e_khanist = {
-					gain_empire_effect = yes
-				}
-				narrative_event = { id = khanist.1 }
-			}
 		}
 	}
 
