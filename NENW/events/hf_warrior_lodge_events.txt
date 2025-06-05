@@ -2941,6 +2941,13 @@ character_event = {
         }
 		else_if = {
 			limit = {
+				religion = zarist
+				can_join_society = warrior_lodge_zarist
+			}
+            join_society = warrior_lodge_zarist
+		}
+		else_if = {
+			limit = {
 				OR = {
 					religion_openly_celtic_pagan_or_reformed_trigger = yes
 					any_vassal = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
