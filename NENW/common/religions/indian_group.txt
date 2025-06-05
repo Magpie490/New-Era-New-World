@@ -132,7 +132,6 @@ indian_group = {
 		intermarry = sikh
 		intermarry = muslim
 		intermarry = neovedantic
-		intermarry = shaivasiddhanta
 		intermarry = fidelista
 		intermarry = santeria
 		intermarry = oceanic
@@ -149,78 +148,6 @@ indian_group = {
 		can_demand_religious_conversion = no
 	}
 
-	shaivasiddhanta = {
-		ai_convert_same_group = 1 # try to convert if ai_zeal is high
-		ai_convert_other_group = 2	# always convert
-
-		graphical_culture = hindugfx
-		secondary_event_pictures = sunni
-
-		icon = 144
-        heresy_icon = 134
-
-		color = { 255 100 50 }
-		
-		interface_skin = { indian_interface muslim_interface }
-		
-		high_god_name = GOD_SHIVA
-		
-		god_names = {
-			GOD_SHIVA GOD_PARVATI GOD_GANESHA GOD_MURUGA GOD_NAYANMARS GOD_KANNAKI_AMMAN GOD_AYYAPAN GOD_AIYANAR GOD_AGASTYA GOD_SIDDHARS
-		}
-		
-		evil_god_names = {
-			GOD_ASURAS ADHARMA
-		}
-		character_modifier = {
-			learning = 2
-		}
-		unit_modifier = {
-			morale_defence = 0.15
-			morale_offence = 0.15
-			damage = 0.1
-			defence = 0.1
-		}
-		crusade_name = DHARMAYUDDHA
-		use_new_crusade = no
-		crusade_cb = crusade
-		
-		aggression = 1.0
-		allow_rivermovement = yes
-		can_call_crusade = no
-		priests_can_inherit = yes
-		priests_can_marry = yes
-		can_retire_to_monastery = yes
-		hard_to_convert = yes
-		attacking_same_religion_piety_loss = yes
-		autocephaly = yes
-		allow_looting = no
-		max_consorts = 3
-		caste_opinions = yes
-		castes = yes
-		defensive_attrition = yes
-		
-		religious_clothing_head = 8
-		religious_clothing_priest = 8
-
-		scripture_name = TIRUMURAI
-		priest_title = PUJARI
-		piety_name = KARMA
-
-		intermarry = sikh
-		intermarry = jain
-		intermarry = buddhist_group
-		intermarry = neovedantic
-		intermarry = old_hindu
-		intermarry = zoroastrian_group
-		intermarry = bon_reformed
-		intermarry = bon
-		intermarry = sarna_pagan
-		intermarry = sarna_pagan_reformed
-		intermarry = oceanic
-		intermarry = shangava
-		intermarry = ahmadiyya
-	}
 	neovedantic = {
 		graphical_culture = hindugfx
 		secondary_event_pictures = sunni
@@ -317,7 +244,6 @@ indian_group = {
 		intermarry = jain
 		intermarry = buddhist_group
 		intermarry = neovedantic
-		intermarry = shaivasiddhanta
 		intermarry = oceanic
 		intermarry = zoroastrian_group
 		intermarry = bon_reformed
@@ -369,7 +295,6 @@ indian_group = {
 		piety_name = PURITY
 		
 		intermarry = buddhist_group
-		intermarry = shaivasiddhanta
 		intermarry = neovedantic
 		intermarry = sikh
 		intermarry = old_hindu

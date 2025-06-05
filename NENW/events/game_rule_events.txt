@@ -7928,19 +7928,6 @@ character_event = { # Generate 'Fake Family' for characters without any
 				add_trait = shaykh
 			}
 		}
-		if = { # Caste fix
-			limit = {
-				religion = shaivasiddhanta
-				trait = brahmin
-			}
-			any_child = {
-				limit = {
-					religion = shaivasiddhanta
-					NOT = { trait = brahmin }
-				}
-				add_trait = brahmin
-			}
-		}
 		
 		any_child = {
 			character_event = { id = RoI.30121 } # Set religious branch to liege's branch
