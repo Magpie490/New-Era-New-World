@@ -4548,6 +4548,111 @@ RETTYPE_CUL_CAHITAN =
 	}
 }
 
+RETTYPE_CUL_CORACHOL = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = corachol
+				any_realm_province = {
+				OR = {
+				culture_group = corachol
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		archers_offensive = 0.25
+		archers_defensive = 0.25
+	}
+}
+
+RETTYPE_CUL_OTO-MANGUEAN = 
+{
+	first_type = 0
+	first_amount = 300
+
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = oto-manguean
+				any_realm_province = {
+				OR = {
+				culture_group = oto-manguean
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_infantry_offensive = 0.25
+		light_cavalry_defensive = 0.25
+		archers_offensive = 0.25
+		archers_defensive = 0.25
+	}
+}
+
+RETTYPE_CUL_PUREPECHA = 
+{
+	first_type = 1
+	first_amount = 200
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = purepecha
+				any_realm_province = {
+				OR = {
+				culture = purepecha
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_TOTONAC = 
+{
+	first_type = 3
+	first_amount = 200
+	
+	second_type = 0
+	second_amount = 100
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = totonac
+				any_realm_province = {
+				OR = {
+				culture = totonac
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.25
+		light_infantry_offensive = 0.25
+		light_infantry_morale = 0.25
+	}
+}
 
 # Custodite Branch Retinues
 
