@@ -4983,7 +4983,7 @@ character_event = {
 					has_unattractive_trait_trigger = yes
 				}
 				NOT = { 
-					trait = blinded
+					OR = { trait = blinded trait = blind }
 				}
 			}
 			modifier = {  
@@ -4992,7 +4992,7 @@ character_event = {
 					has_attractive_trait_trigger = yes
 				}
 				NOT = { 
-					trait = blinded
+					OR = { trait = blinded trait = blind }
 				}
 			}
 			modifier = {  

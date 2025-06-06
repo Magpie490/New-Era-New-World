@@ -3939,7 +3939,7 @@ character_event = {
 						}
 						5 = {
 							modifier = {
-								NOT = { trait = blinded }
+								NOT = { OR = { trait = blinded trait = blind } }
 								factor = 0
 							}
 							set_character_flag = dark_healing_blinded
@@ -4023,7 +4023,7 @@ character_event = {
 						}
 						10 = {
 							modifier = {
-								NOT = { trait = blinded }
+								NOT = { OR = { trait = blinded trait = blind } }
 								factor = 0
 							}
 							set_character_flag = dark_healing_blinded
@@ -4146,7 +4146,7 @@ character_event = {
 		}
 		if = {
 			limit = { has_character_flag = dark_healing_blinded }
-			remove_trait = blinded
+			remove_OR = { trait = blinded trait = blind }
 		}
 		if = {
 			limit = { has_character_flag = dark_healing_incapable }
