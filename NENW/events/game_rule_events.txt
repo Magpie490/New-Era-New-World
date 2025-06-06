@@ -7889,12 +7889,7 @@ character_event = { # Generate 'Fake Family' for characters without any
 		if = { # Caste fix
 			limit = {
 				OR = {
-					religion = maunaxite_reformed
-					religion = maunaxite
-					religion = parabrahmanist
-					religion = kalikula
 					religion = old_hindu
-					religion = agamatirta
 					religion = jain
 				}
 				trait = kshatriya
@@ -7902,12 +7897,7 @@ character_event = { # Generate 'Fake Family' for characters without any
 			any_child = {
 				limit = {
 					OR = {
-						religion = maunaxite_reformed
-						religion = maunaxite
-						religion = parabrahmanist
-						religion = kalikula
 						religion = old_hindu
-						religion = agamatirta
 						religion = jain
 					}
 					NOT = { trait = kshatriya }
@@ -7936,19 +7926,6 @@ character_event = { # Generate 'Fake Family' for characters without any
 					NOT = { trait = shaykh }
 				}
 				add_trait = shaykh
-			}
-		}
-		if = { # Caste fix
-			limit = {
-				religion = shaivasiddhanta
-				trait = brahmin
-			}
-			any_child = {
-				limit = {
-					religion = shaivasiddhanta
-					NOT = { trait = brahmin }
-				}
-				add_trait = brahmin
 			}
 		}
 		

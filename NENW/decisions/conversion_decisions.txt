@@ -731,7 +731,6 @@ targeted_decisions = {
 			is_adult = yes
 			is_theocracy = no
 			OR = {
-				religion = parabrahmanist
 				religion = neovedantic
 				religion = jain
 			}
@@ -748,10 +747,6 @@ targeted_decisions = {
 			set_character_flag = india_branch_converted
 			prestige = -50
 			piety = 25
-			if = {
-				limit = { religion = parabrahmanist }
-				character_event = { id = parabrahmanist.5 } # Choose branch
-			}
 			if = {
 				limit = { religion = neovedantic }
 				character_event = { id = neovedantic.1 } # Choose branch

@@ -82,22 +82,13 @@ character_event = {
 						limit = {
 							OR = {
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = maunaxite_reformed
-								religion = maunaxite
 							}
 							ROOT = {
 								ai = no
 								OR = {
 									religion = old_hindu
-									religion = parabrahmanist
-									religion = shaivasiddhanta
 									religion = jain
-									religion = maunaxite_reformed
-									religion = maunaxite
 								}
 							}
 							year = 1150
@@ -116,12 +107,7 @@ character_event = {
 						limit = {
 							OR = {
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = maunaxite_reformed
-								religion = maunaxite
 							}
 							NOT = { has_character_flag = basava }
 						}
@@ -137,7 +123,7 @@ character_event = {
 						years = 100
 					}
 					random_list = {  # Small chance of having some unusual memorable trait
-						1 = { add_trait = blinded }
+						1 = { add_OR = { trait = blinded trait = blind } }
 						1 = { add_trait = dwarf }
 						50 = {}
 					}
@@ -185,12 +171,7 @@ character_event = {
 						limit = {
 							OR = {
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = maunaxite_reformed
-								religion = maunaxite
 							}
 						}
 						random_list = {
@@ -1542,11 +1523,7 @@ character_event = {
 		has_dlc = "Rajas of India"
 		OR = {
 			religion = old_hindu
-			religion = parabrahmanist
-			religion = shaivasiddhanta
 			religion = jain
-			religion = maunaxite_reformed
-			religion = maunaxite
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -1714,11 +1691,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = shaivasiddhanta
 				religion = jain
-				religion = maunaxite_reformed
-				religion = maunaxite
 			}
 		}
 		if = {

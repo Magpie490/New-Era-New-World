@@ -398,7 +398,7 @@ add_trait_one_eyed_effect = {
 		limit = {
 			NOR = {
 				trait = one_eyed
-				trait = blinded
+				OR = { trait = blinded trait = blind }
 			}
 		}
 
@@ -985,7 +985,7 @@ add_trait_silently_one_eyed_effect = {
 		limit = {
 			NOR = {
 				trait = one_eyed
-				trait = blinded
+				OR = { trait = blinded trait = blind }
 			}
 		}
 
@@ -3806,7 +3806,7 @@ add_maimed_trait_effect = {
 						factor = 0
 						OR = {
 							trait = one_eyed
-							trait = blinded
+							OR = { trait = blinded trait = blind }
 							NOT = { has_dlc = "Reapers" }
 						}
 					}
@@ -6470,10 +6470,6 @@ add_crusade_trait_effect = {
 	else_if = {
 		limit = { is_communist_religion_trigger = yes }
 		add_trait = communist_crusader
-	}
-	else_if = {
-		limit = { is_khanist_religion_trigger = yes }
-		add_trait = khanist_crusader
 	}
 	else_if = {
 		limit = { religion_openly_folklorist_or_reformed_trigger = yes }
@@ -10534,13 +10530,9 @@ add_ascetic_trait_effect = {
 			limit = { 
 				OR = {
 					religion = old_hindu
-					religion = parabrahmanist
-					religion = kalikula
-					religion = shaivasiddhanta
 					religion = jain
 					religion = arcadian_reformed
 					religion = arcadian
-					religion = agamatirta
 				} 
 			}
 			add_trait = sanyasini
@@ -10568,13 +10560,9 @@ add_ascetic_trait_effect = {
 			limit = { 
 				OR = {
 					religion = old_hindu
-					religion = parabrahmanist
-					religion = kalikula
-					religion = shaivasiddhanta
 					religion = jain
 					religion = arcadian_reformed
 					religion = arcadian
-					religion = agamatirta
 				} 
 			}
 			add_trait = sanyasi
@@ -13397,7 +13385,7 @@ spawn_fantastic_commander_effect = {
 			}
 
 			20 = {
-				add_trait = blinded
+				add_OR = { trait = blinded trait = blind }
 				add_trait = strategist
 				add_trait = genius
 				change_martial = 4
@@ -17739,7 +17727,7 @@ troubled_pregnancy_chance_low_effect = {
 
 			mult_modifier = {
 				factor = 1.5
-				trait = blinded
+				OR = { trait = blinded trait = blind }
 			}
 
 			mult_modifier = {
@@ -18202,7 +18190,7 @@ troubled_pregnancy_chance_medium_effect = {
 
 			mult_modifier = {
 				factor = 1.5
-				trait = blinded
+				OR = { trait = blinded trait = blind }
 			}
 
 			mult_modifier = {

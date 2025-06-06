@@ -32,6 +32,25 @@ blinded = {
 	male_insult_adj = INSULT_BLIND
 	female_insult_adj = INSULT_BLIND
 }
+blind = {
+	birth = 5
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 75
+	martial = -6
+	stewardship = -1
+	intrigue = -2
+	learning = 2
+	
+	customizer = no
+	
+	combat_rating = -100 #old value: -10
+	
+	blinding = yes
+	
+	male_insult_adj = INSULT_BLIND
+	female_insult_adj = INSULT_BLIND
+}
+
 
 # Hard coded to be given correctly and affect inheritance laws in the ERE
 born_in_the_purple = {
@@ -946,11 +965,7 @@ brahmin_special = {
 brahmin = {
 	potential = {
 		OR = {
-			religion = agamatirta
 			religion = old_hindu
-			religion = parabrahmanist
-			religion = kalikula
-			religion = shaivasiddhanta
 			religion = jain
 		}
 	}
@@ -977,11 +992,7 @@ brahmin = {
 kshatriya = {
 	potential = {
 		OR = {
-			religion = agamatirta
 			religion = old_hindu
-			religion = parabrahmanist
-			religion = kalikula
-			religion = shaivasiddhanta
 			religion = jain
 		}
 	}
@@ -1006,11 +1017,7 @@ kshatriya = {
 vaishya = {
 	potential = {
 		OR = {
-			religion = agamatirta
 			religion = old_hindu
-			religion = parabrahmanist
-			religion = kalikula
-			religion = shaivasiddhanta
 			religion = jain
 		}
 	}
@@ -2616,11 +2623,8 @@ sanyasi = {
 		is_ruler = no
 		is_female = no
 		OR = {
-			religion = agamatirta
 			religion = old_hindu 
-			religion = sikh 
-			religion = parabrahmanist 
-			religion = shaivasiddhanta
+			religion = sikh
 			religion = neovedantic 
 			religion = shangava 
 		}
@@ -2643,11 +2647,8 @@ sanyasini = {
 		is_ruler = no
 		is_female = yes
 		OR = {
-			religion = agamatirta
 			religion = old_hindu 
-			religion = sikh 
-			religion = parabrahmanist 
-			religion = shaivasiddhanta
+			religion = sikh
 			religion = neovedantic 
 			religion = shangava 
 		}
@@ -2935,8 +2936,8 @@ kow_tow_completed_tier_3 = {
 }
 giant = {
 	birth = 25
-	inherit_chance = 15
-	both_parent_has_trait_inherit_chance = 40
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 75
 	
 	opposites =  {
 		dwarf 
@@ -2963,8 +2964,8 @@ giant = {
 }
 short = {
 	birth = 250
-	inherit_chance = 15
-	both_parent_has_trait_inherit_chance = 40
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 75
 	opposites =  {
 		dwarf
 		tall
@@ -2986,8 +2987,8 @@ short = {
 
 tall = {
 	birth = 250
-	inherit_chance = 15
-	both_parent_has_trait_inherit_chance = 40
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 75
 
 	opposites =  {
 		dwarf
@@ -3117,7 +3118,7 @@ troubled_pregnancy = {
 
 lefthanded = {
 	inherit_chance = 25
-	both_parent_has_trait_inherit_chance = 50
+	both_parent_has_trait_inherit_chance = 75
 	birth = 1200
 
 	combat_rating = 15

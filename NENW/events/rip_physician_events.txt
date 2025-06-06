@@ -2107,19 +2107,6 @@ character_event = {
 					OR = {
 						capital_scope = {
 							NOR = {
-								region = world_india
-								region = world_steppe
-								region = world_asia_minor
-								region = world_persia
-								region = world_siberia
-								ROOT = { culture_group = mongolic }
-							}
-						}
-						religion = khanist
-					}
-					OR = {
-						capital_scope = {
-							NOR = {
 								region = world_europe_east
 								region = world_far_north
 								region = world_siberia
@@ -2196,7 +2183,7 @@ character_event = {
 							character_event = { id = RIP.11052 }
 						}
 					}
-					50 = { # Khanist Mystic
+					50 = { # Tengri Mystic
 						modifier = {
 							factor = 0
 							OR = {
@@ -2210,16 +2197,16 @@ character_event = {
 										ROOT = { culture_group = mongolic }
 									}
 								}
-								religion = khanist
+								religion = tengri_pagan
 							}
 						}
 						modifier = {
 							factor = 0
-							religion = khanist
+							religion = tengri_pagan
 						}
 						create_character = {
 							culture = mongol
-							religion = khanist
+							religion = tengri_pagan
 							dynasty = none
 							age = 33
 							random_traits = yes
@@ -2681,7 +2668,7 @@ character_event = {
 							health = 6
 							trait = martial_cleric
 							trait = mystic
-							trait = blinded
+							OR = { trait = blinded trait = blind }
 							flag = is_court_physician
 							flag = physician_blind_miracle_worker
 						}
@@ -2767,7 +2754,7 @@ character_event = {
 							health = 6
 							trait = martial_cleric
 							trait = mystic
-							trait = blinded
+							OR = { trait = blinded trait = blind }
 							flag = is_court_physician
 							flag = physician_blind_miracle_worker
 						}
@@ -2843,7 +2830,7 @@ character_event = {
 							health = 6
 							trait = martial_cleric
 							trait = mystic
-							trait = blinded
+							OR = { trait = blinded trait = blind }
 							flag = is_court_physician
 							flag = physician_blind_miracle_worker
 						}

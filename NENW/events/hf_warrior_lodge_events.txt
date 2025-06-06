@@ -2875,7 +2875,7 @@ character_event = {
         }
 		else_if = {
 			limit = {
-				OR = { religion_openly_finnish_or_reformed_trigger = yes religion = sisukkuus }
+				religion_openly_finnish_or_reformed_trigger = yes
 				can_join_society = warrior_lodge_finnish
 			}
             join_society = warrior_lodge_finnish
@@ -2896,7 +2896,7 @@ character_event = {
         }
 		else_if = {
 			limit = {
-				OR = { religion_openly_arcadian_or_reformed_trigger = yes religion = kalikula }
+				religion_openly_arcadian_or_reformed_trigger = yes
 				can_join_society = warrior_lodge_arcadian
 			}
             join_society = warrior_lodge_arcadian
@@ -2941,11 +2941,11 @@ character_event = {
         }
 		else_if = {
 			limit = {
-				is_zarist_religion_trigger = yes
+				religion = zarist
 				can_join_society = warrior_lodge_zarist
 			}
             join_society = warrior_lodge_zarist
-        }
+		}
 		else_if = {
 			limit = {
 				OR = {

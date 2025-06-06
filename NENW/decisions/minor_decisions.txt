@@ -631,7 +631,7 @@ decisions = {
 				hidden_tooltip = {
 					NOT = {	trait = pregnant }
 					NOT = {	trait = incapable }
-					NOT = {	trait = blinded }
+					NOT = {	OR = { trait = blinded trait = blind } }
 					NOT = {	trait = has_tuberculosis }
 					NOT = {	trait = has_typhoid_fever }
 					NOT = {	trait = has_typhus }
@@ -739,7 +739,7 @@ decisions = {
 				hidden_tooltip = {
 					NOT = {	trait = pregnant }
 					NOT = {	trait = incapable }
-					NOT = {	trait = blinded }
+					NOT = {	OR = { trait = blinded trait = blind } }
 					NOT = {	trait = has_tuberculosis }
 					NOT = {	trait = has_typhoid_fever }
 					NOT = {	trait = has_typhus }
@@ -842,7 +842,7 @@ decisions = {
 				text = health_travel_condition
 				hidden_tooltip = {
 					NOT = {	trait = incapable }
-					NOT = {	trait = blinded }
+					NOT = {	OR = { trait = blinded trait = blind } }
 					NOT = {	trait = has_tuberculosis }
 					NOT = {	trait = has_typhoid_fever }
 					NOT = {	trait = has_typhus }
@@ -2229,11 +2229,7 @@ decisions = {
 			is_adult = yes
 			OR = {
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
-				religion = agamatirta
 				religion = arcadian_reformed
 				religion = arcadian
 			}
@@ -2311,11 +2307,7 @@ decisions = {
 						limit = {
 							OR = {
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = agamatirta
 								religion = arcadian_reformed
 								religion = arcadian
 							}
@@ -2362,11 +2354,7 @@ decisions = {
 			is_adult = yes
 			OR = {
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
-				religion = agamatirta
 				religion = arcadian_reformed
 				religion = arcadian
 			}
@@ -2431,11 +2419,7 @@ decisions = {
 						limit = {
 							OR = {	
 								religion = old_hindu
-								religion = parabrahmanist
-								religion = kalikula
-								religion = shaivasiddhanta
 								religion = jain
-								religion = agamatirta
 								religion = arcadian_reformed
 								religion = arcadian
 							}
@@ -2489,8 +2473,6 @@ decisions = {
 			prisoner = no
 			OR = {	
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = shaivasiddhanta
 				religion = jain
 				religion = arcadian_reformed
 				religion = arcadian
@@ -2987,21 +2969,11 @@ decisions = {
 			prisoner = no
 			OR = {	
 				religion = old_hindu
-				religion = parabrahmanist
-				religion = kalikula
-				religion = shaivasiddhanta
 				religion = jain
 				religion = arcadian_reformed
 				religion = arcadian
 			}
 			NOT = { trait = incapable }
-			OR = {
-				has_character_modifier = patron_kali
-				religion = kalikula
-				capital_scope = {
-					region = world_india_bengal
-				}
-			}
 			NOT = {
 				has_character_modifier = holding_diwali_feast
 			}
@@ -3286,7 +3258,6 @@ decisions = {
 				religion = bon_reformed
 				religion = donyipolo
 				religion = ironist
-				religion = khanist
 				is_steppe_religion_trigger = yes
 				any_owned_bloodline = {
 					has_bloodline_flag = bloodline_sky_burial
