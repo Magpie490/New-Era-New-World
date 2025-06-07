@@ -599,12 +599,15 @@ religion_doctrine = {
 	}
 	religion_meritocratic = {
 		picture = GFX_religion_feature_meritocratic
+		potential = {
+			NOT = { religion = arcadian } #Core feature of the religion itself.
+			NOT = { religion = arcadian_reformed } #Core feature of the religion itself.
+		}
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_patriarchal # Incompatible
 				has_selected_religion_feature = religion_matriarchal # Incompatible
 				has_selected_religion_feature = religion_feature_arcadian #Redundant	
-				has_selected_religion_feature = religion_feature_starist #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
 				has_selected_religion_feature = religion_ritual_sacrifice
@@ -676,10 +679,13 @@ religion_doctrine = {
 	}
 	religion_monastic = {
 		picture = GFX_religion_feature_monastic
+		potential = {
+			NOT = { religion = crow_way } #Core feature of the religion itself.
+			NOT = { religion = crow_way_reformed } #Core feature of the religion itself.
+		}
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_novelist
-				has_selected_religion_feature = religion_feature_starist
 				has_selected_religion_feature = religion_ritual_sacrifice
 				has_selected_religion_feature = religion_feature_crow_way
 			}
@@ -1046,6 +1052,11 @@ religion_doctrine = {
 	}
 	religion_equal = {
 		picture = GFX_religion_feature_equal
+		
+		potential = {
+			NOT = { religion = arcadian } #Core feature of the religion itself.
+			NOT = { religion = arcadian_reformed } #Core feature of the religion itself.
+		}
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_matriarchal
@@ -2798,7 +2809,6 @@ religion_leadership = {
 					}
 					OR = {
 						has_selected_religion_feature = religion_monastic
-						has_selected_religion_feature = religion_feature_starist
 					}
 				}
 				set_character_modifier = {
