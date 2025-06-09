@@ -5097,6 +5097,253 @@ decisions = {
 			factor = 1
 		}
 	}
+	organize_hundredfifty_cavalry_regiment = { #west virginia
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
+			NOT = { has_global_flag = hundredfifty_cavalry_regiment_formed }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_kanawha
+				any_realm_lord = { 
+					has_landed_title = c_kanawha
+				}
+			}
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hundredfifty_cavalry_regiment_formed
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
+			activate_title = { title = d_hundredfifty_cavalry_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredfifty_cavalry_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredandnineth_armored_regiment = { #tennesee
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
+			NOT = { has_global_flag = hundredandnineth_armored_regiment_formed }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_nashville
+				any_realm_lord = { 
+					has_landed_title = c_nashville
+				}
+			}
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hundredandnineth_armored_regiment_formed
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
+			activate_title = { title = d_hundredandnineth_armored_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredandnineth_armored_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_hundredfourtynine_infantry_regiment = { #kentucky
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+			}
+			NOT = { has_global_flag = hundredfourtynine_infantry_regiment_formed }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_louisville
+				any_realm_lord = { 
+					has_landed_title = c_louisville
+				}
+			}
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hundredfourtynine_infantry_regiment_formed
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
+			activate_title = { title = d_hundredfourtynine_infantry_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_hundredfourtynine_infantry_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	##HOFs
 	form_madonnite_hof = {
 		is_high_prio = yes

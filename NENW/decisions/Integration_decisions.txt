@@ -769,4 +769,358 @@ settlement_decisions = {
 			}
 		}
 	}
+	invite_local_official = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 3
+	
+		from_potential = {
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {
+			NOT = {
+				holding_type = nomad
+			}
+			holder_scope = {
+				character = FROM
+			}
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.10 min = 5 max = 200 }
+				is_inaccessible_trigger = no
+				NOT = {
+					has_character_modifier = in_seclusion
+				}
+			}
+			location = {
+				NAND = {
+					culture = FROM
+				}	
+			}
+		}
+		
+		effect = {
+			FROM = {
+				scaled_wealth = { value = -0.10 min = -5 max = -200 }
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					female = no
+					culture = ROOT
+				}
+				new_character = {
+					add_trait = lowborn
+					save_event_target_as = invited_character
+				}
+				character_event = { id = NE.1 }
+			}
+		}
+		
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.02
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = peasant_noble }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth < 80
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = COUNT
+					wealth < 100
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = DUKE
+					wealth < 140
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = KING
+					wealth < 160
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = EMPEROR
+					wealth < 160
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					ai_greed = 100
+				}
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = COUNT
+					num_of_courtiers <= 5
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = DUKE
+					num_of_courtiers <= 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = KING
+					num_of_courtiers <= 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers <= 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = COUNT
+					num_of_courtiers = 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = DUKE
+					num_of_courtiers = 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = KING
+					num_of_courtiers = 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers = 25
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth = 200
+				}
+			}
+		}
+	}
+	
+	
+	invite_local_official_woman = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 3
+	
+		from_potential = {
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {
+			NOT = {
+				holding_type = nomad
+			}
+			holder_scope = {
+				character = FROM
+			}
+		}
+		
+		allow = {
+			FROM = {
+				scaled_wealth = { value = 0.10 min = 5 max = 200 }
+				is_inaccessible_trigger = no
+				NOT = {
+					has_character_modifier = in_seclusion
+				}
+			}
+			location = {
+				NAND = {
+					culture = FROM
+				}	
+			}
+		}
+		
+		effect = {
+			FROM = {
+				scaled_wealth = { value = -0.10 min = -5 max = -200 }
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					female = yes
+					culture = ROOT
+				}
+				new_character = {
+					add_trait = lowborn
+					save_event_target_as = invited_character
+				}
+				character_event = { id = NE.1 }
+			}
+		}
+		
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.02
+			}
+			modifier = {
+				factor = 5
+				FROM = {
+					trait = peasant_noble
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth < 80
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = COUNT
+					wealth < 100
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = DUKE
+					wealth < 140
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = KING
+					wealth < 160
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					tier = EMPEROR
+					wealth < 160
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					ai_greed = 100
+				}
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = COUNT
+					num_of_courtiers <= 5
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = DUKE
+					num_of_courtiers <= 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = KING
+					num_of_courtiers <= 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers <= 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = COUNT
+					num_of_courtiers = 10
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = DUKE
+					num_of_courtiers = 15
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = KING
+					num_of_courtiers = 20
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = {
+					tier = EMPEROR
+					num_of_courtiers = 25
+				}
+				ROOT = { is_capital = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					wealth = 200
+				}
+			}
+		}
+	}
 }
