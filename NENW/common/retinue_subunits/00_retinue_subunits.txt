@@ -2018,6 +2018,58 @@ RETTYPE_CUL_RIBERENO =
 	}
 }
 
+RETTYPE_CUL_OAXAQUENO = 
+{
+	first_type = 1
+	first_amount = 250
+	
+	second_type = 5
+	second_amount = 150
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = oaxaqueno
+				any_realm_province = {
+				OR = {
+				culture = oaxaqueno
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_morale = 0.2
+		archers_offensive = 0.25
+		archers_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_YUCATANENSE = 
+{
+	first_type = 5
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture = yucatanense
+				any_realm_province = {
+				OR = {
+				culture = yucatanense
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		archers_offensive = 0.3
+	}
+}
+
 RETTYPE_CUL_HMONG = 
 {
 	first_type = 0
@@ -4595,7 +4647,7 @@ RETTYPE_CUL_OTO-MANGUEAN =
 	
 	 modifier = {
 		light_infantry_offensive = 0.25
-		light_cavalry_defensive = 0.25
+		light_infantry_defensive = 0.25
 		archers_offensive = 0.25
 		archers_defensive = 0.25
 	}
@@ -4651,6 +4703,30 @@ RETTYPE_CUL_TOTONAC =
 		light_cavalry_morale = 0.25
 		light_infantry_offensive = 0.25
 		light_infantry_morale = 0.25
+	}
+}
+
+RETTYPE_CUL_MAYAN = 
+{
+	first_type = 1
+	first_amount = 300
+	
+	potential = {
+		 higher_tier_than = BARON
+		 is_nomadic = no
+		 OR = {
+			 culture_group = mayan
+				any_realm_province = {
+				OR = {
+				culture_group = mayan
+				}
+			}
+		}
+	}
+	
+	 modifier = {
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.25
 	}
 }
 
