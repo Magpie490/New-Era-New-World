@@ -1471,16 +1471,6 @@ character_event = { # Alternate Start general maintenance
 		}
 		if = {
 			limit = {
-				yazidi = {
-					is_name_randomized = yes
-				}
-			}
-			d_yazidi = {
-				set_random_coa_effect = yes
-			}
-		}
-		if = {
-			limit = {
 				ibadi = {
 					is_name_randomized = yes
 				}
@@ -2143,12 +2133,7 @@ character_event = { # Alternate Start general maintenance
 		any_independent_ruler = { # Fix castes
 			any_realm_character = {
 				limit = {
-					OR = {
-						religion = yazidi
-						religion = yersenism
-						religion = mandaeanism
-						religion = ahlehaqq
-					}
+					religion = mandaeanism
 				}
 				if = {
 					limit = {

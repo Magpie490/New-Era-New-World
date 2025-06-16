@@ -10,7 +10,6 @@ isnt_forced_to_theocracy = {
 				}
 			}
 			religion_group = old_world_cultist_group
-			religion = yersenism
 			religion = neodonatists
 			religion = prussianist
 			religion = sebastianist
@@ -363,12 +362,6 @@ is_constitutional_religion_trigger = {
 }
 is_jadidist_religion_trigger = {
 	religion = jadidist
-}
-is_yarsani_religion_trigger = {
-	OR = {
-		religion = yersenism
-		religion = yazidi
-	}
 }
 
 # Abrahamic branches
@@ -897,16 +890,6 @@ allowed_to_use_stele_trigger = {
 		religion = orange_king
 	}
 }
-can_search_god_trigger = {
-	is_adult = yes
-	is_landed = yes
-	religion = yersenism
-	NOR = {
-		has_alternate_start_parameter = { key = religion_names value = random }
-		is_title_active = d_yersenism
-		has_character_flag = searched_for_god
-	}
-}
 one_holy_order_avalaible_trigger = {
 	NOT = { has_character_modifier = expelled_one_holy_order }
 	NOT = {
@@ -1079,10 +1062,7 @@ ghazwa_government_trigger = {
 	}
 }
 neoziamet_government_trigger = {
-	OR = {
-		religion_group = muslim
-		religion = ahlehaqq
-	}
+	religion_group = muslim
 	OR = {
 		culture = turkish
 		culture = rumeli
@@ -1112,10 +1092,7 @@ neoziamet_government_trigger = {
 	}
 }
 makhzen_government_trigger = {
-	OR = {
-		religion_group = muslim
-		religion = ahlehaqq
-	}
+	religion_group = muslim
 	OR = {
 		culture_group = hispanophone
 		culture_group = maghreb_arabic
@@ -1131,10 +1108,7 @@ makhzen_government_trigger = {
 	}
 }
 iqta_religion_trigger = {
-	OR = {
-		religion_group = muslim
-		religion = ahlehaqq
-	}
+	religion_group = muslim
 	NOR = { 
 		religion = koranist
 		religion = mesopotamian

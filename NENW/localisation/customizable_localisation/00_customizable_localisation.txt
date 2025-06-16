@@ -3439,7 +3439,6 @@ defined_text = {
 		trigger = { 
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes 
-				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
 				society_member_of = secret_religious_society_mazdaki
 				society_member_of = secret_religious_society_manichean
@@ -3453,8 +3452,7 @@ defined_text = {
 		localisation_key = String_As_salam_alaykum
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes 
-			NOR = {
-				society_member_of = secret_religious_society_yazidi
+			NOT = {
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -3577,7 +3575,6 @@ defined_text = {
 		trigger = { 
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes 
-				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
 				society_member_of = secret_religious_society_mazdaki
 				society_member_of = secret_religious_society_manichean
@@ -3591,8 +3588,7 @@ defined_text = {
 		localisation_key = String_May_Allah_guide_you
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes 
-			NOR = {
-				society_member_of = secret_religious_society_yazidi
+			NOT = {
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -4378,10 +4374,7 @@ defined_text = {
 	text = {
 		localisation_key = String_great_hero
 		trigger = {
-			OR = {
-				religion_group = pagan_group
-				is_khanist_religion_trigger = yes
-			}
+			religion_group = pagan_group
 		}
 	}
 	text = {
@@ -4423,10 +4416,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Great_Hero_cap
 		trigger = {
-			OR = {
-				religion_group = pagan_group
-				is_khanist_religion_trigger = yes
-			}
+			religion_group = pagan_group
 		}
 	}
 	text = {
@@ -5154,14 +5144,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Khanist
-		trigger = { true_religion_khanist_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Liehuo
 		trigger = { true_religion_maoist_trigger = yes 
 			NOT = {
@@ -5322,22 +5304,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Yarsani
-		trigger = { true_religion_yersenism_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Ahl_e_Haqq
-		trigger = { true_religion_ahlehaqq_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Fraticelli
 		trigger = { true_religion_fraticelli_trigger = yes 
 			NOT = {
@@ -5364,14 +5330,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Zikri
 		trigger = { true_religion_zikri_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Yazidi
-		trigger = { true_religion_yazidi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -6122,14 +6080,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Khanist
-		trigger = { true_religion_khanist_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Liehuo
 		trigger = { true_religion_maoist_trigger = yes 
 			NOT = {
@@ -6290,22 +6240,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Yarsani
-		trigger = { true_religion_yersenism_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Ahl_e_Haqq
-		trigger = { true_religion_ahlehaqq_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Fraticelli
 		trigger = { true_religion_fraticelli_trigger = yes 
 			NOT = {
@@ -6332,14 +6266,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Zikri
 		trigger = { true_religion_zikri_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Yazidi
-		trigger = { true_religion_yazidi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -6502,13 +6428,6 @@ defined_text = {
 #			true_religion_group_christian_trigger = yes
 #		}
 #	}
-#	text = {
-#		localisation_key = GOD_ALLAH
-#		trigger = {
-#			true_religion_group_muslim_trigger = yes
-#			NOT = { true_religion_yazidi_trigger = yes }
-#		}
-#	}
 #	text = { 
 #		localisation_key = GOD_SHAYTAN
 #		trigger = { true_religion_yazidi_trigger = yes }
@@ -6643,13 +6562,8 @@ defined_text = {
         localisation_key = String_Koran
         trigger = { 
             true_religion_group_muslim_trigger = yes
-            NOT = { true_religion_yazidi_trigger = yes }
             NOT = { true_religion_druze_trigger = yes }
         }
-    }
-    text = { 
-        localisation_key = String_Book_of_Illumination
-        trigger = { true_religion_yazidi_trigger = yes }
     }
     text = { 
         localisation_key = String_Epistles_of_Wisdom
@@ -7323,14 +7237,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Khanist
-		trigger = { true_religion_khanist_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Liehuo
 		trigger = { true_religion_maoist_trigger = yes 
 			NOT = {
@@ -7491,22 +7397,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Yarsani
-		trigger = { true_religion_yersenism_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Ahl_e_Haqq
-		trigger = { true_religion_ahlehaqq_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Fraticelli
 		trigger = { true_religion_fraticelli_trigger = yes 
 			NOT = {
@@ -7533,14 +7423,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Zikri
 		trigger = { true_religion_zikri_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Yazidi
-		trigger = { true_religion_yazidi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -8291,14 +8173,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Khanist
-		trigger = { true_religion_khanist_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Liehuo
 		trigger = { true_religion_maoist_trigger = yes 
 			NOT = {
@@ -8459,22 +8333,6 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Yarsani
-		trigger = { true_religion_yersenism_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Ahl_e_Haqq
-		trigger = { true_religion_ahlehaqq_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
 		localisation_key = String_Fraticelli
 		trigger = { true_religion_fraticelli_trigger = yes 
 			NOT = {
@@ -8501,14 +8359,6 @@ defined_text = {
 	text = { 
 		localisation_key = String_Zikri
 		trigger = { true_religion_zikri_trigger = yes 
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	text = { 
-		localisation_key = String_Yazidi
-		trigger = { true_religion_yazidi_trigger = yes 
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}

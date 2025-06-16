@@ -284,30 +284,6 @@ narrative_event = {
 		}
 	}
 	option = {
-		trigger = {
-			NOT = { religion = yersenism }
-			NOT = { trait = zealous }
-		}
-		religion = yersenism
-		add_trait = shaykh
-		any_courtier = { 
-			limit = { 
-				culture = soitoskan
-			}
-			religion = yersenism
-			add_trait = shaykh
-		}
-		event_target:old_religion = {
-			show_scope_change = no
-			add_sympathy_for_religion_effect = yes
-		}
-		character_event = { id = railroad.1004 tooltip = EVTRAILROAD1004_tooltip }
-		name = EVTOPTBRAILROAD1003
-		ai_chance = {
-			factor = 10
-		}
-	}
-	option = {
 		name = EVTOPTCRAILROAD1003
 		hidden_tooltip = { narrative_event = { id = railroad.1002 } }
 		trigger = {
@@ -352,9 +328,6 @@ character_event = {
 				}
 				10 = {
 					religion = zoroastrian
-				}
-				10 = {
-					religion = yersenism
 				}
 			}
 		}
