@@ -208,10 +208,7 @@ title_commander = {
 						religion = jain
 						religion = arcadian_reformed
 						religion = arcadian
-						religion = yazidi
-						religion = yersenism
 						religion = mandaeanism
-						religion = ahlehaqq
 					}
 					OR = {
 						trait = kshatriya
@@ -252,10 +249,7 @@ title_commander = {
 											religion = jain
 											religion = arcadian_reformed
 											religion = arcadian
-											religion = yazidi
-											religion = yersenism
 											religion = mandaeanism
-											religion = ahlehaqq
 										}
 										OR = {
 											trait = kshatriya
@@ -844,7 +838,6 @@ title_sebastokrator = {
 			religion_group = jewish_group
 			religion_group = pagan_group
 			religion_group = syncratic_group
-			religion = poseidonian
 		}
 	}
 	
@@ -885,7 +878,6 @@ title_caesar = {
 			religion_group = jewish_group
 			religion_group = pagan_group
 			religion_group = syncratic_group
-			religion = poseidonian
 		}
 	}
 	
@@ -931,7 +923,6 @@ title_kouropalates = {
 			religion_group = jewish_group
 			religion_group = pagan_group
 			religion_group = syncratic_group
-			religion = poseidonian
 		}
 	}
 		
@@ -977,7 +968,6 @@ title_anthypatos = {
 			religion_group = jewish_group
 			religion_group = pagan_group
 			religion_group = syncratic_group
-			religion = poseidonian
 		}
 	}
 	
@@ -1468,12 +1458,9 @@ title_baghatur = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			AND = {
-				is_nomadic = yes
-				culture_group = mongolic
-			}
-			is_khanist_religion_trigger = yes
+		AND = {
+			is_nomadic = yes
+			culture_group = mongolic
 		}
 	}
 	
@@ -1505,12 +1492,9 @@ title_cherbi = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			AND = {
-				is_nomadic = yes
-				culture_group = mongolic
-			}
-			is_khanist_religion_trigger = yes
+		AND = {
+			is_nomadic = yes
+			culture_group = mongolic
 		}
 	}
 	
@@ -1542,12 +1526,9 @@ title_darkhan = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			AND = {
-				is_nomadic = yes
-				culture_group = mongolic
-			}
-			is_khanist_religion_trigger = yes
+		AND = {
+			is_nomadic = yes
+			culture_group = mongolic
 		}
 	}
 	
@@ -1578,14 +1559,7 @@ title_noyan = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			has_landed_title = e_khanist
-			has_landed_title = e_greater_mongolia
-		}
-		OR = {
-			culture_group = mongolic
-			is_khanist_religion_trigger = yes
-		}
+		culture_group = mongolic
 	}
 	
 	gain_effect = {
@@ -1616,12 +1590,9 @@ title_behi = {
 	}
 	
 	allowed_to_grant = {
-		OR = {
-			AND = {
-				is_nomadic = yes
-				culture_group = mongolic
-			}
-			is_khanist_religion_trigger = yes
+		AND = {
+			is_nomadic = yes
+			culture_group = mongolic
 		}
 	}
 	
@@ -2190,9 +2161,8 @@ title_yabgu = {
 
 	allowed_to_grant = {
 		is_nomadic = yes
-		NOR = {
+		NOT = {
 			culture_group = mongolic
-			is_khanist_religion_trigger = yes
 		}
 	}
 	
@@ -2229,9 +2199,8 @@ title_ishad = {
 
 	allowed_to_grant = {
 		is_nomadic = yes
-		NOR = {
+		NOT = {
 			culture_group = mongolic
-			is_khanist_religion_trigger = yes
 		}
 	}
 	
@@ -2264,9 +2233,8 @@ title_kundur = {
 	
 	allowed_to_grant = {
 		is_nomadic = yes
-		NOR = {
+		NOT = {
 			culture_group = mongolic
-			is_khanist_religion_trigger = yes
 		}
 	}
 	
@@ -2832,10 +2800,7 @@ title_chouri_duke = {
 		higher_tier_than = COUNT
 		has_dlc = "Zeus"
 		primary_title = { has_law = law_voting_power_1 }
-		OR = {
-			religion_group = muslim
-			religion = ahlehaqq
-		}
+		religion_group = muslim
 		OR = {
 			culture_group = hispanophone
 			culture_group = maghreb_arabic
@@ -2930,10 +2895,7 @@ title_chouri_king = {
 		higher_tier_than = DUKE
 		has_dlc = "Zeus"
 		primary_title = { has_law = law_voting_power_1 }
-		OR = {
-			religion_group = muslim
-			religion = ahlehaqq
-		}
+		religion_group = muslim
 		OR = {
 			culture_group = hispanophone
 			culture_group = maghreb_arabic
@@ -3029,10 +2991,7 @@ title_chouri_emperor = {
 		higher_tier_than = KING
 		has_dlc = "Zeus"
 		primary_title = { has_law = law_voting_power_1 }
-		OR = {
-			religion_group = muslim
-			religion = ahlehaqq
-		}
+		religion_group = muslim
 		OR = {
 			culture_group = hispanophone
 			culture_group = maghreb_arabic
@@ -3402,10 +3361,7 @@ title_court_physician = {
 				religion = jain
 				religion = arcadian_reformed
 				religion = arcadian
-				religion = yazidi
-				religion = yersenism
 				religion = mandaeanism
-				religion = ahlehaqq
 			}
 			OR = {
 				trait = brahmin
@@ -3466,11 +3422,7 @@ title_hermetics_apprentice = {
 			religion = blessing_way
 			religion = blessing_way_reformed
 			AND = {
-				OR = {
-					religion_group = muslim
-					religion = yazidi
-					religion = yersenism
-				}
+				religion_group = muslim
 				trait = mystic
 			}
 		}
@@ -3500,8 +3452,6 @@ title_hermetics_apprentice = {
 			religion = blessing_way
 			religion = blessing_way_reformed
 			religion_group = muslim
-			religion = yazidi
-			religion = yersenism
 		}
 
 		NOT = { trait = in_hiding }
@@ -3525,8 +3475,6 @@ title_hermetics_apprentice = {
 					religion = blessing_way
 					religion = blessing_way_reformed
 					religion_group = muslim
-					religion = yazidi
-					religion = yersenism
 				} 
 			}
 			NOT = { has_character_flag = completed_apprenticeship }
@@ -3566,7 +3514,6 @@ title_hermetics_apprentice = {
 					religion = hellenic_pagan_reformed
 					religion_openly_novelist_or_reformed_trigger = yes
 					religion_openly_starist_pagan_or_reformed_trigger = yes
-					religion = poseidonian
 					has_landed_title = e_bhutan
 					top_liege = { has_landed_title = e_bhutan }
 				}

@@ -808,7 +808,6 @@ decisions = {
 			OR = {
 				religion = islamity
 				religion = pusaka
-				religion = ahlehaqq
 				religion_group = muslim
 			}
 			always = no 
@@ -1289,7 +1288,6 @@ decisions = {
 				religion = marapu
 				religion = barelvi
 				religion = alevi
-				religion = yazidi
 				religion = ovlatii
 				religion = voodun
 				religion = haiti_voodoo
@@ -1991,12 +1989,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			is_adult = yes
-			OR = {
-				religion = yazidi
-				religion = yersenism
-				religion = mandaeanism
-				religion = ahlehaqq
-			}
+			religion = mandaeanism
 			OR = {
 				government = feudal_government
 				government = agrarian_feudal_government
@@ -2069,12 +2062,7 @@ decisions = {
 				top_liege = {
 					any_realm_character = {
 						limit = {
-							OR = {
-								religion = yazidi
-								religion = yersenism
-								religion = mandaeanism
-								religion = ahlehaqq
-							}
+							religion = mandaeanism
 							is_adult = yes
 							NOT = { character = ROOT }
 							NOT = { trait = cynical }
@@ -2116,12 +2104,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			is_adult = yes
-			OR = {
-				religion = yazidi
-				religion = yersenism
-				religion = mandaeanism
-				religion = ahlehaqq
-			}
+			religion = mandaeanism
 			OR = {
 				is_republic = yes
 				OR = { government = oligarchic_republic government = consular_republic }
@@ -2181,12 +2164,7 @@ decisions = {
 				top_liege = {
 					any_realm_character = {
 						limit = {
-							OR = {	
-								religion = yazidi
-								religion = yersenism
-								religion = mandaeanism
-								religion = ahlehaqq
-							}
+							religion = mandaeanism
 							is_adult = yes
 							NOT = { character = ROOT }
 							NOT = { trait = cynical }

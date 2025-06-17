@@ -255,7 +255,6 @@ uses_zodiacs = {
 		religion = druze
 		religion = alawite
 		religion = neo_zorvanite
-		religion = poseidonian
 		religion = mandaeanism
 		religion = dianic
 		religion = myriadic
@@ -279,8 +278,6 @@ uses_alchemy = {
 		religion = el_shaddai
 		has_religion_feature = religion_feature_blessing_way
 		religion_group = muslim
-		religion = yazidi
-		religion = yersenism
 	}
 }
 uses_hexes = {
@@ -652,10 +649,6 @@ desired_by_madame_1 = {
 			is_ironist_religion_trigger = yes
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_khanist }
-			is_khanist_religion_trigger = yes
-		}
-		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
 			is_jacobinist_religion_trigger = yes
 		}
@@ -779,10 +772,6 @@ hated_by_madame_1 = {
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
 			NOT = { is_ironist_religion_trigger = yes }
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_khanist }
-			NOT = { is_khanist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
@@ -912,10 +901,6 @@ desired_by_madame_2 = {
 			is_ironist_religion_trigger = yes
 		}
 		AND = {
-			FROM = { has_character_modifier = madame_wants_khanist }
-			is_khanist_religion_trigger = yes
-		}
-		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
 			is_jacobinist_religion_trigger = yes
 		}
@@ -1040,10 +1025,6 @@ hated_by_madame_2 = {
 		AND = {
 			FROM = { has_character_modifier = madame_wants_ironist }
 			NOT = { is_ironist_religion_trigger = yes }
-		}
-		AND = {
-			FROM = { has_character_modifier = madame_wants_khanist }
-			NOT = { is_khanist_religion_trigger = yes }
 		}
 		AND = {
 			FROM = { has_character_modifier = madame_wants_jacobinist }
