@@ -924,32 +924,6 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_shindo = {
-		picture = GFX_religion_feature_shindo
-		potential = {
-			has_game_started = yes
-			religion = shindo_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = shindo_reformed
-			NOR = {
-				has_selected_religion_feature = religion_alchemy 
-				has_selected_religion_feature = religion_haruspicy #Redundant
-				has_selected_religion_feature = religion_beatification
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_alchemy }
-			custom_tooltip = { text = tooltip_religion_feature_haruspicy }
-			custom_tooltip = { text = tooltip_religion_feature_beatification }
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
 	religion_self_immolate = { #Gives option to earn piety and a virtue in exchange of immolating a bodypart
 		picture = GFX_religion_feature_immolation
 		potential = {
