@@ -206,42 +206,69 @@ e_altiplano = {
 		}
 	}
 	k_sonora = {
-		color={ 168 95 62 }
-		color2={ 255 255 255 }
+		color=	{ 168 95 62 }
+		color2=	{ 255 255 255 }
 		
 		capital = 3002 # c_hermosillo
 		
-		d_sonora = {
-			color={ 169 104 75 }
-			color2={ 255 255 255 }
+		d_altar = {
+			color = { 190 78 99 }
+			color2 = { 255 255 255 }
 			
-			capital = 3002 # c_hermosillo
-			
-			c_hermosillo = { # 3002
-				color={ 179 124 100 }
+			capital = 3001 #temporary
+		
+			c_plutarco = { # 3001  
+				color={ 206 134 100 }
 				color2={ 255 255 255 }
 				
-				b_santisima_trinidad_del_pitic_SO = {}
-				b_hermosillo_SO = {}
-				b_aconchi_SO = {}
-				b_ures_SO = {}
-				b_punta_ignacio_SO = {}
-				b_punta_chueca_SO = {}
-				b_mina_pilares_SO = {}
-				b_huaquila_SO = {}
+				b_sonoidag_SO = {}
+				b_sonoyta_SO = {}
+				b_cerro_colorado_SO = {}
+				b_nayarit_SO = {} 
+				b_alfredo_lopez_aceves_SO = {}
+				b_colonia_reforma_SO = {}
+				b_el_pinacate_SO = {}
 			}
-			c_altar = { #2731
+			c_altar = { #2731 #Colorado
 				color = { 145 76 33 }
 				color2 = { 255 255 255 }
 		
-				b_tubutama_SO = {}
-				b_atil_SO  = {}
-				b_altar_SO  = {}
-				b_la_sangre_SO  = {}
-				b_saric_SO = {}
-				b_oquitoa_SO = {}
-				b_la_reforma_SO = {}
+				b_san_luis_rio_colorado_SO = {}			
+				b_puerto_penasco_SO = {}	
+				b_la_choya_SO = {}
+				b_las_conchas_SO = {}
+				b_riito_SO = {}
+				b_mesa_rica_SO = {}
+				b_islita_SO = {}
+
+
+
+	#			b_altar_SO  = {}
+	#			b_la_sangre_SO  = {}
+	#			b_saric_SO = {}
+
+	#			b_la_reforma_SO = {}
+			}	
+			c_caborca = { # 3000
+				color={ 194 152 128 }
+				color2={ 255 255 255 }
+				
+				b_heroica_caborca_SO = {}
+				b_desemboque_SO = {}				
+				b_altar_SO = {}
+				b_puerto_lobos_ SO = {}
+				b_la_y_griega_SO = {}
+				b_la_retranca_SO = {}
+				b_el_coyote_SO = {}
 			}
+		}
+		
+		d_pimeria = {
+			color = { 155 102 113 }
+			color2 = { 255 255 255 }
+			
+			capital =  3003 # c_nogales
+
 			c_imuris = {
 				color = { 107 79 76 }
 				color2 = { 255 255 255 }
@@ -249,6 +276,13 @@ e_altiplano = {
 				b_magdalena_de_kino_SO = {				
 				}
 				b_imuris_SO = {}
+				
+				b_oquitoa_SO = {}
+				b_atil_SO  = {}
+				b_tubutama_SO = {}			
+
+				
+				
 				b_san_ignacio_SO = {}
 				b_campo_carretero_SO = {}
 				b_el_crucero_SO = {}
@@ -262,12 +296,30 @@ e_altiplano = {
 				b_nacozari_de_garcia_SO = {	
 				}
 				b_cumpas_SO  = {}
-				b_moctezuma_SO  = {}
+	#			b_moctezuma_SO  = {}
 				b_divisaderos_SO  = {}
 				b_el_tajo_SO = {}
 				b_san_patricio_de_la_mesa_SO = {}
 				b_san_rafael_de_la_noria_SO = {}
-			}
+			}			
+			c_nogales = { # 3003
+				color={ 146 124 121 }
+				color2={ 255 255 255 }
+				
+				b_nogales_SO = {}
+				b_cananea_SO = {}
+				b_cumpas_SO1 = {}
+				b_nacozari_de_garcia_SO1 = {}
+				b_san_felipe_SO = {}
+				b_moctezuma_SO1 = {}
+				b_elcoyote_SO = {}
+			}			
+			
+		}
+		d_bacanora = {
+			color = { 249 239 197 }
+			color2 = { 255 255 255 }
+			
 			c_bavispe = { #2737
 				color = { 153 118 67 }
 				color2 = { 255 255 255 }
@@ -297,39 +349,90 @@ e_altiplano = {
 				b_buena_vista_SO = {}
 				b_babaco_SO = {}
 
-			}
-			c_nogales = { # 3003
-				color={ 146 124 121 }
+			}			
+			c_novillo = { #2399
+				color = { 155 150 100 }
+				color2 = { 255 255 255 }
+				
+				
+				yaqui = "Hiak Vatwe"				
+				
+				b_bacanora_SO = {
+					yaqui = "Vacat Noraca"
+				#	seri = "Vacat Noraca"
+				}
+				b_villa_pesqueira_SO = {}
+				b_san_pedro_de_la_cueva_SO = {}
+				b_moctezuma_SO = {}
+				b_tepache_SO = {
+					yaqui = "Tepatzi"
+				#	seri = "Tepatzi"
+					nahua = "Tepiatl"
+				}				
+				b_soyopa_SO = {}
+				b_tonichi_SO = {}
+			}			
+		}
+		
+		d_sonora = {
+			color={ 169 104 75 }
+			color2={ 255 255 255 }
+			
+			capital = 3002 # c_hermosillo
+			
+			c_hermosillo = { # 3002
+				color={ 179 124 100 }
 				color2={ 255 255 255 }
 				
-				b_nogales_SO = {}
-				b_cananea_SO = {}
-				b_cumpas_SO1 = {}
-				b_nacozari_de_garcia_SO1 = {}
-				b_san_felipe_SO = {}
-				b_moctezuma_SO1 = {}
-				b_elcoyote_SO = {}
+				b_ures_SO = {}
+				b_hermosillo_SO = {}
+				b_santisima_trinidad_del_pitic_SO = {}
+				b_san_pedro_el_saucito_SO = {}
+				b_mesa_del_seri_SO = {}
+				b_zamora_SO = {}
+				b_huaquila_SO = {}
+#				b_punta_ignacio_SO = {}
+#				b_punta_chueca_SO = {}
+#				b_mina_pilares_SO = {}
 			}
-			c_caborca = { # 3000 Temporary Swap
-				color={ 194 152 128 }
-				color2={ 255 255 255 }
+			c_baviacora = { #2350
+				color = { 189 39 54 }
+				color2 = { 255 255 255 }
 				
-				b_heroica_caborca_SO = {}
-				b_altar_SO1 = {}
+
+				b_baviacora_SO = {}
+				b_carbo_SO = {}
+				b_san_miguel_de_horcasitas_SO= {}
+				b_opodepe_SO= {}
+				b_pesqueira_SO= {}
+				b_aconchi_SO = {}
+				b_san_felipe_de_jesus_SO= {}
+				b_rayon_SO = {}
+			}
+			
+			c_trincheras = { # 2351
+				color = { 245 199 130 }
+				color2 = { 255 255 255 }
+				
+				b_trincheras_SO = {}
+				b_benjamin_hill_SO = {}
 				b_santa_ana_SO = {}
-				b_magdelena_SO = {}
-				b_imuris_SO2 = {}
-				b_agua_prieta_SO = {}
-				b_puerto_lobos_SO = {}
+				b_estacion_llano_SO = {}
+				b_nuevo_ocuca_SO = {}
+				b_santa_martha_SO = {}
+				b_santa_ana_viejo_SO = {}
+	
 			}
+
+
 			c_pueto_libertad = { #1989
 				color={ 194 152 128 }
 				color2={ 255 255 255 }
 				
+				b_pitiquito_SO = {}
 				b_puerto_libertad_SO = {}
 				b_el_saguarito_SO = {}
 				b_el_julio_SO = {}
-				b_puero_lobos_SO = {}
 				b_tordilla_SO = {}
 				b_campo_julio_SO = {}
 				b_los_mochos_SO = {}
@@ -346,6 +449,7 @@ e_altiplano = {
 				b_la_pintada_SO = {}
 				b_miguel_aleman_SO = {}
 			}
+
 		}
 	}
 
@@ -353,26 +457,19 @@ e_altiplano = {
 		color={ 255 255 255 }
 		color2={ 255 255 255 }
 		
-		capital = 2170 # c_guanacevi #placeholder by tsf4
+		capital = 3011 # c_guerrero
+		
+		raramuri = "Rarámuri A'a"
 		
 		d_casas_altas = {
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
 			
-			capital = 2170 # c_guanacevi #placeholder by tsf4
+			capital = 2394 #c_temosachic
 			
-			c_guanacevi = {  #2814
-				color = { 255 114 104 }
-				color2 = { 255 255 255 }
-				
-				b_guanacevi_DU = {}
-				b_la_rosilla_DU = {}
-				b_cienega_de_la_vaca_DU = {}
-				b_quelites_DU = {}
-				b_el_zape_DU = {}
-				b_laguna_seca_DU = {}
-				b_las_pomas_DU = {}
-			}
+			raramuri = "Papigochic"
+			
+
 			c_guerrero = { # 3011
 				color={ 137 118 128 }
 				color2={ 255 255 255 }
@@ -385,19 +482,7 @@ e_altiplano = {
 				b_campo_CH = {}
 				b_el_nogal_CH = {}
 			}
-			c_guachochi = { # 3014
-				color={ 149 103 128 }
-				color2={ 255 255 255 }
-				
-				b_guachochi_CH = {}
-				b_batopilas_CH = {}
-				b_balleza_CH = {}
-				b_san_rafael_CH = {}
-				b_rocherichic_CH = {}
-				b_urique_CH = {}
-				b_guadalupe_y_calvo_CH = {}
-				b_cienega_prietta_CH = {}
-			}
+
 			c_madera_CH = { #2837
 				color = { 196 115 174 }
 				color2 = { 255 255 255 }
@@ -413,18 +498,21 @@ e_altiplano = {
 #				b_mesa_del_huracan_CH = {}
 #				b_la_nortena_CH = {}
 			}
-			c_tutuaca = { # 3015
+			c_chinipas = { # 3015
 				color={ 197 152 185 }
 				color2={ 255 255 255 }
 				
-				b_tutuaca_CH = {}
-				b_papigochi_CH = {}
-				b_cascada_de_basaseachi_CH = {}
 				b_chinipas_CH = {}
-				b_san_miguel_CH = {}
+				b_guazapares_CH = {}
 				b_uruachi_CH = {}
+				b_moris_CH = {}
+				b_san_miguel_CH = {}
 				b_creel_CH = {}
+#				b_cascada_de_basaseachi_CH = {}
+#				b_papigochi_CH = {} #candidate for Casas Altas alternative name 
+#				b_tutuaca_CH = {}
 			}
+
 			c_temosachic = { #2394
 				color = { 255 197 213 }
 				color2 = { 255 255 255 }
@@ -437,6 +525,66 @@ e_altiplano = {
 				b_cocomorachic_CH = {}
 				b_labor_de_purisima_CH = {}
 			}	
+		}
+		
+		d_tarahumara = {
+			color = { 255 200 213 }
+			color2 = { 255 255 255 }
+			
+			capital = 2397 #batopilas
+			
+			raramuri = "Guachochic"
+			
+			c_mohinora = { #2398
+				color = { 125 20 59 }
+				color2 = { 255 255 255 } 
+			
+				b_guadalupe_y_calvo_CH = {}
+				b_baborigame_CH = {}
+				b_turuachi_CH = {}
+				b_atascaderos_CH = {}
+				b_san_juan_nepomuceno_CH = {}
+				b_calabacillas_CH = {}
+				b_dolores_CH = {}
+			}
+			c_batopilas = { #2397
+				color = { 198 118 68 }
+				color2 = { 255 255 255 }
+				
+				b_batopilas_CH = {}
+				b_urique_CH = {}
+				b_morelos_CH = {}
+				b_guapalayna_CH = {}
+				b_san_rafael_CH = {}
+				b_cerocahui_CH = {}
+				b_tempisque_CH = {}
+			}	
+			c_bocoyna = { # 2270
+				color = { 185 120 50 }
+				color2 = { 255 255 255 }
+				
+				b_bocoyna_CH = {}
+				b_creel_CH = {}
+				b_carichi_CH = {}
+				b_ojos_azules_CH = {}
+				b_san_juanito_CH = {}
+				b_norogachi_de_mamorachi_CH = {}
+				b_sisoguichi_CH  = {}
+				
+			}	
+			c_guachochi = { # 3014
+				color={ 149 103 128 }
+				color2={ 255 255 255 }
+				
+				b_guachochi_CH = {}
+
+				b_balleza_CH = {}
+				b_san_rafael_CH = {}
+				b_rocherichic_CH = {}
+
+
+				b_cienega_prietta_CH = {}
+			}
 		}
 	}
 	k_casas_grandes = {
@@ -719,6 +867,7 @@ e_altiplano = {
 				b_saburniaga_CH = {}
 				b_santa_teresa_CH = {}
 				b_toribio_ortega_CH = {}
+				b_manuel_benavides = {}
 			}
 						c_santa_elena = { # 3012
 				color={ 155 112 109 }
@@ -726,7 +875,7 @@ e_altiplano = {
 				
 				b_carmargo_CH = {}
 				b_san_francisco_de_conchos_CH = {}
-				b_atascaderos_CH = {}
+#				b_atascaderos_CH = {}
 				b_el_milagro_CH = {}
 				b_maijoma_CH = {}
 				b_saucillo_CH1 = {}
@@ -855,6 +1004,18 @@ e_altiplano = {
 				b_tambores_de_abajo_DU = {}
 				b_veracruz_de_la_sierra_DU = {}
 			}
+			c_guanacevi = {  #2814
+				color = { 255 114 104 }
+				color2 = { 255 255 255 }
+				
+				b_guanacevi_DU = {}
+				b_la_rosilla_DU = {}
+				b_cienega_de_la_vaca_DU = {}
+				b_quelites_DU = {}
+				b_el_zape_DU = {}
+				b_laguna_seca_DU = {}
+				b_las_pomas_DU = {}
+			}			
 		}
 	}
 }
