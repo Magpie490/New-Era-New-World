@@ -2573,6 +2573,7 @@ decisions = {
 			e_deseret = {
 				has_holder = no
 			}
+			NOT = { has_global_flag = formed_deseret }
 			prisoner = no
 			has_regent = no
 		}
@@ -2597,6 +2598,7 @@ decisions = {
 				}
 			}
 			hidden_tooltip = {
+				set_global_flag = formed_deseret
 				k_yuta = { de_jure_liege = e_deseret }
 				if = {
 					limit = { has_landed_title = k_idaho }
@@ -2629,6 +2631,7 @@ decisions = {
 				has_landed_title = e_deseret
 				religion = community_of_christ
 			}
+			NOT = { has_global_flag = formed_zion }
 			prisoner = no
 			has_regent = no
 		}
@@ -2681,6 +2684,7 @@ decisions = {
 				}
 			}
 			hidden_tooltip = {
+				set_global_flag = formed_zion
 				k_yuta = { de_jure_liege = e_zion }
 				k_mojave = { de_jure_liege = e_zion }
 				k_nevada = { de_jure_liege = e_zion }
