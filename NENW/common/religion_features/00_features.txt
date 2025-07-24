@@ -1739,6 +1739,63 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
+	religion_feature_centaurista = {
+		picture = GFX_religion_feature_centaurista
+		potential = {
+			has_game_started = yes
+			religion = centaurista_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = centaurista_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_relentless
+				has_selected_religion_feature = religion_warlike
+				has_selected_religion_feature = religion_harems
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
+			custom_tooltip = { text = tooltip_religion_feature_offensive }
+			custom_tooltip = { text = tooltip_religion_feature_harems }
+			custom_tooltip = { text = tooltip_religion_feature_war_levies }
+			custom_tooltip = { text = tooltip_religion_feature_crusade }
+			custom_tooltip = { text = tooltip_religion_feature_warlike }
+			custom_tooltip = { text = tooltip_religion_feature_prestige_loss }
+			hidden_tooltip = {
+				set_max_consorts = 0
+				set_max_wives = 4
+				set_ignores_defensive_attrition = yes
+				set_pacifist = no
+				set_allow_looting = yes
+				set_hard_to_convert = no
+				set_peace_piety_gain = 0
+				set_raised_vassal_opinion_loss = no
+				set_piety_loss_for_attacking_same_religion = no
+				set_peace_prestige_loss = yes
+				set_convert_other_groups = 0
+				set_convert_same_group = 1
+				set_ai_aggression = 2.0
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "TENGRI_RELENTLESS_RELIGION"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_tengri = {
 		picture = GFX_religion_feature_tengri
 		potential = {
