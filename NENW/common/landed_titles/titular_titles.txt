@@ -25,8 +25,29 @@ e_grand_council_oklahoma = {
 
 	title_prefix = "GRAND_COUNCIL"
 
-	capital = 940 #Cleveland
+	allow = {
+		religion = peyotist
+		AND = {
+			completely_controls = k_oklahoma
+			completely_controls = k_texlahoma
+		}
+		OR = {
+			culture_group = ojibwe
+			culture_group = caddoan
+			culture_group = muskogean
+			culture_group = siouan
+			culture_group = plains_algonquian
+			culture = plains_apache
+			culture = kiowa
+			culture = anigiduwagi
+		}
+		e_oklahoma = { has_holder = no }
+	}
+
+	capital = 325 #Oklahoma City
 	title = "High Chief"
+	assimilate = no #prevents title from dejure drifting territory
+	creation_requires_capital = yes
 }
 
 ### titular kingdoms

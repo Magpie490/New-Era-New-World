@@ -2372,22 +2372,6 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			OR = {
-				culture_group = californian
-				culture_group = californio_group
-				culture_group = yokutian
-				culture_group = yurokan
-				culture = chinafornian
-				culture = hupa
-				culture = pomo
-				culture = kailiphorani
-				culture = nikkeiamerikajin
-				culture = pinoy
-				culture = viet_kieu
-				culture = armenifornian
-				culture = mojavean
-				culture = hmong
-			}
 			NOT = {
 				religion = amaitist #they get a unique california title 
 			}
@@ -5377,7 +5361,90 @@ decisions = {
 			factor = 1
 		}
 	}
-	
+	organize_hundredninetynine_infantry_regiment = { #louisiana
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR ={
+				AND = {
+					has_landed_title = e_columbia
+					religion = constitutional
+				}
+				AND = {
+					has_landed_title = e_custodite
+					religion = custodite
+				}
+				has_landed_title = e_usa
+			}
+			NOT = { has_global_flag = hundredninetynine_infantry_regiment_formed }
+			
+		}
+		allow = {
+			OR = {
+				has_landed_title = c_new_orleans
+				any_realm_lord = { 
+					has_landed_title = c_new_orleans
+				}
+			}
+			OR = {
+				AND = {
+					ai = no
+					prestige = 1500
+					wealth = 1500
+				}
+				AND = {
+					ai = yes
+					prestige = 750
+					wealth = 750
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hundredninetynine_infantry_regiment_formed
+			if = {
+				limit = {
+					ai = yes
+				}
+				prestige = -750
+				wealth = -750
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				prestige = -1500
+				wealth = -1500
+			}
+			activate_title = { title = d_oneninetynine_infantry_regiment status = yes }
+			hidden_tooltip = {
+					create_character = {
+						random_traits = yes
+						religion = constitutional
+						culture = federalist
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+					}
+				new_character = {
+					d_oneninetynine_infantry_regiment = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	##HOFs
 	form_madonnite_hof = {
 		is_high_prio = yes
