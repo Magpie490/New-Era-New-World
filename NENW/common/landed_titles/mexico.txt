@@ -94,6 +94,8 @@ e_mexico = {
 	k_aguascalientes = {
 		color={ 204 238 255 }
 		color2={ 255 255 255 }
+
+		capital = 3084 # c_aguascalientes
 		
 		d_aguascalientes = {
 			color = { 181 222 242 }
@@ -120,6 +122,8 @@ e_mexico = {
 	k_queretaro = {
 		color={ 255 255 255 }
 		color2={ 255 255 255 }
+
+		capital = 3091 # c_santiago_de_queretaro
 		
 		d_queretaro = {
 			color={ 215 224 246 }
@@ -1207,6 +1211,19 @@ e_mexico = {
 				b_san_lorenzo_toxico_MX = {}
 				b_san_jeronimo_ixtapantongo_MX = {}
 			}
+			c_oriente = { # 3059
+				color={ 158 185 100 }
+				color2={ 255 255 255 }
+				
+				b_tejupilco_de_hidalgo_MC = {}
+				b_luvianos_MC = {}
+				b_zitacuaro_MC = {}
+				b_tlatlaya_MC = {}
+				b_amatepec_MC = {}
+				b_tlachapa_MC = {}
+				b_san_simon_MC = {}
+				b_cutzamala_de_pinzon_MC = {}
+			}
 		}
 		
 		d_mexico = {
@@ -2185,83 +2202,14 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		color={ 15 175 111 }
 		color2={ 255 255 255 }
 		
-		capital = 3054 # c_patzcuaro
+		capital = 3052 # c_morelia
 		
 		d_michoacan = {
 			color={ 25 205 81 }
 			color2={ 255 255 255 }
 			
-			capital = 3054 # c_patzcuaro
+			capital = 3052 # c_morelia
 			
-			c_zamora = { # 3051
-				color={ 85 225 176 }
-				color2={ 255 255 255 }
-				
-				b_zamora_MC = {}
-				b_nahuatzen_MC = {}
-				b_la_manzanilla_de_la_paz_MC = {}
-				b_tangancicuaro_de_arista_MC = {}
-				b_jacona_MC = {}
-				b_tlazazalca_MC = {}
-				b_tizapan_el_alto_MC = {}
-				b_vista_hermosa_de_negrete_MC = {}
-			}
-			c_la_piedad = { #2794
-				color = { 98 188 156 }
-				color2 = { 255 255 255 }
-				
-				purepecha = "Iorekuaro"
-
-				b_yurecuaro_MC  = {
-					purepecha = "Iorekuaro"
-				}
-				b_la_piedad_MC = {
-					purepecha = "Aramutaro"
-				}
-				b_santa_ana_pacueco_GT = {}
-				b_numaran_MC = {}
-				b_brisenas_de_matamoros_MC = {}
-				b_tanhuato_de_guerrero_MC = {}
-				b_ticuitaco_MC = {}
-			}
-			c_cutzamala_de_pinzon = { # 3388
-				color={ 45 46 35 }
-				color2={ 255 255 255 }
-				
-				b_cutzamala_de_pinzon_mexi = {
-				}
-				b_tlalchapa_mexi = {
-				}
-				b_san_jacinto_mexi = {
-				}
-				b_huaratzio_mexi = {
-				}
-				b_la_garra_mexi = {
-				}
-				b_cuadrilla_nueva_mexi = {
-				}
-				b_san_blas_mexi = {
-				}
-			}
-			c_heroica_zitacuaro = { # 3389
-				color={ 255 230 0 }
-				color2={ 255 255 255 }
-				
-				b_tuzantla_mexi = {
-				}
-				b_heroica_zitacuaro_mexi = {
-				}
-				b_benito_juarez_mexi = {
-				}
-				b_el_paso_de_la_virgen_mexi = {
-				}
-				b_cana_quemada_mexi = {
-				}
-				b_mesa_del_aire_mexi = {
-				}
-				b_timbuscatio_mexi = {
-				}
-			}
 			c_maravatio = { # 3390
 				color={ 0 96 255 }
 				color2={ 255 255 255 }
@@ -2316,6 +2264,44 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 					used_for_dynasty_names = no
 				}
 			}
+		}
+		d_purepecha = {
+			color={ 158 206 249 }
+			color2={ 255 255 255 }
+
+			capital = 3054 #c_patzcuaro
+
+			c_zamora = { # 3051
+				color={ 85 225 176 }
+				color2={ 255 255 255 }
+				
+				b_zamora_MC = {}
+				b_nahuatzen_MC = {}
+				b_la_manzanilla_de_la_paz_MC = {}
+				b_tangancicuaro_de_arista_MC = {}
+				b_jacona_MC = {}
+				b_tlazazalca_MC = {}
+				b_tizapan_el_alto_MC = {}
+				b_vista_hermosa_de_negrete_MC = {}
+			}
+			c_la_piedad = { #2794
+				color = { 98 188 156 }
+				color2 = { 255 255 255 }
+				
+				purepecha = "Iorekuaro"
+
+				b_yurecuaro_MC  = {
+					purepecha = "Iorekuaro"
+				}
+				b_la_piedad_MC = {
+					purepecha = "Aramutaro"
+				}
+				b_santa_ana_pacueco_GT = {}
+				b_numaran_MC = {}
+				b_brisenas_de_matamoros_MC = {}
+				b_tanhuato_de_guerrero_MC = {}
+				b_ticuitaco_MC = {}
+			}
 			c_patzcuaro = { # 3054
 				color={ 158 206 249 }
 				color2={ 255 255 255 }
@@ -2343,7 +2329,61 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_paracho_MC = {}
 			}
 		}
-		d_costa_grande = {
+		d_zitacuaro = {
+			color={ 255 230 0 }
+			color2={ 255 255 255 }
+
+			capital = 3389 #c_heroica_zitacuaro
+
+			c_heroica_zitacuaro = { # 3389
+				color={ 255 230 0 }
+				color2={ 255 255 255 }
+				
+				b_tuzantla_mexi = {
+				}
+				b_heroica_zitacuaro_mexi = {
+				}
+				b_benito_juarez_mexi = {
+				}
+				b_el_paso_de_la_virgen_mexi = {
+				}
+				b_cana_quemada_mexi = {
+				}
+				b_mesa_del_aire_mexi = {
+				}
+				b_timbuscatio_mexi = {
+				}
+			}
+			c_tuzantla = { #2786
+				color = { 100 119 87 }
+				color2 = { 255 255 255 }
+				
+				b_tuzantla_MC = {}
+				b_tiquicheo_MC2 = {}
+				b_tzitzio_MC = {}
+				b_tafetan_MC = {}
+				b_el_limon_papatzidan_MC = {}
+				b_caramecuaro_MC = {}
+				b_melchor_ocampo_MC = {
+					used_for_dynasty_names = no
+				}
+				b_ceibas_de_trujillo_MC = {}
+			}
+			c_huetamo = { # 3060
+				color={ 121 149 82 }
+				color2={ 255 255 255 }
+				
+				b_huetamo_MC = {}
+				b_tiquicheo_MC = {}
+				b_turicato_MC = {}
+				b_zirandaro_MC = {}
+				b_guariche_MC = {}
+				b_bolson_MC = {}
+				b_nocupetaro_MC = {}
+				b_san_lucas_MC = {}
+			}
+		}
+		d_costa_michoacana = {
 			color={ 28 228 254 }
 			color2={ 255 255 255 }
 			
@@ -2362,19 +2402,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_el_faro_MC = {}
 				b_ostula_MC = {}
 			}
-			c_atoyac = { #2638
-				color = { 113 58 205 }
-				color2 = { 255 255 255 }
-				
-				b_atoyac_de_alvarez_GR = {}
-				b_zacualpan_GR = {}
-				b_san_jeronimo_de_juarez_GR = {}
-				b_santiago_ATY_GR = {}
-				b_san_andres_de_la_cruz_GR = {}
-				b_san_vicente_de_benitez_GR = {}
-				b_la_y_griega_GR = {}
-				b_arenal_de_alvarez_GR = {}
-			}
 			c_lazaro_cardenas = { # 3056
 				color={ 146 185 179 }
 				color2={ 255 255 255 }
@@ -2387,19 +2414,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_la_mira_MC = {}
 				b_playa_azul_MC = {}
 				b_la_orilla_MC = {}
-			}
-			c_petatlan = { # 3057
-				color={ 91 76 152 }
-				color2={ 255 255 255 }
-				
-				b_ixtapa_MC = {}
-				b_coacoyul_MC = {}
-				b_balcon_MC = {}
-				b_zumatlan_MC = {}
-				b_los_organos_MC = {}
-				b_lagunillas_MC = {}
-				b_troncones_MC = {}
-				b_barra_de_potosi_MC = {}
 			}
 		}
 		d_tierra_caliente = {
@@ -2434,39 +2448,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_ahuijullo_JA = {}
 				b_el_terrero_JA = {}
 			}
-			c_tuzantla = { #2786
-				color = { 100 119 87 }
-				color2 = { 255 255 255 }
-				
-				b_tuzantla_MC = {}
-				b_tiquicheo_MC2 = {}
-				b_tzitzio_MC = {}
-				b_tafetan_MC = {}
-				b_el_limon_papatzidan_MC = {}
-				b_caramecuaro_MC = {}
-				b_melchor_ocampo_MC = {
-					used_for_dynasty_names = no
-				}
-				b_ceibas_de_trujillo_MC = {}
-			}
-			c_pungarabato = { #2643
-				color = { 83 119 107 }
-				color2 = { 255 255 255 }
-				
-				b_tlapehuala_GR = {
-				}
-				b_ciudad_altamirano_GR = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_arcelia_GR = {}
-				b_tlachapa_GR = {}	
-				b_tanganhuato_GR = {}	
-				b_san_jose_poliutla_GR = {}	
-				b_san_antonio_de_las_huertas_GR	 = {}
-				b_nueva_guerrero_GR	 = {}
-			}
-
 			c_apatzingan = { #2783
 				color = { 152 214 104 }
 				color2 = { 255 255 255 }
@@ -2481,102 +2462,21 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_las_tinajas_MC = {}
 				b_puerta_de_alambre_MC = {}
 			}
-			c_coyuca_de_catalan = { # 3061
-				color={ 94 167 143 }
-				color2={ 255 255 255 }
-				
-				b_coyuca_de_catalan_MC = {}
-				b_el_naranjo_MC = {}
-				b_tlapehuala_MC = {}
-				b_los_placeres_del_oro_MC = {}
-				b_guayameo_MC = {}
-				b_ciudad_altamirano_MC = { 
-					short_name = no
-					used_for_dynasty_names = no
-				}
-				b_arcelia_MC = {}
-				b_quiricuaro_MC = {}
-			}
-			c_huetamo = { # 3060
-				color={ 121 149 82 }
-				color2={ 255 255 255 }
-				
-				b_huetamo_MC = {}
-				b_tiquicheo_MC = {}
-				b_turicato_MC = {}
-				b_zirandaro_MC = {}
-				b_guariche_MC = {}
-				b_bolson_MC = {}
-				b_nocupetaro_MC = {}
-				b_san_lucas_MC = {}
-			}
-			c_iguala = { # 3062
-				color={ 85 79 109 }
-				color2={ 255 255 255 }
-				
-				b_iguala_MC = {}
-				b_tonalapa_de_rio_MC = {}
-				b_taxco_MC = {}
-				b_buenavista_de_cuellar_MC = {}
-				b_cocula_MC = {}
-				b_metlapa_MC = {}
-				b_teloloapan_MC = {}
-				b_huitzuco_MC = {}
-			}
-			c_atenango_del_rio = {
-				color={ 112 67 134 }
-				color2={ 255 255 255 }
-				
-				b_huitzuco_GR = {}
-				b_atenango_del_rio_GR = {}
-				b_buenavista_de_cuellar_GR = {}
-				b_copalillo_GR = {}
-				b_pololcingo_GR = {}
-				b_tlalcozotitlan_GR = {}
-				b_san_miguel_de_las_palmas_GR = {}
-				b_santiago_tlamazacapa_GR = {}
-				b_zicapa_GR = {}
-			}
-			c_oriente = { # 3059
-				color={ 158 185 100 }
-				color2={ 255 255 255 }
-				
-				b_tejupilco_de_hidalgo_MC = {}
-				b_luvianos_MC = {}
-				b_zitacuaro_MC = {}
-				b_tlatlaya_MC = {}
-				b_amatepec_MC = {}
-				b_tlachapa_MC = {}
-				b_san_simon_MC = {}
-				b_cutzamala_de_pinzon_MC = {}
-			}
 		}
 	}
-	k_mixteca = {
+	k_guerrero = {
 		color={ 157 93 143 }
 		color2={ 255 255 255 }
 		
 		capital = 3101 # c_chilpancingo
 		
-		d_mixteca = {
+		d_la_montana_guerrero = {
 			color={ 157 83 153 }
 			color2={ 255 255 255 }
 			
-			capital = 3101 # c_chilpancingo
+			capital = 3104 # c_huajuapan
 			
-			c_chilpancingo = { # 3101
-				color={ 167 73 158 }
-				color2={ 255 255 255 }
-				
-				b_chilpancingo_GR = {}
-				b_tixtla_GR = {}
-				b_zumpango_del_rio_GR = {}
-				b_huitziltepec_GR = {}
-				b_chichihualco_GR = {}
-				b_xochipala_GR = {}
-				b_chilapa_de_alvarez_GR = {}
-				b_apango_GR = {}
-			}
+
 			c_acatlan = { # 3103
 				color={ 176 176 200 }
 				color2={ 255 255 255 }
@@ -2616,8 +2516,115 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_xochihuehuetlan_GR = {}
 				b_atlixtac_GR = {}
 			}
+			c_atenango_del_rio = {
+				color={ 112 67 134 }
+				color2={ 255 255 255 }
+				
+				b_huitzuco_GR = {}
+				b_atenango_del_rio_GR = {}
+				b_buenavista_de_cuellar_GR = {}
+				b_copalillo_GR = {}
+				b_pololcingo_GR = {}
+				b_tlalcozotitlan_GR = {}
+				b_san_miguel_de_las_palmas_GR = {}
+				b_santiago_tlamazacapa_GR = {}
+				b_zicapa_GR = {}
+			}
 		}
-		d_costa_chica = {
+		d_chilpancingo = {
+			color={ 167 73 158 }
+			color2={ 255 255 255 }
+
+			capital = 3101 #c_chilpancingo
+
+			c_chilpancingo = { # 3101
+				color={ 167 73 158 }
+				color2={ 255 255 255 }
+				
+				b_chilpancingo_GR = {}
+				b_tixtla_GR = {}
+				b_zumpango_del_rio_GR = {}
+				b_huitziltepec_GR = {}
+				b_chichihualco_GR = {}
+				b_xochipala_GR = {}
+				b_chilapa_de_alvarez_GR = {}
+				b_apango_GR = {}
+			}
+			c_iguala = { # 3062
+				color={ 85 79 109 }
+				color2={ 255 255 255 }
+				
+				b_iguala_MC = {}
+				b_tonalapa_de_rio_MC = {}
+				b_taxco_MC = {}
+				b_buenavista_de_cuellar_MC = {}
+				b_cocula_MC = {}
+				b_metlapa_MC = {}
+				b_teloloapan_MC = {}
+				b_huitzuco_MC = {}
+			}
+			c_coyuca_de_catalan = { # 3061
+				color={ 94 167 143 }
+				color2={ 255 255 255 }
+				
+				b_coyuca_de_catalan_MC = {}
+				b_el_naranjo_MC = {}
+				b_tlapehuala_MC = {}
+				b_los_placeres_del_oro_MC = {}
+				b_guayameo_MC = {}
+				b_ciudad_altamirano_MC = { 
+					short_name = no
+					used_for_dynasty_names = no
+				}
+				b_arcelia_MC = {}
+				b_quiricuaro_MC = {}
+			}
+			c_cutzamala_de_pinzon = { # 3388
+				color={ 45 46 35 }
+				color2={ 255 255 255 }
+				
+				b_cutzamala_de_pinzon_mexi = {
+				}
+				b_tlalchapa_mexi = {
+				}
+				b_san_jacinto_mexi = {
+				}
+				b_huaratzio_mexi = {
+				}
+				b_la_garra_mexi = {
+				}
+				b_cuadrilla_nueva_mexi = {
+				}
+				b_san_blas_mexi = {
+				}
+			}
+			c_pungarabato = { #2643
+				color = { 83 119 107 }
+				color2 = { 255 255 255 }
+				
+				b_tlapehuala_GR = {
+				}
+				b_ciudad_altamirano_GR = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_arcelia_GR = {}
+				b_tlachapa_GR = {}	
+				b_tanganhuato_GR = {}	
+				b_san_jose_poliutla_GR = {}	
+				b_san_antonio_de_las_huertas_GR	 = {}
+				b_nueva_guerrero_GR	 = {}
+			}
+		}
+	}
+
+	k_costa_chica = {
+		color={ 134 131 171 }
+		color2={ 255 255 255 }
+
+		capital = 3105 #c_acapulco
+
+		d_acapulco = {
 			color={ 154 131 171 }
 			color2={ 255 255 255 }
 			
@@ -2636,6 +2643,52 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_atoyac_GR = {}
 				b_el_ocotito_GR = {}
 			}
+			c_ometepec = { # 3106
+				color={ 118 88 197 }
+				color2={ 255 255 255 }
+				
+				b_ometepec_GR = {}
+				b_cuajinicuilapa_GR = {}
+				b_xochistlahuaca_GR = {}
+				b_acatepec_GR = {}
+				b_marquelia_GR = {}
+				b_ayulta_GR = {}
+				b_cruz_grande_GR = {}
+				b_copala_GR = {}
+			}
+			c_atoyac = { #2638
+				color = { 113 58 205 }
+				color2 = { 255 255 255 }
+				
+				b_atoyac_de_alvarez_GR = {}
+				b_zacualpan_GR = {}
+				b_san_jeronimo_de_juarez_GR = {}
+				b_santiago_ATY_GR = {}
+				b_san_andres_de_la_cruz_GR = {}
+				b_san_vicente_de_benitez_GR = {}
+				b_la_y_griega_GR = {}
+				b_arenal_de_alvarez_GR = {}
+			}
+			c_petatlan = { # 3057
+				color={ 91 76 152 }
+				color2={ 255 255 255 }
+				
+				b_ixtapa_MC = {}
+				b_coacoyul_MC = {}
+				b_balcon_MC = {}
+				b_zumatlan_MC = {}
+				b_los_organos_MC = {}
+				b_lagunillas_MC = {}
+				b_troncones_MC = {}
+				b_barra_de_potosi_MC = {}
+			}
+		}
+		d_costa_oaxaquena = {
+			color={ 67 137 183 }
+			color2={ 255 255 255 }
+
+			capital = 2625 #c_juquila
+
 			c_jamiltepec = { # 3107
 				color={ 64 115 149 }
 				color2={ 255 255 255 }
@@ -2663,19 +2716,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_brisas_de_zicatela_OA = {}
 				b_puerto_escondido_OA = {
 				}
-			}
-			c_ometepec = { # 3106
-				color={ 118 88 197 }
-				color2={ 255 255 255 }
-				
-				b_ometepec_GR = {}
-				b_cuajinicuilapa_GR = {}
-				b_xochistlahuaca_GR = {}
-				b_acatepec_GR = {}
-				b_marquelia_GR = {}
-				b_ayulta_GR = {}
-				b_cruz_grande_GR = {}
-				b_copala_GR = {}
 			}
 			c_pochutla = { # 3108
 				color={ 82 100 185 }
