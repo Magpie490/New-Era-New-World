@@ -100,7 +100,7 @@ NDiplomacy = {
 	MAX_DIPLO_DISTANCE_SAME_CULTURE = 100, 						-- Bonus to max diplo distance for being of the same culture
 	MAX_DIPLO_DISTANCE_SAME_CULTURE_GROUP = 100,				-- Bonus to max diplo distance for being of the same culture group
 	MAX_DISTANCE_HOLY_WAR_JOIN = 200,							-- How far away people are willing to join in defense against a holy war (capital to capital. Direct neighbors considered distance 0)
-	MAX_DISTANCE_REL_HEAD_DEFENSE_JOIN = 600,									-- How far away people are willing to join in defense of their rel head (capital to capital. Direct neighbors considered distance 0)
+	MAX_DISTANCE_REL_HEAD_DEFENSE_JOIN = 600,				-- How far away people are willing to join in defense of their rel head (capital to capital. Direct neighbors considered distance 0)
 	GAME_RULE_RESTRICTED_DIPLO_DISTANCE_MULTIPLIER = 0.5,		-- Multiplier to max diplo distance when using the "diplomatic range: restricted" game rule
 	GAME_RULE_PROVINCIAL_REVOLT_RARE_DIVIDER = 2.0,				-- Divider to decrease risk of revolt when using the "provincial revolt: rare" game rule
 	TRIBUTARY_UPRISING_AI_WEAK_MALUS = -50,						-- Malus to chances of accepting a call to arms from another tributary during an uprising, if the total forces of the tributaries are weaker than the forces of the Suzerain. Used as a bonus instead if the tributaries combined are significantly stronger than the Suzerain (TRIBUTARY_UPRISING_AI_STRONG_LEVEL)
@@ -262,8 +262,8 @@ NDiplomacy = {
 	OFFER_VASSALIZATION_INTERACTION_MONEY = 0,
 	OFFER_VASSALIZATION_INTERACTION_PIETY = 0,
 	OFFER_VASSALIZATION_INTERACTION_PRESTIGE = 0,
-	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_NO = 20,
-	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_YES = 20,
+	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_NO = 25,
+	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_YES = 25,
 	OFFER_VASSALIZATION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
 	OFFER_VASSALIZATION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
@@ -478,8 +478,8 @@ NDiplomacy = {
 	ASK_TO_JOIN_WAR_INTERACTION_MONEY = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_PIETY = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_PRESTIGE = 0,
-	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_NO = 15,
-	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_YES = 15,
+	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_NO = 25,
+	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_YES = 25,
 	ASK_TO_JOIN_WAR_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
 	ASK_TO_JOIN_WAR_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
@@ -606,8 +606,8 @@ NDiplomacy = {
 	FORM_ALLIANCE_INTERACTION_MONEY = 0,
 	FORM_ALLIANCE_INTERACTION_PIETY = 0,
 	FORM_ALLIANCE_INTERACTION_PRESTIGE = 250,
-	FORM_ALLIANCE_INTERACTION_THRESHOLD_FOR_NO = 15,
-	FORM_ALLIANCE_INTERACTION_THRESHOLD_FOR_YES = 15,
+	FORM_ALLIANCE_INTERACTION_THRESHOLD_FOR_NO = 25,
+	FORM_ALLIANCE_INTERACTION_THRESHOLD_FOR_YES = 25,
 	FORM_ALLIANCE_INTERACTION_MUST_HAVE_COST = 1,					-- Is having prestige/piety >= cost required for this action?
 	FORM_ALLIANCE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
@@ -622,8 +622,8 @@ NDiplomacy = {
 	START_COALITION_INTERACTION_MONEY = 0,
 	START_COALITION_INTERACTION_PIETY = 0,
 	START_COALITION_INTERACTION_PRESTIGE = 15,
-	START_COALITION_INTERACTION_THRESHOLD_FOR_NO = 5,
-	START_COALITION_INTERACTION_THRESHOLD_FOR_YES = 5,
+	START_COALITION_INTERACTION_THRESHOLD_FOR_NO = 0,
+	START_COALITION_INTERACTION_THRESHOLD_FOR_YES = 0,
 	START_COALITION_INTERACTION_MUST_HAVE_COST = 0,					-- Is having prestige/piety >= cost required for this action?
 	START_COALITION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
@@ -681,12 +681,12 @@ NDiplomacy = {
 	ASK_TO_DECLARE_WAR_INTERACTION_THRESHOLD_FOR_NO = 0,	-- useless since this is an auto accepted interaction.
 	ASK_TO_DECLARE_WAR_INTERACTION_THRESHOLD_FOR_YES = 0,	-- useless since this is an auto accepted interaction.
 	ASK_TO_DECLARE_WAR_INTERACTION_MUST_HAVE_COST = 0,		-- Is having prestige/piety >= cost required for this action?
-	ASK_TO_DECLARE_WAR_INTERACTION_ENABLED = 1,				-- Should this action be used at all?
+	ASK_TO_DECLARE_WAR_INTERACTION_ENABLED = 0,				-- Should this action be used at all?
 
 	FORM_NON_AGGRESSION_PACT_INTERACTION_MONEY = 0,
 	FORM_NON_AGGRESSION_PACT_INTERACTION_PIETY = 0,
 	FORM_NON_AGGRESSION_PACT_INTERACTION_PRESTIGE = 0,
-	FORM_NON_AGGRESSION_PACT_INTERACTION_THRESHOLD_FOR_NO = 15,
+	FORM_NON_AGGRESSION_PACT_INTERACTION_THRESHOLD_FOR_NO = 25,
 	FORM_NON_AGGRESSION_PACT_INTERACTION_THRESHOLD_FOR_YES = 25,
 	FORM_NON_AGGRESSION_PACT_INTERACTION_MUST_HAVE_COST = 0,		-- Is having prestige/piety >= cost required for this action?
 	FORM_NON_AGGRESSION_PACT_INTERACTION_ENABLED = 1,				-- Should this action be used at all?
@@ -766,7 +766,7 @@ NDiplomacy = {
 
 	EVERY_DEFENSIVE_PACT_JOIN_THREAT = 0.95,					-- If threat is this high, members of all defensive pacts against a target will join
 	EVERY_DEFENSIVE_PACT_EXCEPT_HEADS_JOIN_THREAT = 0.90,		-- If threat is this high, members of all defensive pacts against a target will join, except religious heads that only joins when their own group is attacked
-	OTHER_DEFENSIVE_PACT_JOIN_THREAT = 0.80,						-- If threat is this high, other religious groups band together when attacked, if it's lower every defensive pact acts on it's own
+	OTHER_DEFENSIVE_PACT_JOIN_THREAT = 1.01,						-- If threat is this high, other religious groups band together when attacked, if it's lower every defensive pact acts on it's own
 
 	RELEASE_VASSAL_TRUCE_DAYS = 3650,
 
@@ -891,7 +891,7 @@ NCharacter = {
 	SECONDARY_SPOUSE_FERTILITY_MULT = 0.35,			-- Applied to fertility of secondary spouses and concubines
 	NOT_SPOUSE_FERTILITY_MULT = 0.40,				-- Applied to fertility when two lovers are not married
 	MARRIED_LOVERS_FERTILITY_MULT = 1.3,			-- Applied to fertility when lovers are married
-	INFANT_DEATH_CHANCE = 0.00,						-- Chance of stillbirth / death at birth
+	INFANT_DEATH_CHANCE = 0.02,						-- Chance of stillbirth / death at birth
 	EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2550,		-- Before this date, early versions of Units and Portraits will be used if available
 	LATE_PORTRAIT_AND_UNIT_AFTER_YEAR = 2700,		-- After this date, late versions of Units and Portraits will be used if available
 	TRIBAL_EMPTY_HOLDING_LEVY_MULTIPLIER = 0.5,
@@ -1050,7 +1050,7 @@ NTitle = {
 	EMPIRE_DEJURE_COUNTY_LIMIT_TO_CREATE = 0.8,		-- Fraction of de jure counties that you must control to create an imperial title
 	EMPIRE_DEJURE_COUNTY_LIMIT_TO_USURP = 0.8,		-- Fraction of de jure counties that you must control to usurp an imperial title
 
-	CUSTOM_TITLE_COLOR_OFFSET = 0.35					-- The offset from the base title color when creating a new title
+	CUSTOM_TITLE_COLOR_OFFSET = 0.15					-- The offset from the base title color when creating a new title
 },
 
 NReligion = {
@@ -1519,8 +1519,8 @@ NTechnology = {
 	TRADEPOST_SPREAD_BONUS = 0.002, 			-- Spread from trade posts
 	SPYACTION_SPREAD_BONUS = 0.006,				-- Spread from the target of the study technology spymaster action
 
-	IDEAL_YEAR_LEVEL_0 = 2400, 					-- the chance to get a progress to this level will increase after this date and decrease before it
-	IDEAL_YEAR_LEVEL_8 = 3075,
+	IDEAL_YEAR_LEVEL_0 = 2100, 					-- the chance to get a progress to this level will increase after this date and decrease before it
+	IDEAL_YEAR_LEVEL_8 = 3200,
 	IDEAL_YEAR_AHEAD_PENALTY_INVEST = 0.6,		-- Percent increase in cost pre level ahead of ideal date
 
 	PAGAN_HOME_ATTRITION_REMOVAL_LEVEL = 4.0,
@@ -1577,20 +1577,20 @@ NGraphics = {
 },
 
 NEngine = {
-	EVENT_PROCESS_OFFSET = 90, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
-	COURTIER_EVENT_PROCESS_OFFSET = 230, 	 -- Events are checked every X day for courtiers. Max value of 255
+	EVENT_PROCESS_OFFSET = 145, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
+	COURTIER_EVENT_PROCESS_OFFSET = 254, 	 -- Events are checked every X day for courtiers. Max value of 255
 	COURTIERS_MTTTH_EVENTS = 1,  -- Toggles if courtiers are allowed to run MTTH events or not
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066, -- The missing scripted successor error will not be shown before this date
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_MONTH = 8,
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_DAY = 16,
 	COURT_PRUNE_SIZE = 1, 				-- Courts larger than this will be checked for pruning each month
-	PRUNE_MINIMAL_AGE = 25,				-- Minimum age for a courtier to be prunable if considered irrelevant
-	HEALTH_IMMUNITY_TO_PRUNING = 6,		-- If a character has that much health, they won't be pruned
+	PRUNE_MINIMAL_AGE = 20,				-- Minimum age for a courtier to be prunable if considered irrelevant
+	HEALTH_IMMUNITY_TO_PRUNING = 5,		-- If a character has that much health, they won't be pruned
 },
 
 NAI =
 {
-	INTERACTION_THRESHOLD_FOR_NO = 15,						-- Interactions with chance below this will always be declined
+	INTERACTION_THRESHOLD_FOR_NO = 25,						-- Interactions with chance below this will always be declined
 	INTERACTION_THRESHOLD_FOR_YES = 25,						-- Interactions with chance above this will always be accepted
 	INTERACTION_MIN_DAYS_REJECTED = 365,					-- AI will remember a rejection at least this time
 	INTERACTION_DAYS_REJECTED_RANDOM = 730,					-- Max random extra days AI will reject offer
