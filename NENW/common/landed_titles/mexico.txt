@@ -2471,10 +2471,10 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		capital = 3101 # c_chilpancingo
 		
 		d_la_montana_guerrero = {
-			color={ 157 83 153 }
+			color={ 176 176 200 }
 			color2={ 255 255 255 }
 			
-			capital = 3104 # c_huajuapan
+			capital = 3103 # c_acatlan
 			
 
 			c_acatlan = { # 3103
@@ -2489,19 +2489,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_petlalcingo_PU = {}
 				b_tecomatlan_PU = {}
 				b_tehuitzingo_PU = {}
-			}
-			c_huajuapan = { # 3104
-				color={ 158 146 219 }
-				color2={ 255 255 255 }
-				
-				b_huajuapan_de_leon_OA = {}
-				b_san_marcos_arteaga_OA = {}
-				b_san_jeronimo_silacayoapilla_OA = {}
-				b_san_juan_bautista_suchitepec_OA = {}
-				b_san_andres_dinicuiti_OA = {}
-				b_san_martin_zacatepec_OA = {}
-				b_san_pedro_y_san_pablo_tequixtepec_OA = {}
-				b_san_jose_ayuquila_OA = {}
 			}
 			c_tlapa = { # 3102
 				color={ 158 106 179 }
@@ -2744,11 +2731,13 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		}
 	}
 	
-	k_zapoteca = {
+	k_oaxaca = {
 		color={ 67 145 161 }
 		color2={ 255 255 255 }
 		
 		capital = 3093 # c_oaxaca
+
+		zapotec = "Zapoteca"
 		
 		d_oaxaca = {
 			color={ 87 125 171 }
@@ -2756,6 +2745,20 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 			
 			capital = 3093 # c_oaxaca
 			
+
+			c_canada = { # 3096
+				color={ 66 151 27 }
+				color2={ 255 255 255 }
+				
+				b_pochotepec_OA = {}
+				b_huautla_de_jimenez_OA = {}
+				b_mazatlan_villa_de_flores_OA = {}
+				b_ayautla_OA = {}
+				b_santa_maria_tecomavaca_OA = {}
+				b_san_juan_tepeuxila_OA = {}
+				b_santiago_comaltepec_OA = {}
+				b_santa_maria_ixcatlan_OA = {}
+			}
 			c_oaxaca = { # 3093
 				color={ 97 115 176 }
 				color2={ 255 255 255 }
@@ -2771,44 +2774,38 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_santa_maria_atzompa_OA = {}
 				b_san_andres_ixtlahuaca_OA = {}
 			}
-			c_nochixtlan = { # 3096
-				color={ 128 91 167 }
+		}
+		d_mixteca = {
+			color={ 158 146 219 }
+			color2={ 255 255 255 }
+
+			capital = 3104 # c_huajuapan
+
+			c_huajuapan = { # 3104
+				color={ 158 146 219 }
 				color2={ 255 255 255 }
 				
-				b_asuncion_nochixtlan_OA = {}
-				b_valerio_trujano_OA = {}
-				b_dominguillo_OA = {}
-				b_santiago_apoala_OA = {}
-				b_las_sedas_OA = {}
-				b_san_andres_lagunas_OA = {}
-				b_santo_domingo_tonaltepec_OA = {}
-				b_concepcion_buenavista_OA = {}
+				b_huajuapan_de_leon_OA = {}
+				b_san_marcos_arteaga_OA = {}
+				b_san_jeronimo_silacayoapilla_OA = {}
+				b_san_juan_bautista_suchitepec_OA = {}
+				b_san_andres_dinicuiti_OA = {}
+				b_san_martin_zacatepec_OA = {}
+				b_san_pedro_y_san_pablo_tequixtepec_OA = {}
+				b_san_jose_ayuquila_OA = {}
 			}
-			c_canada = { # 3096
-				color={ 66 151 27 }
+			c_tlaxiaco = { # 3097
+				color={ 158 158 197 }
 				color2={ 255 255 255 }
 				
-				b_pochotepec_OA = {}
-				b_huautla_de_jimenez_OA = {}
-				b_mazatlan_villa_de_flores_OA = {}
-				b_ayautla_OA = {}
-				b_santa_maria_tecomavaca_OA = {}
-				b_san_juan_tepeuxila_OA = {}
-				b_santiago_comaltepec_OA = {}
-				b_santa_maria_ixcatlan_OA = {}
-			}
-			c_sierra_sur = { # 3095
-				color={ 49 85 149 }
-				color2={ 255 255 255 }
-				
-				b_miahuatlan_OA = {}
-				b_xitla_OA = {}
-				b_villa_sola_de_vega_OA = {}
-				b_san_nicolas_OA = {}
-				b_ayoquezco_de_aldama_OA = {}
-				b_san_lorenzo_texmelucan_OA = {}
-				b_ejutla_de_crespo_OA = {}
-				b_san_luis_amatlan_OA = {}
+				b_tlaxiaco_OA = {}
+				b_san_martin_itunyoso_OA = {}
+				b_magdalena_penasco_OA = {}
+				b_san_antonio_sinicahua_OA = {}
+				b_chalcalongo_OA = {}
+				b_santiago_nuyoo_OA = {}
+				b_san_juan_numi_OA = {}
+				b_san_juan_mixtepec_OA = {}
 			}
 			c_putla = { #2623
 				color = { 50 90 150 }	
@@ -2823,7 +2820,39 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				}
 				b_santa_maria_ipalapa_OA = {
 				}
+			}
+			c_nochixtlan = { # 3096
+				color={ 128 91 167 }
+				color2={ 255 255 255 }
+				
+				b_asuncion_nochixtlan_OA = {}
+				b_valerio_trujano_OA = {}
+				b_dominguillo_OA = {}
+				b_santiago_apoala_OA = {}
+				b_las_sedas_OA = {}
+				b_san_andres_lagunas_OA = {}
+				b_santo_domingo_tonaltepec_OA = {}
+				b_concepcion_buenavista_OA = {}
+			}
+		}
+		d_sierra_sur = {
+			color={ 49 85 149 }
+			color2={ 255 255 255 }
 
+			capital = 3095 #c_sierra_sur
+
+			c_sierra_sur = { # 3095
+				color={ 49 85 149 }
+				color2={ 255 255 255 }
+				
+				b_miahuatlan_OA = {}
+				b_xitla_OA = {}
+				b_villa_sola_de_vega_OA = {}
+				b_san_nicolas_OA = {}
+				b_ayoquezco_de_aldama_OA = {}
+				b_san_lorenzo_texmelucan_OA = {}
+				b_ejutla_de_crespo_OA = {}
+				b_san_luis_amatlan_OA = {}
 			}
 			c_tlacolula = { # 3094
 				color={ 124 161 185 }
@@ -2837,19 +2866,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_san_lorenzo_albarradas_OA = {}
 				b_san_baltazar_chichicapam_OA = {}
 				b_nejapa_de_madero_OA = {}
-			}
-			c_tlaxiaco = { # 3097
-				color={ 158 158 197 }
-				color2={ 255 255 255 }
-				
-				b_tlaxiaco_OA = {}
-				b_san_martin_itunyoso_OA = {}
-				b_magdalena_penasco_OA = {}
-				b_san_antonio_sinicahua_OA = {}
-				b_chalcalongo_OA = {}
-				b_santiago_nuyoo_OA = {}
-				b_san_juan_numi_OA = {}
-				b_san_juan_mixtepec_OA = {}
 			}
 		}
 		d_istmo = {
