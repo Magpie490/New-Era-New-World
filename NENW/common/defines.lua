@@ -762,11 +762,11 @@ NDiplomacy = {
 	DEFENSIVE_PACT_MAX_RANGE_SAME_GROUP = 300,					-- At 100% threat characters are able to join defensive pacts against targets of this distance
 	DEFENSIVE_PACT_THREAT_SIZE_START = 0.0,						-- Relative size requirement starts from this level of threat
 	DEFENSIVE_PACT_BASE_SIZE = 0.0,								-- This is the base size requirement at 0% threat
-	MAX_INFAMY_GAIN = 50,										-- This is the max infamy gained from a single source
+	MAX_INFAMY_GAIN = 15,										-- This is the max infamy gained from a single source
 
-	EVERY_DEFENSIVE_PACT_JOIN_THREAT = 0.95,					-- If threat is this high, members of all defensive pacts against a target will join
+	EVERY_DEFENSIVE_PACT_JOIN_THREAT = 0.99,					-- If threat is this high, members of all defensive pacts against a target will join
 	EVERY_DEFENSIVE_PACT_EXCEPT_HEADS_JOIN_THREAT = 0.90,		-- If threat is this high, members of all defensive pacts against a target will join, except religious heads that only joins when their own group is attacked
-	OTHER_DEFENSIVE_PACT_JOIN_THREAT = 1.01,						-- If threat is this high, other religious groups band together when attacked, if it's lower every defensive pact acts on it's own
+	OTHER_DEFENSIVE_PACT_JOIN_THREAT = 0.80,						-- If threat is this high, other religious groups band together when attacked, if it's lower every defensive pact acts on it's own
 
 	RELEASE_VASSAL_TRUCE_DAYS = 3650,
 
@@ -1577,15 +1577,15 @@ NGraphics = {
 },
 
 NEngine = {
-	EVENT_PROCESS_OFFSET = 145, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
-	COURTIER_EVENT_PROCESS_OFFSET = 254, 	 -- Events are checked every X day for courtiers. Max value of 255
+	EVENT_PROCESS_OFFSET = 20, 	 -- Events are checked every X day per character or province (1 is ideal, but CPU heavy). Max value of 255
+	COURTIER_EVENT_PROCESS_OFFSET = 50, 	 -- Events are checked every X day for courtiers. Max value of 255
 	COURTIERS_MTTTH_EVENTS = 1,  -- Toggles if courtiers are allowed to run MTTH events or not
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066, -- The missing scripted successor error will not be shown before this date
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_MONTH = 8,
 	MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_DAY = 16,
 	COURT_PRUNE_SIZE = 1, 				-- Courts larger than this will be checked for pruning each month
 	PRUNE_MINIMAL_AGE = 20,				-- Minimum age for a courtier to be prunable if considered irrelevant
-	HEALTH_IMMUNITY_TO_PRUNING = 5,		-- If a character has that much health, they won't be pruned
+	HEALTH_IMMUNITY_TO_PRUNING = 6,		-- If a character has that much health, they won't be pruned
 },
 
 NAI =
