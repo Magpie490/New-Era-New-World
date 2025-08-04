@@ -1001,7 +1001,7 @@
 	culture = sonorense
 	religion = muertista
 	diplomacy = 5
-	martial = 7
+	martial = 4
 	stewardship = 6
 	intrigue = 5
 	learning = 7
@@ -1128,8 +1128,8 @@
 	trait = tough_soldier
 	trait = diligent
 	trait = brave
-	trait = wroth
-	trait = robust
+	trait = just
+	trait = scarred
 	disallow_random_traits = yes
 	2287.9.19 = {
 		birth = yes
@@ -1226,4 +1226,331 @@
 	2500.1.1 = {
 		death = yes
 	}
+}
+
+850061 = {
+	name = "Hilario"  # Primer monarca de la Casa Félix
+	dynasty = 6228751 #felix
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 8
+	stewardship = 6
+	intrigue = 5
+	learning = 4
+	trait = ambitious
+	trait = brave
+	trait = just
+	trait = strategist
+	trait = diligent
+	2240.8.19 = { birth = yes }
+	2298.3.12 = { death = yes }
+}
+
+850062 = {
+	name = "Francisco"  # impulsor de la agricultura y comercio marítimo
+	dynasty =6228751 #felix
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 8
+	martial = 5
+	stewardship = 9
+	intrigue = 5
+	learning = 6
+	trait = diligent
+	trait = administrator
+	trait = gregarious
+	trait = gardener
+	trait = just
+	nickname = nick_the_gardener
+	father = 850061
+	2265.5.2 = { birth = yes }
+	2285.1.1 = { add_spouse = 850063 }
+	2315.9.17 = { death = yes }
+}
+
+850063 = {
+	name = "Matilde"  # Reina consorte de Francisco I, hermana del Duque de Mazatlán de la Casa Redo
+	female = yes
+	dynasty =6228754 #redo
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 9
+	martial = 3
+	stewardship = 6
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = patient
+	trait = kind
+	trait = socializer
+	trait = content
+	father = 850073
+	2268.4.11 = { birth = yes }
+	2318.7.22 = { death = yes }
+}
+
+850064 = {
+	name = "Rodrigo"  # "El Pacificador"
+	dynasty =6228751 #felix
+	culture = sinaloense
+	religion = muertista
+	father = 850062
+	mother = 850063
+	diplomacy = 6
+	martial = 8
+	stewardship = 6
+	intrigue = 7
+	learning = 5
+	trait = brave
+	trait = strategist
+	trait = just
+	trait = stubborn
+	trait = diligent
+	2290.6.29 = { birth = yes }
+	2311.12.12 = { add_spouse = 850065 }
+	2500.1.1 = { death = yes }
+}
+850065 = {
+	name = "Sofía"  # Reina consorte, Casa Almada de Cosalá
+	female = yes	
+	dynasty =6228753 #almada
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 4
+	stewardship = 6
+	intrigue = 8
+	learning = 6
+	trait = shrewd
+	trait = patient
+	trait = ambitious
+	trait = schemer
+	trait = temperate
+	father = 850074
+	2295.9.10 = { birth = yes }
+	2500.1.1 = { death = yes }
+}
+850066 = {
+	name = "Adriana"  # "La Sirena de Culiacán", heredera del Reino de Sinaloa
+	female = yes	
+	dynasty =6228751 #felix
+	culture = sinaloense
+	religion = muertista
+	father = 850064
+	mother = 850065
+	diplomacy = 9
+	martial = 5
+	stewardship = 7
+	intrigue = 8
+	learning = 6
+	trait = ambitious
+	trait = charismatic_negotiator
+	trait = diligent
+	trait = shrewd
+	trait = just
+	disallow_random_traits = yes
+	2312.12.22 = { birth = yes }	
+	2500.1.1 = { death = yes }
+}
+850067 = {
+	name = "Julián"  # conde y futuro rey consorte, Casa Navidad de Guasave
+	dynasty =6228752 #navidad
+	culture = sinaloense
+	religion = muertista
+	father = 850069
+	mother = 850068
+	diplomacy = 8
+	martial = 4
+	stewardship = 7
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = patient
+	trait = gregarious
+	trait = content
+	trait = honest
+	disallow_random_traits = yes
+	2308.3.4 = { birth = yes }
+	2320.1.1 = {effect = {add_lover = 850066 } }
+	2325.1.1 = { add_spouse = 850066 }	
+	2500.1.1 = { death = yes }
+}
+850068 = {
+	name = "Patricia"  # Condesa gobernante de Guasave, Casa Navidad
+	female = yes	
+	dynasty = 6228752 #navidad
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 9
+	martial = 3
+	stewardship = 7
+	intrigue = 7
+	learning = 5
+	trait = charismatic_negotiator
+	trait = ambitious
+	trait = gregarious
+	trait = diligent
+	trait = just
+	2285.5.12 = { birth = yes }
+	2305.1.1 = { add_matrilineal_spouse = 850069}
+	2500.1.1 = { death = yes }
+}
+
+850069 = {
+	name = "Rogelio"  # Primo segundo y esposo de Patricia Navidad
+#	dynasty = 6228752 #navidad
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 6
+	martial = 4
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	trait = patient
+	trait = temperate
+	trait = content
+	trait = loyalist
+	trait = diligent
+	disallow_random_traits = yes
+	2287.7.19 = { birth = yes }
+	2500.1.1 = { death = yes }
+}
+850070 = {
+	name = "Alejandro"  # Gran Jefe de Mazatlán, hermano de Matilde Redo
+	dynasty = 6228754 #redo
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 5
+	stewardship = 7
+	intrigue = 5
+	learning = 4
+	trait = just
+	trait = diligent
+	trait = administrator
+	trait = patient
+	trait = temperate
+	father = 850073
+	2245.3.21 = { birth = yes }
+	2305.6.8 = { death = yes }
+}
+850071 = {
+	name = "Mauricio"  # Gran Jefe actual de Mazatlán, sobrino de Matilde
+	dynasty = 6228754 #redo
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 8
+	martial = 4
+	stewardship = 8
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = ambitious
+	trait = gregarious
+	trait = diligent
+	trait = just
+	disallow_random_traits = yes
+	father = 850070
+	mother = 0
+	2275.9.15 = { birth = yes }
+	2345.2.11 = { death = yes }
+}
+850072 = {
+	name = "Fernando"  # Hijo y heredero, prometido con Leonor Félix
+	dynasty = 6228754 #redo
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 5
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	trait = gregarious
+	trait = patient
+	trait = ambitious
+	trait = fair
+	trait = loyalist
+	disallow_random_traits = yes
+	father = 850071
+	mother = 0
+	2305.8.10 = { birth = yes }
+	2500.1.1 = { death = yes }
+}	
+850073 = {
+	name = "Fernando"  #First petty king of Mazatlán
+	dynasty = 6228754 #redo
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 5
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	trait = gregarious
+	trait = patient
+	trait = ambitious
+	trait = fair
+	trait = loyalist
+	disallow_random_traits = yes
+	mother = 0
+	2220.8.10 = { birth = yes }
+	2260.11.1 = { death = yes }
+}	
+850074 = {
+	name = "Hernán"  # Conde de Cosalá, padre de Sofía Almada
+	dynasty = 6228753 #almada
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 5
+	stewardship = 7
+	intrigue = 5
+	learning = 4
+	trait = just
+	trait = patient
+	trait = temperate
+	trait = administrator
+	trait = loyalist
+	2245.3.21 = { birth = yes }
+	2308.6.8 = { death = yes }
+}
+850075 = {
+	name = "Lorenzo"  # Conde actual de Cosalá, hermano de Sofía, MUST BE MARRIED TO A DURANGUENSE FAMILY!
+	dynasty = 6228753 #almada
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 8
+	martial = 6
+	stewardship = 7
+	intrigue = 5
+	learning = 5
+	trait = brave
+	trait = just
+	trait = diligent
+	trait = gregarious
+	trait = patient
+	father = 850074
+	mother = 0
+	2278.4.12 = { birth = yes }
+	2348.10.21 = { death = yes }
+}
+850076 = {
+	name = "Esteban"  # Hijo y heredero de Lorenzo Almada
+	dynasty = 6228753 #almada
+	culture = sinaloense
+	religion = muertista
+	diplomacy = 7
+	martial = 6
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	trait = patient
+	trait = ambitious
+	trait = loyalist
+	trait = fair
+	trait = gregarious
+	father = 850075
+	mother = 0
+	2308.9.15 = { birth = yes }
 }
