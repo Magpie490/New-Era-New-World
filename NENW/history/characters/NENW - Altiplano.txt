@@ -358,6 +358,7 @@
     trait = shy
     trait = quick
     father = 850017
+	mother = 850081
     2292.7.10 = {
         birth = yes
     }
@@ -373,6 +374,7 @@
     trait = arbitrary
     trait = wroth
     father = 850017
+	mother = 850081
     2295.9.21 = {
         birth = yes
     }
@@ -388,6 +390,7 @@
     trait = shy
     trait = mystic
     father = 850017
+	mother = 850081
     2299.1.17 = {
         birth = yes
     }
@@ -1633,4 +1636,99 @@
 	2500.1.1 = {
 		death = yes
 	}
+}
+850081 = {
+	name = "Edith"
+	female = yes
+	religion = quaker
+	culture = mexikanisch
+	2270.7.5 = { birth = yes }
+	2289.1.1 = { add_spouse = 850017 }
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+850083 = { # Táviko Maso'aria
+    name = "Táviko" #Uniter of the Yaqui tribes
+    dynasty = 6240000
+    religion = erensia
+    culture = yaqui
+	martial = 12
+    trait = brave
+    trait = zealous
+    trait = charismatic_negotiator
+    trait = hunter
+    trait = proud
+	trait = greedy
+	father = 850087
+    2291.3.12 = { birth = yes    }
+	2500.1.1 = { death = yes}
+}
+850084 = { # Aneli Maso'aria
+    name = "Aneli"
+    dynasty = 6240000
+    religion = erensia
+    culture = yaqui
+    female = yes
+	learning = 9
+    trait = mystic
+    trait = content
+    trait = renowed_physician
+    trait = temperate
+	trait = intricate_webweaver
+	father = 850087	
+    2293.8.20 = {
+        birth = yes
+    }
+	2325.1.1 = {
+		employer = 850083
+			give_job_title = job_court_chaplain
+	}
+	2500.1.1 = { death = yes}	
+}
+850085 = { # Ye’ema Maso'aria
+    name = "Ye’ema"
+    dynasty = 6240000
+    religion = erensia
+    culture = yaqui
+    female = yes
+    trait = ambitious
+    trait = just
+    trait = brilliant_strategist
+	father = 850083
+    2310.2.4 = {
+        birth = yes
+    }
+	2500.1.1 = { death = yes }
+	
+}
+850086 = { # Kua’ipo Maso'aria
+    name = "Kua’ipo"
+    dynasty = 6240000
+    religion = erensia
+    culture = yaqui
+    trait = gregarious
+    trait = diligent
+    trait = shrewd
+    trait = quick
+	mother = 850084
+    2307.5.18 = {
+        birth = yes
+    }
+	2500.1.1 = { death = yes }
+}
+850087 = { # Bwikam Maso'aria
+    name = "Bwikam"
+    dynasty = 6240000
+    religion = erensia
+    culture = yaqui
+    trait = erudite
+    trait = cynical
+    trait = stubborn
+    trait = scarred
+    2255.11.1 = {
+        birth = yes
+    }
+	2500.1.1 = { death = yes }
 }
