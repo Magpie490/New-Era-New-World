@@ -1,10 +1,12 @@
 850000 = { # Caudillo del Paso del Norte
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Doroteo"
     religion = centaurista
     culture = norteno
+	diplomacy = 7
+	trait= gregarious
     trait = exalted_warlord
-	trait = bastard
+	trait = legit_bastard
 	trait = short	
     trait = brave
     trait = proud
@@ -25,7 +27,7 @@
 	}
 }
 850001 = { # Aureliano Arango, hijo mayor de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Aureliano"
     religion = centaurista
     culture = norteno
@@ -45,7 +47,7 @@
 	}	
 }
 850002 = { # Macario "El Mudo", hijo adoptivo de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Macario"
     religion = centaurista
     culture = norteno
@@ -66,7 +68,7 @@
 	}	
 }
 850003 = { # María "La Paloma del Sur", madre de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "María"
 	female = yes
     religion = centaurista
@@ -76,6 +78,7 @@
     trait = gregarious
     trait = deceitful
     trait = bard
+	nickname = nick_the_dove
     2268.4.12 = {
         birth = yes
     }
@@ -743,7 +746,7 @@
 }
 850038 = { # Cuauhtémoc "el Rojo", Caudillo de Shiwas
     name = "Cuauhtémoc"
-    dynasty = 56621568 #Salayandía
+    dynasty = 5128755 #Salayandía
     religion = centaurista
     culture = norteno
     trait = brilliant_strategist
@@ -756,6 +759,7 @@
     trait = cruel
     trait = diligent
 	trait = just
+	trait = drunkard
 	give_nickname = nick_rojo
     2277.6.6 = {
         birth = yes
@@ -772,7 +776,7 @@
 }
 850039 = { # Tizoc, hijo de Cuauhtémoc y Teodora
     name = "Tizoc"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = raramuri
     trait = child_of_consort
@@ -792,7 +796,7 @@
 }
 850040 = { # Heliodoro, hijo de Cuauhtémoc
     name = "Heliodoro"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     trait = skilled_tactician
@@ -814,7 +818,7 @@
 }
 850041 = {
     name = "Nahúm"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     trait = flamboyant_schemer
@@ -841,7 +845,7 @@
 }
 850042 = {
     name = "Liria"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     female = yes
@@ -1218,11 +1222,17 @@
 }
 
 850059 = {
-	name = Luis 
-	dynasty = 5128713
+	name = Escipión 
+	dynasty = 5128763
 	religion = centaurista
 	culture = norteno
-	2287.1.1 = {
+	intrigue = 10
+	learning = 10 
+	trait = elusive_shadow
+	trait = zealous
+	trait = blinded
+	trails = mystic
+	2253.1.13 = {
 		birth = yes
 	}
 	2500.1.1 = {
@@ -1231,20 +1241,22 @@
 }
 
 850060 = {
-	name = Fabiano # A local horselord. An ambitious man who aims for conquest.
-	dynasty = 5128716
+	name = Marcial #A desert warlord. A ruthless horseman of the Bolsón de Mapimí, bent on reclaiming la Laguna
+	dynasty = 5128763 #Calavizna
 	culture = norteno
 	religion = centaurista
 	diplomacy = 4
-	martial = 5
+	martial = 7
 	stewardship = 6 
 	intrigue = 4
 	learning = 5
+	father = 850059
 	trait = intricate_webweaver
 	trait = ambitious
 	trait = strong
 	trait = gregarious
-	trait = gamer
+	trait = hunter
+	trait = deceitful
 	disallow_random_traits = yes
 	2288.8.19 = {
 		birth = yes
@@ -1763,4 +1775,85 @@
         birth = yes
     }
 	2500.1.1 = { death = yes }
+}
+
+
+850090 = {
+	name = Tariq #horselord of Shiwas of the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	father = 850091
+	2287.1.1 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+850091 = {
+	name = Saíd #Member the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	trait = one-eyed
+	nickname = nick_one_eyed
+	2265.5.25 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+850092 = {
+	name = Lupe #Member the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	father = 850091	
+	2299.12.11 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+
+850093 = {
+	name = Osorio #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	father = 850094	
+	2291.2.11 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+850094 = {
+	name = García #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	2269.11.1 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
+}
+850095 = {
+	name = Oveco #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	father = 850094
+	2295.6.15 = {
+		birth = yes
+	}
+	2500.1.1 = {
+		death = yes
+	}
 }
