@@ -1056,15 +1056,19 @@
 4700058 = { # Adán de la Laguna, padre de Jared, muerto en escaramuza
 	dynasty = 5128751
 	name = "Adán"
-	religion = guadalupano
+	religion = centaurista
 	culture = norteno
 	trait = content
 	trait = humble
 	trait = slothful
 	trait = shy
 	trait = misguided_warrior
+	father = 4700070
 	2265.2.10 = {
 		birth = yes
+	}
+	2302.1.1 = {
+		religion = guadalupano
 	}
 	2305.4.28 = {
 		death = {
@@ -1282,4 +1286,38 @@
 		birth = yes
 	}
 	2500.1.1 = { death=yes }
+}
+4700070 = { # Arnaldo de la Laguna, fundador de la dinastía de la Laguna (Irritila); nómada centaursita.
+	dynasty = 5128751
+	name = "Arnaldo"
+	religion = centaurista
+	culture = norteno
+	trait = brilliant_strategist
+	trait = ambitious
+	trait = diligent
+	trait = cavalry_leader
+	2198.1.12 = {
+		birth = yes
+	}
+	2260.7.21 = {
+		death = yes
+		}	
+}
+4700071 = { # Álvaro de la Laguna, primer Jefe tribal de la Laguna (Irritila)
+	dynasty = 5128751
+	name = "Álvaro"
+	religion = centaurista
+	culture = norteno
+	trait = brilliant_strategist
+	trait = ambitious
+	trait = diligent
+	trait = cavalry_leader
+	father = 4700070
+	2228.11.15 = {
+		birth = yes
+	}
+#	2267.12.12 { historical_nomad = no }
+	2278.11.2 = {
+		death = yes
+		}	
 }
