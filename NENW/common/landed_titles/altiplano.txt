@@ -564,9 +564,11 @@ e_altiplano = {
 				color2={ 255 255 255 }
 				
 				raramuri = "Ge'réro"
+				tepehuan = "Gerreero"
 				
 				b_guerrero_CH = {
 					raramuri = "Ge'réro"
+					tepehuan = "Gerreero"
 				}
 				b_la_junta_CH = {
 					raramuri = "lajúnita"
@@ -1170,20 +1172,28 @@ e_altiplano = {
         
         capital = 3016 # c_durango
 		
+		tepehuan = "Korian"
+		
 		d_durango = {
 			color={ 33 165 99 }
 			color2={ 255 255 255 }
+			
+			tepehuan = "Korian"
 			
 			capital = 3016 # c_durango
 			
 			c_durango = { # 3016
 				color={ 30 153 91 }
 				color2={ 255 255 255 }
+				
+				tepehuan = "Korian"
 
 				holy_site = centaurista_reformed
 				holy_site = centaurista
 				
-				b_victoria_de_durango_DU = {}
+				b_victoria_de_durango_DU = {
+					tepehuan = "Korian"
+				}
 				b_ciudad_canatlan_DU = {}
 				b_nuevo_ideal_DU = {}
 				
@@ -1222,14 +1232,17 @@ e_altiplano = {
 				color={ 19 127 91 }
 				color2={ 255 255 255 }
 				
-				b_la_luz_DU = {}
-
-				
-
-				b_san_bernardo_DU = {}
-				b_los_sauces_DU = {}
-				b_villa_ocampo_DU = {}
-				b_canutillo_DU = {}
+			#	b_la_luz_DU = {}
+				b_suchil_DU ={}
+				b_vicente_guerrero_DU = {
+					tepehuan = "Gerreero"
+				}
+				b_nombre_de_dios_DU = {}
+				b_villa_union_DU ={}
+				b_san_bernardo_DU = {} #never built
+				b_los_sauces_DU = {}	#never built
+				b_villa_ocampo_DU = {} #never built
+				b_canutillo_DU = {} #never built
 			}
 		}
 		d_tepehuan = {
@@ -1254,15 +1267,26 @@ e_altiplano = {
 			c_mezquital = {
 				color={ 35 178 107 }
 				color2={ 255 255 255 }
+				
+				tepehuan = "Boodamtam"
 	
-				b_san_francisco_del_mezquital_DU = {}
-				b_vicente_guerrero_DU = {}
-				b_nombre_de_dios_DU = {}
-				b_suchil_DU ={}
-				b_villa_union_DU ={}
+				b_san_francisco_del_mezquital_DU = {
+					tepehuan = "Sam Pransisku Boodamtam"
+				}
 				b_huazamota_DU = {}
-	#			b_muruata_DU = {} #couldn't locate it in the map
-	#			b_san_antonio_de_padua_DU = {}
+				b_santa_maria_ocotan_DU = {
+					tepehuan = "Juktir"
+				}
+				b_muruata_DU = {
+					tepehuan = "Murba't"
+				} 
+				b_la_guajolota_DU = {
+					tepehuan = "Tobaatam"
+				}
+				b_cienega_del_llano_DU = {
+					tepehuan = "Giotir Bibia'"
+				}
+				b_san_antonio_de_padua_DU = {}
 	#			b_yonora_DU = {}
 	#			b_las_milpas_DU = {}
 	#			b_fortines_DU = {}
@@ -1280,7 +1304,10 @@ e_altiplano = {
 				b_san_francisco_de_lajas_DU = {}      
 				b_chavarria_DU = {}                   
 				b_santa_lucia_DU = {}                 
-				b_san_jeronimo_DU = {}                
+				b_san_jeronimo_DU = {}      
+				b_llano_grande_DU = {
+					tepehuan = "Giotam"
+				}
 			}
 		}
 	#	d_tamazula = { 
