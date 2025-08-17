@@ -1270,7 +1270,7 @@
 	name = "Hilario"  # Primer monarca de la Casa Félix
 	dynasty = 6228751 #felix
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 7
 	martial = 8
 	stewardship = 6
@@ -1289,7 +1289,7 @@
 	name = "Francisco"  # impulsor de la agricultura y comercio marítimo
 	dynasty =6228751 #felix
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 8
 	martial = 5
 	stewardship = 9
@@ -1312,7 +1312,7 @@
 	female = yes
 	dynasty =6228754 #Pepetoro
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 9
 	martial = 3
 	stewardship = 6
@@ -1332,7 +1332,7 @@
 	name = "Rodrigo"  # "El Pacificador"
 	dynasty =6228751 #felix
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	father = 850062
 	mother = 850063
 	diplomacy = 6
@@ -1354,7 +1354,7 @@
 	female = yes	
 	dynasty =6228753 #almada
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 7
 	martial = 4
 	stewardship = 6
@@ -1374,7 +1374,7 @@
 	female = yes	
 	dynasty =6228751 #felix
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	father = 850064
 	mother = 850065
 	diplomacy = 9
@@ -1395,7 +1395,7 @@
 	name = "Julián"  # conde y futuro rey consorte, Casa Navidad de Guasave
 	dynasty =6228752 #navidad
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	father = 850069
 	mother = 850068
 	diplomacy = 8
@@ -1419,7 +1419,7 @@
 	female = yes	
 	dynasty = 6228752 #navidad
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 9
 	martial = 3
 	stewardship = 7
@@ -1439,7 +1439,7 @@
 	name = "Rogelio"  # Primo segundo y esposo de Patricia Navidad
 #	dynasty = 6228752 #navidad
 	culture = sinaloense
-	religion = muertista
+	religion = guadalupano
 	diplomacy = 6
 	martial = 4
 	stewardship = 6
@@ -1779,7 +1779,6 @@
 	2340.1.1 = { death = yes }
 }
 
-
 850090 = {
 	name = Tariq #horselord of Shiwas of the Clan Sisimble
 	dynasty = 5128765 #Sisimble
@@ -1917,4 +1916,212 @@
 	2368.1.1 = {
 		death = yes
 	}
+}
+
+850104 = {
+    name = "Reyes"
+    dynasty = 6228757 #Galeana
+    religion = muertista
+    culture = tepehuan
+    trait = drunkard
+    trait = gregarious
+    trait = trusting
+    trait = flamboyant_schemer
+    trait = brave
+    trait = arbitrary
+	trait = raider
+	trait = slow
+	trait = child_of_consort
+	father = 850105
+	mother = 850106
+    give_nickname = nick_the_pirate
+    2306.6.23 = {
+        birth = yes
+		culture = sinaloense
+    }
+}
+850105 = {
+    name = "Luis"
+    dynasty = 6228757 #Galeana
+    religion = muertista
+    culture = sinaloense
+	martial = 8
+	stewardship = 8
+	intricate_webweaver = 8
+	learning = 5
+	diplomacy = 5
+    trait = brilliant_strategist
+    trait = skilled_tactician
+    trait = duelist
+    trait = diligent
+    trait = brave
+    trait = proud
+    trait = ambitious
+    trait = grievously_scarred
+    2270.3.15 = {
+        birth = yes
+    }
+    2324.11.17 = {
+        death = {
+			death_reason = death_drowning_accident
+		}
+    }
+}
+850106 = {
+    name = "Juana"
+	female = yes
+    dynasty = 0
+    religion = erensia
+    culture = mayo
+    2289.3.15 = {
+        birth = yes
+    }
+    2315.11.17 = {
+        death = yes
+		}
+}
+
+850107 = {
+    name = "Rodrigo"
+    dynasty = 5128767 ##Alarcón
+    religion = guadalupano 
+    culture = norteno
+    trait = brave
+    trait = ambitious
+    trait = wrathful
+    trait = just
+    father = 850112
+    mother = 850113
+    2287.5.1 = { birth = yes }
+	2310.7.22 = { add_spouse = 850108 }
+	2358.5.8 = { death = yes }
+	
+}
+
+850108 = {
+    name = "Leonor" #Esposa de Rodrigo
+    dynasty = 0 #Podemos crear la Casa Sandoval o asignar a otra
+    religion = guadalupano
+    culture = norteno
+	female = yes
+    trait = gregarious
+    trait = shrewd
+    trait = ambitious
+    2291.2.14 = { birth = yes }
+	2378.5.6 = { death = yes }
+}
+
+
+850109 = {
+    name = "Diego" #Heredero
+    dynasty = 5128767 #Alarcón
+    religion = guadalupano
+    culture = norteno
+    trait = conscientious
+    trait = idolizer
+    trait = willful
+    father = 850107
+    mother = 850108
+    2311.11.9 = { birth = yes }
+	2375.9.5 = { death = yes }
+}
+
+850110 = {
+    name = "Marina" #Hija
+	female = yes	
+    dynasty = 5128767 #Alarcón
+    religion = guadalupano
+    culture = norteno
+    trait = playful
+    trait = quick
+    father = 850107
+    mother = 850108
+    2314.4.21 = { birth = yes }
+	2402.5.3 = { death = yes }
+}
+
+850111 = {
+    name = "Rodrigo" #Segundo hijo, apodado "el Mozo"
+    dynasty = 5128767 #Alarcón
+    religion = guadalupano
+    culture = norteno
+    trait = sickly
+    trait = curious
+    father = 850107
+    mother = 850108
+    2318.6.3 = { birth = yes }
+	2397.9.22 = { death = yes }
+}
+850112 = { 
+    name = "Sancho" #Padre de Rodrigo
+    dynasty = 5128767
+    religion = guadalupano
+    culture = norteno
+    trait = brave
+    trait = stubborn
+    2245.3.15 = { birth = yes }
+    2312.6.12 = { death = yes }
+}
+
+850113 = { 
+    name = "Isabel" #Madre de Rodrigo
+	female = yes	
+    dynasty = 0
+    religion = guadalupano
+    culture = norteno
+    trait = chaste
+    trait = charitable
+    2249.8.20 = { birth = yes }
+    2317.4.3 = { death = yes }
+}
+850114 = {
+    name = Abey   # Jefe de los Damóchi
+    dynasty = 6241051 # Damóchi
+    religion = bichihuari
+    culture = tepehuan
+    trait = brave
+    trait = zealous
+    trait = hunter
+    2275.4.2 = { birth = yes }
+    2339.1.1 = { death = yes }
+}
+
+850115 = {
+    name = Tooña
+    female = yes
+    dynasty = 0 # Damóchi
+    religion = bichihuari
+    culture = tepehuan
+    trait = kind
+    trait = patient
+    2278.10.9 = { birth = yes }
+    2297.7.12 = { add_spouse = 850114 }
+    2350.1.1 = { death = yes }
+}
+
+850116 = {
+    name = Noyee
+    dynasty = 6241051 # Damóchi
+    religion = bichihuari
+    culture = tepehuan
+    father = 850114
+    mother = 850115
+    trait = diligent
+    trait = strong
+    2300.6.6 = { birth = yes }
+    2370.1.1 = { death = yes }
+}
+
+850117 = {
+    name = Sofiiya
+    female = yes
+    dynasty = 6241051 # Damóchi
+    religion = bichihuari
+    culture = tepehuan
+    father = 850114
+    mother = 850115
+    trait = gregarious
+    trait = ambitious
+    2303.11.18 = { birth = yes }
+    2375.1.1 = { death = yes }
 }
