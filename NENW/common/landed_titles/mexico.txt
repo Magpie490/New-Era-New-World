@@ -3,7 +3,13 @@ e_mexico = {
 	color2={ 255 255 20 }
 	
 	capital = 3067 # c_mexico
-	
+	can_be_usurped = no
+	gain_effect = {
+		if = {
+			limit = { NOT = { has_global_flag = hmereformedflag } }
+			set_global_flag = hmereformedflag
+		}
+	}
 	nahua = "Aztlán"
 	mixtec = "Aztlán"
 	yucateco = "Aztlán"
@@ -11,6 +17,7 @@ e_mexico = {
 	maya = "Aztlán"
 	purepecha = "Aztlán"
 	raramuri = "Aztlán"
+	chilangos = "Sagrados Principados Unidos Mexicanos"
 		
 	k_nayarit = {
 		color={ 41 74 165 }
@@ -138,6 +145,9 @@ e_mexico = {
 		color={ 136 204 181 }
 		color2={ 255 255 255 }
 
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality	
 		capital = 3091 # c_santiago_de_queretaro
 		
 		d_queretaro = {
@@ -919,6 +929,9 @@ e_mexico = {
 		color = { 89 12 127 }
 		color2 = { 255 255 255 }
 		
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality	
 		capital = 3064 #c_pachuca
 		
 		d_tula = { # titular archbishopric for the HME
@@ -1135,6 +1148,9 @@ e_mexico = {
 		
 		catholic = 5000
 		
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality	
 		d_teotihuacan = { #titular archbishopric for the HME
 			color = { 254 180 69 }
 			color2 = { 255 255 255 }

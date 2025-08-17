@@ -5674,7 +5674,7 @@ religious = {
 		ROOT = {
 			is_nomadic = no
 			NOT = { government = viceroyal_government }
-			NOT = { government = confederation_government }
+			NOR = { government = confederation_government government = holymexico_government }
 			conditional_tooltip = {
 				trigger = { 
 					NOR = {
@@ -13640,6 +13640,10 @@ dejure_county_claim = {
 				}
 			}
 		}
+		
+		ROOT = {
+			NOT = { government = holymexico_government }
+		}
 	}
 	
 	can_use_title = {
@@ -13679,6 +13683,10 @@ dejure_county_claim = {
 		
 		FROM = {
 			ROOT_can_press_dejure_claim_trigger = yes
+		}
+		
+		ROOT = {
+			NOT = { government = holymexico_government }
 		}
 	}
 
