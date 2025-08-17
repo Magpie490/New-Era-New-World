@@ -4181,10 +4181,12 @@ pike_column_advance_tactic = {
 		phase = melee
 		pikemen = 0.01
 		flank_has_leader = yes
-		leader = { 
-			culture_group = amero_italic
-			culture = nutmegger
-			culture_group = eastern_algonquian
+		leader = {
+			OR = {
+				culture_group = amero_italic
+				culture = nutmegger
+				culture_group = eastern_algonquian
+			}
 		}
 	}
 

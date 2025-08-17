@@ -50,11 +50,11 @@ theocracy_governments = {
 			is_patrician = no
 			OR = {
 				is_female = no
-				religion_allows_female_temple_holders = yes
+				religion_scope = { religion_allows_female_temple_holders = yes }
 			}
 			OR = {
 				is_female = yes
-				religion_allows_male_temple_holders = yes
+				religion_scope = { religion_allows_male_temple_holders = yes }
 			}
 			OR = {
 				NOT = { is_government_potential = theocratic_feudal_government }

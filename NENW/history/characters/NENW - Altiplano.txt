@@ -1,10 +1,12 @@
 850000 = { # Caudillo del Paso del Norte
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Doroteo"
     religion = centaurista
     culture = norteno
+	diplomacy = 7
+	trait= gregarious
     trait = exalted_warlord
-	trait = bastard
+	trait = legit_bastard
 	trait = short	
     trait = brave
     trait = proud
@@ -25,7 +27,7 @@
 	}
 }
 850001 = { # Aureliano Arango, hijo mayor de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Aureliano"
     religion = centaurista
     culture = norteno
@@ -45,7 +47,7 @@
 	}	
 }
 850002 = { # Macario "El Mudo", hijo adoptivo de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "Macario"
     religion = centaurista
     culture = norteno
@@ -66,7 +68,7 @@
 	}	
 }
 850003 = { # María "La Paloma del Sur", madre de Doroteo
-    dynasty = 56621560
+    dynasty = 5128754
     name = "María"
 	female = yes
     religion = centaurista
@@ -76,6 +78,7 @@
     trait = gregarious
     trait = deceitful
     trait = bard
+	give_nickname = nick_the_dove
     2268.4.12 = {
         birth = yes
     }
@@ -249,7 +252,7 @@
     dynasty = 56621561
     religion = quaker
     culture = mexikanisch
-    trait = intelligent
+    trait = genius
     trait = shy
     trait = cynical
     trait = ambitious
@@ -293,7 +296,7 @@
     trait = shy
     trait = kind
     trait = depressed
-    trait = poetic
+    trait = poet
     trait = mystic
 	father = 850021
 	mother = 850022
@@ -319,7 +322,7 @@
     trait = arbitrary
     trait = zealous
     trait = strong
-    trait = one-handed
+    trait = one_handed
     trait = gout
     2238.5.12 = {
         birth = yes
@@ -509,7 +512,7 @@
     trait = charismatic_negotiator
     trait = gregarious
     trait = lustful
-    trait = sympathy_for_pagans
+    trait = sympathy_pagans
     2269.9.2 = {
         birth = yes
     }
@@ -526,8 +529,8 @@
     trait = brave
     trait = gregarious
     trait = quick
-    trait = sympathy_for_pagans
-    trait = dutiful_cleric
+    trait = sympathy_pagans
+    trait = martial_cleric
 	trait = child_of_consort
     father = 850025
     mother = 850026
@@ -546,7 +549,7 @@
     trait = charismatic_negotiator
     trait = gregarious
     trait = lustful
-    trait = sympathy_for_pagans
+    trait = sympathy_pagans
     2305.9.2 = {
         birth = yes
     }
@@ -644,9 +647,9 @@
     culture = raramuri
     trait = mystic
     trait = shy
-    trait = sympathy_for_pagans
-    trait = poetic
-    trait = devout
+    trait = sympathy_pagans
+    trait = poet
+    trait = zealous
     2282.7.18 = {
         birth = yes
     }
@@ -690,7 +693,7 @@
     trait = ambitious
     trait = arbitrary
     trait = rough_terrain_leader
-	trait = sympathy_for_pagans
+	trait = sympathy_pagans
     2277.9.13 = {
         birth = yes
     }
@@ -707,7 +710,7 @@
     trait = robust
     trait = wroth
     trait = lustful
-    trait = desert_warrior
+    trait = desert_terrain_leader
     trait = shrewd
     trait = zealous
     father = 850035
@@ -731,7 +734,7 @@
     trait = shrewd
     trait = lustful
     trait = quick
-    trait = sympathy_for_pagans
+    trait = sympathy_pagans
     father = 850035
 #	mother = 850078	
     2301.3.9 = {
@@ -743,7 +746,7 @@
 }
 850038 = { # Cuauhtémoc "el Rojo", Caudillo de Shiwas
     name = "Cuauhtémoc"
-    dynasty = 56621568 #Salayandía
+    dynasty = 5128755 #Salayandía
     religion = centaurista
     culture = norteno
     trait = brilliant_strategist
@@ -752,10 +755,11 @@
     trait = strong
     trait = quick
     trait = hunter
-    trait = desert_warrior
+    trait = desert_terrain_leader
     trait = cruel
     trait = diligent
 	trait = just
+	trait = drunkard
 	give_nickname = nick_rojo
     2277.6.6 = {
         birth = yes
@@ -772,14 +776,14 @@
 }
 850039 = { # Tizoc, hijo de Cuauhtémoc y Teodora
     name = "Tizoc"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = raramuri
     trait = child_of_consort
     trait = quick
     trait = strong
     trait = fussy
-    trait = sympathy_for_pagans
+    trait = sympathy_pagans
     father = 850038
     mother = 850037
     2320.5.27 = {
@@ -792,7 +796,7 @@
 }
 850040 = { # Heliodoro, hijo de Cuauhtémoc
     name = "Heliodoro"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     trait = skilled_tactician
@@ -814,7 +818,7 @@
 }
 850041 = {
     name = "Nahúm"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     trait = flamboyant_schemer
@@ -841,13 +845,13 @@
 }
 850042 = {
     name = "Liria"
-    dynasty = 56621568
+    dynasty = 5128755
     religion = centaurista
     culture = norteno
     female = yes
     trait = strong
     trait = brave
-    trait = rough_terrain_expert
+    trait = rough_terrain_leader
     trait = temperate
     trait = celibate
     father = 850038
@@ -859,9 +863,9 @@
         death = yes
     }
 }
-850043 = { # Mayra, esposa oficial de Cuauhtémoc
-    name = "Mayra"
-#   dynasty = 56621569 #Sarabia
+850043 = { # Sarah, esposa oficial de Cuauhtémoc
+    name = "Sarah"
+   dynasty = 56621569 #Sarabia
     religion = quaker
     culture = norteno
     female = yes
@@ -869,6 +873,7 @@
     trait = just
     trait = temperate
     trait = feeble
+	father = 850045
     2272.4.9 = {
         birth = yes
 		culture = mexikanisch
@@ -882,7 +887,7 @@
 }
 850044 = { # Urraca, madre de Nahúm y Liria
     name = "Urraca"
-    dynasty = 56621574
+#   dynasty = 56621574
     religion = centaurista
     culture = norteno
     female = yes
@@ -894,7 +899,7 @@
     2275.9.1 = {
         birth = yes
     }
-    2390.10.5 = {
+    2370.10.5 = {
         death = yes
     }
 }
@@ -910,7 +915,23 @@
     2245.5.9 = {
         birth = yes
     }
-    2312.6.4 = {
+    2332.6.4 = {
+        death = yes
+    }
+}
+850046 = { # Aaron Sarabia, son of Samuel
+    name = "Aaron"
+    dynasty = 56621569 # Casa Sarabia
+    religion = quaker
+    culture = mexikanisch
+    trait = humble
+    trait = content
+    trait = trusting
+    trait = just
+    2302.5.22 = {
+        birth = yes
+    }
+    2340.1.1 = {
         death = yes
     }
 }
@@ -924,9 +945,10 @@
     trait = diligent
     trait = zealous
     2270.2.15 = {
+	father = 850045
         birth = yes
     }
-    2390.10.5 = {
+    2365.10.5 = {
         death = yes
     }
 }
@@ -942,7 +964,7 @@
     trait = duelist
     trait = zealous
 	trait = severely_injured
-	trait = injured
+	trait = wounded
     2265.11.11 = {
         birth = yes
     }
@@ -973,7 +995,7 @@
 	2289.5.12 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2350.1.1 = {
 		death = yes
 	}
 }
@@ -997,7 +1019,7 @@
 	2280.1.21 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2327.1.1 = {
 		death = yes
 	}
 }
@@ -1021,7 +1043,7 @@
 	2289.7.17 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2329.1.1 = {
 		death = yes
 	}
 }
@@ -1045,7 +1067,7 @@
 	2291.6.17 = {
 		birth = yes
 		}
-	2500.1.1 = {
+	2344.1.1 = {
 		death = yes
 	}
 }
@@ -1069,7 +1091,7 @@
 	2287.6.18 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2362.1.1 = {
 		death = yes
 	}
 }
@@ -1093,7 +1115,7 @@
 	2284.3.21 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2339.1.1 = {
 		death = yes
 	}
 }
@@ -1117,7 +1139,7 @@
 	2286.2.14 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2346.1.1 = {
 		death = yes
 	}
 }
@@ -1141,7 +1163,7 @@
 	2287.9.19 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2360.1.1 = {
 		death = yes
 	}
 }
@@ -1166,7 +1188,7 @@
 	2281.6.17 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2345.1.1 = {
 		death = yes
 	}
 }
@@ -1192,7 +1214,7 @@
 	2307.9.18 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2361.1.1 = {
 		death = yes
 	}
 	
@@ -1200,38 +1222,46 @@
 }
 
 850059 = {
-	name = Luis 
-	dynasty = 5128713
+	name = Escipión 
+	dynasty = 5128763
 	religion = centaurista
 	culture = norteno
-	2287.1.1 = {
+	intrigue = 10
+	learning = 10 
+	trait = elusive_shadow
+	trait = zealous
+	trait = blinded
+	trait = mystic
+	2253.1.13 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2329.1.1 = {
 		death = yes
 	}
 }
 
 850060 = {
-	name = Fabiano # A local horselord. An ambitious man who aims for conquest.
-	dynasty = 5128716
+	name = Marcial #A desert warlord. A ruthless horseman of the Bolsón de Mapimí, bent on reclaiming la Laguna
+	dynasty = 5128763 #Calavizna
 	culture = norteno
 	religion = centaurista
 	diplomacy = 4
-	martial = 5
+	martial = 7
 	stewardship = 6 
 	intrigue = 4
 	learning = 5
+	father = 850059
 	trait = intricate_webweaver
 	trait = ambitious
 	trait = strong
 	trait = gregarious
-	trait = gamer
+	trait = hunter
+	trait = deceitful
 	disallow_random_traits = yes
 	2288.8.19 = {
 		birth = yes
 	}
-	2500.1.1 = {
+	2341.1.1 = {
 		death = yes
 	}
 }
@@ -1270,7 +1300,7 @@
 	trait = gregarious
 	trait = gardener
 	trait = just
-	nickname = nick_the_gardener
+	give_nickname = nick_the_gardener
 	father = 850061
 	2265.5.2 = { birth = yes }
 	2285.1.1 = { add_spouse = 850063 }
@@ -1294,7 +1324,7 @@
 	trait = socializer
 	trait = content
 	father = 850073
-	2268.4.11 = { birth = yes }
+	2258.4.11 = { birth = yes }
 	2318.7.22 = { death = yes }
 }
 
@@ -1317,7 +1347,7 @@
 	trait = diligent
 	2290.6.29 = { birth = yes }
 	2311.12.12 = { add_spouse = 850065 }
-	2500.1.1 = { death = yes }
+	2329.1.1 = { death = yes }
 }
 850065 = {
 	name = "Sofía"  # Reina consorte, Casa Almada de Cosalá
@@ -1337,7 +1367,7 @@
 	trait = temperate
 	father = 850074
 	2295.9.10 = { birth = yes }
-	2500.1.1 = { death = yes }
+	2350.1.1 = { death = yes }
 }
 850066 = {
 	name = "Adriana"  # "La Sirena de Culiacán", heredera del Reino de Sinaloa
@@ -1358,8 +1388,8 @@
 	trait = shrewd
 	trait = just
 	disallow_random_traits = yes
-	2312.12.22 = { birth = yes }	
-	2500.1.1 = { death = yes }
+	2309.12.22 = { birth = yes }	
+	2354.1.1 = { death = yes }
 }
 850067 = {
 	name = "Julián"  # conde y futuro rey consorte, Casa Navidad de Guasave
@@ -1382,7 +1412,7 @@
 	2308.3.4 = { birth = yes }
 	2320.1.1 = {effect = {add_lover = 850066 } }
 	2325.1.1 = { add_spouse = 850066 }	
-	2500.1.1 = { death = yes }
+	2341.1.1 = { death = yes }
 }
 850068 = {
 	name = "Patricia"  # Condesa gobernante de Guasave, Casa Navidad
@@ -1402,7 +1432,7 @@
 	trait = just
 	2285.5.12 = { birth = yes }
 	2305.1.1 = { add_matrilineal_spouse = 850069}
-	2500.1.1 = { death = yes }
+	2360.1.1 = { death = yes }
 }
 
 850069 = {
@@ -1422,7 +1452,7 @@
 	trait = diligent
 	disallow_random_traits = yes
 	2287.7.19 = { birth = yes }
-	2500.1.1 = { death = yes }
+	2345.1.1 = { death = yes }
 }
 850070 = {
 	name = "Cutberto"  # Gran Jefe de Mazatlán, hermano de Matilde Pepetoro
@@ -1461,7 +1491,7 @@
 	trait = cruel
 	disallow_random_traits = yes
 	father = 850070
-	mother = 0
+#	mother = 0
 	2275.9.15 = { birth = yes }
 	2345.2.11 = { death = yes }
 }
@@ -1481,11 +1511,11 @@
 	trait = fair
 	trait = temperate
 	trait = strong
-	nickname = nick_the_bull
+	give_nickname = nick_the_bull
 	father = 850071
-	mother = 0
+#	mother = 0
 	2305.8.10 = { birth = yes }
-	2500.1.1 = { death = yes }
+	2339.1.1 = { death = yes }
 }	
 850073 = {
 	name = "Pedro"  #First petty king of Mazatlán
@@ -1497,7 +1527,7 @@
 	stewardship = 6
 	intrigue = 5
 	learning = 5
-	mother = 0
+#	mother = 0
 	2220.8.10 = { birth = yes }
 	2260.11.1 = { death = yes }
 }	
@@ -1515,7 +1545,8 @@
 	trait = patient
 	trait = temperate
 	trait = administrator
-	trait = loyalist
+	trait = content
+	trait = honest
 	2245.3.21 = { birth = yes }
 	2308.6.8 = { death = yes }
 }
@@ -1535,11 +1566,11 @@
 	trait = gregarious
 	trait = patient
 	father = 850074
-	mother = 0
+#	mother = 0
 	2278.4.12 = { birth = yes }
 	2348.10.21 = { death = yes }
 }
-850076 = {
+8500761 = {
 	name = "Esteban"  # Hijo y heredero de Lorenzo Almada
 	dynasty = 6228753 #almada
 	culture = sinaloense
@@ -1551,12 +1582,13 @@
 	learning = 5
 	trait = patient
 	trait = ambitious
-	trait = loyalist
+	trait = honest
 	trait = fair
 	trait = gregarious
 	father = 850075
-	mother = 0
+#	mother = 0
 	2308.9.15 = { birth = yes }
+	2389.1.11 = { death = yes }	
 }
 850076 = {
 	name = "Sésari" # Heir to the House Quimare. Raised in the traditions of the Rarámuri, he runs the mountain trails as he prepares to inherit his father's mantle as protector of the Sierra Madre.
@@ -1572,14 +1604,14 @@
 	trait = diligent
 	trait = patient
 	trait = brave
-	trait = light_infantry_leader
+	trait = light_foot_leader
 	disallow_random_traits = yes
 	father = 850056
 	mother = 850077
 	2308.4.12 = {
 		birth = yes
 	}
-	2500.1.1 = { death = yes }
+	2389.1.1 = { death = yes }
 }
 850077 = {
 	name = "Yolótichi" # Hija de Akirám Owiruachi, esposa de Diego Quimare y madre de César. Ligó las casas Quimare y Owiruachi. Casada antes de la conversión de su padre a la religión de los menonitas.
@@ -1599,7 +1631,7 @@
 	2307.5.10 = {
 		add_spouse = 850056 #Diego Quimare
 	}
-	2500.1.1 = { death = yes }
+	2375.1.1 = { death = yes }
 }
 850078 = { #Candameña ancestor
 	name = "Warú"
@@ -1610,7 +1642,7 @@
 	2253.8.15 = {
 		birth = yes
 	}
-	2297.1.12 = { death = yes }
+	2331.1.12 = { death = yes }
 }
 850079 = {
 	name = "Andrea" #Wife of O'Ori
@@ -1622,7 +1654,7 @@
 		culture = raramuri
 	}
 	2301.12.1 = { add_spouse = 850035}
-	2500.1.1 = {
+	2356.1.1 = {
 		death = yes
 	}
 }
@@ -1633,7 +1665,7 @@
 	religion = erensia
 	culture = mayo
 	2298.7.5 = { birth = yes }
-	2500.1.1 = {
+	2377.1.1 = {
 		death = yes
 	}
 }
@@ -1644,7 +1676,7 @@
 	culture = mexikanisch
 	2270.7.5 = { birth = yes }
 	2289.1.1 = { add_spouse = 850017 }
-	2500.1.1 = {
+	2362.1.1 = {
 		death = yes
 	}
 }
@@ -1663,7 +1695,7 @@
 	trait = greedy
 	father = 850087
     2291.3.12 = { birth = yes    }
-	2500.1.1 = { death = yes}
+	2358.1.1 = { death = yes}
 }
 850084 = { # Aneli Maso'aria
     name = "Aneli"
@@ -1674,18 +1706,18 @@
 	learning = 9
     trait = mystic
     trait = content
-    trait = renowed_physician
+    trait = physician
     trait = temperate
 	trait = intricate_webweaver
 	father = 850087	
-    2293.8.20 = {
+    2291.8.20 = {
         birth = yes
     }
 	2325.1.1 = {
 		employer = 850083
-			give_job_title = job_court_chaplain
+			give_job_title = job_spiritual
 	}
-	2500.1.1 = { death = yes}	
+	2365.1.1 = { death = yes}	
 }
 850085 = { # Ye’ema Maso'aria
     name = "Ye’ema"
@@ -1700,7 +1732,7 @@
     2310.2.4 = {
         birth = yes
     }
-	2500.1.1 = { death = yes }
+	2398.1.1 = { death = yes }
 	
 }
 850086 = { # Kua’ipo Maso'aria
@@ -1716,7 +1748,7 @@
     2307.5.18 = {
         birth = yes
     }
-	2500.1.1 = { death = yes }
+	2360.1.1 = { death = yes }
 }
 850087 = { # Bwikam Maso'aria
     name = "Bwikam"
@@ -1730,7 +1762,7 @@
     2255.11.1 = {
         birth = yes
     }
-	2500.1.1 = { death = yes }
+	2340.1.1 = { death = yes }
 }
 850088 = {
     name = "Bwikam"
@@ -1744,5 +1776,145 @@
     2255.11.1 = {
         birth = yes
     }
-	2500.1.1 = { death = yes }
+	2340.1.1 = { death = yes }
+}
+
+
+850090 = {
+	name = Tariq #horselord of Shiwas of the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	father = 850091
+	2287.1.1 = {
+		birth = yes
+	}
+	2370.1.1 = {
+		death = yes
+	}
+}
+850091 = {
+	name = Saíd #Member the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	trait = one_eyed
+	give_nickname = nick_one_eye
+	2265.5.25 = {
+		birth = yes
+	}
+	2350.1.1 = {
+		death = yes
+	}
+}
+850092 = {
+	name = Lupe #Member the Clan Sisimble
+	dynasty = 5128765 #Sisimble
+	religion = centaurista
+	culture = norteno
+	father = 850091	
+	2299.12.11 = {
+		birth = yes
+	}
+	2397.1.1 = {
+		death = yes
+	}
+}
+
+850093 = {
+	name = Osorio #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	father = 850094	
+	2291.2.11 = {
+		birth = yes
+	}
+	2360.1.1 = {
+		death = yes
+	}
+}
+850094 = {
+	name = García #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	2269.11.1 = {
+		birth = yes
+	}
+	2340.1.1 = {
+		death = yes
+	}
+}
+850095 = {
+	name = Oveco #Member the Clan Chichitame
+	dynasty = 5128766 #Chichitame
+	religion = centaurista
+	culture = norteno
+	father = 850094
+	2295.6.15 = {
+		birth = yes
+	}
+	2380.1.1 = {
+		death = yes
+	}
+}
+850100 = {
+	name = Juan #Leader of the Tepehuan tribe of Mezquital
+	dynasty = 6241050 #Jukgamkam
+	religion = muertista
+	culture = tepehuan
+	trait = robust
+	trait = diligent
+	2283.7.15 = {
+		birth = yes
+	}
+	2338.1.1 = {
+		death = yes
+	}
+}
+850101 = {
+	name = Peegro #Member of the Tepehuan tribe of Mezquital
+	dynasty = 6241050 #Jukgamkam
+	religion = muertista
+	culture = tepehuan
+	trait = craven
+	father = 850100
+	mother = 850103	
+	2305.9.11 = {
+		birth = yes
+	}
+	2342.1.1 = {
+		death = yes
+	}
+}
+850102 = {
+	name = Luis #Member of the Tepehuan tribe of Mezquital
+	dynasty = 6241050 #Jukgamkam
+	religion = muertista
+	culture = tepehuan
+	trait = proud
+	trait = wroth
+	father = 850100
+	mother = 850103
+	2308.5.31 = {
+		birth = yes
+	}
+	2372.1.1 = {
+		death = yes
+	}
+}
+850103 = {
+	name = Jeeña #Member of the Tepehuan tribe of Mezquital
+	female = yes
+	dynasty = 0 
+	religion = muertista
+	culture = tepehuan
+	2285.1.31 = {
+		birth = yes
+	}
+	2302.5.5 = { add_spouse = 850100}
+	2368.1.1 = {
+		death = yes
+	}
 }
