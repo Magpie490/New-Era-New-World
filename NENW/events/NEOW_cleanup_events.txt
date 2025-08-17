@@ -640,32 +640,6 @@ province_event = {
 	}
 }
 province_event = {
-	id = cleanup.6780
-	hide_window = yes	
-	
-	trigger = {
-		is_land = yes
-		NOR = {
-			is_capital = yes
-			is_holy_site = ROOT
-			any_neighbor_province = {
-				is_holy_site = ROOT
-			}
-			any_neighbor_province = {
-				any_neighbor_province = {
-					is_holy_site = ROOT
-				}
-			}
-		}
-	}
-	mean_time_to_happen = {
-		years = 600
-	}
-	immediate={
-		spawn_disease = heterodoxy
-	}
-}
-province_event = {
 	id = cleanup.6781
 	hide_window = yes	
 	
