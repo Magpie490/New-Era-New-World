@@ -214,6 +214,8 @@ e_altiplano = {
 		
 		capital = 3002 # c_hermosillo
 		
+		seri = "Zonoor"
+		
 		d_altar = {
 			color = { 205 216 86 }
 			color2 = { 255 255 255 }
@@ -396,19 +398,24 @@ e_altiplano = {
 			
 			capital = 3002 # c_hermosillo
 			
+			seri = "Zonoor"
+			
 			c_hermosillo = { # 3002
 				color={ 204 204 136 }
 				color2={ 255 255 255 }
 				
+				seri = "Hermoziyo"
+				
 				b_ures_SO = {}
-				b_hermosillo_SO = {}
+				b_hermosillo_SO = {
+					seri = "Hermoziyo"
+				}
 				b_santisima_trinidad_del_pitic_SO = {}
 				b_san_pedro_el_saucito_SO = {}
 				b_mesa_del_seri_SO = {}
 				b_zamora_SO = {}
 				b_huaquila_SO = {}
-#				b_punta_ignacio_SO = {}
-#				b_punta_chueca_SO = {}
+#				b_punta_ignacio_SO = {}			
 #				b_mina_pilares_SO = {}
 			}
 			c_baviacora = { #2350
@@ -443,7 +450,14 @@ e_altiplano = {
 				color={ 255 255 170 }
 				color2={ 255 255 255 }
 				
-				b_bahia_kino_SO = {}
+				seri = "Hahjö Itcoj"
+				
+				b_bahia_kino_SO = {
+					seri = "Hahjö Itcoj"
+				}
+				b_punta_chueca_SO = {
+					seri = "Socaaix"
+				}
 				b_la_yuta_SO = {}
 				b_kino_nuevo_SO = {}
 				b_cajeme_SO = {}
@@ -1406,13 +1420,14 @@ e_altiplano = {
 		
 		capital = 2400
 		
+		seri = "Comcaac"
+		
 		d_cortes = {
 			color = { 21 216 216 }
 			color2 = { 255 255 255 }
 			
 
-			seri = "Comcaac"
-	#		occidental = "Mar de Cortés"				 
+			seri = "Comcaac"			 
 
 			
 			c_tiburon = { #2400
@@ -1421,36 +1436,29 @@ e_altiplano = {
 
 				capital = 2400
 
-		#		occidental = "Tiburón"					
-		#		seri = "Tahejöc"
-		#		yaqui = "Kuchu Kuchi'im" #Pez cuchillo
+				seri = "Tahejöc"
+				yaqui = "Kuchu Kuchi'im" #Pez cuchillo
 				
 				b_tecomate_MC = { 
-		#				nahua = "Tecomatl"
+						nahua = "Tecomatl"
 				}
 				b_hant_yapol_MC = { #Lit. Tiburón Ballena
-		#				arixan = "Whaleshark"
-		#				occidental = "Jantiapo"						
+						seri = "Hant Yapol"
 				}
 				b_an_icatazatoj_MC = {#An Icatázatoj
-		#				arixan = "Slaughterhouse"
-		#				occidental = "Anicatázato"					
+						seri = "An Icatazatöj"					
 					}
 				b_ano_yait_MC={ #Ocaso
-		#				arixan = "Sunset"
-		#				californiano = "El Ocaso"
-		#				occidental = "Anoyaite"					
+						seri = "Ano Yait"					
 					}
 				b_paaza_caaitic_MC = {#Lugar Blando
-		#				arixan = "Softplace"
-		#				occidental = "Pazacaitico"				
+						seri = "Paaza Caaitic"				
 				}
 				b_caanj_iitom_MC = { #habla de la baya
-			#			arixan = "Berryspeak"
-			#			occidental = "Canjítome"
+						seri = "Caanj Iitom"
 				}
 				b_hataamt_ihozl_MC = { #Hatáamt Ihózl
-			#			occidental = "Jatámtijozote"			
+						seri =  "Hataamt Ihozr"			
 					}
 			}
 			
@@ -1458,18 +1466,16 @@ e_altiplano = {
 				color={ 22 229 229 }
 				color2={ 255 255 255 }
 					
-			#	seri = "Xazl Iimt"
-			#	yaqui = "Ankeles"
+				seri = "Xazl Iimt"
+				yaqui = "Ankeles"
 					
 				b_refugio_MC = { 
-			#			seri = "Xazl"
-			#			yaqui = "Eusilia"
+						seri = "Xazl"
+						yaqui = "Eusilia"
 					}
 				b_tjamojiil_yacaai_MC = {
-			#			arixan = "Whitestone"
-			#			seri = "Tjamojíil Yacáai"
-			#			yaqui = "Tetatosai"
-			#			occidental = "Piedra Blanca"	
+						seri = "Tjamojiir Yacaai"
+						yaqui = "Tetatosai"	
 				}
 				b_smith_MC = {}
 				b_rattlesnake_MC = { }
@@ -1482,10 +1488,10 @@ e_altiplano = {
 				color={ 17 178 178 }
 				color2={ 255 255 255 }
 						
-			#	seri = "Coftéecöl "
+				seri = "Coftéecöl "
 						
 				b_san_esteban_MC = { 
-			#		seri= "Hast"
+					seri= "Hast"
 				}
 				b_san_lorenzo_MC = {}
 				b_san_pedro_martir_MC = {}
