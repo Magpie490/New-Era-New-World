@@ -1,15 +1,10 @@
-NDefines.NDiplomacy.DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PIETY = 150
-NDefines.NCharacter.MAX_JOINED_FACTIONS = 4
+
 NDefines.NCharacter.EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR = 2350
 NDefines.NCharacter.LATE_PORTRAIT_AND_UNIT_AFTER_YEAR = 2700
 NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE = 2325
 NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 2100
 NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 3200
-NDefines.NEngine.EVENT_PROCESS_OFFSET = 220
-NDefines.NEngine.COURTIER_EVENT_PROCESS_OFFSET = 240
 NDefines.NEngine.MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066
-NDefines.NEngine.COURT_PRUNE_SIZE = 2
-NDefines.NEngine.PRUNE_MINIMAL_AGE = 25
 
 
 NDefines.NEndGame.DYN1_SCORE = 100000
@@ -90,42 +85,3 @@ NDefines.NFrontend.CREDITS_POS_Z = 1308.0
 NDefines.NFrontend.CREDITS_LOOK_X = 1700.0
 NDefines.NFrontend.CREDITS_LOOK_Y = 0.0
 NDefines.NFrontend.CREDITS_LOOK_Z = 1450.0
-
-
-NDefines.NRulerDesigner.BASE_ATTRIB = 5,
-NDefines.NRulerDesigner.BASE_AGE = 16,
-NDefines.NRulerDesigner.BASE_FERTILITY = 0.5,
-NDefines.NRulerDesigner.BASE_HEALTH = 5.0,
-NDefines.NRulerDesigner.COST_ATTRIB = 0,
-NDefines.NRulerDesigner.COST_SON = 5,
-NDefines.NRulerDesigner.COST_DAUGHTER = 5,
-NDefines.NRulerDesigner.COST_MARRIED = 5,
-NDefines.NRulerDesigner.COST_FERTILITY = 0,
-NDefines.NRulerDesigner.COST_HEALTH = 0,
-NDefines.NRulerDesigner.COST_COMBAT_RATING = 0.0,
-NDefines.NRulerDesigner.COST_MONTHLY_PRESTIGE = 0,
-NDefines.NRulerDesigner.COST_MONTHLY_PIETY = 0,
-NDefines.NRulerDesigner.COST_MONTHLY_WEALTH = 0,
-NDefines.NRulerDesigner.COST_GLOBAL_TAX = 0,
-NDefines.NRulerDesigner.COST_CHURCH_OPINION = 0,
-NDefines.NRulerDesigner.COST_SPOUCE_OPINION = 0,
-NDefines.NRulerDesigner.COST_SEXAPPEAL_OPINION = 0,
-NDefines.NRulerDesigner.COST_DYNASTY_OPINION = 0,
-NDefines.NRulerDesigner.COST_VASSAL_OPINION = 0,
-NDefines.NRulerDesigner.COST_LIEGE_OPINION = 0.0,
-NDefines.NRulerDesigner.COST_INFIDEL_OPINION = 0.0,
-NDefines.NRulerDesigner.COST_OPPOSITE_TRAIT_OPINION = 0,
-NDefines.NRulerDesigner.COST_SAME_TRAIT_OPINION = 0,
-NDefines.NRulerDesigner.COST_SAME_RELIGION_OPINION = 0,
-NDefines.NRulerDesigner.COST_AMBITION_OPINION = 0.0,
-NDefines.NRulerDesigner.COST_TRIBAL_OPINION = 0.0,
-NDefines.NRulerDesigner.COST_UNREFORMED_TRIBAL_OPINION = 0.0,
-NDefines.NRulerDesigner.COST_GENERAL_OPINION = 0,
-NDefines.NRulerDesigner.COST_MUSLIM_OPINION = 0.,
-NDefines.NRulerDesigner.COST_JEWISH_OPINION = 0,
-NDefines.NRulerDesigner.COST_CHRISTIAN_OPINION = 0,
-NDefines.NRulerDesigner.COST_ZOROASTRIAN_OPINION = 0,
-NDefines.NRulerDesigner.COST_MORALE_OFFENCE = 0,
-NDefines.NRulerDesigner.COST_MORALE_DEFENCE = 0,
-NDefines.NRulerDesigner.COST_DEFENCE = 0,
-NDefines.NRulerDesigner.MAX_AGE = 40
