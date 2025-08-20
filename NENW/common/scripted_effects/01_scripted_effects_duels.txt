@@ -304,7 +304,7 @@ apply_any_applicable_harsh_penalties_effect = {
 
 			# Instead of blocking the action completely...
 			event_target:combatant_1 = {
-				show_scope_change = no
+				
 
 				give_nickname = nick_priest_hater
 
@@ -345,7 +345,7 @@ apply_any_applicable_harsh_penalties_effect = {
 
 			# Instead of blocking the action completely...
 			event_target:combatant_1 = {
-				show_scope_change = no
+				
 
 				add_character_modifier = {
 					modifier = uncivilized_dueler
@@ -367,7 +367,7 @@ apply_any_applicable_harsh_penalties_effect = {
 			custom_tooltip = { text = dueling_inappropriate_target_tt }
 
 			event_target:combatant_1 = {
-				show_scope_change = no
+				
 
 				add_character_modifier = {
 					name = uncivilized_dueler
@@ -3326,7 +3326,6 @@ apply_generic_duel_victory_effect = {
 			years = 1 # Also clears upon new duel!
 		}
 
-		character_event = { id = steam.021 } # Bring it On achievement check event
 	}
 }
 
@@ -3429,14 +3428,6 @@ handle_claim_duel_result_effect = {
 					}
 				}
 
-				if = {
-					limit = {
-						ai = no
-						is_ironman = yes
-					}
-
-					set_character_flag = achievement_over_your_dead_body
-				}
 			}
 			else = { # Means you lost...
 				if = {
@@ -3500,14 +3491,6 @@ handle_claim_duel_result_effect = {
 						}
 					}
 
-					if = {
-						limit = {
-							ai = no
-							is_ironman = yes
-						}
-
-						set_character_flag = achievement_over_your_dead_body
-					}
 
 					if = { # If claims on *multiple* titles...
 						limit = {
@@ -5294,14 +5277,14 @@ apply_opinion_reward_effect = {
 				limit = { event_target:enemy_commander = { is_alive = yes } }
 
 				event_target:enemy_commander = { # Scope setting to use the trigger-switch properly...
-					show_scope_change = no
+					
 
 					trigger_switch = {
 						on_trigger = has_character_flag
 
 						fought_worse_warrior@event_target:home_commander = { # If it was a worse commander you killed...
 							ROOT = {
-								show_scope_change = no
+								
 
 								tooltip = {
 									reverse_opinion = {
@@ -5321,7 +5304,7 @@ apply_opinion_reward_effect = {
 
 						fought_even_warrior@event_target:home_commander = { # If it was an evenly matched commander you killed...
 							ROOT = {
-								show_scope_change = no
+								
 
 								tooltip = {
 									reverse_opinion = {
@@ -5341,7 +5324,7 @@ apply_opinion_reward_effect = {
 
 						fought_great_warrior@event_target:home_commander = { # If it was a better commander you killed...
 							ROOT = {
-								show_scope_change = no
+								
 
 								tooltip = {
 									reverse_opinion = {
