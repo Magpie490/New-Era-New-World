@@ -712,12 +712,12 @@ artifact_selection_score = {
 	}
 	mult_modifier = {
 		factor = 1.1
-		event_target:original_hero = { is_in_society = warrior_lodge_norse }
+		#event_target:original_hero = { is_in_society = warrior_lodge_norse }
 		has_artifact_flag = axe
 	}
 	mult_modifier = {
 		factor = 1.1
-		event_target:original_hero = { is_in_society = warrior_lodge_tengri }
+		#event_target:original_hero = { is_in_society = warrior_lodge_tengri }
 		has_artifact_flag = bow
 	}
 }
@@ -2309,11 +2309,6 @@ interesting_courtier_selection_score = {
 	}
 	additive_modifier = {
 		value = 5
-		same_society_as = PREV
-		higher_society_rank_than_prev_trigger = no
-	}
-	additive_modifier = {
-		value = 5
 		is_in_society = yes
 		NOT = { same_society_as = PREV }
 	}
@@ -2387,12 +2382,6 @@ interesting_courtier_selection_score = {
 	   value = 10
 		is_friend = PREV
 	}
-	additive_modifier = {
-	   value = 10
-		same_society_as = PREV
-		higher_society_rank_than_prev_trigger = yes
-	}
-
 	# Weak: Other
 	additive_modifier = {
 		value = 5
@@ -2516,10 +2505,10 @@ interesting_courtier_outcome_score = {
 	# Weak: Relationships
 	mult_modifier = {
 		factor = 1.25
-		dynasty = PREV
+		dynasty = ROOT
 		NOR = {
-			is_close_relative = PREV
-			is_married = PREV
+			is_close_relative = ROOT
+			is_married = ROOT
 		}
 	}
 	mult_modifier = {
@@ -2536,13 +2525,8 @@ interesting_courtier_outcome_score = {
 	}
 	mult_modifier = {
 		factor = 1.25
-		same_society_as = PREV
-		higher_society_rank_than_prev_trigger = no
-	}
-	mult_modifier = {
-		factor = 1.25
 		is_in_society = yes
-		NOT = { same_society_as = PREV }
+		NOT = { same_society_as = ROOT }
 	}
 	mult_modifier = {
 		factor = 1.25
@@ -2555,8 +2539,8 @@ interesting_courtier_outcome_score = {
 	mult_modifier = {
 		factor = 1.25
 		OR = {
-			is_close_relative = PREV
-			is_married = PREV
+			is_close_relative = ROOT
+			is_married = ROOT
 		}
 	}
 	mult_modifier = {
@@ -2570,25 +2554,25 @@ interesting_courtier_outcome_score = {
 	mult_modifier = {
 		factor = 1.25
 		reverse_has_opinion_modifier = {
-			who = PREV
+			who = ROOT
 			modifier = opinion_marital_love
 		}
 	}
 	mult_modifier = {
 		factor = 1.25
 		reverse_has_opinion_modifier = {
-			who = PREV
+			who = ROOT
 			modifier = opinion_family_love
 		}
 	}
 	mult_modifier = {
 		factor = 1.25
-		shares_any_bloodline_with = PREV
+		shares_any_bloodline_with = ROOT
 	}
 	mult_modifier = {
 		factor = 1.25
 		reverse_opinion = {
-			who = PREV
+			who = ROOT
 			value >= 45
 		}
 	}
@@ -2596,28 +2580,23 @@ interesting_courtier_outcome_score = {
 	# Strong: Relationships
 	mult_modifier = {
 		factor = 1.5
-		is_child_of = PREV
+		is_child_of = ROOT
 	}
 	mult_modifier = {
 		factor = 1.5
-		is_parent_of = PREV
+		is_parent_of = ROOT
 	}
 	mult_modifier = {
 		factor = 1.5
-		is_married = PREV
+		is_married = ROOT
 	}
 	mult_modifier = {
 		factor = 1.5
-		is_lover = PREV
+		is_lover = ROOT
 	}
 	mult_modifier = {
 		factor = 1.5
-		is_friend = PREV
-	}
-	mult_modifier = {
-		factor = 1.5
-		same_society_as = PREV
-		higher_society_rank_than_prev_trigger = yes
+		is_friend = ROOT
 	}
 
 	# Weak: Other
@@ -2642,10 +2621,6 @@ interesting_courtier_outcome_score = {
 	}
 	mult_modifier = {
 		factor = 1.25
-		secret_religion = PREV
-	}
-	mult_modifier = {
-		factor = 1.25
 		well_treated_for_disease_trigger = yes
 	}
 
@@ -2653,7 +2628,7 @@ interesting_courtier_outcome_score = {
 	mult_modifier = {
 		factor = 1.5
 		any_owned_bloodline = {
-			bloodline_is_active_for = PREV
+			bloodline_is_active_for = ROOT
 		}
 	}
 	mult_modifier = {
