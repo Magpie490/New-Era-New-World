@@ -502,6 +502,27 @@
         holder = c_tamiahua
     }
 }
+2100124 = { # Doña Irma Dorantes de Valles
+    name = "Irma"
+    female = yes
+    dynasty = 5228059 # Dorantes
+    religion = catholic
+    culture = huastec
+    diplomacy = 8
+    stewardship = 5
+    intrigue = 4
+    martial = 2
+    learning = 6
+    trait = attractive
+    trait = gregarious
+    trait = poet
+    trait = kind
+    father = 2100125
+    mother = 2100126
+    2309.12.23 = { birth = yes }
+    2324.4.15 = { add_spouse = 2100117 } # Matrimonio con Víctor Andrade (el soldado)
+	
+}
 2100125 = { # Don Alonso Dorantes de Valles
     name = "Alonso"
     dynasty = 5228059 # Dorantes
@@ -537,24 +558,77 @@
     2338.8.12 = { death = yes }
 }
 
-2100124 = { # Doña Irma Dorantes de Valles
-    name = "Irma"
+#Bajío
+
+2200000 = { #Doña Anita Bocanegra de Aguascalientes
+    name = "Anita"
     female = yes
-    dynasty = 5228059 # Dorantes
-    religion = catholic
-    culture = huastec
-    diplomacy = 8
-    stewardship = 5
-    intrigue = 4
-    martial = 2
+    dynasty = 0 # Bocanegra
+    religion = cristohumanista
+    culture = norteabajeno
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
     learning = 6
-    trait = attractive
-    trait = gregarious
-    trait = poet
+	trait = charismatic_negotiator
+	trait = scholar
+	trait = sympathy_judaism
+	trait = erudite
+	trait = diligent
+    trait = proud
     trait = kind
-    father = 2100125
-    mother = 2100126
-    2309.12.23 = { birth = yes }
-    2324.4.15 = { add_spouse = 2100117 } # Matrimonio con Víctor Andrade (el soldado)
-	
+    2301.9.11 = { birth = yes }
+}
+2200001 = { #Don Aaron Soto de Pachuca
+    name = "Aaron"
+    dynasty = 0 # Soto
+    religion = catholic
+    culture = cornish
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
+    learning = 6
+	trait = fortune_builder
+	trait = one_eyed
+	trait = quick
+	trait = sturdy
+    trait = proud
+    trait = just
+    2301.9.11 = { birth = yes culture = chilangos }
+}
+2200002 = { #Patriarch Ismael Carranza de Tula
+    name = "Ismael"
+    dynasty = 0 # Carranza
+    religion = catholic
+    culture = otomi
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
+    learning = 6
+	trait = charismatic_negotiator
+	trait = scholar
+	trait = erudite
+	trait = ambitious
+    trait = just
+    trait = patient
+    2301.9.11 = { birth = yes }
+}
+2200003 = { #Don Rodolfo Zayas de Tulancingo - El Santo Reference
+    name = "Rodolfo"
+    dynasty = 0 # Zayas
+    religion = catholic
+    culture = chilangos
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
+    learning = 6
+	trait = skilled_tactician
+	trait = duelist
+	trait = robust
+	trait = strong
+	trait = diligent
+    trait = proud
+    trait = scarred_mid
+	trait = stubborn
+    2301.9.11 = { birth = yes }
 }
