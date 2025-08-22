@@ -1836,7 +1836,8 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 			}
 		
 		}
-		d_cholula = { #titular archbishopric
+		
+		d_cholula = { #HME archbishopric
 			color = { 78 65 188 }
 			color2 = { 255 255 255 }
 			
@@ -1846,51 +1847,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				AND = {
 					is_theocracy = yes
 				}
-			}
-		}	
-		d_tehuacan = { #titular duchy for the HME
-			color = { 77 44 255 }
-			color2 ={ 255 255 255 }
-			
-			capital = 3072 #c_tehuacan
-		}	
-		d_puebla_free_city = { #titular free city for the HME 
-			color={ 98 69 255 }
-			color2={ 255 255 255 }		
-			capital = 3071 # c_puebla
-			
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality			
-		}
-		d_chipilo = { #titular principality for the HME
-			color = { 33 152 165 }
-			color2 = { 255 255 255 }
-			
-			capital = 2195 #c_atlixco
-			
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality		
-		}
-		d_puebla = {
-			color={ 229 181 114 }
-			color2={ 255 255 255 }
-			
-			capital = 3071 # c_puebla
-			
-			c_puebla = { # 3071
-				color={ 204 161 102 }
-				color2={ 255 255 255 }
-				
-				b_puebla_PU = {}
-				b_cuatlazingo_PU = {}
-				b_amozoc_PU = {}
-				b_tepeaca_PU = {}
-				b_acajete_PU = {}
-				b_cuautinchan_PU = {}
-				b_san_baltazar_tetela_PU = {}
-				b_san_pedro_zacachimalpa_PU = {}
 			}
 			
 			c_texmelucan = { #2194
@@ -1917,6 +1873,54 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_san_francisco_ocotlan_PU = {}
 				b_san_nicolas_de_los_ranchos_PU = {}
 			}
+		}
+		
+		d_tehuacan = { #titular duchy for the HME
+			color = { 77 44 255 }
+			color2 ={ 255 255 255 }
+			
+			capital = 3072 #c_tehuacan
+		}	
+		d_puebla_free_city = { #titular free city for the HME 
+			color={ 98 69 255 }
+			color2={ 255 255 255 }		
+			capital = 3071 # c_puebla
+			
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality			
+		}
+		d_chipilo = { #titular principality for the HME
+			color = { 33 152 165 }
+			color2 = { 255 255 255 }
+			
+			capital = 2195 #c_atlixco
+			
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality		
+		}
+		
+		d_puebla = {
+			color={ 229 181 114 }
+			color2={ 255 255 255 }
+			
+			capital = 3071 # c_puebla
+			
+			c_puebla = { # 3071
+				color={ 204 161 102 }
+				color2={ 255 255 255 }
+				
+				b_puebla_PU = {}
+				b_cuatlazingo_PU = {}
+				b_amozoc_PU = {}
+				b_tepeaca_PU = {}
+				b_acajete_PU = {}
+				b_cuautinchan_PU = {}
+				b_san_baltazar_tetela_PU = {}
+				b_san_pedro_zacachimalpa_PU = {}
+			}
+			
 			c_atlixco = { #2195
 				color = { 255 219 170 }
 				color2 = { 255 255 255 }
@@ -1946,8 +1950,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_soltepec_PU ={}
 #				b_san_andres_payuca_PU ={}
 			}
-			
-
 			c_tehuacan = { # 3072
 				color={ 127 100 63 }
 				color2={ 255 255 255 }
