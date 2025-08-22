@@ -204,30 +204,6 @@ e_mexico = {
 			
 			capital = 3088 # c_guanajuato
 			
-			c_leon = { # 3087
-				color={ 238 182 240 }
-				color2={ 255 255 255 }
-				
-				b_leon_GT = {}
-				b_san_francisco_del_rincon_GT = {}
-				b_manuel_doblado_GT = {}
-				b_purisima_GT = {} #Pur?sima del Rincon
-				b_purisima_de_bustos_GT = {}
-				b_duarte_GT = {}
-				b_medina_GT = {}
-			}
-			c_sierra_alta = { #2272
-				color={ 250 200 255 }
-				color2={ 255 255 255 }
-				
-				b_san_felipe_GT = {}				
-				b_san_diego_de_la_union_GT = {}		
-				b_ocampo_GT = {}
-				b_pueblo_nuevo_GT = {}
-				b_rancho_nuevo_GT = {}
-				b_el_refugio_GT = {}
-				b_las_trojes_GT = {}
-			}	
 			c_celaya = { # 3090
 				color={ 206 191 191 }
 				color2={ 255 255 255 }
@@ -239,18 +215,6 @@ e_mexico = {
 				b_tarimoro_GT = {}
 				b_apaseo_el_alto_GT = {}			
 				b_villagran_GT = {}
-			}
-			c_yuriria = { #2271
-				color = { 220 206 206 }
-				color2 = { 255 255 255 }
-				
-				b_moroleon_GT = {}
-				b_uriangato_GT = {}	
-				b_yuriria_GT = {}
-				b_salvatierra_GT = {}
-				b_acambaro_GT = {}
-				b_santiago_maravatio_GT = {}
-				b_tarandacuao_GT = {}
 			}
 			c_guanajuato = { # 3088
 				color={ 246 240 224 }
@@ -297,6 +261,32 @@ e_mexico = {
 				b_cuevas_de_morales_GT = {}
 				b_san_jose_de_morales_GT = {}
 			}
+		}
+		d_yuriria = { 
+			color = { 220 206 206 }
+			color2 = { 255 255 255 }
+			
+			capital = 2271 #c_yuriria
+			
+			c_yuriria = { #2271
+				color = { 220 206 206 }
+				color2 = { 255 255 255 }
+				
+				b_moroleon_GT = {}
+				b_uriangato_GT = {}	
+				b_yuriria_GT = {}
+				b_salvatierra_GT = {}
+				b_acambaro_GT = {}
+				b_santiago_maravatio_GT = {}
+				b_tarandacuao_GT = {}
+			}
+		}
+		d_atotonilco = { 
+			color = { 245 245 220 }
+			color2 = { 255 255 255 }
+			
+			capital = 2198 #c_san_miguel_de_allende
+			
 			c_san_miguel_de_allende = { #2198
 				color = { 245 245 220 }
 				color2 = { 255 255 255 }
@@ -313,12 +303,54 @@ e_mexico = {
 #				b_cieneguilla_GT = {}
 			}
 		}
+		d_leon = { 
+			color = { 245 239 227 }
+			color2 = { 255 255 255 }
+			
+			capital = 3087 #c_leon
+			
+			c_leon = { # 3087
+				color={ 238 182 240 }
+				color2={ 255 255 255 }
+				
+				b_leon_GT = {}
+				b_san_francisco_del_rincon_GT = {}
+				b_manuel_doblado_GT = {}
+				b_purisima_GT = {} #Purisima del Rincon
+				b_purisima_de_bustos_GT = {}
+				b_duarte_GT = {}
+				b_medina_GT = {}
+			}
+			c_sierra_alta = { #2272
+				color={ 250 200 255 }
+				color2={ 255 255 255 }
+				
+				b_san_felipe_GT = {}				
+				b_san_diego_de_la_union_GT = {}		
+				b_ocampo_GT = {}
+				b_pueblo_nuevo_GT = {}
+				b_rancho_nuevo_GT = {}
+				b_el_refugio_GT = {}
+				b_las_trojes_GT = {}
+			}
+		}	
 	}
-	k_bajio = { # formable
-		color={ 246 249 176 }
-		color2={ 255 255 255 }
+	k_bajio = { #Titular (Historical) Regional Title represented in game as a league or confederation
+		color = { 230 239 227 }
+		color2 = { 255 255 255 }
 		
 		capital = 3084 # c_aguascalientes
+		
+		short_name = yes
+		
+		d_lagos_republic = { 
+			color = { 230 249 227 }
+			color2 = { 255 255 255 }
+			
+			short_name = yes
+			
+			capital = 3085 # c_atenas (lagos)
+		}
 		
 	}
 	k_colima = {
@@ -1154,6 +1186,7 @@ e_mexico = {
 			title = prince_male
 			title_female = prince_female
 			title_prefix = principality	
+			
 		d_teotihuacan = { #titular archbishopric for the HME
 			color = { 254 180 69 }
 			color2 = { 255 255 255 }
@@ -3030,4 +3063,3 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		}
 	}
 }
-
