@@ -462,6 +462,7 @@ e_mexico = {
 				
 				b_rio_grande_ZA = {}
 				b_allende_ZA = {}
+				b_sain_alto_ZA = {}
 				b_nieves_ZA = {}
 				b_sain_alto_ZA = {}
 				b_progreso_de_alfonso_medina_ZA = {}
@@ -827,6 +828,25 @@ e_mexico = {
 				b_magdelena_JA = {}
 				b_ayutla_JA1 = {}
 			}
+			c_tequila = { # 2765
+				color = { 93 138 211 }
+				color2 = { 255 255 255 }
+				
+				b_amatitan_JA = {}
+				b_tequila_JA = {}
+				b_ixtlan_del_rio_JA = {}
+				b_hostotipaquillo_JA = {}
+				b_ahuaculco_de_mercado_JA = {}
+				b_etzatlan_JA = {}
+				b_magdalena_JA = {}
+			}
+		}
+		d_guzman = {
+			color={ 118 158 188 }
+			color2={ 255 255 255 }
+			
+			capital = 3043 # c_sierra_de_amula
+			
 			c_tizapan = { #2770
 				color = { 77 152 226 }
 				color2 = { 255 255 255 }
@@ -839,18 +859,6 @@ e_mexico = {
 				b_concepcion_de_buenos_aires_JA  = {}
 				b_la_manzanilla_de_la_paz_JA  = {}
 				b_citala_JA  = {}
-			}
-			c_tequila = { # 2765
-				color = { 93 138 211 }
-				color2 = { 255 255 255 }
-				
-				b_amatitan_JA = {}
-				b_tequila_JA = {}
-				b_ixtlan_del_rio_JA = {}
-				b_hostotipaquillo_JA = {}
-				b_ahuaculco_de_mercado_JA = {}
-				b_etzatlan_JA = {}
-				b_magdalena_JA = {}
 			}
 			c_chapala = {  #2771
 				color = { 86 170 255 }
@@ -883,6 +891,39 @@ e_mexico = {
 				b_vista_hermosa_JA = {}
 				b_tamazula_de_gordiano_JA = {}
 			}
+		}
+		d_sierra_occidental = {
+			color={ 118 158 188 }
+			color2={ 255 255 255 }
+			
+			capital = 3043 # c_sierra_de_amula
+			
+			c_sierra_de_amula = { # 3043
+				color={ 118 158 188 }
+				color2={ 255 255 255 }
+				
+				b_tecolotlan_JA = {}
+				b_autlan_JA = {}
+				b_san_gabriel_JA = {}
+				b_el_limon_JA = {}
+				b_el_grullo_JA = {}
+				b_rincon_de_luisa_JA = {}
+				b_union_de_tula_JA = {}
+				b_tuxcacuesco_JA = {}
+				b_tonaya_JA = {}
+			}
+			c_mascota = { #2774
+				color = { 75 101 119 }
+				color2 = { 255 255 255 }
+				
+				b_mascota_JA2 = {}
+				b_talpa_de_allende_JA  = {}
+				b_guachinango_JA2  = {}
+				b_san_sebastian_del_oeste_JA = {}
+				b_ayutla_JA = {}
+				b_cuautla_JA = {}
+				b_atenguillo_JA = {}
+			}
 			c_ameca = { # 3042
 				color={ 158 206 255 }
 				color2={ 255 255 255 }
@@ -914,32 +955,6 @@ e_mexico = {
 				b_san_juan_de_abajo_JA = {}
 				b_ixtapa_JA = {}
 				b_mascota_JA = {}
-			}
-			c_sierra_de_amula = { # 3043
-				color={ 118 158 188 }
-				color2={ 255 255 255 }
-				
-				b_tecolotlan_JA = {}
-				b_autlan_JA = {}
-				b_san_gabriel_JA = {}
-				b_el_limon_JA = {}
-				b_el_grullo_JA = {}
-				b_rincon_de_luisa_JA = {}
-				b_union_de_tula_JA = {}
-				b_tuxcacuesco_JA = {}
-				b_tonaya_JA = {}
-			}
-			c_mascota = { #2774
-				color = { 75 101 119 }
-				color2 = { 255 255 255 }
-				
-				b_mascota_JA2 = {}
-				b_talpa_de_allende_JA  = {}
-				b_guachinango_JA2  = {}
-				b_san_sebastian_del_oeste_JA = {}
-				b_ayutla_JA = {}
-				b_cuautla_JA = {}
-				b_atenguillo_JA = {}
 			}
 			c_cihuatlan = { #2776
 				color = { 56 195 255 }
@@ -1202,9 +1217,13 @@ e_mexico = {
 			color2 = { 255 255 255 }
 			
 		}
-		d_toluca_republic = { #titular free city for the HME
+		d_toluca = { #Principality for the HME
 			color = { 249 35 30 }
 			color2 = { 255 255 255 }
+			
+			title = prince_male
+			title_female = prince_female
+			title_prefix = principality	
 			
 			capital = 3068 #c_toluca
 		}
@@ -1213,7 +1232,7 @@ e_mexico = {
 			color={ 15 153 130 }
 			color2={ 255 255 255 }
 			
-			capital = 3068 # c_toluca
+			capital = 2191 #Ecatepec
 			
 			c_toluca = { # 3068
 				color={ 12 127 108 }
@@ -1681,33 +1700,33 @@ e_mexico = {
 		}
 	} 
 	
-k_coatzacoalcos = { # Principality titular title for e_mexico
-    color = { 255 255 90 }
-    color2 = { 255 255 255 }
+	k_coatzacoalcos = { # Principality titular title for e_mexico
+		color = { 255 255 90 }
+		color2 = { 255 255 255 }
 
-    capital = 3081 # c_coatzacoalcos
-    title = prince_male
-    title_female = prince_female
-    title_prefix = principality
+		capital = 3081 # c_coatzacoalcos
+		title = prince_male
+		title_female = prince_female
+		title_prefix = principality
 
-    allow = {
-        liege = {
-            has_landed_title = e_mexico
-        }
+		allow = {
+			liege = {
+				has_landed_title = e_mexico
+			}
 
-        OR = {
-            has_landed_title = d_olmeca
-            has_landed_title = c_heroica_veracruz
-        }
+			OR = {
+				has_landed_title = d_olmeca
+				has_landed_title = c_heroica_veracruz
+			}
 
-        NOT = {
-            OR = {
-                tier = king
-                tier = emperor
-            }
-        }
-    }
-}
+			NOT = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+		}
+	}
 	k_veracruz_principality = { #free city titular title for the HME
 		color={ 127 12 50 }
 		color2={ 255 255 255 }
