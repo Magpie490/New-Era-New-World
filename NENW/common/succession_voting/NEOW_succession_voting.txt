@@ -30456,7 +30456,33 @@ patriarchial_elective = {
 		}
 		additive_modifier = { #Then the Councilors.
 			value = 90
-			higher_real_tier_than = DUKE
+			real_tier = KING
+			is_theocracy = yes
+			
+			OR = { #dejure vassal, or any vassal if title titular.
+				AND = {
+					FROMFROM = { is_titular = yes }
+					
+				}
+				any_dejure_liege = { title = FROMFROM }
+			}
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 45
+			real_tier = DUKE
+			is_theocracy = yes
+			
+			OR = { #dejure vassal, or any vassal if title titular.
+				AND = {
+					FROMFROM = { is_titular = yes }
+					
+				}
+				any_dejure_liege = { title = FROMFROM }
+			}
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 30
+			real_tier = COUNT
 			is_theocracy = yes
 			
 			OR = { #dejure vassal, or any vassal if title titular.
@@ -30490,14 +30516,26 @@ patriarchial_elective = {
 		additive_modifier = { #Then the Councilors.
 			value = 90
 			vassal_of = FROMFROM 
-			higher_real_tier_than = DUKE
+			real_tier = KING
+			is_theocracy = yes
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 45
+			vassal_of = FROMFROM 
+			real_tier = DUKE
+			is_theocracy = yes
+		}
+		additive_modifier = { #Then the Councilors.
+			value = 30
+			vassal_of = FROMFROM 
+			real_tier = COUNT
 			is_theocracy = yes
 		}
 	}
 	elector_vote_strength = { 
 		days = 5 # 1 elector = 5 votes.
 		additive_modifier = { #The Emperor's word is worth more than anybody else's by far.
-			value = 15
+			value = 50
 			localisation_key = tooltip_imperial_vote_strength_emperor_influence
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
@@ -30506,7 +30544,7 @@ patriarchial_elective = {
 		additive_modifier = { #Patriarch
 			value = 150
 			localisation_key = tooltip_patriarch
-			higher_real_tier_than = DUKE
+			real_tier = KING
 			is_theocracy = yes
 			
 		}
@@ -30515,6 +30553,20 @@ patriarchial_elective = {
 			localisation_key = tooltip_cardinal
 			has_minor_title = title_cardinal
 			is_theocracy = yes
+		}
+		additive_modifier = { #Patriarch
+			value = 50
+			localisation_key = tooltip_prince_bishop
+			real_tier = DUKE
+			is_theocracy = yes
+			
+		}
+		additive_modifier = { #Patriarch
+			value = 25
+			localisation_key = tooltip_bishop
+			real_tier = COUNT
+			is_theocracy = yes
+			
 		}
 		additive_modifier = { #Children are not leaders.
 			value = -40
