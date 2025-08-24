@@ -891,6 +891,28 @@ e_jefferson_history = {
 	}
 }
 
+e_juggalo = {
+	color={ 128 0 0 }
+	color2={ 255 255 255 }
+
+	capital = 108 # Toledo
+
+	allow = {
+		religion = juggalo
+		conditional_tooltip = {
+			trigger = {
+				e_juggalo = {
+					is_titular = yes
+				}
+			}
+			e_juggalo = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
