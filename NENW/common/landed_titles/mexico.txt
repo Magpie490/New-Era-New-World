@@ -8,6 +8,7 @@ e_mexico = {
 		if = {
 			limit = { NOT = { has_global_flag = hmereformedflag } }
 			set_global_flag = hmereformedflag
+			set_feudal_government_effect = yes
 		}
 	}
 	chilangos = "Sacro Imperio Mexicano"
@@ -20,26 +21,13 @@ e_mexico = {
 		capital = 3046
 		
 		d_nayarit = {
-			color={ 14 47 140 }
-			color2={ 255 255 255 }
+			color = { 76 114 191 }
+			color2 = { 255 255 255 }
 			
-			capital = 3046 # c_tepic
-			
-			c_tepic = { # 3046
-				color={ 12 43 127 }
-				color2={ 255 255 255 }
-				
-				b_tepic_JA = {}
-				b_compostela_JA = {}
-				b_san_blas_JA = {}
-				b_ruiz_JA = {}
-				b_santiago_ixcuintla_JA = {}
-				b_mexcaltitan_de_uribe_JA = {}
-				b_xalisco_JA = {}
-				b_testerazo_JA = {}
-			}
+			capital = 2757 #c_ruiz
+
 			c_el_nayar = { #2762
-				color = { 20 102 61 }
+				color = { 71 107 178 }
 				color2={ 255 255 255 }
 				
 				b_jesus_maria_NT = {
@@ -52,35 +40,20 @@ e_mexico = {
 				b_san_miguel_JA = {
 				}
 				b_huaynamota_NT = {}
-			}	
-			c_jala = { #2760 
-				color = { 15 52 153 }
-				color2 = { 255 255 255 }
-				
-				b_ahuacatlan_NT = {}
-				b_ixtlan_del_rio_NT = {}
-				b_jala_NT = {}
-				b_amatlan_de_las_canas_NT = {}
-				b_el_rosario_NT = {}
-				b_tepuzhuacan_NT = {}
-				b_mexpan_NT = {}
 			}
 			c_ruiz = { #2757
-				color = { 10 34 102 }
+				color = { 81 122 204 }
 				color2 = { 255 255 255 }
 				
 				b_ruiz_NT2 = {}
-				b_santiago_ixcuintla_NT = {
-				}
-				b_tuxpan_NT = {
-				}
+				b_santiago_ixcuintla_NT = {}
 				b_rosamorada_NT = {}
-				b_villa_hidalgo_NT = {}
 				b_mayorquin_NT = {}
 				b_estacion_yago_NT = {}
 			}
+			
 			c_acaponeta = { # 3047
-				color={ 17 60 178 }
+				color={ 61 91 153 }
 				color2={ 255 255 255 }
 				
 				b_acaponeta_JA = {}
@@ -91,9 +64,77 @@ e_mexico = {
 				b_tecuala_JA = {}
 				b_novillero_JA = {}
 				b_pericos_JA = {}
+			}			
+			
+		}
+		
+		d_tepic = {
+			color={ 32 63 216 }
+			color2={ 255 255 255 }
+			
+			capital = 3046 # c_tepic
+			
+			c_tepic = { # 3046
+				color={ 30 59 204 }
+				color2={ 255 255 255 }
+				
+				b_tepic_JA = {}
+				b_xalisco_JA = {}
+				b_san_cayetano_NT = {}
+				b_testerazo_JA = {}
+				b_francisco_i_madero_NT = {}
+				b_pochotitan_NT = {}
+				b_el_jicote_NT = {}
+			
 			}
+			c_ixcuintla = { #2359
+				color = { 34 66 229 }
+				color2 = { 255 255 255 }
+				
+				b_mexcaltitan_de_uribe_JA = {}
+				b_santiago_ixcuintla_JA = {}
+				b_san_blas_JA = {}
+				b_tuxpan_NT = {	}	
+				b_santa_cruz_de_miramar_NT = {}
+				b_villa_hidalgo_NT = {}
+				b_coamiles_NT = {}
+				b_villa_juarez_NT = {}
+			}
+
+			c_compostela = { #2360
+				color = { 26 52 178 }
+				color2 = { 255 255 255 }
+				
+				b_compostela_JA = {}
+				b_la_penita_de_jaltemba_NT = {}
+				b_sayulita_NT = {}
+				b_rincon_de_guayabitos_NT = {}
+				b_las_varas_NT = {}
+				b_punta_de_mita_JA = {}
+				b_zacualpan_NT = {}
+			}
+				
+			c_jala = { #2760 
+				color = { 38 74 255 }
+				color2 = { 255 255 255 }
+				
+				b_ahuacatlan_NT = {}
+				b_ixtlan_del_rio_NT = {}
+				b_jala_NT = {}
+				b_amatlan_de_las_canas_NT = {}
+				b_el_rosario_NT = {}
+				b_tepuzhuacan_NT = {}
+				b_mexpan_NT = {}
+			}
+		}
+		d_islas_marias = {
+			color =  { 72 129 242 }
+			color2 = { 255 255 255 }
+			
+			capital = 3048
+			
 			c_islas_marias = { # 3048
-				color={ 7 26 76 }
+				color={ 76 136 255 }
 				color2={ 255 255 255 }
 				
 				b_maria_madre_JA = {}
@@ -139,19 +180,16 @@ e_mexico = {
 		color={ 136 204 181 }
 		color2={ 255 255 255 }
 
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality	
 		capital = 3091 # c_santiago_de_queretaro
 		
 		d_queretaro = {
-			color={ 215 224 246 }
+			color={ 130 216 195 }
 			color2={ 255 255 255 }
 			
 			capital = 3091 # c_santiago_de_queretaro
 			
 			c_santiago_de_queretaro = { # 3091
-				color={ 185 164 221 }
+				color={ 122 204 183 }
 				color2={ 255 255 255 }
 				
 				b_san_juan_del_rio_QE = {}
@@ -164,7 +202,7 @@ e_mexico = {
 
 			}
 			c_jalpan_de_serra = { # 3092
-				color={ 227 243 194 }
+				color={ 137 229 206 }
 				color2={ 255 255 255 }
 				
 				b_jalpan_de_serra_QE ={}
@@ -177,7 +215,7 @@ e_mexico = {
 
 			}
 			c_toliman = {
-				color={ 220 240 190 }
+				color={ 107 178 160 }
 				color2={ 255 255 255 }
 				
 				b_cadereyta_de_montes_QE ={}
@@ -199,37 +237,13 @@ e_mexico = {
 		capital = 3088
 		
 		d_guanajuato = {
-			color={ 228 202 195 }
+			color={ 216 187 130 }
 			color2={ 255 255 255 }
 			
 			capital = 3088 # c_guanajuato
 			
-			c_leon = { # 3087
-				color={ 238 182 240 }
-				color2={ 255 255 255 }
-				
-				b_leon_GT = {}
-				b_san_francisco_del_rincon_GT = {}
-				b_manuel_doblado_GT = {}
-				b_purisima_GT = {} #Pur?sima del Rincon
-				b_purisima_de_bustos_GT = {}
-				b_duarte_GT = {}
-				b_medina_GT = {}
-			}
-			c_sierra_alta = { #2272
-				color={ 250 200 255 }
-				color2={ 255 255 255 }
-				
-				b_san_felipe_GT = {}				
-				b_san_diego_de_la_union_GT = {}		
-				b_ocampo_GT = {}
-				b_pueblo_nuevo_GT = {}
-				b_rancho_nuevo_GT = {}
-				b_el_refugio_GT = {}
-				b_las_trojes_GT = {}
-			}	
 			c_celaya = { # 3090
-				color={ 206 191 191 }
+				color={ 204 176 122 }
 				color2={ 255 255 255 }
 				
 				b_celaya_GT = {}
@@ -240,20 +254,8 @@ e_mexico = {
 				b_apaseo_el_alto_GT = {}			
 				b_villagran_GT = {}
 			}
-			c_yuriria = { #2271
-				color = { 220 206 206 }
-				color2 = { 255 255 255 }
-				
-				b_moroleon_GT = {}
-				b_uriangato_GT = {}	
-				b_yuriria_GT = {}
-				b_salvatierra_GT = {}
-				b_acambaro_GT = {}
-				b_santiago_maravatio_GT = {}
-				b_tarandacuao_GT = {}
-			}
 			c_guanajuato = { # 3088
-				color={ 246 240 224 }
+				color={ 229 198 137 }
 				color2={ 255 255 255 }
 				holy_site = sacred_heart
 				
@@ -270,7 +272,7 @@ e_mexico = {
 #				b_santa_teresa_GT = {}
 			}
 			c_irapuato = { # 3089
-				color={ 167 173 191 }
+				color={ 178 153 107 }
 				color2={ 255 255 255 }
 				
 				b_irapuato_GT = {}
@@ -286,7 +288,7 @@ e_mexico = {
 #				b_mendoza_GT = {}
 			}
 			c_penjamo = { # 2392
-				color = { 201 220 255 }
+				color = { 255 221 153 }
 				color2 = { 255 255 255 }
 				
 				b_penjamo_GT = {}		
@@ -297,8 +299,34 @@ e_mexico = {
 				b_cuevas_de_morales_GT = {}
 				b_san_jose_de_morales_GT = {}
 			}
+		}
+		d_yuriria = { 
+			color = { 242 211 121 }
+			color2 = { 255 255 255 }
+			
+			capital = 2271 #c_yuriria
+			
+			c_yuriria = { #2271
+				color = { 229 200 114 }
+				color2 = { 255 255 255 }
+				
+				b_moroleon_GT = {}
+				b_uriangato_GT = {}	
+				b_yuriria_GT = {}
+				b_salvatierra_GT = {}
+				b_acambaro_GT = {}
+				b_santiago_maravatio_GT = {}
+				b_tarandacuao_GT = {}
+			}
+		}
+		d_atotonilco = { 
+			color = { 165 149 116 }
+			color2 = { 255 255 255 }
+			
+			capital = 2198 #c_san_miguel_de_allende
+			
 			c_san_miguel_de_allende = { #2198
-				color = { 245 245 220 }
+				color = { 178 160 124 }
 				color2 = { 255 255 255 }
 				
 				b_san_miguel_de_allende_GT = {}
@@ -313,12 +341,54 @@ e_mexico = {
 #				b_cieneguilla_GT = {}
 			}
 		}
+		d_leon = { 
+			color = { 191 155 105 }
+			color2 = { 255 255 255 }
+			
+			capital = 3087 #c_leon
+			
+			c_leon = { # 3087
+				color={ 178 145 98 }
+				color2={ 255 255 255 }
+				
+				b_leon_GT = {}
+				b_san_francisco_del_rincon_GT = {}
+				b_manuel_doblado_GT = {}
+				b_purisima_GT = {} #Purisima del Rincon
+				b_purisima_de_bustos_GT = {}
+				b_duarte_GT = {}
+				b_medina_GT = {}
+			}
+			c_sierra_alta = { #2272
+				color={ 204 165 112 }
+				color2={ 255 255 255 }
+				
+				b_san_felipe_GT = {}				
+				b_san_diego_de_la_union_GT = {}		
+				b_ocampo_GT = {}
+				b_pueblo_nuevo_GT = {}
+				b_rancho_nuevo_GT = {}
+				b_el_refugio_GT = {}
+				b_las_trojes_GT = {}
+			}
+		}	
 	}
-	k_bajio = { # formable
-		color={ 246 249 176 }
-		color2={ 255 255 255 }
+	k_bajio = { #Titular (Historical) Regional Title represented in game as a league or confederation
+		color = { 255 238 204 }
+		color2 = { 255 255 255 }
 		
 		capital = 3084 # c_aguascalientes
+		
+		short_name = yes
+		
+		d_lagos_republic = { 
+			color = { 230 249 227 }
+			color2 = { 255 255 255 }
+			
+			short_name = yes
+			
+			capital = 3085 # c_atenas (lagos)
+		}
 		
 	}
 	k_colima = {
@@ -429,14 +499,24 @@ e_mexico = {
 				
 				b_rio_grande_ZA = {}
 				b_allende_ZA = {}
-				b_villa_de_cos_ZA = {}
 				b_sain_alto_ZA = {}
-				b_san_andres_ZA = {}
-				b_gonzalez_ortega_ZA = {}
 				b_nieves_ZA = {}
-				b_canitas_de_felipe_pescador_ZA = {}
+				b_sain_alto_ZA = {}
 				b_progreso_de_alfonso_medina_ZA = {}
 				b_ojitos_de_santa_lucia_ZA = {}
+				b_las_esperanzas_ZA = {}
+			}
+			c_cos = { # 2361
+				color = { 170 120 20 }
+				color2 = { 255 255 255 }
+				
+				b_villa_de_cos_ZA = {}
+				b_gonzalez_ortega_ZA = {}				
+				b_canitas_de_felipe_pescador_ZA = {}		
+				b_boquillas_ZA = {}
+				b_chupaderos_ZA = {}
+				b_chaparrosa_ZA = {}
+				b_san_andres_ZA = {}
 			}
 
 		}
@@ -698,22 +778,22 @@ e_mexico = {
 		}
 	}	
 	k_jalisco = {
-		color={ 115 43 216 }
+		color={ 104 44 224 }
 		color2={ 255 255 255 }
 		
 		capital = 3040 # c_guadalajara
 		
 		d_los_altos = {
-			color={ 216 219 186 }
+			color={ 102 65 216 }
 			color2={ 255 255 255 }
 			
 			capital = 3085 #Los Lagos
 			
-			norteabajeno = "Baj?o Hidroc?lido"
+			norteabajeno = "Bajío Hidrocálido"
 			ocaseno = "Los Altos de Jalisco"
 			
 			c_atenas = { # 3085
-				color={ 249 212 203 }
+				color={ 96 61 204 }
 				color2={ 255 255 255 }
 				
 				b_ojuelos_de_jalisco_JA = {}
@@ -727,7 +807,7 @@ e_mexico = {
 
 			}
 			c_tepatitlan = { # 3086
-				color={ 240 255 115 }
+				color={ 109 68 229 }
 				color2={ 255 255 255 }
 				
 				b_tepatitlan_de_morelos_JA = {}
@@ -742,7 +822,7 @@ e_mexico = {
 			}
 			
 			c_jalostotitlan = { #2203
-				color =  { 240 255 130 }
+				color =  { 84 53 178 }
 				color2 = { 255 255 255 } 
 				
 				b_teocaltiche_JA = {}
@@ -754,7 +834,7 @@ e_mexico = {
 				b_villa_hidalgo_JA = {}
 			}
 			c_arandas = { #2202
-				color = { 245 255 130 }
+				color = { 121 76 255 }
 				color2= { 255 255 255 }
 				
 				b_arandas_JA ={}
@@ -768,13 +848,13 @@ e_mexico = {
 			}
 		}
 		d_jalisco = {
-			color={ 71 81 145 }
+			color={ 55 33 165 }
 			color2={ 255 255 255 }
 			
 			capital = 3040 # c_guadalajara
 			
 			c_guadalajara = { # 3040
-				color={ 61 91 140 }
+				color={ 59 35 178 }
 				color2={ 255 255 255 }
 				
 				b_guadalajara_JA = {}
@@ -785,8 +865,27 @@ e_mexico = {
 				b_magdelena_JA = {}
 				b_ayutla_JA1 = {}
 			}
+			c_tequila = { # 2765
+				color = { 51 30 153 }
+				color2 = { 255 255 255 }
+				
+				b_amatitan_JA = {}
+				b_tequila_JA = {}
+				b_ixtlan_del_rio_JA = {}
+				b_hostotipaquillo_JA = {}
+				b_ahuaculco_de_mercado_JA = {}
+				b_etzatlan_JA = {}
+				b_magdalena_JA = {}
+			}
+		}
+		d_guzman = {
+			color={ 122 36 242 }
+			color2={ 255 255 255 }
+			
+			capital = 3043 # c_sierra_de_amula
+			
 			c_tizapan = { #2770
-				color = { 77 152 226 }
+				color = { 115 34 229 }
 				color2 = { 255 255 255 }
 				
 				b_teocuitatlan_de_corona_JA  = {}
@@ -798,20 +897,8 @@ e_mexico = {
 				b_la_manzanilla_de_la_paz_JA  = {}
 				b_citala_JA  = {}
 			}
-			c_tequila = { # 2765
-				color = { 93 138 211 }
-				color2 = { 255 255 255 }
-				
-				b_amatitan_JA = {}
-				b_tequila_JA = {}
-				b_ixtlan_del_rio_JA = {}
-				b_hostotipaquillo_JA = {}
-				b_ahuaculco_de_mercado_JA = {}
-				b_etzatlan_JA = {}
-				b_magdalena_JA = {}
-			}
 			c_chapala = {  #2771
-				color = { 86 170 255 }
+				color = { 128 38 255 }
 				color2 = { 255 255 255 }
 				
 				b_acatlan_de_juarez_JA = {}
@@ -826,7 +913,7 @@ e_mexico = {
 				b_san_juan_tecomatlan_JA = {}
 			}			
 			c_zapotlan_el_grande = { # 3041
-				color={ 91 158 188 }
+				color={ 102 30 204 }
 				color2={ 255 255 255 }
 				
 				b_tecalitlan_JA = {}
@@ -841,40 +928,17 @@ e_mexico = {
 				b_vista_hermosa_JA = {}
 				b_tamazula_de_gordiano_JA = {}
 			}
-			c_ameca = { # 3042
-				color={ 158 206 255 }
-				color2={ 255 255 255 }
-				
-				b_ameca_JA = {}
-				b_cuquio_JA = {}
-				b_atengo_JA = {}
-				b_cocula_JA = {}
-				b_guachinango_JA = {}
-				b_atemajac_de_brizuela_JA = {}
-				b_teocuitatlan_de_corona_JA1 = {}
-			}
 		}
-		d_costalegre = {
-			color={ 37 114 169 }
+		d_sierra_occidental = {
+			color={ 119 47 191 }
 			color2={ 255 255 255 }
 			
-			capital = 3044 # c_puerto_vallarta
+			purepecha = "Ameca"
 			
-			c_puerto_vallarta = { # 3044
-				color={ 27 124 164 }
-				color2={ 255 255 255 }
-				
-				b_la_cruz_de_huanacaxtle_JA = {}
-				b_punta_de_mita_JA = {}
-				b_chacala_JA = {}
-				b_cabo_corrientes_JA = {}
-				b_banderas_JA = {}
-				b_san_juan_de_abajo_JA = {}
-				b_ixtapa_JA = {}
-				b_mascota_JA = {}
-			}
+			capital = 3043 # c_sierra_de_amula
+			
 			c_sierra_de_amula = { # 3043
-				color={ 118 158 188 }
+				color={ 111 44 178 }
 				color2={ 255 255 255 }
 				
 				b_tecolotlan_JA = {}
@@ -888,7 +952,7 @@ e_mexico = {
 				b_tonaya_JA = {}
 			}
 			c_mascota = { #2774
-				color = { 75 101 119 }
+				color = { 127 51 204 }
 				color2 = { 255 255 255 }
 				
 				b_mascota_JA2 = {}
@@ -899,8 +963,40 @@ e_mexico = {
 				b_cuautla_JA = {}
 				b_atenguillo_JA = {}
 			}
+			c_ameca = { # 3042
+				color={ 95 38 153 }
+				color2={ 255 255 255 }
+				
+				b_ameca_JA = {}
+				b_cuquio_JA = {}
+				b_atengo_JA = {}
+				b_cocula_JA = {}
+				b_guachinango_JA = {}
+				b_atemajac_de_brizuela_JA = {}
+				b_teocuitatlan_de_corona_JA1 = {}
+			}
+		}
+		d_costalegre = {
+			color={ 171 72 242 }
+			color2={ 255 255 255 }
+			
+			capital = 3044 # c_puerto_vallarta
+			
+			c_puerto_vallarta = { # 3044 #missing a barony
+				color={ 162 68 229 }
+				color2={ 255 255 255 }
+				
+				b_la_cruz_de_huanacaxtle_JA = {}
+				
+				b_chacala_JA = {}
+				b_cabo_corrientes_JA = {}
+
+				b_san_juan_de_abajo_JA = {}
+				b_ixtapa_JA = {}
+				b_mascota_JA = {}
+			}
 			c_cihuatlan = { #2776
-				color = { 56 195 255 }
+				color = { 180 76 255 }
 				color2 = { 255 255 255 }
 				
 				b_cihuatlan_JA = {}
@@ -912,7 +1008,7 @@ e_mexico = {
 				b_jaluco_JA = {}
 			}
 			c_costalegre = { # 3045
-				color={ 109 209 255 }
+				color={ 144 61 204 }
 				color2={ 255 255 255 }
 				
 				b_barra_de_navidad_JA = {}
@@ -929,14 +1025,11 @@ e_mexico = {
 	k_hidalgo = {
 		color = { 89 12 127 }
 		color2 = { 255 255 255 }
-		
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality	
+
 		capital = 3064 #c_pachuca
 		
 		d_tula = { # titular archbishopric for the HME
-			color = { 243 164 141 }
+			color = { 124 41 165 }
 			color2 = { 255 255 255 }
 			
 			capital = 2193 #c_tula
@@ -949,7 +1042,7 @@ e_mexico = {
 		}	
 		
 		d_tulancingo = { #titular duchy for the HME
-			color = { 184 126 109 }
+			color = { 176 40 204 }
 			color2 = { 255 255 255 }
 			
 		
@@ -957,13 +1050,11 @@ e_mexico = {
 			
 		}	
 		d_pachuca = { #titular free city for the HME
-			color = { 184 106 69 }
+			color = { 89 12 127 }
 			color2 = { 255 255 255 }
 			
 			capital = 3064 #c_pachuca
 
-			title = prince_male
-			title_female = prince_female
 			title_prefix = free_city				
 		}
 		d_hidalgo = { 
@@ -1089,10 +1180,6 @@ e_mexico = {
 			color = { 8 113 165 }
 			color2 = { 255 255 255 }
 			
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality	
-			
 			capital = 3069 #c_morelos
 			
 			d_morelos = {
@@ -1105,7 +1192,7 @@ e_mexico = {
 				color={ 8 87 165 }
 				color2={ 255 255 255 }
 				
-				nahua = "Cuauhnahuac"
+				nahuatl = "Cuauhnahuac"
 				mixtec = "Cuauhnahuac"
 				zapotec = "Cuauhnahuac"
 				maya = "Cuauhnahuac"
@@ -1150,20 +1237,24 @@ e_mexico = {
 		capital = 3067 # c_mexico
 		
 		catholic = 5000
-		
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality	
+			
 		d_teotihuacan = { #titular archbishopric for the HME
-			color = { 254 180 69 }
+			color = { 40 204 163 }
 			color2 = { 255 255 255 }
 			
 		}
+		d_toluca = { #Principality for the HME
+			color = { 16 165 103 }
+			color2 = { 255 255 255 }
+			
+			capital = 3068 #c_toluca
+		}
+		
 		d_edomex = {
 			color={ 15 153 130 }
 			color2={ 255 255 255 }
 			
-			capital = 3068 # c_toluca
+			capital = 2191 #Ecatepec
 			
 			c_toluca = { # 3068
 				color={ 12 127 108 }
@@ -1255,7 +1346,7 @@ e_mexico = {
 			
 			capital = 3067 # c_mexico
 			
-			nahua = "Anahuac"
+			nahuatl = "Anahuac"
 			mixtec = "Anahuac"
 			zapotec = "Anahuac"
 			maya = "Anahuac"
@@ -1267,7 +1358,7 @@ e_mexico = {
 				color={ 0 109 54 }
 				color2={ 255 255 255 }
 				
-				nahua = "Tenochtitlan"
+				nahuatl = "Tenochtitlan"
 				mixtec = "Tenochtitlan"
 				zapotec = "Tenochtitlan"
 				maya = "Tenochtitlan"
@@ -1280,7 +1371,7 @@ e_mexico = {
 				holy_site = centaurista
 				
 				b_mexico_MX = {
-					nahua = "Tenochtitlan"
+					nahuatl = "Tenochtitlan"
 					mixtec = "Tenochtitlan"
 					zapotec = "Tenochtitlan"
 					maya = "Tenochtitlan"
@@ -1354,11 +1445,7 @@ e_mexico = {
 		color = { 204 81 40 }
 		color2 = { 255 255 255 }
 		
-		capital = 3070 #c_tlaxcala
-
-		title = prince_male
-		title_female = prince_female
-		title_prefix = principality				
+		capital = 3070 #c_tlaxcala			
 		
 		d_tlaxcala = {
 			color = { 178 44 17 } 
@@ -1427,7 +1514,7 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				b_tampico_alto_VE = {
-					huastec = "Tam-Pik'o'
+					huastec = "Tam-Pik'o'"
 				}
 				b_panuco_VE = {}
 				b_ciudad_cuauhtemoc_VE  = {
@@ -1509,7 +1596,7 @@ e_mexico = {
 					huastec = "Tam-Pik'o'"
 				}
 				b_miramar_TM = {
-					huastec = "Telálpujal" lit. Mirar mar
+					huastec = "Telálpujal" #lit. Mirar mar
 				}
 				b_altamira_TM = {}
 				b_cuauhtemoc_TM = {}
@@ -1526,7 +1613,9 @@ e_mexico = {
 				
 				huastec = "Walk'i"
 				
-				b_ignacio_zaragoza_TAM = {}
+				b_ignacio_zaragoza_TAM = {
+					huastec = "Walk'i"
+				}
 				b_ciudad_mante_TM = {}
 				b_xicotencatl_TM ={}
 				b_gomez_farias_TM = {}
@@ -1579,8 +1668,11 @@ e_mexico = {
 				color = { 229 68 149 }
 				color2 = { 255 255 255 }
 				
+				huastec = "Tam Uxum Ts'alej"
+				
 				b_tamanzunchale_SL ={
-					huastec = "Tam Uxum Ts'alej"}
+					huastec = "Tam Uxum Ts'alej"
+					}
 				b_xilitla_SL ={
 					huastec = "Tam-Pich'ich'"
 				}			
@@ -1600,6 +1692,7 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				huastec = "Tam-Tokow"
+				
 				b_villa_fierro_SL = {
 					huastec = "Pat'ál"
 				}
@@ -1625,40 +1718,36 @@ e_mexico = {
 		}
 	} 
 	
-k_coatzacoalcos = { # Principality titular title for e_mexico
-    color = { 255 255 90 }
-    color2 = { 255 255 255 }
+	k_coatzacoalcos = { # Principality titular title for e_mexico
+		color = { 255 255 90 }
+		color2 = { 255 255 255 }
 
-    capital = 3081 # c_coatzacoalcos
-    title = prince_male
-    title_female = prince_female
-    title_prefix = principality
+		capital = 3081 # c_coatzacoalcos
 
-    allow = {
-        liege = {
-            has_landed_title = e_mexico
-        }
+		allow = {
+			liege = {
+				has_landed_title = e_mexico
+			}
 
-        OR = {
-            has_landed_title = d_olmeca
-            has_landed_title = c_heroica_veracruz
-        }
+			OR = {
+				has_landed_title = d_olmeca
+				has_landed_title = c_heroica_veracruz
+			}
 
-        NOT = {
-            OR = {
-                tier = king
-                tier = emperor
-            }
-        }
-    }
-}
+			NOT = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+		}
+	}
 	k_veracruz_principality = { #free city titular title for the HME
 		color={ 127 12 50 }
 		color2={ 255 255 255 }
 		
 		capital = 3069 #c_heroica_veracruz
-		title = prince_male
-		title_female = prince_female
+
 		title_prefix = free_city		
    
 		allow = {
@@ -1680,14 +1769,10 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		}
 	}	
 	k_xalapa = { #titular principality for e_mexico
-		color = { 168 150 97 }
+		color = { 153 63 45 }
 		color2 = { 255 255 255 }	
 
 		capital = 3078 # c_xalapa
-
-		title = prince_male
-		title_female = prince_female
-		title_prefix = principality
 
 		allow = {
 			liege = {
@@ -1709,14 +1794,10 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 	}
 	
 	k_totonaca = { #titular principality for e_mexico
-		color = { 0 0 0 }
+		color = { 25 127 127 }
 		color2 = { 255 255 255 }
 		
-		capital = 3078 #c_xalapa
-
-		title = prince_male
-		title_female = prince_female
-		title_prefix = principality		
+		capital = 3078 #c_xalapa		
 
 		allow = {
 			liege = {
@@ -1744,11 +1825,7 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		color = { 229 189 68 }
 		color2 = { 255 255 255 }
 		
-		capital = 3071 #c_puebla
-		
-		title = prince_male
-		title_female = prince_female
-		title_prefix = principality				
+		capital = 3071 #c_puebla				
 		
 		d_sierra_norte = {
 			color = { 178 166 35 }
@@ -1796,8 +1873,9 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 			}
 		
 		}
-		d_cholula = { #titular archbishopric
-			color = { 78 65 188 }
+		
+		d_cholula = { #HME archbishopric
+			color = { 216 160 86 }
 			color2 = { 255 255 255 }
 			
 			capital = 2215 #c_cholula
@@ -1806,51 +1884,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				AND = {
 					is_theocracy = yes
 				}
-			}
-		}	
-		d_tehuacan = { #titular duchy for the HME
-			color = { 77 44 255 }
-			color2 ={ 255 255 255 }
-			
-			capital = 3072 #c_tehuacan
-		}	
-		d_puebla_free_city = { #titular free city for the HME 
-			color={ 98 69 255 }
-			color2={ 255 255 255 }		
-			capital = 3071 # c_puebla
-			
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality			
-		}
-		d_chipilo = { #titular principality for the HME
-			color = { 33 152 165 }
-			color2 = { 255 255 255 }
-			
-			capital = 2195 #c_atlixco
-			
-			title = prince_male
-			title_female = prince_female
-			title_prefix = principality		
-		}
-		d_puebla = {
-			color={ 229 181 114 }
-			color2={ 255 255 255 }
-			
-			capital = 3071 # c_puebla
-			
-			c_puebla = { # 3071
-				color={ 204 161 102 }
-				color2={ 255 255 255 }
-				
-				b_puebla_PU = {}
-				b_cuatlazingo_PU = {}
-				b_amozoc_PU = {}
-				b_tepeaca_PU = {}
-				b_acajete_PU = {}
-				b_cuautinchan_PU = {}
-				b_san_baltazar_tetela_PU = {}
-				b_san_pedro_zacachimalpa_PU = {}
 			}
 			
 			c_texmelucan = { #2194
@@ -1877,6 +1910,48 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_san_francisco_ocotlan_PU = {}
 				b_san_nicolas_de_los_ranchos_PU = {}
 			}
+		}
+		
+		d_tehuacan = { #titular duchy for the HME
+			color = { 191 119 47 }
+			color2 ={ 255 255 255 }
+			
+			capital = 3072 #c_tehuacan
+		}	
+		d_puebla_free_city = { #titular free city for the HME 
+			color={ 255 207 63 }
+			color2={ 255 255 255 }		
+			capital = 3071 # c_puebla	
+			
+			title_prefix = free_city			
+		}
+		d_chipilo = { #titular principality for the HME
+			color = { 22 229 157 }
+			color2 = { 255 255 255 }
+			
+			capital = 2195 #c_atlixco	
+		}
+		
+		d_puebla = {
+			color={ 229 181 114 }
+			color2={ 255 255 255 }
+			
+			capital = 3071 # c_puebla
+			
+			c_puebla = { # 3071
+				color={ 204 161 102 }
+				color2={ 255 255 255 }
+				
+				b_puebla_PU = {}
+				b_cuatlazingo_PU = {}
+				b_amozoc_PU = {}
+				b_tepeaca_PU = {}
+				b_acajete_PU = {}
+				b_cuautinchan_PU = {}
+				b_san_baltazar_tetela_PU = {}
+				b_san_pedro_zacachimalpa_PU = {}
+			}
+			
 			c_atlixco = { #2195
 				color = { 255 219 170 }
 				color2 = { 255 255 255 }
@@ -1906,8 +1981,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_soltepec_PU ={}
 #				b_san_andres_payuca_PU ={}
 			}
-			
-
 			c_tehuacan = { # 3072
 				color={ 127 100 63 }
 				color2={ 255 255 255 }
@@ -2273,6 +2346,8 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				color={ 204 57 20 }
 				color2={ 255 255 255 }
 				
+				purepecha = "Marhabatio"
+				
 				b_maravatio_mexi = {
 				}
 				b_ciduad_hidalgo_mexi = {
@@ -2529,6 +2604,8 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		
 		capital = 3101 # c_chilpancingo
 		
+		nahuatl = "Tlacateccatl"
+		
 		d_la_montana_guerrero = {
 			color={ 191 119 47 }
 			color2={ 255 255 255 }
@@ -2609,19 +2686,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				b_chilapa_de_alvarez_GR = {}
 				b_apango_GR = {}
 			}
-			c_oriente = { # 3059
-				color={ 153 96 68 }
-				color2={ 255 255 255 }
-				
-				b_tejupilco_de_hidalgo_MC = {}
-				b_luvianos_MC = {}
-				b_zitacuaro_MC = {}
-				b_tlatlaya_MC = {}
-				b_amatepec_MC = {}
-				b_tlachapa_MC = {}
-				b_san_simon_MC = {}
-				b_cutzamala_de_pinzon_MC = {}
-			}
 			c_coyuca_de_catalan = { # 3061
 				color={ 102 64 45 }
 				color2={ 255 255 255 }
@@ -2637,6 +2701,43 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				}
 				b_arcelia_MC = {}
 				b_quiricuaro_MC = {}
+			}
+			c_pungarabato = { #2643
+				color = { 76 48 34 }
+				color2 = { 255 255 255 }
+				
+				b_tlapehuala_GR = {
+				}
+				b_ciudad_altamirano_GR = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_arcelia_GR = {}
+				b_tlachapa_GR = {}	
+				b_tanganhuato_GR = {}	
+				b_san_jose_poliutla_GR = {}	
+				b_san_antonio_de_las_huertas_GR	 = {}
+				b_nueva_guerrero_GR	 = {}
+			}
+		}
+		d_oriente_guerrero = {
+			color={ 153 96 68 }
+			color2={ 255 255 255 }
+			
+			capital = 3059 # c_oriente
+			
+			c_oriente = { # 3059
+				color={ 153 96 68 }
+				color2={ 255 255 255 }
+				
+				b_tejupilco_de_hidalgo_MC = {}
+				b_luvianos_MC = {}
+				b_zitacuaro_MC = {}
+				b_tlatlaya_MC = {}
+				b_amatepec_MC = {}
+				b_tlachapa_MC = {}
+				b_san_simon_MC = {}
+				b_cutzamala_de_pinzon_MC = {}
 			}
 			c_cutzamala_de_pinzon = { # 3388
 				color={ 178 113 80 }
@@ -2656,23 +2757,6 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 				}
 				b_san_blas_mexi = {
 				}
-			}
-			c_pungarabato = { #2643
-				color = { 76 48 34 }
-				color2 = { 255 255 255 }
-				
-				b_tlapehuala_GR = {
-				}
-				b_ciudad_altamirano_GR = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_arcelia_GR = {}
-				b_tlachapa_GR = {}	
-				b_tanganhuato_GR = {}	
-				b_san_jose_poliutla_GR = {}	
-				b_san_antonio_de_las_huertas_GR	 = {}
-				b_nueva_guerrero_GR	 = {}
 			}
 		}
 	}
@@ -3024,4 +3108,3 @@ k_coatzacoalcos = { # Principality titular title for e_mexico
 		}
 	}
 }
-
