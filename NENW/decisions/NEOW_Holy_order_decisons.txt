@@ -416,89 +416,23 @@ title_decisions = {
 									}
 								}
 								AND = {
-									NOT = { has_character_modifier = expelled_d_legion_of_mary }
-									NOT = {
-										any_liege = {
-											has_character_modifier = expelled_d_legion_of_mary
+									three_holy_order_avalaible_trigger = yes
+									religion_scope = {
+										persistent_event_target:three_holy_order = {
+											holder_scope = {
+												character = FROM
+											}
 										}
-									}
-									d_legion_of_mary = {
-										holder_scope = {
-											character = FROM
-										}
-									}
-									OR = {
-										religion = catholic
-										religion = cadaverist
-										religion = fraticelli
 									}
 								}
 								AND = {
-									NOT = { has_character_modifier = expelled_d_knights_templar }
-									NOT = {
-										any_liege = {
-											has_character_modifier = expelled_d_knights_templar
-										}
-									}
-									d_knights_templar = {
-										holder_scope = {
-											character = FROM
-										}
-									}
-									OR = {
-										religion = catholic
-										religion = cadaverist
-										religion = fraticelli
-									}
-								}
-								AND = {
-									NOT = { has_character_modifier = expelled_d_knights_hospitaler }
-									NOT = {
-										any_liege = {
-											has_character_modifier = expelled_d_knights_hospitaler
-										}
-									}
-									OR = {
-										d_knights_hospitaler = {
+									four_holy_order_avalaible_trigger = yes
+									religion_scope = {
+										persistent_event_target:four_holy_order = {
 											holder_scope = {
 												character = FROM
 											}
 										}
-										k_hospitaller_state = {
-											holder_scope = {
-												character = FROM
-											}
-										}
-									}
-									OR = {
-										religion = catholic
-										religion = cadaverist
-										religion = fraticelli
-									}
-								}
-								AND = {
-									NOT = { has_character_modifier = expelled_d_knights_lazarus }
-									NOT = {
-										any_liege = {
-											has_character_modifier = expelled_d_knights_lazarus
-										}
-									}
-									OR = {
-										d_knights_lazarus = {
-											holder_scope = {
-												character = FROM
-											}
-										}
-										k_lazarean_state = {
-											holder_scope = {
-												character = FROM
-											}
-										}
-									}
-									OR = {
-										religion = catholic
-										religion = cadaverist
-										religion = fraticelli
 									}
 								}
 							}

@@ -3533,7 +3533,37 @@ decisions = {
 			d_kitimat = { de_jure_liege = k_t_beecy }
 		}
 	}
-	
+	form_juggalo = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			religion = juggalo
+			e_juggalo = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			realm_size = 150
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			k_cleveland = { show_scope_change = no province_completely_controls_trigger = yes }
+			num_of_holy_sites = 3
+		}
+		effect = {
+			e_juggalo = { gain_empire_effect = yes }
+			any_demesne_title = {
+				limit = { tier = KING }
+				de_jure_liege = e_juggalo
+			}
+		}
+	}
 	##REGIMENTS
 	organize_sixtyninth_infantry_regiment = { #new_york
 		only_independent = yes

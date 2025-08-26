@@ -908,6 +908,36 @@ two_holy_order_avalaible_trigger = {
 		}
 	}
 }
+three_holy_order_avalaible_trigger = {
+	NOT = { has_character_modifier = expelled_three_holy_order }
+	NOT = {
+		any_liege = {
+			religion = PREV
+			has_character_modifier = expelled_three_holy_order
+		}
+	}
+	religion_scope = {
+		is_title_active = persistent_event_target:three_holy_order
+		persistent_event_target:three_holy_order = {
+			always = yes
+		}
+	}
+}
+four_holy_order_avalaible_trigger = {
+	NOT = { has_character_modifier = expelled_four_holy_order }
+	NOT = {
+		any_liege = {
+			religion = PREV
+			has_character_modifier = expelled_four_holy_order
+		}
+	}
+	religion_scope = {
+		is_title_active = persistent_event_target:four_holy_order
+		persistent_event_target:four_holy_order = {
+			always = yes
+		}
+	}
+}
 preferred_by_one_holy_order_trigger = {
 	trigger_if = {
 		limit = {

@@ -26,7 +26,6 @@ e_columbia_non = {
 	capital = 63 #Washington
 	creation_requires_capital = yes
 	dynasty_title_names = no
-	short_name = yes
 	purple_born_heirs = yes
 	allow = {
 		conditional_tooltip = {
@@ -890,6 +889,28 @@ e_jefferson_history = {
 		always = no
 	}
 }
+
+e_juggalo = {
+	color={ 128 0 0 }
+	color2={ 255 255 255 }
+
+	capital = 108 # Toledo
+
+	allow = {
+		religion = juggalo
+		conditional_tooltip = {
+			trigger = {
+				e_juggalo = {
+					is_titular = yes
+				}
+			}
+			e_juggalo = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 
 # NEOW LEFTOVERS
 

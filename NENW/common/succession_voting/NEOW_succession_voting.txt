@@ -35170,14 +35170,7 @@ patriarchial_elective = {
 					}
 				}
 			}
-			OR = { #If the title controls the religion, candidates must be of the same religion.
-				ROOT = { 
-					NOT = { 
-						controls_religion = yes
-					}
-				}
-				religion = ROOT
-			}
+			religion = catholic
 			NOR = {
 				trait = cat
 				trait = disinherited

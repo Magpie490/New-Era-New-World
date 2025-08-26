@@ -1073,45 +1073,25 @@ ROOT_can_press_dejure_claim_trigger = {
 			}
 		}
 		trigger_else_if = {
-			limit = { primary_title = { title = d_legion_of_mary } }
+			limit = { primary_title = { religion_scope = { persistent_event_target:three_holy_order = { title = PREVPREV } } } }
 			ROOT = {
 				OR = {
-					has_character_modifier = expelled_d_legion_of_mary
+					has_character_modifier = expelled_three_holy_order
 					any_liege = {
-						has_character_modifier = expelled_d_legion_of_mary
+						has_character_modifier = expelled_three_holy_order
+						religion = PREV
 					}
 				}
 			}
 		}
 		trigger_else_if = {
-			limit = { primary_title = { title = d_knights_templar } }
+			limit = { primary_title = { religion_scope = { persistent_event_target:four_holy_order = { title = PREVPREV } } } }
 			ROOT = {
 				OR = {
-					has_character_modifier = expelled_d_knights_templar
+					has_character_modifier = expelled_four_holy_order
 					any_liege = {
-						has_character_modifier = expelled_d_knights_templar
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { primary_title = { title = d_knights_hospitaler } }
-			ROOT = {
-				OR = {
-					has_character_modifier = expelled_d_knights_hospitaler
-					any_liege = {
-						has_character_modifier = expelled_d_knights_hospitaler
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { primary_title = { title = d_knights_lazarus } }
-			ROOT = {
-				OR = {
-					has_character_modifier = expelled_d_knights_lazarus
-					any_liege = {
-						has_character_modifier = expelled_d_knights_lazarus
+						has_character_modifier = expelled_four_holy_order
+						religion = PREV
 					}
 				}
 			}
