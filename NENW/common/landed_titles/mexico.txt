@@ -182,9 +182,13 @@ e_mexico = {
 
 		capital = 3091 # c_santiago_de_queretaro
 		
+		purepecha = "K'erhiretarhu"
+		
 		d_queretaro = {
 			color={ 130 216 195 }
 			color2={ 255 255 255 }
+			
+			purepecha = "K'erhiretarhu"
 			
 			capital = 3091 # c_santiago_de_queretaro
 			
@@ -193,7 +197,9 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				b_san_juan_del_rio_QE = {}
-				b_santiago_de_queretaro_QE = {}
+				b_santiago_de_queretaro_QE = {
+					purepecha = "K'erhiretarhu"
+				}
 				b_el_pueblito_QE = {}
 				b_huimilpan_QE = {}
 				b_tequisquiapan_QE = {}
@@ -1034,6 +1040,14 @@ e_mexico = {
 				b_emiliano_zapata_JA = {}
 			}
 		}
+		
+		d_puerto_vallarta_republic = {
+			color = { 50 40 255 }
+			color2 = { 255 255 255 }
+			
+			capital = 3044 # c_puerto_vallarta
+			title_prefix = free_city
+		}
 	}
 	k_hidalgo = {
 		color = { 89 12 127 }
@@ -1261,6 +1275,8 @@ e_mexico = {
 			color2 = { 255 255 255 }
 			
 			capital = 3068 #c_toluca
+			
+			title_prefix = free_city	
 		}
 		
 		d_edomex = {
@@ -1394,8 +1410,12 @@ e_mexico = {
 					purepecha = "Tenochtitlan"
 					rarmuri = "Tenochtitlan"
 				}
-				b_catedral_metropolitana_cdmx = { short_name = yes }
-				b_basilica_de_santa_maria_de_guadalupe_cdmx = { short_name = yes 
+				b_catedral_metropolitana_cdmx = { 
+					short_name = yes
+					#title_prefix = metro_cathedral
+				}
+				b_basilica_de_santa_maria_de_guadalupe_cdmx = { 
+						title_prefix = basilica
 						coat_of_arms = {
 							religion = catholic
 							template = 0
@@ -2379,33 +2399,33 @@ e_mexico = {
 				purepecha = "Marhabatio"
 				
 				b_maravatio_mexi = {
+					purepecha = "Marhuátio"
 				}
-				b_ciduad_hidalgo_mexi = {
+				b_ciudad_hidalgo_MC = {
+					short_name = yes
+					used_for_dynasty_names = no
+					purepecha = "Taximaroa"
 				}
-				b_senguio_mexi = {
-				}
-				b_contepec_mexi = {
-				}
-				b_los_pinos_mexi1 = {
-				}
-				b_chincua_mexi = {
-				}
-				b_pichardo_mexi = {
-				}
-
+				b_irimbo_MC = {}
+				b_senguio_mexi = {}
+				b_contepec_mexi = {	}
+				b_santiago_puriatzicuaro_MC = {}
+				b_epitacio_huerta_MC = {}
 			}			
+			
 			c_morelia = { # 3052
 				color={ 229 64 22 }
 				color2={ 255 255 255 }
 				
+				b_morelos_MC = {}
 				b_morelia_MC = {}
-				b_tarimbaro_MEX = {}
+				b_tarimbaro_MC = {
+					purepecha = "Tarhímu"
+				}
 				b_zinapecuaro_MEX = {}
-				
 				b_indaparapeo_MC = {}
-				b_alvaro_obregon_MC = {}
-				b_tarimbaro_MC = {}
 				b_charo_MC = {}
+				b_alvaro_obregon_MC = {}
 			}
 			c_cuitzeo = { #2789
 				color = { 178 49 17 }
@@ -2480,20 +2500,20 @@ e_mexico = {
 				b_cuanajo_MC = {}
 			}
 			c_zacapu = { #2371
-				color = { 0 0 0 }
+				color = { 198 22 0 }
 				color2={ 255 255 255 }
 				
 				b_zacapu_MC = {}	
 			}
 			c_puruandiro = { #2372
-				color = { 0 0 0 }
+				color = { 210 25 10 }
 				color2={ 255 255 255 }
 				
 				b_puruandiro_MC = {}	
 			}			
 		}
 		d_tancitaro = {
-			color = { 0 0 0 }
+			color = { 170 25 10 }
 			color2 = { 255 255 255 }
 			
 			capital = 3053 #c_uruapan
@@ -2546,7 +2566,7 @@ e_mexico = {
 		}
 		
 		d_uruapan_republic = { #Free City of HME
-			color = { 0 0 0 }
+			color = { 100 10 5 }
 			color2 = { 255 255 255 }
 				
 			capital = 3053 #c_uruapan
@@ -2792,7 +2812,7 @@ e_mexico = {
 		}
 	}
 	k_tierrascalientes = { 
-		color = { 150 150 150 }
+		color = { 120 55 90 }
 		color2 = { 255 255 255 }
 		
 		capital = 2213 # c_apatzingan
@@ -2879,31 +2899,24 @@ e_mexico = {
 				color={ 204 100 40 }
 				color2={ 255 255 255 }
 				
-				b_tuzantla_mexi = {
-				}
-				b_heroica_zitacuaro_mexi = {
-				}
-				b_benito_juarez_mexi = {
-				}
-				b_el_paso_de_la_virgen_mexi = {
-				}
-				b_cana_quemada_mexi = {
-				}
-				b_mesa_del_aire_mexi = {
-				}
-				b_timbuscatio_mexi = {
-				}
+				b_heroica_zitacuaro_mexi = {}
+				b_jungapeo_de_juarez_MC = {}
+				b_tuxpan_MC = {}
+				b_mineral_de_angangueo_MC = {}
+				b_benito_juarez_mexi = {}
+				b_ocampo_MC = {}
+				b_susupuato_de_guerrero_MC = {}
+				b_timbuscatio_mexi = {}
 			}
 			c_tuzantla = { #2786
 				color = { 229 113 45 }
 				color2 = { 255 255 255 }
 				
 				b_tuzantla_MC = {}
-				b_tiquicheo_MC2 = {}
+				b_tiquicheo_MC = {}
 				b_tzitzio_MC = {}
 				b_tafetan_MC = {}
 				b_el_limon_papatzidan_MC = {}
-				b_caramecuaro_MC = {}
 				b_melchor_ocampo_MC = {
 					used_for_dynasty_names = no
 				}
@@ -2914,13 +2927,13 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				b_huetamo_MC = {}
-				b_tiquicheo_MC = {}
-				
-				b_zirandaro_MC = {}
-				b_guariche_MC = {}
-				b_bolson_MC = {}
-
+				b_purechucho_MC = {}
 				b_san_lucas_MC = {}
+				b_tzirtzicuaro_MC
+				b_angao_MC = {}
+				b_conburindio_MC = {}
+				b_turitzio_MC = {}		
+			#	b_zirandaro_MC = {} #guerrero holding
 			}
 			c_tacambaro = { #2368
 				color = { 180 98 25 }
@@ -2941,6 +2954,7 @@ e_mexico = {
 					sudabajeno = "Cruz de Caminos"
 				}
 				b_san_francisco_etucuaro_MC = {}
+#				b_caramecuaro_MC = {}
 			}
 		}
 	#	d_costa_michoacana = {
