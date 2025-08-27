@@ -831,9 +831,13 @@ e_mexico = {
 				color =  { 84 53 178 }
 				color2 = { 255 255 255 } 
 				
+				nahuatl = "Xallioztotlitlan"
+				
 				b_teocaltiche_JA = {}
 				b_yahualica_de_gonzalez_gallo_JA = {}
-				b_jalostotitlan_JA = {}
+				b_jalostotitlan_JA = {
+					nahuatl = "Xallioztotlitlan"
+				}
 				b_ixtlahuacan_del_rio_JA = {}
 				b_valle_de_guadalupe_JA = {}
 				b_mexticacan_JA = {}
@@ -853,7 +857,7 @@ e_mexico = {
 				b_betania_SA ={}
 			}
 		}
-		d_jalisco = {
+		d_jalisco = { #atemajac
 			color={ 55 33 165 }
 			color2={ 255 255 255 }
 			
@@ -883,6 +887,34 @@ e_mexico = {
 				b_etzatlan_JA = {}
 				b_magdalena_JA = {}
 			}
+			c_chapala = {  #2206 real chapala
+				color = { 128 38 255 }
+
+				color2 = { 255 255 255 }
+				
+				b_ocotlan_JA = {}
+				b_la_barca_JA = {}
+				b_chapala_JA = {
+					huichol = "Xapawiyemeta"
+				}
+				b_jamay_JA = {}
+				b_ixtlahuacan_de_los_membrillos_JA = {}				
+				b_poncitlan_JA = {}
+				b_ajijic_JA = {}
+				b_san_juan_tecomatlan_JA = {}	
+			}
+			c_ameca = { # 3042
+				color={ 95 38 153 }
+				color2={ 255 255 255 }
+				
+				b_ameca_JA = {}
+				b_cuquio_JA = {}
+				b_atengo_JA = {}
+				b_cocula_JA = {}
+				b_guachinango_JA = {}
+				b_atemajac_de_brizuela_JA = {}
+				b_teocuitatlan_de_corona_JA1 = {}
+			}				
 		}
 		d_guzman = {
 			color={ 122 36 242 }
@@ -903,20 +935,21 @@ e_mexico = {
 				b_la_manzanilla_de_la_paz_JA  = {}
 				b_citala_JA  = {}
 			}
-			c_chapala = {  #2771
-				color = { 128 38 255 }
+			c_sayula =  { #2373 sayula
+				color = { 128 90 214 }
 				color2 = { 255 255 255 }
 				
-				b_acatlan_de_juarez_JA = {}
-				b_jocotepec_JA  = {}
-				b_zapotitan_de_hidalgo_JA = {}
-				b_ixtlahuacan_de_los_membrillos_JA = {}
-				b_chapala_JA = {
-					huichol = "Xapawiyemeta"
+				nahuatl = "Tzaulan"
+				
+				b_sayula_JA = {
+					nahuatl = "Tzaulan"	
 				}
+				b_jocotepec_JA  = {}
+				b_acatlan_de_juarez_JA = {}
+				b_zacoalco_de_torres_JA = {}
 				b_villa_corona_JA = {}
-				b_ajijic_JA = {}
-				b_san_juan_tecomatlan_JA = {}
+				b_zapotitan_de_hidalgo_JA = {}
+				b_telachuta_de_montenegro_JA = {}
 			}			
 			c_zapotlan_el_grande = { # 3041
 				color={ 102 30 204 }
@@ -981,19 +1014,7 @@ e_mexico = {
 				b_ayutla_JA = {}
 				b_cuautla_JA = {}
 				b_atenguillo_JA = {}
-			}
-			c_ameca = { # 3042
-				color={ 95 38 153 }
-				color2={ 255 255 255 }
-				
-				b_ameca_JA = {}
-				b_cuquio_JA = {}
-				b_atengo_JA = {}
-				b_cocula_JA = {}
-				b_guachinango_JA = {}
-				b_atemajac_de_brizuela_JA = {}
-				b_teocuitatlan_de_corona_JA1 = {}
-			}		
+			}	
 		}
 		d_costalegre = {
 			color={ 171 72 242 }
@@ -2422,7 +2443,9 @@ e_mexico = {
 				b_tarimbaro_MC = {
 					purepecha = "Tarhímu"
 				}
-				b_zinapecuaro_MEX = {}
+				b_zinapecuaro_MC = {
+					purepecha = "Tzinapecuarho"
+				}
 				b_indaparapeo_MC = {}
 				b_charo_MC = {}
 				b_alvaro_obregon_MC = {}
@@ -2433,20 +2456,15 @@ e_mexico = {
 			
 				purepecha = "Cuiseo"
 									
-				b_san_agustin_del_pulque_MC = {}
-				b_zinapecuaro_MC = {
-					purepecha = "Tzin?pecua"
-				}
 				b_cuitzeo_MC = {
 					purepecha = "Cuiseo"
 				}
 				b_huandacareo_MC = {}
-				b_villa_morelos_MC = {}
 				b_santa_ana_maya_MC = {}
 				b_compandaro_de_galeana_MC = {}
-				b_alvaro_obregon_MC2 = {
-					used_for_dynasty_names = no
-				}
+				b_chucandiro_MC = {}
+				b_san_agustin_del_pulque_MC = {}
+				b_san_juan_benito_juarez_MC = {}
 			}
 		}
 		d_purepecha = {
@@ -2460,12 +2478,23 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				b_zamora_MC = {}
-				b_nahuatzen_MC = {}
-				b_la_manzanilla_de_la_paz_MC = {}
-				b_tangancicuaro_de_arista_MC = {}
-				b_jacona_MC = {}
-				b_tlazazalca_MC = {}
-				b_tizapan_el_alto_MC = {}
+				b_jiquilpan_de_juarez_MC = {
+					nahuatl = "Xiuhquilitlpan"
+				}
+				b_sahuayo_de_morelos_MC = {
+					nahuatl = "Tzacuatlayotl"
+				}
+				b_jacona_MC = {
+					purepecha = "Xucugnari"
+				}
+				b_chavinda_MC = {}
+				b_santiago_tangamandapio_MC = {}
+				b_villamar_MC = {}
+			#	b_la_manzanilla_de_la_paz_MC = {} #Jalisco
+				
+			
+				
+				
 				b_vista_hermosa_de_negrete_MC = {}
 			}
 			c_la_piedad = { #2794
@@ -2492,7 +2521,9 @@ e_mexico = {
 				
 				b_tzintzuntzan_MC = {}
 				b_patzcuaro_MC = {}
-				
+				b_zacapu_MC = {
+					purepecha = "Tsakapu"
+				}					
 				b_san_jeronimo_purenchecuaro_MC = {}
 				b_santa_clara_del_cobre_MC = {}
 				b_quiroga_MC = {}
@@ -2503,13 +2534,31 @@ e_mexico = {
 				color = { 198 22 0 }
 				color2={ 255 255 255 }
 				
-				b_zacapu_MC = {}	
+				purepecha = "Tsakapu"
+				
+
+				b_panindicuaro_MC = {}
+				b_purepero_de_echaiz_MC  = {}
+				b_tangancicuaro_de_arista_MC = {}
+				b_tlazazalca_MC = {}
+				b_coeneo_de_libertad_MC = {}
+				b_villa_jimenez_MC = {}
+				b_tirindaro_MC = {
+					purepecha = "Tirintarhu"
+				}
+				
 			}
 			c_puruandiro = { #2372
 				color = { 210 25 10 }
 				color2={ 255 255 255 }
 				
 				b_puruandiro_MC = {}	
+				b_pastor_ortiz_MC = {}
+				b_angamacutiro_de_la_union_MC = {}
+				b_villa_morelos_MC = {}		
+				b_villachuato_MC = {}
+				b_san_jose_huipana_MC = {}
+				b_rodeo_de_san_antonio_de_los_heroes_de_chapultepec_MC = {}
 			}			
 		}
 		d_tancitaro = {
@@ -2522,19 +2571,21 @@ e_mexico = {
 				color={ 153 17 0 }
 				color2={ 255 255 255 }
 				
-				b_nuevo_san_juan_parangaricutirimicuaro_MC = {
-					purepecha = "Parangarikutirimíkuaro"
-				}				
+				b_nahuatzen_MC = {}				
 				b_uruapan_MC = {
 						purepecha = "Ulhuapani"
 				}
+				b_nuevo_san_juan_parangaricutirimicuaro_MC = {
+					purepecha = "Parangarikutirimíkuaro"
+				}				
 				b_ziracuaretiro_MC = {}
 				b_taretan_MC = {}
 				b_tingambato_MC = {}
 				b_charapan_MC = {}
 				b_paracho_MC = {}
-				b_capacuaro_MC = {}
-				b_toreo_bajo_MC = {}
+			#	b_capacuaro_MC = {}
+			#	b_toreo_bajo_MC = {}
+				
 			}
 			c_tancitaro = { #2370
 				color = { 160 18 3 }
@@ -2573,13 +2624,19 @@ e_mexico = {
 			title_prefix = free_city	
 		}
 		d_la_piedad_republic = { #Free City of HME
-			color = { 0 0 0 }
+			color = { 123 29 15 }
 			color2 = { 255 255 255 }
 				
 			capital = 2201 #c_la_piedad
 			title_prefix = free_city	
 		
-		}			
+		}
+		d_zamora_principality = { #titular principality of the HME
+			color = { 180 33 25 }
+			color2 = { 255 255 255 }
+			
+			capital = 3051 #c_zamora
+		}
 		
 	}
 	k_guerrero = {
