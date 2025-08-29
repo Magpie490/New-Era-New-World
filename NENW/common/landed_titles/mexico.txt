@@ -931,23 +931,21 @@ e_mexico = {
 				color={ 95 38 153 }
 				color2={ 255 255 255 }
 				
-				
 				b_ameca_JA = {}
 				b_cocula_JA = {}
-				b_san_martin_hidalgo_JA
+				b_san_martin_hidalgo_JA = {}
+				b_tala_JA = {}				
 				b_ahuaculco_de_mercado_JA = {}				
-
-				
-
-				b_teocuitatlan_de_corona_JA1 = {}
+				b_teuchitlan_JA = {}				
+				b_san_antonio_puerta_de_la_vega_JA = {}
 			}	
 				
 		}
-		d_guzman = {
+		d_guzman = { #Zapotlán el Grande
 			color={ 122 36 242 }
 			color2={ 255 255 255 }
 			
-			capital = 3043 # c_sierra_de_amula
+			capital = 3041 # zapotlan_el_grande
 			
 			c_tizapan = { #2770
 				color = { 115 34 229 }
@@ -957,10 +955,11 @@ e_mexico = {
 				b_tuxcueca_JA   = {}
 				b_tizapan_el_alto_JA  = {}
 				b_mazamitla_JA  = {}
-				b_san_luis_soyatlan_JA  = {}
 				b_concepcion_de_buenos_aires_JA  = {}
 				b_la_manzanilla_de_la_paz_JA  = {}
-				b_citala_JA  = {}
+				b_valle_de_juarez_JA = {}
+			#	b_san_luis_soyatlan_JA  = {}
+			#	b_citala_JA  = {}
 			}
 			c_sayula =  { #2373 sayula
 				color = { 128 90 214 }
@@ -982,33 +981,44 @@ e_mexico = {
 				color={ 102 30 204 }
 				color2={ 255 255 255 }
 				
-				b_tecalitlan_JA = {}
-				b_ciudad_guzman_JA = {
-					short_name = yes
-					used_for_dynasty_names = no
+				nahuatl = "Zapotlan"
+				
+				b_tamazula_de_gordiano_JA = {
+					nahuatl = "Tlamazolan"
 				}
-				b_tuxpan_JA = {}
-				b_zapotiltic_JA = {}
-				b_quitupan_JA = {}
-				b_la_mota_JA = {}
-				b_vista_hermosa_JA = {}
-				b_tamazula_de_gordiano_JA = {}
+				b_ciudad_guzman_JA = {
+						used_for_dynasty_names = no
+						nahuatl = "Zapotlan"
+				}
+				b_zapotiltic_JA = {
+					nahuatl = "Tzápotlíitic"
+				}
+				b_tuxpan_JA = {
+					nahuatl = "Tochpan"
+				}
+				b_tecalitlan_JA = {}
+				b_tonila_JA = {}
+				b_pihuamo_JA = {}
+			#	b_gomez_farias_JA = {}
+			#	b_la_mota_JA = {}
+			#	b_vista_hermosa_JA = {}
 			}
 			c_jilotlan = { #2777
 				color = { 229 40 34 }
 				color2 = { 255 255 255 }
 				
+				b_quitupan_JA = {}
 				b_santa_maria_del_oro_JA = {}
 				b_jilotlan_JA  = {}
 				b_los_olivos_JA = {}
 				b_huichitila_JA = {}
 				b_san_francisco_JA = {}
 				b_canchol_JA = {}
-				b_ahuijullo_JA = {}
-				b_el_terrero_JA = {}
+			#	b_ahuijullo_JA = {}
+			#	b_el_terrero_JA = {}
 			}	
 		}
-		d_sierra_occidental = {
+		d_sierra_occidental = { #Amula
 			color={ 119 47 191 }
 			color2={ 255 255 255 }
 			
@@ -1016,59 +1026,66 @@ e_mexico = {
 			
 			capital = 3043 # c_sierra_de_amula
 			
-			c_sierra_de_amula = { # 3043
+			c_sierra_de_amula = { # 3043 #Autlán
 				color={ 111 44 178 }
 				color2={ 255 255 255 }
-				
-				#falta loc y organizar los holdings dependiendo su importancia
-				#renombrar dependiendo de cuál sea el municipio más importante
-				
-				b_autlan_JA = {} #cab mun
-				
-				b_ejutla_JA = {} #cab mun
-				b_juchitlan_JA = {} #cab mun
-				b_san_gabriel_JA = {} #cab mun
-				b_el_limon_JA = {} #cab mun
-				b_el_grullo_JA = {} #cab mun
-				b_rincon_de_luisa_JA = {}
+						
+				b_autlan_JA = {} 
+				b_el_grullo_JA = {} 
+				b_san_gabriel_JA = {} 
+				b_tonaya_JA = {} 
 				b_toliman_JA = {}
-				b_zapotitlan_de_vadillo_CL = {}#actually jalisco 
-				b_tuxcacuesco_JA = {} # cab mun
-				b_tonaya_JA = {} #cab mun
+				b_zapotitlan_de_vadillo_JA = {}
+				b_ejutla_JA = {} 
+			#	b_el_limon_JA = {} 
+			#	b_tuxcacuesco_JA = { nahuatl = "Tascahuescomatl"} 
+			#	b_rincon_de_luisa_JA = {}
 				
 			}
 			c_mascota = { #2774
 				color = { 127 51 204 }
 				color2 = { 255 255 255 }
-				
-
-				#añadir poblados secundarios (no cabeceras municipales)
 								
-				b_mascota_JA = {} #cab mun
-				b_talpa_de_allende_JA  = {}
-				b_guachinango_JA  = {}
+				b_mascota_JA = {} 
 				b_san_sebastian_del_oeste_JA = {}
+				b_talpa_de_allende_JA  = {}
 				b_atenguillo_JA = {}
-				b_mixtlan_JA = {}				
+				b_mixtlan_JA = {}			
+				b_guachinango_JA  = {}
+				b_la_estancia_de_landeros_JA = {}
 
 			}	
 			c_quila = { #2374 
-				color = { 0 0 0 }
+				color = { 133 62 215 }
 				color2 = { 255 255 255 }
-				
-				#falta loc y organizar los holdings dependiendo su importancia
-				
-				b_temaxtlan_JA = {}
-				b_tenamaxtlan_JA = {}
-				b_atenguillo_JA = {}
+						
 				b_tecolotlan_JA = {}
-				b_atengo_JA = {}
-				b_ayutla_JA = {} #cab mun
+				b_union_de_tula_JA = {} 
+				b_ayutla_JA = {} 
 				b_cuautla_JA = {}
-				b_union_de_tula_JA = {} #cab mun
-			#	b_atemajac_de_brizuela_JA = {} #posiblemente en otro 
-			#	b_chiquilistan_JA = {} #posiblemente en otro 
-			}				
+				b_atengo_JA = {}
+				b_tenamaxtlan_JA = {}
+				b_soyatlan_del_oro_JA = {}
+				
+			}		
+	#		c_tapalpa = { #2376
+	#			color = { 130 55 211 }
+	#			color2 = { 255 255 255 }
+	#			
+	#			b_tapalpa_JA = {
+	#				nahuatl = "Tlapalpan"
+	#			}
+	#			b_juchitlan_JA = {} 				
+	#			b_atemajac_de_brizuela_JA = {} 
+	#			b_chiquilistan_JA = {
+	#				nahuatl = "Chiquilizintlitlan"
+	#			} 
+	#			b_juanacatlan_TA_JA = {
+	#				nahuatl = "Xonacatlan"
+	#			}
+	#			b_san_antonio_JA = {}
+	#			b_los_corrales_JA = {}
+	#		}
 		}
 		d_costalegre = {
 			color={ 171 72 242 }
