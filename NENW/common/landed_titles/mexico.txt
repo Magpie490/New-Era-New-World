@@ -1373,7 +1373,9 @@ e_mexico = {
 		capital = 3067 # c_mexico
 		
 		catholic = 5000
-			
+		
+		mephaa = "Mixíí"
+		
 		d_teotihuacan = { #titular archbishopric for the HME
 			color = { 40 204 163 }
 			color2 = { 255 255 255 }
@@ -1385,7 +1387,7 @@ e_mexico = {
 			
 			capital = 3068 #c_toluca
 			
-			title_prefix = free_city	
+		#	title_prefix = free_city	
 		}
 		
 		d_edomex = {
@@ -1493,6 +1495,7 @@ e_mexico = {
 			yucateco = "Anahuac"
 			purepecha = "Anahuac"
 			raramuri = "Anahuac"
+			mephaa = "Mixíí"
 			
 			c_mexico = { # 3067
 				color={ 0 109 54 }
@@ -1505,6 +1508,7 @@ e_mexico = {
 				yucateco = "Tenochtitlan"
 				purepecha = "Tenochtitlan"
 				raramuri = "Tenochtitlan"
+				mephaa = "Mixíí"
 
 				holy_site = catholic
 				holy_site = centaurista_reformed
@@ -1518,6 +1522,7 @@ e_mexico = {
 					yucateco = "Tenochtitlan"
 					purepecha = "Tenochtitlan"
 					rarmuri = "Tenochtitlan"
+					mephaa = "Mixíí"
 				}
 				b_catedral_metropolitana_cdmx = { 
 					short_name = yes
@@ -1982,7 +1987,9 @@ e_mexico = {
 		color = { 229 189 68 }
 		color2 = { 255 255 255 }
 		
-		capital = 3071 #c_puebla				
+		capital = 3071 #c_puebla	
+
+		mephaa = "Michámbáá"
 		
 		d_sierra_norte = {
 			color = { 178 166 35 }
@@ -2734,13 +2741,173 @@ e_mexico = {
 		capital = 3101 # c_chilpancingo
 		
 		nahuatl = "Tlacateccatl"
+		mephaa = "Me'phaa Kubaa"
 		
-		d_la_montana_guerrero = {
+		d_taxco = { #archbishopric for HME
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 2991 #c_taxco
+		}
+		
+		d_la_montana_guerrero = { 
 			color={ 191 119 47 }
 			color2={ 255 255 255 }
 			
-			capital = 3103 # c_acatlan
+			nahuatl = "Tlachinollan"
+			mephaa =  "Xaná"
 			
+			capital = 3102 # c_tlapa
+		
+			c_tlapa = { # 3102
+				color={ 229 143 57 }
+				color2={ 255 255 255 }
+				
+				nahuatl = "Tlapan"
+				mixtec = "Tinda'i"
+				mephaa =  "A'phaá"
+			
+				b_tlapa_de_comonfort_GR = {
+					mephaa =  "A'phaá"
+					nahuatl = "Tlapan"
+					mixtec = "Tinda'i"					
+				}
+				b_alcozauca_de_guerrero_GR = {
+					mephaa = "Mañumujmií'"
+				}				
+				b_zapotitlan_tablas_GR = {
+					mephaa = "Xirágáá"
+				}
+				b_atlixtac_GR = {
+					mephaa = "Aguaá" #Huitzapula which is actually part of Atlixtac Municipality.
+				}
+				b_xalpatlahuac_GR = {}
+				b_copanatoyac_GR = {}
+				b_tlalixtaquilla_de_maldonado_GR = {}
+				#b_alpoyeca_GR = {}
+				#b_zilacayotitlan_GR = {
+				#	mephaa = "Itisrá'khamájíin"
+				#}
+
+			#	b_ixcateopan_GR = {} #Norte; near Iguala
+				
+
+			}
+			c_malinaltepec = { #2992
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				mephaa = "Mañuwiín"
+
+				b_malinaltepec_GR = {
+					mephaa = "Mañuwiín"
+				}
+				b_tlacoapa_GR = {
+					nahuatl = "Tlacopan"
+				#	mephaa = "Miwíín" #alt spelling I guess
+					mephaa = "Minuíí"
+				}				
+				b_atlamajalcingo_del_monte_GR = {
+					nahuatl = "Atlallimaxactlitzinco"
+					mixtec = "Ñoo Ita"
+					mephaa = "BuátháWayíí"
+				}
+				b_iliatenco_GR = {
+					mephaa = "Mañíí"
+				}	
+				b_metlatonoc_GR = {}
+				b_metlatilapa_GR = {
+					mephaa = "Sndawíí"
+				}
+				b_paraje_montero_de_zaragoza_GR = {
+					mephaa = "Xuayíí"
+				}
+				
+			}
+				
+			c_huamuxtitlan = { #2993
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				mephaa = "Ñusuáán"
+				
+				b_huamuxtitlan_GR = {
+					mephaa = "Ñusuáán"
+				}
+				b_xochihuehuetlan_GR = {}
+				b_cualac_GR = {}
+				b_olinala_GR = {}
+				b_ahuacuotzingo_GR = {}
+				b_san_miguel_totolapa_GR = {}
+				b_san_miguel_comitlipa_GR  = {}
+			}			
+			
+		}
+		d_chilpancingo = {
+			color={ 140 88 63 }
+			color2={ 255 255 255 }
+
+			capital = 3101 #c_chilpancingo
+			
+			mephaa = "Kra'áá"
+
+			c_chilpancingo = { # 3101
+				color={ 127 80 57 }
+				color2={ 255 255 255 }
+				
+				mephaa = "Kra'áá"
+				
+				b_chilpancingo_GR = {
+					mephaa = "Kra'áá"
+				}
+				b_zumpango_del_rio_GR = {}
+				b_tierra_colorada_GR = {
+					mephaa = "Mbamañaá'"
+				}
+				b_huitziltepec_GR = {}		
+				b_xochipala_GR = {}		
+				b_petaquillas_GR = {}
+				b_el_ocotito_GR = {}
+			#	b_tlayolapa_GR = {}
+			#	b_zoyatepec_GR = {} 
+			#	b_cajelitos_GR = {}
+			#	b_mohoneras_GR = {}
+			#	b_rincon_de_la_via_GR = {}				
+				
+			}
+			c_chilapa = { #2997
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				mephaa = "Xkuamiñáá"
+				
+				b_chilapa_de_alvarez_GR = {
+					mephaa = "Xkuamiñáá"
+				} 
+				b_tixtla_GR = {}
+				b_quechultenango_GR = {
+					mephaa = "Frúmáá" #Colotipla which is actually a location in the Quechultenango Municipality.
+				}
+				b_apango_GR = {}
+				b_zitlala_GR = {}
+				b_hueycantenango_GR = {}
+				b_mochitlan_GR = {}
+				
+			}
+			c_tecuani = {
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }			
+				
+				b_tlacotepec_GR = {
+					mephaa = "Namaaá'" #La Ciénaga which is actually a location in General Heliodoro Castillo Municipality, whose seat is Tlacotepec.
+				}
+				b_chichihualco_GR = {}
+				b_yextla_GR = {}
+				b_izotepec_GR = {}
+				b_carrizal_de_bravo_GR = {}
+				b_chichiltepec_GR = {}
+				b_huautla_GR = {}
+			}
 
 			c_acatlan = { # 3103
 				color={ 178 111 44 }
@@ -2754,33 +2921,27 @@ e_mexico = {
 				b_petlalcingo_PU = {}
 				b_tecomatlan_PU = {}
 				b_tehuitzingo_PU = {}
-			}
-			c_iguala = { # 3062
+			}		
+			
+		}
+		d_iguala = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+			
+				c_iguala = { # 3062
 				color={ 204 127 51 }
 				color2={ 255 255 255 }
 				
 				b_iguala_MC = {}
 				b_tonalapa_de_rio_MC = {}
-				b_taxco_MC = {}
+
 				b_buenavista_de_cuellar_MC = {}
 				b_cocula_MC = {}
 				b_metlapa_MC = {}
 				b_teloloapan_MC = {}
 				b_huitzuco_MC = {}
 			}
-			c_tlapa = { # 3102
-				color={ 229 143 57 }
-				color2={ 255 255 255 }
-				
-				b_tlapa_de_comonfort_GR = {}
-				b_ixcateopan_GR = {}
-				b_olinala_GR = {}
-				b_huamuxtitlan_GR = {}
-				b_alpoyeca_GR = {}
-				b_cualac_GR = {}
-				b_xochihuehuetlan_GR = {}
-				b_atlixtac_GR = {}
-			}
+					
 			c_atenango_del_rio = {
 				color={ 153 95 38 }
 				color2={ 255 255 255 }
@@ -2794,86 +2955,116 @@ e_mexico = {
 				b_san_miguel_de_las_palmas_GR = {}
 				b_santiago_tlamazacapa_GR = {}
 				b_zicapa_GR = {}
-			}
-		}
-		d_chilpancingo = {
-			color={ 140 88 63 }
-			color2={ 255 255 255 }
-
-			capital = 3101 #c_chilpancingo
-
-			c_chilpancingo = { # 3101
-				color={ 127 80 57 }
-				color2={ 255 255 255 }
-				
-				b_chilpancingo_GR = {}
-				b_tixtla_GR = {}
-				b_zumpango_del_rio_GR = {}
-				b_huitziltepec_GR = {}
-				
-				b_xochipala_GR = {}
-				b_chilapa_de_alvarez_GR = {}
-				b_apango_GR = {}
-			}
-			c_tierra_colorada = {
+			}	
+			c_taxco = { #2991
 				color = { 0 0 0 }
 				color2 = { 255 255 255 }
 				
-				b_tierra_colorada_GR = {}
-			}
-			c_tecuani = {
-				color = { 0 0 0 }
-				color2 = { 255 255 255 }			
-				
-				b_tlacotepec_GR = {}
-				b_chichihualco_GR = {}
+				b_taxco_MC = {}
 			}
 		}
-	}
-
-	k_costa_chica = {
-		color={ 30 132 153 }
-		color2={ 255 255 255 }
-
-		capital = 3105 #c_acapulco
-
-		d_acapulco = {
-			color={ 12 127 127 }
+		d_costa_chica= {
+			color={ 120 85 70 }
 			color2={ 255 255 255 }
 			
 			capital = 3105 # c_acapulco
+			
+				nahuatl = "Yopitzinco"	
+				mephaa = "Raun Lájuíin"				
 			
 			c_acapulco = { # 3105
 				color={ 15 153 153 }
 				color2={ 255 255 255 }
 				
 				b_acapulco_GR = {}
-				b_coyuca_de_benitez_GR = {}
-				b_emiliano_zapata_GR = {}
-				b_cuquita_massieu_GR = {}
-				b_tixtlancingo_GR = {}
+				b_la_roqueta_GR = {}
+				b_san_isidro_GR = {}
+				b_puerto_del_marques_GR = {}
 				b_tres_palos_GR = {}
-				b_atoyac_GR = {}
-				b_el_ocotito_GR = {}
+				b_amatillo_GR = {}
+				b_pie_de_la_cuesta_GR = {}
+			#	b_xaltianguis_GR = {}			
+			#	b_san_pedro_las_playas_GR = {}
+			#	b_emiliano_zapata_GR = {}
+			#	b_cuquita_massieu_GR = {}
 			}
 			c_ometepec = { # 3106
 				color={ 10 102 102 }
 				color2={ 255 255 255 }
 				
-				b_ometepec_GR = {}
-				b_cuajinicuilapa_GR = {}
-				b_xochistlahuaca_GR = {}
+				mephaa = "Juánjmaá"
+				
+				b_ometepec_GR = {
+					mephaa = "Juánjmaá"
+				}
+				b_san_luis_acatlan_GR = {
+					mephaa = "Marénií" #Mixtecapa, which is actually a town in San Luis Acatlán municipality
+				}
+				b_xochistlahuaca_GR = {
+					mephaa = "Kombáwíí" #La Soledad, which is actually a town in Xochistlahuaca municipality
+				}
+				b_tlacoachistlahuaca_GR = {
+					mephaa = "Xkumáá"
+				}
 				b_acatepec_GR = {}
-				b_marquelia_GR = {}
-				b_ayulta_GR = {}
-				b_cruz_grande_GR = {}
-				b_copala_GR = {}
+				b_igualapa_GR = {}
+				b_cochoapa_GR = {}
 			}
+			c_costa_chica = {
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				nahuatl = "Yopitzinco"
+
+				
+
+				b_san_marcos_GR = {}
+				b_cuajinicuilapa_GR = {
+					nahuatl = "Cuauhxonecuilliatlpan"
+				}
+				b_cruz_grande_GR = {
+					mephaa = "Krúse Mbaa"
+				}
+				b_azoyu_GR = {
+					mephaa = "Itsíindií'"
+				}
+				b_cuautepec_GR = {}
+				b_copala_GR = {
+					nahuatl = "Copalli"
+				}
+				b_juchitan_GR = {
+					nahuatl = "Xochitlan"
+				}
+			#	b_marquelia_GR = {}
+				
+			}
+			c_ayutla_GRO = {
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				mephaa = "Pátsíguwiín"
+				
+				b_ayutla_de_los_libres_GR = {
+					mephaa = "Pátsíguwiín"
+				}
+			}			
+		}
+			
+		d_costa_grande = { 
+			color = { 95 70 75 }
+			color2 = { 255 255 255 }
+			
+			capital = 2366 #ixtapazihuatanejo
+			
+			mephaa = "Raun Mbaa"
+		
 			c_atoyac = { #2638
 				color = { 17 178 178 }
 				color2 = { 255 255 255 }
 				
 				b_atoyac_de_alvarez_GR = {}
+				b_coyuca_de_benitez_GR = {}
+			
 				b_zacualpan_GR = {}
 				b_san_jeronimo_de_juarez_GR = {}
 				b_santiago_ATY_GR = {}
@@ -2881,6 +3072,9 @@ e_mexico = {
 				b_san_vicente_de_benitez_GR = {}
 				b_la_y_griega_GR = {}
 				b_arenal_de_alvarez_GR = {}
+			#	b_tixtlancingo_GR = {} #coyuca
+
+
 			}
 			c_petatlan = { # 3057
 				color={ 7 76 76 }
@@ -2907,21 +3101,24 @@ e_mexico = {
 				b_joluta_GR = {}
 				b_petacalco_GR = {}
 			}
-
-			c_costa_chica = {
-				color = { 0 0 0 }
-				color2 = { 255 255 255 }
-
-				b_san_marcos_GR = {}
-			}
-			c_ayutla_GRO = {
-				color = { 0 0 0 }
-				color2 = { 255 255 255 }
-				
-				b_ayutla_de_los_libres_GR = {}
-			}
 			
 		}
+		d_acapulco_republic = { #potential free city under HME
+			color = { 55 95 115 }
+			color2 = { 255 255 255 } 
+			
+			title_prefix = free_city
+		}
+	
+	}
+
+	k_costa_chica = {
+		color={ 30 132 153 }
+		color2={ 255 255 255 }
+
+		capital = 3105 #c_acapulco
+
+
 		d_costa_oaxaquena = {
 			color={ 47 143 191 }
 			color2={ 255 255 255 }
@@ -2990,13 +3187,13 @@ e_mexico = {
 		capital = 2213 # c_apatzingan
 
 		d_tierra_caliente = {
-			color={ 153 96 68 }
+			color={ 135 50 70 }
 			color2={ 255 255 255 }
 			
 			capital = 3059 # c_oriente placeholder
 			
 			c_oriente = { # 3059
-				color={ 153 96 68 }
+				color={ 105 60 90 }
 				color2={ 255 255 255 }
 				
 				b_tejupilco_de_hidalgo_MC = {}
@@ -3009,7 +3206,7 @@ e_mexico = {
 				b_cutzamala_de_pinzon_MC = {}
 			}
 			c_cutzamala_de_pinzon = { # 3388
-				color={ 178 113 80 }
+				color={ 125 50 85 }
 				color2={ 255 255 255 }
 				
 				b_cutzamala_de_pinzon_mexi = {
@@ -3028,7 +3225,7 @@ e_mexico = {
 				}
 			}
 			c_coyuca_de_catalan = { # 3061
-				color={ 102 64 45 }
+				color={ 150 70 100 }
 				color2={ 255 255 255 }
 				
 				b_coyuca_de_catalan_MC = {}
@@ -3044,7 +3241,7 @@ e_mexico = {
 				b_quiricuaro_MC = {}
 			}
 			c_pungarabato = { #2643
-				color = { 76 48 34 }
+				color = { 120 65 100 }
 				color2 = { 255 255 255 }
 				
 				b_tlapehuala_GR = {
@@ -3061,26 +3258,26 @@ e_mexico = {
 				b_nueva_guerrero_GR	 = {}
 			}
 			c_zirandaro = { #2999
-				color = { 0 0 0 }
+				color = { 160 70 110 }
 				color2 = { 255 255 255 }
 				
 				b_zirandaro_GR = {}
 			}
 			c_ajuchitlan = { #2998
-				color = { 0 0 0 }
+				color = { 135 55 95 }
 				color2 = { 255 255 255 }
 				
 				b_ajuchitlan_del_progreso_GR = {}
 			}
 		}
 		d_zitacuaro = {
-			color={ 216 106 43 }
+			color={ 100 45 80 }
 			color2={ 255 255 255 }
 
 			capital = 3389 #c_heroica_zitacuaro
 
 			c_heroica_zitacuaro = { # 3389
-				color={ 204 100 40 }
+				color={ 95 40 70 }
 				color2={ 255 255 255 }
 				
 				b_heroica_zitacuaro_mexi = {}
@@ -3093,7 +3290,7 @@ e_mexico = {
 				b_timbuscatio_mexi = {}
 			}
 			c_tuzantla = { #2786
-				color = { 229 113 45 }
+				color = { 90 35 60 }
 				color2 = { 255 255 255 }
 				
 				b_tuzantla_MC = {}
@@ -3107,7 +3304,7 @@ e_mexico = {
 				b_ceibas_de_trujillo_MC = {}
 			}
 			c_huetamo = { # 3060
-				color={ 178 88 35 }
+				color={ 100 50 80 }
 				color2={ 255 255 255 }
 				
 				b_huetamo_MC = {}
@@ -3120,7 +3317,7 @@ e_mexico = {
 			#	b_zirandaro_MC = {} #guerrero holding
 			}
 			c_tacambaro = { #2368
-				color = { 180 98 25 }
+				color = { 115 45 80 }
 				color2 = { 255 255 255 }
 				
 				b_tacambaro_MC = {
@@ -3149,13 +3346,13 @@ e_mexico = {
 	#}		
 	
 		d_balsas = {
-			color={ 216 38 32 }
+			color={ 135 70 105 }
 			color2={ 255 255 255 }
 			
 			capital = 2213 # c_apatzingan
 			
 			c_tepalcatepec = { # 3058
-				color={ 204 36 30 }
+				color={ 140 65 95 }
 				color2={ 255 255 255 }
 				
 				b_tepalcatepec_MC = {}				
@@ -3170,7 +3367,7 @@ e_mexico = {
 			}
 				
 			c_apatzingan = { #2783
-				color = { 178 31 26 }
+				color = { 155 75 110 }
 				color2 = { 255 255 255 }
 				
 				purepecha = "Apahtzïngan"
@@ -3189,7 +3386,7 @@ e_mexico = {
 			}
 			
 			c_lahuacana = { #2367
-				color = { 180 35 20 }
+				color = { 165 80 120 }
 				color2 = { 255 255 255 }
 				
 				b_lombardia_MC = {}
@@ -3207,7 +3404,7 @@ e_mexico = {
 				b_gambara_MC  = {}
 			}
 			c_coalcoman = { # 3055
-				color={ 229 120 11 }
+				color={ 175 85 130 }
 				color2={ 255 255 255 }
 				
 				b_coalcoman_MC = {}
@@ -3220,7 +3417,7 @@ e_mexico = {
 				b_ostula_MC = {}
 			}
 			c_lazaro_cardenas = { # 3056
-				color={ 255 133 12 }
+				color={ 130 60 95 }
 				color2={ 255 255 255 }
 				
 				b_las_guacamayas_MC = {}
