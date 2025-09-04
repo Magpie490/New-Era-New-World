@@ -557,12 +557,6 @@ true_religion_group_syncratic_trigger = {
 true_religion_group_oceanic_trigger = {
 	true_religion_group = oceanic
 }
-true_religion_group_alien_trigger = {
-	true_religion_group = alien_group
-}
-true_religion_group_synth_trigger = {
-	true_religion_group = synth_group
-}
 true_religion_group_chinese_trigger = {
 	true_religion_group = chinese_traditional_group
 }
@@ -595,7 +589,6 @@ has_minor_deity_trigger = {
 
 FROMs_religion_is_playable_trigger = {
 	FROM = {
-		show_scope_change = no
 
 		dlc_religion_check_trigger = yes
 	}
@@ -604,7 +597,6 @@ FROMs_religion_is_playable_trigger = {
 # For targeted decision where FROM is the player
 ROOTs_religion_is_playable_trigger = {
 	ROOT = {
-		show_scope_change = no
 
 		dlc_religion_check_trigger = yes
 	}
@@ -613,7 +605,6 @@ ROOTs_religion_is_playable_trigger = {
 ROOTs_secret_religion_is_playable_trigger = { 
 	# To block players from getting a game over if they don't own all DLCs
 	ROOT = {
-		show_scope_change = no
 
 		trigger_if = {
 			limit = { is_nomadic = no }
@@ -804,7 +795,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = fire_cross
 		}
 	}
@@ -819,7 +809,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -828,7 +817,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = sympathy_pagans
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 			trait = heroic_tales
 			trait = half_moon
 		}
@@ -838,7 +826,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_zoroastrianism
 			trait = sikh_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -850,14 +837,12 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = noahide
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { PREV = { true_religion_group_indian_group_trigger = yes } }
 		OR = {
 			trait = sympathy_indian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -867,7 +852,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = novelist_elf_friend
 			trait = novelist_reformed_elf_friend
 			trait = old_lore
-			trait = blorg_tolerations
 			trait = trained_republican_law
 			trait = trained_ccp_law
 		}
@@ -880,7 +864,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = bhagavanist_akbar
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = osvicenism_tolerations
 		}
 	}
@@ -890,7 +873,6 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
 			trait = novelist_reformed_ingsoc
-			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
 				has_bloodline_flag = esclabor_bloodline
@@ -903,69 +885,51 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			trait = sympathy_syncratic
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { PREV = { true_religion_group_oceanic_trigger = yes } }
 		OR = {
 			trait = sympathy_oceanic
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
-		limit = { PREV = { true_religion_group_alien_trigger = yes } }
-		OR = {
-			trait = sympathy_alien
-			trait = novelist_star_child
-			trait = novelist_reformed_star_child
-		}
-	}
-	trigger_else_if = {
-		PREV = { true_religion_group_synth_trigger = yes }
-		trait = sympathy_synth
-	}
-	trigger_else_if = {
-		PREV = { true_religion_group_chinese_trigger = yes }
+		limit = { PREV = { true_religion_group_chinese_trigger = yes } }
 		OR = {
 			trait = sympathy_chinese
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { true_religion_group_post_christian_trigger = yes }
 		OR = {
 			trait = sympathy_post_christian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { true_religion_group_new_age_group_trigger = yes }
 		OR = {
 			trait = sympathy_new_age_group
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { true_religion_group_mormonic_trigger = yes }
 		OR = {
 			trait = sympathy_mormon
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { true_religion_group_apocalyptic_trigger = yes }
 		OR = {
 			trait = sympathy_apocalyptic
-			trait = blorg_tolerations
+		}
+	}
+	trigger_else_if = {
+		limit = { PREV = { true_religion_group_shinto_trigger = yes } }
+		OR = {
+			trait = sympathy_shinto
 		}
 	}
 	trigger_else = {
-		PREV = { true_religion_group_shinto_trigger = yes }
-		OR = {
-			trait = sympathy_shinto
-			trait = blorg_tolerations
-		}
 	}
 }
 
@@ -983,7 +947,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = fire_cross
 		}
 	}
@@ -998,7 +961,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1007,7 +969,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = sympathy_pagans
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 			trait = heroic_tales
 			trait = half_moon
 		}
@@ -1017,7 +978,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 		OR = {
 			trait = sympathy_zoroastrianism
 			trait = sikh_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1029,14 +989,12 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = noahide
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_indian_group_trigger = yes } }
 		OR = {
 			trait = sympathy_indian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1046,7 +1004,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = novelist_elf_friend
 			trait = novelist_reformed_elf_friend
 			trait = old_lore
-			trait = blorg_tolerations
 			trait = trained_republican_law
 			trait = trained_ccp_law
 		}
@@ -1059,7 +1016,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = bhagavanist_akbar
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = osvicenism_tolerations
 		}
 	}
@@ -1069,7 +1025,6 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
 			trait = novelist_reformed_ingsoc
-			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
 				has_bloodline_flag = esclabor_bloodline
@@ -1082,69 +1037,51 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			trait = sympathy_syncratic
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_oceanic_trigger = yes } }
 		OR = {
 			trait = sympathy_oceanic
-			trait = blorg_tolerations
 		}
-	}
-	trigger_else_if = {
-		limit = { ROOT = { true_religion_group_alien_trigger = yes } }
-		OR = {
-			trait = sympathy_alien
-			trait = novelist_star_child
-			trait = novelist_reformed_star_child
-		}
-	}
-	trigger_else_if = {
-		limit = { ROOT = { true_religion_group_synth_trigger = yes } }
-		trait = sympathy_synth
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_chinese_trigger = yes } }
 		OR = {
 			trait = sympathy_chinese
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_post_christian_trigger = yes } }
 		OR = {
 			trait = sympathy_post_christian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_new_age_group_trigger = yes } }
 		OR = {
 			trait = sympathy_new_age_group
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_mormonic_trigger = yes } }
 		OR = {
 			trait = sympathy_mormon
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_apocalyptic_trigger = yes } }
 		OR = {
 			trait = sympathy_apocalyptic
-			trait = blorg_tolerations
 		}
 	}
-	trigger_else = {
+	trigger_else_if = {
 		limit = { ROOT = { true_religion_group_shinto_trigger = yes } }
 		OR = {
 			trait = sympathy_shinto
-			trait = blorg_tolerations
 		}
+	}
+	trigger_else = {
 	}
 }
 
@@ -1162,7 +1099,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = keeper_of_tales
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = fire_cross
 		}
 	}
@@ -1177,7 +1113,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = jewish_yona
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1186,7 +1121,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = sympathy_pagans
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 			trait = heroic_tales
 			trait = half_moon
 		}
@@ -1196,7 +1130,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		OR = {
 			trait = sympathy_zoroastrianism
 			trait = sikh_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1208,14 +1141,12 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = noahide
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { PREV = { religion_group = indian_group } }
 		OR = {
 			trait = sympathy_indian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
@@ -1225,7 +1156,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = novelist_elf_friend
 			trait = novelist_reformed_elf_friend
 			trait = old_lore
-			trait = blorg_tolerations
 			trait = trained_republican_law
 			trait = trained_ccp_law
 		}
@@ -1238,7 +1168,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = bhagavanist_akbar
 			trait = sikh_tolerations
 			trait = neo_zorvanite_tolerations
-			trait = blorg_tolerations
 			trait = osvicenism_tolerations
 		}
 	}
@@ -1248,7 +1177,6 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = sympathy_esoteric
 			trait = novelist_ingsoc
 			trait = novelist_reformed_ingsoc
-			trait = blorg_tolerations
 			any_owned_bloodline = {
 				bloodline_is_active_for = PREV
 				has_bloodline_flag = esclabor_bloodline
@@ -1261,69 +1189,52 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 			trait = sympathy_syncratic
 			trait = vaishna_ganda_hindu
 			trait = bhagavanist_akbar
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		limit = { PREV = { religion_group = oceanic } }
 		OR = {
 			trait = sympathy_oceanic
-			trait = blorg_tolerations
 		}
-	}
-	trigger_else_if = {
-		limit = { PREV = { religion_group = alien_group } }
-		OR = {
-			trait = sympathy_alien
-			trait = novelist_star_child
-			trait = novelist_reformed_star_child
-		}
-	}
-	trigger_else_if = {
-		PREV = { religion_group = synth_group }
-		trait = sympathy_synth
 	}
 	trigger_else_if = {
 		PREV = { religion_group = chinese_traditional_group }
 		OR = {
 			trait = sympathy_chinese
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { religion_group = post_christian_group }
 		OR = {
 			trait = sympathy_post_christian
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { religion_group = new_age_group }
 		OR = {
 			trait = sympathy_new_age_group
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { religion_group = mormonic }
 		OR = {
 			trait = sympathy_mormon
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else_if = {
 		PREV = { religion_group = apocalyptic }
 		OR = {
 			trait = sympathy_apocalyptic
-			trait = blorg_tolerations
 		}
 	}
-	trigger_else = {
+	trigger_else_if = {
 		PREV = { religion_group = shintoist_group }
 		OR = {
 			trait = sympathy_shinto
 			trait = blorg_tolerations
 		}
+	}
+	trigger_else = {
 	}
 }
 
@@ -1792,10 +1703,7 @@ religion_has_excommunication = {
 }
 
 religion_has_incest = {
-	OR = {
-		has_religion_feature = religion_holy_family
-		has_religion_feature = religion_feature_novelist_2
-	}
+	religion_scope = { has_religion_feature = religion_holy_family }
 }
 
 is_antipope = {
@@ -1804,5 +1712,13 @@ is_antipope = {
 		has_claim = d_fraticelli
 		has_claim = k_koptic
 		has_claim = d_salihi
+	}
+}
+
+is_cardinal = {
+	OR = {
+		has_minor_title = title_cardinal
+		has_minor_title = title_fraticelli_cardinal
+		has_minor_title = title_thaddean_cardinal
 	}
 }
