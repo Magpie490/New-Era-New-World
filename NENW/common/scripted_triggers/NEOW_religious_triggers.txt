@@ -51,7 +51,7 @@ isnt_forced_to_theocracy = {
 			religion = ashtari
 			religion = baphometist
 			religion = millenarian
-			has_religion_feature = religion_temporal_head
+			religion_scope = { has_religion_feature = religion_temporal_head }
 			AND = {
 				has_religion_features = no
 				is_reformed_religion = yes
@@ -61,7 +61,7 @@ isnt_forced_to_theocracy = {
 }
 is_equalist_religion = {
 	OR = {
-		has_religion_feature = religion_equal
+		religion_scope = { has_religion_feature = religion_equal }
 		religion = bahai
 		#religion = katerinist
 		religion = bracero
@@ -86,7 +86,7 @@ is_equalist_religion = {
 }
 is_feminist_religion = {
 	OR = {
-		has_religion_feature = religion_matriarchal
+		religion_scope = { has_religion_feature = religion_matriarchal }
 		is_equalist_religion = yes
 	}
 }
@@ -679,7 +679,8 @@ should_have_coronation = {
 		trait = crowned_by_bishop_rd
 		trait = crowned_by_pope_rd
 		government = order_government
-		OR = { government = oligarchic_republic government = consular_republic }
+		government = oligarchic_republic
+		government = consular_republic
 	}
 }
 is_cardinal_trigger = {
@@ -904,36 +905,6 @@ two_holy_order_avalaible_trigger = {
 	religion_scope = {
 		is_title_active = persistent_event_target:two_holy_order
 		persistent_event_target:two_holy_order = {
-			always = yes
-		}
-	}
-}
-three_holy_order_avalaible_trigger = {
-	NOT = { has_character_modifier = expelled_three_holy_order }
-	NOT = {
-		any_liege = {
-			religion = PREV
-			has_character_modifier = expelled_three_holy_order
-		}
-	}
-	religion_scope = {
-		is_title_active = persistent_event_target:three_holy_order
-		persistent_event_target:three_holy_order = {
-			always = yes
-		}
-	}
-}
-four_holy_order_avalaible_trigger = {
-	NOT = { has_character_modifier = expelled_four_holy_order }
-	NOT = {
-		any_liege = {
-			religion = PREV
-			has_character_modifier = expelled_four_holy_order
-		}
-	}
-	religion_scope = {
-		is_title_active = persistent_event_target:four_holy_order
-		persistent_event_target:four_holy_order = {
 			always = yes
 		}
 	}
