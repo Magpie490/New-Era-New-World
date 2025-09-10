@@ -14,8 +14,17 @@ e_rio_bravo = {
 		catholic = 3000
 		constitutional = 5
 		
+		d_amistad = { 
+			color = { 229 47 45 }
+			
+			capital = 1230 #c_maverick
+			
+		}
+		
+		}
 		d_alamo = {
 			color = { 255 127 102 }
+			color2= { 255 255 255 }			
 			
 			capital = 1234 # Uvalde
 			
@@ -23,10 +32,10 @@ e_rio_bravo = {
 				color = { 240 100 80 }
 				b_uvalde_TX = {}
 				b_hondo_TX = {}
+				b_pearsall_TX = {}
 				b_castroville_TX = {}
-				b_la_pryor_TX = {}
 				b_dabney_TX = {}
-				b_batesville_TX = {}
+				b_knippa_TX = {}
 				b_frio_town_TX = {}
 			}
 			c_crockett = {
@@ -43,6 +52,8 @@ e_rio_bravo = {
 			}
 			c_val_verde = {
 				color = { 255 127 61 }
+				color2= { 255 255 255 }
+				
 				b_laughlin_TX = {}
 				b_del_rio_TX = {}
 				b_brackettville_TX = {}
@@ -53,14 +64,29 @@ e_rio_bravo = {
 			}
 			c_maverick = {
 				color = { 244 137 77 }
-				b_eagle_pass_TX = {}
-				b_carrizo_springs_TX = {}
-				b_crystal_city_TX = {}
+				color2= { 255 255 255 }				
+			
+				b_eagle_pass_TX = {}	
+				b_eidson_road_TX = {}
 				b_rosita_TX = {}
-				b_asherton_TX = {}
+				b_chula_vista_TX = {}
+				b_elm_creek_TX = {}
+				b_el_indio_TX = {}
 				b_las_colonias_TX = {}
-				b_big_wells_TX = {}
 			}
+			c_dimmit = { #2413
+				color = { 175 105 93 }
+				color = { 255 255 255 }
+				
+				b_carrizo_springs_TX = {}
+				b_crystal_city_TX = {}	
+				b_la_pryor_TX = {}
+				b_asherton_TX = {}
+				b_batesville_TX = {}
+				b_catarina_TX = {}
+				b_big_wells_TX = {}	
+				b_carrizo_hill_TX = {}
+				
 		}
 		
 		d_corpus_christi = {
@@ -92,18 +118,19 @@ e_rio_bravo = {
 				b_seven_sisters_TX = {}
 				b_realitos_TX = {}
 				b_cruz_calle_TX = {}
+				b_alice_TX = {} #county seat of jim hoggs should be more important?
 			}
 			c_kenedy_TX = {
 				color={ 240 60 60 }
 				color2={ 0 220 220 }
 
+				b_sarita_TX = {}
 				b_kingsville_TX = {}
-				b_encino_TX = {}
-				b_falfurrias_TX = {}
+				b_ricardo_TX = {}
 				b_flowella_TX = {}
-				b_alice_TX = {}
-				b_bishop_TX = {}
-				b_driscoll_TX = {}
+				b_armstrong_TX = {}
+				b_bishop_TX = {} #nueces
+				b_driscoll_TX = {} #nueces
 			}
 			c_live_oak = {
 				color = { 220 70 60 }
@@ -134,9 +161,9 @@ e_rio_bravo = {
 				color={ 225 50 25 }
 				color2={ 0 220 220 }
 
-				b_hebbronville_TX = {}
-				b_las_lomitas_TX = {}
+				b_falfurrias_TX = {}
 				b_mirando_city_TX = {}
+				b_encino_TX = {}
 				b_bruni_TX = {}
 				b_linn_TX = {}
 				b_san_isidro_TX = {}
@@ -144,23 +171,40 @@ e_rio_bravo = {
 			}
 			c_webb = {
 				color = { 255 60 10 }
+			
 				b_laredo_TX = {}
 				b_rio_bravo_TX = {}
-				b_zapata_TX = {}
+				b_el_cenizo_TX = {}
 				b_nye_TX = {}
 				b_randado_TX = {}
 				b_aguilares_TX = {}
+				b_bonanza_hills_TX = {}
 			}
 			c_starr = {
 				color = { 240 40 0 }
-				b_edinburg_TX = {}
-				b_mcallen_TX = {}
+
 				b_rio_grande_city_TX = {}
-				b_mission_TX = {}
+				b_zapata_TX = {}
+				b_hebbronville_TX = {}
+				b_las_lomitas_TX = {}
+				b_morales-sanchez_TX = {}
 				b_san_manuel_linn_TX = {}
 				b_weslaco_TX = {}
-				b_moraida_TX = {}
+		#		b_moraida_TX = {}
 			}
+			c_hidalgo_TX = {  #2414
+				color = { 263 67 15 }
+				color2 = { 255 255 255 }
+				
+				b_edinburg_TX = {}
+				b_mcallen_TX = {}
+				b_mission_TX = {}
+				b_pharr_TX = {}
+				b_alamo_TX = {}
+				b_alton_TX = {}
+				b_donna_TX = {}
+			}
+			
 		}
 		d_transpecos = {
 			color = { 229 107 45 }
@@ -252,25 +296,11 @@ e_rio_bravo = {
 		
 		capital = 3024 #c_saltillo
 		
-		d_sierra_del_carmen = {
-			color={ 127 109 85 }
-			color2={ 255 255 255 }
+		#d_sierra_del_carmen = {
+		#	color={ 127 109 85 }
+		#	color2={ 255 255 255 }
 			
-			capital = 1985 # c_ocampo
-			
-			c_ocampo = { # 811
-				color={ 153 131 102 }
-				color2={ 255 255 255 }
-	
-				b_ocampo_COA2 = {}
-				b_sierra_mojada_COA3 = {}
-				b_laguna_del_rey_COA = {}
-#				b_balcones_COA = {}
-				b_san_miguel_COA3 = {}
-				b_chula_vista_COA = {}
-				b_hacienda_la_mora_COA = {}
-				b_americanos_COA = {}				
-			}
+		#	capital = 1985 # c_ocampo
 
 		#	c_maderas_del_carmen = { # 3020
 		#		color={ 76 65 51 }
@@ -283,33 +313,8 @@ e_rio_bravo = {
 		#		b_laguna_del_rey_COA2 = {}
 		#		b_calles_COA = {}
 		#		b_balcones_COA2 = {}
-		#	}
-			c_acuna = {
-				color={ 229 218 91 }
-				color2={ 255 255 255 }
-				
-				b_acuna_COA = {}
-				b_jimenez_COA  = {}
-				b_san_carlos_COA = {}
-				b_la_muralla_COA = {}
-				b_jaboncillos_COA = {}
-				b_el_bonito_COA = {}
-				b_el_infante_COA = {}
-				b_el_cedro_COA = {}
-			}	
-			c_muzquiz = { # 3022
-				color={ 178 153 119 }
-				color2={ 255 255 255 }
-				
-				b_muzquiz_COA = {}
-				b_nueva_rosita_COA = {}
-				b_san_juan_de_sabinas_COA = {}
-				b_palau_COA = {}
-				b_minas_de_barroteran_COA = {}
-				b_las_esperanzas_COA = {}
-				b_cuchilla_COA = {}
-			}				
-		}
+		#	}			
+		#}
 		d_nueva_extremadura = {
 			color={ 204 193 81 }
 			color2={ 255 255 255 }
@@ -332,32 +337,64 @@ e_rio_bravo = {
 #				b_la_gavia_COA = {}
 #				b_mercado_COA = {}
 			}
-			
-			c_piedras_negras = { # 3021
-				color={ 178 169 71 }
-				color2={ 255 255 255 }
-				
-				b_piedras_negras_COA = {}
-				b_villa_union_COA = {}
-				b_guerrero_COA = {}
-				b_hidalgo_COA = {}
-				b_el_moral_COA = {}
-				b_san_antonio_COA = {}
-				b_rio_escondido_COA = {}
-			}
-
 			c_sabinas = { # 3022
 				color={ 153 145 61 }
 				color2={ 255 255 255 }
 				
 				b_sabinas_COA = {}
-				b_progreso_COA = {}
-				b_juarez_COA = {}
+				b_nueva_rosita_COA = {}				
+				b_san_juan_de_sabinas_COA = {}
 				b_cloete_COA = {}
-				b_san_jose_de_aura_COA = {}
+				b_valle_dorado_COA = {}
 				b_el_sauz_COA = {}
 				b_san_alberto_COA = {}
 			}
+			c_candela = { #2411
+				color = { 247 232 98 }
+				color2 = { 255 255 255 }
+				
+				b_candela_COA = {}
+				b_progreso_COA = {}
+				b_juarez_COA = {}
+				b_san_jose_de_aura_COA = {}
+				b_el_huichazal_COA = {}
+				b_don_martin_COA = {}
+				b_valladares_COA = {}
+			}
+			c_muzquiz = { # 3022
+				color={ 178 153 119 }
+				color2={ 255 255 255 }
+				
+				b_muzquiz_COA = {}			
+				b_palau_COA = {}
+				b_minas_de_barroteran_COA = {}
+				b_las_esperanzas_COA = {}
+				b_minas_la_florida_COA = {}
+				b_cuchilla_COA = {}
+				b_nacimiento_de_los_negros_COA = {}
+			}		
+			c_ocampo = { # 811
+				color={ 153 131 102 }
+				color2={ 255 255 255 }
+	
+				b_ocampo_COA = {}
+				b_hercules_COA = {}
+				b_sierra_mojada_COA = {}
+				b_laguna_del_rey_COA = {}
+				b_chula_vista_COA = {}
+				b_la_esmeralda_COA = {}
+#				b_balcones_COA = {}
+#				b_san_miguel_COA3 = {}
+#				b_hacienda_la_mora_COA = {}
+#				b_americanos_COA = {}				
+			}								
+		}
+		d_piedras_negras = {
+			color = { 174 144 51 }
+			color2 = { 255 255 255 }
+			
+			capital = 3021 #c_piedras_negras
+			
 
 			c_zaragoza = { #3020
 				color = { 153 145 61 }
@@ -367,17 +404,55 @@ e_rio_bravo = {
 				b_morelos_COA = {}		
 				b_allende_COA = {}
 				b_nava_COA = {}	
+				b_villa_union_COA = {}				
 				b_chamacuero_COA = {}
 				b_rio_bravo_COA = {}
-				b_congregacion_el_remolino_COA = {
-					used_for_dynasty_names = no
-					short_name = yes
-				}
+	#			b_congregacion_el_remolino_COA = {
+	#				used_for_dynasty_names = no
+	#				short_name = yes
+	#			}
+			}	
+			c_piedras_negras = { # 3021
+				color={ 178 169 71 }
+				color2={ 255 255 255 }
+				
+				b_piedras_negras_COA = {}
+				b_carranza_COA = {}
+				b_el_moral_COA = {}
+				b_villa_real_COA = {}
+				b_el_progreso_COA = {}
+				b_san_antonio_COA = {}
+				b_rio_escondido_COA = {}
+			}			
+			c_acuna = {
+				color={ 229 218 91 }
+				color2={ 255 255 255 }
+				
+				b_acuna_COA = {}
+				b_jimenez_COA  = {}
+				b_san_carlos_COA = {}
+				b_la_muralla_COA = {}
+				b_jaboncillos_COA = {}
+				b_el_bonito_COA = {}
+				b_el_infante_COA = {}
+				b_el_cedro_COA = {}
+			}
+			c_fronterabrava = { #2412
+				color = {175 164 128 }
+				color2 = { 255 255 255 }
+				
+				b_guerrero_COA = {}
+				b_hidalgo_COA = {}	
+				b_santa_monica_COA = {}
+				b_canoitas_COA = {}
+				b_el_amole_COA = {}
+				b_arianiaga_COA = {}
+				b_el_vergel_COA = {}
 			}
 		}
 
 		d_laguna = { 
-			color = { 178 163 133 }
+			color = { 178 143 143 }
 			color2 = { 255 255 255 }
 			
 			capital = 3019 # c_cuatrocienegas
@@ -409,17 +484,17 @@ e_rio_bravo = {
 #				b_los_charcos_de_risa_COA = {}
 					
 			}
-			c_parras = { #2338
-				color = { 153 140 114 }
+			c_viesca = { # 2410
+				color = { 173 161 161 }
 				color2 = { 255 255 255 }
-
-				b_parras_de_la_fuente_COA = {}
-				b_paila_COA = {}
-				b_san_francisco_del_progreso_COA = {}
-				b_nuevo_sabanilla_COA = {}
-				b_san_rafael_de_los_milagros_COA = {}
-				b_huariche_COA = {}
-				b_san_miguel_COA = {}
+				
+				b_viesca_COA = {}
+				b_la_ventana_COA = {}
+				b_boquilla_de_perlas_COA = {}
+				b_villa_de_bilbao_COA = {}
+				b_gilita_COA = {}
+				b_zapata_COA = {}
+				b_ignacio_zaragoza_COA = {}
 			}
 		}
 		d_coahuila = {
@@ -457,6 +532,18 @@ e_rio_bravo = {
 #				b_el_pilar_de_richardson_COA = {}
 #				b_macuyu_COA = {}
 			}
+			c_parras = { #2338
+				color = { 153 140 114 }
+				color2 = { 255 255 255 }
+
+				b_parras_de_la_fuente_COA = {}
+				b_paila_COA = {}
+				b_san_francisco_del_progreso_COA = {}
+				b_nuevo_sabanilla_COA = {}
+				b_san_rafael_de_los_milagros_COA = {}
+				b_huariche_COA = {}
+				b_san_miguel_COA = {}
+			}			
 		}
 	}
 	k_nuevo_leon = {
