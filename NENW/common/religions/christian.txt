@@ -155,13 +155,13 @@ christian = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
-		can_call_crusade = yes
-		uses_decadence = yes
 		attacking_same_religion_piety_loss = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
 		rel_head_defense = yes
-		priests_can_marry = yes
+		priests_can_marry = no
 		
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -251,14 +251,13 @@ christian = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
-		can_call_crusade = yes
-		uses_decadence = yes
 		attacking_same_religion_piety_loss = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
 		rel_head_defense = yes
-		priests_can_marry = yes
-		max_wives = 4
+		priests_can_marry = no
 		
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -440,6 +439,7 @@ christian = {
 			SATAN LUCIFER THE_DEVIL
 		}
 		character_modifier = {
+			religion_flex = -0.5
 		}
 		aggression = 0.9
 		allow_rivermovement = yes			
@@ -853,7 +853,6 @@ christian = {
 		allow_rivermovement = yes
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
-		can_call_crusade = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
@@ -917,6 +916,107 @@ christian = {
 		intermarry = constitutional
 		intermarry = trinitarian
 	}
+	penitente = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 136
+		heresy_icon = 137
+		color = { 204 0 16 }
+		parent = guadalupano
+		
+		crusade_name = CRUSADE
+		crusade_cb = crusade
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_DIOS GOD_JESUCRISTO GOD_LA_VIRGENCITA
+		}
+		evil_god_names = {
+			SATAN_SPANISH LUCIFER GOD_EL_DIABLO
+		}
+
+		aggression = 1.2
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		autocephaly = yes
+		pacifist = yes
+		uses_decadence = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		defensive_attrition = yes	
+		ignores_defensive_attrition = yes
+		peace_piety_gain = 1.0
+		independence_war_score_bonus = 30
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		priests_can_marry = no
+		rel_head_defense = yes
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = columbian
+		intermarry = moravian
+		intermarry = catholic
+		intermarry = watcher
+		intermarry = quaker
+		intermarry = tquaker
+		intermarry = mainline
+		intermarry = evangelical
+		intermarry = televangelical
+		intermarry = israelite
+		intermarry = baptist
+		intermarry = abolitionist
+		intermarry = madonnite
+		intermarry = postdiluvian
+		intermarry = harmonic
+		intermarry = united_church
+		intermarry = anglican
+		intermarry = sedevacantist
+		intermarry = ultramontain
+		intermarry = insular
+		intermarry = millenarian
+		intermarry = lutheran
+		intermarry = community_of_christ
+		intermarry = mormon
+		intermarry = brighamite
+		intermarry = adventist
+		intermarry = guadalupano
+		intermarry = penitente
+		intermarry = amaitist
+		intermarry = chaldean
+		intermarry = orthodox
+		intermarry = quixtiano
+		intermarry = kristooil
+		intermarry = uniate
+		intermarry = peyotist
+		intermarry = sevillian
+		intermarry = apostolic
+		intermarry = doukhobor
+		intermarry = koptic
+		intermarry = islamity
+		intermarry = indian_shaker
+		intermarry = bahai
+		intermarry = hussite
+		intermarry = charismatic
+		intermarry = highchurch
+		intermarry = bracero
+		intermarry = constitutional
+		intermarry = trinitarian
+		intermarry = caodai
+		intermarry = hmongism
+		intermarry = illustrious
+		intermarry = sun_dance
+		
+		intermarry = voodun
+		intermarry = haiti_voodoo
+		intermarry = santeria
+		intermarry = hoodoo
+		intermarry = oceanic
+	}
 	uniate = {
 		graphical_culture = orthodoxholygfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
@@ -957,7 +1057,6 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		hard_to_convert = yes
-		defensive_attrition = yes
 		rel_head_defense = yes
 		priests_can_marry = yes
 		
@@ -1249,106 +1348,6 @@ christian = {
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
 	}
-	penitente = {
-		graphical_culture = westerngfx
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 130
-		heresy_icon = 130
-		color = { 204 0 16 }
-		
-		crusade_name = CRUSADE
-		crusade_cb = crusade
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-		
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_DIOS GOD_JESUCRISTO GOD_LA_VIRGENCITA
-		}
-		evil_god_names = {
-			SATAN_SPANISH LUCIFER GOD_EL_DIABLO
-		}
-
-		aggression = 1.2
-		allow_rivermovement = yes
-		can_call_crusade = yes
-		autocephaly = yes
-		pacifist = yes
-		uses_decadence = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		defensive_attrition = yes	
-		ignores_defensive_attrition = yes
-		peace_piety_gain = 1.0
-		independence_war_score_bonus = 30
-		can_retire_to_monastery = yes
-		priests_can_inherit = no
-		priests_can_marry = no
-		rel_head_defense = yes
-		
-		religious_clothing_head = 15
-		religious_clothing_priest = 15
-		intermarry = columbian
-		intermarry = moravian
-		intermarry = catholic
-		intermarry = watcher
-		intermarry = quaker
-		intermarry = tquaker
-		intermarry = mainline
-		intermarry = evangelical
-		intermarry = televangelical
-		intermarry = israelite
-		intermarry = baptist
-		intermarry = abolitionist
-		intermarry = madonnite
-		intermarry = postdiluvian
-		intermarry = harmonic
-		intermarry = united_church
-		intermarry = anglican
-		intermarry = sedevacantist
-		intermarry = ultramontain
-		intermarry = insular
-		intermarry = millenarian
-		intermarry = lutheran
-		intermarry = community_of_christ
-		intermarry = mormon
-		intermarry = brighamite
-		intermarry = adventist
-		intermarry = guadalupano
-		intermarry = penitente
-		intermarry = amaitist
-		intermarry = chaldean
-		intermarry = orthodox
-		intermarry = quixtiano
-		intermarry = kristooil
-		intermarry = uniate
-		intermarry = peyotist
-		intermarry = sevillian
-		intermarry = apostolic
-		intermarry = doukhobor
-		intermarry = koptic
-		intermarry = islamity
-		intermarry = indian_shaker
-		intermarry = bahai
-		intermarry = hussite
-		intermarry = charismatic
-		intermarry = highchurch
-		intermarry = bracero
-		intermarry = constitutional
-		intermarry = trinitarian
-		intermarry = caodai
-		intermarry = hmongism
-		intermarry = illustrious
-		intermarry = sun_dance
-		
-		intermarry = voodun
-		intermarry = haiti_voodoo
-		intermarry = santeria
-		intermarry = hoodoo
-		intermarry = oceanic
-	}
 	bracero = {
 		graphical_culture = westerngfx
 
@@ -1471,6 +1470,8 @@ christian = {
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
 		priests_can_inherit = no
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
 		peace_piety_gain = 1.0
 		priests_can_marry = yes
 		autocephaly = yes
@@ -1640,7 +1641,7 @@ christian = {
 		
 		color = { 15 91 153 }
 		
-		crusade_name = CRUSADE
+		crusade_name = CRUSADE_ABOLITION
 		scripture_name = THE_BIBLE
 		priest_title = PRIEST
 		
@@ -1674,6 +1675,7 @@ christian = {
 		attacking_same_religion_piety_loss = yes
 		can_grant_claim = yes
 		can_excommunicate = yes
+		can_call_crusade = yes
 		
 		intermarry = columbian
 		intermarry = moravian
@@ -1768,8 +1770,6 @@ christian = {
 		can_grant_claim = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
-		hard_to_convert = yes
-		defensive_attrition = yes
 		rel_head_defense = yes
 		priests_can_marry = yes
 		
@@ -1859,6 +1859,8 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		hard_to_convert = yes
+		defensive_attrition = yes
+		ignores_defensive_attrition = yes
 		priests_can_marry = yes
 		
 		religious_clothing_head = 2
@@ -2200,7 +2202,6 @@ christian = {
 		priests_can_marry = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
-		defensive_attrition = yes
 		hard_to_convert = yes
 		rel_head_defense = yes
 		
@@ -2332,7 +2333,6 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
-		hard_to_convert = yes
 		female_temple_holders = yes
 		
 		religious_clothing_head = 0
@@ -2823,7 +2823,6 @@ christian = {
 		priests_can_marry = no
 		allow_looting = yes
 		can_demand_religious_conversion = yes
-		hard_to_convert = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -2870,7 +2869,6 @@ christian = {
 		allow_looting = yes
 		uses_jizya_tax = yes
 		can_demand_religious_conversion = yes
-		hard_to_convert = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -3799,6 +3797,7 @@ christian = {
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_retire_to_monastery = yes
+		ignores_defensive_attrition = yes
 		priests_can_inherit = no
 		rel_head_defense = yes
 		
@@ -3892,10 +3891,9 @@ christian = {
 		can_grant_claim = yes
 		rel_head_defense = yes
 		character_modifier = {
-			temple_levy_size = 0.05
-			temple_vassal_tax_modifier = 0.05
-			land_morale = 0.05#Most Organised of East Coast Protestants
-			land_organisation = 0.05#Most Organised of East Coast Protestants
+			temple_levy_size = 0.1
+			temple_vassal_tax_modifier = 0.1
+			religion_flex = -0.25
 		}		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
