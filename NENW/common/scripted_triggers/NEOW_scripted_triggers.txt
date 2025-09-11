@@ -236,7 +236,7 @@ uses_zodiacs = {
 		religion = hellenic_pagan
 		religion = hellenic_pagan_reformed
 		religion = citrus_scientology
-		has_religion_feature = religion_astrology
+		religion_scope = { has_religion_feature = religion_astrology }
 		religion = hypercubist
 		religion = shriner
 		religion = zenith
@@ -261,29 +261,35 @@ uses_zodiacs = {
 		religion = dianic
 		religion = myriadic
 		religion = aquarian
-		has_religion_feature = religion_feature_folklorist_2
+		religion_scope = { has_religion_feature = religion_feature_folklorist_2 }
 	}
 }
 uses_alchemy = {
 	OR={
-		has_religion_feature = religion_alchemy
+		religion_scope = {
+			OR = {
+				has_religion_feature = religion_alchemy
+				has_religion_feature = religion_feature_blue_star
+				has_religion_feature = religion_feature_delver
+				has_religion_feature = religion_feature_blessing_way
+			}
+		}
 		religion = arcane
 		religion = espiritista
 		religion = taoist
-		has_religion_feature = religion_feature_blue_star
-		has_religion_feature = religion_feature_delver
 		religion = highmount
 		religion = dianic
 		religion = myriadic
 		religion = illustrious
 		religion = el_shaddai
-		has_religion_feature = religion_feature_blessing_way
 		religion_group = muslim
 	}
 }
 uses_hexes = {
 	OR={
-		has_religion_feature = religion_alchemy
+		religion_scope = {
+			has_religion_feature = religion_alchemy
+		}
 		religion = thelemic_reformed
 		religion = summer_queen
 		religion = theosophy
@@ -420,7 +426,7 @@ can_hold_council_trigger = {
 	OR = {
 		AND = { #Patriarchal religions can only hire males. Matriarchal religions can only hire females.
 			is_female = no 
-			NOT = { liege = { has_religion_feature = religion_matriarchal } } 
+			NOT = { liege = { religion_scope = { has_religion_feature = religion_matriarchal } } }
 		}
 		AND = {
 			is_female = yes 
@@ -1049,7 +1055,7 @@ ROOT_can_press_dejure_claim_trigger = {
 			religion = ROOT
 		}
 		trigger_if = {
-			limit = { primary_title = { religion_scope = { persistent_event_target:one_holy_order = { title = PREVPREV } } } }
+			limit = { primary_title = { holder_scope = { religion_scope = { persistent_event_target:one_holy_order = { title = PREVPREVPREV } } } } }
 			ROOT = {
 				OR = {
 					has_character_modifier = expelled_one_holy_order
@@ -1061,36 +1067,12 @@ ROOT_can_press_dejure_claim_trigger = {
 			}
 		}
 		trigger_else_if = {
-			limit = { primary_title = { religion_scope = { persistent_event_target:two_holy_order = { title = PREVPREV } } } }
+			limit = { primary_title = { holder_scope = { religion_scope = { persistent_event_target:two_holy_order = { title = PREVPREVPREV } } } } }
 			ROOT = {
 				OR = {
 					has_character_modifier = expelled_two_holy_order
 					any_liege = {
 						has_character_modifier = expelled_two_holy_order
-						religion = PREV
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { primary_title = { religion_scope = { persistent_event_target:three_holy_order = { title = PREVPREV } } } }
-			ROOT = {
-				OR = {
-					has_character_modifier = expelled_three_holy_order
-					any_liege = {
-						has_character_modifier = expelled_three_holy_order
-						religion = PREV
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { primary_title = { religion_scope = { persistent_event_target:four_holy_order = { title = PREVPREV } } } }
-			ROOT = {
-				OR = {
-					has_character_modifier = expelled_four_holy_order
-					any_liege = {
-						has_character_modifier = expelled_four_holy_order
 						religion = PREV
 					}
 				}
@@ -1147,7 +1129,6 @@ holder_not_confederation_trigger = {
 			holder_scope = { government = confederation_government }
 		}
 		holder_scope = {
-			show_scope_change = no
 			NOT = { government = confederation_government }
 		}
 	}
@@ -1296,7 +1277,6 @@ is_feminist_culture = {
 		culture_group = east_texan
 		culture_group = west_texan
 		culture_group = plainslander
-		is_alien_culture_trigger = yes
 	}
 }
 
@@ -1466,16 +1446,6 @@ spread_revolution_can_use_title_trigger = {
 					}
 				}
 			}
-		}
-	}
-}
-is_not_titular_tooltip_trigger = {
-	conditional_tooltip = {
-		trigger = {
-			is_titular = yes
-		}
-		THIS = {
-			is_titular = no
 		}
 	}
 }

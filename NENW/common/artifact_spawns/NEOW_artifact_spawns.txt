@@ -62,23 +62,31 @@ ancient_artifact = {
 		}
 		old_world_engine = {
 			value = 5
-			additive_modifier = {
-				value = 0
-				NOT = {
-					religion = ironist
-				}
-			}
 		}
 		ate_euro = {
 			value = 10
-			additive_modifier = {
-				value = 0
-				NOT = {
-					capital_scope = {
-						region = world_europe
-					}
-				}
-			}
+		}
+	}
+}
+ancient_purple_gold_artifact = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		purple_gold_ring = {
+			value = 1 # rare
 		}
 	}
 }
@@ -124,7 +132,6 @@ ate_jewish_artifacts = {
 			value = 100
 			religion_group = jewish_group
 			is_landed = yes
-			tier = COUNT
 		}
 	}
 	
@@ -201,15 +208,6 @@ ancient_christian_artifacts = {
 	artifacts = {
 		ancient_rosary = {
 			value = 1
-			additive_modifier = {
-				value = 0
-				NOR = {
-					religion = catholic
-					religion = fraticelli
-					religion = sevillian
-					religion = penitente
-				}
-			}
 		}
 	}
 }

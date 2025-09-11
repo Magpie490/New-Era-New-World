@@ -12,22 +12,9 @@ pledge_crusade_trigger = {
 
 	custom_tooltip = {
 		text = crusade_no_antipope_TT
-		OR = {
-			rightful_religious_head_scope = {
-				controls_religion = yes
-			}
-			AND = {
-				rightful_religious_head_scope = {
-					controls_religion = no
-				}
-				religion = katoliko
-			}
-			AND = {
-				rightful_religious_head_scope = {
-					controls_religion = yes
-				}
-				religion = katoliko
-			}
+
+		rightful_religious_head_scope = {
+			controls_religion = yes
 		}
 	}
 
