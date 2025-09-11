@@ -205,14 +205,16 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = ca_culture_saxon_english_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -220,7 +222,8 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -238,7 +241,8 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 			}
@@ -246,7 +250,8 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -254,7 +259,8 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -272,7 +278,8 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 				has_building = ca_culture_saxon_english_3
@@ -281,7 +288,8 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -289,7 +297,8 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -307,7 +316,8 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 				has_building = ca_culture_saxon_english_3
@@ -317,7 +327,8 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -325,7 +336,8 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -3311,6 +3323,7 @@ castle = {
 		build_time = 1095
 		gunmen = 20
 		gunmen_offensive = 0.05
+		gunmen_morale = 0.1
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3369,6 +3382,7 @@ castle = {
 		build_time = 1095
 		gunmen = 20
 		gunmen_offensive = 0.05
+		gunmen_morale = 0.1
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3428,6 +3442,7 @@ castle = {
 		build_time = 1095
 		gunmen = 20
 		gunmen_offensive = 0.05
+		gunmen_morale = 0.1
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3488,6 +3503,7 @@ castle = {
 		build_time = 1095
 		gunmen = 20
 		gunmen_offensive = 0.05
+		gunmen_morale = 0.1
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3690,8 +3706,7 @@ castle = {
 		gunmen = 5
 		light_cavalry_offensive = 0.05
 		light_cavalry_defensive = 0.05
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		gunmen_offensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3728,8 +3743,7 @@ castle = {
 		gunmen = 5
 		light_cavalry_offensive = 0.05
 		light_cavalry_defensive = 0.05
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		gunmen_offensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3767,8 +3781,7 @@ castle = {
 		gunmen = 10
 		light_cavalry_offensive = 0.05
 		light_cavalry_defensive = 0.05
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		gunmen_offensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3805,10 +3818,9 @@ castle = {
 		build_time = 2190
 		light_infantry = 30
 		gunmen = 10
-		light_infantry_offensive = 0.05
-		light_infantry_defensive = 0.05
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		gunmen_offensive = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -3841,7 +3853,7 @@ castle = {
 		gold_cost = 200
 		build_time = 730
 		light_cavalry = 15
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		ai_creation_factor = 101
 		
@@ -3876,7 +3888,7 @@ castle = {
 		gold_cost = 300
 		build_time = 1095
 		light_cavalry = 15
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		ai_creation_factor = 101
 		
@@ -3912,7 +3924,7 @@ castle = {
 		gold_cost = 400
 		build_time = 2190
 		light_cavalry = 25
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		ai_creation_factor = 101
 		
@@ -3949,7 +3961,7 @@ castle = {
 		gold_cost = 500
 		build_time = 2190
 		light_cavalry = 25
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		ai_creation_factor = 101
 		
@@ -3988,10 +4000,8 @@ castle = {
 		build_time = 730
 		knights = 10
 		knights_offensive = 0.05
-		knights_defensive = 0.05
+		gunmen_offensive = 0.1
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -4029,10 +4039,8 @@ castle = {
 		build_time = 1095
 		knights = 10
 		knights_offensive = 0.05
-		knights_defensive = 0.05
+		gunmen_offensive = 0.1
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -4071,10 +4079,8 @@ castle = {
 		build_time = 2190
 		knights = 15
 		knights_offensive = 0.05
-		knights_defensive = 0.05
+		gunmen_offensive = 0.1
 		gunmen = 10
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -4114,10 +4120,8 @@ castle = {
 		build_time = 2190
 		knights = 15
 		knights_offensive = 0.05
-		knights_defensive = 0.05
+		gunmen_offensive = 0.1
 		gunmen = 10
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11604,8 +11608,7 @@ castle = {
 		build_time = 730
 		knights = 30
 		pikemen = 15
-		knights_morale = 0.1
-		pikemen_morale = 0.1
+		pikemen_morale = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11636,8 +11639,7 @@ castle = {
 		build_time = 1095
 		knights = 40
 		pikemen = 20
-		knights_morale = 0.1
-		pikemen_morale = 0.1
+		pikemen_morale = 0.15
 		ai_creation_factor = 100
 		
 		extra_tech_building_start = 0.8
@@ -11669,8 +11671,7 @@ castle = {
 		build_time = 2190
 		knights = 50
 		pikemen = 25
-		knights_morale = 0.1
-		pikemen_morale = 0.1
+		pikemen_morale = 0.15
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
@@ -11703,153 +11704,13 @@ castle = {
 		build_time = 2190
 		knights = 60
 		pikemen = 30
-		knights_morale = 0.1
-		pikemen_morale = 0.1
+		pikemen_morale = 0.15
 		ai_creation_factor = 98
 		
 		extra_tech_building_start = 0.8
 		tax_income = -0.2
 	}
 	
-	#Synth
-	ca_culture_android_1 = {
-		desc = ca_culture_android_1_desc
-		potential = {
-			OR = {
-				culture = android
-				has_building = ca_culture_android_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = android
-			}
-		}
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 0 
-			ROOT = {
-				culture = android
-			}
-		}
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 20
-		gunmen = 20
-		heavy_infantry_offensive = 0.2
-		heavy_infantry_morale = 0.2
-		gunmen_offensive = 0.2
-		gunmen_morale = 0.2
-		ai_creation_factor = 101
-
-		extra_tech_building_start = 0.8
-		tax_income = -0.2
-	}
-	ca_culture_android_2 = {
-		desc = ca_culture_android_1_desc
-		potential = {
-			OR = {
-				culture = android
-				has_building = ca_culture_android_1
-				has_building = ca_culture_android_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = android
-			}
-		}
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				culture = android
-			}
-		}
-		upgrades_from = ca_culture_android_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 30
-		gunmen = 30
-		heavy_infantry_offensive = 0.2
-		heavy_infantry_morale = 0.2
-		gunmen_offensive = 0.2
-		gunmen_morale = 0.2
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-		tax_income = -0.2
-	}
-	ca_culture_android_3 = {
-		desc = ca_culture_android_2_desc
-		potential = {
-			OR = {
-				culture = android
-				has_building = ca_culture_android_1
-				has_building = ca_culture_android_2
-				has_building = ca_culture_android_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = android
-			}
-		}
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				culture = android
-			}
-		}
-		upgrades_from = ca_culture_android_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 40
-		gunmen = 40
-		heavy_infantry_offensive = 0.2
-		heavy_infantry_morale = 0.2
-		gunmen_offensive = 0.2
-		gunmen_morale = 0.2
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-		tax_income = -0.2
-	}
-	ca_culture_android_4 = {
-		desc = ca_culture_android_2_desc
-		potential = {
-			OR = {
-				culture = android
-				has_building = ca_culture_android_1
-				has_building = ca_culture_android_2
-				has_building = ca_culture_android_3
-				has_building = ca_culture_android_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = android
-			}
-		}
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-					culture = android
-			}
-		}
-		upgrades_from = ca_culture_android_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 50
-		gunmen = 50
-		heavy_infantry_offensive = 0.2
-		heavy_infantry_morale = 0.2
-		gunmen_offensive = 0.2
-		gunmen_morale = 0.2
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-		tax_income = -0.2
-	}
 	
 	# Cossacks Hopak Grounds
 	ca_culture_cossacks_1 = {
@@ -11879,8 +11740,7 @@ castle = {
 		gold_cost = 200
 		build_time = 730
 		light_cavalry = 20
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11916,8 +11776,7 @@ castle = {
 		gold_cost = 300
 		build_time = 1095
 		light_cavalry = 30
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11952,8 +11811,7 @@ castle = {
 		gold_cost = 400
 		build_time = 2190
 		light_cavalry = 40
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11989,8 +11847,7 @@ castle = {
 		gold_cost = 500
 		build_time = 2190
 		light_cavalry = 50
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
