@@ -61,18 +61,7 @@ ira_bloodline = {
 	bloodline_effect_tanistry = 1
 	picture = GFX_bloodlines_symbol_ireland
 	inheritance = patrilineal
-	flags = { created_bloodline ira_blood bloodline_heroes bloodline_tanistry }
-}
-joestar = {
-	monthly_character_prestige = 0.15
-	brave_opinion = 5
-	just_opinion = 5
-	combat_rating = 15
-	bloodline_effect_ambition = 1
-	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_joestar
-	inheritance = all_descendants
-	flags = { created_bloodline joestar_blood bloodline_ambition }
+	flags = { ira_blood bloodline_heroes bloodline_tanistry }
 }
 osman = {
 	monthly_character_prestige = 1
@@ -220,7 +209,7 @@ illyrian_liberator = {
 	combat_rating = 2
 	monthly_character_prestige = 0.2
 	albanian_opinion = 10
-	south_slavic = -10
+	south_slavic_opinion = -10
 	saintly_cultural_bloodline = 1
 	picture = GFX_bloodlines_symbol_albanian
 
@@ -231,7 +220,7 @@ illyrian_liberator_female = {
 	combat_rating = 2
 	monthly_character_prestige = 0.2
 	albanian_opinion = 10
-	south_slavic = -10
+	south_slavic_opinion = -10
 	saintly_cultural_bloodline = 1
 	picture = GFX_bloodlines_symbol_albanian_eagle
 
@@ -381,12 +370,13 @@ numenor_restorer_female = {
 
 samrat_chakravartin_male = {
 	indian_group_opinion = 15
-	stewardship = 2
+	vassal_opinion = 5
 	monthly_character_piety = 0.25
 	global_revolt_risk = -0.01
-	inheritance = matrilineal
+	saintly_cultural_bloodline = 1
+	inheritance = patrilineal
 	allow_bastards = no
-	flags = { created_bloodline samrat_chakravartin_bloodline }
+	flags = { created_bloodline samrat_chakravartin_bloodline cultural_saintly_bloodline }
 	active = {
 		has_dharmic_religion_trigger = yes
 	}
@@ -396,11 +386,13 @@ samrat_chakravartin_female = {
 	indian_group_opinion = 5
 	indo_aryan_group_opinion = 5
 	dravidian_group_opinion = 5
+	vassal_opinion = 5
 	monthly_character_piety = 0.25
 	global_revolt_risk = -0.01
+	saintly_cultural_bloodline = 1
 	inheritance = matrilineal
 	allow_bastards = yes
-	flags = { created_bloodline samrat_chakravartin_bloodline }
+	flags = { created_bloodline samrat_chakravartin_bloodline cultural_saintly_bloodline }
 	active = {
 		has_dharmic_religion_trigger = yes
 	}
@@ -633,20 +625,22 @@ raj_female = {
 	flags = { created_bloodline bloodline_heroes bloodline_tanistry }
 }
 
-zapadoslavia_male = {
+visegrad_male = {
 	monthly_character_prestige = 0.1
 	combat_rating = 5
 	west_slavic_opinion = 5
+	hungarian_opinion = 10
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { created_bloodline }
 }
 
-zapadoslavia_female = {
+visegrad_female = {
 	monthly_character_prestige = 0.1
 	combat_rating = 5
 	west_slavic_opinion = 5
+	hungarian_opinion = 10
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
@@ -694,6 +688,7 @@ good_transnistria_female = {
 	flags = { created_bloodline }
 }
 great_russia_male = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.2
 	east_slavic_opinion = 10
 	inheritance = patrilineal
@@ -703,6 +698,7 @@ great_russia_male = {
 }
 
 great_russia_female = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.2
 	east_slavic_opinion = 10
 	inheritance = matrilineal
@@ -712,6 +708,7 @@ great_russia_female = {
 }
 
 cccp_male = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	stalinist_opinion = 5
@@ -722,6 +719,7 @@ cccp_male = {
 }
 
 cccp_female = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	stalinist_opinion = 5
@@ -732,6 +730,7 @@ cccp_female = {
 }
 
 cccp_male_trotskyite = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	trotskyite_opinion = 5
@@ -742,6 +741,7 @@ cccp_male_trotskyite = {
 }
 
 cccp_female_trotskyite = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	trotskyite_opinion = 5
@@ -752,6 +752,7 @@ cccp_female_trotskyite = {
 }
 
 cccp_male_leninist = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	leninist_opinion = 5
@@ -762,6 +763,7 @@ cccp_male_leninist = {
 }
 
 cccp_female_leninist = {
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.3
 	combat_rating = 5
 	leninist_opinion = 5
