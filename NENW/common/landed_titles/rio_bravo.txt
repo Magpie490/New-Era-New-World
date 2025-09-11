@@ -17,28 +17,9 @@ e_rio_bravo = {
 		d_amistad = { 
 			color = { 229 47 45 }
 			
-			capital = 1230 #c_maverick
-			
-		}
-		
-		}
-		d_alamo = {
-			color = { 255 127 102 }
-			color2= { 255 255 255 }			
-			
-			capital = 1234 # Uvalde
-			
-			c_uvalde = {
-				color = { 240 100 80 }
-				b_uvalde_TX = {}
-				b_hondo_TX = {}
-				b_pearsall_TX = {}
-				b_castroville_TX = {}
-				b_dabney_TX = {}
-				b_knippa_TX = {}
-				b_frio_town_TX = {}
-			}
-			c_crockett = {
+			capital = 1233 #c_maverick
+
+		c_crockett = {
 				color = { 223 107 44 }
 				color2= { 255 255 255 }
 
@@ -73,6 +54,119 @@ e_rio_bravo = {
 				b_elm_creek_TX = {}
 				b_el_indio_TX = {}
 				b_las_colonias_TX = {}
+			}			
+			
+		}
+		
+		d_alamo = {
+			color = { 255 127 102 }
+			color2= { 255 255 255 }			
+			
+			capital = 1234 # Uvalde
+		}
+		d_the_barriers = {
+			color = { 178 76 45 }
+			
+			capital = 2415 #c_mustang
+			
+			c_mustang_island = { #2415
+				color = { 229 96 59 }
+				color2 = { 255 255 255 }
+				
+				b_port_aransas_TX = {
+					used_for_dynasty_names = no
+				}
+				b_harbor_island_TX = {}
+				b_san_jose_island_TX = {}
+				b_cinnamon_shore_TX = {}
+				b_merisol_village_TX = {}
+				b_island_park_estates_TX = {}
+				b_coyote_island_TX = {}
+			}
+			
+			c_padre_island = { #2416
+				color = { 175 102 82 }
+				
+				b_padre_island_TX = {}
+				b_south_padre_island_TX = {}
+				b_yarborough_TX = {}
+				b_south_beach_TX = {}
+				b_sea_shell_beach_TX = {}
+				b_andy_bowie_TX = {}
+				b_edwin_king_TX = {}
+			}
+		}
+		
+		d_corpus_christi = { #titular consular republic
+			color = { 191 19 58 }
+			capital = 1224 # Nueces
+			
+		}
+		
+		d_nueces = { 
+			color = { 191 19 19 }
+			
+			capital = 1224 #nueces
+
+			c_nueces = {
+				color = { 255 30 0 }
+				holy_site = sacred_heart
+				
+				b_portland_TX = {}
+				b_corpus_christi_TX = {}
+				b_sinton_TX = {}
+				b_rockport_TX = {}
+				b_aransas_pass_TX = {
+					used_for_dynasty_names = no
+				}
+				b_robstown_TX = {}
+			#	b_flour_buff_TX = {}
+				b_bishop_TX = {} #nueces
+			#	b_driscoll_TX = {} #nueces				
+			}
+			c_duval = {
+				color = { 225 30 30 }
+				b_san_diego_TX = {}
+				b_fowlerton_TX = {}
+				b_benavides_TX = {}
+				b_freer_TX = {}
+				b_seven_sisters_TX = {}
+				b_realitos_TX = {}
+				b_cruz_calle_TX = {}
+
+			}
+			c_kenedy_TX = {
+				color={ 240 60 60 }
+				color2={ 0 220 220 }
+
+				b_alice_TX = {} 
+				b_kingsville_TX = {}
+				b_sarita_TX = {}
+				b_orange_grove_TX = {}
+				b_premont_TX = {}
+				b_ricardo_TX = {}
+				b_riviera_TX = {}
+			#	b_armstrong_TX = {}	
+			}
+			c_live_oak = {
+				color = { 220 70 60 }
+				b_george_west_TX = {}
+				b_three_rivers_TX = {}
+				b_calliham_TX = {}
+				b_beeville_TX = {}
+				b_pawnee_TX = {}
+				b_ray_point_TX = {}
+				b_dinero_TX = {}
+			}
+			c_uvalde = {
+				color = { 240 100 80 }
+				b_uvalde_TX = {}
+				b_hondo_TX = {}
+				b_pearsall_TX = {}
+				b_castroville_TX = {}
+				b_dabney_TX = {}
+				b_knippa_TX = {}
+				b_frio_town_TX = {}
 			}
 			c_dimmit = { #2413
 				color = { 175 105 93 }
@@ -86,62 +180,7 @@ e_rio_bravo = {
 				b_catarina_TX = {}
 				b_big_wells_TX = {}	
 				b_carrizo_hill_TX = {}
-				
-		}
-		
-		d_corpus_christi = {
-			color = { 191 19 19 }
-			capital = 1224 # Nueces
-
-			c_nueces = {
-				color = { 255 30 0 }
-				holy_site = sacred_heart
-				
-				b_corpus_christi_TX = {}
-				b_port_aransas_TX = {
-					used_for_dynasty_names = no
-				}
-				b_rockport_TX = {}
-				b_aransas_pass_TX = {
-					used_for_dynasty_names = no
-				}
-				b_robstown_TX = {}
-				b_orange_grove_TX = {}
-				b_padre_island_TX = {}
-			}
-			c_duval = {
-				color = { 225 30 30 }
-				b_san_diego_TX = {}
-				b_fowlerton_TX = {}
-				b_benavides_TX = {}
-				b_freer_TX = {}
-				b_seven_sisters_TX = {}
-				b_realitos_TX = {}
-				b_cruz_calle_TX = {}
-				b_alice_TX = {} #county seat of jim hoggs should be more important?
-			}
-			c_kenedy_TX = {
-				color={ 240 60 60 }
-				color2={ 0 220 220 }
-
-				b_sarita_TX = {}
-				b_kingsville_TX = {}
-				b_ricardo_TX = {}
-				b_flowella_TX = {}
-				b_armstrong_TX = {}
-				b_bishop_TX = {} #nueces
-				b_driscoll_TX = {} #nueces
-			}
-			c_live_oak = {
-				color = { 220 70 60 }
-				b_george_west_TX = {}
-				b_three_rivers_TX = {}
-				b_calliham_TX = {}
-				b_beeville_TX = {}
-				b_pawnee_TX = {}
-				b_ray_point_TX = {}
-				b_dinero_TX = {}
-			}
+			}				
 		}
 		
 		d_rio_grande_valley = {
@@ -168,6 +207,7 @@ e_rio_bravo = {
 				b_linn_TX = {}
 				b_san_isidro_TX = {}
 				b_guerra_TX = {}
+			#	b_flowella_TX = {}				
 			}
 			c_webb = {
 				color = { 255 60 10 }
@@ -248,25 +288,52 @@ e_rio_bravo = {
 
 				b_alpine_TX = {}
 				b_terlingua_TX = {}
-				b_marfa_TX = {}
-				b_presidio_TX = {}
 				b_marathon_TX = {}
 				b_study_butte_TX = {
 					used_for_dynasty_names = no
 				}
 				b_lajitas_TX = {}
+				b_boquillas_TX = {}
+				b_rosenfeld_TX = {}
 			}
 			c_livermore = {
 				color = { 255 150 60 }
 				color2= { 255 255 255 }
 
 				b_fort_davis_TX = {}
-				b_van_horn_TX = {}
+				b_valentine_TX = {}
+				b_mcdonald_TX = {}
+				b_bloys_camp_TX = {}
 				b_ryan_TX = {}
 				b_lobo_TX = {}
-				b_valentine_TX = {}
-				b_kent_TX = {}
+				b_livermore_TX = {}
+			#	b_mccoy_TX = {}
 			}
+			c_presidio = {  #2418
+				color = { 255 170 102 }
+				color2 = { 255 255 255 }
+				
+				b_marfa_TX = {}
+				b_presidio_TX = {}
+				b_redford_TX = {}
+				b_candelaria_TX = {}
+				b_chinati_TX = {}
+				b_plata_TX = {}
+				b_ruidosa_TX = {}
+			}
+			c_culberson = { #2419
+				color = { 168 111 67 }
+				color2= { 255 255 255 }
+				
+				b_van_horn_TX = {}
+				b_kent_TX = {}
+				b_nickel_creek_TX = {}
+				b_pine_springs_TX = {}
+				b_state_line_TX = {}
+				b_wild_horse_TX = {}
+				b_boracho_TX = {}
+			}
+				
 			c_el_paso = {
 				color = { 255 118 25 }
 				color2= { 255 255 255 }
@@ -277,16 +344,29 @@ e_rio_bravo = {
 				holy_site = centaurista_reformed
 				holy_site = centaurista
 
-				b_el_paso_TX = {}
-				b_juarez_TX = {}
-				b_socorro_TX = {}
 				b_fort_bliss_TX = {}
-				b_chaparral_TX = {}
+				b_el_paso_TX = {}
+				b_sunland_park_TX = {}
+				b_socorro_TX = {}
+				b_horizon_city_TX = {}
+				b_san_elizario_TX = {}
 				b_canutillo_TX = {}
-				b_anthony_TX = {}
-				b_fabens_TX = {}
-				b_sierra_blanca_TX = {}
+			#	b_chaparral_TX = {} #new mexico
+			#	b_anthony_TX = {}
+			#	b_fabens_TX = {}
+				
 			}
+			c_hudspeth = { #2417
+				color = {221 111 67 }
+				color2= { 255 255 255 }
+				
+				b_fort_hancock_TX = {}
+				b_dell_city_TX = {}
+				b_sierra_blanca_TX = {}
+				b_allamoore_TX = {}
+				b_cornudas_TX = {}
+				b_desert_haven_TX = {}
+				b_acala_TX = {}
 		}
 	}
 
@@ -418,11 +498,13 @@ e_rio_bravo = {
 				
 				b_piedras_negras_COA = {}
 				b_carranza_COA = {}
+				b_guerrero_COA = {}
+				b_hidalgo_COA = {}					
 				b_el_moral_COA = {}
 				b_villa_real_COA = {}
 				b_el_progreso_COA = {}
-				b_san_antonio_COA = {}
-				b_rio_escondido_COA = {}
+			#	b_san_antonio_COA = {}
+			#	b_rio_escondido_COA = {}
 			}			
 			c_acuna = {
 				color={ 229 218 91 }
@@ -437,18 +519,18 @@ e_rio_bravo = {
 				b_el_infante_COA = {}
 				b_el_cedro_COA = {}
 			}
-			c_fronterabrava = { #2412
-				color = {175 164 128 }
-				color2 = { 255 255 255 }
-				
-				b_guerrero_COA = {}
-				b_hidalgo_COA = {}	
-				b_santa_monica_COA = {}
-				b_canoitas_COA = {}
-				b_el_amole_COA = {}
-				b_arianiaga_COA = {}
-				b_el_vergel_COA = {}
-			}
+		#	c_fronterabrava = { #2412
+		#		color = {175 164 128 }
+		#		color2 = { 255 255 255 }
+		#		
+		#		b_guerrero_COA = {}
+		#		b_hidalgo_COA = {}	
+		#		b_santa_monica_COA = {}
+		#		b_canoitas_COA = {}
+		#		b_el_amole_COA = {}
+		#		b_arianiaga_COA = {}
+		#		b_el_vergel_COA = {}
+		#	}
 		}
 
 		d_laguna = { 
@@ -615,7 +697,7 @@ e_rio_bravo = {
 				b_allende_NL = {} 
 				b_santiago_NL = {}
 				b_san_juan_NL = {}
-				b_santa_isabel_NL = {}
+				b_hacienda_santa_isabel_NL = {}
 				b_trancas_NL = {}
 				b_campestre_providencia_NL = {}
 			#	b_san_pedro_NL = {}
