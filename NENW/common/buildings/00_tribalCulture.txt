@@ -2,20 +2,21 @@
  # start trigger is in title scope.
 
 tribal = {
-
 	#Welsh and English Longbow archery range
 	tb_culture_saxon_english_1 = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = tb_culture_saxon_english_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -23,7 +24,8 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -40,7 +42,8 @@ tribal = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = tb_culture_saxon_english_1
 				has_building = tb_culture_saxon_english_2
 			}
@@ -48,7 +51,8 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -56,7 +60,8 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -75,7 +80,8 @@ tribal = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = tb_culture_saxon_english_1
 				has_building = tb_culture_saxon_english_2
 				has_building = tb_culture_saxon_english_3
@@ -84,7 +90,8 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -92,7 +99,8 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -109,7 +117,8 @@ tribal = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = {
-				OR = { culture = buckeye culture = ohiwyr }
+				culture = buckeye
+				culture = ohiwyr
 				has_building = tb_culture_saxon_english_1
 				has_building = tb_culture_saxon_english_2
 				has_building = tb_culture_saxon_english_3
@@ -119,7 +128,8 @@ tribal = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		} 
@@ -127,7 +137,8 @@ tribal = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					OR = { culture = buckeye culture = ohiwyr }
+					culture = buckeye
+					culture = ohiwyr
 				}
 			}
 		}
@@ -1024,9 +1035,8 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		pikemen = 7
-		pikemen_defensive = 0.075
+		pikemen_defensive = 0.15
 		heavy_infantry = 5
-		heavy_infantry_defensive = 0.075
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -1059,9 +1069,8 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		pikemen = 10
-		pikemen_defensive = 0.075
+		pikemen_defensive = 0.15
 		heavy_infantry = 7
-		heavy_infantry_defensive = 0.075
 		ai_creation_factor = 100
 		
 		convert_to_castle = ca_culture_scottish_1
@@ -1097,9 +1106,8 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		pikemen = 13
-		pikemen_defensive = 0.075
+		pikemen_defensive = 0.15
 		heavy_infantry = 10
-		heavy_infantry_defensive = 0.075
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
@@ -1134,9 +1142,8 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		pikemen = 15
-		pikemen_defensive = 0.075
+		pikemen_defensive = 0.15
 		heavy_infantry = 10
-		heavy_infantry_defensive = 0.075
 		ai_creation_factor = 98
 		
 		convert_to_castle = ca_culture_scottish_2
@@ -4217,7 +4224,6 @@ tribal = {
 					culture_group = east_african
 					culture = beta_israeli
 					culture_group = nilotic
-
 				}
 			}
 		}
@@ -4381,11 +4387,10 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		light_infantry = 5
-		light_infantry_offensive = 0.05
-		light_cavalry_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		gunmen_offensive = 0.05
 		
 		ai_creation_factor = 98
 		
@@ -4419,11 +4424,10 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		light_infantry = 5
-		light_infantry_offensive = 0.05
-		light_cavalry_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		gunmen_offensive = 0.05
 		
 		ai_creation_factor = 99
 		
@@ -4458,11 +4462,10 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		light_infantry = 10
-		light_infantry_offensive = 0.05
-		light_cavalry_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		gunmen_offensive = 0.05
 		
 		ai_creation_factor = 101
 		
@@ -4498,11 +4501,10 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		light_infantry = 10
-		light_infantry_offensive = 0.05
-		light_cavalry_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		gunmen_offensive = 0.05
 		
 		convert_to_castle = ca_culture_igbo_2
 		
@@ -4537,7 +4539,7 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		light_cavalry = 5
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		
 		ai_creation_factor = 98
@@ -4572,7 +4574,7 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		light_cavalry = 5
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		
 		ai_creation_factor = 99
@@ -4608,7 +4610,7 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		light_cavalry = 10
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		
 		ai_creation_factor = 100
@@ -4644,7 +4646,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		light_cavalry = 10
-		light_cavalry_offensive = 0.05
+		light_cavalry_offensive = 0.1
 		light_cavalry_defensive = 0.05
 		
 		convert_to_castle = ca_culture_hausa_2
@@ -4683,11 +4685,9 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		knights = 5
-		knights_offensive = 0.05
-		knights_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		knights_offensive = 0.05
+		gunmen_offensive = 0.1
 		
 		ai_creation_factor = 98
 		
@@ -4725,11 +4725,9 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		knights = 5
-		knights_offensive = 0.05
-		knights_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		knights_offensive = 0.05
+		gunmen_offensive = 0.1
 		
 		ai_creation_factor = 99
 		
@@ -4768,11 +4766,9 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		knights = 10
-		knights_offensive = 0.05
-		knights_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		knights_offensive = 0.05
+		gunmen_offensive = 0.1
 		
 		ai_creation_factor = 99
 		
@@ -4811,11 +4807,9 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		knights = 10
-		knights_offensive = 0.05
-		knights_defensive = 0.05
 		gunmen = 5
-		gunmen_offensive = 0.02
-		gunmen_defensive = 0.02
+		knights_offensive = 0.05
+		gunmen_offensive = 0.1
 		
 		convert_to_castle = ca_culture_nigerian_2
 		
@@ -11786,8 +11780,7 @@ tribal = {
 		prestige_cost = 100
 		build_time = 365
 		light_cavalry = 10
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11820,8 +11813,7 @@ tribal = {
 		prestige_cost = 200
 		build_time = 547
 		light_cavalry = 15
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		convert_to_castle = ca_culture_cossacks_1
@@ -11857,8 +11849,7 @@ tribal = {
 		prestige_cost = 300
 		build_time = 730
 		light_cavalry = 20
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
@@ -11893,8 +11884,7 @@ tribal = {
 		prestige_cost = 400
 		build_time = 1095
 		light_cavalry = 25
-		light_cavalry_offensive = 0.075
-		light_cavalry_morale = 0.075
+		light_cavalry_offensive = 0.15
 		ai_creation_factor = 101
 		
 		convert_to_castle = ca_culture_cossacks_2

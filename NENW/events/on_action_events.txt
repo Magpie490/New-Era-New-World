@@ -370,7 +370,6 @@ character_event = {
 				if = {
 					limit = { is_friend = event_target:target_adulterer }
 					remove_friend = event_target:target_adulterer
-		break_alliance = event_target:target_adulterer
 				}
 			}
 
@@ -418,7 +417,6 @@ character_event = {
 					if = {
 						limit = { is_friend = event_target:target_adulterer }
 						remove_friend = event_target:target_adulterer
-		break_alliance = event_target:target_adulterer
 					}
 				}
 			}
@@ -493,7 +491,6 @@ character_event = {
 				if = {
 					limit = { is_friend = event_target:target_adulterer }
 					remove_friend = event_target:target_adulterer
-		break_alliance = event_target:target_adulterer
 				}
 			}
 
@@ -1213,7 +1210,6 @@ character_event = {
 			}
 		}
 		top_liege = {
-			show_scope_change = no
 
 			character_event = {
 				id = 40021
@@ -1236,7 +1232,6 @@ character_event = {
 			}
 		}
 		top_liege = {
-			show_scope_change = no
 
 			character_event = {
 				id = 40026
@@ -1298,7 +1293,6 @@ character_event = {
 		}
 
 		FROMFROM = {
-			show_scope_change = no
 
 			opinion = {
 				name = i_attempted_murder
@@ -1324,7 +1318,6 @@ character_event = {
 		}
 
 		FROMFROM = {
-			show_scope_change = no
 			death = {
 				death_reason = death_execution
 				killer = ROOT
@@ -1350,7 +1343,6 @@ character_event = {
 		}
 
 		FROMFROM = {
-			show_scope_change = no
 
 			opinion = {
 				name = i_attempted_murder
@@ -1390,10 +1382,8 @@ character_event = {
 		}
 
 		event_target:evil_assassinator = {
-			show_scope_change = no
 
 			primary_title = {
-				show_scope_change = no
 
 				add_claim = FROM
 			}
@@ -1434,7 +1424,6 @@ character_event = {
 		}
 
 		event_target:evil_assassinator = {
-			show_scope_change = no
 			opinion = {
 				name = opinion_betrayed
 				who = FROM
@@ -1590,7 +1579,6 @@ character_event = {
 
 		prestige = -100
 		any_vassal = {
-			show_scope_change = no
 
 			opinion = {
 				name = black_honor
@@ -4064,15 +4052,19 @@ narrative_event = {
 		name = {
 			text = EVTOPTA621
 			trigger = {
-				FROM = { religion_group = PREV }
-				is_heretic = no
+				FROM = { 
+					religion_group = PREV
+					is_heretic = no
+				}
 			}
 		}
 		name = {
 			text = EVTOPTC621
 			trigger = {
-				FROM = { religion_group = PREV }
-				is_heretic = yes
+				FROM = { 
+					religion_group = PREV
+					is_heretic = yes
+				}
 			}
 		}
 		name = {
@@ -4373,7 +4365,6 @@ narrative_event = {
 				limit = {
 					OR = {
 						has_religion_feature = religion_holy_family
-						has_religion_feature = religion_feature_novelist_2
 					}
 					has_religion_feature = religion_temporal_head
 				}
@@ -4772,10 +4763,7 @@ narrative_event = {
 		}
 		if = {
 			limit = { 
-				OR = {
-					has_religion_feature = religion_astrology 
-					has_religion_feature = religion_feature_folklorist_2
-				} 
+				uses_zodiacs = yes
 			}
 
 			add_western_zodiac_trait_effect = yes
@@ -4906,14 +4894,6 @@ narrative_event = {
 			add_artifact = sampo
 		}
 
-		# Achievement Flags
-		if = {
-			limit = {
-				ai = no
-				is_ironman = yes
-			}
-			achievement_safe_way_to_atlantis_done_effect = yes
-		}
 
 		# Courtier Conversion
 		any_courtier = {
@@ -5265,7 +5245,6 @@ narrative_event = {
 		}
 
 		ROOT = {
-			show_scope_change = no
 
 			if = {
 				limit = { has_religion_feature = religion_no_leader }
@@ -5622,10 +5601,8 @@ character_event = {
 				}
 			}
 			liege = {
-				show_scope_change = no
 
 				liege = {
-					show_scope_change = no
 
 					set_defacto_vassal = ROOT
 				}
@@ -5635,7 +5612,6 @@ character_event = {
 			set_defacto_liege = THIS
 		}
 		any_demesne_title = {
-			show_scope_change = no
 
 			limit = {
 				OR = {
@@ -6060,50 +6036,9 @@ narrative_event = {
 			new_character = {
 				NOT = { has_landed_title = ROOT }
 			}
-
-			trigger_if = {
-				limit = { has_global_flag = 4th_crusade_official }
-
-				crusade_target_title = {
-					title = k_thrace
-				}
-				new_character = {
-					religion = FROM
-					has_landed_title = e_byzantium
-				}
-			}
-
-			AND = {
-				NAND = {
-					has_global_flag = 4th_crusade_official
-					crusade_target_title = {
-						title = k_thrace
-					}
-					new_character = {
-						has_landed_title = e_byzantium
-					}
-				}
-
-				new_character = {
-					religion_group = FROM
-				}
-			}
 		}
 	}
 
-	immediate = {
-		if = {
-			limit = {
-				has_global_flag = 4th_crusade_official
-
-				FROM = {
-					religion_group = christian
-				}
-			}
-
-			character_event = { id = HFP.41199 }
-		}
-	}
 
 	option = {
 		name = {
@@ -6330,45 +6265,6 @@ character_event = {
 	}
 }
 
-character_event = {
-	id = 687
-	hide_window = yes
-	is_triggered_only = yes # on_war_ended_victory
-
-	trigger = {
-		FROM = {
-			ai = no
-		}
-
-		has_character_flag = great_conqueror
-		is_ironman = yes
-		is_shattered_world = yes
-	}
-	immediate = {
-		FROM = {
-			set_character_flag = achievement_not_so_great
-		}
-	}
-}
-
-character_event = {
-	id = 688
-	hide_window = yes
-	is_triggered_only = yes # on_war_ended_defeat
-
-	ai = no
-
-	trigger = {
-		is_ironman = yes
-		is_shattered_world = yes
-		FROM = {
-			has_character_flag = great_conqueror
-		}
-	}
-	immediate = {
-		set_character_flag = achievement_not_so_great
-	}
-}
 
 
 # Scripted default elective token setup
