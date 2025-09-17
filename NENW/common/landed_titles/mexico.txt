@@ -2334,6 +2334,7 @@ e_mexico = {
 		capital = 3104 # c_huajuapan
 		
 		mixtec = "Ñuu Dzahui"
+		zapotec = "Layú Nisaguié"
 		
 		d_mixteca = {
 			color={ 111 63 127 }
@@ -2570,7 +2571,7 @@ e_mexico = {
 				b_santa_maria_lachixio_OA = {}
 				b_san_idelfonso_sola_OA = {}
 				b_san_vicente_lachixio_OA = {}
-				b_san_lorenzo_texmelucan_OA
+				b_san_lorenzo_texmelucan_OA = {}
 				b_santiago_minas_OA  = {}
 				
 			}	
@@ -3175,6 +3176,8 @@ e_mexico = {
 		
 		nahuatl = "Tlacateccatl"
 		mephaa = "Me'phaa Kubaa"
+		mixtec = "Chaa Kaana"
+		zapotec = "Guendaridinde"
 		
 		d_taxco = { #archbishopric for HME
 			color = { 110 95 85 }
@@ -3860,13 +3863,15 @@ e_mexico = {
 			}			
 		}	
 	}
-	k_oaxaca = {
+	k_zapoteca = {
 		color={ 145 62 153 }
 		color2={ 255 255 255 }
 		
 		capital = 3093 # c_oaxaca
 
-		zapotec = "Zapoteca"
+		zapotec = "Layú Za"
+		nahuatl = "Tzapotecah"
+		mixtec = "Ñu'un Viko"
 		
 		d_oaxaca = {
 			color={ 167 47 191 }
@@ -3874,33 +3879,62 @@ e_mexico = {
 			
 			capital = 3093 # c_oaxaca
 			
+			nahuatl = "Waxyakak"
+			zapotec = "Lula'a"
+			mixtec = "Ñundua"
+			mixe = "Wahk'wihm"
+			cuicatec = "Nnu'va"
+			mazatec = "Na'xi'tzhe'"
+			chinatec = "Nicuí"
+			chatino = "Londa'a"		
+			
 			c_oaxaca = { # 3093
 				color={ 133 38 153 }
 				color2={ 255 255 255 }
 				
-				b_oaxaca_OA = {}
+				nahuatl = "Waxyakak"
+				zapotec = "Lula'a"
+				mixtec = "Ñundua"
+				mixe = "Wahk'wihm"
+				cuicatec = "Nnu'va"
+				mazatec = "Na'xi'tzhe'"
+				chinatec = "Nicuí"
+				chatino = "Londa'a"						
+				
+				b_oaxaca_OA = {
+					nahuatl = "Waxyakak"
+					zapotec = "Lula'a"
+					mixtec = "Ñundua"
+					mixe = "Wahk'wihm"
+					cuicatec = "Nnu'va"
+					mazatec = "Na'xi'tzhe'"
+					chinatec = "Nicuí"
+					chatino = "Londa'a"				
+				
+				}
 				b_santa_lucia_del_camino_OA = {}
 				b_santa_maria_atzompa_OA = {}
 				b_santa_cruz_xoxocotlan_OA = {}
 				b_tlalixtac_de_cabrera_OA = {}
 				b_san_agustin_de_las_juntas_OA = {}
 				b_villa_de_zaachila_OA = {}
+			#	b_villa_de_etla_OA = {}
 			#	b_san_antonio_de_la_cal_OA = {}
 			#	b_san_andres_ixtlahuaca_OA = {}
 			#	b_monte_alban_OA = {}
 			#	b_fraccionamiento_el_rosario_OA = {}
 			}
-			c_etla = { #2973
-				color = { 147 105 188 }
-				color2={ 255 255 255 }
+		#	c_etla = { #2973
+		#		color = { 147 105 188 }
+		#		color2={ 255 255 255 }
 
-				b_villa_de_etla_OA = {}
-				b_san_lorenzo_cacaotepec_OA = {}
-				b_santiago_etla_OA = {}
-				b_santiago_suchilquitongo_OA = {}
-				b_san_agustin_etla_OA = {}
-				b_san_pablo_etla_OA = {}
-				b_nazareno_etla_OA = {}
+		#		b_villa_de_etla_OA = {}
+		#		b_san_lorenzo_cacaotepec_OA = {}
+		#		b_santiago_etla_OA = {}
+		#		b_santiago_suchilquitongo_OA = {}
+		#		b_san_agustin_etla_OA = {}
+		#		b_san_pablo_etla_OA = {}
+		#		b_nazareno_etla_OA = {}
 			}
 			c_zimatlan = { # 2972
 				color = { 101 36 114 }
@@ -3960,11 +3994,15 @@ e_mexico = {
 			
 			capital = 3099 # c_juchitan
 			
+			zapotec = "Guigu Roo Guisíi"
+			
 			c_tehuantepec = { # 3098
 				color={ 127 63 127 }
 				color2={ 255 255 255 }
 				
-				b_tehuantepec_OA = {}
+				b_tehuantepec_OA = {
+					zapotec = "Guigu Roo Guisíi"
+				}
 				b_salina_cruz_OA = {}
 				b_san_mateo_del_mar_OA = {}
 				b_santiago_astata_OA = {}
@@ -3987,31 +4025,6 @@ e_mexico = {
 				b_guevea_de_humboldt_OA = {}
 				b_santa_maria_guienagati_OA = {}
 			}	
-			c_chimalapas = { # 3100
-				color={ 102 51 102 }
-				color2={ 255 255 255 }
-				
-				b_santa_maria_chimalapa_OA = {}
-	
-				
-				b_la_esmerelda_OA = {}
-			}
-			c_petapa = { #2616
-
-				color = { 153 76 153 }
-				color2 = { 255 255 255 }
-				
-				b_santo_domingo_petapa_OA = {}
-				b_matias_romero_OA = {}
-				b_santa_maria_petapa_OA = {}
-				b_el_barrio_de_la_soledad_OA = {}
-				b_san_juan_guichicovi_OA = {}
-				b_santiago_ixtaltepec_OA = {}
-				b_lagunas_OA = {}
-				b_san_isidro_platanillo_OA = {}
-				
-			#	b_nuevo_santiago_tutla_OA = {}
-			}
 			c_juchitan = { # 3099
 				color={ 76 38 76 }
 				color2={ 255 255 255 }
@@ -4044,7 +4057,7 @@ e_mexico = {
 				color = { 127 63 127 }
 				color2 = { 255 255 255 }
 				
-				b_santo_domingo_zanatepec_OA = {}}
+				b_santo_domingo_zanatepec_OA = {}
 				b_chahuites_OA = {}
 				b_san_pedro_tapanatepec_OA = {}				
 				b_san_francisco_ixhuatan_OA = {}
@@ -4066,6 +4079,40 @@ e_mexico = {
 				b_bahia_san_agustin_OA = {}
 			}			
 		}
+		d_chimalapas = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 2616
+		
+			c_chimalapas = { # 3100
+				color={ 102 51 102 }
+				color2={ 255 255 255 }
+				
+				b_santa_maria_chimalapa_OA = {}
+				b_san_miguel_chimalapa_OA = {}
+				b_santa_ines_OA = {}
+				b_cofradia_OA = {}
+				b_escolapa_OA = {}
+				b_escuilapa_OA = {}
+				b_la_esmerelda_OA = {}
+			}
+			c_petapa = { #2616
+
+				color = { 153 76 153 }
+				color2 = { 255 255 255 }
+				
+				b_santo_domingo_petapa_OA = {}
+				b_matias_romero_OA = {}
+				b_santa_maria_petapa_OA = {}
+				b_el_barrio_de_la_soledad_OA = {}
+				b_san_juan_guichicovi_OA = {}
+				b_santiago_ixtaltepec_OA = {}
+				b_lagunas_OA = {}
+				b_san_isidro_platanillo_OA = {}
+				
+			#	b_nuevo_santiago_tutla_OA = {}
+			}
 		d_papaloapan_OAX = {
 			color = { 112 49 61 }
 			color2 = { 255 255 255 }
@@ -4131,4 +4178,33 @@ e_mexico = {
 			}			
 		}	
 	}
+	k_oaxaca = {  #should absorb k_mixteca and k_zapoteca; d_acatlan shouldn't be a requisite, since it's part of IRL puebla (mixteca poblana)
+		color =  { 0 0 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 3093 #c_oaxaca
+		
+		nahuatl = "Waxyakak"
+		zapotec = "Lula'a"
+		mixtec = "Ñundua"
+		mixe = "Wahk'wihm"
+		cuicatec = "Nnu'va"
+		mazatec = "Na'xi'tzhe'"
+		chinatec = "Nicuí"
+		chatino = "Londa'a"
+	}
+	k_tehuantepec = { #formable;
+		color =  { 0 0 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 3099  #c_juchitan
+		#capital = 3081 #c_coatzacoalcos
+		
+		#conditions = hold d_istmo d_chimalapas and d_olmeca
+		#dejure shift of those duchies
+		#allow the player to choose capital between juchitan and coatzacoalcos, if possible
+		#ai should choose coatzacoalcos if jarocho or mexicano/mayan culture group, juchitan if zapotec or otomanguean
+		#is it possible to tie this region to a melting pot called "tehuano"? similar to what HIP does with neapolitan 
+	}
+	
 }
