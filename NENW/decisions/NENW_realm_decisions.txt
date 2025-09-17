@@ -534,6 +534,84 @@ decisions = {
 			factor = 1
 		}
 	}
+	reform_oaxaca = {
+		is_high_prio = yes
+		only_playable = no
+		ai_check_interval = 24
+		potential = {
+			form_kingdom_potential = yes
+			OR = {		###Must be the holder of one of these titles
+				has_landed_title = k_zapoteca
+				has_landed_title = k_mixteca
+			}						
+			k_oaxaca = {
+				is_titular = yes
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			#Control a bunch of lands
+			completely_controls = k_zapoteca
+			custom_tooltip = {
+				text = control_traditional_mixteca_lands_tt
+				
+				completely_controls = d_mixteca
+				completely_controls = d_costa_oaxaquena
+				completely_controls = d_sierra_sur
+			}
+		}
+
+		effect = {
+			prestige = 500
+			hidden_tooltip = {
+			}
+			primary_title = {
+				k_oaxaca = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+					copy_title_history = PREV
+				}
+			}
+			
+			custom_tooltip = {
+				text = form_oaxaca_tt 
+				k_oaxaca = {
+					gain_title_effect = yes
+				}
+			}
+
+			hidden_tooltip = {
+				###Oaxaca dejure should be the empire of Mexico
+				k_oaxaca = { de_jure_liege = e_mexico }
+				
+				###All duchies of the former kingdoms of Mixteca and Zapoteca is merged with State of Oaxaca and Acatlan to Puebla
+				d_acatlan = { de_jure_liege = k_puebla }
+				d_mixteca = { de_jure_liege = k_oaxaca }
+				d_costa_oaxaquena = { de_jure_liege = k_oaxaca }
+				d_sierra_sur = { de_jure_liege = k_oaxaca }
+				d_oaxaca = { de_jure_liege = k_oaxaca }
+				d_istmo = { de_jure_liege = k_oaxaca }
+				d_chimalapas = { de_jure_liege = k_oaxaca }
+				d_papaloapan_OAX = { de_jure_liege = k_oaxaca }
+				
+				###Destroy the Two Former Kingdom Titles if you hold them
+				destroy_landed_title = k_zapoteca
+				destroy_landed_title = k_mixteca
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	form_rhode_island = {
 		is_high_prio = yes
 		only_playable = yes
