@@ -2,7 +2,7 @@ e_yucatan = {
 	color={ 78 53 153 }
 	color2={ 255 255 255 }
 	
-	capital = 3109 # c_chacchoben
+	capital = 3113 # c_chichen_itza
 	
 	yucatanense = "Yucatán"
 
@@ -119,12 +119,14 @@ e_yucatan = {
 			}
 		}
 	}
+	
 	k_the_pale = { #British Honduras/Belize
 		color={ 178 17 60 }
 		color2={ 255 255 255 }
 		
 		capital = 3130 #c_yalbac
 	}
+	
 	k_peten = {
 		color={ 20 204 142 }
 		color2={ 255 255 255 }
@@ -201,6 +203,7 @@ e_yucatan = {
 				b_zotz_PT = {}
 			}
 		}
+		
 		d_lacandon = {
 			color={ 32 216 170 }
 			color2={ 255 255 255 }
@@ -247,7 +250,6 @@ e_yucatan = {
 				b_el_hormiguero_PT = {}
 				b_macabilaro_PT = {}
 			}
-
 
 			c_montes_azules = { #2273
 				color = { 38 255 200 }
@@ -526,13 +528,13 @@ e_yucatan = {
  		color={ 191 53 19 }	
 		color2 = { 255 255 255 }
 		
-		capital = 3112 #c_cancun
+		capital = 3131 #c_chetumal
 		
 		d_quintana_roo = {
 			color={ 127 50 12 }
 			color2={ 255 255 255 }
 			
-			capital = 3109 # c_chacchoben
+			capital = 2254 #c_uaymil
 
 			c_chacchoben = { # 3109
 				color={ 82 159 152 }
@@ -600,7 +602,8 @@ e_yucatan = {
  			color={ 255 153 50 }
  			color2={ 255 255 255 }
 			
-			capital = 3112		
+			capital = 3112	#c_cancun
+			
 			c_kantunilkin = { #2250
 				color={ 83 167 162 }
 				color2={ 255 255 255 }	
@@ -693,7 +696,10 @@ e_yucatan = {
 				
 				b_nicolas_bravo_QR = {}
 				b_cacao_QR = {}
-				b_kohunlich_QR = {}
+				b_kohunlich_QR = {
+					jach = "X-laabch'e'en"
+					xeek = "X-laabch'e'en"				
+				}
 				b_pucte_QR = {}
 				b_javier_rojo_gomez_QR = {}
 				b_miguel_aleman_QR = {}
@@ -884,6 +890,8 @@ e_yucatan = {
  			color={ 0 153 153 }
 			color2={ 255 255 255 }
 			
+			capital = 3116 #c_merida
+			
 			c_celestun = { # 3114
 				color={ 0 178 178 }
 				color2={ 255 255 255 }
@@ -902,13 +910,16 @@ e_yucatan = {
 				color={ 0 127 127 }
 				color2={ 255 255 255 }
 				
-				jach = "Jo'"
 				xeek = "Jo'"
 				
 				holy_site = guadalupano
 				
-				b_merida_YU = {	}
-				b_progreso_YU = {}
+				b_merida_YU = {
+					xeek = "Jo'"
+				}
+				b_progreso_YU = {
+					xeek = "Yukalpeten"
+				}
 				b_kanasin_YU = {}
 				b_dzibilchaltun_YU = {}
 				b_caucel_YU = {	}
@@ -934,11 +945,13 @@ e_yucatan = {
 				color = { 0 102 102 }
 				color2 = {	255	255	255	}
 				
-				jach = "Itzmal"
-				xeek = "Itzmal"
+				jach = "Ts'aamal"
+				xeek = "Ts'aamal"
 				
 				b_izamal_YU = {
-					holy_site = catholic #izamal 			
+					holy_site = catholic #izamal 	
+					jach = "Ts'aamal"
+					xeek = "Ts'aamal"					
 				}
 				b_ucu_YU = {}
 				b_sotuta_YU = {}
@@ -987,16 +1000,19 @@ e_yucatan = {
 			capital = 3117 # c_campeche
 			
 			jach = "Kaampech"
-			xeek = "Kaampech"
+			xeek = "Ahk'iin Pech"
 			
 			c_campeche = { # 3117
 				color={ 65 30 102 }
 				color2={ 255 255 255 }
 				
-				jach = "Ahk'iin Pech"
+				jach = "Kaampech"
 				xeek = "Ahk'iin Pech"
 				
-				b_campeche_CM = {}
+				b_campeche_CM = {
+					jach = "Kaampech"
+					xeek = "Ahk'iin Pech"				
+				}
 				b_hecelchakan_YU = {} #part of campeche not from Yucatan
 				b_calkini_CM = {}
 				b_dzitbalche_CM = {}
@@ -1014,10 +1030,13 @@ e_yucatan = {
 				color = { 97 45 153 }
 				color2 = { 255 255 255 }
 				
-				jach = "Chakán Putum"
+				jach = "Chan Putum"
 				xeek = "Chakán Putum"
 				
-				b_champoton_CM = {}
+				b_champoton_CM = {
+					jach = "Chan Putum"
+					xeek = "Chakán Putum"				
+				}
 				b_ciudad_del_sol_CM = {short_name = yes used_for_dynasty_names = no}
 				b_carrillo_puerto_CM = {}
 				b_xbacab_CM = {}
@@ -1235,12 +1254,17 @@ e_yucatan = {
 
 			capital = 3113 #c_chichen_itza
 		}
-		d_tho = {#Titular Maya City-States (Petty Kingdoms)
+		d_tho = {	#Titular Maya City-States (Petty Kingdoms)
  			color={ 0 128 135 }
  			color2={ 255 255 255 }
 			
 			capital = 3116 #c_merida
 		}
+		d_chacchoben = { 	#Titular Maya City-States (Petty Kingdoms)
+			color = { 106 150 128 }
+			color2 = { 255 255 255 }
+			
+			capital =  3109 # c_chacchoben
 		
 	}	
 	k_tabasco = {
