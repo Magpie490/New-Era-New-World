@@ -8434,27 +8434,6 @@ muslim_invasion = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			OR = {
 				ai = yes
@@ -8542,7 +8521,6 @@ muslim_invasion = {
 
 	on_success = {
 		ROOT = {
-			show_scope_change = no
 			prestige = 200
 			hidden_tooltip = {
 				if = {
@@ -8584,7 +8562,6 @@ muslim_invasion = {
 			}
 		}
 		FROM = {
-			show_scope_change = no
 			prestige = -200
 		}
 	}
@@ -8623,11 +8600,9 @@ muslim_invasion = {
 
 	on_fail = {
 		FROM = {
-			show_scope_change = no
 			prestige = 100
 		}
 		FROM = {
-			show_scope_change = no
 			if = {
 				limit = {
 					has_dlc = "Legacy of Rome"
@@ -8669,21 +8644,18 @@ muslim_invasion = {
 			hidden_tooltip = { participation_scaled_prestige = 100 }
 		}
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 		}
 	}
 	
 	on_invalidation = {
 		ROOT = {
-			show_scope_change = no
 			piety = 1000
 		}
 	}
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 			transfer_scaled_wealth = {
 				to = FROM
@@ -8701,7 +8673,6 @@ muslim_invasion = {
 			}
 		}
 		FROM = {
-			show_scope_change = no
 			prestige = 200
 			hidden_tooltip = {
 				if = {
@@ -8925,13 +8896,6 @@ cb_faction_independence = {
 			participation_scaled_prestige = 100
 			hidden_tooltip = {
 				disband_event_forces = faction_revolters
-				if = {
-					limit = {
-						religion_group = jewish_group
-						FROM = { has_landed_title = k_israel }
-					}
-					achievement_splitters_done_effect = yes
-				}
 			}
 		}
 		any_attacker = {
@@ -8977,9 +8941,6 @@ cb_faction_independence = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -9055,15 +9016,6 @@ cb_faction_independence = {
 					}
 				}
 			}
-			hidden_tooltip = {
-				if = {
-					limit = {
-						ai = no
-						ROOT = { culture = british }
-					}
-					achievement_no_deal_done_effect = yes
-				}
-			}
 		}
 	}
 
@@ -9113,27 +9065,6 @@ imperial_reconquest = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			has_landed_title = e_roman_empire
 			independent = yes
@@ -9268,9 +9199,6 @@ imperial_reconquest = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -9351,27 +9279,6 @@ embargo_cb = {
 			independent = yes
 			NOT = { has_embargo = FROM }
 			mercenary = no
-		}
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
 		}
 		FROM = {
 			OR = {
@@ -9606,27 +9513,6 @@ seize_trade_post = {
 				}
 			}
 			mercenary = no
-		}
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
 		}
 		FROM = {
 			NOT = { is_liege_or_above = ROOT }
@@ -9972,7 +9858,6 @@ viking_invasion = {
 					primary_title = { title = k_doggerland }
 					primary_title = { title = k_iceland }
 					primary_title = { title = k_norf_gov }
-					primary_title = { title = k_wales_gov }
 					primary_title = { title = e_britannia }
 					primary_title = { title = k_britannia }
 					primary_title = { title = k_cornwall }
@@ -10298,9 +10183,6 @@ peasant_revolt = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -10446,9 +10328,6 @@ heretic_revolt = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -10604,9 +10483,6 @@ religious_revolt = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -10766,9 +10642,6 @@ liberation_revolt = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -10809,15 +10682,6 @@ liberation_revolt = {
 				add_character_modifier = { 
 					name = crushed_major_revolt
 					days = 3650
-				}
-			}
-			hidden_tooltip = {
-				if = {
-					limit = {
-						ai = no
-						ROOT = { culture = british }
-					}
-					achievement_no_deal_done_effect = yes
 				}
 			}
 		}
@@ -10862,27 +10726,6 @@ duchy_adventure = {
 
 	can_use = {
 		ROOT = { has_character_flag = duchy_adventurer }
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 	}
 
 	is_valid = {
@@ -10971,9 +10814,6 @@ duchy_adventure = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -11065,27 +10905,6 @@ kingdom_adventure = { # Used mainly for Muslims adventuring into India
 				has_character_flag = rum_creator
 			}
 		}
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 	}
 
 	is_valid = {
@@ -11147,239 +10966,197 @@ kingdom_adventure = { # Used mainly for Muslims adventuring into India
 	on_success_title = {
 		custom_tooltip = {
 			text = other_invasion_succ_tip
-			hidden_tooltip = {
-			
+
+			attacker = {
 				if = { # Special stuff for player Child of Destiny (AI Children do not have this flag)
-					limit = {
-						ROOT = { has_character_flag = child_of_destiny_outwards_focus }
-					}
-					FROM = { # Ensure that the Child of Destiny always gets one County in the targeted Kingdom (mainly useful when testing with yesmen, but can also happen in rare occurences where the target is imprisoned)
+					limit = { has_character_flag = child_of_destiny_outwards_focus }
+
+					defender = { # Ensure that the Child of Destiny always gets one County in the targeted Kingdom (mainly useful when testing with yesmen, but can also happen in rare occurences where the target is imprisoned)
 						random_realm_title = {
 							limit = {
-								tier = COUNT
+								real_tier = COUNT
 								de_jure_liege_or_above = PREVPREV
 							}
-							usurp_title = { target = ROOT type = host }
+
+							usurp_title = {
+								target = attacker
+								type = host
+							}
 						}
 					}
-					ROOT = {
-						liege = { save_event_target_as = old_liege_target}
-						if = { # Abandon all old titles if you were a vassal
+
+					liege = { save_event_target_as = old_liege_target }
+
+					if = { # Abandon all old titles if you were a vassal
+						limit = { independent = no }
+
+						any_demesne_title = {
 							limit = {
-								independent = no
+								NOR = {
+									title = PREVPREV
+									de_jure_liege_or_above = PREVPREV
+								}
 							}
-							any_demesne_title = {
-								limit = {
+
+							grant_title = event_target:old_liege_target
+						}
+
+						any_vassal = {
+							limit = {
+								capital_scope = {
 									NOR = {
-										title = PREVPREV
-										de_jure_liege_or_above = PREVPREV
+										province = PREVPREVPREV
+										de_jure_liege_or_above = PREVPREVPREV
 									}
 								}
-								grant_title = event_target:old_liege_target
 							}
-							any_vassal = {
-								limit = {
-									capital_scope = {
-										NOR = {
-											title = PREVPREVPREV
-											de_jure_liege_or_above = PREVPREVPREV
-										}
-									}
-								}
-								set_defacto_liege = event_target:old_liege_target
-							}
+
+							set_defacto_liege = event_target:old_liege_target
 						}
 					}
 				}
-				
-				FROM = { # The adventurer takes ANY demesne title, including the targeted Kingdom, within the area of the targeted kingdom
-					any_demesne_title = {
-						limit = {
-							OR = {
-								title = PREVPREV
-								de_jure_liege_or_above = PREVPREV
-							}
-							NOT = { ROOT = { has_character_flag = rum_creator } }
-						}
-						usurp_title = { target = ROOT type = host }
-					}
-				}
-				
-				if = { # Claim the targeted Kingdom if it isn't held by anyone
+			}
+
+			defender = { # The adventurer takes ANY demesne title, including the targeted Kingdom, within the area of the targeted kingdom
+				any_demesne_title = {
 					limit = {
-						has_holder = no
-					}
-					usurp_title = { target = ROOT type = host }
-				}
-				
-				if = { # Create a Kingdom if the adventurer does not have one by this point
-					limit = {
-						ROOT = {
-							NOR = {
-								any_demesne_title = {
-									tier = KING
-								}
-								has_character_flag = rum_creator
-							}
+						OR = {
+							title = PREVPREV
+							de_jure_liege_or_above = PREVPREV
+						}
+
+						attacker = {
+							NOT = { has_character_flag = rum_creator }
 						}
 					}
-					if = {
-						limit = {
-							ROOT = {
-								NOT = {
-									has_character_flag = is_child_of_destiny
-								}
-							}
-						}
-						ROOT = {
-							create_title = {
-								tier = KING
-								landless = no
-								temporary = no
-								custom_created = yes
-								culture = ROOT
-								holder = ROOT
-								name = "INDIAN_MUSLIM_KINGDOM"
-								base_title = PREV
-								copy_title_laws = yes
-							}
-						}
-					}
-					else = {
-						ROOT = {
-							save_event_target_as = target_name
-							create_title = {
-								tier = KING
-								landless = no
-								temporary = no
-								custom_created = yes
-								culture = ROOT
-								holder = ROOT
-								name = "DESTINY_KINGDOM"
-								base_title = PREV
-								copy_title_laws = yes
-							}
-							capital_scope = {
-								county = {
-									save_event_target_as = coa_target
-								}
-							}
-							primary_title = {
-								set_coa = event_target:coa_target
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						ROOT = { has_character_flag = rum_creator }
-					}
-					k_rum = {
-						grant_title = ROOT
-					}
-				}
-				
-				ROOT = { # Preserve Vassals under the targeted kingdom
-					vassalize_or_take_under_title = { # Take all vassals held by the target under the title
-						title = PREV
-						enemy = FROM
+
+					usurp_title = {
+						target = attacker
 						type = host
 					}
-					set_defacto_liege = ROOT # Always go Independent
 				}
-				
-				hidden_effect = {
+			}
+
+			if = { # Claim the targeted Kingdom if it isn't held by anyone
+				limit = { has_holder = no }
+
+				usurp_title = {
+					target = attacker
+					type = host
+				}
+			}
+
+			attacker = {
+				if = { # Create a Kingdom if the adventurer does not have one by this point
+					limit = { lower_real_tier_than = KING }
+
 					if = {
-						limit = {
-							ROOT = {
-								has_character_flag = is_child_of_destiny
-								NOT = {
-									religion_group = muslim
-								}
+						limit = { has_character_flag = is_child_of_destiny }
+
+						save_event_target_as = target_name
+
+						create_title = {
+							tier = KING
+							custom_created = yes
+							culture = attacker
+							holder = attacker
+							name = DESTINY_KINGDOM
+							base_title = PREV
+							copy_title_laws = yes
+						}
+
+						capital_scope = {
+							county = {
+								save_event_target_as = coa_target
 							}
 						}
-						ROOT = {
+
+						primary_title = {
+							set_coa = event_target:coa_target
+						}
+
+						if = {
+							limit = {
+								NOT = { religion_group = muslim }
+							}
+
 							any_demesne_title = {
-								limit = {
-									higher_tier_than = COUNT
-								}
+								limit = { higher_real_tier_than = COUNT }
 								add_law = succ_primogeniture
 							}
 						}
-					}
-				}
-			}
-		}
-		
-		ROOT = {
-			hidden_tooltip = {
-				if = {
-					limit = {
-						has_character_flag = rum_creator
-					}
-					capital_scope = {
-						culture = ROOT
-					}
-				}
-				else_if = {
-					limit = {
-						has_character_flag = is_child_of_destiny
-					}
-					character_event = { id = HF.303 days = 3 }
-				}
-				else = {
-					capital_scope = {
-						reverse_culture = ROOT
-					}
-					any_child = {
-						limit = {
-							is_ruler = no
-							ai = yes
-							#liege = { character = ROOT }
+
+						character_event = {
+							id = HF.303 # Child of Destiny can choose to adopt culture/religion of newly conquered land.
+							days = 3
 						}
-						culture = ROOT
-					}
-					any_courtier = {
-						limit = {
-							is_ruler = no
-							ai = yes
-						}
-						culture = ROOT
-					}
-				}
-				
-				if = { # Give bloodline to Child of Destiny
-					limit = {
-						has_character_flag = is_child_of_destiny
-						higher_real_tier_than = DUKE
-						NOT = {
-							any_owned_bloodline = {
-								has_bloodline_flag = created_bloodline
+
+						if = { # Give bloodline to Child of Destiny
+							limit = {
+								higher_real_tier_than = DUKE
+
+								NOT = {
+									any_owned_bloodline = {
+										has_bloodline_flag = created_bloodline
+										bloodline_is_active_for = PREV
+									}
+								}
+							}
+
+							character_event = {
+								id = HF.304 # Bloodline event
+								days = 14
 							}
 						}
 					}
-					character_event = { id = HF.304 days = 14 }
+
+					else = {
+						create_title = {
+							tier = KING
+							custom_created = yes
+							culture = ROOT
+							holder = ROOT
+							name = INDIAN_MUSLIM_KINGDOM
+							base_title = PREV
+							copy_title_laws = yes
+						}
+
+						culture = ROOT
+
+						any_child = {
+							limit = {
+								is_ruler = no
+								ai = yes
+							}
+
+							culture = ROOT
+						}
+
+						any_courtier = {
+							limit = {
+								is_ruler = no
+								ai = yes
+							}
+
+							culture = THIS
+						}
+					}
 				}
-				
-				# Special case: Sultanate of Rum might start yet another war
-				# if = {
-					# limit = {
-						# has_character_flag = rum_creator
-					# }
-					# character_event = {
-						# id = 60610
-						# days = 600
-						# random = 300
-					# }
-				# }
+
+				# Preserve Vassals under the targeted kingdom
+				vassalize_or_take_under_title = { # Take all vassals held by the target under the title
+					title = PREV
+					enemy = defender
+					type = host
+				}
+
+				set_defacto_liege = THIS # Always go Independent
 			}
 		}
 
-		hidden_tooltip = {
+		hidden_effect = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
+
 		}
 	}
 	
@@ -11514,7 +11291,6 @@ pagan_holy_war = {
 	
 	on_add = {
 		ROOT = {
-			show_scope_change = no
 			holy_war_start_effect = yes
 			piety = -100
 		}
@@ -11621,7 +11397,6 @@ pagan_holy_war = {
 		}
 		
 		ROOT = {
-			show_scope_change = no
 			participation_scaled_piety = 100
 			participation_scaled_prestige = 50
 			religion_authority = {
@@ -11661,8 +11436,8 @@ pagan_holy_war = {
 				years = 20
 			}		
 		}
-		FROM = { show_scope_change = no piety = -100 }
-		FROM = { show_scope_change = no prestige = -50 }
+		FROM = {  piety = -100 }
+		FROM = {  prestige = -50 }
 	}
 
 	on_success_title = {
@@ -12270,27 +12045,6 @@ pagan_county_conquest = {
 				has_character_modifier = county_conquest_timer
 			}
 		}
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		OR = {
 			ROOT = {
 				is_nomadic = yes
@@ -12457,12 +12211,10 @@ pagan_county_conquest = {
 					}
 				}
 			}
-			show_scope_change = no
 			usurp_title = ROOT
 		}
 		
 		ROOT = {
-			show_scope_change = no
 			participation_scaled_prestige = 100
 			participation_scaled_piety = 50
 			add_character_modifier = {
@@ -12484,7 +12236,6 @@ pagan_county_conquest = {
 				NOT = { FROM = { religion = ROOT } }
 			}
 			ROOT = {
-				show_scope_change = no
 				religion_authority = {
 					modifier = won_county_conquest
 				}
@@ -12501,7 +12252,6 @@ pagan_county_conquest = {
 				is_quest_target_of = event_target:attacker_target
 			}
 			event_target:attacker_target = {
-				show_scope_change = no
 				tooltip = { clr_quest = quest_warrior_lodge_war }
 				set_character_flag = won_war@event_target:defender_target
 				#character_event = { id = HF.10514 days = 3 } #Sent from on_action instead
@@ -12511,7 +12261,6 @@ pagan_county_conquest = {
 
 	on_fail_title = { #white peace
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 		
@@ -12520,7 +12269,6 @@ pagan_county_conquest = {
 				NOT = { FROM = { religion = ROOT } }
 			}
 			ROOT = {
-				show_scope_change = no
 				religion_authority = {
 					modifier = lost_county_conquest
 				}
@@ -12528,7 +12276,6 @@ pagan_county_conquest = {
 		}
 	
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 50
 		}
 		any_defender = {
@@ -12546,7 +12293,6 @@ pagan_county_conquest = {
 				is_quest_target_of = event_target:attacker_target
 			}
 			event_target:attacker_target = {
-				show_scope_change = no
 				tooltip = { clr_quest = quest_warrior_lodge_war }
 				set_character_flag = white_peace@event_target:defender_target
 				#character_event = { id = HF.10514 days = 3 } #Sent from on_action instead
@@ -12556,7 +12302,6 @@ pagan_county_conquest = {
 
 	on_reverse_demand = { #losing the war
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 			transfer_scaled_wealth = {
 				to = FROM
@@ -12569,7 +12314,6 @@ pagan_county_conquest = {
 				NOT = { FROM = { religion = ROOT } }
 			}
 			ROOT = {
-				show_scope_change = no
 				religion_authority = {
 					modifier = lost_county_conquest
 				}
@@ -12577,7 +12321,6 @@ pagan_county_conquest = {
 		}
 		
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 100
 			participation_scaled_piety = 50
 		}
@@ -12600,7 +12343,6 @@ pagan_county_conquest = {
 				is_quest_target_of = event_target:attacker_target
 			}
 			event_target:attacker_target = {
-				show_scope_change = no
 				tooltip = { clr_quest = quest_warrior_lodge_war }
 				set_character_flag = lost_war@event_target:defender_target
 				#character_event = { id = HF.10514 days = 3 } #Sent from on_action instead
@@ -13047,28 +12789,6 @@ dejure_county_claim = {
 	}
 	
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
-		
 		ROOT = {
 			NOT = { government = holymexico_government }
 		}
@@ -13085,7 +12805,6 @@ dejure_county_claim = {
 				is_liege_or_above = FROM
 			}
 		}
-		
 		OR = {
 			kingdom = {
 				holder = ROOT
@@ -13189,9 +12908,6 @@ dejure_county_claim = {
 
 		hidden_tooltip = {
 			check_war_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -13530,27 +13246,6 @@ other_dejure_county_claim = {
 		NOT = {
 			character = ROOT
 		}
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		
 		
 		FROM = {
@@ -13608,7 +13303,6 @@ other_dejure_county_claim = {
 				modifier = pressed_my_claim 
 				who = PREV
 			}
-			show_scope_change = no
 			participation_scaled_prestige = 100
 		}
 		any_attacker = {
@@ -13629,7 +13323,6 @@ other_dejure_county_claim = {
 			}
 
 			holder_scope = {
-				show_scope_change = no
 				set_defacto_liege = ROOT
 			}
 		}
@@ -13643,10 +13336,8 @@ other_dejure_county_claim = {
 					}
 				}
 			}
-			show_scope_change = no
 			usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
 			any_de_jure_vassal_title = { # take all baronies under the one we're fighting for
-				show_scope_change = no
 				limit = {
 					has_holder = yes
 					NOT = {
@@ -13666,20 +13357,15 @@ other_dejure_county_claim = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
 	on_fail = {
 		prestige = -50
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 50
 		}
 		any_defender = {
@@ -13695,11 +13381,9 @@ other_dejure_county_claim = {
 			value = 4.0
 		}
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 		}
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 100
 		}
 		any_defender = {
@@ -13745,27 +13429,6 @@ depose_antipope = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			religion = FROM
 			OR = {
@@ -13969,27 +13632,6 @@ cb_install_antiking = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			vassal_of = FROM
 			religion = FROM
@@ -14107,20 +13749,13 @@ cb_install_antiking = {
 		ROOT = { 
 			piety = -250
 			prestige = -125
-			cancel_plot = plot_gain_title
+			#cancel_plot = plot_gain_title
 		}
 		FROM = { 
 			piety = 100
 			prestige = 50
 		}
 	}
-	
-	on_invalidation = {
-		ROOT = {
-			cancel_plot = plot_gain_title
-		}
-	}
-	
 
 	on_reverse_demand = {
 		ROOT = {
@@ -14131,7 +13766,7 @@ cb_install_antiking = {
 			piety = -500
 			prestige = -250
 			prisoner = FROM
-			cancel_plot = plot_gain_title
+			#cancel_plot = plot_gain_title
 		}
 		
 		FROM = { 
@@ -14180,7 +13815,6 @@ buddhist_holy_war = {
 	sort_priority = 800
 	can_use_gui = {
 		ROOT = {
-			show_scope_change = no
 			holy_war_start_trigger = yes
 			OR = {
 				NOT = { religion_group = FROM }
@@ -14197,27 +13831,6 @@ buddhist_holy_war = {
 		}
 	}
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			NOT = { government = viceroyal_government }
 			OR = {
@@ -14304,15 +13917,6 @@ buddhist_holy_war = {
 				}
 			}
 		}
-		OR = {#Jews can only holy war in the Israel region
-			region = world_japan
-			de_jure_liege_or_above = e_japan
-			NOT = { 
-				ROOT = {
-					religion = shinto
-				}
-			}
-		}
 	}
 
 	is_valid = {
@@ -14367,7 +13971,6 @@ buddhist_holy_war = {
 
 	on_add = {
 		ROOT = {
-			show_scope_change = no
 			holy_war_start_effect = yes
 		}
 		general_on_add_effect = yes
@@ -14586,27 +14189,6 @@ indian_subjugation = {
 	}
 	
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			has_dharmic_religion_trigger = yes
 			NOT = { same_realm = FROM }
@@ -14938,27 +14520,6 @@ manifest_destiny_invasion = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			OR = {
 				ai = yes
@@ -15105,9 +14666,6 @@ manifest_destiny_invasion = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -15220,27 +14778,6 @@ cb_decadence_usurption = {
 	allowed_to_target_tributaries = no
 	
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = { 
 			religion_group = muslim
 		}
@@ -15403,17 +14940,6 @@ rivalry_cb = {
 		
 		ROOT = {
 			participation_scaled_prestige = 250
-			if = {
-				limit = {
-					ai = no
-					FROM = {
-						any_sibling = {
-							character = ROOT
-						}
-					}
-				}
-				achievement_lets_go_out_into_the_field_done_effect = yes
-			}
 			remove_opinion = {
 				who = FROM
 				modifier = opinion_humiliated_rival
@@ -15480,17 +15006,6 @@ rivalry_cb = {
 				who = ROOT
 				modifier = opinion_humiliated_rival
 			}
-			if = {
-				limit = {
-					ai = no
-					ROOT = {
-						any_sibling = {
-							character = PREVPREV
-						}
-					}
-				}
-				achievement_lets_go_out_into_the_field_done_effect = yes
-			}
 		}
 	}
 
@@ -15543,27 +15058,6 @@ tributary_cb = {
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		has_dlc = "Horse Lords"
 
 		ROOT = {
@@ -15665,7 +15159,6 @@ tributary_cb = {
 		# Chance to surrender early
 		ROOT = { save_event_target_as = tribute_war_suzerain }
 		FROM = {
-			show_scope_change = no
 			save_event_target_as = tribute_war_target
 			set_character_flag = surrender_tributary_cb
 			character_event = { id = JD.2500 days = 5 tooltip = surrender_tributary_tt }
@@ -15675,7 +15168,6 @@ tributary_cb = {
 
 	on_success = {
 		FROM = {
-			show_scope_change = no
 			save_event_target_as = target_loser
 			prestige = -100
 			custom_tooltip = {
@@ -15691,7 +15183,6 @@ tributary_cb = {
 		}
 
 		ROOT = {
-			show_scope_change = no
 			prestige = 200
 			make_tributary = { who = FROM percentage = 0.4 }
 		}
@@ -15751,18 +15242,15 @@ tributary_cb = {
 
 	on_fail = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 		FROM = {
-			show_scope_change = no
 			prestige = 100
 		}
 	}
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 			transfer_scaled_wealth = {
 				to = FROM
@@ -15771,7 +15259,6 @@ tributary_cb = {
 		}
 
 		FROM = {
-			show_scope_change = no
 			prestige = 200
 		}
 	}
@@ -15948,439 +15435,7 @@ tributary_cb = {
 				}
 			}
 		}
-		modifier = {
-			factor = 2
-			ROOT = {
-				any_owned_bloodline = {
-					has_bloodline_flag = cheaper_tributaries
-				}
-			}
-		}
 
-		modifier = {
-			factor = 4
-			ROOT = {
-				trait = greedy
-			}
-		}
-	}
-}
-
-march_cb = {
-	name = CB_NAME_MARCH
-	war_name = WAR_NAME_MARCH
-	sprite = 37
-	truce_days = 365
-	is_permanent = yes
-	hostile_against_others = yes
-	can_ask_to_join_war = no
-	display_on_map = no
-	allowed_to_target_tributaries = no
-	
-	defender_unoccupied_warscore = yes
-	
-	sort_priority = 810
-	
-	can_use_gui = {
-		check_if_crusader_trigger = yes
-	}
-
-	can_use = {
-		
-		ROOT = {
-			OR = {
-				AND = {
-					government = mandala_government
-					OR = {
-						real_tier = KING
-						real_tier = EMPEROR
-					}
-				}
-			}
-			prestige = 500
-			mercenary = no
-			NOT = { is_vassal_or_below = FROM }
-			NOT = { is_liege_or_above = FROM }
-			NOT = {
-				rightful_religious_head_scope = {
-					character = FROM
-				}
-			}
-			NOT = { religion = custodite }
-			NAND = {
-				holy_order = yes
-				religion = FROM
-			}
-			independent = yes
-		}
-		FROM = {
-			higher_tier_than = BARON
-			NOT = {
-				is_real_offmap_governor = yes
-			}
-			NAND = {
-				holy_order = yes
-				religion = ROOT
-			}
-			independent = yes
-		}
-		
-		# The attacker needs a border, or be at most two sea zones away from one of the target's counties
-		FROM = {
-			any_realm_province = {
-				any_neighbor_province = {
-					OR = {
-						AND = {
-							has_owner = yes
-							owner = {
-								OR = {
-									character = ROOT
-									is_liege_or_above = ROOT
-								}
-							}
-						}
-						AND = {
-							is_land = no
-							any_neighbor_province = {
-								OR = {
-									AND = {
-										has_owner = yes
-										owner = {
-											OR = {
-												character = ROOT
-												is_liege_or_above = ROOT
-											}
-										}
-									}
-									AND = {
-										is_land = no
-										any_neighbor_province = {
-											owner = {
-												OR = {
-													character = ROOT
-													is_liege_or_above = ROOT
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		# The defender is not in any tributary war
-		FROM = {
-			is_in_tributary_war_trigger = no
-		}
-	}
-
-	is_valid = {
-		NOT = {
-			ROOT = {
-				rightful_religious_head_scope = {
-					character = FROM 
-				}
-			}
-		}
-	}
-
-	on_add = {
-		# Chance to surrender early
-		prestige = -500
-		ROOT = { save_event_target_as = tribute_war_suzerain }
-		FROM = {
-			show_scope_change = no
-			save_event_target_as = tribute_war_target
-			set_character_flag = surrender_march_cb
-			character_event = { id = JD.2500 days = 5 tooltip = surrender_tributary_tt }
-		}
-		general_on_add_effect = yes
-	}
-
-	on_success = {
-		FROM = {
-			show_scope_change = no
-			save_event_target_as = target_loser
-			prestige = -100
-			custom_tooltip = {
-				text = "REMOVE_PREVIOUS_SUZERAIN"
-				hidden_tooltip = {
-					any_suzerain = {
-						event_target:target_loser = {
-							remove_tributary = PREV
-						}
-					}
-				}
-			}
-		}
-
-		ROOT = {
-			show_scope_change = no
-			make_tributary = { 
-				who = FROM 
-				tributary_type = march 
-			}
-		}
-		
-		if  = {
-			limit = {
-				ROOT = {
-					uses_decadence = yes
-				}
-			}
-			ROOT = {
-				decadence = -10
-			}
-		}
-		if  = {
-			limit = {
-				ROOT = {
-					is_nomadic = yes
-				}
-			}
-			ROOT = {
-				clan_title = {
-					ROOT = {
-						any_vassal = {
-							limit = { is_nomadic = yes }
-							clan_title = {
-								clan_opinion = {
-									who = PREVPREVPREV
-									modifier = won_tributary_war
-									years = 5
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		if  = {
-			limit = {
-				ROOT = {
-					is_tribal = yes
-				}
-			}
-			ROOT = {
-				any_vassal = {
-					limit = { is_tribal = yes }
-					opinion = {
-						who = PREV
-						modifier = won_tributary_war
-						years = 5
-					}
-				}
-			}
-		}
-	}
-
-	on_fail = {
-		ROOT = {
-			show_scope_change = no
-			prestige = -100
-		}
-		FROM = {
-			show_scope_change = no
-			prestige = 100
-		}
-	}
-
-	on_reverse_demand = {
-		ROOT = {
-			show_scope_change = no
-			prestige = -200
-			transfer_scaled_wealth = {
-				to = FROM
-				value = 4.0
-			}
-		}
-
-		FROM = {
-			show_scope_change = no
-			prestige = 200
-		}
-	}
-	
-	on_attacker_leader_death = {
-		end_war = invalid
-	}
-
-	attacker_ai_victory_worth = {
-		factor = -1 # always accept
-	}
-	
-	attacker_ai_defeat_worth = {
-		factor = 100
-	}
-
-	defender_ai_victory_worth = {
-		factor = -1 # always accept
-	}
-	
-	defender_ai_defeat_worth = {
-		factor = 100
-		
-		modifier = {
-			factor = 2
-			FROM = {
-				trait = proud
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			FROM = {
-				trait = brave
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			FROM = {
-				trait = greedy
-			}
-		}
-		
-		modifier = {
-			factor = 3
-			FROM = {
-				tier = KING
-			}
-		}
-
-		modifier = {
-			factor = 0.85
-			ROOT = {
-				relative_power = { who = FROM power = 1.2 }
-			}
-		}
-
-		modifier = {
-			factor = 0.85
-			ROOT = {
-				relative_power = { who = FROM power = 1.5 }
-			}
-		}
-
-		modifier = {
-			factor = 0.8
-			ROOT = {
-				relative_power = { who = FROM power = 2.0 }
-			}
-		}
-
-		modifier = {
-			factor = 0.8
-			ROOT = {
-				relative_power = { who = FROM power = 2.5 }
-			}
-		}
-
-		modifier = {
-			factor = 0.8
-			ROOT = {
-				relative_power = { who = FROM power = 3 }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			ROOT = {
-				relative_power = { who = FROM power = 4 }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			ROOT = {
-				relative_power = { who = FROM power = 5 }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			ROOT = {
-				relative_power = { who = FROM power = 6 }
-			}
-		}
-
-		modifier = {
-			factor = 0.5
-			ROOT = {
-				relative_power = { who = FROM power = 8 }
-			}
-		}
-
-		modifier = {
-			factor = 0.25
-			ROOT = {
-				relative_power = { who = FROM power = 10 }
-			}
-		}
-
-		modifier = {
-			factor = 2
-			ROOT = {
-				distance_from_realm = { who = FROM value = 20 }
-			}
-		}
-
-		modifier = {
-			factor = 2
-			ROOT = {
-				distance_from_realm = { who = FROM value = 40 }
-			}
-		}
-		
-		modifier = {
-			factor = 3
-			ROOT = {
-				distance_from_realm = { who = FROM value = 80 }
-			}
-		}
-		
-		modifier = {
-			factor = 4
-			ROOT = {
-				distance_from_realm = { who = FROM value = 120 }
-			}
-		}
-	}
-
-	ai_will_do = {
-		factor = 1
-		
-		modifier = { #Focus on Coronation first.
-			factor = 0.1
-			ROOT = { should_have_coronation = yes }
-		}
-		
-		modifier = {
-			factor = 0.8 # Target has almost no money
-			FROM = {
-				OR = {
-					is_nomadic = yes
-					is_tribal = yes
-				}
-			}
-		}
-
-		modifier = {
-			factor = 2
-			ROOT = {
-				trait = ambitious
-			}
-		}
-		modifier = {
-			factor = 2
-			ROOT = {
-				trait = proud
-			}
-		}
 		modifier = {
 			factor = 4
 			ROOT = {
@@ -16425,9 +15480,6 @@ free_tributary_cb = {
 						}
 						is_tributary = { type = corsair }
 						is_tributary = { type = march }
-						is_tributary = { type = emperor_japan }
-						is_tributary = { type = shogun_kashin }
-						is_tributary = { type = anti_shogun_kashin }
 					}
 					suzerain = {
 						OR = {
@@ -16457,9 +15509,6 @@ free_tributary_cb = {
 						}
 						is_tributary = { type = corsair }
 						is_tributary = { type = march }
-						is_tributary = { type = emperor_japan }
-						is_tributary = { type = shogun_kashin }
-						is_tributary = { type = anti_shogun_kashin }
 					}
 					suzerain = {
 						OR = {
@@ -16523,12 +15572,10 @@ free_tributary_cb = {
 
 	on_success = {
 		FROM = {
-			show_scope_change = no
 			prestige = -100
 		}
 
 		ROOT = {
-			show_scope_change = no
 			prestige = 100
 			if = {
 				limit = {
@@ -16567,18 +15614,15 @@ free_tributary_cb = {
 
 	on_fail = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 		FROM = {
-			show_scope_change = no
 			prestige = 100
 		}
 	}
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 			transfer_scaled_wealth = {
 				to = FROM
@@ -16587,7 +15631,6 @@ free_tributary_cb = {
 		}
 
 		FROM = {
-			show_scope_change = no
 			prestige = 100
 		}
 	}
@@ -16844,19 +15887,16 @@ cb_install_khan = {
 
 	on_fail = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 	}
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 			prisoner = FROM
 		}
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 50
 			hidden_tooltip = { 
 				if = { 
@@ -16968,7 +16008,6 @@ nomad_dispute = {
 		usurp_title_plus_barony_if_unlanded = { target = ROOT type = invasion }
 		
 		ROOT = {
-			show_scope_change = no
 			participation_scaled_prestige = 100
 			participation_scaled_piety = 50
 		}
@@ -16983,11 +16022,9 @@ nomad_dispute = {
 
 	on_fail_title = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -100
 		}
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 50
 		}
 		any_defender = {
@@ -16998,7 +16035,6 @@ nomad_dispute = {
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 			transfer_scaled_wealth = {
 				to = FROM
@@ -17006,7 +16042,6 @@ nomad_dispute = {
 			}
 		}
 		FROM = {
-			show_scope_change = no
 			participation_scaled_prestige = 100
 			participation_scaled_piety = 50
 		}
@@ -17073,6 +16108,7 @@ cb_liberate_nomad_duchy = {
 			NOT = { pacifist = yes }
 			NOT = { same_realm = FROM }
 			mercenary = no
+			prestige = 500
 		}
 	}
 	
@@ -17145,11 +16181,13 @@ cb_liberate_nomad_duchy = {
 
 	on_add = {
 		general_on_add_effect = yes
+		ROOT = {
+			prestige = -500
+		}
 	}
 	
 	on_success = {
 		ROOT = {
-			show_scope_change = no
 			participation_scaled_prestige = 200
 			if = {
 				limit = {
@@ -17171,7 +16209,7 @@ cb_liberate_nomad_duchy = {
 			}
 		}
 		
-		FROM = { show_scope_change = no prestige = -200 }
+		FROM = {  prestige = -200 }
 	}
 
 	on_success_title = {
@@ -17194,14 +16232,12 @@ cb_liberate_nomad_duchy = {
 
 	on_fail = {
 		ROOT = {
-			show_scope_change = no
 			prestige = -200
 		}
 	}
 
 	on_reverse_demand = {
 		ROOT = {
-			show_scope_change = no
 			transfer_scaled_wealth = {
 				to = FROM
 				value = 4.0
@@ -17687,9 +16723,6 @@ nomad_subjugation = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 	
@@ -17818,11 +16851,17 @@ nomad_invasion = {
 	}
 
 	can_use = {
+		# Attacker
 		ROOT = {
 			is_nomadic = yes
-			OR = {
-				ai = yes
-				multiplayer = no
+			NOT = { same_realm = FROM }
+
+			trigger_if = {
+				limit = {
+					ai = no
+					multiplayer = yes
+				}
+
 				NOT = {
 					has_game_rule = {
 						name = multiplayer_invasions
@@ -17831,31 +16870,14 @@ nomad_invasion = {
 				}
 			}
 		}
-		
-		ROOT = {
-			NOT = { same_realm = FROM }
-		}
-		
-		OR = { # This ensures that the AI doesn't declare this type of war against someone who only holds a few counties within the targeted title...
-			ROOT = {
-				ai = no
-			}
-			ROOT = {
-				has_landed_title = e_millenarian_host
-			}
-			FROM = {
-				num_of_realm_counties = {
-					value = 5
-					title = PREV
-				}
-			}
-		}
 	}
-	
+
 	is_valid_title = {
+		# Defender
 		FROM = {
-			any_realm_province = {
-				de_jure_liege_or_above = PREVPREV
+			num_of_realm_counties = {
+				value >= 1
+				title = PREV
 			}
 		}
 	}
@@ -17951,9 +16973,6 @@ nomad_invasion = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -18331,9 +17350,6 @@ nomad_expansion = {
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -18953,27 +17969,6 @@ powerful_vassal_takeover_war = { # Started from faction
 	}
 
 	can_use = {
-		NAND = {
-			ROOT = {
-				OR = {
-					culture = kyushu
-					culture = shikoku
-					culture = chugoku
-					culture = kansai
-					culture = kanto
-					culture = tohoku
-					culture = chubu
-					culture = hokkaido
-					culture = ainu
-				}
-			}
-			FROM = {
-				OR = {
-					has_landed_title = e_tokyo
-					trait = japanese_emperor_trait
-				}
-			}
-		}
 		ROOT = {
 			vassal_of = FROM
 		}
@@ -19118,9 +18113,6 @@ powerful_vassal_takeover_war = { # Started from faction
 
 		hidden_tooltip = {
 			check_if_reconquista_finished_effect = yes
-			FROM = {
-				landless_pope_effect = yes
-			}
 		}
 	}
 
@@ -19358,7 +18350,6 @@ reconquista_na = {
 
 	is_valid = {
 		ROOT = {
-			show_scope_change = no
 			custom_tooltip = {
 				text = reconquista_valid_TT
 
@@ -19379,7 +18370,6 @@ reconquista_na = {
 	on_add = {
 		custom_tooltip = { text = add_allies_reconquista_TT }
 		ROOT = {
-			show_scope_change = no
 			holy_war_start_effect = yes
 			character_event = { id = HF.49210 }
 		}
