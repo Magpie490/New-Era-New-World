@@ -184,10 +184,9 @@ e_yucatan = {
 				b_ixtutz_PT = {}
 				b_ixkun_PT = {}
 				b_sacul_PT = {}
-				b_san_luis_PT = {}
-				b_el_chal_PT = {}
+				b_poxte_PT = {}
 				b_ucanal_PT = {}
-				b_dolores_PT = {}
+
 			}
 			c_tikal = { # 3124
 				color={ 11 229 138 }
@@ -201,6 +200,20 @@ e_yucatan = {
 				b_cruce_dos_aguadas_PT = {}
 				b_melchor_de_mencos_PT = {}
 				b_zotz_PT = {}
+			}
+			c_san_luis_PT = { #2291
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+			
+				b_san_luis_PT = {}
+
+				
+			}
+			c_dolores_PT = { #2425
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				b_dolores_PT = {}
 			}
 		}
 		
@@ -216,12 +229,13 @@ e_yucatan = {
 				
 				b_sayaxche_PT = {}
 				b_ixtanche_PT = {}
-				b_machaquila_PT = {}
+				b_machaquila_PT = {} #POPTUN
 				b_polol_PT = {}
 				b_itzan_PT = {}
 				b_el_caribe_PT = {}
 				b_la_amelia_PT = {}
 				b_tamarindito_PT = {}
+				b_las_pozas_PT = {}
 			}
 			c_chuntuki = { # 3123
 				color={ 34 229 180 }
@@ -240,8 +254,8 @@ e_yucatan = {
 				color={ 26 178 140 }
 				color2={ 255 255 255 }
 				
-				b_frontera_corozal_CH = {}
-				b_nuevo_francisco_leon_CH = {}
+			#	b_frontera_corozal_CH = {}
+				
 				b_piedras_negras_PT = {}
 				b_tonina_PT = {}
 				b_el_ceibo_PT = {}
@@ -255,14 +269,31 @@ e_yucatan = {
 				color = { 38 255 200 }
 				color2 = { 255 255 255 }
 				
+				b_bonampak_CP = {}
+				b_nuevo_francisco_leon_CP = {}
+				b_nueva_palestina_CP = {}
+				b_frontera_corozal_CP = {}
+				b_lacanja_chansayab_CP = {}
+				b_cintalapa_OCO_CP = {}
+				b_arroyo_granizo_CP = {}
+				b_santo_domingo_CP = {}
+			}
+			c_comillas = { #2273 
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				title_prefix = marquisate
+				title = marquis
+				title_female = marquis_female
+				
 				b_zamora_pico_de_oro_CH = {}
 				b_benemerito_de_las_americas_CH = {}
-				b_bonampak_PT = {}
-				b_lacanja_chansayab_CH = {}
-				b_nueva_palestina_CH = {}
+				b_chajul_CH = {}
 				b_nuevo_orizaba_CH = {}
-				b_galacia_CH = {}				
-			}
+				b_la_nueva_union_CH = {}
+				b_nuevo_chihuahua_CH = {}
+				b_flor_de_cacao_CH = {}				
+			}				
 		}
 	}
 	
@@ -466,36 +497,11 @@ e_yucatan = {
 				b_playa_grande_GT = {}
 				b_ixcan_GT = {}
 				b_xalala_GT = {}
-				b_chajul_GT = {}
+			#	b_chajul_GT = {} chiapas
 				b_qumarkaj_GT = {}
 				b_visis_caba_GT = {}
 				b_sacapulas_GT = {}
 				b_chicaman_GT = {}
-			}
-			c_el_estor = {
-				color={ 80 80 229 }
-				color2={ 255 255 255 }
-			
-				b_el_estor_GT = {}
-				b_rio_dulce_GT = {}
-				b_panzos_GT = {}
-				b_teleman_GT = {}
-				b_chichipate_GT = {}
-				b_cahabon_GT = {}
-				b_san_agustin_lanquin_GT = {}
-			}
-			c_izabal = { # 3155
-				color={ 62 62 178 }
-				color2={ 255 255 255 }
-				
-				b_nito_GT = {}
-				b_xocolo_GT = {}
-				b_toquegua_GT = {}
-				b_chahal_GT = {}
-				b_izabal_GT = {}
-				b_tamagas_GT = {}
-				b_chinasejal_GT = {}
-				b_temash_GT = {}
 			}
 			c_chahal = {
 				color={ 89 89 255 }
@@ -521,8 +527,51 @@ e_yucatan = {
 				b_lancetillo_la_parroquia_GT = {}
 				b_rabinal_GT = {}
 				b_senahu_GT = {}
-			}
+			}		
 		}
+		d_izabal = {
+			color = { 0 59 193 }
+			color2 = { 255 255 255 }
+			
+			capital = 2424 #c_amatique
+			
+			c_el_estor = {
+				color={ 28 80 191 }
+				color2={ 255 255 255 }
+			
+				b_el_estor_GT = {}
+				b_rio_dulce_GT = {}
+				b_panzos_GT = {}
+				b_teleman_GT = {}
+				b_chichipate_GT = {}
+				b_cahabon_GT = {}
+				b_san_agustin_lanquin_GT = {}
+			}
+			c_izabal = { # 3155
+				color={ 38 106 255 }
+				color2={ 255 255 255 }
+				
+				b_nito_GT = {}
+				b_xocolo_GT = {}
+				b_toquegua_GT = {}
+				b_chahal_GT = {}
+				b_izabal_GT = {}
+				b_tamagas_GT = {}
+				b_chinasejal_GT = {}
+				b_temash_GT = {}
+			}
+			c_amatique = {
+				color = { 56 89 160 }
+				color2 = { 255 255 255 }
+				
+				b_santo_tomas_de_castilla_GT = {}
+				b_puerto_barrios_GT = {}
+				b_entre_rios_GT = {}
+				b_livingston_GT = {}
+				b_san_francisco_del_mar_GT = {}
+				b_la_graciosa_GT = {}
+				b_manabique_GT = {}
+			}
 	}
 	k_quintana_roo = {
  		color={ 191 53 19 }	
@@ -1265,7 +1314,7 @@ e_yucatan = {
 			color2 = { 255 255 255 }
 			
 			capital =  3109 # c_chacchoben
-		
+		}
 	}	
 	k_tabasco = {
 		color = { 42 84 84 }
@@ -1769,11 +1818,10 @@ e_yucatan_republic = {
 	
 	###### Special republican themed Yucatan empire
 	###### Should be available to k_yucatan, k_campeche and k_quintana_roo
-	###### IMO should be set to imperial gov (a transition akin to the Roman Republic) 
-	###### k_yucatan k_campeche, k_quintana_roo and k_tabasco needed to created, and are de jure flipped into
-	###### k_yucatan_league history is copied to e_yucatan
+	###### IMO should be set to imperial gov (a transition akin to the Roman Republic) ### ON THE OTHER HAND, NO. THEY CAN GET IT NORMALLY THROUGH LAWS
+	###### k_yucatan k_campeche, k_quintana_roo , are de jure flipped into; If  k_tabasco is held, it gets flipped into too
+	###### main title history  history is copied to e_yucatan_republic
 	###### decision to create; event pop up upon creation
-	###### should its creation be restricted to the k_yucatan_league?
 	###### icon 
 
 }
