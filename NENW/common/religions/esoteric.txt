@@ -173,7 +173,6 @@ esoteric = {
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 		intermarry = columbian
-		intermarry = ophite
 	}
 	dianic = {
 		graphical_culture = jaingfx
@@ -239,7 +238,6 @@ esoteric = {
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
 		intermarry = baphometist
-		intermarry = ophite
 	}
 	myriadic = {
 		graphical_culture = norsegfx
@@ -306,7 +304,6 @@ esoteric = {
 		intermarry = nousthreskeia
 		intermarry = nousthreskeia_reformed
 		intermarry = baphometist
-		intermarry = ophite
 	}
 	shriner = {
 		graphical_culture = muslimgfx #Because of Shriner's Middle Eastern theme
@@ -940,52 +937,6 @@ esoteric = {
 		character_modifier={
 		}
 	}
-	cyclist = {
-		graphical_culture = jaingfx
-		icon = 257
-		heresy_icon = 257
-		
-		ai_convert_same_group = 1
-		ai_convert_other_group = 2
-		
-		color = { 224 77 77 }
-		
-		interface_skin = { thelemite_interface zun_interface pagan_interface }
-	
-		high_god_name = GOD_THE_WHEEL_OF_LIFE
-
-		god_names = {
-			GOD_THE_PASSAGE_OF_TIME GOD_THE_COSMIC_LAWS GOD_THE_WHEEL_TURNING_KINGS GOD_THE_GREAT_NIRRITI
-		}
-
-		evil_god_names = {
-			GOD_THE_UNWORTHY GOD_THE_ILLUSION_OF_LIFE GOD_THE_VAPID GOD_THE_USELESS GOD_THE_CURRENT_OF_EXISTENCE
-		}
-		
-		character_modifier = {
-			learning = 2
-			diplomacy = -1
-			fertility = -0.15
-			aquarian_opinion = 10
-		}
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_CYCLIST_VINAYAS
-		priest_title = MAGE
-		
-		women_can_take_consorts = yes
-		max_consorts = 3
-		allow_rivermovement = yes		
-		feminist = yes
-		pacifist = yes
-		female_temple_holders = yes
-		priests_can_inherit = no
-		priests_can_marry = yes
-		
-		religious_clothing_head = 16
-		religious_clothing_priest = 16
-
-	}	
 	baphometist = { #Mom, can we have some Hislop? No, we have Hislop at home. The Hislop at home:
 		graphical_culture = thelemagfx
 		icon = 214
@@ -1026,56 +977,10 @@ esoteric = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 
-		intermarry = ophite
 		intermarry = dianic
 		intermarry = myriadic
 		intermarry = arcadian_reformed
 		intermarry = arcadian
 		intermarry = aquarian
-	}
-	ophite = {
-		graphical_culture = thelemagfx
-		icon = 257
-		ai_convert_same_group = 1
-		ai_convert_other_group = 2
-		
-		color = { 127 38 69 }
-		
-		interface_skin = { thelemite_interface zun_interface pagan_interface }
-		high_god_name = GOD_THE_ONE
-		god_names = {
-			GOD_THE_ONE GOD_THE_FATHER GOD_THE_SERPENT GOD_LOGOS GOD_THE_GOOD_SHEPHERD
-		}
-		evil_god_names = {
-			GOD_THE_COVETOUS_ONE GOD_THE_TYRANTS GOD_TEACHERS_OF_LAW
-		}
-		character_modifier = {
-			christian_opinion = -5
-			learning = 1
-		}
-		piety_name = ENLIGHTENMENT
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_OPHITE_GOSPEL
-		priest_title = PRIEST
-		priests_can_marry = yes
-		pacifist = yes
-		hard_to_convert = yes
-		feminist = yes
-		can_retire_to_monastery = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		allow_in_ruler_designer = yes
-		
-		religious_clothing_head = 16
-		religious_clothing_priest = 16
-
-		intermarry = amaitist
-		intermarry = baphometist
-		intermarry = aquarian
-		intermarry = technopolitan
-		intermarry = hypercubist
-		intermarry = dianic
-		intermarry = myriadic
-		intermarry = scholastic
 	}
 }
