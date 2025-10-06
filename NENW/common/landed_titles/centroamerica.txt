@@ -41,7 +41,7 @@ e_centroamerica = {
 			#	b_la_trinidad_SV = {}
 			}
 			c_morazan = { #2435
-				color = { 0 0 0 }
+				color = { 36 101 165 }
 				color2 = { 255 255 255 }
 				
 				b_san_francisco_gotera_SV = {}
@@ -125,7 +125,7 @@ e_centroamerica = {
 				b_cara_sucia_SV = {}
 			}
 			c_zacatecoluca = { #2303
-				color = { 0 0 0 }
+				color = { 25 161 229 }
 				color2 = { 255 255 255 }
 				
 				b_zacatecoluca_SV = {}
@@ -138,7 +138,7 @@ e_centroamerica = {
 			#	b_olocuilta_SV = {}
 			}
 			c_san_vicente = {
-				color={ 11 120 229 }
+				color={ 48 157 211 }
 				color2={ 255 255 255 }
 			
 				b_san_vicente_SV = {}
@@ -860,31 +860,54 @@ e_centroamerica = {
 			#	b_cayo_sierra_HN = {}
 			#	b_quebrada_de_arena_HN = {}
 
-			b_taujica_HN = {}
+				b_taujica_HN = {}
 			}
-			c_san_esteban = {
+			c_agalta = {
 				color={ 80 204 229 }
 				color2={ 255 255 255 }
-			
-				b_san_esteban_HN = {}
-				b_san_francisco_de_la_paz_HN = {}
+				
+				pech = "Kwalako"
+				pipil = "Kwalako"
+				lenca = "Kwalako"
 				b_gualaco_HN = {}
-				b_canquire_HN = {}
-				b_el_carbon_HN = {}
-				b_la_lima_HN = {}
-				b_la_venta_HN = {}
+				b_san_esteban_HN = {}
+				b_guata_HN = {}
+				b_jano_HN = {}
+				b_esquipulas_del_norte_HN = {}
+				b_yocon_HN = {}
+				b_mangulile_HN = {}
+			#	b_el_rosario_OL_HN = {}
+			#	b_la_union_OL_HN = {}
+			#	b_canquire_HN = {}
+				
+			#	b_el_carbon_HN = {}
+			#	b_la_lima_HN = {}
+			#	b_la_venta_HN = {}
+
+
 			}
-			c_juticalpa = {
+			c_juticalpa = { #2315
 				color={ 44 113 127 }
 				color2={ 255 255 255 }
 			
-				b_juticala_HN = {}
-				b_catacamas_HN = {}
+				pipil =  "Xoktikalpan"
+				pech = "Xoktikalpan"
+				lenca = "Xoktikalpan"
+				
+				b_juticalpa_HN = {
+					pipil =  "Xoktikalpan"
+					pech = "Xoktikalpan"
+					lenca = "Xoktikalpan"				
+				}
+				b_campamento_HN = {}
+				b_manto_HN = {}
 				b_san_francisco_de_la_paz_HN = {}
 				b_salama_HN = {}
-				b_campamento_HN = {}
-				b_palestina_HN = {}
-				b_jano_HN = {}
+				b_zopilotepe_HN = {}
+				b_concordina_HN = {}
+				b_jutiquile_HN = {} 
+				
+
 			}
 		}		
 	}		
@@ -1020,7 +1043,7 @@ e_centroamerica = {
 			#	b_san_isidro_HN = {}
 			}
 			c_fonseca = { #Archipielago de Fonseca
-				color = { 0 0 0 } 
+				color = { 108 191 216 } 
 				color2 = { 255 255 255 }
 				
 				b_amapala_HN = {}
@@ -1033,7 +1056,7 @@ e_centroamerica = {
 			}	
 				
 			c_choluteca = { # 3153
-				color={ 86 186 216  }
+				color={ 179 217 229  }
 				color2={ 255 255 255 }
 				
 				b_choluteca_HN = {}
@@ -1055,13 +1078,16 @@ e_centroamerica = {
 				color2={ 255 255 255 }
 				
 				b_yuscaran_HN = {}
-				b_liure_HN = {}
+				b_danli_HN = {}
 				b_el_paraiso_HN = {}
+				b_trojes_HN = {}
+				b_teupasenti_HN = {}
+				b_moroceli_HN = {}
+				b_liure_HN = {}
 				b_san_lucas_HN = {}
 				b_soledad_HN = {}
 				b_texiguat_HN = {}
 				b_yauyupe_HN = {}
-				b_danli_HN = {}
 			}
 		}
 		d_altas_honduras = {
@@ -1127,6 +1153,16 @@ e_centroamerica = {
 				b_amatillo_HN = {}
 				b_san_fernando_HN = {}
 			}			
+		}
+		d_olancho = {
+			color = { 0 127 147 }
+			color2 = { 255 255 255 }
+			
+			pech = "Wilanko"
+			pipil = "Wilanko"
+			lenca = "Wilanko"
+			
+			capital = 2315 #c_juticalpa
 		}
 	}
 	k_mosquito = {
@@ -1207,18 +1243,24 @@ e_centroamerica = {
 			color={ 216 54 81 }
 			color2={ 255 255 255 }
 			
-			c_olancho = { # 3164
+			c_catacamas = { # 3164
 				color={ 204 51 76 }
 				color2={ 255 255 255 }
 				
-				b_catacamas_HN = {}
-				b_juticalpa_HN = {}
-				b_gualaco_HN = {}
-				b_el_carbon_HN = {}
-				b_san_francisco_de_la_paz_HN = {}
-				b_jutiquile_HN = {}
+				pech = "Atlakamani"
+				pipil = "Atlakamani"
+				
+				b_catacamas_HN = {
+					pech = "Atlakamani"
+					pipil = "Atlakamani"				
+				}
+				b_nueva_palestina_HN = {}
+				b_dulce_nombre_de_culmi_HN = {}
+				b_santa_maria_del_real_HN = {}
+				b_san_jose_del_rio_tinto_HN ={}
+				b_nueva_choluteca_HN = {}
 				b_agalta_HN = {}
-				b_san_esteban_HN = {}
+				
 			}
 			c_wampusirpi = {
 				color={ 229 57 86 }
@@ -1568,5 +1610,33 @@ e_centroamerica = {
 				b_potosi_NIC = {}
 			}
 		}
+	}
+	
+	k_garifuna = {
+		color = { 116 89 39 }
+		color2 = { 255 255 255 }
+			
+		capital = 3157
+		
+		#### special conditions :
+				####	must be of garifuna culture and hold duchy capital (d_atlantida)
+	}
+
+	k_copan = {
+		color = { 16 86 80 }
+		color2 = { 255 255 255 }
+		
+		capital = 2307 #c_copan
+		
+		d_copan = { 
+			color = { 23 122 114 }
+			color2 = { 255 255 255 }
+			
+			capital = 2307 #c_copan}
+		}
+		
+		#### special conditions :
+			###### main title must be d_copan
+
 	}
 }
