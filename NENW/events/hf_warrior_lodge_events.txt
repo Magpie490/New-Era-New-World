@@ -21,6 +21,10 @@ character_event = {
         NOT = { has_character_flag = is_being_recruited_to_warrior_lodge_by_parent }
         NOT = { has_character_flag = awaiting_initiation_trial }
         FROM = { leader = { is_member_of_any_warrior_lodge_trigger = yes } }
+		NAND = {
+			ai = yes
+			is_in_society = yes
+		}
     }
 
     immediate = {
@@ -500,7 +504,6 @@ character_event = { #Hero character's reaction, who then sends acceptance/refusa
 
 letter_event = { #SUCCESS: Welcome to the society!
     id = HF.10009
-    picture = GFX_evt_melee
     border = GFX_event_letter_frame_war
     is_triggered_only = yes
     
@@ -608,7 +611,6 @@ letter_event = { #SUCCESS: Welcome to the society!
 letter_event = { #FAILURE: You can't sit with us
     id = HF.10010
     desc = EVTDESC_HF_10010
-    picture = GFX_evt_melee
     border = GFX_event_letter_frame_war
     is_triggered_only = yes
     trigger = {
@@ -1349,11 +1351,11 @@ character_event = {
                     has_opinion_modifier = { who = event_target:mentor_target modifier = opinion_budding_friendship }
                 }
             }
-            tooltip = { add_friend = event_target:mentor_target 
+            tooltip = { add_friend = event_target:mentor_target
 				add_alliance = {
 					who = event_target:mentor_target
 					years = 100
-				}}
+				} }
         }
         else_if = { #if they don't hate you, they feel professionally praised...
             limit = {
@@ -1572,14 +1574,6 @@ character_event = {
             trigger = { has_character_flag = opt_C }
         }
         
-        hidden_tooltip = {
-            if = {
-                limit = {
-                    lifestyle_traits = 1
-                }
-                remove_lifestyle_trait_effect = yes
-            }
-        }
         add_trait = duelist
         add_legend_progress_trivial_effect = yes
         clr_character_flag = choosing_military_aspect
@@ -1682,7 +1676,7 @@ character_event = {
         hidden_tooltip = {
             if = {
                 limit = {
-                    lifestyle_traits = 1
+                    lifestyle_traits = 2
                 }
                 remove_lifestyle_trait_effect = yes
             }
@@ -1763,7 +1757,7 @@ character_event = {
         hidden_tooltip = {
             if = {
                 limit = {
-                    lifestyle_traits = 1
+                    lifestyle_traits = 2
                 }
                 remove_lifestyle_trait_effect = yes
             }
@@ -2069,21 +2063,6 @@ character_event = {
                         save_event_target_as = my_beloved
                     }
                 }
-                10 = {
-                    any_society_member = { #event_target:fellow_member (could be anyone in your society)
-                        limit = { 
-                            society_member_of = warrior_lodge_norse
-                            NOT = { character = ROOT }
-                            ai = yes
-                            prisoner = no
-                        }
-                        score_value = { #Prioritizes selecting some kind of not great warrior...
-                            value = 10
-                            bad_soldier_outcome_score = yes
-                        }
-                        save_event_target_as = fellow_member
-                    }
-                }
             }
             if = {
                 limit = { event_target:my_beloved = { always = yes } }
@@ -2111,7 +2090,6 @@ character_event = {
 
         if = { limit = { has_character_flag = someone_is_hurt }
             event_target:kinslayer_target = {
-                show_scope_change = no
                 hidden_effect = {
                     random_list = { #Find someone who cares about the person caught in the fury...
                         10 = {
@@ -2207,7 +2185,6 @@ character_event = {
         add_trait = berserker
 
         event_target:kinslayer_target = {
-            show_scope_change = no
             add_maimed_trait_effect = yes
         }
 
@@ -2239,7 +2216,6 @@ character_event = {
         add_trait = berserker
 
         event_target:kinslayer_target = {
-            show_scope_change = no
             add_maimed_trait_effect = yes
         }
         trigger = { has_character_flag = someone_is_hurt trait = kind }
@@ -2511,7 +2487,6 @@ character_event = {
                 resolve_severely_injured_effect = yes
             }
             event_target:kinslayer_target = {
-                show_scope_change = no
                 add_maimed_trait_effect = yes
             }
         }
@@ -2524,7 +2499,6 @@ character_event = {
             add_maimed_trait_effect = yes
 
             event_target:kinslayer_target = {
-                show_scope_change = no
                 add_maimed_trait_effect = yes
             }
 
@@ -2539,7 +2513,6 @@ character_event = {
             }
 
             event_target:kinslayer_target = {
-                show_scope_change = no
                 hidden_effect = {
                     random_list = { #Find someone who cares about the person caught in the fury...
                         10 = {
@@ -2660,7 +2633,6 @@ character_event = {
         }
 
         event_target:kinslayer_target = {
-            show_scope_change = no
             add_maimed_trait_effect = yes
         }
 
@@ -2685,7 +2657,6 @@ character_event = {
         add_trait = berserker
 
         event_target:kinslayer_target = {
-            show_scope_change = no
             add_maimed_trait_effect = yes
         }
         trigger = { has_character_flag = someone_is_hurt trait = kind }

@@ -102,7 +102,6 @@ spriteTypes = {
 					portrait_culture = gullah
 					portrait_culture = bahamian
 					portrait_culture = trinitean
-					portrait_culture = kreyol
 					portrait_culture = melungeon
 					portrait_culture = lumbee
 					portrait_culture = issa
@@ -162,7 +161,6 @@ spriteTypes = {
 					portrait_culture = gullah
 					portrait_culture = bahamian
 					portrait_culture = trinitean
-					portrait_culture = kreyol
 					portrait_culture = melungeon
 					portrait_culture = lumbee
 					portrait_culture = issa
@@ -198,6 +196,96 @@ spriteTypes = {
 			"GFX_empty:c6"
 			"GFX_empty:c7"
             "GFX_empty:c4"
+		}
+		headgear_that_hides_hair = { 10 }
+	}
+
+}
+	spriteType = {
+		name = "GFX_frankish_male_clothes_behind_early"
+		texturefile = "gfx\\characters\\western_male\\western_male_clothes_behind_early.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_frankish_male_headgear_behind_early"
+		texturefile = "gfx\\characters\\western_male\\western_male_headgear_behind_early.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_frankish_male_clothes_early"
+		texturefile = "gfx\\characters\\western_male\\western_male_clothes_early.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_frankish_male_headgear_early"
+		texturefile = "gfx\\characters\\western_male\\western_male_headgear_early.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_french_ruler_male"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+
+					portrait_culture = kreyol
+
+
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_frankish_male_clothes_behind_early:p3:c0"
+			"GFX_frankish_male_headgear_behind_early:p5:c1"
+			"GFX_frankish_male_clothes_early:p3:c2"
+			"GFX_frankish_male_headgear_early:p5:c5"
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	portraitType = { #Portraits - Female
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_french_ruler_female"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_culture = kreyol
+
+				}
+#				NOT = { portrait_government = theocracy_government }
+			}
+		}
+		
+		layer = { 
+			"GFX_frankish_female_clothes_behind_early:p3:c0"              #1
+			"GFX_frankish_female_headgear_behind_early:p5:c1"             #2
+			"GFX_frankish_female_clothes_early:p3:c2"                  #12
+			"GFX_frankish_female_headgear_early:p5:c5"                 #20
 		}
 		headgear_that_hides_hair = { 10 }
 	}

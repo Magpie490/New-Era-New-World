@@ -694,7 +694,7 @@ decisions = {
 			}
 		}
 		effect = {
-			narrative_event = { id = nenwschism.1 tooltip = EVTTOOLTIP_NENWSCHISM.1}
+			narrative_event = { id = nenwschism.1 tooltip = EVTTOOLTIP_NENWSCHISM.1 }
 			set_global_flag = brighamite_schism_mended
 		}
 		ai_will_do = {
@@ -757,13 +757,90 @@ decisions = {
 			}
 		}
 		effect = {
-			narrative_event = { id = nenwschism.2 tooltip = EVTTOOLTIP_NENWSCHISM.2}
+			narrative_event = { id = nenwschism.2 tooltip = EVTTOOLTIP_NENWSCHISM.2 }
 			set_global_flag = mormon_brighamite_schism_mended
 		}
 		ai_will_do = {
 			factor = 1
 		}
-	}			
+	}
+	# Guadalupano > Cristero = Guadalupano becomes parent
+	guadalupano_mend_schism = {
+		ai_check_interval = 24
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			religion = guadalupano
+			is_heretic = no
+			NOT = { has_global_flag = guadalupano_schism_mended }
+			NOT = { has_global_flag = cristero_schism_mended }
+		}
+		allow = {
+			real_tier = EMPEROR
+			has_landed_title = e_mexico
+			piety = 2500
+			religion_authority = 0.75
+			num_of_holy_sites = 5
+			completely_controls = c_mexico
+			b_basilica_de_santa_maria_de_guadalupe_cdmx = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = nenwschism.5 tooltip = EVTTOOLTIP_NENWSCHISM.5 }
+			set_global_flag = guadalupano_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Cristero > Guadalupano = Cristero becomes parent
+	cristero_mend_schism = {
+		ai_check_interval = 24
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			religion = catholic
+			is_heretic = no
+			NOT = { has_global_flag = guadalupano_schism_mended }
+			NOT = { has_global_flag = cristero_schism_mended }
+		}
+		allow = {
+			real_tier = EMPEROR
+			has_landed_title = e_mexico
+			num_of_holy_sites = 5
+			piety = 2500
+			religion_authority = 0.75
+			completely_controls = c_mexico
+			b_catedral_metropolitana_cdmx = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = nenwschism.6 tooltip = EVTTOOLTIP_NENWSCHISM.6 }
+			set_global_flag = cristero_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}					
 }
 targeted_decisions = {
 	aquarian_perform_scrying = {

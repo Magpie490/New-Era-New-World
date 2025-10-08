@@ -46,7 +46,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_nenwschism_2
+		name = EVTOPTA_mormon_mend_schism
 
 		if = {
 			limit = {
@@ -69,7 +69,7 @@ narrative_event = {
 }
 
 # Convert or Not?
-narrative_event = {
+narrative_event = { # If Brighamite becomes parent religion
 	id = nenwschism.3
 	title = EVTNAME_brighamite_schism_convert
 	desc = EVTDESC_brighamite_schism_convert
@@ -100,7 +100,7 @@ narrative_event = {
 }
 
 # Convert or Not?
-narrative_event = {
+narrative_event = { #If LDS becomes parent religion
 	id = nenwschism.4
 	title = EVTNAME_mormon_schism_convert
 	desc = EVTDESC_mormon_schism_convert
@@ -126,6 +126,134 @@ narrative_event = {
 	}
 	option = { # No
 		name = EVTOPTB_mormon_schism_convert
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Guadalupano > Cristero = Guadalupano becomes parent
+narrative_event = {
+	id = nenwschism.5
+	title = EVTNAME_guadalupano_mend_schism
+	desc = EVTDESC_guadalupano_mend_schism
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_guadalupano_mend_schism
+
+		if = {
+			limit = {
+				religion = guadalupano
+			}
+			set_parent_religion = { religion = catholic parent = guadalupano }
+		}
+		set_global_flag = guadalupano_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = catholic
+					controls_religion = no
+				}
+				narrative_event = { id = nenwschism.7 }
+			}
+		}
+	}
+}
+
+# Cristero > Guadalupano = Cristero becomes parent
+narrative_event = {
+	id = nenwschism.6
+	title = EVTNAME_cristero_mend_schism
+	desc = EVTDESC_cristero_mend_schism
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cristero_mend_schism
+
+		if = {
+			limit = {
+				religion = catholic
+			}
+			set_parent_religion = { religion = guadalupano parent = catholic }
+		}
+		set_global_flag = cristero_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = guadalupano
+					controls_religion = no
+				}
+				narrative_event = { id = nenwschism.8 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = { # If Guadalupano becomes parent religion
+	id = nenwschism.7
+	title = EVTNAME_guadalupano_schism_convert
+	desc = EVTDESC_guadalupano_schism_convert
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTA_guadalupano_schism_convert
+		ai_chance = { factor = 60 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = catholic
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTB_guadalupano_schism_convert
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Convert or Not?
+narrative_event = { # If Cristero becomes parent religion
+	id = nenwschism.4
+	title = EVTNAME_cristero_schism_convert
+	desc = EVTDESC_cristero_schism_convert
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTA_cristero_schism_convert
+		ai_chance = { factor = 60 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = guadalupano
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTB_cristero_schism_convert
 		ai_chance = { factor = 40 }
 	}
 }

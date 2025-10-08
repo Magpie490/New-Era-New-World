@@ -3,18 +3,16 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+				FROMFROM = { owner = { government = oligarchic_republic } }
 				has_building = or_retinue_1 
 			}
 		}
 		is_active_trigger = {
-			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 0 
-			ROOT = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
-			}
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		prerequisites = { ct_wall_2 }
 		gold_cost = 200
@@ -33,19 +31,17 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+				FROMFROM = { owner = { government = oligarchic_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 			}
 		}
 		is_active_trigger = {
-			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 1 
-			ROOT = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
-			}
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		upgrades_from = or_retinue_1
 		gold_cost = 300
@@ -64,20 +60,18 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+				FROMFROM = { owner = { government = oligarchic_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 				has_building = or_retinue_3
 			}
 		}
 		is_active_trigger = {
-			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 2 
-			ROOT = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
-			}
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		upgrades_from = or_retinue_2
 		gold_cost = 400
@@ -96,7 +90,7 @@ city = {
 		desc = or_retinue_1_desc
 		potential = {
 			OR = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+				FROMFROM = { owner = { government = oligarchic_republic } }
 				has_building = or_retinue_1
 				has_building = or_retinue_2
 				has_building = or_retinue_3
@@ -104,13 +98,11 @@ city = {
 			}
 		}
 		is_active_trigger = {
-			FROM = { OR = { government = oligarchic_republic government = consular_republic } }
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 4
-			ROOT = {
-				FROM = { OR = { government = oligarchic_republic government = consular_republic } }
-			}
+			FROMFROM = { owner = { government = oligarchic_republic } }
 		}
 		upgrades_from = or_retinue_3
 		gold_cost = 500
@@ -265,9 +257,8 @@ city = {
 	}
 	or_headquarters_1 = {
 		potential = {
+			FROMFROM = { owner = { government = oligarchic_republic independent = yes } }
 			FROM = { 
-				OR = { government = oligarchic_republic government = consular_republic } 
-				independent = yes
 				capital_holding = {
 						title = FROMFROM
 				}
@@ -290,9 +281,8 @@ city = {
 	}
 	or_headquarters_2 = {
 		potential = {
+			FROMFROM = { owner = { government = oligarchic_republic independent = yes } }
 			FROM = { 
-				OR = { government = oligarchic_republic government = consular_republic } 
-				independent = yes
 				capital_holding = {
 						title = FROMFROM
 				}
@@ -317,11 +307,10 @@ city = {
 	}
 	or_headquarters_3 = {
 		potential = {
+			FROMFROM = { owner = { government = oligarchic_republic independent = yes } }
 			FROM = { 
-				OR = { government = oligarchic_republic government = consular_republic } 
-				independent = yes
 				capital_holding = {
-						title = FROMFROM
+					title = FROMFROM
 				}
 			}
 		}
@@ -344,90 +333,90 @@ city = {
 	}
 	ct_beaurcratic_headquarters_1 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 2 
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
@@ -444,90 +433,90 @@ city = {
 	}
 	ct_beaurcratic_headquarters_2 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
 			TECH_CITY_CONSTRUCTION = 4 
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
@@ -546,90 +535,90 @@ city = {
 	}
 	ct_beaurcratic_headquarters_3 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 6
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			TECH_CITY_CONSTRUCTION = 6 
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
@@ -649,90 +638,90 @@ city = {
 castle = {
 	ca_beaurcratic_headquarters_1 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 2 
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
@@ -749,90 +738,90 @@ castle = {
 	}
 	ca_beaurcratic_headquarters_2 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 4 
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
@@ -851,90 +840,90 @@ castle = {
 	}
 	ca_beaurcratic_headquarters_3 = {
 		potential = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
 		is_active_trigger = {
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 6 
-			FROM = { 
-				OR = {
-					OR = { government = eastern_feudal government = technocratic_government }
-					liege = {
-						OR = { government = eastern_feudal government = technocratic_government }
-					}
-					government = chinese_imperial_government
-					government = bhutanese_decayed_government
-					government = bhutanese_restored_government
-					government = roman_imperial_government
-					liege = {
+			FROMFROM = { 
+				owner = {
+					OR = {
+						government = eastern_feudal
+						government = chinese_imperial_government
+						government = bhutanese_decayed_government
+						government = bhutanese_restored_government
 						government = roman_imperial_government
-					}
-					government = federal_government
-					liege = {
+						any_liege = {
+							government = roman_imperial_government
+						}
 						government = federal_government
-					}
-					government = ethiopian_imperial_government
-					liege = {
+						any_liege = {
+							government = federal_government
+						}
 						government = ethiopian_imperial_government
+						any_liege = {
+							government = ethiopian_imperial_government
+						}
+						government = neoziamet_government
+						government = oligarchic_republic
+						government = consular_republic
+						government = merchant_republic_government
+						government = mandala_government
 					}
-					government = neoziamet_government
-					OR = { government = oligarchic_republic government = consular_republic }
-					government = merchant_republic_government
-					government = mandala_government
 				}
 			}
 		}
