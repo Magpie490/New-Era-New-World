@@ -1171,11 +1171,11 @@ e_centroamerica = {
 		
 		capital = 3169 # c_bluefields
 		
-		d_mosquito = {
-			color={ 216 32 109 }
-			color2={ 255 255 255 }
+		d_zelaya = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
 			
-			capital = 3169 # c_bluefields
+			capital = 3169 #c_bluefields
 			
 			c_bluefields = { # 3169
 				color={ 204 30 102 }
@@ -1213,19 +1213,7 @@ e_centroamerica = {
 				b_el_ayote_NI = {}
 				b_lugar_el_papel_NI = {}
 				b_la_florida_NI = {}
-			}
-			c_karawala = {
-				color={ 255 38 128 }
-				color2={ 255 255 255 }
-			
-				b_karawala_NI = {}
-				b_la_barra_NI = {}
-				b_kara_NI = {}
-				b_limsiwita_NI = {}
-				b_kiwa_NI = {}
-				b_supa_NI = {}
-				b_company_creek_NI = {}
-			}
+			}		
 			c_pearl_lagoon = {
 				color={ 153 22 77 }
 				color2={ 255 255 255 }
@@ -1237,11 +1225,123 @@ e_centroamerica = {
 				b_flor_de_pino_NI = {}
 				b_brown_bank_NI = {}
 				b_kahkabila_NI = {}
+			}	
+		}
+		
+		d_mosquito = {
+			color={ 216 32 109 }
+			color2={ 255 255 255 }
+			
+			capital = 3169 # c_bluefields
+			
+			c_karawala = {
+				color={ 255 38 128 }
+				color2={ 255 255 255 }
+			
+				b_karawala_NI = {
+					nica = "Caraguala"
+					catracho = "Caraguala"
+				}
+				b_la_barra_NI = {}
+				b_kara_NI = {
+					nica = "Cara"
+					catracho = "Cara"
+				}
+				b_limsiwita_NI = {
+					nica = Limsigüita"
+					#catracho = "Limsigüita"
+				}
+				b_kiwa_NI = {
+					nica = "Quiguá"
+					catracho = "Quiguá"
+				}
+				b_supa_NI = {}
+				b_company_creek_NI = {}
 			}
+
+			c_karata = { # 3168
+				color={ 153 15 61 }
+				color2={ 255 255 255 }
+				
+				b_puerto_cabezas_NI = {
+					miskito = "Bilwi"
+					mayangna = "Bilwi"
+					rama = "Bilwi"
+				}
+				b_santa_marta_NI = {
+					miskito = "Auhya Pihni"
+					mayangna = "Auhya Pihni"
+					rama = "Auhya Pihni"				
+				}
+				b_wawa_NI = {
+					nica = "Guagua"
+					catracho = "Guagua"
+				}
+				b_kukulaya_NI = {
+					nica = "Cuculaya"
+					catracho = "Cuculaya"
+				}
+				b_francia_sirpi_NI = {}
+				b_li_dakura_NI = {}
+				b_awastara_NI = {
+					nica = "Aguastara"
+					catracho = "Aguastara"
+				}
+				b_yulu_NI = {}
+			}
+			c_prinzapolka = {
+				color={ 102 10 40 }
+				color2={ 255 255 255 }
+			
+				b_prinzapolka_NI = {
+					nica = "Prinzapolca"
+					catracho = "Prinzapolca"
+				}
+				b_alamikamba_NI = {
+					nica = "Alamicamba"
+					catracho = "Alamicamba"
+				}
+				b_haulover_NI = {}
+				b_wounta_NI = {}
+				b_wankluma_NI = {
+					nica = "Guancluma"
+					catracho = "Guancluma"
+				}
+				b_yabaltara_NI = {}
+				b_layasicsa_NI = {}
+			}
+			c_coco = { # 3166
+				color={ 255 63 95 }
+				color2={ 255 255 255 }
+				
+				miskito = "Wangki"
+				mayangna = "Wangki"
+				rama = "Wangki"
+				
+				b_waspan_NIC = {
+					#nica = "Guaspán"
+					#catracho = "Guaspán"
+				}
+				b_cabo_viejo_NI = {}
+				b_wasla_NI = {
+					#nica = "Guaslá"
+					#catracho = "Guaslá"
+				}		
+				b_bisimuna_NI = {}
+				b_leimus_NIC = {}
+				b_usan_NIC = {}
+				b_kisalaya_NIC = {}
+			#	b_andres_NIC = {}
+			}			
 		}
 		d_gracias_a_dios = {
 			color={ 216 54 81 }
 			color2={ 255 255 255 }
+			
+			miskito = "Patuka"
+			pech = "Patuka"
+			mayangna = "Patuka"
+			rama = "Patuka"
 			
 			c_catacamas = { # 3164
 				color={ 204 51 76 }
@@ -1267,14 +1367,18 @@ e_centroamerica = {
 				color2={ 255 255 255 }
 			
 				b_wampusirpi_HN = {}
-				b_mocoron_HN = {}
+				b_mocoron_HN ={
+					#miskito = "Mukurûn"
+					#mayangna = "Mukurûn"
+					#rama = "Mukurûn"
+				}
 				b_raiti_HN = {}
 				b_wangkibila_HN = {}
 				b_rus_rus_HN = {}
 				b_suhi_HN = {}
 				b_la_pimienta_HN = {}
 			}
-			c_brus_laguna = {
+			c_brus_laguna = { #2311
 				color={ 178 44 66 }
 				color2={ 255 255 255 }
 
@@ -1289,24 +1393,23 @@ e_centroamerica = {
 			#	b_juan_francisco_bulnes_HN = {}
 			#	b_warunta_HN = {}
 			}
-			c_coco = { # 3166
-				color={ 255 63 95 }
-				color2={ 255 255 255 }
-				
-				b_tussi_NIC = {}
-				b_torre_dos_NIC = {}
-				b_waspan_NIC = {}
-				b_leimus_NIC = {}
-				b_andres_NIC = {}
-				b_usan_NIC = {}
-				b_kisalaya_NIC = {}
-			}
 			c_caratasca = { # 3165
 				color={ 153 38 57 }
 				color2={ 255 255 255 }
 				
-				b_puerto_lempira_HN = {}
-				b_ahuas_HN = {}
+				
+				b_puerto_lempira_HN = {
+					miskito = "Ahuya Yari"
+					pech = "Ahuya Yari"
+					mayangna = "Ahuya Yari"
+					rama = "Ahuya Yari"					
+				}
+				b_ahuas_HN = {
+					miskito = "Awas"
+					pech = "Awas"
+					mayangna = "Awas"
+					rama = "Awas"							
+				}
 				b_cauquira_HN = {}
 				b_caratasca_HN = {}
 				b_raya_HN = {}
@@ -1315,30 +1418,16 @@ e_centroamerica = {
 				b_kruta_HN = {}
 			}
 		}
-		d_mosquito_norte = {
+		d_las_brumas = {
 			color={ 165 16 66 }
 			color2={ 255 255 255 }
 			
-			capital = 3165 # c_caratasca
+			capital = 2318 # c_bocay
+
+			miskito = "Pispis"
+			mayangna = "Pispis"
+			rama = "Pispis"
 			
-			miskito = "North Moskitia"
-			raizal = "North Moskitia"
-			garinagu = "North Moskitia"
-			chapin = "Gracias a Dios"
-			
-			c_karata = { # 3168
-				color={ 153 15 61 }
-				color2={ 255 255 255 }
-				
-				b_puerto_cabezas_NI = {}
-				b_santa_marta_NI = {}
-				b_wawa_NI = {}
-				b_kukulaya_NI = {}
-				b_francia_sirpi_NI = {}
-				b_li_dakura_NI = {}
-				b_awastara_NI = {}
-				b_yulu_NI = {}
-			}
 			c_rosita = {
 				color={ 178 17 71 }
 				color2={ 255 255 255 }
@@ -1354,38 +1443,48 @@ e_centroamerica = {
 			c_bocay = {
 				color={ 127 12 50 }
 				color2={ 255 255 255 }
+				
+			#	miskito = "Bosawá"
+			#	mayangna = "Bosawá"
+			#	rama = "Bosawá"
 			
 				b_san_jose_de_bocay_NI = {}
 				b_plan_de_grama_NI = {}
 				b_ayapal_NI = {}
 				b_wamblan_NI = {}
 				b_el_cua_NI = {}
-				b_wiwili_de_nueva_segovia_NI = {}
+				b_wiwili_de_nueva_segovia_NI = {
+					miskito = "Wiwili"
+					mayangna  = "Wiwili"
+					rama = "Wiwili"
+				}
 				b_garrobo_NI = {}
 			}
 			c_waslala = {
 				color={ 204 20 81 }
 				color2={ 255 255 255 }
 			
-				b_waslala_NI = {}
-				b_el_naranjo_NI = {}
+				b_waslala_NI = {
+					nica = "Guaslala"
+					catracho = "Guaslala"
+				}
+				b_el_naranjo_NI = {
+					miskito = "Upla Lalra"
+					mayangna = "Upla Lalra"
+					rama  = "Upla Lalra"
+				}
 				b_siuna_NI = {}
-				b_waspado_NI = {}
+				b_waspado_NI = {
+					nica = "Guaspado"
+					catracho = "Guaspado"				
+				}
 				b_zinica_NI = {}
-				b_rosa_grande_NI = {}
+				b_rosa_grande_NI = {
+					miskito = "Batana Tagni"
+					mayangna= "Batana Tagni"
+					rama= "Batana Tagni"
+				}
 				b_danli_NI = {}
-			}
-			c_prinzapolka = {
-				color={ 102 10 40 }
-				color2={ 255 255 255 }
-			
-				b_prinzapolka_NI = {}
-				b_haulover_NI = {}
-				b_wounta_NI = {}
-				b_wankluma_NI = {}
-				b_yabaltara_NI = {}
-				b_alamikamba_NI = {}
-				b_layasicsa_NI = {}
 			}
 		}
 		d_isla_de_san_andres = {
@@ -1413,6 +1512,15 @@ e_centroamerica = {
 			color2={ 255 255 255 }
 
 			capital = 3182 # Managua
+			
+		d_nicaragua = {
+			color = {  0 0 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 3182 #Managua
+			
+			### great duke of Nicaragua
+		}
 
 		d_rio_san_juan = {
 			color={ 38 86 153 }
@@ -1605,10 +1713,10 @@ e_centroamerica = {
 				b_masachapa_NI = {}
 				b_san_benito_NI = {}
 				b_bosques_de_xiloa_NIC = {}
-				b_santa_teresa_NIC = {}
-				b_tisma_NIC = {}
-				b_villa_el_carmen_NIC = {}
-				b_el_crucero_NIC = {}
+			#	b_santa_teresa_NIC = {}
+			#	b_tisma_NIC = {}
+			#	b_villa_el_carmen_NIC = {}
+			#	b_el_crucero_NIC = {}
 			}
 			c_masaya = {
 				color={ 68 175 229 }
