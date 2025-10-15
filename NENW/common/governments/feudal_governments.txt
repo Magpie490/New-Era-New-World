@@ -1591,7 +1591,11 @@ feudal_governments = {
 			OR = {
 				uses_eastern_feudal_trigger = yes
 				primary_title = {
-					title = e_yuan
+					OR = {
+						title = e_yuan
+						title = k_new_panama
+						title = e_new_panama
+					}
 				}
 			}
 			uses_theocratic_feudal = no
