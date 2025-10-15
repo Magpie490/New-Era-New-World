@@ -151,7 +151,7 @@ uses_raider_gov = {
 	}
 }
 uses_theocratic_feudal = {
-	OR={
+	OR = {
 		AND = {
 			OR = {
 				culture_group = tibetan_group
@@ -182,45 +182,8 @@ uses_theocratic_feudal = {
 		religion = osvicenism
 		religion = neoncult
 		religion = neoncult_reformed
-		AND = {
-			primary_title = {
-				OR = {
-					title = k_athos		
-					title = d_athos
-				}				
-			}
-			OR = {
-				religion = orthodox
-				religion = marblists
-				any_owned_bloodline = {
-					has_bloodline_flag = athos_blood
-				}
-			}
-		}
-		AND = {
-			top_liege = {
-				primary_title = {
-					OR = {
-						title = k_athos
-						title = d_athos
-					}
-				}
-				OR = {
-					religion = orthodox
-					religion = marblists
-					any_owned_bloodline = {
-						has_bloodline_flag = athos_blood
-					}
-				}
-			}
-			OR = {
-				religion = orthodox
-				religion = marblists
-				any_owned_bloodline = {
-					has_bloodline_flag = athos_blood
-				}
-			}
-		}
+		religion = tlaneltokayotl
+		religion = kristooil
 	}
 	NOR = {
 		has_religion_feature = religion_ritual_sacrifice
