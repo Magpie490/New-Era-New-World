@@ -1321,23 +1321,7 @@ bubonic_plague = {
 		outbreak_chance = 0.01
 		
 		can_outbreak = {
-			OR = {
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = delayed_dynamic
-					}
-					total_years_played = 200
-				}
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = dynamic
-					}
-					total_years_played = 100
-				}
-			}
-			NOT = { has_global_flag = black_death_happened }
+			total_years_played = 500
 			has_game_rule = {
 				name = epidemics
 				value = dynamic
@@ -1412,26 +1396,11 @@ bubonic_plague = {
 		outbreak_chance = 0.01
 		
 		can_outbreak = {
-			OR = {
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = delayed_dynamic
-					}
-					total_years_played = 400
-				}
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = dynamic
-					}
-					total_years_played = 300
-				}
-			}
+			total_years_played = 25
 			NOT = { has_global_flag = black_death_happened }
 			has_game_rule = {
 				name = epidemics
-				value = dynamic
+				value = delayed_dynamic
 			}
 		}
 		
@@ -1499,26 +1468,8 @@ bubonic_plague = {
 		end_date = 3200.1.1
 		
 		months = 0
-		
-		outbreak_chance = 0.01
-		
+
 		can_outbreak = {
-			OR = {
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = delayed_dynamic
-					}
-					total_years_played = 600
-				}
-				AND = {
-					has_game_rule = {
-						name = epidemics
-						value = dynamic
-					}
-					total_years_played = 500
-				}
-			}
 			NOT = { has_global_flag = black_death_happened }
 			has_game_rule = {
 				name = epidemics
@@ -1530,8 +1481,6 @@ bubonic_plague = {
 		max_nb_province = 20	# ignored if 0
 
 		one_only = yes
-
-		province_infection_duration = 36
 		
 		outbreak_scenario = { # Classic plague, Canarias
 			chance = 0.30
@@ -1582,7 +1531,6 @@ bubonic_plague = {
 				world_europe_north world_himalayas
 			}
 		}
-		
 	}
 	
 	timeperiod = {	# Purely historical plague
@@ -1629,15 +1577,9 @@ bubonic_plague = {
 		
 		can_outbreak = {			
 			had_global_flag = { flag = black_death_happened days = 18250 }
-			OR = {
-				has_game_rule = {
-					name = epidemics
-					value = dynamic
-				}
-				has_game_rule = {
-					name = epidemics
-					value = delayed_dynamic
-				}
+			has_game_rule = {
+				name = epidemics
+				value = dynamic
 			}
 		}
 		
