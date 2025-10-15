@@ -619,14 +619,56 @@ e_centroamerica = {
 				color={ 25 31 102 }
 				color2={ 255 255 255 }
 				
-				b_el_porvenir_PAN = {}
-				b_tupile_PAN = {}
-				b_ticantiqui_PAN = {}
+				guna = "Duleyala"
+				canalero = "San Blas"
+				
+				b_mangrove_swamp_PAN = {
+					canalero = "Manglar"
+					guna = "Agligandi"
+				}
+				b_tupile_PAN = {
+					guna = "Gannirdub"
+					canalero = "San Ignacio de Tupile"
+				}
+				b_playon_chico_PAN = {
+					guna = "Uggubseni"
+				}
 				b_ustupo_PAN = {}
 				b_warsobtugua_PAN = {}
 				b_nombre_de_dios_PAN = {}
 				b_portobelo_PAN = {}
+				b_ticantiqui_PAN = {
+					canalero = "Tigre"
+					
+				}
 			}
+			c_san_blas = { #2464
+				color = { 0 0 0 }
+				color2 = { 255 255 255 }
+				
+				canalero = "Islas de San Blas"
+				guna = "Gunadubbu"
+				
+				b_el_porvenir_PAN = {
+					guna = "Gaigirgordub"
+				}
+				b_naranjos_grandes_PAN = {
+					guna = "Narasdgandub Dummad"
+				}
+				b_corazon_de_jesus_PAN = {
+					guna = "Akuanusadup"
+				}
+				b_nargana_PAN = {
+					guna = "Yandup"
+				}
+				b_tubuala_PAN = {
+					guna = "Dubwala"
+				}
+				
+				b_ucubsuabit_PAN = {}
+				b_kalugridup_PAN = {}
+				b_banedup_PAN = {}
+				
 		}
 		d_chiriqui = {
 			color={ 35 87 140 }
@@ -799,7 +841,27 @@ e_centroamerica = {
 			}			
 		}
 	}
-	k_ngabe = { #exclusive for ngabe
+	k_abya_yala = {
+		color = { 0 0 0 }
+		color2 = { 255 255 255 }
+		
+		canalero = "Darién"
+	
+		d_guna_yala = {
+			color = { 0 0 0 }
+			color2 = { 255 255 255 }
+			
+		}
+	
+		#creation exclusive to guna
+		#https://en.wikipedia.org/wiki/Abya_Yala
+		#if possible, c_obaldia c_guna_yala c_san_blas become dejure part of d_guna_yala
+	}
+		
+		
+		
+	}
+	k_ngabe = { 
 		color = { 196 226 74 }
 		color2 = { 255 255 255 }
 		
@@ -808,6 +870,7 @@ e_centroamerica = {
 			color={ 196 178 58  }
 			color2={ 255 255 255 }
 			
+			### creation exclusive to ngabe
 			### if possible when k_ngabe is formed, make c_bocas_del_toro, c_changuinola and c_chiriqui_grande dejure part of d_ngable_bugle 
 		}
 	}
