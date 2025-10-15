@@ -30392,6 +30392,10 @@ federal_elective = {
 			} 
 		}
 		OR = {
+			FROM = { age = 30 }
+			ROOT = { is_close_relative = FROM }
+		}
+		OR = {
 			FROM = { any_claim = { title = ROOT_FROMFROM } }
 			ROOT = { is_close_relative = FROM }
 			FROM = { 
