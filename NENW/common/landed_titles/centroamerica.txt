@@ -165,12 +165,16 @@ e_centroamerica = {
 				color2={ 255 255 255 }
 				
 				b_liberia_CSR = {}
-				b_guacalito_CSR = {}
-				b_salto_CSR = {}
 				b_canas_CSR = {}
-				b_cuajiniquil_CSR = {}
-				b_curubande_de_liberia_CSR = {}
-				b_tierras_morenas_CSR = {}
+				b_bagaces_CR = {}
+				b_tilaran_CR = {}
+				b_las_juntas_CR = {}
+				b_la_cruz_CR = {}
+				b_guacalito_CSR = {}
+			#	b_salto_CSR = {}
+			#	b_cuajiniquil_CSR = {}
+			#	b_curubande_de_liberia_CSR = {}
+			#	b_tierras_morenas_CSR = {}
 			}
 			c_santa_cruz_CR = {
 				color={ 153 87 22 }
@@ -178,19 +182,21 @@ e_centroamerica = {
 			
 				b_santa_cruz_CR = {}
 				b_playa_hermosa_CR = {}
+				b_filadelfia_de_guanacaste_CR = {}
+				b_sardinal_de_carrillo_CR ={}
 				b_coco_CR = {}
 				b_playa_flamingo_CR = {}
-				b_filadelfia_de_guanacaste_CR = {}
-				b_tamarindo_CR = {}
-				b_las_catalinas_CR = {}
+			#	b_tamarindo_CR = {}
+			#	b_las_catalinas_CR = {}
 			}
 			c_nicoya = {
 				color={ 255 146 38 }
 				color2={ 255 255 255 }
 			
 				b_nicoya_CR = {}
-				b_hojancha_CR = {}
 				b_jicaral_CR = {}
+				b_hojancha_CR = {}
+				b_carmona_CR = {}
 				b_manzanillo_CR = {}
 				b_samara_CR = {}
 				b_nosara_CR = {}
@@ -207,23 +213,33 @@ e_centroamerica = {
 				
 				b_puntarenas_CR = {}
 				b_el_roble_CR = {}
-				b_punta_morales_CR = {}
+				b_miramar_CR = {}
+				b_esparza_CR = {}
+				b_orotina_CR = {}	
+				b_chacarita_CR = {}
 				b_barranca_CR = {}
-				b_chomes_CR = {}
-				b_macacona_CR = {}
-				b_tarcoles_CR = {}
+				b_punta_morales_CR = {}
+			#	b_chomes_CR = {}
+			#	b_macacona_CR = {}
+			#	b_tarcoles_CR = {}
+				
 			}
-			c_buenos_aires_CR = {
+			c_general = {
 				color={ 255 143 63 }
 				color2={ 255 255 255 }
 			
-				b_buenos_aires_CR = {}
 				b_san_isidro_de_el_general_CR = {}
-				b_san_pedro_CR = {}
+				b_buenos_aires_CR = {}
 				b_san_vito_CR = {}
-				b_brujo_CR = {}
+				b_san_pedro_CR = {}
 				b_daniel_flores_CR = {}
-				b_potrero_grande_CR = {}
+				b_santa_marta_CR = {}
+				b_brujo_CR = {}
+			#	b_sabalito_CR = {}
+			#	b_potrero_grande_CR = {}
+			#	b_agua_buena_CR = {}
+				
+	
 			}
 			c_osa = {
 				color={ 204 114 51 }
@@ -242,24 +258,24 @@ e_centroamerica = {
 				color2={ 255 255 255 }
 			
 				b_quepos_CR = {}
-				b_savegre_de_aguirre_CR = {}
 				b_jaco_CR = {}
-				b_naranjito_CR = {}
 				b_parrita_CR = {}
+				b_savegre_de_aguirre_CR = {}
+				b_naranjito_CR = {}
 				b_esterillos_oeste_CR = {}
 				b_quebrada_ganado_CR = {}
 			}
-			c_golfito = { # 3187
+			c_corredor = { # 3187
 				color={ 178 100 44 }
 				color2={ 255 255 255 }
 				
-				b_puerto_jimenez_CSR = {}
-				b_zancudo_CSR = {}
-				b_pavones_CSR = {}
-				b_dos_brazos_CSR = {}
-				b_sirena_CSR = {}
-				b_esquinas_CSR = {}
+				b_paso_canoas_CR = {}
+				b_ciudad_neily_CR = {}
 				b_golfito_CSR = {}
+				b_rio_claro_CR = {}
+				b_pavones_CR = {}
+				b_laurel_CR = {}
+				b_zancudo_CR = {}
 			}
 		}
 		d_costa_rica = {
@@ -267,6 +283,8 @@ e_centroamerica = {
 			color2={ 255 255 255 }
 			
 			capital = 2335 # c_san_jose_CR
+			
+			tico = "Tica"
 			
 			c_cartago = { # 3186
 				color={ 178 121 8 }
@@ -359,12 +377,13 @@ e_centroamerica = {
 				
 				b_moin_CR = {}
 				b_limon_CSR = {}
+				b_banano_CR = {}
 				b_las_fincas_CR = {}
 				b_bomba_CR = {}
 				b_penshurt_CR = {}
 				b_bananito_sur_CSR = {}
-				b_carmen_CSR = {}
-				b_bolivia_CSR = {}
+			#	b_carmen_CSR = {}
+			#	b_bolivia_CSR = {}
 			}			
 			c_pococi = {
 				color={ 226 185 70  }
@@ -406,7 +425,14 @@ e_centroamerica = {
 			#	b_sibubeta_CR = {}
 			}
 				
-		}		
+		}
+		d_brunca = { #this title should work as a titular tribal (or not) title for southeastern Costa Rica (c_general, c_corredor and c_osa)
+			color = { 193 213 33 }
+			color2 = { 255 255 255 }
+			
+			capital = 2340 #c_general
+			
+		}
 	}
 	k_panama = {
 		color={ 32 93 216 }
@@ -603,70 +629,9 @@ e_centroamerica = {
 				b_portobelo_PAN = {}
 			}
 		}
-		d_ngabe_bugle = {
+		d_ngabe_bugle = { #titular duchy for the ngabe people; can form the k_ngabe title
 			color={ 60 136 242 }
 			color2={ 255 255 255 }
-		
-			c_changuinola = {
-				color={ 57 129 229 }
-				color2={ 255 255 255 }
-				
-				b_changuinola_PAN = {}
-				b_almirante_PAN = {}
-				b_valle_de_agua_arriba_PAN = {}
-				b_guabito_PAN = {}
-				b_el_empalme_PAN = {}
-				b_la_gloria_PAN = {}
-				b_tuwai_PAN = {}
-			}
-			c_canazas = {
-				color={ 63 143 255 }
-				color2={ 255 255 255 }
-			
-				b_canazas_PAN = {}
-				b_san_juan_PAN = {}
-				b_calobre_PAN = {}
-				b_san_francisco_PAN = {}
-				b_cerro_de_plata_PAN = {}
-				b_los_valles_PAN = {}
-				b_el_hatillo_PAN = {}
-			}
-			c_chiriqui_grande = {
-				color={ 51 114 204 }
-				color2={ 255 255 255 }
-			
-				b_chiriqui_grande_PAN = {}
-				b_kusapin_PAN = {}
-				b_bahia_azul_PAN = {}
-				b_kankintu_PAN = {}
-				b_bisira_PAN = {}
-				b_boca_de_daira_PAN = {}
-				b_boca_de_cricamola_PAN = {}
-			}
-			c_muna_PAN = {
-				color={ 44 100 178 }
-				color2={ 255 255 255 }
-			
-				b_chichica_PAN = {}
-				b_vigui_PAN = {}
-				b_soloy_PAN = {}
-				b_hato_chami_PAN = {}
-				b_hato_pilon_PAN = {}
-				b_maraca_PAN = {}
-				b_agua_salud_PAN = {}
-			}
-			c_bocas_del_toro = { # 3192
-				color={ 96 162 255 }
-				color2={ 255 255 255 }
-				
-				b_bocas_del_toro_PAN = {}
-				b_bastimento_PAN = {}
-				b_aguacate_PAN = {}
-				b_punta_laurel_PAN = {}
-				b_cayo_de_agua_PAN = {}
-				b_cauchero_PAN = {}
-				b_kankintu_PAN = {}
-			}
 		}
 		d_chiriqui = {
 			color={ 35 87 140 }
@@ -733,6 +698,68 @@ e_centroamerica = {
 				b_granito_de_oro_PAN = {}
 				b_jicaron_PAN = {}
 			}
+		
+			c_changuinola = {
+				color={ 57 129 229 }
+				color2={ 255 255 255 }
+				
+				b_changuinola_PAN = {}
+				b_almirante_PAN = {}
+				b_valle_de_agua_arriba_PAN = {}
+				b_guabito_PAN = {}
+				b_el_empalme_PAN = {}
+				b_la_gloria_PAN = {}
+				b_tuwai_PAN = {}
+			}
+			c_canazas = {
+				color={ 63 143 255 }
+				color2={ 255 255 255 }
+			
+				b_canazas_PAN = {}
+				b_san_juan_PAN = {}
+				b_calobre_PAN = {}
+				b_san_francisco_PAN = {}
+				b_cerro_de_plata_PAN = {}
+				b_los_valles_PAN = {}
+				b_el_hatillo_PAN = {}
+			}
+			c_chiriqui_grande = {
+				color={ 51 114 204 }
+				color2={ 255 255 255 }
+			
+				b_chiriqui_grande_PAN = {}
+				b_kusapin_PAN = {}
+				b_bahia_azul_PAN = {}
+				b_kankintu_PAN = {}
+				b_bisira_PAN = {}
+				b_boca_de_daira_PAN = {}
+				b_boca_de_cricamola_PAN = {}
+			}
+			c_muna_PAN = {
+				color={ 44 100 178 }
+				color2={ 255 255 255 }
+			
+				b_chichica_PAN = {}
+				b_vigui_PAN = {}
+				b_soloy_PAN = {}
+				b_hato_chami_PAN = {}
+				b_hato_pilon_PAN = {}
+				b_maraca_PAN = {}
+				b_agua_salud_PAN = {}
+			}
+			c_bocas_del_toro = { # 3192
+				color={ 96 162 255 }
+				color2={ 255 255 255 }
+				
+				b_bocas_del_toro_PAN = {}
+				b_bastimento_PAN = {}
+				b_aguacate_PAN = {}
+				b_punta_laurel_PAN = {}
+				b_cayo_de_agua_PAN = {}
+				b_cauchero_PAN = {}
+				b_kankintu_PAN = {}
+			}
+			
 		}
 	}
 	k_guaymuras = {
