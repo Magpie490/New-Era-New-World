@@ -2666,18 +2666,21 @@ targeted_decisions = {
 			NOT = {
 				government = mandala_government
 			}
+			OR = {
+				AND = {
+					ai = yes
+					ROOT = { NOT = { any_dejure_liege = { character = FROM } } }
+				}
+				AND = {
+					ai = no
+				}
+			}
 		}
 	
 		potential = {
 			NOT = { character = FROM }
 			liege = { character = FROM }
 			higher_tier_than = count
-			OR = {
-				AND = {
-					ai = yes
-					NOT = { any_dejure_liege = FROM }
-				}
-			}
 		}
 		allow = {
 			FROM = {
@@ -2697,7 +2700,7 @@ targeted_decisions = {
 								learning = 10
 							}
 						}
-						real_tier = emperor
+						real_tier = EMPEROR
 					}
 					AND = {
 						ai = yes
@@ -2720,7 +2723,7 @@ targeted_decisions = {
 								learning = 10
 							}
 						}
-						real_tier = emperor
+						real_tier = EMPEROR
 						TECH_MAJESTY = 4
 						TECH_RECRUITMENT = 4
 						prestige = 750
