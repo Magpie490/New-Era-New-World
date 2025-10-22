@@ -1572,11 +1572,15 @@
 10094 = {
 	name = "León" #Duke of Tegucigalpa
 	female = no
-	dynasty = 5229241 #Zelaya 
+	dynasty = 5229242 #Zelaya 
 	religion = purisimo
 	culture = catracho
 	disallow_random_traits = no
 	father = 10096
+	trait = robust
+	trait = skilled_tactician
+	trait = diligent
+	trait =  rough_terrain_leader
 	2280.8.23 = {
 		birth = yes
 	}
@@ -1585,9 +1589,9 @@
 	}
 }
 10096 = {
-	name = "Lorenzo" #Former Duke of Tegucigalpa
+	name = "Lorenzo" #Purísimo Peasant Rebel of Talanga
 	female = no
-	dynasty = 5229241 #Zelaya 
+	dynasty = 5229242 #Zelaya 
 	religion = purisimo
 	culture = catracho
 	disallow_random_traits = no
@@ -1596,16 +1600,21 @@
 		birth = yes
 	}
 	2305.9.6 = {
-		death = yes
+		death = {
+			death_reason = death_execution
+				killer = 10106
+		}
 	}
 }
 10097  = {
 	name = "Manuel" #Count of El Paraiso
 	female = no
-	dynasty = 5229241 #Zelaya 
+	dynasty = 5229242 #Zelaya 
 	religion = purisimo
 	culture = catracho
 	disallow_random_traits = no
+	martial = 8
+	trait = tough_soldier
 	father = 10096
 	2283.2.9 = {
 		birth = yes
@@ -1617,7 +1626,7 @@
 10098  = {
 	name = "José" #Heir to the county of El Paraiso
 	female = no
-	dynasty = 5229241 #Zelaya 
+	dynasty = 5229242 #Zelaya 
 	religion = purisimo
 	culture = catracho
 	disallow_random_traits = no
@@ -1632,15 +1641,255 @@
 10099 = {
 	name = "Lorenzo" #Heir of Tegucigalpa
 	female = no
-	dynasty = 5229241 #Zelaya 
+	dynasty = 5229242 #Zelaya 
 	religion = purisimo
 	culture = catracho
 	disallow_random_traits = no
 	father = 10094
-	2280.3.13 = {
+	mother = 10103
+	2306.3.13 = {
 		birth = yes
 	}
 	2395.1.1 = {
+		death = yes
+	}
+}
+10100 = {
+	name = "Leticia" #Daughter of the Duke of Tegucigalpa
+	female = yes
+	dynasty = 5229242 #Zelaya 
+	religion = purisimo
+	culture = catracho
+	disallow_random_traits = no
+	father = 10094
+	mother = 10103
+	2311.8.18 = {
+		birth = yes
+	}
+	2395.1.1 = {
+		death = yes
+	}
+}
+10101 = {
+	name = "Leónidas" #Son of the Duke of Tegucigalpa
+	female = no
+	dynasty = 5229242 #Zelaya 
+	religion = purisimo
+	culture = catracho
+	trait = strong
+	trait = quick
+	disallow_random_traits = no
+	father = 10094
+	mother = 10103	
+	2313.3.11 = {
+		birth = yes
+	}
+	2395.1.1 = {
+		death = yes
+	}
+}
+10102  = {
+	name = "Juan" #Son of the Count of El Paraiso
+	female = no
+	dynasty = 5229242 #Zelaya 
+	religion = purisimo
+	culture = catracho
+	disallow_random_traits = no
+	father = 10097
+	mother = 10104
+	2309.12.9 = {
+		birth = yes
+	}
+	2395.1.1 = {
+		death = yes
+	}
+}
+10103  = {
+	name = "Berenice" #Wife of the Duke of Tegucigalpa
+	female = yes
+	dynasty = 999999999 #Random
+	religion = purisimo
+	culture = catracho
+	trait = fair
+	trait = quick
+	disallow_random_traits = no
+	2286.1.19 = {
+		birth = yes
+	}
+	2305.1.1 = { add_spouse = 10094 }
+	2384.1.1 = {
+		death = yes
+	}
+}
+10104  = {
+	name = "María" #Wife of the Count of El Paraíso
+	female = yes
+	dynasty = 999999999 #Random
+	religion = purisimo
+	culture = catracho
+	disallow_random_traits = no
+	2286.2.9 = {
+		birth = yes
+	}
+	2301.1.1 = { add_spouse = 10097 }
+	2384.1.1 = {
+		death = yes
+	}
+}
+10105  = {
+	name = "Humberto" #Count of La Paz
+	female = no
+	dynasty = 5229243 #Suazo
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	father = 10106
+	mother = 10110
+	2265.7.12 = {
+		birth = yes
+	}
+	2339.1.1 = {
+		death = yes
+	}
+}
+10106  = {
+	name = "Roberto" #Former Duke of Tegucigalpa, ousted by the rebellion of the Zelayas
+	female = no
+	dynasty = 5229243 #Suazo
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	father = 10107
+	2227.3.17 = {
+		birth = yes
+	}
+	2318.12.22 = {
+		death = yes
+	}
+}
+10107  = {
+	name = "Anselmo" #Founder of Suazo Dynasty and Count of La Paz
+	female = no
+	dynasty = 5229243 #Suazo
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	2200.1.1 = {
+		birth = yes
+	}
+	2250.1.1 = {
+		death = yes
+	}
+}
+10108  = {
+	name = "Heriberto" #4th Gen Suazo Scion
+	female = no
+	dynasty = 5229243 #Suazo
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	trait = deceitful
+	trait = gregarious
+	trait = envious
+	father =  10105
+	mother =  10111	
+	2286.8.2 = {
+		birth = yes
+	}
+	2350.1.1 = {
+		death = yes
+	}
+}
+10109  = {
+	name = "Alberto" #4th Gen Suazo Scion
+	female = no
+	dynasty = 5229243 #Suazo
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	trait = ambitious
+	trait = gregarious
+	trait = lustful
+	father =  10105	
+	mother =  10111
+	2290.8.18 = {
+		birth = yes
+	}
+	2350.1.1 = {
+		death = yes
+	}
+}
+10110  = {
+	name = "Aida" #Wife of Roberto Suazo, former Duke of Tegucigalpa
+	female = yes
+	dynasty = 999999 #Random
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	2230.9.8 = {
+		birth = yes
+	}
+	2255.8.1 = { add_spouse = 10106 }
+	2326.1.1 = {
+		death = yes
+	}
+}
+10111  = {
+	name = "Adelaida" #Wife of Humberto Suazo, Count of La Paz
+	female = yes
+	dynasty = 999999 #Random
+	religion = catholic
+	culture = lenca
+	disallow_random_traits = no
+	2269.12.9 = {
+		birth = yes
+	}
+	2283.8.1 = { add_spouse = 10105 }
+	2350.1.1 = {
+		death = yes
+	}
+}
+10112  = {
+	name = "Cristina" #Wife of Heriberto Suazo
+	female = yes
+	dynasty = 5229222 #Barrios
+	religion = catholic
+	culture = catracho
+	father = 10027
+	disallow_random_traits = no
+	2288.12.23 = {
+		birth = yes
+	}
+	2219.12.10 = { add_spouse = 10108 }
+	2350.1.1 = {
+		death = yes
+	}
+}
+10112  = {
+	name = "Olga" #Daughter of the Count of Yoro
+	female = yes
+	dynasty = 5229233 #Xicaque
+	religion = catholic
+	culture = tol 
+	disallow_random_traits = no
+	2302.12.23 = {
+		birth = yes
+	}
+	2350.1.1 = {
+		death = yes
+	}
+}
+10113  = {
+	name = "Ana" #Daughter of the Count of Yoro
+	female = yes
+	dynasty = 5229233 #Xicaque
+	religion = catholic
+	culture = tol 
+	disallow_random_traits = no
+	2306.9.28 = {
+		birth = yes
+	}
+	2350.1.1 = {
 		death = yes
 	}
 }
