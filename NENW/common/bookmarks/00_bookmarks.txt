@@ -271,3 +271,95 @@ bm_us_west_coast = {
 		}
 	}
 }
+
+bm_mexico = {
+	name = "BM_MEXICO_ERA"
+	desc = "BM_MEXICO_ERA_INFO"
+	date = 2325.1.1
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_6
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = { #Ignacio Herrera Garza-Garcia
+		id = 4700002
+		age = 44
+		name = ERA_CHAR_NAME_4700002
+		title = k_nuevo_leon
+		title_name = k_nuevo_leon
+		
+		character = {
+			dna = 0c00b0g0000
+			properties = 0a00bb000000000000000000000000000000
+			religion="ardentist"
+			culture="regio"
+			government = feudal_government
+			dynasty=5128758
+		}
+	}
+	selectable_character = { #Javier Navarro
+		id = 2100001
+		age = 35
+		name = ERA_CHAR_NAME_2100001
+		title = e_mexico
+		title_name = e_mexico
+		
+		character = {
+			dna = sirevutgpiw
+			properties = ah00j0000000000000000000000000000000000
+			religion="catholic"
+			culture="chilangos"
+			government = holymexico_government
+			dynasty=5124176
+		}
+	}
+	selectable_character = { #José Covarrubias
+		id = 2200084
+		age = 45
+		name = ERA_CHAR_NAME_2200084
+		title = k_coatzacoalcos
+		title_name = k_coatzacoalcos
+		
+		character = {
+			dna = htpyvztouxp
+			properties = amv0gc00000000000000000000000000000000
+			religion="muertista"
+			culture="ribereno"
+			government = feudal_government
+			dynasty=5228136
+		}
+	}
+	selectable_character = { #Andrés Henestrosa
+		id = 2200117
+		age = 25
+		name = ERA_CHAR_NAME_2200117
+		title = k_zapoteca
+		title_name = k_zapoteca
+		
+		character = {
+			dna = ezqlkijyerz
+			properties = alf0nc000000000000000000000000000000000
+			religion="quixtiano"
+			culture="zapotec"
+			government = feudal_government
+			dynasty=5229213
+		}
+	}
+	selectable_character = { #Nava Celestina
+		id = 2200092
+		age = 25
+		name = ERA_CHAR_NAME_2200092
+		title = k_guerrero
+		title_name = k_guerrero
+		
+		character = {
+			female = yes
+			dna = titfeuwkyxb
+			properties = cgb0na0000000000b0000000000000000000000
+			religion="tlaneltokayotl"
+			culture="nahuatl"
+			government = tribal_government
+			dynasty=5228142
+		}
+	}
+}
