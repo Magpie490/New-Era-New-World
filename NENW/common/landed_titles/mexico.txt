@@ -1459,6 +1459,10 @@ e_mexico = {
 		
 		mephaa = "Mixíí"
 		
+		title = king_male
+		title_female = king_female
+		title_prefix = kingdom
+		
 		d_teotihuacan = { #titular archbishopric for the HME
 			color = { 40 204 163 }
 			color2 = { 255 255 255 }
@@ -1608,15 +1612,6 @@ e_mexico = {
 				raramuri = "Tenochtitlan"
 				mephaa = "Mixíí"
 
-				holy_site = catholic
-				holy_site = centaurista_reformed
-				holy_site = centaurista
-				holy_site = guadalupano
-				holy_site = votanzapatista
-				holy_site = tlaneltokayotl
-				holy_site = muertista
-				holy_site = quixtiano
-				
 				b_mexico_MX = {
 					nahuatl = "Tenochtitlan"
 					mixtec = "Tenochtitlan"
@@ -1628,12 +1623,12 @@ e_mexico = {
 					mephaa = "Mixíí"
 				}
 				b_catedral_metropolitana_cdmx = { 
-					short_name = yes
-					#title_prefix = metro_cathedral
+				#	short_name = yes
+					title_prefix = metro_cathedral
 				}
 				b_basilica_de_santa_maria_de_guadalupe_cdmx = { 
-						title_prefix = basilica
-						coat_of_arms = {
+					title_prefix = basilica
+					coat_of_arms = {
 							religion = catholic
 							template = 0
 							layer = {
@@ -1644,7 +1639,16 @@ e_mexico = {
 								color = 0
 								color = 0
 							}
-						}
+					}
+					holy_site = catholic
+					holy_site = centaurista_reformed
+					holy_site = centaurista
+					holy_site = guadalupano
+					holy_site = votanzapatista
+					holy_site = tlaneltokayotl
+					holy_site = muertista
+					holy_site = quixtiano
+										
 				}
 				b_tlatelolco_cdmx = {}
 				b_tepito_cdmx = {}

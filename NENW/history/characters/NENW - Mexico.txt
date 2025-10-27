@@ -1,8 +1,9 @@
-2100000 = {
-	dynasty = 5124141
-	name = "José Luis" #José Luis, the Patriarch of Mexico. An esteemed religious leader unafarid to use his politcal power
+1 = { #1-15 Dynasty of the Patriarch
+	name = "Agustín" #The Patriarch of Mexico. An esteemed religious leader unafarid to use his politcal power; Nephew of Emperor Augusto
+	dynasty = 5229245 #Labastida
 	religion = catholic
 	culture = chilangos
+	father = 8
 	trait = mastermind_theologian
 	trait = quick
 	trait = stubborn
@@ -12,26 +13,486 @@
 	trait = ambitious
 	trait = zealous
 	trait = wroth
+	trait = ambitious
 	disallow_random_traits = yes
-	2260.4.27 = {
+	2260.3.19 = {
 		birth = yes
 	}
-	2666.1.1 = {
+	2348.1.1 = {
 		death = yes
 	}
 }
-2100001 = {
-	dynasty = 5124176
-	name = "Javier" #Javier Navarro, Emperor of HME
+2 = { 
+	name = "Augusto" #Former Emperor of HME; father of the current Patriarch of Mexico, 1st Labastida HME emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	trait = grey_eminence
+	trait = quick
+	trait = stubborn
+	trait = diligent
+	trait = proud
+	trait = zealous
+	trait = just
+	trait = cavalry_leader
+	father = 6
+	disallow_random_traits = yes
+	2228.2.2 = {
+		birth = yes
+	}
+	2290.12.29 = {
+		death = yes
+	}
+}
+3 = {
+	name = "José María" #Former Emperor of HME; brother of the current Patriarch of Mexico
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	trait = grey_eminence
+	trait = quick
+	trait = stubborn
+	trait = diligent
+	trait = proud
+	trait = zealous
+	trait = just
+	trait = cavalry_leader
+	father = 2
+	disallow_random_traits = yes
+	2252.9.22 = {
+		birth = yes
+	}
+	2318.12.29 = { death = yes
+	}
+}
+4 = {
+	name = "Augusto" #Augusto II, Former Emperor of HME; father-in-law of the current Emperor of Mexico and nephew of the current Patriarch
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	trait = naive_appeaser
+	trait = content
+	trait = gregarious
+	trait = honest
+	trait = humble
+	trait = chaste
+	trait = flu
+	father = 3
+	disallow_random_traits = yes
+	2275.8.14 = {
+		birth = yes
+	}
+	2322.8.19 = {
+		death = { death_reason = death_trait }
+	}
+}
+5 = {
+	name = "Concepción" #Imperial Princess of Mexico, empress consort
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	learning = 13
+	trait = scholarly_theologian
+	trait = chaste
+	trait = erudite
+	trait = poet
+	trait = shy
+	trait = zealous
+	father = 4
+	disallow_random_traits = yes
+	2296.11.29 = {
+		birth = yes
+	}
+	2385.7.11 = {
+		death = yes
+	}
+	2322.8.19 = {
+		effect = {
+			add_weak_claim = d_vallemex
+		}
+	}
+}
+6 = {
+	name = "José María" #Count of Tlalpan and Prince of Cedemequis, father of the first Labastida HME emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father = 7
+	2199.11.5 = {
+		birth = yes
+	}
+	2278.12.29 = {
+		death = yes
+	}
+}
+7 = {
+	name = "Francisco" #Count of Tlalpan, founder of the Labastida House
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	2171.9.9 = {
+		birth = yes
+	}
+	2241.9.1 = {
+		death = yes
+	}
+}
+8 = {
+	name = "Francisco" #Older brother of the first Labastida HME Emperor, couldn't become Prince of Cedemequis, which passed to the emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  6
+	2226.7.13 = {
+		birth = yes
+	}
+	2278.11.12 = {
+		death = yes
+	}
+}
+9 = {
+	name = "Francisco" #Count of Tlalpan, nephew of the emperor Augusto, brother of the Patriarch of Mexico
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  8
+	2254.11.12 = {
+		birth = yes
+	}
+	2324.11.12 = {
+		death = yes
+	}
+}
+10 = {
+	name = "Francisco" #Count of Tlalpan, nephew of the Patriarch of Mexico; Prince of Cedemequis since the death of his dynast emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  9
+	2281.4.28 = {
+		birth = yes
+	}
+	2366.1.1 = {
+		death = yes
+	}
+}
+11 = {
+	name = "Francisco" #Heir of the Princedom of Cedemequis
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  10
+	2310.5.18 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+} 
+12 = {
+	name = "Josefina" #Daughter of the current Prince of Cedemequis
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  10
+	2307.9.23 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+13 = {
+	name = "Amanda" #Daughter of the current Prince of Cedemequis
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  10
+	2304.7.4 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}  
+14 = {
+	name = "José María" #Bishop of Xochimilco
+	female = no
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	learning = 8
+	trait = mastermind_theologian
+	trait = zealous
+	trait = ambitious
+	father =  9
+	2288.7.4 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}  
+15 = {
+	name = "Berenice" #Sister of the Augusto II
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  3
+	2278.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+16 = {
+	name = "Ofelia" #Sister of the Augusto II
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  3
+	2281.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+17 = {
+	name = "Francisco" #Bishop of Xochimilco, brother of José María, emperor of the HME
+	female = no
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  2
+	trait = martial_cleric
+	trait = content
+	2256.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+18 = {
+	name = "María José" #Daughter of the Bishop of Xochimilco
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  17
+	trait = content
+	2285.12.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+
+20 = { #Madeja Dynasty, ancient kings of Mexico and first crowned emperors of the HME; hail from Atlacomulco. 	
+	name = "Carlos" #Founding Member of the Madeja Dynasty
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	2004.9.16 = { 
+		birth = yes
+	}
+	2078.11.3 = {
+		death = yes
+	}
+}
+21 = { 
+	name = "Jorge" #First prince of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 20
+	2028.2.14 = { 
+		birth = yes
+	}
+	2089.9.1 = {
+		death = yes
+	}
+}
+22 = { 
+	name = "Carlos" #First king of Mexico
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 21
+	trait = exalted_warlord
+	trait = strong
+	trait = brave
+	trait = experimenter
+	2066.7.6 = { 
+		birth = yes
+	}
+	2132.5.9 = {
+		death = yes
+	}
+}
+23 = { 
+	name = "Jorge" #Firstborn of the King of Mexico, died in battle 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 22
+	trait = skilled_tactician
+	trait = robust
+	trait = brave
+	trait = direct_leader
+	
+	2091.9.20 = { 
+		birth = yes
+	}
+	2121.5.9 = { #Died in some battle
+		death = yes
+	}
+}
+24 = { 
+	name = "Clemente" #2nd King of Mexico 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 22
+	2096.1.20 = { 
+		birth = yes
+	}
+	2144.4.8 = {
+		death = yes
+	}
+}
+25 = { 
+	name = "Jorge" #Son of Jorge the firstborn of Carlos I 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 23
+	2115.1.20 = { 
+		birth = yes
+	}
+	2169.4.8 = {
+		death = yes
+	}
+}
+26 = { 
+	name = "Nemesio" #Son of Jorge the firstborn of Carlos I 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 23
+	2118.11.20 = { 
+		birth = yes
+	}
+	2177.4.8 = {
+		death = yes
+	}
+}
+27 = {
+	name = "Carlos" #First Emperor of the HME 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 24
+	trait = shrewd
+	trait = grey_eminence
+	trait = ambitious
+	trait = proud
+	trait = aggressive_leader
+	trait = zealous	
+	trait = just
+	2117.9.16 = { 
+		birth = yes
+	}
+	2181.9.13 = {
+		death = yes
+	}
+}
+28 = {
+	name = "Alejandro" #Son of Prince Jorge of Edomex (nephew of Emperor Carlos); would become Prince after his father's death
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 25
+	2139.8.21 = { 
+		birth = yes
+	}
+	2199.11.13 = {
+		death = yes
+	}
+}
+29 = {
+	name = "Jorge" #Son of Prince Alejandro of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 28
+	2152.9.29 = { 
+		birth = yes
+	}
+	2213.9.28 = {
+		death = yes
+	}
+}
+30 = {
+	name = "Andrés" #Son of Prince Alejandro of Edomex, Patriarch of Mexico
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 28
+	2157.5.23 = { 
+		birth = yes
+	}
+	2231.9.28 = {
+		death = yes
+	}
+}
+31 = {
+	name = "Alejandro" #Son of Prince Jorge III of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 29
+	2177.3.29 = { 
+		birth = yes
+	}
+	2241.6.29 = {
+		death = yes
+	}
+}
+2100001 = { #15
+	dynasty = 5229244 #Aguilar y Deza
+	name = "Cuauhtémoc" #Cuahtémoc Aguilar y Deza, Emperor of HME
 	religion = catholic
 	culture = chilangos
 	2289.4.27 = {
 		birth = yes
 	}
-	2666.1.1 = {
+	2360.1.1 = {
 		death = yes
 	}
+	2317.6.5 = { add_spouse = 5 }
 }
+
 
 
 #HUASTECA
