@@ -1,39 +1,1553 @@
-2100000 = {
-	dynasty = 5124141
-	name = "José Luis" #José Luis, the Patriarch of Mexico. An esteemed religious leader unafarid to use his politcal power
+1 = { #1-15 Dynasty of the Patriarch
+	name = "Agustín" #The Patriarch of Mexico. An esteemed religious leader unafarid to use his politcal power; Nephew of Emperor Augusto
+	dynasty = 5229245 #Labastida
 	religion = catholic
 	culture = chilangos
+	father = 8
 	trait = mastermind_theologian
 	trait = quick
 	trait = stubborn
 	trait = celibate
 	trait = diligent
 	trait = proud
-	trait = ambitious
 	trait = zealous
 	trait = wroth
+	trait = ambitious
 	disallow_random_traits = yes
-	2260.4.27 = {
+	2260.3.19 = {
 		birth = yes
 	}
-	2666.1.1 = {
+	2348.1.1 = {
 		death = yes
 	}
 }
-2100001 = {
-	dynasty = 5124176
-	name = "Javier" #Javier Navarro, Emperor of HME
+2 = { 
+	name = "Augusto" #Former Emperor of HME; father of the current Patriarch of Mexico, 1st Labastida HME emperor
+	dynasty = 5229245 #Labastida
 	religion = catholic
 	culture = chilangos
+	trait = grey_eminence
+	trait = quick
+	trait = stubborn
+	trait = diligent
+	trait = proud
+	trait = zealous
+	trait = just
+	trait = cavalry_leader
+	father = 6
+	mother = 37
+	disallow_random_traits = yes
+	2228.2.2 = {
+		birth = yes
+	}
+	2250.1.1 = { add_spouse = 68 }
+	2290.12.29 = {
+		death = yes
+	}
+}
+3 = {
+	name = "José María" #Former Emperor of HME; brother of the current Patriarch of Mexico
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	trait = grey_eminence
+	trait = quick
+	trait = stubborn
+	trait = diligent
+	trait = proud
+	trait = zealous
+	trait = just
+	trait = cavalry_leader
+	father = 2
+	mother = 68
+	disallow_random_traits = yes
+	2252.9.22 = {
+		birth = yes
+	}
+	2318.12.29 = { death = yes
+	}
+}
+4 = {
+	name = "Augusto" #Augusto II, Former Emperor of HME; father-in-law of the current Emperor of Mexico and nephew of the current Patriarch
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	trait = naive_appeaser
+	trait = content
+	trait = gregarious
+	trait = honest
+	trait = humble
+	trait = chaste
+	trait = flu
+	father = 3
+	disallow_random_traits = yes
+	2275.8.14 = {
+		birth = yes
+	}
+	2322.8.19 = {
+		death = { death_reason = death_trait }
+	}
+}
+5 = {
+	name = "Concepción" #Imperial Princess of Mexico, empress consort
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	learning = 13
+	trait = grey_eminence
+	trait = chaste
+	trait = erudite
+	trait = poet
+	trait = shy
+	trait = zealous
+	father = 4
+	disallow_random_traits = yes
+	2296.11.29 = {
+		birth = yes
+	}
+	2385.7.11 = {
+		death = yes
+	}
+	2322.8.19 = {
+		effect = {
+			add_weak_claim = d_vallemex
+		}
+	}
+}
+6 = {
+	name = "José María" #Count of Tlalpan and Prince of Cedemequis, father of the first Labastida HME emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father = 7
+	mother = 35
+	2199.11.5 = {
+		birth = yes
+	}
+	2278.12.29 = {
+		death = yes
+	}
+}
+7 = {
+	name = "Francisco" #Count of Tlalpan, founder of the Labastida House
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	2171.9.9 = {
+		birth = yes
+	}
+	2241.9.1 = {
+		death = yes
+	}
+}
+8 = {
+	name = "Francisco" #Older brother of the first Labastida HME Emperor, couldn't become Prince of Cedemequis, which passed to the emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  6
+	mother = 37
+	2226.7.13 = {
+		birth = yes
+	}
+	2278.11.12 = {
+		death = yes
+	}
+}
+9 = {
+	name = "Francisco" #Count of Tlalpan, nephew of the emperor Augusto, brother of the Patriarch of Mexico
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  8
+	2254.11.12 = {
+		birth = yes
+	}
+	2324.11.12 = {
+		death = yes
+	}
+}
+10 = {
+	name = "Francisco" #Count of Tlalpan, nephew of the Patriarch of Mexico; Prince of Cedemequis since the death of his dynast emperor
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  9
+	mother = 52
+	2281.4.28 = {
+		birth = yes
+	}
+	2313.10.25 = { add_spouse = 76 }
+	2366.1.1 = {
+		death = yes
+	}
+}
+11 = {
+	name = "Francisco" #Heir of the Princedom of Cedemequis
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  10
+	mother = 76
+	2319.5.18 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+} 
+12 = {
+	name = "Josefina" #Daughter of the current Prince of Cedemequis
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  10
+	mother = 76 
+	2315.9.23 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+13 = {
+	name = "Amanda" #Daughter of Emperor Augusto II, wife of Prince Carlos of Toluca
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  4
+	2304.7.4 = {
+		birth = yes
+	}
+	2320.9.16 = { add_spouse = 75 }
+	2376.1.1 = {
+		death = yes
+	}
+}  
+14 = {
+	name = "José María" #Bishop of Xochimilco
+	female = no
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	learning = 8
+	trait = mastermind_theologian
+	trait = zealous
+	trait = ambitious
+	father =  9
+	mother = 52
+	2288.7.4 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}  
+15 = {
+	name = "Berenice" #Sister of the Augusto II, princess of Edomex
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  3
+	2278.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+16 = {
+	name = "Ofelia" #Sister of the Augusto II, Archprincess of Guanajuato
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  3
+	2281.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+17 = {
+	name = "Francisco" #Bishop of Xochimilco, brother of José María, emperor of the HME
+	female = no
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father = 2
+	mother = 68
+	trait = martial_cleric
+	trait = content
+	2256.4.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+18 = {
+	name = "María José" #Daughter of the Bishop of Xochimilco
+	female = yes
+	dynasty = 5229245 #Labastida
+	religion = catholic
+	culture = chilangos
+	father =  17
+	mother = 96
+	trait = content
+	2285.12.2 = {
+		birth = yes
+	}
+	2376.1.1 = {
+		death = yes
+	}
+}
+
+20 = { #Madeja Dynasty, ancient kings of Mexico and first crowned emperors of the HME; hail from Atlacomulco. 	
+	name = "Carlos" #Founding Member of the Madeja Dynasty
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	2004.9.16 = { 
+		birth = yes
+	}
+	2078.11.3 = {
+		death = yes
+	}
+}
+21 = { 
+	name = "Jorge" #First prince of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 20
+	2028.2.14 = { 
+		birth = yes
+	}
+	2089.9.1 = {
+		death = yes
+	}
+}
+22 = { 
+	name = "Carlos" #First king of Mexico
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 21
+	trait = exalted_warlord
+	trait = strong
+	trait = brave
+	trait = experimenter
+	2066.7.6 = { 
+		birth = yes
+	}
+	2132.5.9 = {
+		death = yes
+	}
+}
+23 = { 
+	name = "Jorge" #Firstborn of the King of Mexico, died in battle 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 22
+	trait = skilled_tactician
+	trait = robust
+	trait = brave
+	trait = direct_leader
+	
+	2091.9.20 = { 
+		birth = yes
+	}
+	2121.5.9 = { #Died in some battle
+		death = yes
+	}
+}
+24 = { 
+	name = "Clemente" #2nd King of Mexico 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 22
+	2096.1.20 = { 
+		birth = yes
+	}
+	2144.4.8 = {
+		death = yes
+	}
+}
+25 = { 
+	name = "Jorge" #Son of Jorge the firstborn of Carlos I 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 23
+	2115.1.20 = { 
+		birth = yes
+	}
+	2169.4.8 = {
+		death = yes
+	}
+}
+26 = { 
+	name = "Nemesio" #Son of Jorge the firstborn of Carlos I 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 23
+	2118.11.20 = { 
+		birth = yes
+	}
+	2177.4.8 = {
+		death = yes
+	}
+}
+27 = {
+	name = "Carlos" #First Emperor of the HME 
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 24
+	trait = shrewd
+	trait = grey_eminence
+	trait = ambitious
+	trait = proud
+	trait = aggressive_leader
+	trait = zealous	
+	trait = just
+	2117.9.16 = { 
+		birth = yes
+	}
+	2181.9.13 = {
+		death = yes
+	}
+}
+28 = {
+	name = "Alejandro" #Son of Prince Jorge of Edomex (nephew of Emperor Carlos); would become Prince after his father's death
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 25
+	2139.8.21 = { 
+		birth = yes
+	}
+	2199.11.13 = {
+		death = yes
+	}
+}
+29 = {
+	name = "Jorge" #Son of Prince Alejandro of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 28
+	2152.9.29 = { 
+		birth = yes
+	}
+	2213.9.28 = {
+		death = yes
+	}
+}
+30 = {
+	name = "Andrés" #Son of Prince Alejandro of Edomex, Patriarch of Mexico
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 28
+	2157.5.23 = { 
+		birth = yes
+	}
+	2231.9.28 = {
+		death = yes
+	}
+}
+31 = {
+	name = "Alejandro" #Son of Prince Jorge III of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 29
+	2177.3.29 = { 
+		birth = yes
+	}
+	2241.6.29 = {
+		death = yes
+	}
+}
+32 = {
+	name = "Clemente" #2nd Emperor of the HME
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 27
+	2142.1.29 = { 
+		birth = yes
+	}
+	2219.12.30 = {
+		death = yes
+	}
+}
+33 = {
+	name = "Augusto" #Son of Emperor Carlos, first prince of Cedemequis
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 27
+	2149.1.29 = { 
+		birth = yes
+	}
+	2208.12.30 = {
+		death = yes
+	}
+}
+34 = {
+	name = "Carlota" #Daughter of Emperor Clemente, first Princess of Toluca
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 32
+	2173.9.26 = { 
+		birth = yes
+	}
+	2242.12.30 = {
+		death = yes
+	}
+}
+35 = {
+	name = "Agustina" #Daughter of Prince Augusto of Cedemequis
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 33
+	2179.11.29 = { 
+		birth = yes
+	}
+	2295.2.6 = { add_spouse = 7 }
+	2267.12.30 = {
+		death = yes
+	}
+}
+36 = {
+	name = "Clementina" #Daughter of Emperor Clemente, married to the count of Cuautitlán
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 32
+	2179.11.29 = { 
+		birth = yes
+	}
+	2196.1.1 = {add_spouse =  31 }
+	2199.12.30 = { #childbirth
+		death = { death_reason = death_childbirth }
+	}
+}
+37 = {
+	name = "Alejandra" #Daughter of Emperor Alejandro, married to the prince of Cedemequis, Mother of Emperor Augusto
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 31
+	mother = 36
+	2196.9.29 = { 
+		birth = yes
+	}
+	2222.1.1 = { add_spouse = 6 }
+	2245.12.30 = { #
+		death = yes
+	}
+}
+38 = {
+	name = "Jorge" #Firstborn of Emperor Alejandro. Died on a charro lacing accident.
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 31
+	mother = 36
+	trait = fair
+	trait = robust
+	trait = gregarious
+	trait = homosexual
+	trait = hunter
+	trait = cavalry_leader
+	2199.12.30 = { 
+		birth = yes
+	}
+	2221.12.30 = {
+		death = { death_reason = death_accident }
+	}
+}
+39 = {
+	name = "Andrés" #Son of Emperor Alejandro. Son of a second marriage, Prince of Edomex
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 31
+	trait = feeble
+	trait = ill
+	trait = weak
+	2229.7.31 = { 
+		birth = yes
+	}
+	2255.1.1 = { add_spouse = 80 }
+	2268.1.30 = { #
+		death = { death_reason = death_trait }
+	}
+}
+40 = {
+	name = "Georgina" #Daughter of the late prince Jorge. Princess of Edomex
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 38 
+	mother = 67
+	2220.7.31 = { 
+		birth = yes
+	}
+	2288.1.30 = { 
+		death = yes
+	}
+}
+41 = {
+	name = "Carlos" #Son of Emperor Alejandro. Son of a second marriage. Died of illness during his childhood
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	trait = pneumonic
+	father = 31
+	2222.7.31 = { 
+		birth = yes
+	}
+	2231.1.30 = { #
+		death = { death_reason = death_trait }
+	}
+}
+42 = {
+	name = "Alejandro" #Son of Andrés, Count of Ixtlahuaca
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 39
+	mother = 80
+	trait = feeble
+	trait = flu
+	2253.7.31 = { 
+		birth = yes
+	}
+	2258.1.30 = { #
+		death = { death_reason = death_trait }
+	}
+}
+43 = {
+	name = "Carlos" #Son of Andrés, Count of Ixtlahuaca
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 39
+	mother = 80	
+	trait = weak
+	2253.7.31 = { 
+		birth = yes
+	}
+	2293.1.30 = { #
+		death = { death_reason = death_trait }
+	}
+}
+44 = {
+	name = "Jorge" #Son of Andrés, Count of Ixtlahuaca, a bishop
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 39
+	mother = 80	
+	trait = scholarly_theologian
+	2257.7.31 = { 
+		birth = yes
+	}
+	2331.1.30 = { #
+		death = yes
+	}
+}
+45= {
+	name = "Nemesio" #Son of Andrés, Count of Ixtlahuaca, a bishop
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 39
+	mother = 80	
+	trait = scholarly_theologian
+	2261.7.31 = { 
+		birth = yes
+	}
+	2331.1.1 = { #
+		death = yes
+	}
+}
+46= {
+	name = "Andrés" #Son of Carlos, Count of Ixtlahuaca
+	female = no
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 43
+	2281.8.24 = { 
+		birth = yes
+	}
+	2305.1.1 = {add_spouse = 18 }
+	2331.1.1 = { #
+		death = yes
+	}
+}
+47= {
+	name = "Andrea" #Heir to the county of Ixtlahuaca
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 46
+	mother = 18
+	2309.5.28 = { 
+		birth = yes
+	}
+	2390.1.1 = { #
+		death = yes
+	}
+}
+48= {
+	name = "Georgina" #Daughter of the current Count of Ixtlahuaca
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 46
+	mother = 18	
+	2311.8.6 = { 
+		birth = yes
+	}
+	2390.1.1 = { #
+		death = yes
+	}
+}
+49= {
+	name = "Enrique" #Enrique Frugosa, Baron of Acolman, husband of Georgina Madeja and Prince of Edomex  by marriage. The Frugosas were the historically holder of the Bishopric of Teotihuacan under several bishops of their family.
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	trait = midas_touched
+	trait = fair
+	trait = ambitious
+	father = 89
+	2223.2.17 = { 
+		birth = yes
+	}
+	2242.1.1 = {	add_spouse = 40 }
+	2286.8.4 = { #
+		death = yes
+	}
+}
+50= {
+	name = "Anselmo" #Anselmo Frugosa, Prince of Edomex and Baron of Acolman
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 49
+	mother = 40
+	trait = injured
+	2245.2.17 = { 
+		birth = yes
+	}
+	2303.9.13 = { #
+		death = { death_reason = death_trait }
+	}
+}
+51= {
+	name = "Jorge" #Jorge Frugosa, bishop of Teotihuacan
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	trait = martial_cleric
+	trait = just
+	trait = zealous
+	father = 49
+	mother = 40
+	2248.2.17 = { 
+		birth = yes
+	}
+	2329.11.1 = { #
+		death = yes
+	}
+}
+52= {
+	name = "Enriqueta" #Enriqueta Frugosa, daughter of Georgina Madeja and Enrique Frugosa
+	female = yes
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 49
+	mother = 40
+	trait = frail
+	2259.12.17 = { 
+		birth = yes
+	}
+	2279.12.28 = { add_spouse = 9 }
+	2299.12.3 = { #
+		death = { death_reason = death_trait }
+	}
+}
+53= {
+	name = "Enrique" #Enrique Frugosa, current Prince of Edomex
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 50
+	mother = 107
+	2279.2.17 = { 
+		birth = yes
+	}
+	2298.1.1 = { add_spouse = 15 }
+	2329.11.1 = { #
+		death = yes
+	}
+}
+54= {
+	name = "Anselma" #Anselma Frugosa, daughter of Prince Anselmo of Edomex
+	female = yes
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 50
+	mother = 107
+	2271.11.23 = { 
+		birth = yes
+	}
+	2329.11.1 = { #
+		death = yes
+	}
+}
+55= {
+	name = "Georgina" #Georgina Frugosa, daughter of Prince Anselmo of Edomex
+	female = yes
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 50
+	mother = 107	
+	2281.9.4 = { 
+		birth = yes
+	}
+	2329.11.1 = { #
+		death = yes
+	}
+}
+56= {
+	name = "Alberto" #Alberto Frugosa, daughter of Prince Anselmo of Edomex
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	trait = scholarly_theologian
+	father = 50
+	mother = 107	
+	2282.11.4 = { 
+		birth = yes
+	}
+	2329.11.1 = { #
+		death = yes
+	}
+}
+57= {
+	name = "Anselmo" #Anselmo Frugosa, hier to Edomex
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 53
+	mother = 15
+	2299.3.24 = { 
+		birth = yes
+	}
+	2380.1.1 = { #
+		death = yes
+	}
+}
+58= {
+	name = "Jorge" #Anselmo Frugosa, hier to Edomex
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 53
+	mother = 15
+	2303.9.11 = { 
+		birth = yes
+	}
+	2380.1.1 = { #
+		death = yes
+	}
+}
+59= {
+	name = "Carla" #Daughter of Carlos, Count of Ixtlahuaca
+	female = yes
+	dynasty = 5229246 #Madeja
+	religion = catholic
+	culture = chilangos
+	father = 43
+	2282.7.5 = { 
+		birth = yes
+	}
+	2298.12.12 = { add_spouse = 56 }
+	2380.1.1 = { #
+		death = yes
+	}
+}
+60= {
+	name = "Georgina" #Georgina Frugosa, daughter of Jorge Frugosa, unlanded
+	female = yes
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 56
+	mother = 59
+	2305.11.19 = { 
+		birth = yes
+	}
+	2380.1.1 = { #
+		death = yes
+	}
+}
+61= {
+	name = "Nemesio" #Nemesio Frugosa, son of Jorge Frugosa, unlanded
+	female = no
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 56
+	mother = 59
+	trait = erudite
+	trait = scholarly_theologian
+	2307.9.21 = { 
+		birth = yes
+	}
+	2380.1.1 = { #
+		death = yes
+	}
+}
+62= {
+	name = "Georgina" #Georgina Frugosa, daughter of bishop Jorge Frugosa of Tultepec
+	female =yes
+	dynasty = 5229247 #Frugosa
+	religion = catholic
+	culture = chilangos
+	father = 51
+	2275.11.23 = { 
+		birth = yes
+	}
+	2380.1.1 = { #
+		death = yes
+	}
+}
+63 = {
+	name = "Lucio" #Anastasio Luz y Fernández, Prince of Toluca by marriage.
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	2175.11.23 = { 
+		birth = yes
+	}
+	2295.1.1 = { add_spouse = 34 }
+	2235.12.13 = { #
+		death = yes
+	}
+}
+64 = {
+	name = "Clemente" #Prince of Toluca
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 63
+	mother = 34
+	2196.5.21 = { 
+		birth = yes
+	}
+	2271.12.13 = { #
+		death = yes
+	}
+}
+65 = {
+	name = "Fernando" #Count of Valle de Bravo
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 63
+	mother = 34	
+	2199.1.3 = { 
+		birth = yes
+	}
+	2268.12.13 = { #
+		death = yes
+	}
+}
+66 = {
+	name = "Clemente" #Prince of Toluca
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 63
+	mother = 34	
+	2203.7.14 = { 
+		birth = yes
+	}
+	2275.1.23 = { #
+		death = yes
+	}
+}
+67 = {
+	name = "Lucía" #Daughter of the Carlota Madeja, Princess of Toluca, and Lucio Luz y Fernández
+	female =yes
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 63
+	mother = 34	
+	2202.1.4 = { 
+		birth = yes
+	}
+	2218.1.30 = { add_spouse = 38 }
+	2281.1.23 = { #
+		death = yes
+	}
+}
+68 = {
+	name = "María" #Daughter Clemente, Prince of Toluca
+	female =yes
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 64	
+	2233.10.4 = { 
+		birth = yes
+	}
+	2297.11.23 = { #
+		death = yes
+	}
+}
+69 = {
+	name = "Carlos" #Prince of Toluca, son of Prince Clemente
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 64	
+	2225.9.23 = { 
+		birth = yes
+	}
+	2297.1.27 = { #
+		death = yes
+	}
+}
+70 = {
+	name = "Félix" #Bishop
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 64	
+	2229.7.21 = { 
+		birth = yes
+	}
+	2307.9.29 = { #
+		death = yes
+	}
+}
+71 = {
+	name = "Lucio" #Prince of Toluca, son of Prince Carlos
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 69
+	2258.10.15 = { 
+		birth = yes
+	}
+	2287.10.16 = { add_spouse = 54 }
+	2309.7.27 = { #
+		death = yes
+	}
+}
+72 = {
+	name = "Juan" #Bishop
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 69
+	2261.9.10 = { 
+		birth = yes
+	}
+	2333.1.7 = { #
+		death = yes
+	}
+}
+73 = {
+	name = "Carla" #Daughter or Prince Carlos
+	female =yes
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 69
+	2267.8.23 = { 
+		birth = yes
+	}
+	2335.1.1 = { #
+		death = yes
+	}
+}
+74 = {
+	name = "Clemente" #Dead before heritage
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 71
+	mother = 54
+	2288.6.23 = { 
+		birth = yes
+	}
+	2305.1.1 = { #
+		death = { death_reason = death_accident }
+	}
+}
+75 = {
+	name = "Carlos" #Current Prince of Toluca, has several bastards
+	female =no
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 71
+	mother = 54
+	trait = lustful
+	2291.9.4 = { 
+		birth = yes
+	}
+	2350.1.1 = { #
+		death = yes
+	}
+}
+76 = {
+	name = "Lucía" #Current Prince of Toluca
+	female =yes
+	dynasty = 5229248 #Luz y Fernández
+	religion = catholic
+	culture = chilangos
+	father = 71
+	mother = 54
+	2295.7.23 = { 
+		birth = yes
+	}
+	2350.1.1 = { #
+		death = yes
+	}
+}
+77 = { 
+    name = "Juana"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
+    learning = 6
+	father = 72
+	trait = martial_cleric
+	trait = poet
+	trait = fair
+	trait = kind
+    trait = humble
+    2301.9.11 = { birth = yes }
+	2399.1.1 = { death = yes }
+}
+78 = { #Count Lucio of Valle de Bravo, son of Fernando, count of Valle de Bravo
+    name = "Lucio"
+    dynasty = 5229248 # Luz y Fernández
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 65
+    2223.4.13 = { birth = yes }
+	2281.1.4 = { death = yes }
+}
+79 = { #daughter of Fernando, count of Valle de Bravo
+    name = "Fernanda"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 65
+    2226.7.17 = { birth = yes }
+	2309.12.9 = { death = yes }
+}
+80 = { #daughter of Fernando, count of Valle de Bravo
+    name = "Carlota"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 65
+    2229.8.23 = { birth = yes }
+	2302.11.29 = { death = yes }
+}
+81 = { #son of Lucio, count of Valle de Bravo
+    name = "Serafín"
+    dynasty = 5229248 # Luz y Fernández
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 78
+    2262.4.7 = { birth = yes }
+	2328.2.2 = { death = yes }
+}
+82 = { #daughter of Lucio, count of Valle de Bravo
+    name = "Clara"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 78
+    2267.10.21 = { birth = yes }
+	2339.12.2 = { death = yes }
+}
+83 = { #daughter of Lucio, count of Valle de Bravo
+    name = "Roxana"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 78
+    2271.10.21 = { birth = yes }
+	2349.12.2 = { death = yes }
+}
+84 = { #heir to the county of Valle de Bravo
+    name = "Fernando"
+    dynasty = 5229248 # Luz y Fernández
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 81
+    2296.10.29 = { birth = yes }
+	2360.12.2 = { death = yes }
+}
+85 = { #son of Count Serafín
+    name = "Lucio"
+    dynasty = 5229248 # Luz y Fernández
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 81
+    2299.4.12 = { birth = yes }
+	2355.12.2 = { death = yes }
+}
+86 = { #son of Count Serafín
+    name = "Lucero"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 81
+    2303.9.24 = { birth = yes }
+	2395.12.2 = { death = yes }
+}
+87 = { #son of Ferando, heir to Valle de Bravo
+    name = "Ciro"
+    dynasty = 5229248 # Luz y Fernández
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 84
+    2319.5.11 = { birth = yes }
+	2395.12.2 = { death = yes }
+}
+88 = { #daughter of Ferando, heir to Valle de Bravo
+    name = "Estela"
+    dynasty = 5229248 # Luz y Fernández
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 84
+    2319.5.11 = { birth = yes }
+	2395.12.2 = { death = yes }
+}
+89 = { #Baron of Acolman, father of Enrique Fragosa, Prince of EDOMEX by marriage
+    name = "Anselmo"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 90
+    2192.5.11 = { birth = yes }
+	2251.7.2 = { death = yes }
+}
+90 = { #Baron of Acolman
+    name = "Enrique"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 91
+    2167.1.26 = { birth = yes }
+	2209.7.2 = { death = yes }
+}
+91 = { #Founder of House Frugosa. Bishop of Teotihuacan
+    name = "Anselmo"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+    2133.1.26 = { birth = yes }
+	2185.1.1 = { death = yes }
+}
+92 = { #Bishop of Teotihuacan
+    name = "Anselmo"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 91
+	trait = martial_cleric
+    2163.4.2 = { birth = yes }
+	2229.9.30 = { death = yes }
+}
+93 = { #Baron of Acolman
+    name = "Felicia"
+    dynasty = 5229247 # Frugosa
+	female = yes
+    religion = catholic
+    culture = chilangos
+	father = 92
+	trait = martial_cleric
+    2193.11.26 = { birth = yes }
+	2255.9.2 = { death = yes }
+}
+94 = { #Bishop
+    name = "Félix"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 92
+	trait = martial_cleric
+    2197.11.26 = { birth = yes }
+	2241.9.2 = { death = yes }
+}
+95 = { #Bishop
+    name = "Anselmo"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 94
+	trait = martial_cleric
+    2229.2.6 = { birth = yes }
+	2280.9.2 = { death = yes }
+}
+96 = { #Spouse of Archibishop of Teotihuacan
+    name = "Inés"
+    dynasty = 5229247 # Frugosa
+	female = yes
+    religion = catholic
+    culture = chilangos
+	trait = nun
+	father = 95
+	trait = martial_cleric
+    2259.1.22 = { birth = yes }
+	2283.1.1 = { add_spouse = 17 }
+	2329.9.2 = { death = yes }
+}
+97 = { #Bishop of Teotihuacan
+    name = "Heriberto"
+    dynasty = 5229247 # Frugosa
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 89
+	trait = martial_cleric
+    2229.1.22 = { birth = yes }
+	2288.1.1 = { death = yes }
+}
+98 = { #Father of Emperor Cuahtémoc, Archprince of Hidalgo
+    name = "Julián"
+    dynasty = 5229244 #Aguilar y Deza
+	female = no
+    religion = catholic
+    culture = chilangos
+	father = 104
+    2261.7.13 = { birth = yes }
+	2285.1.1 = { add_spouse = 73 }
+	2351.1.1 = { death = yes }
+}
+99 = { #Daughter of the Archprince of Hidalgo, sister of Emperor Cuahtémoc, Archprincess of Querétaro
+    name = "Juliana"
+    dynasty = 5229244 #Aguilar y Deza
+	female = yes
+	father = 98
+	mother = 73
+    religion = catholic
+    culture = chilangos
+    2286.11.21 = { birth = yes }
+	2351.1.1 = { death = yes }
+}
+100 = {
+	dynasty = 5229244 #Aguilar y Deza
+	name = "Cuauhtémoc" #Cuahtémoc Aguilar y Deza, Emperor of HME
+	religion = catholic
+	culture = chilangos
+	father = 98
+	mother = 73
 	2289.4.27 = {
 		birth = yes
 	}
-	2666.1.1 = {
+	2317.6.5 = { add_spouse = 5 }
+	2360.1.1 = {
 		death = yes
 	}
 }
+101 = { 
+	name = "Julián" #Son of Emperor Cuauhtémoc
+	dynasty = 5229244 #Aguilar y Deza
+	religion = catholic
+	culture = chilangos
+	father = 100
+	mother = 5
+	trait = strong
+	trait = fair
+	2320.11.2 = {
+		birth = yes
+	}
+	2375.1.1 = {
+		death = yes
+	}
+}
+102 = { 
+	name = "Carlota" #Daughter of Emperor Cuauhtémoc
+	dynasty = 5229244 #Aguilar y Deza
+	female = yes
+	religion = catholic
+	culture = chilangos
+	father = 100
+	mother = 5
+	trait = fair
+	2323.2.27 = {
+		birth = yes
+	}
+	2375.1.1 = {
+		death = yes
+	}
+}
+103 = { 
+	name = "Lorenzo" #Brother of Emperor Cuahtémoc
+	dynasty = 5229244 #Aguilar y Deza
+	religion = catholic
+	culture = chilangos
 
-
+	2233.4.23 = {
+		birth = yes
+	}
+	2287.7.23 = {
+		death = yes
+	}
+}
+104 = { 
+	name = "Lorenzo" #Archprince of Hidalgo, father of Archprince Julián
+	dynasty = 5229244 #Aguilar y Deza
+	religion = catholic
+	culture = chilangos
+	father = 105
+	2233.4.23 = {
+		birth = yes
+	}
+	2287.7.23 = {
+		death = yes
+	}
+}
+105 = { 
+	name = "Adrián" #Archprince of Hidalgo, father of Archprince Lorenzo
+	dynasty = 5229244 #Aguilar y Deza
+	religion = catholic
+	culture = chilangos
+	father = 106
+	2209.2.17 = {
+		birth = yes
+	}
+	2261.7.30 = {
+		death = yes
+	}
+}
+106 = { 
+	name = "Cuahtémoc" #Archprince of Hidalgo, father of Archprince Adrián
+	dynasty = 5229244 #Aguilar y Deza
+	religion = catholic
+	culture = chilangos
+	
+	2173.5.21 = {
+		birth = yes
+	}
+	2239.11.27 = {
+		death = yes
+	}
+}
+107 = { 
+	name = "Adriana" #Daughter of Archprince Adrián of Hidalgo
+	dynasty = 5229244 #Aguilar y Deza
+	female = yes
+	religion = catholic
+	culture = chilangos
+	father = 105
+	2246.9.13 = {
+		birth = yes
+	}
+	2268.12.20 = { add_spouse = 50 }
+	2331.1.6 = {
+		death = yes
+	}
+}
 #HUASTECA
 
 2100100 = {
@@ -317,7 +1831,7 @@
     2273.11.2 = { birth = yes }
     2295.8.12 = { add_spouse = 2100113 } # Matrimonio con Rodrigo
     2298.3.3 = { # Muere en el parto de los trillizos
-        death = { death_reason = {death_childbirth } }
+        death = { death_reason = death_childbirth }
     }
 }
 2100115 = { # Lorenzo Andrade - El Bandolero
@@ -407,7 +1921,6 @@
 }
 2100119 = { # "El Coyote"
     name = "Alejandro"
-    nickname = nick_el_coyote
     dynasty = 5228057 # Tsuts
     religion = guadalupano
     culture = huastec
@@ -421,7 +1934,10 @@
     trait = wroth
     trait = duelist
     trait = intricate_webweaver
-    2270.6.14 = { birth = yes }
+    2270.6.14 = { 
+		birth = yes 
+		effect = { give_nickname = nick_el_coyote }
+	}
     2326.3.3 = { death = { death_reason = death_imprisonment killer = 2100115 }    }
 }
 2100120 = { 
@@ -499,7 +2015,6 @@
     2275.9.8 = { birth = yes }
     2315.8.1 = { 
         add_claim = c_tamiahua
-        holder = c_tamiahua
     }
 }
 2100124 = { # Doña Irma Dorantes de Valles
@@ -1049,23 +2564,7 @@
     trait = just
     2301.9.11 = { birth = yes }
 }
-2200029 = { #Doña Juana Inés Bustamante de Edomex
-    name = "Juana Inés"
-    dynasty = 5228085 # Bustamante
-	female = yes
-    religion = catholic
-    culture = chilangos
-    diplomacy = 7
-    stewardship = 4
-    intrigue = 5
-    learning = 6
-	trait = martial_cleric
-	trait = poet
-	trait = fair
-	trait = kind
-    trait = humble
-    2301.9.11 = { birth = yes }
-}
+
 
 #The Holy Order Knights
 2200030 = { #Grandmaster Adam Talon of the Knight's Hospitaller of St. Louis

@@ -2181,3 +2181,60 @@ d_eucharistic = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
+
+d_votanzapatista = {
+	color={ 0 0 0 }
+	color2={ 219 38 29 }
+	
+	capital = 3138 # San Cristobal de las Casas
+	
+	dignity = 1000
+
+	title = "COMMANDANTE"
+	title_female = "COMMANDANTE"
+	foa = "POPE_FOA"
+	primary = yes
+	
+	short_name = yes
+
+	caliphate = yes
+	allow = {
+		num_of_holy_sites = 3
+		piety = 500
+	}
+	# Controls a religion
+	controls_religion = votanzapatista
+	creation_requires_capital = no
+	religion = votanzapatista
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_mama_tatda = {
+	color={ 0 128 128 }
+	color2={ 255 255 255 }
+	
+	capital = 2342 # c_muna_PAN
+	
+	dignity = 1000
+
+	title = "TATA"
+	title_female = "MAMA"
+	foa = "POPE_FOA"
+	primary = yes
+	
+	short_name = yes
+
+	caliphate = yes
+	allow = {
+		num_of_holy_sites = 3
+		piety = 500
+		is_female = yes
+	}
+	# Controls a religion
+	controls_religion = mama_tatda
+	creation_requires_capital = no
+	religion = mama_tatda
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
