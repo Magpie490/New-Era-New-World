@@ -886,7 +886,8 @@
 	religion = catholic
 	culture = chilangos
 	father = 50
-	mother = 107	
+	mother = 107
+	employer = 100
 	2281.9.4 = { 
 		birth = yes
 	}
@@ -1975,7 +1976,7 @@
 	mother = 62
 	religion = catholic
 	culture = chilangos
-	2295.9.28 = {
+	2298.9.28 = {
 		birth = yes
 	}
 	2363.2.9 = {
@@ -2015,7 +2016,7 @@
 	}
 }
 137 = { 
-	name = "Andrea" #Daughter of the Baron of Otompan
+	name = "Andrea" #Daughter of Count Jorge of Texcoco
 	dynasty = 6 #Palos y Lagos
 	female = yes
 	father = 124
@@ -2033,11 +2034,10 @@
 	name = "María José" #Daughter of the Baron of Otompan
 	dynasty = 6 #Palos y Lagos
 	female = yes
-	father = 124
-	mother = 62
+	father = 135
 	religion = catholic
 	culture = chilangos
-	2303.7.4 = {
+	2296.7.4 = {
 		birth = yes
 	}
 	2393.9.12 = {
@@ -2355,6 +2355,7 @@
     culture = otomi
 	father = 153
     2263.7.23 = { birth = yes }
+	2300.1.1 = { add_spouse = 146 }
 	2341.8.23 = { death = yes }
 }
 163 = { #Heir of the Barony of Tula
@@ -2363,7 +2364,8 @@
     religion = catholic
     culture = otomi
 	father = 162
-    2287.2.17 = { birth = yes }
+	mother = 146
+    2302.2.17 = { birth = yes }
 	2362.8.23 = { death = yes }
 }
 164 = { #Daughter of the Baron of Tula
@@ -2372,9 +2374,10 @@
     religion = catholic
     culture = otomi
 	father = 162
+	mother = 146
 	female = yes
-    2293.8.15 = { birth = yes }
-	2316.1.1 = { add_spouse = 121 }
+    2301.8.15 = { birth = yes }
+	2317.1.1 = { add_spouse = 121 }
 	2372.8.23 = { death = yes }
 }
 165 = { #Son of the heir to the Barony of Tula
@@ -2393,6 +2396,8 @@
     religion = catholic
     culture = chilangos
 	father = 117
+	mother = 204
+	trait = legit_bastard
     2306.11.8 = { birth = yes }
 	2322.12.15 = { add_spouse = 150 }
 	2392.4.27 = { death = yes }
@@ -2612,6 +2617,7 @@
 	trait = erudite
 	trait = content
     2298.6.22	= { birth = yes }
+	2320.1.1 = { add_spouse = 134 }
 	2362.1.1 = { death = yes }
 }
 185 = { #Aunt of Prince Rodolfo of Tulancingo
@@ -2674,6 +2680,129 @@
     2190.6.8	= { birth = yes }
 	2206.6.30	= { add_spouse = 175 }
 	2277.1.15 = { death = yes }
+}
+
+200 = { #Don Emiliano Salazar González de Tenango. This dynasty has preserved their own version of catholicism.
+    name = "Emiliano"
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 5
+    learning = 6
+	trait = brilliant_strategist
+	trait = duelist
+	trait = fair
+	trait = stubborn
+    trait = just
+	father = 201
+	mother = 157
+    2294.9.11 = { birth = yes }
+	2316.1.1 = { add_spouse = 183 }
+	2350.1.1 = { death = yes }
+}
+201 = { #Natalio, late Count of Tenango and father of Count Emiliano
+    name = "Natalio"
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	father = 202
+    2263.5.21 = { birth = yes }
+	2290.1.1 = { add_spouse = 157 }
+	2324.11.21 = { death = yes }	
+}
+202 = { #Count Sebastian of Tenango
+    name = "Sebastián"
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+    2247.4.29 = { birth = yes }
+	2298.12.28 = { death = yes }	
+}
+203 = { #Daughter of late Count Natalio of Tenango
+    name = "Natalia"
+	female  = yes
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	father = 201
+	mother = 157	
+    2298.10.29 = { birth = yes }
+	2350.1.1 = { death = yes }	
+}
+204 = { #Daughter of late Count Natalio of Tenango, lover of Lázaro of Hidalgo
+    name = "Epifania"
+	female  = yes
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	father = 201
+	mother = 157	
+    2290.9.4 = { birth = yes }
+	2306.1.1 = { add_lover = 117 }
+	2310.1.1 = { add_spouse = 117 }
+	2350.1.1 = { death = yes }	
+}
+205 = { #Daughter of Count Emiliano of Tenango
+    name = "Emiliana"
+	female  = yes
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	father = 200
+	mother = 183
+	trait = fair
+    2318.11.3 = { birth = yes }
+	2350.1.1 = { death = yes }	
+}
+206 = { #Daughter of Count Emiliano of Tenango
+    name = "Cornelia"
+	female  = yes
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	trait = quick
+	father = 200
+	mother = 183
+    2323.3.8 = { birth = yes }
+	2350.1.1 = { death = yes }	
+}
+207 = { #Son of Count Natalio of Tenango
+    name = "Aurelio"
+	female  = no
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	trait = quick
+	father = 201
+	mother = 157	
+    2297.11.20 = { birth = yes }
+	2320.1.1 = { add_spouse = 138 }
+	2350.1.1 = { death = yes }	
+}
+208 = { #Son of Aurelio de Tenango
+    name = "Natalio"
+	female  = no
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	trait = quick
+	father = 207
+	mother = 138	
+    2322.9.23 = { birth = yes }
+	2350.1.1 = { death = yes }	
+}
+209 = { #Daughter of Aurelio de Tenango
+    name = "Aurelia"
+	female  = yes
+    dynasty = 5228080 # Salazar
+    religion = quixtiano
+    culture = nahuatl
+	father = 207
+	mother = 138	
+    2324.1.31 = { birth = yes }
+	2350.1.1 = { death = yes }	
 }
 #HUASTECA
 
@@ -3576,22 +3705,7 @@
     trait = just
     2301.9.11 = { birth = yes }
 }
-2200024 = { #Don Emiliano Salazar González de Queretaro
-    name = "Emiliano"
-    dynasty = 5228080 # Salazar
-    religion = catholic
-    culture = nahuatl
-    diplomacy = 7
-    stewardship = 4
-    intrigue = 5
-    learning = 6
-	trait = brilliant_strategist
-	trait = duelist
-	trait = fair
-	trait = stubborn
-    trait = just
-    2301.9.11 = { birth = yes }
-}
+
 2200025 = { #Don José María Ocampo de Morelos
     name = "José María"
     dynasty = 5228081 # Ocampo
