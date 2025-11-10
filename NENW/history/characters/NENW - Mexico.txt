@@ -47,7 +47,7 @@
 	}
 }
 3 = {
-	name = "José María" #Former Emperor of HME; brother of the current Patriarch of Mexico
+	name = "José-María" #Former Emperor of HME; brother of the current Patriarch of Mexico
 	dynasty = 2 #Labastida
 	religion = catholic
 	culture = chilangos
@@ -118,7 +118,7 @@
 	}
 }
 6 = {
-	name = "José María" #Count of Tlalpan and Prince of Cedemequis, father of the first Labastida HME emperor
+	name = "José-María" #Count of Tlalpan and Prince of Cedemequis, father of the first Labastida HME emperor
 	dynasty = 2 #Labastida
 	religion = catholic
 	culture = chilangos
@@ -225,13 +225,13 @@
 	2304.7.4 = {
 		birth = yes
 	}
-	2320.9.16 = { add_spouse = 75 }
+	2322.4.30 = { add_spouse = 244 }
 	2376.1.1 = {
 		death = yes
 	}
 }  
 14 = {
-	name = "José María" #Bishop of Xochimilco
+	name = "José-María" #Bishop of Xochimilco
 	female = no
 	dynasty = 2 #Labastida
 	religion = catholic
@@ -278,7 +278,7 @@
 	}
 }
 17 = {
-	name = "Francisco" #Bishop of Xochimilco, brother of José María, emperor of the HME
+	name = "Francisco" #Bishop of Xochimilco, brother of José-María, emperor of the HME
 	female = no
 	dynasty = 2 #Labastida
 	religion = catholic
@@ -2932,14 +2932,14 @@
 	trait = deceitful
 	trait = elusive_shadow
 	trait = stubborn
-	father = 212
+	father = 254
     2247.8.19 = { birth = yes 
 
 	}
 	2295.7.28 = { 
 		religion = catholic
 		secret_religion = tlaneltokayotl
-		name = "Juana Citlalli"		
+		name = "Juana-Citlalli"		
 	}
     2322.3.28 = { death = yes }
 }
@@ -3070,7 +3070,7 @@
     trait = brave
     trait = just
     trait = skilled_tactician
-    father = 227
+    father = 228
 	mother = 229
     2275.9.8 = { birth = yes }
     2315.8.1 = { 
@@ -3090,8 +3090,9 @@
     trait = tough_soldier
     trait = brave
     trait = diligent
+	father = 231
     2250.6.11 = { birth = yes }
-    2324.8.1 = { death = yes }
+    2314.8.1 = { death = yes }
 }
 229 = {
     name = "María"
@@ -3129,10 +3130,162 @@
     2305.8.11 = { birth = yes }
     2380.8.1 = { death = yes }
 }
-2100114 = { # Doña Catalina de Tamuín
+231 = { # Don Rodolfo de Alta Huasteca 
+    name = "Rodolfo"
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 232
+    2232.5.17 = { birth = yes }
+    2289.9.9 = { death = yes  }
+}
+232 = { # Don Bernal de Alta Huasteca 
+    name = "Bernal"
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+    2206.6.13 = { birth = yes }
+    2271.1.27 = { death = yes  }
+}
+233 = { # Queen consort Marina of Tamaulipas
+    name = "Marina"
+	female = yes
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 232
+    2237.11.21 = { birth = yes }
+	2260.1.1 = { add_spouse = 4700072 } #Mauro of Tamaulipas #NENW - Rio Bravo
+    2310.10.11 = { death = yes  }
+}
+234 = { # Duchess of Citricia, mother of the current queen consort of Tamaulipas
+    name = "Fernanda"
+	female = yes
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 228
+    2277.3.23 = { birth = yes }
+	2295.1.1 = { add_spouse = 4700029
+				religion = ardentist
+	} #Esteban of Citricia #NENW - Rio Bravo
+    2342.1.1 = { death = yes  }
+}
+235 = { # 2nd in line of Alta Huasteca
+    name = "Cristóbal"
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 227
+	mother = 229
+    2309.3.11 = { birth = yes }
+    2380.8.1 = { death = yes }
+}
+236 = { # Daughter of the Duke of Alta Huasteca
+    name = "Maura"
+	female = yes
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 227
+	mother = 229
+    2312.5.17 = { birth = yes }
+    2380.8.1 = { death = yes }
+}
+237 = { # Brother of the Duke of Alta Huasteca
+    name = "Lope"
+	female = no
+    dynasty = 15 # Estela
+    religion = guadalupano
+    culture = fronterizo
+	father = 228
+	intrigue = 12
+	trait = intricate_webweaver
+	trait = deceitful
+	trait = ambitious
+	trait = groomed
+	employer = 4700039 #Marino of Tamaulipas
+	give_job_title = job_spymaster
+    2279.12.21 = { birth = yes }
+    2380.8.1 = { death = yes }
+	2325.1.1 = { effect = {
+		add_lover = 4700031 }
+	}
+}
+238 = { #Bautista Espiridión of Tula
+    name = "Bautista"
+    dynasty = 16 # Espiridión
+    religion = catholic
+    culture = fronterizo
+    diplomacy = 8
+	martial = 8
+    stewardship = 6
+    intrigue = 5
+    learning = 6
+	trait = fortune_builder
+	trait = strong
+	trait = stubborn
+	trait = diligent
+    trait = honest
+	trait = gregarious
+    2275.6.1 = { birth = yes }
+	2341.12.25 = { death = yes }
+}
+239 = { #Aristeo Espiridión,
+    name = "Aristeo"
+    dynasty = 16 # Espiridión
+    religion = catholic
+    culture = fronterizo
+	father = 238
+	mother = 242
+	trait = skilled_tactician
+	trait = strong
+	trait = homosexual
+    2297.8.12 = { birth = yes }
+	2380.1.1 = { death = yes }
+}
+240 = { #Temístocles Espiridión,
+    name = "Temístocles"
+    dynasty = 16 # Espiridión
+    religion = catholic
+    culture = fronterizo
+	father = 238
+	mother = 242
+	trait = charismatic_negotiator
+	trait = just
+	trait = quick
+    2300.7.4 = { birth = yes }
+	2380.1.1 = { death = yes }
+}
+241 = { #Temístocles Espiridión,
+    name = "Atenea"
+	female = yes
+    dynasty = 16 # Espiridión
+    religion = catholic
+    culture = fronterizo
+	father = 238
+	mother = 242
+	trait = genius
+	trait = chaste
+	trait = strong
+    2302.9.27 = { birth = yes }
+	2380.1.1 = { death = yes }
+}
+242 = { #Estefanía Estela of Tula
+    name = "Estefanía"
+	female = yes
+    dynasty = 15 # Estela
+    religion = catholic
+    culture = fronterizo
+	father = 228
+    2280.12.27 = { birth = yes }
+	2296.12.26 = { add_spouse = 238 }
+	2380.1.1 = { death = yes }
+}
+243 = { # Doña Catalina de Tamuín
     name = "Catalina"
     female = yes
-    dynasty = 5228055 # Weey
+    dynasty = 17 # Weey
     religion = catholic
     culture = huastec
     diplomacy = 6
@@ -3143,21 +3296,21 @@
     trait = zealous
     trait = kind
     trait = strong
-    father = 2100103 # Rey Esteban Weey de Tamuín
-    mother = 2100104
+    father = 249 # Duke Tomás of Tamuín
+    mother = 219
     2273.11.2 = { birth = yes }
     2295.8.12 = { add_spouse = 2100113 } # Matrimonio con Rodrigo
     2298.3.3 = { # Muere en el parto de los trillizos
         death = { death_reason = death_childbirth }
     }
 }
-2100100 = {
-    name = "Alonso"
-    dynasty = 5228055 # Casa Weey (Mata del Tigre)
+244 = { #Heir of Huasteca
+    name = "Lorenzo"
+    dynasty = 17 # Casa Weey (Mata del Tigre)
     culture = huastec
     religion = catholic
-	father = 2100103
-	#mother = 2100104	
+	father = 246
+	mother = 113	
     martial = 8
     diplomacy = 6
     stewardship = 5
@@ -3172,29 +3325,11 @@
 	}
     2360.6.1 = { death = yes }
 }
-
-2100101 = {
-    name = "Isabel"
-    female = yes
-    dynasty = 0 # De Haro 
-    culture = ribereno
-    religion = catholic
-    diplomacy = 8
-    stewardship = 6
-    intrigue = 5
-    learning = 5
-    trait = kind
-    trait = patient
-    trait = diligent
-    2304.7.10 = { birth = yes }
-	2322.4.12 = { add_spouse = 2100101 }
-    2365.1.1 = { death = yes }
-}
-2100102 = {
-    name = "Pedro" 
-    dynasty = 5228055
-    father = 2100100
-    mother = 2100101
+245 = { #Son of the Heir of Huasteca, son of the Imperial Princess of Mexico, Amanda
+    name = "Pedro-Augusto" 
+    dynasty = 17 # Weey
+    father = 244
+    mother = 13
     culture = fronterizo
     religion = catholic
     martial = 7
@@ -3210,9 +3345,9 @@
 	}
 	2403.8.9 = { death = yes }
 }
-2100103 = {
+246 = { #King of Huasteca
     name = "Esteban" # Padre de Alonso
-    dynasty = 5228055
+    dynasty = 17 # Weey
     culture = huastec
     religion = catholic
     martial = 7
@@ -3223,16 +3358,36 @@
     trait = proud
     trait = diligent
     trait = just
-    father = 2100105
+    father = 249
     mother = 219
     2268.9.18 = { birth = yes }
+	2295.1.1 = { add_spouse = 113 }
     2344.7.12 = { death = yes }
 }
-
-
-2100105 = {
+247 = { #Daughter of the Kingo of Huasteca
+    name = "Juana-Citlalli"
+	female = yes
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = catholic
+	father = 246
+	mother = 113	
+    2297.1.29 = { birth = yes }
+    2360.1.1 = { death = yes }
+}
+248 = { #Daughter of the Kingo of Huasteca
+    name = "Alonso"
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = catholic
+	father = 246
+	mother = 113	
+    2305.9.7 = { birth = yes }
+    2360.1.1 = { death = yes }
+}
+249 = { #Lord of Tamuín
     name = "Tomás" # Abuelo de Alonso
-    dynasty = 5228055
+    dynasty = 17
     culture = huastec
     religion = catholic
     martial = 6
@@ -3243,19 +3398,17 @@
     trait = proud
     trait = temperate
     trait = zealous
-    father = 2100107
-    mother = 2100108
+    father = 250
+    mother = 252
     2238.4.07 = { birth = yes }
 	2260.6.09 = { add_spouse = 219 } 	
     2306.11.02 = { death = yes }
 }
-
-
-2100107 = {
-    name = "Rodrigo" # Bisabuelo de Alonso
-    dynasty = 5228055
+250 = { #Lord of Tamuín
+    name = "Alonso" # Bisabuelo de Alonso
+    dynasty = 17
     culture = huastec
-    religion = catholic
+    religion = tlaneltokayotl
     martial = 5
     diplomacy = 6
     stewardship = 6
@@ -3266,10 +3419,59 @@
     father = 2100109
     mother = 2100110
     2206.12.01 = { birth = yes }
-	2228.3.17 = { add_spouse = 2100108 }	
+	2228.3.17 = { add_spouse = 252 }	
     2272.9.14 = { death = yes }
 }
-
+251 = { 
+    name = "Dimas"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = tlaneltokayotl
+    culture = nahuatl
+	father = 215
+    2177.8.19 = { birth = yes }
+	2241.8.4 = { death = yes }		
+}
+252 = { 
+    name = "Olga"
+	female = yes
+    dynasty = 12 # Villafuerte
+    religion = tlaneltokayotl
+    culture = nahuatl
+	father = 251
+    2208.1.19 = { birth = yes }
+	2261.8.4 = { death = yes }		
+}
+253 = { 
+    name = "Tecuani"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = tlaneltokayotl
+    culture = nahuatl
+	father = 251
+    2210.7.1 = { birth = yes }
+	2271.8.4 = { death = yes }		
+}
+254 = { 
+    name = "Gregorio"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = tlaneltokayotl
+    culture = nahuatl
+	father = 213
+    2231.7.1 = { birth = yes }
+	2271.8.4 = { death = yes }		
+}
+255 = { 
+    name = "Macario"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = tlaneltokayotl
+    culture = nahuatl
+	father = 254
+    2253.7.1 = { birth = yes }
+	2283.1.1 = { death = yes }	#Died during the War on Succession
+}
 2100108 = {
     name = "Catalina"
     female = yes
@@ -3290,7 +3492,7 @@
 
 2100109 = {
     name = "Nok" # Tatarabuelo de Alonso
-    dynasty = 5228055
+    dynasty = 17
     culture = huastec
     religion = catholic
     martial = 6
@@ -3326,7 +3528,7 @@
 
 2100111 = {
     name = "Winík" # “Fundador” de la dinastía Weey
-    dynasty = 5228055
+    dynasty = 17
     culture = huastec
     religion = guadalupano
     martial = 6
@@ -3373,7 +3575,7 @@
     trait = skilled_tactician
     trait = duelist
     2268.4.7 = { birth = yes }
-    2295.8.12 = { add_spouse = 2100114 }
+    2295.8.12 = { add_spouse = 243 }
     2298.3.3 = { # Muere en batalla antes del nacimiento de sus hijos
         death = { death_reason = battle }
     }
@@ -3399,7 +3601,7 @@
 	trait = uncouth
 	trait = fair
     father = 2100113
-    mother = 2100114
+    mother = 243
     2298.3.3 = { birth = yes }
 }
 
@@ -3421,7 +3623,7 @@
 	trait = groomed
 	trait = fair
     father = 2100113
-    mother = 2100114
+    mother = 243
     2298.3.3 = { birth = yes }
 }
 
@@ -3442,7 +3644,7 @@
 	trait = twin	
 	trait = fair
     father = 2100113
-    mother = 2100114
+    mother = 243
 	employer = 2100125 
     2298.3.3 = { birth = yes }
 }
@@ -3900,8 +4102,8 @@
     2301.9.11 = { birth = yes }
 }
 
-2200025 = { #Don José María Ocampo de Morelos
-    name = "José María"
+2200025 = { #Don José-María Ocampo de Morelos
+    name = "José-María"
     dynasty = 5228081 # Ocampo
     religion = catholic
     culture = chilangos
@@ -5179,25 +5381,7 @@
     2299.2.13 = { birth = yes }
 	2363.1.1 = { death = yes }
 }
-2200099 = { #Bautista Espiridión, Governor of Tula
-    name = "Bautista"
-    dynasty = 0 # Espiridión
-    religion = catholic
-    culture = fronterizo
-    diplomacy = 8
-	martial = 8
-    stewardship = 6
-    intrigue = 5
-    learning = 6
-	trait = fortune_builder
-	trait = strong
-	trait = stubborn
-	trait = diligent
-    trait = honest
-	trait = gregarious
-    2275.6.1 = { birth = yes }
-	2331.12.25 = { death = yes }
-}
+
 2200100 = { #Porfirio Aguilar, Count of Tampico
     name = "Porfirio"
     dynasty = 5229197 # Aguilar
