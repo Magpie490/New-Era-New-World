@@ -2254,7 +2254,8 @@
     religion = catholic
     culture = otomi
 	father = 153
-    2261.9.11 = { birth = yes }
+	mother = 258
+    2266.9.11 = { birth = yes }
 	2328.12.27 = { death = yes }
 }
 153 = { #Former Count of Ixmiquilpan, grandfather of the current count
@@ -2302,7 +2303,8 @@
     religion = catholic
     culture = otomi
 	father = 153
-    2265.7.2 = { birth = yes }
+	mother = 258
+    2271.7.2 = { birth = yes }
 	2331.12.30 = { death = yes }
 }
 158 = { #Daughter of the late Count of Ixmiquilpan, sister of the current Count
@@ -2354,7 +2356,8 @@
     religion = catholic
     culture = otomi
 	father = 153
-    2263.7.23 = { birth = yes }
+	mother = 258
+    2273.7.23 = { birth = yes }
 	2300.1.1 = { add_spouse = 146 }
 	2341.8.23 = { death = yes }
 }
@@ -2464,6 +2467,7 @@
     religion = catholic
     culture = chilangos
 	father = 172
+	mother = 259
     diplomacy = 7
     stewardship = 4
     intrigue = 5
@@ -2476,7 +2480,7 @@
     trait = proud
     trait = scarred_mid
 	trait = stubborn
-    2287.9.23 = { birth = yes }
+    2297.9.23 = { birth = yes }
 	2319.5.20 = { add_spouse = 112 }
 	2384.2.5 = { death = yes }
 }
@@ -2593,7 +2597,8 @@
     religion = catholic
     culture = chilangos
 	father = 172
-    2285.1.12	= { birth = yes }
+	mother = 259
+    2300.11.12	= { birth = yes }
 	2362.1.1 = { death = yes }
 }
 183 = { #Sister of Prince Rodolfo of Tulancingo
@@ -2603,7 +2608,8 @@
     religion = catholic
     culture = chilangos
 	father = 172
-    2294.6.22	= { birth = yes }
+	mother = 259
+    2296.8.22	= { birth = yes }
 	2362.1.1 = { death = yes }
 }
 184 = { #Brother of Prince Rodolfo of Tulancingo
@@ -2613,6 +2619,7 @@
     religion = catholic
     culture = chilangos
 	father = 172
+	mother = 259
 	trait = mastermind_theologian
 	trait = erudite
 	trait = content
@@ -2866,6 +2873,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 215
+	mother = 271
     2171.12.16 = { birth = yes }
 	2230.4.1 = { death = yes } 
 }
@@ -2933,6 +2941,7 @@
 	trait = elusive_shadow
 	trait = stubborn
 	father = 254
+	mother = 272
     2247.8.19 = { birth = yes 
 
 	}
@@ -2950,7 +2959,8 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 211
-    2272.1.21 = { birth = yes }
+	trait = bastard
+    2281.1.21 = { birth = yes }
 	2295.1.1 = { add_spouse = 224 } #Alejandro Tsuts
 	2380.8.18 = { death = yes } 
 }
@@ -2990,11 +3000,13 @@
     2314.5.19 = { birth = yes }
 	2380.8.18 = { death = yes }		
 }
-224 = { # "El Coyote"
+224 = { # The Opalan House hails from Tamiahua.
     name = "Coyotl"
     dynasty = 14 #Opalan 
     religion = tlaneltokayotl
     culture = nahuatl
+	father = 277
+	mother = 276
     diplomacy = 4
     martial = 8
     stewardship = 3
@@ -3071,7 +3083,7 @@
     trait = just
     trait = skilled_tactician
     father = 228
-	mother = 229
+	mother = 260
     2275.9.8 = { birth = yes }
     2315.8.1 = { 
         add_claim = c_tamiahua
@@ -3165,6 +3177,7 @@
     religion = guadalupano
     culture = fronterizo
 	father = 228
+	mother = 260
     2277.3.23 = { birth = yes }
 	2295.1.1 = { add_spouse = 4700029
 				religion = ardentist
@@ -3199,6 +3212,7 @@
     religion = guadalupano
     culture = fronterizo
 	father = 228
+	mother = 260
 	intrigue = 12
 	trait = intricate_webweaver
 	trait = deceitful
@@ -3278,6 +3292,7 @@
     religion = catholic
     culture = fronterizo
 	father = 228
+	mother = 260
     2280.12.27 = { birth = yes }
 	2296.12.26 = { add_spouse = 238 }
 	2380.1.1 = { death = yes }
@@ -3408,7 +3423,7 @@
     name = "Alonso" # Bisabuelo de Alonso
     dynasty = 17
     culture = huastec
-    religion = tlaneltokayotl
+    religion = guadalupano
     martial = 5
     diplomacy = 6
     stewardship = 6
@@ -3416,8 +3431,8 @@
     learning = 4
     trait = brave
     trait = stubborn
-    father = 2100109
-    mother = 2100110
+    father = 261
+    mother = 262
     2206.12.01 = { birth = yes }
 	2228.3.17 = { add_spouse = 252 }	
     2272.9.14 = { death = yes }
@@ -3429,7 +3444,9 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 215
+	mother = 271
     2177.8.19 = { birth = yes }
+	2210.1.1 = { religion = guadalupano }
 	2241.8.4 = { death = yes }		
 }
 252 = { 
@@ -3439,7 +3456,9 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 251
+	mother = 266
     2208.1.19 = { birth = yes }
+	2210.1.1 = { religion = guadalupano }	
 	2261.8.4 = { death = yes }		
 }
 253 = { 
@@ -3449,7 +3468,9 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 251
+	mother = 266
     2210.7.1 = { birth = yes }
+	2210.1.1 = { religion = guadalupano }	
 	2271.8.4 = { death = yes }		
 }
 254 = { 
@@ -3469,8 +3490,335 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 254
+	mother = 272
     2253.7.1 = { birth = yes }
-	2283.1.1 = { death = yes }	#Died during the War on Succession
+	2283.1.1 = { death = {
+		death_reason = death_battle }	#Died during the War on Succession
+	}
+}
+256 = { #Count of Zimapan, fought alongside the rebellious faction during the War on Succession
+    name = "Felipe"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = guadalupano
+    culture = nahuatl
+	trait = sympathy_mesoamerican
+	father = 253
+	mother = 273
+    2231.7.1 = { birth = yes }
+	2295.1.1 = { death = yes }	
+}
+257 = { 
+    name = "Dimas"
+	female = no
+    dynasty = 12 # Villafuerte
+    religion = catholic
+    culture = nahuatl
+	father = 256
+    2252.7.1 = { birth = yes }
+	2283.1.1 = { death = {
+		death_reason = death_battle }	#Died during the War on Succession
+	}
+}
+258 = { 
+    name = "Yessenia"
+	female = yes
+    dynasty = 12 # Villafuerte
+    religion = catholic
+    culture = nahuatl
+	father = 256
+    2248.7.1 = { birth = yes }
+	2264.1.1 = { add_spouse = 153 }
+	2306.11.02 = { death = yes }	
+}
+259 = { 
+    name = "Teodora"
+	female = yes
+    dynasty = 12 # Villafuerte
+    religion = catholic
+    culture = nahuatl
+	father = 257
+    2278.4.29 = { birth = yes }
+	2295.1.1 = { add_spouse = 172 }
+	2350.1.1 = { death = yes }
+}
+260 = { 
+    name = "Gregoria"
+	female = yes
+    dynasty = 17 # Weey
+    religion = guadalupano
+    culture = huastec
+	father = 249
+	trait = bastard
+    2258.5.15 = { birth = yes }
+	2275.1.1 = { add_spouse = 228 }
+	2350.1.1 = { death = yes }
+}
+261 = {
+    name = "Nok" # Tatarabuelo de Alonso
+    dynasty = 17
+    culture = huastec
+    religion = tlaneltokayotl
+    martial = 6
+    diplomacy = 5
+    stewardship = 5
+    intrigue = 4
+    learning = 5
+    trait = just
+    trait = zealous
+    father = 267
+    mother = 268
+    2176.5.03 = { birth = yes }
+	2198.11.02 = { add_spouse = 262 religion = guadalupano}	
+    2241.2.11 = { death = yes }
+}
+262 = { #Daughter of the Count of Tamanzuchale, later Countess of Tamanzuchale
+    name = "Leonor"
+    female = yes
+    dynasty = 18 #Uxum
+    culture = huastec
+    religion = guadalupano
+	father = 263
+	mother = 264
+    diplomacy = 6
+    stewardship = 5
+    intrigue = 6
+    learning = 4
+    trait = charitable
+    trait = gregarious
+    2180.9.21 = { birth = yes }
+    2253.4.04 = { death = yes }
+}
+263 = { #Leónidas Uxum, count of Tamanzuchale
+    name = "Leónidas"
+    female = no
+    dynasty = 18 #Uxum
+	father = 265
+    culture = huastec
+    religion = guadalupano
+    2150.7.13 = { birth = yes }
+    2213.1.04 = { death = yes }
+}
+264 = { #Spouse of Count Leónidas of Tamanzuchale
+    name = "Eunice"
+    female = yes
+    culture = huastec
+    religion = guadalupano
+    2158.9.3 = { birth = yes }
+	2178.1.1 = { add_spouse = 263 }
+    2232.1.4 = { death = yes }
+}
+265 = { #Leonardo Uxum, count of Tamanzuchale
+    name = "Leonardo"
+    female = no
+    dynasty = 18 #Uxum
+    culture = huastec
+    religion = guadalupano
+    2123.8.3 = { birth = yes }
+    2280.1.1 = { death = yes }
+}
+266 = { #Leticia Uxum, Countess consort of Zimapan
+    name = "Leticia"
+    female = yes
+    dynasty = 18 #Uxum
+    culture = huastec
+	father = 263
+    religion = guadalupano
+    2184.4.18 = { birth = yes }
+	2204.1.1 = { add_spouse = 251 }
+    2260.1.1 = { death = yes }
+}
+267 = {
+    name = "Winík" # “Fundador” de la dinastía Weey
+    dynasty = 17
+    culture = huastec
+    religion = tlaneltokayotl
+	father = 269
+    martial = 6
+    diplomacy = 7
+    stewardship = 4
+    intrigue = 4
+    learning = 5
+    trait = proud
+    trait = patient
+    trait = shrewd
+    2145.3.14 = { birth = yes }
+	2168.4.22 = { add_spouse = 268 } 	
+    2210.8.26 = { death = yes }
+}
+268 = { #Priestess of Tamuín
+    name = "Honoria"
+    female = yes
+    dynasty = 0 #Tzooy
+    culture = huastec
+    religion = tlaneltokayotl
+    diplomacy = 7
+    stewardship = 5
+    intrigue = 5
+    learning = 6
+	trait = scholarly_theologian
+	trait = erudite
+	trait = mystic
+    trait = kind
+    trait = diligent
+    2149.7.29 = { birth = yes }
+    2220.10.19 = { death = yes }
+}
+269 = {
+    name = "Alom" # Primer conde de Tamuín de la Casa Weey
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = tlaneltokayotl
+	father = 270
+    2118.3.14 = { birth = yes }
+    2173.8.26 = { death = yes }
+}
+270 = {
+    name = "Mata-del-Tigre" # Priest of Tamuin, founder of House Weey
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = tlaneltokayotl
+    2092.3.14 = { birth = yes }
+    2144.2.7 = { death = yes }
+}
+271 = {
+    name = "Yamile" # Queen of Huasteca
+    female = yes
+	dynasty = 17 # Weey
+    culture = huastec
+    religion = tlaneltokayotl
+    father = 269
+	2143.12.21 = { birth = yes }
+	2165.1.1 = { add_spouse = 215 }
+    2217.2.7 = { death = yes }
+}
+272 = {
+    name = "Josefa" # Queen Mother of Huasteca
+    female = yes
+	dynasty = 12 # Villafuerte
+    culture = nahuatl
+    religion = guadalupano
+    father = 253
+	mother = 273
+	2230.3.21 = { birth = yes }
+	2247.1.1 = { add_spouse = 254 }
+    2306.2.7 = { death = yes }
+}
+273 = {
+    name = "Alba" # Queen Mother of Huasteca
+    female = yes
+	dynasty = 11 # Argensanto
+    culture = chilangos
+    religion = catholic
+    father = 175
+	mother = 189
+	2213.8.21 = { birth = yes }
+	2229.10.1 = { add_spouse = 253 }
+    2299.2.7 = { death = yes }
+}
+274 = { #Cano House, ruled Tuxpan. Loyal to the Villafuertes
+    name = "Rodrigo" # Last Cano ruler of Tuxpan
+    female = no
+	dynasty = 19 # Cano
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 275
+	2247.3.28 = { birth = yes }
+	2289.2.7 = { death = {
+		death_reason = death_imprisonment
+			killer = 219
+		}
+	}
+}
+275 = {
+    name = "Luciano" # Duke of Tuxpan
+    female = no
+	dynasty = 19 # Cano
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2221.2.13 = { birth = yes }
+	2277.9.21 = { death = yes }
+}
+276 = {
+    name = "Luciana" # Mother of the Current Duke of Tuxpan
+    female = yes
+	dynasty = 19 # Cano
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 275
+	2251.7.17 = { birth = yes }
+	2277.9.21 = { death = { 
+		death_reason = death_childbirth
+		}
+	}
+}
+277 = {
+    name = "Cecilio" # Count of Tamiahua, father of the current lord of Tuxpan
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 278
+	trait = severely_injured
+	2247.4.17 = { birth = yes }
+	2269.1.1 = { add_spouse = 276 }
+	2287.9.21 = { death = {
+		death_reason = death_trait
+		}
+	}
+}
+278 = {
+    name = "Macario" # Count of Tamiahua, 
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2222.4.1 = { birth = yes }
+	2285.9.21 = { death = yes }
+}
+279 = {
+    name = "Mixtli" # Heir of Tamaihua, died during the War of Succession
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 277
+	2264.8.7 = { birth = yes }
+	2285.9.21 = { death = {
+		death_reason = death_battle
+		}
+	}
+}
+280 = {
+    name = "Petronila" # Wife of the Duke of Tuxpan
+    female = yes
+    dynasty = 12 #Villafuerte 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 212
+	2251.7.14 = { birth = yes }
+	2270.1.1 = { add_spouse = 274 }
+	2286.3.2 = { death = {
+		death_reason = death_suicide
+		}
+	}
+}
+281 = {
+    name = "Pedro" # Heir of Tuxpan. Died during the War of Succession
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 274
+	mother = 280
+	trait = brave
+	trait = groomed
+	trait = robust
+	2267.7.14 = { birth = yes }
+	2285.9.21 = { death = {
+		death_reason = death_battle
+		}
+	}
 }
 2100108 = {
     name = "Catalina"
@@ -3490,75 +3838,12 @@
 }
 
 
-2100109 = {
-    name = "Nok" # Tatarabuelo de Alonso
-    dynasty = 17
-    culture = huastec
-    religion = catholic
-    martial = 6
-    diplomacy = 5
-    stewardship = 5
-    intrigue = 4
-    learning = 5
-    trait = just
-    trait = zealous
-    father = 2100111
-    mother = 2100112
-    2176.5.03 = { birth = yes }
-	2198.11.02 = { add_spouse = 2100110 }	
-    2241.2.11 = { death = yes }
-}
-
-2100110 = {
-    name = "Leonor"
-    female = yes
-    dynasty = 0
-    culture = huastec
-    religion = catholic
-    diplomacy = 6
-    stewardship = 5
-    intrigue = 6
-    learning = 4
-    trait = charitable
-    trait = gregarious
-    2180.9.21 = { birth = yes }
-    2253.4.04 = { death = yes }
-}
 
 
-2100111 = {
-    name = "Winík" # “Fundador” de la dinastía Weey
-    dynasty = 17
-    culture = huastec
-    religion = guadalupano
-    martial = 6
-    diplomacy = 7
-    stewardship = 4
-    intrigue = 4
-    learning = 5
-    trait = proud
-    trait = patient
-    trait = shrewd
-    2145.3.14 = { birth = yes }
-	2168.4.22 = { add_spouse = 2100112 } 	
-    2210.8.26 = { death = yes }
-}
 
-2100112 = {
-    name = "Tzooy"
-    female = yes
-    dynasty = 0
-    culture = huastec
-    religion = catholic
-    diplomacy = 7
-    stewardship = 5
-    intrigue = 5
-    learning = 6
-    trait = kind
-    trait = diligent
-    2149.7.29 = { birth = yes }
-    2220.10.19 = { death = yes }
-}
+
+
+
 2100113 = { # Don Rodrigo Andrade
     name = "Rodrigo"
     dynasty = 5228056 # Andrade
