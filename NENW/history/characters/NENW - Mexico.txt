@@ -2104,6 +2104,7 @@
 	trait = severely_injured
 	trait = hunter
 	father = 143
+	mother = 322
     2249.11.11 = { 
 		birth = yes 
 	}
@@ -2830,6 +2831,7 @@
 	trait = stubborn
 	trait = legit_bastard
 	father = 211
+	mother = 286
     2288.9.11 = { birth = yes }
 	2350.1.1 = { death = yes }
 }
@@ -2839,10 +2841,12 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 212
+	mother = 283
 	trait = craven
 	trait = paranoid
 	trait = cruel
-    2253.4.2 = { birth = yes }
+	trait = arbitrary
+    2243.4.2 = { birth = yes }
 	2308.5.7 = { death = {
 		death_reason = death_imprisonment
 			killer = 219 #Juana Villafuerte
@@ -2864,6 +2868,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 214
+	mother = 373
     2199.12.16 = { birth = yes }
 	2242.4.1 = { death = yes } 
 }
@@ -2892,6 +2897,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 217
+	mother = 299
     2119.6.11 = { birth = yes }
 	2169.7.11 = { death = yes } 
 }
@@ -2959,6 +2965,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 211
+	mother = 286
 	trait = bastard
     2281.1.21 = { birth = yes }
 	2295.1.1 = { add_spouse = 224 } #Alejandro Tsuts
@@ -2971,9 +2978,10 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 211
+	mother = 314
 	trait = tough_soldier
     2263.2.17 = { birth = yes }
-	2280.8.18 = { death = {
+	2285.8.18 = { death = {
 		death_reason = death_battle
 		}
 	}		
@@ -2985,6 +2993,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 210
+	mother = 326
 	trait = strong
     2311.2.17 = { birth = yes }
 	2380.8.18 = { death = yes }		
@@ -2996,6 +3005,7 @@
     religion = tlaneltokayotl
     culture = nahuatl
 	father = 210
+	mother = 326
 	trait = quick
     2314.5.19 = { birth = yes }
 	2380.8.18 = { death = yes }		
@@ -3723,6 +3733,7 @@
     culture = nahuatl
     religion = tlaneltokayotl
 	father = 275
+	mother = 307	
 	2247.3.28 = { birth = yes }
 	2289.2.7 = { death = {
 		death_reason = death_imprisonment
@@ -3736,6 +3747,8 @@
 	dynasty = 19 # Cano
     culture = nahuatl
     religion = tlaneltokayotl
+	father = 282
+	mother = 291
 	2221.2.13 = { birth = yes }
 	2277.9.21 = { death = yes }
 }
@@ -3746,6 +3759,7 @@
     culture = nahuatl
     religion = tlaneltokayotl
 	father = 275
+	mother = 307
 	2251.7.17 = { birth = yes }
 	2277.9.21 = { death = { 
 		death_reason = death_childbirth
@@ -3759,6 +3773,7 @@
     culture = nahuatl
     religion = tlaneltokayotl
 	father = 278
+	mother = 310
 	trait = severely_injured
 	2247.4.17 = { birth = yes }
 	2269.1.1 = { add_spouse = 276 }
@@ -3773,11 +3788,13 @@
     dynasty = 14 #Opalan 
     culture = nahuatl
     religion = tlaneltokayotl
+	mother = 302
+	father = 303
 	2222.4.1 = { birth = yes }
 	2285.9.21 = { death = yes }
 }
 279 = {
-    name = "Mixtli" # Heir of Tamaihua, died during the War of Succession
+    name = "Mixtli" # Heir of Tamiahua, died during the War of Succession
     female = no
     dynasty = 14 #Opalan 
     culture = nahuatl
@@ -3796,6 +3813,7 @@
     culture = nahuatl
     religion = tlaneltokayotl
 	father = 212
+	mother = 283
 	2251.7.14 = { birth = yes }
 	2270.1.1 = { add_spouse = 274 }
 	2286.3.2 = { death = {
@@ -3819,6 +3837,1241 @@
 		death_reason = death_battle
 		}
 	}
+}
+282 = {
+    name = "Emilio" # Duke of Tuxpan, father of a Queen consort
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 292
+	2198.4.27 = { birth = yes }
+	2259.8.21 = { death = yes }
+}
+283 = {
+    name = "Emilia" # Queen consort of Huasteca
+    female = yes
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 282
+	mother = 291
+	2231.6.13 = { birth = yes }
+	2250.1.1 = { add_spouse = 212 }
+	2281.8.21 = { death = yes }
+}
+284 = {
+    name = "Humberto" # Alcalde de Huejutla; familia controla Huejutla
+    female = no
+    dynasty = 20 #de los Reyes 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 316
+	mother = 317
+	2241.7.18 = { birth = yes }
+	2318.12.9 = { death = yes }
+}
+285 = {
+    name = "Romina" # Esposa del Alcaldel de Huejutla
+    female = yes
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2245.6.13 = { birth = yes }
+	2264.1.1 = { add_spouse = 284 }
+	2330.1.1 = { death = yes }
+}
+286 = {
+    name = "Alejandra" # Lover of King Felipe II of Huasteca, mother of the current Prince of Sierra Gorda
+    female = yes
+    dynasty = 20 #de los Reyes 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father =284
+	mother = 285	
+	trait = fair
+	trait = trusting
+	2265.1.18 = { birth = yes }
+	2281.1.18 = { 
+		effect = {
+			add_lover = 211
+		}
+	}	
+	2308.5.7 = { death = {
+		death_reason = death_imprisonment
+			killer = 219 #Juana Villafuerte
+		}
+	}
+}
+287 = {
+    name = "Bernardo" # Alcalde de Huejutla; familia controla Huejutla
+    female = no
+    dynasty = 20 #de los Reyes 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father =284
+	mother = 285
+	2272.7.18 = { birth = yes }
+	2330.12.9 = { death = yes }
+}
+288 = {
+    name = "Jacinta" # Wife of Bernardo, mayor of Huejutla
+    female = yes
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2275.11.13 = { birth = yes }
+	2295.1.1 = { add_spouse = 287 }
+	2360.12.9 = { death = yes }
+}
+289 = {
+    name = "Jacinto" # Cousin of Prince Alejandro of Sierra Gorda; a skilled_tactician
+    female = no
+    dynasty = 20 #de los Reyes 	
+    culture = nahuatl
+    religion = tlaneltokayotl
+	trait = skilled_tactician
+	trait = brave
+	employer = 210
+	father = 287
+	mother = 288
+	2297.8.18 = { birth = yes }
+	2360.1.1 = { death = yes }
+}
+290 = { 
+    name = "Roberto" # Cousin of Prince Alejandro of Sierra Gorda; a fortune_builder
+    female = no
+    dynasty = 20 #de los Reyes 	
+    culture = nahuatl
+    religion = tlaneltokayotl
+	trait = fortune_builder
+	trait = diligent
+	father = 287
+	mother = 288	
+	2299.8.2 = { birth = yes }
+	2360.1.1 = { death = yes }
+}
+291 = { 
+    name = "Cempasúchil" # Wife of Duke Emilio of Tuxpan
+    female = yes
+    dynasty = 12 #Villafuerte
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 251
+	mother = 266
+	2204.8.2 = { birth = yes }
+	2220.12.26 = { add_spouse = 282 }
+	2280.1.1 = { death = yes }
+}
+292 = {
+    name = "Andrés" # Duke of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 293
+	2171.9.1 = { birth = yes }
+	2233.11.21 = { death = yes }
+}
+293 = {
+    name = "Miguel" # Duke of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 294
+	2156.7.14 = { birth = yes }
+	2208.7.16 = { death = yes }
+}
+294 = {
+    name = "José" # Duke of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 295
+	2123.4.4 = { birth = yes }
+	2190.11.16 = { death = yes }
+}
+295 = {
+    name = "Pedro" # Duke of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 296
+	2093.11.14 = { birth = yes }
+	2150.1.16 = { death = yes }
+}
+296 = {
+    name = "Ángel" # Duke of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 297
+	2068.7.4 = { birth = yes }
+	2135.12.29 = { death = yes }
+}
+297 = {
+    name = "Gabriel" # Count of Tuxpan
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 298
+	2040.7.4 = { birth = yes }
+	2103.12.29 = { death = yes }
+}
+298 = {
+    name = "Rodrigo" # Count of Tuxpan, founder of House Cano
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2014.9.14 = { birth = yes }
+	2059.8.13 = { death = yes }
+}
+299 = {
+    name = "Angelina" # Queen Consort of Huasteca
+    female = yes
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 296
+	2089.5.23 = { birth = yes }
+	2110.1.1 = { add_spouse = 217 }
+	2160.8.13 = { death = yes }
+}
+300 = {
+    name = "Pedro" # Count of Tamiahua
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 294
+	2158.5.13 = { birth = yes }
+	2228.8.13 = { death = yes }
+}
+301 = {
+    name = "Juan" # Count of Tamiahua
+    female = no
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 300
+	2178.5.13 = { birth = yes }
+	2248.9.25 = {  death = yes }
+}
+302 = {
+    name = "Jimena" # Countess of Tamiahua
+    female = yes
+    dynasty = 19 #Cano 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 301
+	2199.5.13 = { birth = yes }
+	2263.12.3 = {death = yes }
+}
+303 = {
+    name = "Ignacio" # Father of the First Opalan Count of Tamiahua
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 304
+	mother = 306	
+	2196.8.7 = { birth = yes }
+	2218.1.1 = { add_spouse = 302 }
+	2251.12.3 = {death = yes }
+}
+304 = {
+    name = "Tochpan" # Mayor of Tuxpan
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = guadalupano
+	2161.8.9 = { birth = yes }
+	2220.1.31 = {death = yes }
+}
+305 = {
+    name = "Eduardo" # Mayor of Tuxpan
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = guadalupano
+	father = 304
+	mother = 306
+	2188.12.9 = { birth = yes }
+	2253.1.31 = {death = yes }
+}
+306 = {
+    name = "Pina" # Wife of Mayor of Tuxpan
+    female = yes
+    culture = nahuatl
+    religion = guadalupano
+	2170.2.19 = { birth = yes }
+	2187.1.1 = { add_spouse = 304 }
+	2241.1.31 = {death = yes }
+}
+307 = {
+    name = "Magdalena" # Daughter of the Mayor of Tuxpan
+    female = yes
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	trait = groomed
+	trait = fortune_builder
+	father = 305
+	mother = 308
+	2225.3.19 = { birth = yes }
+	2245.1.1 = { add_spouse = 275 }
+	2271.11.30 = {death = yes }
+}
+308 = {
+    name = "Nidia" # Wife of Mayor of Tuxpan
+    female = yes
+    dynasty = 21 #Tochpan 	
+    culture = nahuatl
+    religion = guadalupano
+	father = 312
+	mother = 313
+	2193.2.19 = { birth = yes }
+	2214.1.1 = { add_spouse = 305 }
+	2275.5.31 = {death = yes }
+}
+309 = {
+    name = "Policarpo" # Mayor of Tuxpan
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 312
+	mother = 313
+	2185.2.19 = { birth = yes }
+	2242.5.31 = {death = yes }
+}
+310 = {
+    name = "Patricia" # Countess of Tamiahua
+    female = yes
+    dynasty = 21 #Tochpan	
+    culture = nahuatl
+    religion = guadalupano
+	father = 309
+	mother = 311
+	2225.2.19 = { birth = yes }
+	2245.1.1 = { add_spouse = 278 }
+	2290.5.31 = {death = yes }
+}
+311 = {
+    name = "Tamara" # Wife of Mayor of Tuxpan
+    female = yes
+    culture = nahuatl
+    religion = guadalupano
+	2195.2.19 = { birth = yes }
+	2218.1.1 = { add_spouse = 309 }
+	2275.5.31 = {death = yes }
+}
+312 = {
+    name = "Polifemo" # Mayor of Tuxpan
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	2160.2.19 = { birth = yes }
+	2239.5.31 = {death = yes }
+}
+313 = {
+    name = "Ágata" # Wife Mayor of Tuxpan
+    female = yes
+	culture = nahuatl
+    religion = guadalupano
+	2168.2.19 = { birth = yes }
+	2285.2.20 = { add_spouse = 312 } 
+	2245.5.31 = {death = yes }
+}
+314 = {
+    name = "Alondra" # Queen of Huasteca
+    female = yes
+	dynasty = 17 # Weey
+    culture = huastec
+    religion = guadalupano
+    father = 250
+	mother = 252
+	2245.12.21 = { birth = yes }
+	2262.1.1 = { add_spouse = 211 }
+    2282.2.7 = { death = {
+		death_reason = death_execution #killed in a summary trial by the King, because she found his love affair.
+			killer = 211 
+		}
+	}
+}
+315 = { 
+    name = "Romina" # Cousin of Prince Alejandro of Sierra Gorda; a intricate_webweaver
+    female = no
+    dynasty = 20 #de los Reyes 	
+    culture = nahuatl
+    religion = tlaneltokayotl
+	trait = intricate_webweaver
+	trait = deceitful
+	trait = gregarious
+	father = 287
+	mother = 288	
+	2303.9.23 = { birth = yes }
+	2360.1.1 = { death = yes }
+}
+316 = { 
+    name = "Adalberto" # Mayor of Huejutla
+    female = no
+    dynasty = 20 #de los Reyes 	
+    culture = nahuatl
+    religion = tlaneltokayotl
+	2218.9.23 = { birth = yes }
+	2280.8.27 = { death = yes }
+}
+317 = { 
+    name = "María" # Daughter of the Baron of Tula; Wife of the Mayor of Huejutla after a hefty dowry was paid
+    female = yes
+    dynasty = 10 # Tovar
+    culture = otomi
+    religion = catholic
+	father = 318
+	mother = 319
+	2224.3.21 = { birth = yes }
+	2240.1.1 = { add_spouse = 316 }
+	2280.8.27 = { death = yes }
+}
+318 = { 
+    name = "Pedro" # Baron of Tula
+    female = no
+    dynasty = 10 # Tovar
+    culture = otomi
+    religion = catholic
+	father = 161
+	2195.8.21 = { birth = yes }
+	2261.8.27 = { death = yes }
+}
+319 = { 
+    name = "Adriana" # Wife of the Baron of Tula
+    dynasty = 1 # Aguilar y Deza
+	female = yes
+    culture = otomi
+    religion = catholic
+	father = 119
+	mother = 320
+	trait = legit_bastard
+	2198.9.23 = { birth = yes culture = chilangos }
+	2220.1.1 = { add_spouse = 318 }
+	2261.8.13 = { death = yes }
+}
+320 = { 
+    name = "Lara" # Wife of the Bishop of Tula
+	female = yes
+    culture = otomi
+    religion = catholic
+	2173.3.43 = { birth = yes }
+	2241.5.27 = { death = yes }
+}
+322 = { 
+    name = "Laura" # Daughter of the Baron of Tula; Wife of the Count of Temascalcingo
+    female = yes
+    dynasty = 10 # Tovar
+    culture = otomi
+    religion = catholic
+	father = 318
+	mother = 319
+	2227.3.9 = { birth = yes }
+	2248.1.1 = { add_spouse = 143 }
+	2307.8.17 = { death = yes }
+}
+323 = {
+    name = "Yohualli" # Daughter of the current Duke of Tuxpan
+    female = yes
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 224
+	mother = 220
+	2305.3.19 = { birth = yes }
+	2371.1.1 = {death = yes }
+}
+324 = {
+    name = "Xoco" # Daughter of the current Duke of Tuxpan
+    female = yes
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 224
+	mother = 220
+	2308.12.3 = { birth = yes }
+	2390.1.1 = {death = yes }
+}
+325 = {
+    name = "Indalecio" # 
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 278
+	mother = 310
+	2251.4.15 = { birth = yes }
+	2313.9.29 = {death = yes }
+}
+
+326 = {
+    name = "Citlalli" # 
+    female = yes
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 327
+	2293.2.17 = { birth = yes }
+	2310.1.1 = { add_spouse = 210 }
+	2360.1.1 = {death = yes }
+}
+327 = {
+    name = "Tonali" # 
+    female = no
+    dynasty = 14 #Opalan 
+    culture = nahuatl
+    religion = tlaneltokayotl
+	father = 325
+	2273.9.4 = { birth = yes }
+	2338.1.1 = {death = yes }
+}
+328 = {
+    name = "Polibio" # Bishop of Juana Moza
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 312
+	mother = 313
+	2195.4.13 = { birth = yes }
+	2260.5.3 = {death = yes }
+}
+329 = {
+    name = "Polidoro" # Mayor of Tuxpan
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 328
+	mother = 330
+	2219.10.21 = { birth = yes }
+	2273.5.3 = {death = yes }
+}
+330 = {
+    name = "Elisa" 
+    female = yes    
+	culture = nahuatl
+    religion = tlaneltokayotl
+	2198.4.13 = { birth = yes }
+	2218.1.1 = { add_spouse = 328 }
+	2260.5.3 = {death = yes }
+}
+331 = {
+    name = "Enrique" 
+	dynasty = 22 #Rodriguez Cano
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	trait = fair
+	trait = shrewd
+	trait = charismatic_negotiator
+	trait = brave
+	father = 281
+	mother = 332
+	2286.6.21 = { birth = yes  culture = ribereno}
+#	2218.1.1 = { add_spouse = 328 }
+	2360.5.3 = {death = yes }
+}
+332 = {
+    name = "Carmela" 
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 334
+	mother = 381
+	trait = fair
+	trait = nun
+	2266.3.27 = { birth = yes  
+		culture = ribereno
+	}
+	2360.5.3 = {death = yes }
+}
+334 = { 
+    name = "Antonio"  #Current Doge of Tuxpan
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	trait = fair
+	trait = strong
+	father = 364
+	give_nickname = nick_the_old
+	2241.12.27 = { birth = yes  culture = ribereno}
+	2329.12.15 = {death = yes }
+}
+335 = {
+    name = "Apolodoro" # Mayor of Tuxpan
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = ribereno
+    religion = guadalupano
+	father = 329
+	mother = 366
+	2248.3.4 = { birth = yes culture = nahuatl}
+	2313.5.3 = {death = yes }
+}
+336 = {
+    name = "Apolonio" # Current Patrician of Tochpan
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 335
+	mother = 368
+	employer = 334
+	2274.9.21 = { birth = yes }
+	2341.10.9 = {death = yes }
+}
+337 = {
+    name = "León" # Patrician of Koy
+    female = no
+    dynasty = 25 #Koy
+	culture = yucatanense
+    religion = guadalupano
+	father = 338
+	mother = 369
+	2290.10.28= { birth = yes culture = huastec }
+	2360.1.1 = {death = yes }
+}
+338 = {
+    name = "Ronaldo" # Patrician of Koy
+    female = no
+    dynasty = 25 #Koy
+	culture = huastec
+    religion = guadalupano
+	father = 342
+	mother = 371
+	2263.8.12= { birth = yes }
+	2329.1.1 = {death = yes }
+}
+339 = {
+    name = "Roberto" # Patrician of Koy
+    female = no
+    dynasty = 25 #Koy
+	culture = yucatanense
+    religion = guadalupano
+	father = 338
+	mother = 369
+	2296.8.31= { birth = yes culture = huastec }
+	2360.1.1 = {death = yes }
+}
+340 = {
+    name = "Paladino" # Patrician of Koy
+    female = no
+    dynasty = 25 #Koy
+	culture = yucatanense
+    religion = guadalupano
+	father = 338
+	mother = 369
+	2302.12.19= { birth = yes culture = huastec}
+	2360.1.1 = {death = yes }
+}
+341 = {
+    name = "Mireya" # Patrician of Koy
+    female = yes
+    dynasty = 25 #Koy
+	culture = yucatanense
+    religion = guadalupano
+	father = 338
+	mother = 369
+	2293.1.27= { birth = yes culture = huastec}
+	2315.1.1 = { add_spouse = 331 }
+	2360.1.1 = {death = yes }
+}
+342 = {
+    name = "Romario" # Patrician of Koy
+    female = no
+    dynasty = 25 #Koy
+	culture = huastec
+    religion = guadalupano
+	2229.4.9= { birth = yes }
+	2295.11.17 = {death = yes }
+}
+343 = { 
+    name = "Marco"  #Heir of House Fomperroza
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 334
+	mother = 381
+	2259.12.27 = { birth = yes  culture = ribereno}
+	2340.1.1 = {death = yes }
+}
+344 = { 
+    name = "Antonio"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 343
+	2276.12.27 = { birth = yes  culture = ribereno}
+	2340.1.1 = {death = yes }
+}
+345 = {
+    name = "Apolinar" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 328
+	employer = 330
+	2223.7.13 = { birth = yes }
+	2318.8.9 = {death = yes }
+}
+346 = {
+    name = "Hipólito" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 345
+	2251.11.22 = { birth = yes }
+	2330.8.9 = {death = yes }
+}
+347 = {
+    name = "Policarpo" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 346
+	2283.9.13 = { birth = yes }
+	2360.1.1 = {death = yes }
+}
+348 = {
+    name = "Polemón" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 346
+	2288.5.29 = { birth = yes }
+	2360.1.1 = {death = yes }
+}
+349 = {
+    name = "Pelayo" 
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 336
+	2299.4.1 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+350 = {
+    name = "Palas" #
+    female = yes
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 336
+	2303.2.17 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+351 = { 
+    name = "Tulio"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 344
+	2297.6.30 = { birth = yes  culture = ribereno}
+	2350.1.1 = {death = yes }
+}
+352 = { 
+    name = "Antonia"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 344
+	2299.11.29 = { birth = yes  culture = ribereno}
+	2350.1.1 = {death = yes }
+}
+353 = { 
+    name = "Marcial"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 344
+	2302.1.13 = { birth = yes  culture = ribereno}
+	2370.1.1 = {death = yes }
+}
+354 = { 
+    name = "Octavio"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 343
+	2279.6.13 = { birth = yes  culture = ribereno}
+	2345.1.1 = {death = yes }
+}
+355 = { 
+    name = "Julia"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 354
+	2303.9.21 = { birth = yes  culture = ribereno}
+	2370.1.1 = {death = yes }
+}
+356 = { 
+    name = "Octavia"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 354
+	2307.2.12 = { birth = yes  culture = ribereno}
+	2370.1.1 = {death = yes }
+}
+357 = {
+    name = "Apolonia" #
+    female = yes
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 348
+	2316.9.12 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+358 = {
+    name = "Polifemo" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 348
+	2320.11.20 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+359 = {
+    name = "Apolinar" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 347
+	2307.11.27 = { birth = yes }
+	2370.1.1 = {death = yes }
+}
+360 = {
+    name = "Felipe" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 347
+	2313.8.13 = { birth = yes }
+	2370.1.1 = {death = yes }
+}
+360 = {
+    name = "Paloma" #
+    female = yes
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 347
+	2316.12.5 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+361 = {
+    name = "Napoleón" #
+    female = no
+    dynasty = 21 #Tochpan    
+	culture = nahuatl
+    religion = guadalupano
+	father = 336
+	martial = 10
+	trait = ambitious
+	trait = genius
+	2307.4.15 = { birth = yes }
+	2380.1.1 = {death = yes }
+}
+362 = { 
+    name = "Antonio"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 351
+	mother = 363
+	2322.9.30 = { birth = yes  culture = ribereno}
+	2390.1.1 = {death = yes }
+}
+363 = { 
+    name = "Carmen"
+	female = yes   
+	culture = cubano
+    religion = guadalupano
+	2305.2.3 = { birth = yes  culture = ribereno}
+	2321.7.15 = { add_spouse = 351 }
+	2390.1.1 = {death = yes }
+}
+364 = { 
+    name = "César"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 365
+	2216.9.30 = { birth = yes  culture = ribereno}
+	2283.1.17 = {death = yes }
+}
+365 = { 
+    name = "Julio"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 375
+	2188.1.30 = { birth = yes  culture = ribereno}
+	2263.9.9 = {death = yes }
+}
+366 = { 
+    name = "Julia"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 365
+	2221.1.23 = { birth = yes  culture = ribereno}
+	2245.1.1 = { add_spouse = 329 }
+	2285.11.9 = {death = yes }
+}
+367 = { 
+    name = "Napoleón"
+	dynasty = 14 #Opalan
+	female = no    
+	culture = nahuatl
+    religion = guadalupano
+	father = 305
+	2219.7.23 = { birth = yes }
+	2255.11.21 = {death = yes }
+}
+368 = { 
+    name = "Filomena"
+	dynasty = 14 #Opalan
+	female = yes    
+	culture = nahuatl
+    religion = guadalupano
+	father = 305
+	2249.8.17 = { birth = yes }
+	2270.1.1 = { add_spouse = 335 }
+	2320.01.25 = {death = yes }
+}
+369 = { 
+    name = "Juliana"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 376
+	2271.4.23 = { birth = yes  culture = ribereno}
+	2288.6.15 = { add_spouse = 338 }
+	2335.11.9 = {death = yes }
+}
+370 = {
+    name = "Koj" # Priest of Tamuin
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = guadalupano
+	father = 261
+	mother = 262
+    2207.7.21 = { birth = yes }
+    2278.2.7 = { death = yes }
+}
+371 = {
+    name = "Leona" # Wife of Romario, Governor of Tuxpan
+	female = yes
+    dynasty = 17 # Weey
+    culture = huastec
+    religion = guadalupano
+	father = 370
+    2231.7.21 = { birth = yes }
+	2250.1.1 = { add_spouse = 342 }
+    2302.2.7 = { death = yes }
+}
+372 = {
+    name = "Koj" # Wife of Romario, Governor of Tuxpan
+	female = no
+    dynasty = 25 # Koy
+    culture = huastec
+    religion = guadalupano
+	father = 342
+	mother = 371
+    2253.5.31 = { birth = yes }
+    2329.8.7 = { death = yes }
+}
+373 = { #Leona Uxum, Queen consort of Huasteca
+    name = "Leona"
+    female = yes
+    dynasty = 18 #Uxum
+    culture = huastec
+	father = 263
+    religion = guadalupano
+    2174.4.11 = { birth = yes }
+	2295.1.1 = { add_spouse = 214 }
+    2205.8.12 = { death = {
+		death_reason = death_childbirth
+		}
+	}
+}
+374 = { 
+    name = "Julián"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	2141.1.23 = { birth = yes  culture = ribereno}
+	2209.12.13 = {death = yes }
+}
+375 = { 
+    name = "Cesarión"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 374
+	2165.9.7 = { birth = yes  culture = ribereno}
+	2216.11.9 = {death = yes }
+}
+376 = { 
+    name = "Julián"
+	dynasty = 23 #Fomperroza
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 364
+	2252.4.18 = { birth = yes  culture = ribereno}
+	2326.11.9 = {death = yes }
+}
+377 = { 
+    name = "Marcia"
+	dynasty = 23 #Fomperroza
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 343
+	trait = cancer
+	2282.5.23 = { birth = yes  culture = ribereno}
+	2305.1.1 = { add_spouse = 237 }
+	2318.1.1 = {death = { 
+		death_reason = death_trait
+		}
+	}
+}
+378 = { 
+    name = "Lopa"
+	dynasty = 15 #Estela
+	female = yes    
+	culture = fronterizo
+    religion = guadalupano
+	father = 237
+	mother = 377
+	2307.9.17 = { birth = yes  }
+	2390.1.1 = {death = yes }
+}
+379 = { 
+    name = "Marco"
+	dynasty = 15 #Estela
+	female = no    
+	culture = fronterizo
+    religion = guadalupano
+	father = 237
+	mother = 377
+	2312.11.3 = { birth = yes  }
+	2390.1.1 = {death = yes }
+}
+380 = { 
+    name = "Santiago"
+	dynasty = 26 # de la Peña
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	2225.11.3 = { birth = yes  culture = ribereno}
+	2289.1.1 = {death = yes }
+}
+381 = { 
+    name = "Ximena"
+	dynasty = 26 # de la Peña
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 380
+	2244.11.3 = { birth = yes  culture = ribereno}
+	2262.1.1 = { add_spouse = 334 }
+	2318.1.29 = {death = yes }
+}
+382 = { 
+    name = "Felipe"
+	dynasty = 26 # de la Peña
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 380
+	2249.11.9 = { birth = yes  culture = ribereno}
+
+	2306.1.1 = {death = yes }
+}
+383 = { 
+    name = "Santiago"
+	dynasty = 26 # de la Peña
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 382
+	2273.3.13 = { birth = yes  culture = ribereno}
+
+	2326.1.1 = {death = yes }
+}
+384 = { 
+    name = "Felipe"
+	dynasty = 26 # de la Peña
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 383
+	2296.9.11 = { birth = yes  culture = ribereno}
+	2356.1.1 = {death = yes }
+}
+385 = { 
+    name = "Santiago"
+	dynasty = 26 # de la Peña
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	father = 384
+	mother = 386
+	2322.1.11 = { birth = yes  culture = ribereno}
+	2386.1.1 = {death = yes }
+}
+386 = { 
+    name = "Patricia"
+	female = yes    
+	culture = ribereno
+    religion = guadalupano
+	2304.12.29 = { birth = yes  }
+	2320.1.1 = { add_spouse = 384 }
+	2386.1.1 = {death = yes }
+}
+387 = { 
+    name = "Andrea"
+	dynasty = 26 # de la Peña
+	female = yes    
+	culture = cubano
+    religion = guadalupano
+	father = 383
+	2290.7.22 = { birth = yes  culture = ribereno}
+	2309.2.13 = { add_spouse = 337 }
+	2356.1.1 = {death = yes }
+}
+388 = { 
+    name = "Santiago"
+	dynasty = 25 # Koy
+	female = no
+	culture = yucatanense
+    religion = guadalupano
+	trait = fair
+	trait = quick
+	trait = strong
+	father = 337
+	mother = 387
+	2321.3.22 = { birth = yes  culture = huastec}
+	2399.1.1 = {death = yes }
+}
+389 = {
+    name = "Luis" 
+	dynasty = 22 #Rodriguez Cano
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	trait = fair
+	father = 331
+	mother = 341
+	2316.1.3 = { birth = yes  culture = ribereno}
+	2360.5.3 = {death = yes }
+}
+390 = {
+    name = "Marina" 
+	dynasty = 22 #Rodriguez Cano
+	female = yes    
+	culture = yucatanense
+    religion = guadalupano
+	trait = fair
+	father = 331
+	mother = 341
+	2318.4.13 = { birth = yes  culture = ribereno}
+	2360.5.3 = {death = yes }
+}
+391 = {
+    name = "Román" 
+	dynasty = 22 #Rodriguez Cano
+	female = no    
+	culture = cubano
+    religion = guadalupano
+	trait = fair
+	father = 331
+	mother = 341
+	2319.12.30 = { birth = yes  culture = ribereno}
+	2360.5.3 = {death = yes }
+}
+392 = {
+    name = "Vicente" 
+	dynasty = 22 #Rodriguez Cano
+	female = no    
+	culture = yucatanense
+    religion = guadalupano
+	trait = fair
+	father = 331
+	mother = 341
+	2323.8.7 = { birth = yes  culture = ribereno}
+	2360.5.3 = {death = yes }
+}
+393 = { 
+    name = "Wejwel"
+	dynasty = 25 # Koy
+	female = no
+	culture = yucatanense
+    religion = guadalupano
+	trait = fair
+	trait = quick
+	trait = strong
+	father = 337
+	mother = 387
+	2265.6.18 = { birth = yes  culture = huastec}
+	2320.1.1 = {death = yes }
+}
+394  = { 
+    name = "Wejwel"
+	dynasty = 25 # Koy
+	female = no
+	culture = yucatanense
+    religion = guadalupano
+	trait = fair
+	trait = quick
+	trait = strong
+	father = 337
+	mother = 387
+	2265.6.18 = { birth = yes  culture = huastec}
+	2320.1.1 = {death = yes }
 }
 2100108 = {
     name = "Catalina"

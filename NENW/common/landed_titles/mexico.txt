@@ -1328,29 +1328,27 @@ e_mexico = {
 				b_cuautepec_de_hinojosa_HI = {}
 				b_santiago_tulantepec_HI = {}
 				b_huasca_de_ocampo_HI = {}
-				b_metepec_HI = {}
 				b_santa_ana_hueytlalpan_HI = {}
 				b_singuilucan_HI = {}
 				b_ciudad_sahagun_HI = {
 					short_name = yes
 					used_for_dynasty_names = no
 				}
-			}
-			c_huayacocotla = { # 3076 #tenango
-				color={ 56 10 102 }
-				color2={ 255 255 255 }
-				
-				ribereno = "Huayacocotla"
+			}			
+			c_tenango = { 	
+				color = { 44 4 144 }
+				color2 = { 255 255 255 }
 				
 				b_tenango_HI = {}
-				b_huayacocotla_VE = {}
-				b_acaxochitlan_HI = {}
+				b_metepec_HI = {}
 				b_agua_blanca_de_iturbide_HI = {}
+				b_acaxochitlan_HI = {}
 				b_huehuetla_HI = {}
-				b_santa_ana_tzacuala_HI = {}
 				b_san_bartolo_tutotepec_HI = {}
-			}			
-
+				b_santa_ana_tzacuala_HI = {}
+				
+			}
+				
 		}
 		d_huasteca_hidalgo = {
 			color = { 61 40 102 }
@@ -1390,6 +1388,19 @@ e_mexico = {
 			#	b_calnali_VE = {} #actually part of Hidalgo
 				
 			}	
+			c_huayacocotla = { # 3076
+				color={ 56 10 102 }
+				color2={ 255 255 255 }
+				
+				b_huayacocotla_VE = {}
+				b_zacualtipan_HI = {}
+				b_tlahuelompa_HI = {}
+				b_zontecomatlan_VE = {}
+				b_zacualpan_VE = {}
+				b_texcatepec_VE = {}
+				b_tlachichilco_VE = {}
+				
+			}			
 		}
 	}
 	
@@ -1803,18 +1814,31 @@ e_mexico = {
 				huastec = "Tam-Koy"
 				
 				
-				b_castillo_de_teayo_VE = {}
+				b_la_pena_VE = {} #Santiago de la Peña
 				b_tuxpan_VE = {
 					ribereno = "Tuxpam"
 					huastec = "Tam-Koy"
 				}
 				b_juana_moza_VE = {}
-				b_alamo_VE = {}
-				b_la_pena_VE = {}
-				b_temapache_VE = {}
-				b_rio_pantepec_VE = {}
+				b_alto_lucero_VE = {}
 				b_tampamachoco_VE = {}
+				b_chalauite_VE = {}
+				b_rio_pantepec_VE = {}
 			}
+			c_temapache = { #2357
+				color = { 168 52 130 }
+				color2 = { 255 255 255 }
+				
+				b_alamo_VE = {}
+				b_cerro_azul_VE = {}
+				b_castillo_de_teayo_VE = {}
+				b_tepetzintla_VE = {}
+				b_tihuatlan_VE = {}
+				b_mequetla_VE = {}
+				b_teayo_VE = {}
+				b_temapache_VE = {}
+			}
+				
 			c_chicontepec = {
 				color = { 76 26 68 }
 				color2 = { 255 255 255 }
@@ -2651,7 +2675,16 @@ e_mexico = {
 		color2={ 255 255 255 }
 		
 		capital = 3078 #c_xalapa
-	
+		
+		d_tuxpan_republic = {
+			color =  { 166 40 101 }
+			color2 = { 255 255 255 }
+			
+			capital = 3075 # Tuxpan
+			
+			title_prefix = free_city
+		}
+		
 		d_las_montanas = { 
 			color = { 153 30 91 }
 			color2 = { 255 255 255 }
