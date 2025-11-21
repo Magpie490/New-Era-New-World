@@ -534,6 +534,131 @@ decisions = {
 			factor = 1
 		}
 	}
+	form_yucatan_republic = {
+		is_high_prio = yes
+		only_playable = no
+		ai_check_interval = 24
+		potential = {
+			capital_scope = {
+				region = custom_yucatan_region
+			}
+			OR = {
+				primary_title = { title = k_yucatan }
+				primary_title = { title = k_quintana_roo }
+				primary_title = { title = k_campeche }
+			}
+			AND = { ## I guess this means who can form the republic?  Should mean that they can as long as they have either of those governments, no?
+					form_empire_allow = no
+					OR = {
+					government = oligarchic_republic
+					government = merchant_republic_government
+					}
+			}
+			e_yucatan_republic = {
+				is_titular = yes
+				has_holder = no
+			}
+			
+			NOT = {
+				has_landed_title = e_mayab #and it's confederation title, whenever it is created.
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			OR = { ## I guess this means who can form the republic?  Should mean that they can as long as they have either of those governments, no?
+					government = oligarchic_republic
+					government = merchant_republic_government
+			}
+			OR = {
+				primary_title = { title = k_yucatan }
+				primary_title = { title = k_quintana_roo }
+				primary_title = { title = k_campeche }
+
+			}			
+			#Control a bunch of lands
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+				
+				d_yucatan = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_puuc = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_valladolid = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_cancun = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_quintana_roo = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_chetumal = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_calakmul = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_campeche = { show_scope_change = no province_completely_controls_trigger = yes } 
+				d_terminos = { show_scope_change = no province_completely_controls_trigger = yes }
+				d_carmen = { show_scope_change = no province_completely_controls_trigger = yes }
+			}
+		}
+
+		effect = {
+			prestige = 1000
+			hidden_tooltip = {
+			}
+			primary_title = {
+				e_yucatan_republic = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+					copy_title_history = PREV
+				}
+			}
+			
+			custom_tooltip = {
+				text = form_yucatan_tt 
+				e_yucatan_republic = {
+					gain_title_effect = yes
+				}
+			}
+
+			hidden_tooltip = {
+				###Unite the kingdoms and own stuff	
+				k_yucatan = { de_jure_liege = e_yucatan_republic }	
+				k_quintana_roo = { de_jure_liege = e_yucatan_republic }	
+				k_campeche = { de_jure_liege = e_yucatan_republic }	
+				
+				###Destroy the Two Former Kingdom Titles if you hold them
+				destroy_landed_title = k_quintana_roo
+				destroy_landed_title = k_yucatan				
+				destroy_landed_title = k_campeche
+			}
+			 if = {
+				limit = {
+					 completely_controls = d_tabasco
+					completely_controls = d_usumacinta
+				 }
+				 k_tabasco = { de_jure_liege = e_yucatan_republic }
+				 destroy_landed_title = k_tabasco
+			 }
+			 if = {
+				limit = {
+					 completely_controls = d_peten
+					completely_controls = d_lacandon
+					completely_controls = d_montes_azules
+					completely_controls = d_poptun
+				 }
+				 k_peten = { de_jure_liege = e_yucatan_republic }
+				 destroy_landed_title = k_peten
+			 }	
+			 if = {
+				limit = {
+					 completely_controls = d_belize
+					completely_controls = d_belmopan
+					completely_controls = d_toledo_be
+				 }
+				 k_belize = { de_jure_liege = e_yucatan_republic }
+				 destroy_landed_title = k_belize
+			 }			 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 	reform_oaxaca = {
 		is_high_prio = yes
 		only_playable = no
