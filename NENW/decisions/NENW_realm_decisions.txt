@@ -1896,7 +1896,12 @@ decisions = {
 		ai_check_interval = 24
 		potential = {
 			form_empire_potential = yes
-			culture_group = afrosoutherner
+			OR = {
+				culture = tuskegean
+				culture = fiskean
+				culture = gullah
+				culture = mascogo
+			}
 			e_new_afrika = {
 				is_titular = yes
 				has_holder = no
