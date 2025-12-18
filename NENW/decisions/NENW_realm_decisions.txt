@@ -3831,7 +3831,63 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
+	
+	form_north_american_union = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = {
+				region = world_north_america
+			}
+			e_north_american_union = {
+				OR = {
+					is_titular = yes
+					has_holder = no
+				}
+			}
+			NOT = { #Will get their own varients
+				religion = loyalist
+				religion = constitutional
+				has_landed_title = e_mexico
+			}
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			prestige = 2500
+			completely_controls_region = world_north_america
+		}
+		effect = {
+			hidden_tooltip = {
+				any_title = {
+					limit = {
+						tier = KING
+						region = world_north_america
+					}
+					de_jure_liege = e_north_american_union
+				}
+			}
+			e_north_american_union = { gain_empire_effect = yes }
+			if = {
+				limit = {
+					completely_controls = e_caribbean
+				}
+				e_caribbean = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_north_american_union
+					}
+				}
+			}
+		}
+	}
+	
 	##REGIMENTS
 	organize_sixtyninth_infantry_regiment = { #new_york
 		only_independent = yes

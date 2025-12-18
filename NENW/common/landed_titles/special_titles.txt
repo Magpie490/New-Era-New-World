@@ -935,6 +935,26 @@ e_new_panama = { #Formable Bureaucratic Panama Empire
 	}
 }
 
+e_north_american_union = { #Formable Continental Empire. Good Luck
+	color = { 242 170 70 }
+	color2 = { 220 220 220 }
+	capital = 3067 # c_mexico largest city in North America
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_north_american_union = {
+					is_titular = yes
+				}
+			}
+			e_north_american_union = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
