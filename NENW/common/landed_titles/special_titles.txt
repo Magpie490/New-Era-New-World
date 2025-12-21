@@ -955,6 +955,45 @@ e_north_american_union = { #Formable Continental Empire. Good Luck
 	}
 }
 
+e_el_norte = {
+	color = { 226 93 93 }
+	color2 = { 220 220 220 }
+	capital = 3005
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_el_norte = {
+					is_titular = yes
+				}
+			}
+			e_el_norte = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_t_mexico = {
+	color={ 0 104 71 }
+	color2={ 255 255 20 }
+	
+	capital = 3067 # c_mexico
+	allow = {
+		NOT = { religion_group = christian }
+		conditional_tooltip = {
+			trigger = {
+				e_t_mexico = {
+					is_titular = yes
+				}
+			}
+			e_t_mexico = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor

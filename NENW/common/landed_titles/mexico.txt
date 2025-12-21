@@ -4,6 +4,19 @@ e_mexico = {
 	
 	capital = 3067 # c_mexico
 	can_be_usurped = no
+	allow = { 
+		religion_group = christian 
+		conditional_tooltip = {
+			trigger = {
+				e_mexico = {
+					is_titular = yes
+				}
+			}
+			e_mexico = {
+				is_titular = no
+			}
+		}
+	}
 	gain_effect = {
 		if = {
 			limit = { NOT = { has_global_flag = hmereformedflag } }
