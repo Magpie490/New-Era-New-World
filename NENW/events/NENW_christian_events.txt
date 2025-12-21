@@ -1,0 +1,56 @@
+namespace = nenwchristian
+
+character_event = { #Picking a Cristohumanista Patron Saint
+	id = nenwchristian.1
+	title = EVTNAME_cristohumanista_patron_saint
+	desc = EVTDESC_cristohumanista_patron_saint
+	picture = GFX_evt_pope
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	hide_from = yes
+	
+	option = {#Thomas of Aquino
+		name = EVTOPT_thomas_aquino_patron_saint
+		add_character_modifier = { name = thomas_aquino_patron_saint duration = -1 }
+		clr_character_flag = picking_cristohumanista_patron_saint
+	}
+	
+	option = {#Saint Augustine
+		name = EVTOPT_saint_augustine_patron_saint
+		add_character_modifier = { name = saint_augustine_patron_saint duration = -1 }
+		clr_character_flag = picking_cristohumanista_patron_saint
+	}
+	
+	option = {#Our Lady of Guadalupe
+		name = EVTOPT_lady_guadalupe_patron_saint
+		add_character_modifier = { name = lady_guadalupe_patron_saint duration = -1 }
+		clr_character_flag = picking_cristohumanista_patron_saint
+	}
+	
+	option = {#Sor Juana Ines de la Cruz
+		name = EVTOPT_sor_juana_cruz_patron_saint
+		add_character_modifier = { name = sor_juana_cruz_patron_saint duration = -1 }
+		clr_character_flag = picking_cristohumanista_patron_saint
+	}
+}
+letter_event = { #Cristohumanista Patron Saints for AI Rulers
+	id = nenwchristian.2
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_religion
+	desc = EVTDESC_cineaste_archetype
+	hide_window = yes
+	option = {
+		name = EVTOPT_cristohumanista_patron_saint
+		random_list = {
+			10 = { add_character_modifier = { name = thomas_aquino_patron_saint duration = -1 } }
+			10 = { add_character_modifier = { name = saint_augustine_patron_saint duration = -1 } }
+			10 = { add_character_modifier = { name = lady_guadalupe_patron_saint duration = -1 } }
+			10 = { add_character_modifier = { name = sor_juana_cruz_patron_saint duration = -1 } }
+		}
+	}
+	after = {
+		clr_character_flag = picking_cristohumanista_patron_saint
+	}
+}
