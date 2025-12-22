@@ -3834,6 +3834,168 @@ decisions = {
 			e_mexico = { gain_empire_effect = yes }
 		}
 	}
+	
+	form_usna = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = {
+				region = world_north_america
+			}
+			e_usna = {
+				is_titular = yes
+				has_holder = no
+			}
+			religion = constitutional
+			has_landed_title = e_usa
+			prisoner = no
+			realm_size = 250
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			prestige = 2500
+			completely_controls_region = world_north_america
+		}
+		effect = {
+			hidden_tooltip = {
+				any_title = {
+					limit = {
+						tier = KING
+						region = world_north_america
+					}
+					de_jure_liege = e_usna
+				}
+				constitutional = {
+					make_reformer_head_of_religion = yes
+					set_religion_head = e_usna
+				}
+			}
+			e_usna = { gain_empire_effect = yes }
+			if = {
+				limit = {
+					completely_controls = e_caribbean
+				}
+				e_caribbean = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_usna
+					}
+				}
+			}
+		}
+	}
+	
+	form_north_american_dominion = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = {
+				region = world_north_america
+			}
+			e_north_american_dominion = {
+				is_titular = yes
+				has_holder = no
+			}
+			religion = loyalist
+			has_landed_title = e_canada
+			prisoner = no
+			realm_size = 250
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			prestige = 2500
+			completely_controls_region = world_north_america
+		}
+		effect = {
+			hidden_tooltip = {
+				any_title = {
+					limit = {
+						tier = KING
+						region = world_north_america
+					}
+					de_jure_liege = e_north_american_dominion
+				}
+				loyalist = {
+					make_reformer_head_of_religion = yes
+					set_religion_head = e_north_american_dominion
+				}
+			}
+			e_north_american_dominion = { gain_empire_effect = yes }
+			if = {
+				limit = {
+					completely_controls = e_caribbean
+				}
+				e_caribbean = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_north_american_dominion
+					}
+				}
+			}
+
+		}
+	}
+	
+	form_holy_north_america = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = {
+				region = world_north_america
+			}
+			e_holy_north_america = {
+				is_titular = yes
+				has_holder = no
+			}
+			has_landed_title = e_mexico
+			prisoner = no
+			realm_size = 250
+			has_regent = no
+			has_global_flag = hmereformedflag
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			prestige = 2500
+			completely_controls_region = world_north_america
+		}
+		effect = {
+			hidden_tooltip = {
+				any_title = {
+					limit = {
+						tier = KING
+						region = world_north_america
+					}
+					de_jure_liege = e_holy_north_america
+				}
+			}
+			e_holy_north_america = { gain_empire_effect = yes }
+			if = {
+				limit = {
+					completely_controls = e_caribbean
+				}
+				e_caribbean = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_holy_north_america
+					}
+				}
+			}
+		}
+	}
 
 	##HOFs
 	form_madonnite_hof = {
