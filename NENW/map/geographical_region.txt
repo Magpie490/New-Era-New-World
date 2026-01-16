@@ -131,38 +131,62 @@ world_west_coast = {
 
 world_central_america_pacific = {
 	duchies = {
-		d_verapazes d_guatemala d_nicaragua d_salvador d_zapata d_chiapas d_colima d_altar d_sinaloa d_sonora d_salado d_zacatecas d_jalisco 
-		d_costalegre d_nayarit d_michoacan d_costa_grande d_tierra_caliente d_mixteca d_costa_chica d_chihuahua d_durango d_oaxaca d_istmo d_baja d_baja_sur d_ensenada d_altar d_paso_del_norte
+		# d_zapata d_chiapas d_colima d_altar d_sinaloa d_sonora d_salado d_zacatecas d_jalisco d_costalegre d_nayarit d_michoacan d_costa_grande d_tierra_caliente d_mixteca d_costa_chica d_chihuahua d_durango d_oaxaca d_istmo d_baja d_baja_sur d_ensenada d_paso_del_norte
+		d_guatemala d_nicaragua d_salvador d_san_miguel d_bocacosta d_los_altos_GT d_verapazes
+		d_septentrion d_leon_NI d_cocibolca d_altas_honduras d_tegucigalpa d_choluteca d_quiche
+		d_guanacaste d_puntarenas d_cocle d_coiba
+	}
+	counties = {
+		c_chiriqui c_bugaba c_mariato c_santiago_PAN c_cebaco c_panama c_arraijan c_las_perlas c_darien c_chiman c_chepo
 	}
 }
 
 world_central_america_caribbean = {
 	duchies = {
-		d_peten d_belize d_lacandon d_atlantida d_altas_honduras d_colon d_las_brumas d_mosquito d_quintana_roo d_campeche 
-		d_tabasco d_yucatan d_tamaulipas d_rio_bravo_del_norte d_huasteca d_veracruz d_coahuila d_piedras_negras d_nuevo_leon 
-		d_los_altos d_guanajuato d_queretaro d_san_luis_potosi d_hidalgo d_mexico d_edomex d_olmeca d_puebla 
+		# d_tabasco d_yucatan d_tamaulipas d_rio_bravo_del_norte d_huasteca d_veracruz d_coahuila d_piedras_negras d_nuevo_leon d_quintana_roo d_campeche d_los_altos d_guanajuato d_queretaro d_san_luis_potosi d_hidalgo d_mexico d_edomex d_olmeca d_puebla
+		d_peten d_belize d_lacandon d_atlantida d_colon d_las_brumas d_mosquito d_toledo_be d_belmopan 
+		d_izabal d_cortes_HN d_zelaya d_gracias_a_dios d_rio_san_juan d_costa_rica d_limon
+	}
+	counties = {
+		c_las_puertas c_colon_PAN c_obaldia c_guna_yala c_san_blas c_canazas c_veraguas c_muna_PAN c_bocas_del_toro c_changuinola
 	}
 }
 
-world_south_america_pacific = {
-	duchies = {
-		d_choco
-	}
-	provinces = {
-		3184 3186 3187 3190 3189 3188 3294 3293 3288 3287 3193
+custom_yucatan_region = {
+	duchies = { 
+		d_yucatan d_puuc d_valladolid d_cancun d_quintana_roo d_chetumal d_calakmul d_terminos d_carmen d_campeche d_tabasco d_usumacinta
 	}
 }
 
-world_south_america_caribbean = {
+world_southern_mexico = {
 	duchies = {
-		d_angostura d_caroni d_delta_amacuro d_barinas d_portuguesa d_gran_meta d_guarico d_orinoquia d_anzoategui 
-		d_costa_gracia d_falcon d_lara d_monagas d_sucre d_aguas d_guajira d_los_andes d_zulia d_cayenne d_georgetown d_abak d_suriname 
-		d_cundinamarca d_santander d_vallecafe d_antioquia d_cauca d_cartagena d_cordoba d_cesar d_magdalena d_roraima d_gran_sabana 
-	}
-	provinces = {
-		3185 3281 3192 3292 3191
+		d_zapata d_chiapas d_zoque d_soconusco d_nayarit d_tepic d_islas_marias d_aguascalientes d_queretaro d_guanajuato d_yuriria d_atotonilco d_leon d_colima d_salado d_zacatecas d_valparaiso_ZAC
+		d_potosi d_matehuala d_los_altos d_jalisco d_guzman d_sierra_occidental d_costalegre d_hidalgo d_huasteca_hidalgo d_morelos d_edomex d_mexico d_vallemex d_tlaxcala d_huasteca
+		d_alta_huasteca d_huasteca_potosina d_sierra_norte d_puebla d_tehuacan d_mixteca d_acatlan d_costa_oaxaquena d_sierra_sur d_las_montanas d_xalapa d_veracruz d_papaloapan d_olmeca
+		d_michoacan d_tancitaro d_chilpancingo d_iguala d_costa_chica d_costa_grande d_tierra_caliente d_zitacuaro d_balsas d_pomaro d_oaxaca d_istmo d_chimalapas d_papaloapan_OAX 
+		d_yucatan d_puuc d_valladolid d_cancun d_quintana_roo d_chetumal d_calakmul d_terminos d_carmen d_campeche d_tabasco d_usumacinta d_purepecha d_san_luis_potosi
 	}
 }
+
+# world_south_america_pacific = {
+	# duchies = {
+		# d_choco
+	# }
+	# provinces = {
+		# 3184 3186 3187 3190 3189 3188 3294 3293 3288 3287 3193
+	# }
+# }
+
+# world_south_america_caribbean = {
+	# duchies = {
+		# d_angostura d_caroni d_delta_amacuro d_barinas d_portuguesa d_gran_meta d_guarico d_orinoquia d_anzoategui 
+		# d_costa_gracia d_falcon d_lara d_monagas d_sucre d_aguas d_guajira d_los_andes d_zulia d_cayenne d_georgetown d_abak d_suriname 
+		# d_cundinamarca d_santander d_vallecafe d_antioquia d_cauca d_cartagena d_cordoba d_cesar d_magdalena d_roraima d_gran_sabana 
+	# }
+	# provinces = {
+		# 3185 3281 3192 3292 3191
+	# }
+# }
 
 world_north_texas = {
 	duchies = {
@@ -172,7 +196,7 @@ world_north_texas = {
 
 world_south_texas = {
 	duchies = {
-		d_transpecos d_alamo d_corpus_christi d_rio_grande_valley d_matagorda d_galveston
+		d_transpecos d_alamo d_corpus_christi d_rio_grande_valley d_matagorda d_galveston d_big_bend_TX d_el_paso d_nueces d_amistad
 	}
 }
 
@@ -208,6 +232,7 @@ world_northern_mexico = {
 		d_baja_sur d_el_vizcaino d_ensenada d_altar d_sonora d_pimeria d_bacanora d_yaqui_mayo d_sinaloa d_culiacan d_mazatlan
 		d_casas_grandes d_paso_del_norte d_casas_altas d_chihuahua d_tarahumara d_conchos d_durango d_cuencame d_tepehuan
 		d_nueva_extremadura d_laguna d_coahuila d_nuevo_leon d_rio_bravo_del_norte d_citricia d_matamoros d_tamaulipas d_cortes
+		d_piedras_negras
 	}
 	counties = {
 		c_tijuana
@@ -226,15 +251,21 @@ world_texas = {
 
 custom_usa = {
 	regions = {
-		world_great_plainsUS world_northeast world_southeast world_appalachia world_southwest world_west_coast world_rockies world_mississippi world_steel_belt world_texas world_great_basin_desert world_california
+		world_great_plainsUS world_northeast world_southeast world_appalachia world_southwest world_west_coast world_rockies world_mississippi world_steel_belt world_texas world_great_basin_desert 
+	}
+	duchies = {
+		d_goldengate d_nevada d_shasta_cascade d_redwoods d_hayward d_salinas d_wineland d_central_valley d_kern
+		d_tulare d_san_luis d_monterey d_santa_cruz d_silicon_valley d_mendocino d_humboldt
+		d_motherlode d_north_valley d_sacramento d_los_angeles d_berdoo d_salton d_los_padres d_san_diego d_las_vegas
+		d_north_jefferson d_san_gabriel d_orange d_equinox_isles d_santa_clara_valley d_mojave d_modoc d_reno 
 	}
 }
 
-world_south_america = {
-	regions = {
-		world_south_america_caribbean world_south_america_pacific
-	}
-}
+#world_south_america = {
+#	regions = {
+#		world_south_america_caribbean world_south_america_pacific
+#	}
+#}
 
 custom_central_america = {
 	regions = {
@@ -242,12 +273,26 @@ custom_central_america = {
 	}
 }
 
+custom_mexico = {
+	regions = {
+		world_northern_mexico world_southern_mexico
+	}
+}
+
+
 custom_atlantic = {
 	regions = {
-		world_northeast world_southeast world_caribbean world_eastern_canada world_south_america_caribbean
+		world_northeast world_southeast world_caribbean world_eastern_canada 
+		#world_south_america_caribbean
 	}
 	duchies = {
 		d_bermuda
+	}
+}
+
+world_north_america = {
+	regions = {
+		world_eastern_canada custom_usa custom_central_america custom_mexico world_western_canada world_alaska world_central_canada
 	}
 }
 
@@ -259,7 +304,8 @@ custom_mountain_zone = {
 
 custom_pacific = {
 	regions = {
-		world_california world_west_coast world_central_america_pacific world_south_america_pacific
+		world_california world_west_coast world_central_america_pacific 
+		#world_south_america_pacific
 	}
 	duchies = {
 		d_vancouver d_vancouver_strait d_georgia_strait d_north_end d_cariboo d_wales d_haida d_grizzly d_skeena d_the_coast d_sunshine_coast d_victoria_strait d_fraser_valley
@@ -418,3 +464,4 @@ custom_silver_region = {
 		c_renfrew
 	}
 }
+

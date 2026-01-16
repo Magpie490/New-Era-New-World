@@ -4,6 +4,19 @@ e_mexico = {
 	
 	capital = 3067 # c_mexico
 	can_be_usurped = no
+	allow = { 
+		religion_group = christian 
+		conditional_tooltip = {
+			trigger = {
+				e_mexico = {
+					is_titular = yes
+				}
+			}
+			e_mexico = {
+				is_titular = no
+			}
+		}
+	}
 	gain_effect = {
 		if = {
 			limit = { NOT = { has_global_flag = hmereformedflag } }
@@ -12,6 +25,19 @@ e_mexico = {
 		}
 	}
 	chilangos = "Sacro Imperio Mexicano"
+	ribereno = "Sacro Imperio Mexicano"
+	norteabajeno = "Sacro Imperio Mexicano"
+	sudabajeno = "Sacro Imperio Mexicano"
+	oaxaqueno = "Sacro Imperio Mexicano"
+	fronterizo = "Sacro Imperio Mexicano"
+	ocaseno = "Sacro Imperio Mexicano"
+	yucatanense = "Sacro Imperio Mexicano"
+	tabasqueno = "Sacro Imperio Mexicano"
+	chipilan = "Sacro Impero Messicano"
+	mexikanisch = "Heiliges Mexikanisches Reich"
+	kreyol = "Saint Empire Mexicain"
+	cajun = "Saint Empire Mexicain"
+	
 	short_name = yes
 		
 	k_nayarit = {
@@ -560,7 +586,6 @@ e_mexico = {
 				b_allende_ZA = {}
 				b_sain_alto_ZA = {}
 				b_nieves_ZA = {}
-				b_sain_alto_ZA = {}
 				b_progreso_de_alfonso_medina_ZA = {}
 				b_ojitos_de_santa_lucia_ZA = {}
 				b_las_esperanzas_ZA = {}
@@ -1328,29 +1353,27 @@ e_mexico = {
 				b_cuautepec_de_hinojosa_HI = {}
 				b_santiago_tulantepec_HI = {}
 				b_huasca_de_ocampo_HI = {}
-				b_metepec_HI = {}
 				b_santa_ana_hueytlalpan_HI = {}
 				b_singuilucan_HI = {}
 				b_ciudad_sahagun_HI = {
 					short_name = yes
 					used_for_dynasty_names = no
 				}
-			}
-			c_huayacocotla = { # 3076 #tenango
-				color={ 56 10 102 }
-				color2={ 255 255 255 }
-				
-				ribereno = "Huayacocotla"
+			}			
+			c_tenango = { 	
+				color = { 44 4 144 }
+				color2 = { 255 255 255 }
 				
 				b_tenango_HI = {}
-				b_huayacocotla_VE = {}
-				b_acaxochitlan_HI = {}
+				b_metepec_HI = {}
 				b_agua_blanca_de_iturbide_HI = {}
+				b_acaxochitlan_HI = {}
 				b_huehuetla_HI = {}
-				b_santa_ana_tzacuala_HI = {}
 				b_san_bartolo_tutotepec_HI = {}
-			}			
-
+				b_santa_ana_tzacuala_HI = {}
+				
+			}
+				
 		}
 		d_huasteca_hidalgo = {
 			color = { 61 40 102 }
@@ -1390,6 +1413,19 @@ e_mexico = {
 			#	b_calnali_VE = {} #actually part of Hidalgo
 				
 			}	
+			c_huayacocotla = { # 3076
+				color={ 56 10 102 }
+				color2={ 255 255 255 }
+				
+				b_huayacocotla_VE = {}
+				b_zacualtipan_HI = {}
+				b_tlahuelompa_HI = {}
+				b_zontecomatlan_VE = {}
+				b_zacualpan_VE = {}
+				b_texcatepec_VE = {}
+				b_tlachichilco_VE = {}
+				
+			}			
 		}
 	}
 	
@@ -1564,7 +1600,6 @@ e_mexico = {
 				b_los_banos_MX = {}
 				b_san_felipe_del_progreso_MX = {}
 				b_jocotitlan_MX = {}
-				b_villa_victoria_MX = {}
 				b_santa_cruz_tepexpan_MX = {}
 				b_san_lorenzo_toxico_MX = {}
 				b_san_jeronimo_ixtapantongo_MX = {}
@@ -1803,18 +1838,31 @@ e_mexico = {
 				huastec = "Tam-Koy"
 				
 				
-				b_castillo_de_teayo_VE = {}
+				b_la_pena_VE = {} #Santiago de la Peña
 				b_tuxpan_VE = {
 					ribereno = "Tuxpam"
 					huastec = "Tam-Koy"
 				}
 				b_juana_moza_VE = {}
-				b_alamo_VE = {}
-				b_la_pena_VE = {}
-				b_temapache_VE = {}
-				b_rio_pantepec_VE = {}
+				b_alto_lucero_VE = {}
 				b_tampamachoco_VE = {}
+				b_chalauite_VE = {}
+				b_rio_pantepec_VE = {}
 			}
+			c_temapache = { #2357
+				color = { 168 52 130 }
+				color2 = { 255 255 255 }
+				
+				b_alamo_VE = {}
+				b_cerro_azul_VE = {}
+				b_castillo_de_teayo_VE = {}
+				b_tepetzintla_VE = {}
+				b_tihuatlan_VE = {}
+				b_mequetla_VE = {}
+				b_teayo_VE = {}
+				b_temapache_VE = {}
+			}
+				
 			c_chicontepec = {
 				color = { 76 26 68 }
 				color2 = { 255 255 255 }
@@ -2211,7 +2259,6 @@ e_mexico = {
 				b_puebla_PU = {}
 				b_cuatlazingo_PU = {}
 				b_amozoc_PU = {}
-				b_tepeaca_PU = {}
 				b_acajete_PU = {}
 				b_cuautinchan_PU = {}
 				b_san_baltazar_tetela_PU = {}
@@ -2431,7 +2478,7 @@ e_mexico = {
 				color = { 174 146 183 }
 				color2 = { 255 255 255 }
 				
-				ahuatl = "Tepoztlicolotlan"
+				nahuatl = "Tepoztlicolotlan"
 				mixtec = "Yucundaa"
 				
 				b_san_pedro_y_san_pablo_teposcolula_OA = {
@@ -2651,7 +2698,16 @@ e_mexico = {
 		color2={ 255 255 255 }
 		
 		capital = 3078 #c_xalapa
-	
+		
+		d_tuxpan_republic = {
+			color =  { 166 40 101 }
+			color2 = { 255 255 255 }
+			
+			capital = 3075 # Tuxpan
+			
+			title_prefix = free_city
+		}
+		
 		d_las_montanas = { 
 			color = { 153 30 91 }
 			color2 = { 255 255 255 }
@@ -3428,7 +3484,7 @@ e_mexico = {
 				
 			}
 		}
-		d_costa_chica= {
+		d_costa_chica = {
 			color={ 120 85 70 }
 			color2={ 255 255 255 }
 			

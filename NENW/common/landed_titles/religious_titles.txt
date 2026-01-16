@@ -873,6 +873,32 @@ k_papacy = {
 	
 	
 }
+d_cristohumanista = {
+	color={ 255 249 198 }
+	color2={ 220 220 0 }
+	
+	capital = 3116 # Merida
+	
+	title = "PATRIARCH"
+	title_female = "PATRIARCH_FEMALE"	
+	foa = "POPE_FOA"
+	location_ruler_title = yes
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes	
+	
+	# Controls a religion
+	controls_religion = cristohumanista
+	
+	religion = cristohumanista
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
 k_gallicanist = {
 	color={ 0 0 255 }
 	color2={ 220 220 0 }
@@ -1655,12 +1681,35 @@ k_omniaveritatis = {
 	color={ 124 0 175 }
 	color2={ 220 220 0 }
 	
-	capital = 333 # Rome
+	capital = 466 # Flathead
 	
-	title = "PONTIFEX_MAXIMUS"
-	title_female = "PONTIFEX_MAXIMA"
+	title = "CAMERLENGO"
+	title_female = "CAMERLENGA"
 	foa = "POPE_FOA"
 	short_name = yes
+	
+	#Regnal Names, based on canonized and venerable Americans/Canadians
+	male_names = {
+		Aemilius Antonius Augustus
+		Bernardus
+		Carolus
+		Felix Franciscus
+		Iacomus Ioannes Iosephus
+		Ludovicus
+		Marcus
+		Paulus Petrus		
+	}
+	
+	female_names = {
+		Anna
+		Catharina Cornelia
+		Dorothea
+		Elisabetha
+		Ioanna Iulia
+		Margarita Maria Marianna
+		Rosa
+		Theodora Theresa
+	}
 
 	allow = {
 		piety = 100

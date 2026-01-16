@@ -935,6 +935,153 @@ e_new_panama = { #Formable Bureaucratic Panama Empire
 	}
 }
 
+e_north_american_union = { #Formable Continental Empire. Good Luck
+	color = { 242 170 70 }
+	color2 = { 220 220 220 }
+	capital = 3067 # c_mexico largest city in North America
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_north_american_union = {
+					is_titular = yes
+				}
+			}
+			e_north_american_union = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_el_norte = {
+	color = { 226 93 93 }
+	color2 = { 220 220 220 }
+	capital = 3005
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_el_norte = {
+					is_titular = yes
+				}
+			}
+			e_el_norte = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_t_mexico = {
+	color={ 0 104 71 }
+	color2={ 255 255 20 }
+	
+	capital = 3067 # c_mexico
+	allow = {
+		NOT = { religion_group = christian }
+		conditional_tooltip = {
+			trigger = {
+				e_t_mexico = {
+					is_titular = yes
+				}
+			}
+			e_t_mexico = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_usna = {
+	color = { 0 43 96 }
+	color2 = { 220 220 0 }
+	
+	capital = 63 #Washington
+
+	haida="T'áagwaa Tlagáay"
+	
+	title = "PRESIDENT_COLUMB"
+	foa = "PRESIDENT_COLUMB_FOA"
+	title_female = "PRESIDENT_COLUMB"
+	title_prefix = "UNITED_STATES_OF"
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_usna = {
+					is_titular = yes
+				}
+			}
+			e_usna = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_north_american_dominion = {
+	color = { 214 39 24 }
+	color2= { 220 220 0 }
+
+	capital = 1297 #Ottawa
+	
+	short_name = yes
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_north_american_dominion = {
+					is_titular = yes
+				}
+			}
+			e_north_american_dominion = {
+				is_titular = no
+			}
+		}
+	}
+}
+e_holy_north_america = {
+	color={ 0 104 71 }
+	color2={ 255 255 20 }
+	
+	capital = 3067 # c_mexico
+	can_be_usurped = no
+	allow = { 
+		conditional_tooltip = {
+			trigger = {
+				e_holy_north_america = {
+					is_titular = yes
+				}
+			}
+			e_holy_north_america = {
+				is_titular = no
+			}
+		}
+	}
+	gain_effect = {
+		if = {
+			limit = { NOT = { has_global_flag = hmereformedflag } }
+			set_global_flag = hmereformedflag
+			set_feudal_government_effect = yes
+		}
+	}
+	chilangos = "Sacro Imperio Norteamericano"
+	ribereno = "Sacro Imperio Norteamericano"
+	norteabajeno = "Sacro Imperio Norteamericano"
+	sudabajeno = "Sacro Imperio Norteamericano"
+	oaxaqueno = "Sacro Imperio Norteamericano"
+	fronterizo = "Sacro Imperio Norteamericano"
+	ocaseno = "Sacro Imperio Norteamericano"
+	yucatanense = "Sacro Imperio Norteamericano"
+	tabasqueno = "Sacro Imperio Norteamericano"
+	chipilan = "Sacro Impero Norteamericano"
+	mexikanisch = "Heiliges Nordamerikanisch Reich"
+	kreyol = "Saint Empire Nord-Américain"
+	cajun = "Saint Empire Nord-Américain"
+	
+	short_name = yes
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
