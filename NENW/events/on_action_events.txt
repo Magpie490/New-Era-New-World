@@ -4286,7 +4286,6 @@ narrative_event = {
 			tengri_pagan_reformed       = { tengri_pagan = { set_flag = has_been_reformed } }
 			raven_tales_reformed       = { raven_tales = { set_flag = has_been_reformed } }
 			hellenic_pagan_reformed       = { hellenic_pagan = { set_flag = has_been_reformed } }
-			finnish_pagan_reformed      = { finnish_pagan = { set_flag = has_been_reformed } }
 			folklorist_reformed        = { folklorist = { set_flag = has_been_reformed } }
 			novelist_reformed       = { novelist = { set_flag = has_been_reformed } }
 			lakefolk_pagan_reformed = { lakefolk_pagan = { set_flag = has_been_reformed } }
@@ -4325,7 +4324,6 @@ narrative_event = {
 				starist_pagan_reformed        = { d_starist_pagan_reformed = { save_event_target_as = religious_head_title } }
 				tengri_pagan_reformed       = { d_tengri_pagan_reformed = { save_event_target_as = religious_head_title } }
 				raven_tales_reformed       = { d_raven_tales_reformed = { save_event_target_as = religious_head_title } }
-				finnish_pagan_reformed      = { d_finnish_pagan_reformed = { save_event_target_as = religious_head_title } }
 				folklorist_reformed        = { d_folklorist_reformed = { save_event_target_as = religious_head_title } }
 				novelist_reformed       = { d_novelist_reformed = { save_event_target_as = religious_head_title } }
 				lakefolk_pagan_reformed = { d_lakefolk_pagan_reformed = { save_event_target_as = religious_head_title } }
@@ -4381,7 +4379,6 @@ narrative_event = {
 					tengri_pagan_reformed       = {}
 					raven_tales_reformed       = {}
 					hellenic_pagan_reformed       = {}
-					finnish_pagan_reformed      = {}
 					folklorist_reformed     = {}
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
@@ -4413,7 +4410,6 @@ narrative_event = {
 					tengri_pagan_reformed       = {}
 					raven_tales_reformed       = {}
 					hellenic_pagan_reformed       = {}
-					finnish_pagan_reformed      = {}
 					folklorist_reformed     = {}
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
@@ -4444,7 +4440,6 @@ narrative_event = {
 					tengri_pagan_reformed       = {}
 					raven_tales_reformed       = {}
 					hellenic_pagan_reformed       = {}
-					finnish_pagan_reformed      = {}
 					folklorist_reformed     = {}
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
@@ -4602,12 +4597,8 @@ narrative_event = {
 				remove_intermarry = folklorist_reformed
 				remove_intermarry = arcadian
 				remove_intermarry = arcadian_reformed
-				remove_intermarry = baltic_pagan
-				remove_intermarry = baltic_pagan_reformed
 				remove_intermarry = antiquarianist
 				remove_intermarry = antiquarianist_reformed
-				remove_intermarry = finnish_pagan
-				remove_intermarry = finnish_pagan_reformed
 				remove_intermarry = hellenic_pagan
 				remove_intermarry = hellenic_pagan_reformed
 				remove_intermarry = pagan_group
@@ -4858,42 +4849,8 @@ narrative_event = {
 						key = DEF_RELIGION_HOME_TERRITORY
 					}
 				}
-
-				finnish_pagan_reformed = {
-					set_unit_modifier = {
-						garrison_size = 0.3
-						levy_size = 0.1
-
-						key = DEF_RELIGION
-					}
-
-					set_unit_home_modifier = {
-						land_morale = 0.8
-						garrison_size = 0.4
-
-						light_infantry_defensive = 0.8
-						heavy_infantry_defensive = 0.8
-						pikemen_defensive = 0.8
-						light_cavalry_defensive = 0.8
-						knights_defensive = 0.8
-						archers_defensive = 0.8
-						horse_archers_defensive = 0.8
-						camel_cavalry_defensive = 0.8
-						war_elephants_defensive = 0.8
-
-						key = DEF_RELIGION_HOME_TERRITORY
-					}
-				}
 			}
 		}
-		if = {
-			limit = { 
-				religion = finnish_pagan_reformed 
-
-			}
-			add_artifact = sampo
-		}
-
 
 		# Courtier Conversion
 		any_courtier = {
@@ -5129,12 +5086,6 @@ narrative_event = {
 					religion = raven_tales
 				}
 				religion = raven_tales_reformed
-			}
-			if = {
-				limit = {
-					religion = finnish_pagan
-				}
-				religion = finnish_pagan_reformed
 			}
 			if = {
 				limit = {

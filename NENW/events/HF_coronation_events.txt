@@ -14076,15 +14076,6 @@ character_event = {
 				} 
 			}
 			AND =  { 
-				has_landed_title = d_finnish_pagan_reformed 
-				any_artifact = { artifact_type = crown_finnish_fylkir }
-				d_finnish_pagan_reformed = { 
-					current_heir = { 
-						NOT = { dynasty = ROOT }
-					} 
-				} 
-			}
-			AND =  { 
 				has_landed_title = k_hellenic_pagan
 				any_artifact = { artifact_type = scepter_hellenic_fylkir }
 				k_hellenic_pagan = { 
@@ -14357,51 +14348,6 @@ character_event = {
 			any_artifact = { 
 				limit = { artifact_type = crown_tengri_fylkir }
 				save_event_target_as = inheriting_artifact_tengricrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
-		}
-		if = { 
-			limit = { 
-				has_landed_title = d_finnish_pagan_reformed
-				any_artifact = { artifact_type = crown_finnish_fylkir }
-			}
-			d_finnish_pagan_reformed = { 
-				current_heir = { save_event_target_as = worthy_finnish_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_finnish_fylkir_crown }
-			any_artifact = { 
-				limit = { artifact_type = crown_finnish_fylkir }
-				save_event_target_as = inheriting_artifact_finnishcrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
-		}
-		if = { 
-			limit = { 
-				has_landed_title = d_baltic_pagan_reformed
-				any_artifact = { artifact_type = crown_romuva_fylkir }
-			}
-			d_baltic_pagan_reformed = { 
-				current_heir = { save_event_target_as = worthy_baltic_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_baltic_fylkir_crown }
-			any_artifact = { 
-				limit = { artifact_type = crown_romuva_fylkir }
-				save_event_target_as = inheriting_artifact_balticcrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
-		}
-		if = { 
-			limit = { 
-				has_landed_title = d_bon_reformed
-				any_artifact = { artifact_type = scepter_bon_fylkir }
-			}
-			d_bon_reformed = { 
-				current_heir = { save_event_target_as = worthy_bon_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_bon_fylkir_crown }
-			any_artifact = { 
-				limit = { artifact_type = scepter_bon_fylkir }
-				save_event_target_as = inheriting_artifact_boncrown
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}

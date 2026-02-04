@@ -1943,14 +1943,12 @@ decisions = {
 				religion = donyipolo
 				religion = kiratist
 				religion = alukta_pagan_reformed
-				religion = baltic_pagan_reformed
 				religion = antiquarianist_reformed
 				religion = celtic_pagan_reformed
 				religion = inuit_pagan_reformed
 				religion = anishinaabe_reformed
 				religion = aurorean
 				religion = lakefolk_pagan_reformed
-				religion = finnish_pagan_reformed
 				religion = starist_pagan_reformed
 				religion = arcadian_reformed
 				religion = hellenic_pagan_reformed
@@ -5799,82 +5797,6 @@ targeted_decisions = {
 			}
 			modifier = {
 				factor = 0.5
-				FROM = { trait = cynical }
-			}
-			modifier = {
-				factor = 1.5
-				FROM = { trait = zealous }
-			}
-		}
-	}
-	suomi_singing_contest_decision = {
-		only_playable = yes
-			filter = realm		
-			ai_target_filter = realm
-		ai_check_interval = 10
-	    is_high_prio = yes
-	
-		from_potential = {
-			is_playable = yes
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
-			OR = {
-				trait = poet
-				trait = lunatic
-				trait = zealous
-			}
-			prisoner = no
-			has_regent = no
-		}
-	
-		potential = {
-			is_within_diplo_range = FROM
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
-			OR = {
-				is_rival = FROM
-				trait = poet
-				trait = lunatic
-				trait = zealous
-			}
-			prisoner = no
-			has_regent = no
-		}
-		
-		allow = {
-			prestige = 200
-			wealth = 100
-		}
-		
-		effect = {
-			FROM = { save_event_target_as = poet_1 } 
-	    	save_event_target_as = poet_2 
-	        
-	        FROM = {
-	            add_character_modifier = {
-	                modifier = recent_song_duel_timer
-	                duration = 90
-	                hidden = yes
-	            }
-	        }
-	        hidden_tooltip = {
-	            character_event = { id = SCE.1 } #Duel evaluation (hidden) + result event as follow-up.
-	        }
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.2 # Slow down a bit
-			}
-			modifier = {
-				factor = 0
 				FROM = { trait = cynical }
 			}
 			modifier = {

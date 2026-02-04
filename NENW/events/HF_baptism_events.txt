@@ -140,18 +140,6 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:sponsoring_king = { religion = baltic_pagan_reformed }
-		}
-		text = EVTDESCHFE20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = finnish_pagan_reformed }
-		}
-		text = EVTDESCHFF20003
-	}
-	desc = {
-		trigger = {
 			event_target:sponsoring_king = { religion = folklorist_reformed }
 		}
 		text = EVTDESCHFG20003
@@ -676,18 +664,6 @@ narrative_event = {
 			religion = tengri_pagan_reformed
 		}
 		text = EVTDESCHFD20004
-	}
-	desc = {
-		trigger = {
-			religion = baltic_pagan_reformed
-		}
-		text = EVTDESCHFE20004
-	}
-	desc = {
-		trigger = {
-			religion = finnish_pagan_reformed
-		}
-		text = EVTDESCHFF20004
 	}
 	desc = {
 		trigger = {
@@ -1585,20 +1561,6 @@ narrative_event = {
 	desc = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
-			event_target:sponsoring_king = { religion = baltic_pagan_reformed }
-		}
-		text = EVTDESCHFE20008
-	}
-	desc = {
-		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
-			event_target:sponsoring_king = { religion = finnish_pagan_reformed }
-		}
-		text = EVTDESCHFF20008
-	}
-	desc = {
-		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = folklorist_reformed }
 		}
 		text = EVTDESCHFG20008
@@ -1679,20 +1641,6 @@ narrative_event = {
 			event_target:sponsoring_king = { religion = tengri_pagan_reformed }
 		}
 		text = EVTDESCHFRR20008
-	}
-	desc = {
-		trigger = {
-			has_character_flag = ai_flag_refuse_conversion
-			event_target:sponsoring_king = { religion = baltic_pagan_reformed }
-		}
-		text = EVTDESCHFS20008
-	}
-	desc = {
-		trigger = {
-			has_character_flag = ai_flag_refuse_conversion
-			event_target:sponsoring_king = { religion = finnish_pagan_reformed }
-		}
-		text = EVTDESCHFSS20008
 	}
 	desc = {
 		trigger = {
@@ -3490,30 +3438,6 @@ character_event = {
 					chance = 80
 					add_province_modifier = { 
 						name = secret_celtic_pagan_community
-						duration = -1
-					} 
-				}
-			}
-		}
-		if = { 
-			limit = { secret_religion = baltic_pagan }
-			any_demesne_province = {
-				random = {
-					chance = 80
-					add_province_modifier = { 
-						name = secret_baltic_pagan_community
-						duration = -1
-					} 
-				}
-			}
-		}
-		if = { 
-			limit = { secret_religion = finnish_pagan }
-			any_demesne_province = {
-				random = {
-					chance = 80
-					add_province_modifier = { 
-						name = secret_finnish_pagan_community
 						duration = -1
 					} 
 				}

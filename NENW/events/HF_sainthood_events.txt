@@ -437,8 +437,6 @@ character_event = {
 							has_religion_feature = religion_feature_sarna
 							has_religion_feature = religion_feature_blue_star
 							has_religion_feature = religion_feature_delver
-							religion = finnish_pagan
-							religion = finnish_pagan_reformed
 							religion = donyipolo
 							religion = marapu
 							religion = kiratist
@@ -510,15 +508,11 @@ province_event = {
         event_target:saint_person = {
             OR = {
                 trait = beatified
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
 				religion = donyipolo
 				religion = marapu
 				religion = alukta_pagan
 				religion = alukta_pagan_reformed
 				religion = kiratist
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
 				religion = ovlatii
 				religion = voodun
 				religion = hoodoo
@@ -1112,27 +1106,6 @@ character_event = {
                         }
                         else_if = {
                             limit = {
-                                religion = finnish_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_01
-                                    religion = finnish_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_01
-                                    religion = finnish_pagan_reformed
-                                }
-                            }
-                        }
-                        else_if = {
-                            limit = {
                                 religion = hellenic_pagan_reformed
                             }
                             if = {
@@ -1363,27 +1336,6 @@ character_event = {
                         }
                         else_if = {
                             limit = {
-                                religion = finnish_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_03
-                                    religion = finnish_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_03
-                                    religion = finnish_pagan_reformed
-                                }
-                            }
-                        }
-                        else_if = {
-                            limit = {
                                 religion = hellenic_pagan_reformed
                             }
                             if = {
@@ -1541,28 +1493,6 @@ character_event = {
                                 }
                             }
                         }
-                        else_if = {
-                            limit = {
-                                religion = finnish_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_04
-                                    religion = finnish_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_04
-                                    religion = finnish_pagan_reformed
-                                }
-                            }
-                        }
-                       
                         else_if = {
                             limit = {
                                 religion = hellenic_pagan_reformed
@@ -1725,28 +1655,6 @@ character_event = {
                         }
                         else_if = {
                             limit = {
-                                religion = finnish_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_05
-                                    religion = finnish_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_05
-                                    religion = finnish_pagan_reformed
-                                }
-                            }
-                        }
-                        
-                        else_if = {
-                            limit = {
                                 religion = hellenic_pagan_reformed
                             }
                             if = {
@@ -1868,28 +1776,6 @@ character_event = {
                                 create_bloodline = {
                                     type = saintly_bloodline_romuva_06
                                     religion = baltic_pagan_reformed
-                                }
-                            }
-                        }
-                        
-                        else_if = {
-                            limit = {
-                                religion = finnish_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_06
-                                    religion = finnish_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_suomenusko_06
-                                    religion = finnish_pagan_reformed
                                 }
                             }
                         }
