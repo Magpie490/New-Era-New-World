@@ -2034,21 +2034,10 @@ post_reformation_ruler_conversion_score = {
 	mult_modifier = {
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_defensive }
-		OR = {
-			# religion = slavic_pagan
-			religion = baltic_pagan
-			religion = finnish_pagan
-		}
 	}
 	mult_modifier = {
 		factor = 1.5
 		ROOT = { has_religion_feature = religion_proselytizing }
-		OR = {
-			# religion = norse_pagan
-			# religion = slavic_pagan
-			religion = baltic_pagan
-			religion = finnish_pagan
-		}
 	}
 	mult_modifier = {
 		factor = 0.5
@@ -2115,9 +2104,6 @@ post_reformation_ruler_conversion_score = {
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_autocephaly }
 		OR = {
-			religion = finnish_pagan
-			# religion = slavic_pagan
-			religion = baltic_pagan
 			religion = hellenic_pagan
 		}
 	}
@@ -2176,11 +2162,6 @@ post_reformation_ruler_conversion_score = {
 	mult_modifier = {
 		factor = 1.5
 		ROOT = { has_religion_feature = religion_syncretic }
-		OR = {
-			# religion = aztec
-			religion = baltic_pagan
-			religion = finnish_pagan
-		}
 	}
 	mult_modifier = {
 		factor = 1.75
@@ -2195,28 +2176,14 @@ post_reformation_ruler_conversion_score = {
 	mult_modifier = {
 		factor = 1.75
 		ROOT = { has_religion_feature = religion_ritual_sacrifice }
-		# NOR = {
-			# religion = aztec
-			# religion = norse_pagan
-			# religion = zun_pagan
-		# }
 	}
 	mult_modifier = {
 		factor = 1.75
 		ROOT = { has_religion_feature = religion_adventuring }
-		OR = {
-			religion = finnish_pagan
-			religion = bon
-		}
 	}
 	mult_modifier = {
 		factor = 1.75
 		ROOT = { has_religion_feature = religion_seafaring }
-		OR = {
-			religion = finnish_pagan
-			# religion = tengri_pagan
-			religion = bon
-		}
 	}
 }
 
