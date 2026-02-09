@@ -75,24 +75,6 @@ religion_nature = {
 		ai_will_do = {
 			factor = 100
 			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes
-					OR = { 
-						religion = bon 
-						religion = baltic_pagan
-						religion = finnish_pagan
-					}
-				}
-			}
-			modifier = { 	
-				factor = 0.01
-				FROM = { 
-					character = yes
-					religion = bon 
-				}
-			}
-			modifier = { 	
 				factor = 5
 				FROM = {
 					character = yes 
@@ -633,7 +615,6 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_feature_numic
-				has_selected_religion_feature = religion_feature_finnish
 				has_selected_religion_feature = religion_feature_nousthreskeia
 				has_selected_religion_feature = religion_feature_novelist_2
 			}
@@ -739,16 +720,6 @@ religion_doctrine = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = { 	
-				factor = 0.5
-				FROM = { 
-					character = yes 
-					OR = { 
-						religion = baltic_pagan
-						religion = finnish_pagan
-					}
-				}
-			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
@@ -804,9 +775,7 @@ religion_doctrine = {
 				FROM = { 
 					character = yes
 					OR = { #Too Western for them.
-						religion = bon
 						religion = tengri_pagan
-						religion = finnish_pagan
 						religion = sarna_pagan
 						religion = starist_pagan
 						religion = folklorist
@@ -966,9 +935,7 @@ religion_doctrine = {
 				FROM = { 
 					character = yes 
 					OR = { #Too Western for them.
-						religion = bon
 						religion = tengri_pagan
-						religion = finnish_pagan
 						religion = sarna_pagan
 						religion = wuist
 						religion = bungan_pagan
@@ -1183,7 +1150,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_feature_celtic
-				has_selected_religion_feature = religion_feature_finnish_2
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant	
 				has_selected_religion_feature = religion_feature_bungan #Redundant
 			}
@@ -2728,10 +2694,7 @@ religion_leadership = {
 				factor = 0.1
 				FROM = { 
 					character = yes 
-					NOR = { 
-						religion = finnish_pagan
-						#religion = slavic_pagan
-						religion = baltic_pagan
+					NOT = {
 						religion = hellenic_pagan
 					}
 				}
@@ -2836,7 +2799,6 @@ religion_leadership = {
 					FROM = { 
 						character = yes
 						OR = {
-							religion = finnish_pagan
 							religion = folklorist
 							religion = arcadian
 						}
@@ -2857,7 +2819,6 @@ religion_leadership = {
 					FROM = { 
 						character = yes 
 						OR = {
-							religion = finnish_pagan
 							religion = folklorist
 							religion = arcadian
 						}
