@@ -4269,13 +4269,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { finnish_pagan = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = finnish_pagan }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { hellenic_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = hellenic_pagan }
@@ -4461,13 +4454,6 @@ character_event = {
 			limit = { raven_tales = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = raven_tales }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { finnish_pagan = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = finnish_pagan }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -10809,7 +10795,6 @@ character_event = {
 			OR = {
 				has_religion_feature = religion_stable
 				has_religion_feature = religion_feature_nousthreskeia
-				has_religion_feature = religion_feature_finnish
 			}
 			religion = ROOT
 		}

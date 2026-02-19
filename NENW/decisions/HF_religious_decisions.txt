@@ -230,7 +230,6 @@ targetted_decisions = {
 			OR = {
 				has_religion_feature = religion_stable
 				religion = espiritista
-				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
 				has_religion_feature = religion_feature_numic
 				religion = guadalupano
@@ -501,7 +500,6 @@ targetted_decisions = {
 			OR = {
 				has_religion_feature = religion_stable
 				religion = espiritista
-				has_religion_feature = religion_feature_finnish
 				has_religion_feature = religion_feature_nousthreskeia
 				has_religion_feature = religion_feature_numic
 				religion = guadalupano
@@ -2346,16 +2344,8 @@ settlement_decisions = {
 					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_nousthreskeia } }
 				}
 				AND = { 
-					religion = baltic_pagan
-					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_baltic } }
-				}
-				AND = { 
 					religion = tengri_pagan
 					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_tengri } }
-				}
-				AND = { 
-					religion = finnish_pagan
-					NOT = { any_realm_province = { has_province_flag = flag_great_pillar_finnish } }
 				}
 				AND = { 
 					religion = hellenic_pagan
@@ -2407,8 +2397,6 @@ settlement_decisions = {
 							has_province_flag = flag_great_pillar_arcadian
 							has_province_flag = flag_great_pillar_nousthreskeia
 							has_province_flag = flag_great_pillar_tengri
-							has_province_flag = flag_great_pillar_baltic
-							has_province_flag = flag_great_pillar_finnish
 							has_province_flag = flag_great_pillar_hellenic
 							has_province_flag = flag_great_pillar_starist
 						}
@@ -2535,30 +2523,6 @@ settlement_decisions = {
 						add_building = tb_great_pillar_tengri
 					}
 				}
-				if = {  
-					limit = { FROM = { religion = baltic_pagan } }
-					hidden_tooltip = {
-						location = {
-							set_province_flag = flag_great_pillar_baltic
-						}
-					}
-					if = { 
-						limit = { NOT = { has_building = tb_great_pillar_baltic } } 
-						add_building = tb_great_pillar_baltic
-					}
-				}
-				if = {  
-					limit = { FROM = { religion = finnish_pagan } }
-					hidden_tooltip = {
-						location = {
-							set_province_flag = flag_great_pillar_finnish
-						}
-					}
-					if = { 
-						limit = { NOT = { has_building = tb_great_pillar_finnish } } 
-						add_building = tb_great_pillar_finnish
-					}
-				}
 				if = {
 					limit = { FROM = { religion = hellenic_pagan } }
 					hidden_tooltip = {
@@ -2654,8 +2618,6 @@ settlement_decisions = {
 					has_province_flag = flag_great_pillar_arcadian
 					has_province_flag = flag_great_pillar_nousthreskeia
 					has_province_flag = flag_great_pillar_tengri
-					has_province_flag = flag_great_pillar_baltic
-					has_province_flag = flag_great_pillar_finnish
 					has_province_flag = flag_great_pillar_hellenic
 					has_province_flag = flag_great_pillar_starist
 				}	
@@ -2783,42 +2745,6 @@ settlement_decisions = {
 					}
 				}
 				tengri_pagan = {
-					religion_authority = {
-						modifier = destroyed_great_pillar
-						years = 10
-					}
-				}
-			}
-			if = {  
-				limit = { location = { has_province_flag = flag_great_pillar_baltic } }
-				hidden_tooltip = {
-					location = {
-						clr_province_flag = flag_great_pillar_baltic
-					}
-					any_realm_character = {
-						limit = { religion = baltic_pagan }
-						character_event = { id = HF.23477 }
-					}
-				}
-				baltic_pagan = {
-					religion_authority = {
-						modifier = destroyed_great_pillar
-						years = 10
-					}
-				}
-			}
-			if = {  
-				limit = { location = { has_province_flag = flag_great_pillar_finnish } }
-				hidden_tooltip = {
-					location = {
-						clr_province_flag = flag_great_pillar_finnish
-					}
-					any_realm_character = {
-						limit = { religion = finnish_pagan }
-						character_event = { id = HF.23477 }
-					}
-				}
-				finnish_pagan = {
 					religion_authority = {
 						modifier = destroyed_great_pillar
 						years = 10

@@ -6393,10 +6393,6 @@ add_crusade_trait_effect = {
 		add_trait = crusader
 	}
 	else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
-		add_trait = ukkos_shield
-	}
-	else_if = {
 		limit = { religion_openly_zenith_or_reformed_trigger = yes }
 		add_trait = sun_warrior
 	}
@@ -21948,51 +21944,7 @@ bloodthirsty_tiered_traits_effect = {
 
 # Tied to religion, used only for special events
 add_random_tattoo_effect = {
-
-	if = {
-		limit = { 
-			OR = { 
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
-			NOR = { 
-				trait = african_tattoo_1
-				trait = african_tattoo_2
-				trait = african_tattoo_3
-				trait = african_tattoo_4
-				trait = african_tattoo_5
-				trait = african_tattoo_6
-				trait = african_tattoo_7
-				trait = african_tattoo_8
-				trait = african_tattoo_9
-				trait = african_tattoo_10
-				trait = african_tattoo_11
-				trait = african_tattoo_12
-				trait = slavic_tattoo_1
-				trait = slavic_tattoo_2
-				trait = slavic_tattoo_3
-				trait = slavic_tattoo_4
-				trait = slavic_tattoo_5
-				trait = slavic_tattoo_6
-				trait = norse_tattoo_1
-				trait = norse_tattoo_2
-				trait = norse_tattoo_3
-				trait = norse_tattoo_4
-				trait = norse_tattoo_5
-				trait = norse_tattoo_6
-			}
-		}
-		random_list = { 
-			50 = { add_trait = slavic_tattoo_1 }
-			50 = { add_trait = slavic_tattoo_2 }
-			40 = { add_trait = slavic_tattoo_3 }
-			30 = { add_trait = slavic_tattoo_4 }
-			20 = { add_trait = slavic_tattoo_5 }
-			10 = { add_trait = slavic_tattoo_6 } 
-		}
-	}
+	always = no
 }
 
 spawn_debutante_effect = {

@@ -18,7 +18,7 @@ targeted_decisions = {
 		}
 		allow = {
 			NOT = { trait = zealous }
-			liege = { ROOTs_religion_is_playable_trigger = yes }
+			#liege = { ROOTs_religion_is_playable_trigger = yes }
 		}
 		effect = {
 			prestige = -500
@@ -294,7 +294,7 @@ targeted_decisions = {
 		}
 		allow = {
 			NOT = { trait = zealous }
-			capital_scope = { ROOTs_religion_is_playable_trigger = yes }
+			#capital_scope = { ROOTs_religion_is_playable_trigger = yes }
 			OR = {
 				piety = 250
 				any_owned_bloodline = {
@@ -462,9 +462,7 @@ targeted_decisions = {
 				religion = celtic_pagan
 				religion = inuit_pagan
 				religion = lakefolk_pagan
-				religion = finnish_pagan
 				religion = tengri_pagan
-				religion = baltic_pagan
 				religion = novelist
 				religion = folklorist
 				religion = arcadian
@@ -508,14 +506,6 @@ targeted_decisions = {
 			if = {
 				limit = { religion = lakefolk_pagan }
 				religion = lakefolk_pagan_reformed
-			}
-			if = {
-				limit = { religion = finnish_pagan }
-				religion = finnish_pagan_reformed
-			}
-			if = {
-				limit = { religion = baltic_pagan }
-				religion = baltic_pagan_reformed
 			}
 			if = {
 				limit = { religion = tengri_pagan }
@@ -682,16 +672,8 @@ targeted_decisions = {
 						folklorist_reformed = { has_religion_feature = religion_proselytizing }
 					}
 					AND = {
-						religion = baltic_pagan
-						baltic_pagan_reformed = { has_religion_feature = religion_proselytizing }
-					}
-					AND = {
 						religion = tengri_pagan
 						tengri_pagan_reformed = { has_religion_feature = religion_proselytizing }
-					}
-					AND = {
-						religion = finnish_pagan
-						finnish_pagan_reformed = { has_religion_feature = religion_proselytizing }
 					}
 					AND = {
 						religion = arcadian
