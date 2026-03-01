@@ -6522,7 +6522,7 @@
     name = "Miguel"
     dynasty = 5228119 #Alemán
     religion = guadalupano
-    culture = ocaseno
+    culture = mexikanisch #For portrait
     diplomacy = 7
     stewardship = 4
     intrigue = 5
@@ -6533,7 +6533,10 @@
 	trait = proud
     trait = stubborn
 	trait = strong
-    2300.3.5 = { birth = yes }
+    2300.3.5 = {
+          culture = ocaseno
+		  birth = yes
+    }
 }
 2200069 = { #Don Francisco Severo Maldonado de Jala
     name = "Francisco"
@@ -6795,7 +6798,7 @@
     name = "Rafael"
     dynasty = 5228132 # Marqués de Catalán
     religion = ikikunari
-    culture = ocaseno
+    culture = andalu #For portrait
     diplomacy = 8
     stewardship = 4
     intrigue = 5
@@ -6806,8 +6809,11 @@
 	trait = wroth
 	trait = diligent
     trait = groomed
-    2279.2.13 = { birth = yes }
-	2363.1.1 = { death = yes }
+    2307.2.13 = {
+          culture = ocaseno
+		  birth = yes
+    }
+	2390.1.1 = { death = yes }
 }
 2200084 = { #José Covarrubias, Count of Papaloapan King of Olmeca
     name = "José"
@@ -6847,8 +6853,8 @@
     2279.2.13 = { birth = yes }
 	2363.1.1 = { death = yes }
 }
-2200086 = { #José Marian Mociño, "Duke" of the Muertista HOF and Count of Tuxtla
-    name = " José Marian"
+2200086 = { #José Marian Mociño, "Duke" of the Muertista Papacy and Count of Tuxtla
+    name = "José Marian"
     dynasty = 5228134 # Mociño
     religion = muertista
     culture = nahuatl
@@ -6862,6 +6868,8 @@
 	trait = just
 	trait = gregarious
     trait = erudite
+	trait = chaste
+	disallow_random_traits=yes
     2279.2.13 = { birth = yes }
 	2363.1.1 = { death = yes }
 }
