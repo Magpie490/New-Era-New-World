@@ -161,13 +161,6 @@ song = {
 }
 
 song = {
-	name = "The_Devil_Went_Down_To_Georgia.ogg"
-	song_name = "The Devil Went Down To Georgia"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "Big_Iron.ogg"
 	song_name = "Big Iron"
 	chance = {
@@ -267,67 +260,33 @@ song = {
 }
 
 song = {
-	name = "Im_Just_Ken.ogg"
-	song_name = "I'm Just Ken"
-	chance = {
-		factor = 1
-	}
-}
-
-song = {
-	name = "Pumped_Up_Kicks.ogg"
-	song_name = "Pumped Up Kicks"
-	chance = {
-		factor = 1
-	}
-}
-
-song = {
-	name = "Hotel_California.ogg"
-	song_name = "Hotel California"
-	chance = {
-		factor = 1
-	}
-}
-
-song = {
 	name = "Alkonost.ogg"
 	song_name = "Alkonost"
 	chance = {
-		factor = 1
+		factor = 2
+		modifier = {
+            factor = 0
+            NOT = { 
+				culture_group = amero_slavic
+			}
+        }
 	}
+	volume = 0.88
 }
 
 song = {
 	name = "Slavic_Lands.ogg"
 	song_name = "Slavic Lands"
 	chance = {
-		factor = 1
+		factor = 2
+		modifier = {
+            factor = 0
+            NOT = { 
+				culture_group = amero_slavic
+			}
+        }
 	}
-}
-
-song = {
-	name = "Cielito_Lindo.ogg"
-	song_name = "Cielito Lindo"
-	chance = {
-		factor = 1
-	}
-}
-
-song = {
-	name = "Besame_Mucho.ogg"
-	song_name = "Bésame Mucho"
-	chance = {
-		factor = 1
-	}
-}
-
-song = {
-	name = "El_Cascabel_Son_Jarocho.ogg"
-	song_name = "El Cascabel - Son Jarocho"
-	chance = {
-		factor = 1
-	}
+	volume = 0.88
 }
 
 song = {
@@ -380,8 +339,15 @@ song = {
 	name = "Galerie_Pourrite.ogg"
 	song_name = "Galerie Pourrite"
 	chance = {
-		factor = 1
+		factor = 2
+		modifier = {
+            factor = 0
+            NOT = { 
+				culture_group = franco_canadian
+			}
+        }
 	}
+	volume = 0.88
 }
 
 song = {
@@ -457,48 +423,12 @@ song = {
 				culture_group = chicano
 				culture_group = mexicano
 				culture_group = north_mexican
-				culture_group = californio_group
 			}
         }
 	}
 	volume = 0.85
 }
 
-song = {
-	name = "Gohans_Anger.ogg"
-	song_name = "Gohan's Anger"
-	chance = {
-		factor = 2
-		modifier = {
-            factor = 0
-            NOT = { 
-				culture_group = chicano
-				culture_group = mexicano
-				culture_group = north_mexican
-				culture_group = californio_group
-			}
-        }
-	}
-	volume = 0.70
-}
-
-song = {
-	name = "Mexico_Lindo_y_Querido.ogg"
-	song_name = "Mexico Lindo y Querido"
-	chance = {
-		factor = 2
-		modifier = {
-            factor = 0
-            NOT = { 
-				culture_group = chicano
-				culture_group = mexicano
-				culture_group = north_mexican
-				culture_group = californio_group
-			}
-        }
-	}
-	volume = 0.75
-}
 song = {
 	name = "Los_Barbudos.ogg"
 	song_name = "Los Barbudos"
@@ -513,7 +443,7 @@ song = {
 			}
         }
 	}
-	volume = 0.80
+	volume = 0.85
 }
 
 song = {
@@ -530,7 +460,7 @@ song = {
 			}
         }
 	}
-	volume = 0.80
+	volume = 0.85
 }
 
 song = {
@@ -560,7 +490,7 @@ song = {
 			}
         }
 	}
-	volume = 0.80
+	volume = 0.85
 }
 
 song = {
@@ -568,21 +498,11 @@ song = {
 	song_name = "The Faun Shepherdess"
 	chance = {
 		factor = 1
-	}
-}
-
-song = {
-	name = "Log_Drivers_Waltz.ogg"
-	song_name = "Log Driver's Waltz"
-	chance = {
-		factor = 1
 		modifier = {
             factor = 0
 			NOT = {
-				culture_group = laurentine_anglo
-				culture_group = plains_canuck
-				culture_group = west_coaster
-				culture = newfindler
+				religion = delver
+				religion = delver_reformed
 			}
         }
 	}
@@ -627,17 +547,16 @@ song = {
 	name = "El_Martes_me_Fusilan.ogg"
 	song_name = "El Martes me Fusilan"
 	chance = {
-		factor = 2
+		factor = 1
 		modifier = {
             factor = 0
 			NOT = {
 				religion = catholic
 				religion = guadalupano
-				religion = quixtiano
 			}
         }
 	}
-	volume = 0.80
+	volume = 0.85
 }
 
 song = {
@@ -693,7 +612,7 @@ song = {
 		factor = 1
 		modifier = {
             factor = 0
-            NOT = { 
+            NOR = { 
 				religion = abolitionist 
 			}
         }
