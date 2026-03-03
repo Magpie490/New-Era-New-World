@@ -29,7 +29,7 @@ feudal_governments = {
 			confederation_government
 			holymexico_government
 			mexico_government
-			#japanese_feudal
+			japanese_feudal
 			kratocratic_government
 			bhutanese_decayed_government
 			bhutanese_restored_government
@@ -72,7 +72,7 @@ feudal_governments = {
 				is_government_potential = theodemocratic
 				is_government_potential = communal_government
 				is_government_potential = kratocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
 				is_government_potential = indian_feudal
@@ -99,7 +99,7 @@ feudal_governments = {
 			city_vassal_tax_modifier = 0.05
 			tradevalue = 5
 			city_levy_size = 0.05
-			city_vassal_max_levy = 0.05
+			city_vassal_vassal_max_levy = 0.05
 		}
 		
 		dukes_called_kings = yes
@@ -133,7 +133,7 @@ feudal_governments = {
 			
 			
 			viceroyal_government
-			#japanese_feudal
+			japanese_feudal
 			calvinist_government
 			theodemocratic
 			communal_government
@@ -161,7 +161,7 @@ feudal_governments = {
 			tribal_government
 			nomadtribal_government
 		}
-		free_revoke_on_tiers = {
+		free_revoke_on_tiers_culture = {
 			baron
 		}
 		forced_contract = {
@@ -191,7 +191,7 @@ feudal_governments = {
 				is_government_potential = communal_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = indian_feudal
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = mandala_government
@@ -342,9 +342,10 @@ feudal_governments = {
 		can_revoke_without_reason = no
 		uses_prestige_for_law_change = yes
 		uses_bride_price = yes
+		can_create_empires = no
 		can_usurp_kingdoms_and_empires = no
-		can_be_granted_kingdoms_and_empires_by_other_government = no
 		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		vassal_government_opinion_penalties = no
 		commander_limit = 2
 		
 		character_modifier = {
@@ -522,7 +523,7 @@ feudal_governments = {
 			chinese_imperial_government
 			muslim_government
 			
-			#japanese_feudal
+			japanese_feudal
 			
 			viceroyal_government
 			calvinist_government
@@ -577,7 +578,7 @@ feudal_governments = {
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = theocratic_feudal_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = mandala_government
@@ -596,7 +597,7 @@ feudal_governments = {
 				culture = parsi
 				culture = gujurati
 				culture = hindustani
-				#culture = deccani
+				culture = deccani
 				culture = rajput
 				culture = bagri
 				culture = haryanvi
@@ -652,14 +653,13 @@ feudal_governments = {
         character_modifier = {
 			vassal_opinion = -15 #need to take coronation decision in order to offset debuff
 			build_cost_modifier = 0.05
-			global_revolt_risk = 0.01
 			local_build_time_modifier = 0.05
 			retinue_maintenence_cost = 0.05
 		}
 		capital_move_delay = 400
 	}
 	kratocratic_government = {
-        color = { 0 45 112 }
+        color = { 5 41 247 }
 		preferred_holdings = { CASTLE }
 		allowed_holdings = {
 			CASTLE
@@ -695,7 +695,7 @@ feudal_governments = {
 			feudal_government
 			eastern_feudal
 			technocratic_government
-			#japanese_feudal
+			japanese_feudal
 			colonial_government
 			agrarian_feudal_government
 			kratocratic_government
@@ -706,7 +706,6 @@ feudal_governments = {
         }
 		forced_contract = {
 			viceroyal_government
-			kratocratic_government
 		}
         ignore_in_vassal_limit_calculation = {
 			tribal_government
@@ -746,6 +745,7 @@ feudal_governments = {
 			has_oligarchy_title_trigger = no
         }
 		character_modifier = {
+			levy_size = 0.05
 			city_vassal_min_levy = 0.3
 			castle_vassal_min_levy = 0.3
 			temple_vassal_min_levy = 0.3
@@ -756,7 +756,9 @@ feudal_governments = {
 			retinue_maintenence_cost = -0.05
 			global_revolt_risk = 0.01
 		}
-
+		
+		max_liege_levy = 1
+		max_liege_tax = 0.2
         barons_need_dynasty = yes
         can_build_tribal = no
         uses_prestige_for_law_change = yes
@@ -782,7 +784,7 @@ feudal_governments = {
 			theocracy_government
 			eastern_feudal
 			technocratic_government
-			#japanese_feudal
+			japanese_feudal
 			ghazwa_government
 			chinese_imperial_government
 			muslim_government
@@ -844,7 +846,7 @@ feudal_governments = {
 				is_government_potential = ghazwa_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = indian_feudal
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = mandala_government
@@ -904,7 +906,7 @@ feudal_governments = {
 			tribal_government
 			nomadtribal_government
 		}
-		free_revoke_on_tiers = {
+		free_revoke_on_tiers_religion = {
 			baron count
 		}
 		forced_contract = {
@@ -1004,7 +1006,7 @@ feudal_governments = {
 			tribal_government
 			nomadtribal_government
 		}
-		free_revoke_on_tiers = {
+		free_revoke_on_tiers_religion = {
 			baron count
 		}
 		forced_contract = {
@@ -1035,7 +1037,7 @@ feudal_governments = {
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = indian_feudal
 				is_government_potential = confucian_bureaucracy
 			}
@@ -1053,7 +1055,7 @@ feudal_governments = {
 			temple_tax_modifier = -0.1
 			temple_levy_size = 0.1
 			castle_levy_size = 0.1
-			infidel_opinion = -5
+			infidel_opinion = -15
 		}
 		
 		color = { 0 27 0 }
@@ -1082,7 +1084,7 @@ feudal_governments = {
 		capital_move_delay = 600
 	}
 	theocratic_feudal_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE TEMPLE }
 		allowed_holdings = { 
 			CASTLE 
 			TEMPLE
@@ -1140,6 +1142,7 @@ feudal_governments = {
 				is_government_potential = mandate_heaven
 				is_government_potential = order_government
 				is_government_potential = bhutanese_restored_government
+				is_government_potential = viceroyal_government
 				is_government_potential = colonial_government
 				is_government_potential = bhutanese_decayed_government
 				is_government_potential = chinese_imperial_government
@@ -1152,7 +1155,7 @@ feudal_governments = {
 				is_government_potential = kratocratic_government
 				is_government_potential = eastern_feudal
 				is_government_potential = technocratic_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = confucian_bureaucracy
 			}
 			primary_title = {
@@ -1171,7 +1174,6 @@ feudal_governments = {
 		uses_piety_for_law_change = yes
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
-		uses_decadence = yes
 
 		can_build_tribal = no
 		
@@ -1256,14 +1258,13 @@ feudal_governments = {
 					title = e_illustrious
 				}
 			}
-			controls_religion = no
 			uses_calvinist_trigger = yes
 			higher_tier_than = BARON
 			is_patrician = no
 			has_oligarchy_title_trigger = no
 		}
 		
-		color = { 232 176 97 }
+		color = { 107 255 255 }
 		
 		uses_piety_for_law_change = yes
 		dukes_called_kings = yes
@@ -1383,7 +1384,7 @@ feudal_governments = {
 	}
 	
 	communal_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = { 
 			CASTLE 
 			CITY
@@ -1397,7 +1398,7 @@ feudal_governments = {
 			theocracy_government
 			eastern_feudal
 			technocratic_government
-			#japanese_feudal
+			japanese_feudal
 			chinese_imperial_government
 			muslim_government
 			
@@ -1411,7 +1412,7 @@ feudal_governments = {
 			roman_imperial_government
 			ethiopian_imperial_government
 			federal_government
-			#mandate_heaven
+			mandate_heaven
 			confederation_government
 			holymexico_government
 			mexico_government
@@ -1437,7 +1438,7 @@ feudal_governments = {
 			theocracy_government
 			eastern_feudal
 			technocratic_government
-			#japanese_feudal
+			japanese_feudal
 			chinese_imperial_government
 			muslim_government
 			
@@ -1450,7 +1451,7 @@ feudal_governments = {
 			roman_imperial_government
 			ethiopian_imperial_government
 			federal_government
-			#mandate_heaven
+			mandate_heaven
 			confederation_government
 			holymexico_government
 			mexico_government
@@ -1468,7 +1469,7 @@ feudal_governments = {
 				is_government_potential = roman_imperial_government
 				is_government_potential = ethiopian_imperial_government
 				is_government_potential = federal_government
-				#is_government_potential = mandate_heaven
+				is_government_potential = mandate_heaven
 				is_government_potential = order_government
 				is_government_potential = bhutanese_restored_government
 				is_government_potential = viceroyal_government
@@ -1509,7 +1510,7 @@ feudal_governments = {
 		capital_move_delay = 600
 	}
 	eastern_feudal = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
 			CITY
@@ -1577,7 +1578,7 @@ feudal_governments = {
 				is_government_potential = calvinist_government
 				is_government_potential = theodemocratic
 				is_government_potential = communal_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = kratocratic_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = mandala_government
@@ -1591,6 +1592,7 @@ feudal_governments = {
 				uses_eastern_feudal_trigger = yes
 				primary_title = {
 					OR = {
+						title = e_yuan
 						title = k_new_panama
 						title = e_new_panama
 					}
@@ -1602,7 +1604,7 @@ feudal_governments = {
 			has_oligarchy_title_trigger = no
 		}
 		
-		color = { 9 191 145 }
+		color = { 255 76 0 }
 
 		barons_need_dynasty = yes
 
@@ -1703,7 +1705,7 @@ feudal_governments = {
 				is_government_potential = calvinist_government
 				is_government_potential = theodemocratic
 				is_government_potential = communal_government
-				#is_government_potential = japanese_feudal
+				is_government_potential = japanese_feudal
 				is_government_potential = kratocratic_government
 				is_government_potential = confucian_bureaucracy
 				is_government_potential = mandala_government
@@ -1762,7 +1764,7 @@ feudal_governments = {
 		court_size_modifier = 10
 	}
 	mandate_heaven = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
 			CITY
@@ -1844,7 +1846,7 @@ feudal_governments = {
 			is_patrician = no
 		}
 		
-		color = { 229 45 107 }
+		color = { 237 188 39 }
 
 		barons_need_dynasty = yes
 
@@ -1875,16 +1877,18 @@ feudal_governments = {
 		character_modifier = {
 			retinue_maintenence_cost = -0.5
 			levy_size = -1
-			global_revolt_risk = 0.01
+			
 			retinuesize_perc = 0.9
-			monthly_character_piety = 1
 		}
 		vassal_limit = 10
 		court_size_modifier = 15
 		commander_limit = 3
+		character_modifier = {
+			monthly_character_piety = 1
+		}
 	}
 	chinese_imperial_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
 			CITY
@@ -2016,7 +2020,7 @@ feudal_governments = {
 			order_government
 		}
 		free_revoke_on_tiers = {
-			baron
+			BARON
 		}
 
 		forced_contract = {
@@ -2065,7 +2069,6 @@ feudal_governments = {
 
 		color = { 169 169 169 }
 
-		can_build_tribal = no
 		allow_looting = yes
 		have_gender_laws = no
 		can_create_empires = no
@@ -2081,11 +2084,10 @@ feudal_governments = {
 		free_retract_vassalage = yes
 	}
 	roman_imperial_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
 			CITY
-			FAMILY_PALACE
 			FORT
 			HOSPITAL
 		}
@@ -2166,7 +2168,6 @@ feudal_governments = {
 								has_law = succ_byzantine_elective
 							}
 						}
-						is_vice_royalty = no
 					}
 				}
 				AND = {
@@ -2184,7 +2185,7 @@ feudal_governments = {
 								NOR = {
 									is_government_potential = eastern_feudal
 									is_government_potential = technocratic_government
-									#is_government_potential = japanese_feudal
+									is_government_potential = japanese_feudal
 									is_government_potential = chinese_imperial_government
 									is_government_potential = bhutanese_decayed_government
 									is_government_potential = bhutanese_restored_government
@@ -2198,7 +2199,6 @@ feudal_governments = {
 								has_law = succ_byzantine_elective
 							}
 						}
-						is_vice_royalty = no
 					}
 					has_law = succ_byzantine_elective
 				}
@@ -2321,7 +2321,7 @@ feudal_governments = {
 								NOR = {
 									is_government_potential = eastern_feudal
 									is_government_potential = technocratic_government
-									#is_government_potential = japanese_feudal
+									is_government_potential = japanese_feudal
 									is_government_potential = chinese_imperial_government
 									is_government_potential = viceroyal_government
 									is_government_potential = bhutanese_decayed_government
@@ -2355,7 +2355,7 @@ feudal_governments = {
 								NOR = {
 									is_government_potential = eastern_feudal
 									is_government_potential = technocratic_government
-									#is_government_potential = japanese_feudal
+									is_government_potential = japanese_feudal
 									is_government_potential = chinese_imperial_government
 									is_government_potential = bhutanese_decayed_government
 									is_government_potential = bhutanese_restored_government
@@ -2425,6 +2425,7 @@ feudal_governments = {
 		allowed_holdings = {
 			CASTLE
 			TEMPLE
+			FAMILY_PALACE
 			FORT
 			HOSPITAL
 		}
@@ -2469,11 +2470,11 @@ feudal_governments = {
 		forced_contract = {
 			viceroyal_government
 			theocracy_government
+			tribal_government
 		}
 		frame_suffix = "_ethiopianimperial"
 		title_prefix = "ethiopianimperial_"
 		potential = {
-			isnt_forced_to_theocracy = yes
 			OR = { 
 				AND = {
 					is_save_game = no
@@ -2488,12 +2489,12 @@ feudal_governments = {
 							NOR = {
 								is_government_potential = eastern_feudal
 								is_government_potential = technocratic_government
-								##is_government_potential = japanese_feudal
+								is_government_potential = japanese_feudal
 								is_government_potential = chinese_imperial_government
 								is_government_potential = viceroyal_government
 								is_government_potential = bhutanese_decayed_government
 								is_government_potential = bhutanese_restored_government
-								is_government_potential = roman_imperial_government
+								
 								is_government_potential = oligarchic_republic
 								is_government_potential = merchant_republic_government
 								is_government_potential = mandala_government
@@ -2516,11 +2517,11 @@ feudal_governments = {
 							NOR = {
 								is_government_potential = eastern_feudal
 								is_government_potential = technocratic_government
-								##is_government_potential = japanese_feudal
+								is_government_potential = japanese_feudal
 								is_government_potential = chinese_imperial_government
 								is_government_potential = bhutanese_decayed_government
 								is_government_potential = bhutanese_restored_government
-								is_government_potential = roman_imperial_government
+								
 								is_government_potential = oligarchic_republic
 								is_government_potential = merchant_republic_government
 								is_government_potential = mandala_government
@@ -2559,6 +2560,8 @@ feudal_governments = {
 			nomadtribal_government
 		}
 		capital_move_delay = 2000
+		vassal_government_opinion_penalties = no
+		commander_limit = 4
 		uses_decadence = yes
 		uses_piety_for_law_change = yes
 		can_usurp_kingdoms_and_empires = no
@@ -2707,7 +2710,7 @@ feudal_governments = {
 		can_be_granted_kingdoms_and_empires_by_other_government = no
 		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
-		can_revoke_without_reason = no
+		marriage_ignore_religion = yes
 		#allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 		#	TRIBAL
 		#}
@@ -2952,12 +2955,14 @@ feudal_governments = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
-			TEMPLE
 			FORT
 			HOSPITAL
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
+		}
+		allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same culture
+			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -3017,21 +3022,33 @@ feudal_governments = {
 			is_patrician = no
 		}
 		
-		color = { 255 190 23 }
+		color = { 178 35 47 }
 		
-		uses_piety_for_law_change = yes
-		barons_need_dynasty = yes
-		can_create_empires = no
-		free_retract_vassalage = yes
+		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
+		can_create_empires = yes
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
 		gets_religion_opinion_penalties = no
 		gives_religion_opinion_penalties = no
 
 		can_build_tribal = no
 		character_modifier = {
-			retinue_maintenence_cost = -0.5
-			retinuesize_perc = 1.3
-			levy_size = -1.25
+			retinue_maintenence_cost = -0.25
+			retinuesize_perc = 0.75
+			levy_size = -0.15
+			land_organisation = -0.05
+			castle_tax_modifier = -0.1
+			city_tax_modifier = -0.1
+			temple_tax_modifier = -0.1
+			castle_vassal_tax_modifier = -0.15
+			city_vassal_tax_modifier = -0.15
+			temple_vassal_tax_modifier = -0.15
+			castle_vassal_max_levy = -0.1
+			city_vassal_max_levy = -0.1
+			temple_vassal_max_levy = -0.1
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
@@ -3042,15 +3059,16 @@ feudal_governments = {
 	
 	bhutanese_restored_government = {
 		preferred_holdings = { CASTLE }
-		allowed_holdings = {
+		allowed_holdings = { 
 			CASTLE 
-			TEMPLE
-			CITY
 			FORT
 			HOSPITAL
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
+		}
+		allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same culture
+			CITY
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -3115,21 +3133,22 @@ feudal_governments = {
 			is_patrician = no
 		}
 		
-		color = { 255 190 23 }
+		color = { 191 5 36 }
 		
-		uses_piety_for_law_change = yes
-		barons_need_dynasty = yes
-		can_create_empires = no
-		free_retract_vassalage = yes
+		can_usurp_kingdoms_and_empires = no
 		can_imprison_without_reason = no
+		can_create_empires = yes
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
 		gets_religion_opinion_penalties = no
 		gives_religion_opinion_penalties = no
 
 		can_build_tribal = no
 		character_modifier = {
-			retinue_maintenence_cost = -0.75
-			retinuesize_perc = 1.6
-			levy_size = -1
+			retinue_maintenence_cost = -0.33
+			retinuesize_perc = 0.95
 		}
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
@@ -3140,7 +3159,7 @@ feudal_governments = {
 	}
 	confucian_bureaucracy = {
 		offmap_power = offmap_china
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE CITY }
 		allowed_holdings = {
 			CASTLE
 			CITY
@@ -3167,7 +3186,7 @@ feudal_governments = {
 			republic_government
 			eastern_feudal
 			technocratic_government
-			#japanese_feudal
+			japanese_feudal
 			calvinist_government
 			theodemocratic
 			communal_government
@@ -3205,16 +3224,18 @@ feudal_governments = {
 		can_inherit = no
 	}
 	colonial_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CITY }
 		allowed_holdings = { 
 			TRADE_POST
 			CITY
-			CASTLE
 			FORT
 			HOSPITAL
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
+		}
+		allowed_holdings_culture_and_religion = {
+			CASTLE
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			theocracy_government
@@ -3402,7 +3423,7 @@ feudal_governments = {
 			has_oligarchy_title_trigger = no
 		}
 		
-		color = { 199 63 0 }
+		color = { 0 148 255 }
 
 		barons_need_dynasty = yes
 
