@@ -763,10 +763,10 @@ succession_laws = {
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
-					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
-					has_religion_feature = religion_feature_satsana_phi
-					has_religion_feature = religion_feature_gator
+					religion_scope = { has_religion_feature = religion_ritual_sacrifice  }
+					religion_scope = { has_religion_feature = religion_feature_celtic }
+					religion_scope = { has_religion_feature = religion_feature_satsana_phi  }
+					religion_scope = { has_religion_feature = religion_feature_gator }
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -808,9 +808,6 @@ succession_laws = {
 					}
 				}
 				has_title_flag = alternate_byz
-				title = e_juche
-				title = k_bakufu
-				title = k_pretender_bakufu
 			}
 			NOT = { holder_scope = { OR = { government = oligarchic_republic government = consular_republic government = technocratic_government } } }
 			NOT = { holder_scope = { government = roman_imperial_government } }
@@ -831,16 +828,13 @@ succession_laws = {
 				}
 				OR = {
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
-						show_scope_change = no
 						any_demesne_title = {
 							is_vice_royalty = yes
 						}
 					}
 					AND = {
 						holder_scope = {
-							show_scope_change = no
 							primary_title = {
-								show_scope_change = no
 								OR = {
 									has_law = ze_administration_laws_1
 									has_law = ze_administration_laws_2
@@ -857,7 +851,6 @@ succession_laws = {
 				}
 				OR = {
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
-						show_scope_change = no
 						any_demesne_title = {
 							is_vice_royalty = yes
 						}
@@ -871,7 +864,6 @@ succession_laws = {
 							has_law = crown_authority_4
 						}
 					}
-					title = e_juche
 				}
 			}
 			custom_tooltip = {
@@ -922,9 +914,6 @@ succession_laws = {
 		effect = {
 			succession = primogeniture
 		}
-		revoke_allowed = {
-			always = no
-		}			
 	}
 	
 	succ_feudal_elective = {

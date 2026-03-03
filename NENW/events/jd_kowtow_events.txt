@@ -1371,35 +1371,9 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = alien_group
-				}
-				offmap_blorg = {
-					offmap_ruler = {
-						religion_group = alien_group
-					}
-				}
-			}
-			add_trait = sympathy_alien
-		}
-		if = {
-			limit = {
-				NOT = {
-					religion_group = synth_group
-				}
-				offmap_blorg = {
-					offmap_ruler = {
-						religion_group = synth_group
-					}
-				}
-			}
-			add_trait = sympathy_synth
-		}
-		if = {
-			limit = {
-				NOT = {
 					religion_group = chinese_traditional_group
 				}
-				offmap_blorg = {
+				offmap_china = {
 					offmap_ruler = {
 						religion_group = chinese_traditional_group
 					}
@@ -1412,7 +1386,7 @@ character_event = {
 				NOT = {
 					religion_group = shintoist_group
 				}
-				offmap_blorg = {
+				offmap_china = {
 					offmap_ruler = {
 						religion_group = shintoist_group
 					}
