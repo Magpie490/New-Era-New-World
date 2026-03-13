@@ -754,18 +754,11 @@ succession_laws = {
 			}
 			holder_scope = {					
 				NOR = { 
-					religion = jacobinist
-					religion = titoist	
-					religion = stalinist
-					religion = sarvodaya
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					religion_scope = { has_religion_feature = religion_ritual_sacrifice  }
 					religion_scope = { has_religion_feature = religion_feature_celtic }
-					religion_scope = { has_religion_feature = religion_feature_satsana_phi  }
 					religion_scope = { has_religion_feature = religion_feature_gator }
 				}
 				is_merchant_republic = no
@@ -790,7 +783,6 @@ succession_laws = {
 						OR = {
 							NOT = { religion_group = pagan_group }
 							is_reformed_religion = yes
-							religion = hellenic_pagan
 							religion = novelist
 						}
 					}
@@ -818,8 +810,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { government = blorg_government } }
-			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { government = blorg_government } }		
 		}
 		allow = {
 			conditional_tooltip = {
