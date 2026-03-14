@@ -64,16 +64,24 @@
       }
 }
 26676687 = {
-      name = Alberto
-      dynasty = 5124869
-      religion = cineaste
-      culture = angeleno
-      2300.10.1 = {
-          birth = yes
-      }
-      2400.10.1 = {
-          death = yes
-      }
+    name = Lorenzo #A close associate of Matthew, serving his liege with honor
+    dynasty = 5124867
+    religion = cineaste
+    culture = politan #For portrait
+	trait = underhanded_rogue
+	trait = legit_bastard
+	trait = groomed
+	trait = kind
+	trait = gregarious
+	trait = cynical
+	disallow_random_traits = yes
+    2300.1.13 = {
+        birth = yes
+		culture = angeleno
+    }
+    2388.7.21 = {
+        death = yes
+    }
 }
 26678700 = {
       name = Spencer
@@ -88,10 +96,10 @@
       }
 }
 26680785 = {
-    name = Matthew
+    name = Matthew #Matthew, the lone cineaste ruler of any note. Known for his good looks, perhaps he was made for the camera...
     dynasty = 5124876 
     religion = cineaste
-    culture = houstonian #For portrait
+    culture = swedska #For portrait
 	trait = thrifty_clerk
 	trait = patient
 	trait = greedy
@@ -108,7 +116,7 @@
     }
 }
 26682865 = {
-    name = Kevin #Count of Ventura
+    name = Kevin #Count of Ventura, a rather avid gamer
     dynasty = 5124894 
     religion = amaitist
     culture = houstonian #For portrait
@@ -1611,4 +1619,149 @@
 	2666.1.1 = {
 		death = yes
 	}
+}
+
+3300090 = {
+    name = Oakley #Son of Matthew, an aspiring cineaste who dreams big
+    dynasty = 5124876 
+    religion = cineaste
+    culture = swedska #For portrait
+	father = 26680785
+	trait = fair	
+    2311.3.2 = {
+        birth = yes
+		culture = angeleno
+    }
+    2388.7.21 = {
+        death = yes
+    }
+}
+
+3300091 = {
+    name = Mackenzie #Daughter of Matthew, an aspiring cineaste who writes her own plots
+    dynasty = 5124876 
+    religion = cineaste
+    culture = swedska #For portrait
+	father = 26680785
+	female = yes
+	trait = shrewd
+	2315.2.12 = {
+        birth = yes
+		culture = angeleno
+    }
+    2388.7.21 = {
+        death = yes
+    }
+}
+
+3300092 = {
+    name = Alberto #Son of Lorenzo
+    dynasty = 5124867
+    religion = cineaste
+    culture = politan #For portrait
+	father = 26676687
+	2323.10.1 = {
+        birth = yes
+		culture = angeleno
+    }
+    2400.7.21 = {
+        death = yes
+    }
+}
+
+3300093 = {
+    name = Bianca #Daughter of Lorenzo
+    dynasty = 5124867
+    religion = cineaste
+    culture = politan #For portrait
+	father = 26676687
+	female = yes
+	2324.5.1 = {
+        birth = yes
+		culture = angeleno
+    }
+    2400.7.21 = {
+        death = yes
+    }
+}
+
+3300094 = {
+	name = "Jade" #Daughter of Logan
+	dynasty = 5124863
+	culture = tuskegean #For portrait
+	religion = amaitist
+	father = 3300085
+	female = yes
+	trait = tall	
+	2320.7.2 = {
+		birth = yes
+		culture = angeleno
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+3300095 = {
+	name = "Alexander" #Son of Logan
+	dynasty = 5124863
+	culture = tuskegean #For portrait
+	religion = amaitist
+	father = 3300085
+	2323.4.11 = {
+		birth = yes
+		culture = angeleno
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+
+3300096 = {
+    name = Tatiana #First daughter of Kevin
+    dynasty = 5124894 
+    religion = amaitist
+    culture = houstonian #For portrait
+	father = 26682865	
+    female = yes
+	trait = fair
+	2321.9.2 = {
+        birth = yes
+		culture = angeleno
+    }
+    2666.1.1 = {
+        death = yes
+    }
+}
+
+3300097 = {
+    name = Sabrina #Second daughter of Kevin
+    dynasty = 5124894 
+    religion = amaitist
+    culture = houstonian #For portrait
+	father = 26682865	
+    female = yes
+	trait = short
+	2322.10.1 = {
+        birth = yes
+		culture = angeleno
+    }
+    2666.1.1 = {
+        death = yes
+    }
+}
+
+3300098 = {
+    name = Dutch #Son of Kevin
+    dynasty = 5124894 
+    religion = amaitist
+    culture = houstonian #For portrait
+	father = 26682865	
+    2324.1.12 = {
+        birth = yes
+		culture = angeleno
+    }
+    2666.1.1 = {
+        death = yes
+    }
 }
