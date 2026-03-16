@@ -586,7 +586,7 @@ d_lone_star_order = { #Instrumentals
 }
 
 d_knights_of_thaddeus = { #Knights of Thaddeus
-	color={ 0 74 127 }
+	color = { 255 84 0 }
 	color2={ 255 255 255 }
 	
 	capital = 1849 # Santa Clarita
@@ -605,6 +605,36 @@ d_knights_of_thaddeus = { #Knights of Thaddeus
 	
 	# Parent Religion 
 	religion = thaddean
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+
+d_custodite_order = { #Legion of Columbia
+	color = { 0 34 102 }
+	color2={ 255 255 255 }
+	
+	capital = 389 # Denver
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = frontranger
+	
+	# Parent Religion 
+	religion = custodite
 	
 	# Cannot be held as a secondary title
 	primary = yes
