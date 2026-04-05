@@ -555,6 +555,36 @@ d_free_baptist_order = { #Legion of Moses
 	mercenary_type = knights_hospitaler_composition
 }
 
+d_ardentist_order = { #Legion of Fire
+	color={ 127 25 25 }
+	color2={ 255 255 255 }
+	
+	capital = 3026 # Monterrey
+	
+	short_name = yes
+	
+	title = "COMMANDER"
+	foa = "COMMANDER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = regio
+	
+	# Parent Religion 
+	religion = ardentist
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = knights_hospitaler_composition
+}
+
 d_lone_star_order = { #Instrumentals
 	color={ 0 74 127 }
 	color2={ 255 255 255 }
