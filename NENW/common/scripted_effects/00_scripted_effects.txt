@@ -6411,6 +6411,10 @@ add_crusade_trait_effect = {
 		add_trait = antiquarianist_crusader
 	}
 	else_if = {
+		limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
+		add_trait = crusader
+	}
+	else_if = {
 		limit = { religion_openly_moist_or_reformed_trigger = yes }
 		add_trait = purifier
 	}
