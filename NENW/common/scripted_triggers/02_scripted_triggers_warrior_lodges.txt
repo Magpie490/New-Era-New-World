@@ -666,6 +666,10 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_trinitarian
 		}
 		trigger_else_if = {
+			limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
+			society_member_of = warrior_lodge_trinitarian
+		}
+		trigger_else_if = {
 			limit = { is_kemetic_religion_trigger = yes }
 			society_member_of = warrior_lodge_kemetic
 		}
@@ -1016,6 +1020,10 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_trinitarian = { society_has_members = yes }
 	}
 	trigger_else_if = {
+		limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
+		warrior_lodge_trinitarian = { society_has_members = yes }
+	}
+	trigger_else_if = {
 		limit = { is_kemetic_religion_trigger = yes }
 		warrior_lodge_kemetic = { society_has_members = yes }
 	}
@@ -1335,6 +1343,10 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 		}
 		trigger_else_if = {
 			limit = { is_trinitarian_religion_trigger = yes }
+			warrior_lodge_trinitarian = { num_of_society_members < 30 }
+		}
+		trigger_else_if = {
+			limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
 			warrior_lodge_trinitarian = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -1681,6 +1693,10 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 	}
 	trigger_else_if = {
 		limit = { is_trinitarian_religion_trigger = yes }
+		NOT = { warrior_lodge_trinitarian = { society_has_members = yes } }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_trinitarian = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -2139,6 +2155,10 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 	}
 	trigger_else_if = {
 		limit = { is_trinitarian_religion_trigger = yes }
+		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_trinitarian }
+	}
+	trigger_else_if = {
+		limit = { religion_openly_trinitarian_or_reformed_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_trinitarian }
 	}
 	trigger_else_if = {
