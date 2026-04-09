@@ -2314,6 +2314,18 @@ invasion = {
 		ROOT = {
 			mercenary = no
 		}
+		ROOT = {
+			NOT = {
+				AND = {
+					independent = yes
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
 	}
 
 	can_use_gui = {
@@ -2743,6 +2755,18 @@ tribal_invasion = {
 	}
 	
 	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					independent = yes
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
 	}
 	
 	on_add = {
@@ -5048,33 +5072,82 @@ religious = {
 	sort_priority = 800
 	
 	can_use_gui = {
-		ROOT = {
-			show_scope_change = no
-			holy_war_start_trigger = yes
-			conditional_tooltip = {
-				trigger = {
-					OR = {
-					religion = neovedantic
-					religion = shangava
+		OR = { 
+			ROOT = {
+				NOT = { 
+					AND = {
+						independent = yes
+						government = mandala_government
+						OR = {
+							real_tier = KING
+							real_tier = EMPEROR
+						}
 					}
+				}	
+				
+				holy_war_start_trigger = yes
+				conditional_tooltip = {
+					trigger = {
+						OR = {
+							religion = neovedantic
+							religion = shangava
+						}
+					}
+					piety = 250
 				}
-				piety = 250
+				conditional_tooltip = {
+					trigger = {
+						religion = stalinist
+					}
+					piety = 150
+				}
+				conditional_tooltip = {
+					trigger = {
+						NOT = { religion = shangava }
+						NOT = { religion = neovedantic }
+						NOT = { religion = stalinist }
+					}
+					piety = 100
+				}
 			}
-			conditional_tooltip = {
-				trigger = {
-					religion = stalinist
-				}
-				piety = 150
-			}
-			conditional_tooltip = {
-				trigger = {
-					NOT = { religion = shangava }
-					NOT = { religion = neovedantic }
-					NOT = { religion = stalinist }
-				}
+			ROOT = {
 				piety = 100
+				AND = {
+					independent = yes
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}	
+				OR = {
+					AND = {
+						FROM = {
+							real_tier = KING
+						}
+						ROOT = {
+							real_tier = KING
+						}
+					}
+					AND = {
+						FROM = {
+							real_tier = EMPEROR
+						}
+						ROOT = {
+							real_tier = EMPEROR
+						}
+					}
+					AND = {
+						FROM = {
+							real_tier = EMPEROR
+						}
+						ROOT = {
+							real_tier = KING
+						}
+					}
+				}	
 			}
-		}
+		}	
 	}
 	
 	on_add = {
