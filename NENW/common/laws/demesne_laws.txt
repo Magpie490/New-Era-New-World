@@ -46,6 +46,9 @@ law_groups = {
 	sevillian_investiture_law = {
 		law_type = realm
 	}
+	thaddean_investiture_law = {
+		law_type = realm
+	}
 	mil_train_laws = {
 		law_type = realm
 	}
@@ -2973,6 +2976,35 @@ laws = {
 				OR = {
 					religion = sevillian
 					religion = transatlantic
+				}
+				is_tribal = no
+				is_nomadic = no
+			}
+		}
+		allow = {
+			always = no
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			set_investiture = any
+		}
+	}
+	
+	thaddean_investiture_law_0 = {
+		show_as_title = yes
+		group = thaddean_investiture_law
+		potential = {
+			holder_scope = {
+				OR = {
+					religion = thaddean					
 				}
 				is_tribal = no
 				is_nomadic = no
