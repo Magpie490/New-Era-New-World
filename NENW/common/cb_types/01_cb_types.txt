@@ -115,6 +115,17 @@ dejure_duchy_claim = { # New1
 	}
 	
 	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
 			NOT = {
@@ -793,6 +804,20 @@ force_vassalization = { # New2
 	}
 	
 	can_use = {
+		ROOT = {
+			conditional_tooltip = {
+				trigger = { 
+					government = mandala_government
+				}
+				ROOT = {
+					
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
 		ROOT = {
 			OR = {
 				AND = {
@@ -2921,6 +2946,17 @@ unjust_conquest = { # New7
 	}
 	
 	can_use = {
+		ROOT = {
+			NOT = {
+				AND = {
+					government = mandala_government
+					OR = {
+						real_tier = KING
+						real_tier = EMPEROR
+					}
+				}
+			}
+		}
 		has_dlc = "Jade Dragon"
 		ROOT = {
 			NOT = {
