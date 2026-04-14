@@ -206,48 +206,6 @@ blessed_mantle = {
 	}
 }
 
-
-axe_of_perkunas = {
-	max_amount = 1
-	spawn_date = -1.1.1
-	
-	spawn_chance = {
-		value = 100
-		modifier = {
-			factor = 0
-			NOT = { has_dlc = "Mystics" }
-		}
-		modifier = {
-			factor = 0
-			is_alternate_start = yes
-		}
-	}
-
-	weight = {
-		value = 0
-		additive_modifier = {
-			value = 5
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = baltic_pagan
-			is_landed = yes
-		}
-	}
-
-	artifacts = {
-		axe_of_perkunas = {
-			value = 1
-		}
-	}
-}
-
-
 ###################
 #### QUALITY 4 ####
 ###################

@@ -3851,42 +3851,6 @@ government_flavor = {
 }
 
 government_flavor = {
-	name = gov_romuva_tribe
-	graphics = GFX_evt_tribal_shrine
-	priority = 2
-	trigger = {
-		NOT = { capital_scope = { region = world_africa } }
-		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-		}
-		NOT = { has_law = succ_gavelkind }
-		OR = {
-			government = tribal_government
-			government = nomadtribal_government
-		}
-	}
-}
-
-government_flavor = {
-	name = gov_noble_romuva_eldership
-	graphics = GFX_evt_tribal_shrine
-	priority = 2
-	trigger = {
-		NOT = { capital_scope = { region = world_africa } }
-		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-		}
-		OR = {
-			government = tribal_government
-			government = nomadtribal_government
-		}
-		has_law = succ_gavelkind
-	}
-}
-
-government_flavor = {
 	name = gov_muslim_chiefdom
 	graphics = GFX_evt_joust_arabic
 	priority = 2
