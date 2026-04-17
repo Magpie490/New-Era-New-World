@@ -4291,7 +4291,6 @@ narrative_event = {
 			lakefolk_pagan_reformed = { lakefolk_pagan = { set_flag = has_been_reformed } }
 			inuit_pagan_reformed          = { inuit_pagan = { set_flag = has_been_reformed } }
 			hellenic_pagan_reformed     = { hellenic_pagan = { set_flag = has_been_reformed } }
-			baltic_pagan_reformed     = { baltic_pagan = { set_flag = has_been_reformed } }
 			antiquarianist_reformed     = { antiquarianist = { set_flag = has_been_reformed } }
 			sarna_pagan_reformed     = { sarna_pagan = { set_flag = has_been_reformed } }
 			bon_reformed     = { bon = { set_flag = has_been_reformed } }
@@ -4329,7 +4328,6 @@ narrative_event = {
 				lakefolk_pagan_reformed = { d_lakefolk_pagan_reformed = { save_event_target_as = religious_head_title } }
 				inuit_pagan_reformed          = { d_inuit_pagan_reformed = { save_event_target_as = religious_head_title } }
 				hellenic_pagan_reformed          = { k_hellenic_pagan = { save_event_target_as = religious_head_title } }
-				baltic_pagan_reformed     = { d_baltic_pagan_reformed = { save_event_target_as = religious_head_title } }
 				antiquarianist_reformed     = { d_antiquarianist_reformed = { save_event_target_as = religious_head_title } }
 				trinitarian_reformed     = { d_trinitarian_reformed = { save_event_target_as = religious_head_title } }
 				sarna_pagan_reformed     = { d_sarna_pagan_reformed = { save_event_target_as = religious_head_title } }
@@ -4385,7 +4383,6 @@ narrative_event = {
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
 					hellenic_pagan_reformed          = {}
-					baltic_pagan_reformed     = {}
 					sarna_pagan_reformed     = {}
 					bon_reformed     = {}
 					arcadian_reformed     = {}
@@ -4416,7 +4413,6 @@ narrative_event = {
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
 					hellenic_pagan_reformed          = {}
-					baltic_pagan_reformed     = {}
 					sarna_pagan_reformed     = {}
 					bon_reformed     = {}
 					arcadian_reformed     = {}
@@ -4446,7 +4442,6 @@ narrative_event = {
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
 					hellenic_pagan_reformed          = {}
-					baltic_pagan_reformed     = {}
 					sarna_pagan_reformed     = {}
 					bon_reformed     = {}
 					arcadian_reformed     = {}
@@ -4800,31 +4795,6 @@ narrative_event = {
 					}
 				}
 
-				baltic_pagan_reformed = {
-					set_unit_modifier = {
-						garrison_size = 0.2
-						levy_size = 0.2
-
-						key = DEF_RELIGION
-					}
-
-					set_unit_home_modifier = {
-						land_morale = 0.8
-						garrison_size = 0.4
-
-						light_infantry_defensive = 0.8
-						heavy_infantry_defensive = 0.8
-						pikemen_defensive = 0.8
-						light_cavalry_defensive = 0.8
-						knights_defensive = 0.8
-						archers_defensive = 0.8
-						horse_archers_defensive = 0.8
-						camel_cavalry_defensive = 0.8
-						war_elephants_defensive = 0.8
-
-						key = DEF_RELIGION_HOME_TERRITORY
-					}
-				}
 				antiquarianist_reformed = {
 					set_unit_modifier = {
 						garrison_size = 0.2
@@ -5111,12 +5081,6 @@ narrative_event = {
 					religion = inuit_pagan
 				}
 				religion = inuit_pagan_reformed
-			}
-			if = {
-				limit = {
-					religion = baltic_pagan
-				}
-				religion = baltic_pagan_reformed
 			}
 			if = {
 				limit = {

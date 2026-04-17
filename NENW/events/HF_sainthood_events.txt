@@ -444,8 +444,6 @@ character_event = {
 							religion = alukta_pagan_reformed
 							religion = gator_pagan
 							religion = gator_pagan_reformed
-							religion = baltic_pagan
-							religion = baltic_pagan_reformed
 							religion = ovlatii
 							religion = voodun
 							religion = haiti_voodoo
@@ -1064,27 +1062,6 @@ character_event = {
                         }
                         else_if = {
                             limit = {
-                                religion = baltic_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_01
-                                    religion = baltic_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_01
-                                    religion = baltic_pagan_reformed
-                                }
-                            }
-                        }
-                        else_if = {
-                            limit = {
                                 religion = tengri_pagan_reformed
                             }
                             if = {
@@ -1294,27 +1271,6 @@ character_event = {
                         }
                         else_if = {
                             limit = {
-                                religion = baltic_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_03
-                                    religion = baltic_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_03
-                                    religion = baltic_pagan_reformed
-                                }
-                            }
-                        }
-                        else_if = {
-                            limit = {
                                 religion = tengri_pagan_reformed
                             }
                             if = {
@@ -1447,28 +1403,6 @@ character_event = {
                                 type = saintly_bloodline_coptic_04
                                 religion = event_target:saint_person
                                 inheritance = patrilineal
-                            }
-                        }
-                       
-                        else_if = {
-                            limit = {
-                                religion = baltic_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_04
-                                    religion = baltic_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_04
-                                    religion = baltic_pagan_reformed
-                                }
                             }
                         }
                         
@@ -1612,28 +1546,6 @@ character_event = {
                         
                         else_if = {
                             limit = {
-                                religion = baltic_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_05
-                                    religion = baltic_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_05
-                                    religion = baltic_pagan_reformed
-                                }
-                            }
-                        }
-                        
-                        else_if = {
-                            limit = {
                                 religion = tengri_pagan_reformed
                             }
                             if = {
@@ -1755,28 +1667,6 @@ character_event = {
                                 type = saintly_bloodline_coptic_06
                                 religion = event_target:saint_person
                                 inheritance = patrilineal
-                            }
-                        }
-                        
-                        else_if = {
-                            limit = {
-                                religion = baltic_pagan_reformed
-                            }
-                            if = {
-                                limit = {
-                                    is_female = yes
-                                }
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_06
-                                    religion = baltic_pagan_reformed
-                                    inheritance = matrilineal
-                                }
-                            }
-                            else = {
-                                create_bloodline = {
-                                    type = saintly_bloodline_romuva_06
-                                    religion = baltic_pagan_reformed
-                                }
                             }
                         }
                         
