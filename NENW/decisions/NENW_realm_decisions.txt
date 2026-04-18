@@ -2652,18 +2652,11 @@ decisions = {
 		effect = {
 			custom_tooltip = {
 				text = form_chinafornia_tt
-				set_government_type = {
+				e_chinafornia = {
 					gain_title_effect = yes
 					make_primary_title = yes
 				}
-			}
-			set_government_type = mandate_heaven
-			e_chinafornia = {
-				add_law = ze_administration_laws_2
-				add_law = vice_royalty_2
-				add_law = succ_dynastic_meritocratic
-			}
-			
+			}			
 			if = {
 				limit = {
 					is_female = yes
@@ -2687,6 +2680,12 @@ decisions = {
 				new_bloodline = {
 					set_description = "california_male_desc"
 				}
+			}
+			set_government_type = mandate_heaven
+			e_chinafornia = {
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_dynastic_meritocratic
 			}
 			hidden_tooltip = {
 				###California unites!
