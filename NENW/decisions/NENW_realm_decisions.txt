@@ -2424,13 +2424,19 @@ decisions = {
 		potential = {
 			form_empire_potential = yes
 			NOT = {
-				religion = amaitist #they get a unique california title 
+				religion = amaitist #They get a unique California title 
+			}
+			NOT = { 
+				culture_group = amero_sinitic #They get their unique California title							
 			}
 			capital_scope = { region = world_california }
 			e_california = {
 				has_holder = no
 			}
 			e_kalishahr = {
+				has_holder = no
+			}
+			e_chinafornia = {
 				has_holder = no
 			}
 			prisoner = no
@@ -2515,11 +2521,17 @@ decisions = {
 		potential = {
 			form_empire_potential = yes
 			religion = amaitist
+			NOT = { 
+				culture_group = amero_sinitic #They get their unique California title								
+			}
 			capital_scope = { region = world_california }
 			e_kalishahr = {
 				has_holder = no
 			}
 			e_california = {
+				has_holder = no
+			}
+			e_chinafornia = {
 				has_holder = no
 			}
 			prisoner = no
@@ -2597,6 +2609,119 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	form_chinafornia = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture_group = amero_sinitic
+			capital_scope = { region = world_california }
+			e_kalishahr = {
+				has_holder = no
+			}
+			e_california = {
+				has_holder = no
+			}
+			e_chinafornia = {
+				has_holder = no
+			}
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control Californian Kingdoms
+			k_redwood = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_shasta = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_renoland = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_sacramento = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_francisco = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_central_coast = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_the_valley = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_mojave = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_allay = { show_scope_change = no province_completely_controls_trigger = yes }
+			k_baja_california = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_chinafornia_tt
+				hidden_tooltip = {	
+					e_chinafornia = {
+						gain_empire_effect = yes
+					}				
+					any_demesne_title = {
+						limit = {
+							tier = EMPEROR
+							NOT = { title = e_chinafornia }
+						}
+						destroy_landed_title = yes
+					}
+					any_demesne_title = {
+						limit = { tier = KING }
+						de_jure_liege = e_chinafornia
+					}
+				}
+			}
+			set_government_type = mandate_heaven
+			e_chinafornia = {
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_dynastic_meritocratic
+			}
+			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = california_female
+				}
+				new_bloodline = {
+					set_description = "california_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = california_male
+				}
+				new_bloodline = {
+					set_description = "california_male_desc"
+				}
+			}
+			hidden_tooltip = {
+				###California unites!
+				k_allay = { de_jure_liege = e_chinafornia }
+				k_redwood = { de_jure_liege = e_chinafornia }
+				k_shasta = { de_jure_liege = e_chinafornia }
+				k_renoland = { de_jure_liege = e_chinafornia }
+				k_francisco = { de_jure_liege = e_chinafornia }
+				k_central_coast = { de_jure_liege = e_chinafornia }
+				k_the_valley = { de_jure_liege = e_chinafornia }
+				k_mojave = { de_jure_liege = e_chinafornia }
+				k_sacramento = { de_jure_liege = e_chinafornia }
+				k_baja_california = { de_jure_liege = e_chinafornia }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	form_deseret = {
 		is_high_prio = yes
 		only_playable = yes
