@@ -2650,28 +2650,13 @@ decisions = {
 		}
 
 		effect = {
-			hidden_tooltip = {	
-					e_chinafornia = {
-						gain_empire_effect = yes
-					}				
-					any_demesne_title = {
-						limit = {
-							tier = EMPEROR
-							NOT = { title = e_chinafornia }
-						}
-						destroy_landed_title = yes
-					}
-					any_demesne_title = {
-						limit = { tier = KING }
-						de_jure_liege = e_chinafornia
-					}
-			set_government_type = mandate_heaven
-			e_chinafornia = {
-				add_law = ze_administration_laws_2
-				add_law = vice_royalty_2
-				add_law = succ_dynastic_meritocratic
-			}
-			
+			custom_tooltip = {
+				text = form_chinafornia_tt
+				e_chinafornia = {
+					gain_title_effect = yes
+					make_primary_title = yes
+				}
+			}			
 			if = {
 				limit = {
 					is_female = yes
@@ -2695,6 +2680,12 @@ decisions = {
 				new_bloodline = {
 					set_description = "california_male_desc"
 				}
+			}
+			set_government_type = mandate_heaven
+			e_chinafornia = {
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_dynastic_meritocratic
 			}
 			hidden_tooltip = {
 				###California unites!
