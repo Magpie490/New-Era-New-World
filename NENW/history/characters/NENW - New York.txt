@@ -1780,6 +1780,7 @@
 	trait = quick
 	trait = zealous
 	disallow_random_traits=yes
+	father = 800124
 	2269.2.21 = {
 		birth = yes
 	}
@@ -2376,6 +2377,65 @@
 		birth = yes
 	}
 	2311.1.1 = {
+		death = yes
+	}
+}
+
+800124 = { #Politan captain, father of Patriarch Ambrose, killed in Third Politan War
+	name = "Christopher"
+	dynasty = 3000641 #Columbo
+	religion = columbian
+	culture = politan
+	trait=brave
+	trait=tough_soldier
+	trait=zealous
+	2240.1.14 = {
+		birth = yes
+	}
+	2292.4.11 = {
+		death = { death_reason = death_battle }
+	}
+}
+800125 = { #Politan soldier, brother of Patriarch Ambrose, killed in Third Politan War
+	name = "Michael"
+	dynasty = 3000641 #Columbo
+	religion = columbian
+	culture = politan
+	trait=tough_soldier
+	trait=zealous
+	trait=brave
+	father = 800124
+	2265.6.15 = {
+		birth = yes
+	}
+	2292.5.18 = {
+		death = { death_reason = death_battle }
+	}
+}
+800126 = { #Nephew of the Latin Patriarch
+	name = "Christopher"
+	dynasty = 3000641 #Columbo
+	religion=columbian
+	culture=politan
+	trait=proud
+	trait=greedy
+	trait=ambitious
+	trait=martial_cleric
+	trait=zealous
+	trait=diligent
+	father = 800125
+	2292.5.11 = {
+		birth = yes
+	}
+	2292.5.18 = {
+		effect = {	
+			add_friend=800092
+		}
+	}
+	2312.1.1 = {
+		employer = 250033
+	}
+	2666.1.1 = {
 		death = yes
 	}
 }
