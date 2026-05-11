@@ -50,6 +50,14 @@
 	2273.7.15 = {
 		birth = yes
 	}
+	2290.1.1 = {
+		add_spouse=100108
+	}
+	2312.6.16 = {
+		effect = {
+			add_rival = 700308
+		}
+	}
 	2666.1.1 = {
 		death = yes
 	}
@@ -278,6 +286,9 @@
 	culture = buckeye
 	2287.6.24 = {
 		birth = yes
+	}
+	2325.1.1 = {
+		add_spouse=100111
 	}
 	2666.1.1 = {
 		death = yes
@@ -1726,5 +1737,119 @@
 			death_reason = death_battle
 			killer = 100005
 		}
+	}
+}
+100108 = { #Wife of Kryspin Blazkowicz, captured and sacrificed by a young Lamech McCain
+	name = "Theresa"
+	female = yes
+	culture = watchers
+	religion = watcher
+	trait = martial_cleric
+	trait = fair
+	trait = kind
+	trait = erudite
+	2273.9.17 = {
+		birth = yes
+	}
+	2294.6.16 = {
+		death = {
+			death_reason = death_sacrificed
+			killer = 700308
+		}
+	}
+}
+100109 = { #Son of Kryspin Blazkowicz, killed in a later raid by Lamech McCain
+	name = "Julian"
+	dynasty = 3000371
+	culture = watchers
+	religion = watcher
+	trait = tough_soldier
+	trait = brave
+	trait = zealous
+	trait = kind
+	trait = wroth
+	father = 100003
+	mother = 100108
+	2290.9.20 = {
+		birth = yes
+	}
+	2305.1.7 = {
+		add_spouse=100110
+	}
+	2309.1.1 = {
+		death = {
+			death_reason = death_duel
+			killer = 700308
+		}
+	}
+}
+100110 = { #Daughter in law of Kryspin Blazkowicz, died of stress in childbirth after her husband's demise
+	name = "Gertrude"
+	female = yes
+	culture = watchers
+	religion = watcher
+	trait = underhanded_rogue
+	trait = fair
+	trait = kind
+	trait = stressed
+	2292.8.28 = {
+		birth = yes
+	}
+	2309.1.1 = {
+		death = { death_reason = death_childbirth }
+	}
+}
+100111 = { #Granddaughter of Kryspin Blazkowicz
+	name = "Lena"
+	female = yes
+	dynasty = 3000371
+	culture = watchers
+	religion = watcher
+	trait = twin
+	trait = underhanded_rogue
+	trait = charitable
+	trait = gregarious
+	trait = kind
+	trait = zealous
+	father = 100109
+	mother = 100110
+	2309.1.1 = {
+		birth = yes
+	}
+	2309.1.2 = {
+		effect = {
+			add_rival = 700308
+		}
+	}
+	2666.1.1 = {
+		death = yes
+	}
+}
+100112 = { #Grandson of Kryspin Blazkowicz
+	name = "William"
+	dynasty = 3000371
+	culture = watchers
+	religion = watcher
+	trait = twin
+	trait = tough_soldier
+	trait = honest
+	trait = gregarious
+	trait = brave
+	trait = zealous
+	father = 100109
+	mother = 100110
+	2309.1.1 = {
+		birth = yes
+	}
+	2309.1.2 = {
+		effect = {
+			add_rival = 700308
+		}
+	}
+	2324.1.1={
+		employer=100018 #Ebner of Columbus
+	}
+	2666.1.1 = {
+		death = yes
 	}
 }
