@@ -380,13 +380,26 @@ spriteTypes = {
 	}
 	CoatOfArmsType = {
 		name = "coa_plain_industrial"
-		frame = "gfx\\coats_of_arms\\frame_industrial.tga"
+		frame = "gfx\\coats_of_arms\\frame_industrial.dds"
 		mask = "gfx\\interface\\seal_mask_CoA.tga"
 		seal_overlay = "gfx\\interface\\seal_overlay_CoA.dds"
 		effect = "gfx/FX/coa_shield.lua"
 				
 		layer = {
-			mask = "gfx\\coats_of_arms\\plain_zoroastrian.tga"			
+			mask = "gfx\\coats_of_arms\\plain_muslim.tga"
+			center = { x= 0 y = 0 }
+			scale = 1
+		}
+	}
+	CoatOfArmsType = {
+		name = "coa_plain_industrial_unit"
+		frame = "gfx\\coats_of_arms\\unit_banner_overlay.dds"
+		mask = "gfx\\interface\\seal_mask_CoA.tga"
+		seal_overlay = "gfx\\interface\\seal_overlay_CoA.dds"
+		effect = "gfx/FX/coa_shield.lua"
+				
+		layer = {
+			mask = "gfx\\coats_of_arms\\unit_banner_mask_muslim.tga"
 			center = { x= 0 y = 0 }
 			scale = 1
 		}

@@ -2315,6 +2315,12 @@ invasion = {
 			mercenary = no
 		}
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			NOT = {
 				AND = {
 					independent = yes
@@ -2329,6 +2335,14 @@ invasion = {
 	}
 
 	can_use_gui = {
+		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
+		}
 		check_if_crusader_trigger = yes
 	}
 	
@@ -2749,6 +2763,12 @@ tribal_invasion = {
 
 	can_use_gui = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			prestige = 500
 		}
 		check_if_crusader_trigger = yes
@@ -2756,6 +2776,12 @@ tribal_invasion = {
 	
 	can_use = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			NOT = {
 				AND = {
 					independent = yes
@@ -5074,6 +5100,12 @@ religious = {
 	can_use_gui = {
 		OR = { 
 			ROOT = {
+				NAND = {
+					top_liege = {
+						has_landed_title = e_mexico
+					}
+					NOT = { has_global_flag = hmereformedflag }
+				}
 				NOT = { 
 					AND = {
 						independent = yes
@@ -5177,6 +5209,12 @@ religious = {
 
 	can_use = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			is_nomadic = no
 			NOT = { government = viceroyal_government }
 			NOR = { government = confederation_government government = holymexico_government }
@@ -8144,6 +8182,12 @@ muslim_invasion = {
 
 	can_use_gui = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			piety = 1000
 		}
 	}
@@ -8155,6 +8199,12 @@ muslim_invasion = {
 
 	can_use = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			OR = {
 				ai = yes
 				multiplayer = no
@@ -9380,6 +9430,12 @@ viking_invasion = {
 
 	can_use = {
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			has_opinion_modifier = { who = FROM modifier = preparing_to_invade }
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no

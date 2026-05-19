@@ -2563,6 +2563,12 @@ unjust_conquest = { # New7
 	can_use_gui = {
 		check_if_crusader_trigger = yes
 		ROOT = {
+			NAND = {
+				top_liege = {
+					has_landed_title = e_mexico
+				}
+				NOT = { has_global_flag = hmereformedflag }
+			}
 			NOR = {
 				trait = summer_queen_3_honour
 				trait = japanese_3_honour
