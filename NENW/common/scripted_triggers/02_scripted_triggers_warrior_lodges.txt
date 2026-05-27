@@ -362,11 +362,11 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_ironist
 		}
 		trigger_else_if = {
-			limit = { religion_openly_baltic_or_reformed_trigger = yes }
+			limit = { religion_openly_celtic_or_reformed_trigger = yes }
 			society_member_of = warrior_lodge_baltic
 		}
 		trigger_else_if = {
-			limit = { religion_openly_finnish_or_reformed_trigger = yes }
+			limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 			society_member_of = warrior_lodge_finnish
 		}
 		trigger_else_if = {
@@ -708,11 +708,11 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		warrior_lodge_ironist = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_baltic_or_reformed_trigger = yes }
+		limit = { religion_openly_celtic_or_reformed_trigger = yes }
 		warrior_lodge_baltic = { society_has_members = yes }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 		warrior_lodge_finnish = { society_has_members = yes }
 	}
 	trigger_else_if = {
@@ -1062,11 +1062,11 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_ironist = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_baltic_or_reformed_trigger = yes }
+			limit = { religion_openly_celtic_or_reformed_trigger = yes }
 			warrior_lodge_baltic = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { religion_openly_finnish_or_reformed_trigger = yes }
+			limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 			warrior_lodge_finnish = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
@@ -1390,11 +1390,11 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		NOT = { warrior_lodge_ironist = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_baltic_or_reformed_trigger = yes }
+		limit = { religion_openly_celtic_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_baltic = { society_has_members = yes } }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 		NOT = { warrior_lodge_finnish = { society_has_members = yes } }
 	}
 	trigger_else_if = {
@@ -1780,8 +1780,8 @@ has_religion_matching_any_warrior_lodge_trigger = {
 		is_esoteric_religion_trigger = yes
 		is_khanist_religion_trigger = yes
 		is_ironist_religion_trigger = yes
-		religion_openly_baltic_or_reformed_trigger = yes
-		religion_openly_finnish_or_reformed_trigger = yes
+		religion_openly_celtic_or_reformed_trigger = yes
+		religion_openly_inuit_pagan_or_reformed_trigger = yes
 		religion_openly_folklorist_or_reformed_trigger = yes
 		religion_openly_arcadian_or_reformed_trigger = yes
 		religion_openly_bon_or_reformed_trigger = yes 
@@ -1850,11 +1850,11 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_ironist }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_baltic_or_reformed_trigger = yes }
+		limit = { religion_openly_celtic_or_reformed_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_baltic }
 	}
 	trigger_else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
+		limit = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_finnish }
 	}
 	trigger_else_if = {
@@ -2240,9 +2240,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_baltic_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_baltic_or_reformed_trigger = yes }
-						any_liege = { religion_openly_baltic_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_baltic_or_reformed_trigger = yes }
+						any_vassal = { religion_openly_celtic_or_reformed_trigger = yes }
+						any_liege = { religion_openly_celtic_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_celtic_or_reformed_trigger = yes }
 					}
 				}
 			}
@@ -2253,9 +2253,9 @@ special_join_warrior_lodge_trigger = {
 				text = has_liege_vassal_or_neighbor_of_finnish_religion_tt
 				hidden_trigger = {
 					OR = {
-						any_vassal = { religion_openly_finnish_or_reformed_trigger = yes }
-						any_liege = { religion_openly_finnish_or_reformed_trigger = yes }
-						any_neighbor_independent_ruler = { religion_openly_finnish_or_reformed_trigger = yes }
+						any_vassal = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
+						any_liege = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
+						any_neighbor_independent_ruler = { religion_openly_inuit_pagan_or_reformed_trigger = yes }
 					}
 				}
 			}
