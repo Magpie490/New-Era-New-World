@@ -954,7 +954,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_matriarchal
 				has_selected_religion_feature = religion_equal
-				has_selected_religion_feature = religion_feature_bon
 				has_selected_religion_feature = religion_meritocratic
 			}
 		}
@@ -1003,7 +1002,6 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_matriarchal
 				has_selected_religion_feature = religion_patriarchal
 				has_selected_religion_feature = religion_feature_arcadian #Redundant
-				has_selected_religion_feature = religion_feature_bon
 				has_selected_religion_feature = religion_feature_satsana_phi #Redundant
 				trigger_if = {
 					limit = { has_game_started = yes }
@@ -1052,7 +1050,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_patriarchal
 				has_selected_religion_feature = religion_equal
-				has_selected_religion_feature = religion_feature_bon
 				has_selected_religion_feature = religion_meritocratic
 				trigger_if = {
 					limit = { has_game_started = yes }
@@ -1992,51 +1989,6 @@ religion_doctrine = {
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_pyramids }
-		}
-	}
-	religion_feature_bon = {
-		picture = GFX_religion_feature_bon
-		potential = {
-			has_game_started = yes
-			OR = {
-				religion = bon_reformed
-				religion = sarna_pagan_reformed
-			}
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			OR = {
-				religion = bon_reformed
-				religion = sarna_pagan_reformed
-			}
-			NOR = { 
-				has_selected_religion_feature = religion_holy_family
-				has_selected_religion_feature = religion_meritocratic
-				has_selected_religion_feature = religion_ritual_sacrifice
-				has_selected_religion_feature = religion_equal
-				has_selected_religion_feature = religion_matriarchal
-				has_selected_religion_feature = religion_patriarchal
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_no_incest }
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
-			custom_tooltip = { text = tooltip_religion_feature_feminist }
-			custom_tooltip = { text = tooltip_religion_feature_cognatic }
-			hidden_tooltip = { 
-				set_allows_matrilineal_marriage = yes
-				set_heir_designation = yes
-				set_feminist = yes
-				set_pc_marriage = no
-				set_bs_marriage = no
-				set_psc_marriage = no
-				set_cousin_marriage = no
-			}
-		}
-		ai_will_do = {
-			factor = 50
 		}
 	}
 	religion_feature_novelist = {
