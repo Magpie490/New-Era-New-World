@@ -2329,7 +2329,7 @@ warrior_lodge_baltic = {
 			prisoner = no
 		}
 		OR = {
-			religion_openly_celtic_or_reformed_trigger = yes
+			is_highmount_religion_trigger = yes
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -2348,20 +2348,20 @@ warrior_lodge_baltic = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_celtic_or_reformed_trigger = yes	
+			is_highmount_religion_trigger = yes	
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion_openly_celtic_or_reformed_trigger = yes }
-					any_liege = { religion_openly_celtic_or_reformed_trigger = yes }
-					any_neighbor_independent_ruler = { religion_openly_celtic_or_reformed_trigger = yes }
+					any_vassal = { is_highmount_religion_trigger = yes }
+					any_liege = { is_highmount_religion_trigger = yes }
+					any_neighbor_independent_ruler = { is_highmount_religion_trigger = yes }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				religion_openly_celtic_or_reformed_trigger = no
+				is_highmount_religion_trigger = no
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -2372,9 +2372,9 @@ warrior_lodge_baltic = {
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
-			religion_openly_celtic_or_reformed_trigger = yes
+			is_highmount_religion_trigger = yes
 			AND = {
-				religion_openly_celtic_or_reformed_trigger = no
+				is_highmount_religion_trigger = no
 				NOT = { trait = zealous }
 			}
 		}
@@ -2645,7 +2645,7 @@ warrior_lodge_baltic = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_openly_celtic_or_reformed_trigger = yes
+		   	is_highmount_religion_trigger = yes
 			is_adult = yes
 			is_in_society = no
 			OR = {
