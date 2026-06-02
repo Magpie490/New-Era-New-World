@@ -254,13 +254,6 @@ religion_nature = {
 				}
 			}
 			modifier = { 	
-				factor = 0.01
-				FROM = { 
-					character = yes 
-					religion = bon 
-				}
-			}
-			modifier = { 	
 				factor = 5
 				FROM = { 
 					character = yes 
@@ -345,13 +338,6 @@ religion_nature = {
 		}
 		ai_will_do = {
 			factor = 50
-			modifier = { 	
-				factor = 0.01
-				FROM = { 
-					character = yes 
-					religion = bon 
-				}
-			}
 			modifier = { 	
 				factor = 5
 				FROM = { 
@@ -2710,43 +2696,9 @@ religion_leadership = {
 					key = "AUTONOMOUS_ATTR_RELIGION"
 				}
 			}
-			if = {
-				limit = { 
-					FROM = { 
-						character = yes 
-						religion = bon
-					}
-					OR = {
-						has_selected_religion_feature = religion_monastic
-					}
-				}
-				set_character_modifier = {
-					learning = 4
-					key = "MONASTIC_AUTONOMOUS_ATTR_RELIGION"
-				}
-			}
-			else_if = {
-				limit = { 
-					FROM = { 
-						character = yes 
-						religion = bon
-					}
-				}
-				set_character_modifier = {
-					learning = 2
-					key = "AUTONOMOUS_ATTR_RELIGION"
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 50
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					religion = bon
-				}
-			}
 			modifier = { 	
 				factor = 0.1
 				FROM = { 

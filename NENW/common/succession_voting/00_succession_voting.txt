@@ -1850,8 +1850,6 @@ feudal_elective = {
 				trait = lustful 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -1874,8 +1872,6 @@ feudal_elective = {
 				religion_group = syncratic_group
 				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
-				religion = bon
-				religion = bon_reformed
 			}
 			NOT = { trait = gluttonous }
 			FROM = { 
@@ -1890,8 +1886,6 @@ feudal_elective = {
 				trait = gluttonous
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 					NOT = { religion = novelist }
@@ -1998,8 +1992,6 @@ feudal_elective = {
 				religion_group = syncratic_group
 				religion_group = indian_group
 				religion_group = buddhist_group
-				religion = bon
-				religion = bon_reformed
 			}
 			NOR = { 
 				trait = proud 
@@ -2016,8 +2008,6 @@ feudal_elective = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -2035,8 +2025,6 @@ feudal_elective = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -2075,8 +2063,6 @@ feudal_elective = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -2112,11 +2098,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_greedy_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
-				AND = { 
-					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
-				}
+				religion_group = pagan_group
 				trait = greedy
 			}
 			FROM = { 
@@ -2199,9 +2181,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
+			NOT = { 
 				trait = humble
 			}
 			FROM = { 
@@ -2237,9 +2217,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
+			NOT = { 
 				trait = content
 			}
 			FROM = { 
@@ -2257,8 +2235,6 @@ feudal_elective = {
 				religion_group = syncratic_group
 				religion_group = indian_group
 				religion_group = buddhist_group
-				religion = bon
-				religion = bon_reformed
 			}
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -2326,7 +2302,6 @@ feudal_elective = {
 			OR = { 
 				religion_group = buddhist_group
 				religion = jain
-				religion = bon
 				religion = bahai
 				pacifist = yes
 			}
@@ -2339,10 +2314,8 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_content_negative
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
+			NOT = { 
 				trait = content
-				religion = bon
-				religion = bon_reformed
 			}
 			FROM = { 
 				trait = content
@@ -3018,14 +2991,6 @@ feudal_elective = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = buddhist_group }
-			NOT = { religion = bon }
-			OR = { 
-				AND = { 
-					NOT = { has_dlc = "Holy Fury"}
-					religion = bon_reformed
-				}
-				pacifist = yes
-			}
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
@@ -5245,8 +5210,6 @@ tanistry = {
 				trait = lustful 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -5269,8 +5232,6 @@ tanistry = {
 				religion_group = syncratic_group
 				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
-				religion = bon
-				religion = bon_reformed
 				religion = novelist
 				religion = novelist_reformed
 			}
@@ -5287,8 +5248,6 @@ tanistry = {
 				trait = gluttonous
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 					NOT = { religion = novelist }
@@ -5395,8 +5354,6 @@ tanistry = {
 				religion_group = syncratic_group
 				religion_group = indian_group
 				religion_group = buddhist_group
-				religion = bon
-				religion = bon_reformed
 			}
 			NOR = { 
 				trait = proud 
@@ -5413,8 +5370,6 @@ tanistry = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -5432,8 +5387,6 @@ tanistry = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -5473,8 +5426,6 @@ tanistry = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -5511,11 +5462,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_greedy_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
-				AND = { 
-					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
-				}
+				religion_group = pagan_group
 				trait = greedy
 			}
 			FROM = { 
@@ -5598,9 +5545,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
+			NOT = {
 				trait = humble
 			}
 			FROM = { 
@@ -5636,9 +5581,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
+			NOT = { 
 				trait = content
 			}
 			FROM = { 
@@ -5656,8 +5599,6 @@ tanistry = {
 				religion_group = indian_group
 				religion_group = buddhist_group
 				religion_group = syncratic_group
-				religion = bon
-				religion = bon_reformed
 			}
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -5725,7 +5666,6 @@ tanistry = {
 			OR = { 
 				religion_group = buddhist_group
 				religion = jain
-				religion = bon
 				religion = bahai
 				pacifist = yes
 			}
@@ -5738,10 +5678,8 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_content_negative
 			NOT = { character = FROM } #Do not judge yourself.
 			religion_group = pagan_group
-			NOR = { 
+			NOT = { 
 				trait = content
-				religion = bon
-				religion = bon_reformed
 			}
 			FROM = { 
 				trait = content
@@ -6417,14 +6355,6 @@ tanistry = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = buddhist_group }
-			NOT = { religion = bon }
-			OR = { 
-				AND = { 
-					NOT = { has_dlc = "Holy Fury"}
-					religion = bon_reformed
-				}
-				pacifist = yes
-			}
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
@@ -8635,8 +8565,6 @@ elective_gavelkind = {
 				trait = lustful 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -8660,8 +8588,6 @@ elective_gavelkind = {
 				religion_group = buddhist_group
 				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
-				religion = bon
-				religion = bon_reformed
 			}
 			NOT = { trait = gluttonous }
 			FROM = { 
@@ -8676,8 +8602,6 @@ elective_gavelkind = {
 				trait = gluttonous
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 					NOT = { religion = novelist }
@@ -8784,8 +8708,6 @@ elective_gavelkind = {
 				religion_group = syncratic_group
 				religion_group = indian_group
 				religion_group = buddhist_group
-				religion = bon
-				religion = bon_reformed
 			}
 			NOR = { 
 				trait = proud 
@@ -8802,8 +8724,6 @@ elective_gavelkind = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
@@ -8821,8 +8741,6 @@ elective_gavelkind = {
 			OR = { 
 				AND = { 
 					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
 					NOT = { religion = hellenic_pagan_reformed }
 				}
