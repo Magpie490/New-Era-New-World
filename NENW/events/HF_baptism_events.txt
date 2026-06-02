@@ -182,7 +182,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:sponsoring_king = { OR = { religion_group = indian_group religion = bon_reformed religion_group = buddhist_group } }
+			event_target:sponsoring_king = { OR = { religion_group = indian_group religion_group = buddhist_group } }
 		}
 		text = EVTDESCHFP20003
 	}
@@ -247,7 +247,7 @@ narrative_event = {
 			limit = { 
 				NOT = { has_nickname = yes }
 				higher_real_tier_than = DUKE
-				event_target:sponsoring_king = { OR = { religion_group = buddhist_group religion = bon_reformed } }
+				event_target:sponsoring_king = { religion_group = buddhist_group }
 			}
 			ROOT = { give_nickname = nick_the_illuminated }
 		}
@@ -709,7 +709,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			OR = { religion_group = indian_group religion = bon_reformed religion_group = buddhist_group }
+			OR = { religion_group = indian_group religion_group = buddhist_group }
 		}
 		text = EVTDESCHFP20004
 	}
@@ -1610,7 +1610,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
-			event_target:sponsoring_king = { OR = { religion_group = indian_group religion = bon_reformed  religion_group = buddhist_group} }
+			event_target:sponsoring_king = { OR = { religion_group = indian_group religion_group = buddhist_group} }
 		}
 		text = EVTDESCHFP20008
 	}
@@ -1694,7 +1694,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			has_character_flag = ai_flag_refuse_conversion
-			event_target:sponsoring_king = { OR = { religion_group = indian_group religion = bon_reformed religion_group = buddhist_group } }
+			event_target:sponsoring_king = { OR = { religion_group = indian_group religion_group = buddhist_group } }
 		}
 		text = EVTDESCHFWW20008
 	}

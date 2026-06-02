@@ -2707,41 +2707,8 @@ character_event = {
 }
 
 #######################
-# Dralha's Children
+# Dralha's Children - removed
 #######################
-# Notification event
-narrative_event = {
-	id = HF.23018
-	title = d_dralhas_children
-	desc = EVTDESCHF23018
-	
-	picture = GFX_evt_throne_room_indo_aryan_group
-	
-	only_playable = yes
-	hide_from = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_HO_100
-		trigger = {
-			religion = bon_reformed
-		}
-	}
-	option = {
-		name = EVTOPTB_HO_100
-		trigger = {
-			religion_group = indian_group
-			NOT = { religion = bon_reformed }
-		}
-	}
-	option = {
-		name = EVTOPTC_HO_100
-		trigger = {
-			NOT = { religion_group = indian_group }
-		}
-	}
-}
 
 #######################
 # Zodiac Signs - Hellenic Flavor
@@ -4231,13 +4198,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { bon = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = bon }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { tengri_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = tengri_pagan }
@@ -4381,13 +4341,6 @@ character_event = {
 			limit = { pagan = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = pagan }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { bon = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = bon }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

@@ -5833,89 +5833,7 @@ character_event = {
 	}
 }
 
-#BON
-# Fired from Decision 'patrons_bon'
-character_event = {
-	id = 39802
-	desc = EVTDESC39802
-	picture = GFX_evt_bishop
-	border = GFX_event_normal_frame_religion
-
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_39802
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_damchen
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTB_39802
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_shenla_okar
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTC_39802
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_shinje
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTD_39802
-		hidden_tooltip = { character_event = { id = 39803 } }
-	}
-}
-
-character_event = {
-	id = 39803
-	desc = EVTDESC39803
-	picture = GFX_evt_bishop
-	border = GFX_event_normal_frame_religion
-
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_39803
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_kula_kari
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTB_39803
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_lamlha
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTC_39803
-		set_character_flag = patron_chosen
-		add_character_modifier = {
-			name = patron_sangpo_bumtri
-			duration = -1
-		}
-		clr_character_flag = selecting_patron_deity
-	}
-	option = {
-		name = EVTOPTD_39803
-		hidden_tooltip = { character_event = { id = 39802 } }
-	}
-}
+#BON - removed
 
 #Taoist school
 # Fired from Decision 'school_tao'
@@ -5957,28 +5875,6 @@ character_event = {
 }
 
 #Remove main deity in case of religious conversion
-character_event = {
-	id = 39804
-
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		NOR = {
-			religion = bon
-			religion = bon_reformed
-		}
-	}
-
-	immediate = {
-		remove_character_modifier = patron_damchen
-		remove_character_modifier = patron_shenla_okar
-		remove_character_modifier = patron_shinje
-		remove_character_modifier = patron_kula_kari
-		remove_character_modifier = patron_lamlha 
-		remove_character_modifier = patron_sangpo_bumtri
-	}
-}
 character_event = {
 	id = 39806
 
