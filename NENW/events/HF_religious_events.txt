@@ -2707,41 +2707,8 @@ character_event = {
 }
 
 #######################
-# Dralha's Children
+# Dralha's Children - removed
 #######################
-# Notification event
-narrative_event = {
-	id = HF.23018
-	title = d_dralhas_children
-	desc = EVTDESCHF23018
-	
-	picture = GFX_evt_throne_room_indo_aryan_group
-	
-	only_playable = yes
-	hide_from = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_HO_100
-		trigger = {
-			religion = bon_reformed
-		}
-	}
-	option = {
-		name = EVTOPTB_HO_100
-		trigger = {
-			religion_group = indian_group
-			NOT = { religion = bon_reformed }
-		}
-	}
-	option = {
-		name = EVTOPTC_HO_100
-		trigger = {
-			NOT = { religion_group = indian_group }
-		}
-	}
-}
 
 #######################
 # Zodiac Signs - Hellenic Flavor
@@ -3660,7 +3627,6 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_patriarchal
 				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
 				has_religion_feature = religion_matriarchal
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
@@ -3755,8 +3721,7 @@ character_event = {
 				ROOT = {
 					religion_scope = {
 						OR = { 
-							has_religion_feature = religion_equal 
-							has_religion_feature = religion_feature_bon
+							has_religion_feature = religion_equal
 							has_religion_feature = religion_feature_celtic
 							has_religion_feature = religion_feature_gator
 						}
@@ -3789,8 +3754,7 @@ character_event = {
 					FROM = {
 						religion_scope = {
 							NOR = { 
-								has_religion_feature = religion_equal 
-								has_religion_feature = religion_feature_bon
+								has_religion_feature = religion_equal
 								has_religion_feature = religion_patriarchal
 								has_religion_feature = religion_matriarchal
 								has_religion_feature = religion_feature_celtic
@@ -3823,8 +3787,7 @@ character_event = {
 							has_religion_feature = religion_feature_gator
 						religion_scope = {
 							NOR = { 
-								has_religion_feature = religion_equal 
-								has_religion_feature = religion_feature_bon
+								has_religion_feature = religion_equal
 								has_religion_feature = religion_matriarchal
 								has_religion_feature = religion_patriarchal
 								has_religion_feature = religion_feature_celtic
@@ -3856,8 +3819,7 @@ character_event = {
 					FROM = { religion_scope = { has_religion_feature = religion_patriarchal } }
 					religion_scope = { 
 						OR = { 
-							has_religion_feature = religion_equal 
-							has_religion_feature = religion_feature_bon
+							has_religion_feature = religion_equal
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_feature_celtic
 							has_religion_feature = religion_feature_gator
@@ -3886,8 +3848,7 @@ character_event = {
 					FROM = { religion_scope = { has_religion_feature = religion_matriarchal } }
 					religion_scope = { 
 						OR = { 
-							has_religion_feature = religion_equal 
-							has_religion_feature = religion_feature_bon
+							has_religion_feature = religion_equal
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_feature_celtic
 							has_religion_feature = religion_feature_gator
@@ -3916,8 +3877,7 @@ character_event = {
 					FROM = {
 						religion_scope = {
 							OR = { 
-								has_religion_feature = religion_equal 
-								has_religion_feature = religion_feature_bon
+								has_religion_feature = religion_equal
 								has_religion_feature = religion_feature_celtic
 								has_religion_feature = religion_feature_gator
 							}
@@ -3949,8 +3909,7 @@ character_event = {
 					FROM = {
 						religion_scope = {
 							OR = { 
-								has_religion_feature = religion_equal 
-								has_religion_feature = religion_feature_bon
+								has_religion_feature = religion_equal
 								has_religion_feature = religion_feature_celtic
 								has_religion_feature = religion_feature_gator
 							}
@@ -3992,7 +3951,6 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_patriarchal
 				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
 				has_religion_feature = religion_matriarchal
 				has_religion_feature = religion_feature_celtic
 				has_religion_feature = religion_feature_gator
@@ -4078,8 +4036,7 @@ character_event = {
 			limit = { 
 				religion_scope = {
 					OR = { 
-						has_religion_feature = religion_equal 
-						has_religion_feature = religion_feature_bon
+						has_religion_feature = religion_equal
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
 					}
@@ -4241,13 +4198,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { bon = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = bon }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { tengri_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = tengri_pagan }
@@ -4391,13 +4341,6 @@ character_event = {
 			limit = { pagan = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = pagan }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { bon = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = bon }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -5405,8 +5348,7 @@ character_event = {
 									value = all
 								}
 								has_religion_feature = religion_matriarchal 
-								has_religion_feature = religion_equal 
-								has_religion_feature = religion_feature_bon
+								has_religion_feature = religion_equal
 								has_religion_feature = religion_feature_celtic
 								has_religion_feature = religion_feature_gator
 							}
@@ -6075,7 +6017,6 @@ character_event = {
 					FROM = { owner = { NOT = { has_religion_feature = religion_matriarchal } } }
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
-				FROM = { owner = { has_religion_feature = religion_feature_bon } }
 				FROM = { owner = { has_religion_feature = religion_feature_celtic } }
 				FROM = { 
 					owner = { 
@@ -6131,7 +6072,6 @@ character_event = {
 					FROM = { owner = { has_religion_feature = religion_matriarchal } }
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
-				FROM = { owner = { has_religion_feature = religion_feature_bon } }
 				FROM = { owner = { has_religion_feature = religion_feature_celtic } }
 			} 
 		} 
@@ -10623,16 +10563,14 @@ character_event = {
 			AND = { 
 				ROOT = { 
 					OR = { 
-						has_religion_feature = religion_equal 
-						has_religion_feature = religion_feature_bon 	
+						has_religion_feature = religion_equal
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
 					} 
 				} 
 				FROMFROM = { 
 					OR = { 
-						has_religion_feature = religion_equal 
-						has_religion_feature = religion_feature_bon
+						has_religion_feature = religion_equal
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
 					} 
@@ -10732,8 +10670,7 @@ character_event = {
 			limit = { 
 				ROOT = {
 					OR = { 
-						has_religion_feature = religion_equal 
-						has_religion_feature = religion_feature_bon
+						has_religion_feature = religion_equal
 						has_religion_feature = religion_feature_celtic
 						has_religion_feature = religion_feature_gator
 					}

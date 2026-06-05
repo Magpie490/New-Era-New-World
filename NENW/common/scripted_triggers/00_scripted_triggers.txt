@@ -891,7 +891,7 @@ has_crusade_trait_trigger = {
 		trait = anishinaabe_crusader
 	}
 	trigger_else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
+		limit = { religion = muertista }
 		trait = kailash_guardian
 	}
 	trigger_else_if = {
@@ -941,10 +941,6 @@ has_crusade_trait_trigger = {
 	trigger_else_if = {
 		limit = { religion_openly_anishinaabe_or_reformed_trigger = yes }
 		trait = anishinaabe_crusader
-	}
-	trigger_else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
-		trait = kailash_guardian
 	}
 	trigger_else_if = {
 		limit = { religion_openly_sarnaist_or_reformed_trigger = yes }
@@ -2211,27 +2207,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 				ROOT = { religion = zoroastrian }
 			}
 		}
-		#NAND = {
-		#	any_artifact = {
-		#		has_artifact_flag = looted_artifact_tooltip_1
-		#		has_artifact_flag = manichean
-		#		ROOT = { religion = manichean }
-		#	}
-		#}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = bon
-				ROOT = { OR = { religion = bon religion = bon_reformed } }
-			}
-		}
-		#NAND = {
-		#	any_artifact = {
-		#		has_artifact_flag = looted_artifact_tooltip_1
-		#		has_artifact_flag = taoist
-		#		ROOT = { religion = taoist }
-		#	}
-		#}
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
@@ -4329,8 +4304,6 @@ have_duplicate_goldsmith_artifacts_flag_okay_trigger = {
         AND = {
 	        OR = {
 	        	religion_group = indian_group
-	        	religion = bon
-	        	religion = bon_reformed
 				religion_group = buddhist_group
 	        }
         	AND = {
@@ -4386,8 +4359,6 @@ have_duplicate_goldsmith_artifacts_flag_good_trigger = {
         AND = {
 	        OR = {
 	        	religion_group = indian_group
-	        	religion = bon
-	        	religion = bon_reformed
 				religion_group = buddhist_group
 	        }
         	AND = {
@@ -4442,8 +4413,6 @@ have_duplicate_goldsmith_artifacts_flag_expensive_trigger = {
         AND = {
 	        OR = {
 	        	religion_group = indian_group
-	        	religion = bon
-	        	religion = bon_reformed
 				religion_group = buddhist_group
 	        }
         	AND = {
@@ -4496,8 +4465,6 @@ have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
         AND = {
 	        OR = {
 	        	religion_group = indian_group
-	        	religion = bon
-	        	religion = bon_reformed
 				religion_group = buddhist_group
 	        }
         	AND = {
@@ -5095,7 +5062,6 @@ can_still_be_marshal_byzantine_trigger = {
 					OR = { 
 						liege = { religion_scope = { has_religion_feature = religion_matriarchal } }
 						liege = { religion_scope = { has_religion_feature = religion_equal } }
-						liege = { religion_scope = { has_religion_feature = religion_feature_bon } }
 					} 
 				}
 				trait = horse # So we can have female glitterhoofs! :D

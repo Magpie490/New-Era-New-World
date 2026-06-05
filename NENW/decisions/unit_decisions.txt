@@ -216,8 +216,6 @@ decisions = {
 				religion = oldbeliever
 				religion = bezpopotvsy
 				religion = haymanot
-				religion = bon
-				religion = bon_reformed
 				religion = emmaean
 				religion = emmaean_reformed
 				religion = celtic_pagan_reformed
@@ -304,23 +302,6 @@ decisions = {
 								attacker = {
 									NOT = {
 										religion = haymanot
-									}
-								}
-							}
-							#Defender is bon but attacker is not
-							AND = {
-								ROOT = {
-									OR = {
-										religion = bon
-										religion = bon_reformed
-									}
-								}
-								attacker = {
-									NOT = {
-										OR = {
-											religion = bon
-											religion = bon_reformed
-										}
 									}
 								}
 							}

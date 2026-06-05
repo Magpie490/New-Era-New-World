@@ -4290,10 +4290,8 @@ narrative_event = {
 			novelist_reformed       = { novelist = { set_flag = has_been_reformed } }
 			lakefolk_pagan_reformed = { lakefolk_pagan = { set_flag = has_been_reformed } }
 			inuit_pagan_reformed          = { inuit_pagan = { set_flag = has_been_reformed } }
-			hellenic_pagan_reformed     = { hellenic_pagan = { set_flag = has_been_reformed } }
 			antiquarianist_reformed     = { antiquarianist = { set_flag = has_been_reformed } }
 			sarna_pagan_reformed     = { sarna_pagan = { set_flag = has_been_reformed } }
-			bon_reformed     = { bon = { set_flag = has_been_reformed } }
 			emmaean_reformed     = { emmaean = { set_flag = has_been_reformed } }
 			arcadian_reformed     = { arcadian = { set_flag = has_been_reformed } }
 			nousthreskeia_reformed     = { nousthreskeia = { set_flag = has_been_reformed } }
@@ -4331,7 +4329,6 @@ narrative_event = {
 				antiquarianist_reformed     = { d_antiquarianist_reformed = { save_event_target_as = religious_head_title } }
 				trinitarian_reformed     = { d_trinitarian_reformed = { save_event_target_as = religious_head_title } }
 				sarna_pagan_reformed     = { d_sarna_pagan_reformed = { save_event_target_as = religious_head_title } }
-				bon_reformed     = { d_bon_reformed = { save_event_target_as = religious_head_title } }
 				emmaean_reformed     = { d_emmaean = { save_event_target_as = religious_head_title } }
 				arcadian_reformed     = { d_arcadian_reformed = { save_event_target_as = religious_head_title } }
 				nousthreskeia_reformed     = { d_nousthreskeia_reformed = { save_event_target_as = religious_head_title } }
@@ -4382,9 +4379,7 @@ narrative_event = {
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
-					hellenic_pagan_reformed          = {}
 					sarna_pagan_reformed     = {}
-					bon_reformed     = {}
 					arcadian_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
@@ -4412,9 +4407,7 @@ narrative_event = {
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
-					hellenic_pagan_reformed          = {}
 					sarna_pagan_reformed     = {}
-					bon_reformed     = {}
 					arcadian_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
@@ -4441,9 +4434,7 @@ narrative_event = {
 					novelist_reformed       = { }
 					lakefolk_pagan_reformed = {}
 					inuit_pagan_reformed          = {}
-					hellenic_pagan_reformed          = {}
 					sarna_pagan_reformed     = {}
-					bon_reformed     = {}
 					arcadian_reformed     = {}
 					nousthreskeia_reformed     = {}
 					celtic_pagan_reformed     = {}
@@ -4578,8 +4569,6 @@ narrative_event = {
 				remove_intermarry = jain
 				remove_intermarry = zoroastrian
 				remove_intermarry = pagan
-				remove_intermarry = bon
-				remove_intermarry = bon_reformed
 				remove_intermarry = emmaean
 				remove_intermarry = emmaean_reformed
 				remove_intermarry = celtic_pagan
@@ -4721,32 +4710,6 @@ narrative_event = {
 
 				recalc_succession = yes
 			}
-
-			religion_feature_bon = {
-				any_demesne_title = {
-					if = {
-						limit = { is_law_potential = true_cognatic_succession }
-
-						add_law = {
-							law = true_cognatic_succession
-							cooldown = no
-							opinion_effect = no
-						}
-					}
-
-					if = {
-						limit = { is_law_potential = status_of_women_4 }
-
-						add_law = {
-							law = status_of_women_4
-							cooldown = no
-							opinion_effect = no
-						}
-					}
-				}
-
-				recalc_succession = yes
-			}
 		}
 		if = {
 			limit = { 
@@ -4769,31 +4732,6 @@ narrative_event = {
 
 			trigger_switch = {
 				on_trigger = religion
-
-				bon_reformed = {
-					set_unit_modifier = {
-						garrison_size = 0.4
-
-						key = DEF_RELIGION
-					}
-
-					set_unit_home_modifier = {
-						land_morale = 0.8
-						garrison_size = 0.4
-
-						light_infantry_defensive = 0.8
-						heavy_infantry_defensive = 0.8
-						pikemen_defensive = 0.8
-						light_cavalry_defensive = 0.8
-						knights_defensive = 0.8
-						archers_defensive = 0.8
-						horse_archers_defensive = 0.8
-						camel_cavalry_defensive = 0.8
-						war_elephants_defensive = 0.8
-
-						key = DEF_RELIGION_HOME_TERRITORY
-					}
-				}
 
 				antiquarianist_reformed = {
 					set_unit_modifier = {
@@ -4957,22 +4895,6 @@ narrative_event = {
 			}
 		}
 		if = {
-			limit = { religion = bon_reformed }
-			d_dralhas_children = {
-				religion = bon_reformed # This Holy Order now changes religion
-				holder_scope = {
-					religion = bon_reformed
-					any_realm_character = {
-						limit = {
-							religion = bon
-							is_vassal_or_below_of = PREV
-						}
-						religion = bon_reformed
-					}
-				}
-			}
-		}
-		if = {
 			limit = { religion = nousthreskeia_reformed }
 			d_nousthreskeia_order = {
 				religion = nousthreskeia_reformed # This Holy Order now changes religion
@@ -5087,12 +5009,6 @@ narrative_event = {
 					religion = sarna_pagan
 				}
 				religion = sarna_pagan_reformed
-			}
-			if = {
-				limit = {
-					religion = bon
-				}
-				religion = bon_reformed
 			}
 			if = {
 				limit = {
@@ -5243,34 +5159,6 @@ narrative_event = {
 				}
 
 				religion_equal = {
-					custom_tooltip = {
-						text = tooltip_HF23016_A
-
-						PREV = {
-							any_demesne_title = {
-								add_law = {
-									law = true_cognatic_succession
-									cooldown = no
-									opinion_effect = no
-								}
-
-								if = {
-									limit = { is_law_potential = status_of_women_4 }
-
-									add_law = {
-										law = status_of_women_4
-										cooldown = no
-										opinion_effect = no
-									}
-								}
-							}
-
-							recalc_succession = yes
-						}
-					}
-				}
-
-				religion_feature_bon = {
 					custom_tooltip = {
 						text = tooltip_HF23016_A
 

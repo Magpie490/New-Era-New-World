@@ -168,13 +168,9 @@ character_event = {
 					}
 					20 = {
 						trigger = {
-							OR = {
-								AND = {
-									government = nomadic_government
-									is_steppe_religion_trigger = yes
-								}
-								religion = bon
-								religion = bon_reformed
+							AND = {
+								government = nomadic_government
+								is_steppe_religion_trigger = yes
 							}
 						}
 						modifier = {

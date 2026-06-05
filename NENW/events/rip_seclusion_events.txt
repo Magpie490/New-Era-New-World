@@ -1206,18 +1206,6 @@ character_event = {
 				death_reason = death_execution_eaten_unknown
 				killer = ROOT
 			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ironman = yes
-						religion_openly_bon_or_reformed_trigger = yes
-						ROOT = { ai = no }
-					}
-
-					ROOT = { set_character_flag = achievement_bon_appetit }
-				}
-			}
 		}
 
 		change_variable = {
