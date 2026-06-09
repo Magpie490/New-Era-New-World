@@ -6,6 +6,11 @@ e_the_rockies = {
 
 	capital = 430 # Salt Lake
 	
+	western_shoshone = "Newe Segobia" # While specifically referring to W Shoshone homelands it is also used in english to broadly refer to all Shoshone homeland, good choice for the empire title
+	eastern_shoshone = "Newe Segobia"
+	northern_shoshone = "Newe Segobia"
+	ute = "Núuchi Tuvupu" # land of the (Ute) people
+	
 	k_nevada = {
 		color={ 34 37 51 }
 		color2={ 255 255 255 }
@@ -13,6 +18,8 @@ e_the_rockies = {
 		capital = 2073 # Las Vegas
 		
 		custodite = 5000
+		
+		western_shoshone = "Newe Segobia" # word for western shoshone ancestral homeland, in Nevada
 		
 		d_nellis = {
 			color = { 16 26 85 }
@@ -204,6 +211,9 @@ e_the_rockies = {
 		
 		custodite = 2000
 		
+		navajo = "Áshiih Bii'tó"
+		ute = "Núuchi Tuvupu" # land of the (Ute) people. Also using for the empire title, like the shoshone
+		
 		d_zion = {
 			color = { 255 216 0 }
 			color2 = { 255 255 255 }
@@ -218,6 +228,11 @@ e_the_rockies = {
 
 
 			culture = utahn
+			
+			navajo = "Sooléí Álts'íísí Bil Hahoodzo" # lit. a line was drawn around Salt Lake City
+			goshute = "Tit'-so-pi" # name of the GSL
+			southern_paiute = "Soriki" # salty
+			arapaho = "Niico’ooowu’" # it is salty
 
 			
 			c_salt_lake = {
@@ -225,9 +240,22 @@ e_the_rockies = {
 				color2= { 255 255 255 }
 				holy_site = mormon
 				holy_site = brighamite
+				
+				navajo = "Sooléí"
+				northern_shoshone = "Soonkahni" #Many houses - Shoshoni
+				eastern_shoshone = "Soonkahni"
+				western_shoshone = "Soonkahni"
+				goshute = "Soonkahni"
+				southern_paiute = "Timp-i-a" #name for Springville
+				arapaho = "Niico’ooowu’" # it is salty
 
 				b_salt_lake_city_UT = {
 					used_for_dynasty_names = no
+				navajo = "Sooléí"
+				northern_shoshone = "Soonkahni"
+				eastern_shoshone = "Soonkahni"
+				western_shoshone = "Soonkahni"
+				goshute = "Soonkahni"
 				}
 				b_bluffdale_UT = {}
 				b_west_jordan_UT = {
@@ -256,26 +284,49 @@ e_the_rockies = {
 				color2= { 255 255 255 }
 				holy_site = mormon
 				holy_site = brighamite
+				
+				ute = "Timpanogos" # name of the Ute tribe that lived here
+				northern_shoshone = "Paa-Kateten" # 'Water Sitting', name of Utah Lake
+				eastern_shoshone = "Paa-Kateten"
+				western_shoshone = "Paa-Kateten"
+				goshute = "Paa-Kateten"
 
-				b_provo_UT = {}
+				b_provo_UT = {
+				ute = "Timpanoquint" # Rock River, name of the Provo River
+				}
 				b_orem_UT = {}
-				b_santaquin_UT = {}
+				b_santaquin_UT = {
+				northern_shoshone = "Aipittsi" # Little White Clay
+				eastern_shoshone = "Aipittsi"
+				western_shoshone = "Aipittsi"
+				goshute = "Aipittsi"
+				}
 				b_lehi_UT = {}
 				b_american_fork_UT = {
 					used_for_dynasty_names = no
+					ute = "Pah-gun-a-quint" #name of the river
 				}
 				b_spanish_fork_UT = {
 					used_for_dynasty_names = no
 				}
-				b_springville_UT = {}
+				b_springville_UT = {
+				northern_shoshone = "Tempin-Toyapi" # Rock Mountain
+				eastern_shoshone = "Tempin-Toyapi"
+				western_shoshone = "Tempin-Toyapi"
+				goshute = "Tempin-Toyapi"
+				}
 				b_salem_UT = {}
 			}
 			c_bonneville = {
 				color = { 50 101 255 }
 				color2= { 255 255 255 }
+				
+				goshute = "Pohopin-Paa" # sagebrush water
 
 				b_tooele_UT = {}
-				b_grantsville_UT = {}
+				b_grantsville_UT = {
+				goshute = "Pohopin-Paa" # sagebrush water
+				}
 				b_ophir_UT = {}
 				b_erda_UT = {}
 				b_dugway_UT = {}
@@ -293,6 +344,11 @@ e_the_rockies = {
 			c_bear_river = {
 				color = { 61 108 204 }
 				color2= { 255 255 255 }
+				
+				goshute = "Ku-yok'"
+				northern_shoshone = "Kui-o-gwa"
+				eastern_shoshone = "Kui-o-gwa"
+				western_shoshone = "Kui-o-gwa"
 
 				b_logan_UT = {}
 				b_brigham_city_UT = {
@@ -364,6 +420,8 @@ e_the_rockies = {
 			c_sanpete_UT = {
 				color={ 45 54 153 }
 				color2={ 255 255 255 }
+				
+				ute = "Sanpits" # tribe namesake of area
 			
 				b_manti_UT = {}
 				b_ephraim_UT = {}
@@ -409,6 +467,8 @@ e_the_rockies = {
 			c_grand_staircase = {
 				color = { 35 35 178 }
 				color2= { 255 255 255 }
+				
+				navajo = "Tsé Ndoolzhah" # Rock Descending Jagged, specifically the Kaiparowits plateau
 
 				b_kanab_UT = {}
 				b_panguitch_UT = {}
@@ -460,8 +520,12 @@ e_the_rockies = {
 				color = { 45 45 229 }
 				color2= { 255 255 255 }
 				holy_site = brighamite
+				
+				ute = "I-u-goone"
 
-				b_st_george_UT = {}
+				b_st_george_UT = {
+				southern_paiute = "U-an-no"
+				}
 				b_enterprise_UT = {}
 				b_virgin_UT = {}
 				b_washington_UT = {}
@@ -479,12 +543,20 @@ e_the_rockies = {
 		capital = 448
 		
 		custodite = 2000
+		
+		navajo = "Tó'ííbézhí"
 
 		d_sweetwater = {
 			color = { 38 127 38 }
 			color2= { 214 239 246 }
 
 			capital = 474 #c_carbon
+			
+			northern_shoshone = "Piha-Okwai" # sweet river
+			eastern_shoshone = "Piha-Okwai"
+			western_shoshone = "Piha-Okwai"
+			arapaho = "Hiinóóxuuniixíe" # Crossing River
+			northern_arapaho = "Hiinóóxuuniixíe"
 
 			c_carbon = {
 				color = { 45 153 45 }
@@ -506,6 +578,10 @@ e_the_rockies = {
 				
 				holy_site = zenith
 				holy_site = cowboy_buddhist
+				
+				western_shoshone = "Ainka-Okwai" # Red River
+				northern_shoshone = "Ainka-Okwai"
+				eastern_shoshone = "Ainka-Okwai"
 
 				b_evanston_WY = {}
 				b_morgan_UT = {}
@@ -548,6 +624,11 @@ e_the_rockies = {
 			
 			capital = 443 # c_bridger
 			
+			northern_shoshone = "Huu-Okwai" # Wood/Smelly river, name of Bear river here
+			eastern_shoshone = "Huu-Okwai"
+			western_shoshone = "Huu-Okwai"
+			goshute = "Huu-Okwai"
+			
 			c_kemmerer_WY = {
 				color={ 42 140 74 }
 				color2={ 255 255 255 }
@@ -575,6 +656,11 @@ e_the_rockies = {
 			c_bridger = {
 				color = { 34 114 61 }
 				color2= { 84 89 57 }
+				
+				northern_shoshone = "Huu-Okwai" # Wood/Smelly river, name of Bear river
+				eastern_shoshone = "Huu-Okwai"
+				western_shoshone = "Huu-Okwai"
+				goshute = "Huu-Okwai"
 
 				b_paris_ID = {}
 				b_alton_ID ={
@@ -599,6 +685,10 @@ e_the_rockies = {
 			c_idaho_falls = {
 				color = { 20 102 40 }
 				color2= { 151 199 206 }			
+				
+				northern_shoshone = "Dembimbosaage" # lit. Stone Brige
+				eastern_shoshone = "Dembimbosaage"
+				western_shoshone = "Dembimbosaage"
 			
 				b_idaho_falls_ID = {
 					used_for_dynasty_names = no
@@ -667,13 +757,20 @@ e_the_rockies = {
 		capital = 460 #Gem Canyon
 		
 		custodite = 2000
+		
+		navajo = "Nímasii K'idadilyéhé"
 
 		d_east_snake = {
 			color = { 204 51 63 }
 			color2= { 243 207 181 }
 			
 			capital = 453 #Shoshone Falls
-					
+			
+			northern_shoshone = "East Yampapah"
+			eastern_shoshone = "East Yampapah"
+			western_shoshone = "East Yampapah"
+			goshute = "East Yampapah"
+			
 			c_bingham = {
 				color = { 178 44 55 }
 				color2= { 204 255 154 }
@@ -683,6 +780,10 @@ e_the_rockies = {
 				b_groveland_ID = {}
 				b_fort_hall_ID = {
 					used_for_dynasty_names = no
+					northern_shoshone = "Pohoko’ikkatee"
+					eastern_shoshone = "Pohoko’ikkatee"
+					western_shoshone = "Pohoko’ikkatee"
+					goshute = "Pohoko’ikkatee"
 				}				
 				b_aberdeen_ID = {}
 				b_american_falls_ID = {
@@ -718,7 +819,12 @@ e_the_rockies = {
 				color = { 255 63 79 }
 				color2= { 255 255 255 }	
 				
-				b_pocatello_ID = {}
+				b_pocatello_ID = {
+				northern_shoshone = "Tondzaosha" # Buffalo Robe, the actual name of chief Pocatello
+				eastern_shoshone = "Tondzaosha"
+				western_shoshone = "Tondzaosha"
+				goshute = "Tondzaosha"
+				}
 				b_preston_ID = {}
 				b_malad_city_ID = {
 					used_for_dynasty_names = no
@@ -836,6 +942,11 @@ e_the_rockies = {
 				color = { 229 68 122 }
 				color2 = { 1 129 2 }
 				
+				western_shoshone = "Tokkapatih"
+				northern_shoshone = "Tokkapatih"
+				eastern_shoshone = "Tokkapatih"
+				goshute = "Tokkapatih"
+				
 				b_owyhee_NV = {}
 				b_pequop_NV = {}
 				b_currie_NV = {}
@@ -860,9 +971,19 @@ e_the_rockies = {
 
 			capital = 434 # Canyonlands
 			
+			western_shoshone = "Seeds-kee-dee-Agie"
+			eastern_shoshone = "Seeds-kee-dee-Agie"
+			northern_shoshone = "Seeds-kee-dee-Agie"
+			ute = "Seuvarits Tuvupu" # Land of the Seuvarits band
+			
 			c_uintah = {
 				color = { 140 108 14 }
 				color2= { 255 255 255 }
+				
+				northern_shoshone = "Yuuta-Neen-Toyapi" # The Ute's Mountains
+				eastern_shoshone = "Yuuta-Neen-Toyapi"
+				western_shoshone = "Yuuta-Neen-Toyapi"
+				goshute = "Yuuta-Neen-Toyapi"
 
 				b_vernal_UT = {}
 				b_roosevelt_UT = {}
@@ -888,6 +1009,11 @@ e_the_rockies = {
 			c_canyonlands = {
 				color = { 114 88 11 }
 				color2= { 255 255 255 }
+				
+				hopi = "Hoon’Naqvut" # hopi, ute, zuni names for bears ears ntl monument
+				ute = "Kwiyaghatu Nükavachi"
+				zuni = "Ansh An Lashokdiwe"
+				navajo = "Tsé Bii' Ndzisgaiiv" # name for monument valley
 
 				b_la_sal_UT = {}
 				b_monticello_UT = {}
@@ -1011,10 +1137,16 @@ e_the_rockies = {
 			color2= { 255 255 255 }
 
 			capital = 426 # Mesa Verde
+			
+			ute = "Kapuuta-wa Moghwachi Tuvupu" # Name of the Capote and Muache bands on the rez
 
 			c_mesa_verde = {
 				color = { 178 130 35 }
 				color2= { 255 255 255 }
+				
+				ute = "Múukwi-gani-pu" # Cliff-dweller [Anasazi] house ruins
+				zuni = "He:shoda Wo’pana"
+				navajo = "Anaasází" # Ancient enemy
 
 				b_durango_CO = {}
 				b_cortez_CO = {}
