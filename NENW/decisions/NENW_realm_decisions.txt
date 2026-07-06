@@ -2849,6 +2849,7 @@ decisions = {
 			OR = {
 				has_landed_title = k_idaho
 				has_landed_title = k_mojave
+				has_landed_title = k_allay
 			}
 		}
 
@@ -2869,6 +2870,11 @@ decisions = {
 				if = { 
 					limit = { has_landed_title = k_mojave }
 					k_mojave = { de_jure_liege = e_deseret }
+				}
+				if = { 
+					limit = { has_landed_title = k_allay }
+					k_allay = { de_jure_liege = e_deseret }
+					k_baja_california = { de_jure_liege = e_altiplano }
 				}
 			}
 		}

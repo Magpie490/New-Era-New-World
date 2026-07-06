@@ -142,11 +142,19 @@ mormonic = {
 		aggression = 1
 		allow_rivermovement = yes
 		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_call_crusade = no
 		priests_can_inherit = no
 		priests_can_marry = yes
 		hard_to_convert = yes
 		rel_head_defense = yes
 		landed_kin_prestige_bonus = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+		
 		intermarry = columbian
 		intermarry = moravian
 		intermarry = catholic
@@ -221,15 +229,23 @@ mormonic = {
 		unit_home_modifier = {
 			land_morale = 0.6
 		}
-		aggression = 1
+		aggression = 1.3
 		allow_rivermovement = yes
-		#investiture = yes
+		investiture = no
 		max_wives = 4
+		can_excommunicate = yes
+		can_grant_claim = yes
+		can_call_crusade = yes
+		uses_jizya_tax = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
 		hard_to_convert = yes
 		rel_head_defense = yes
 		landed_kin_prestige_bonus = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+		
 		intermarry = columbian
 		intermarry = moravian
 		intermarry = catholic
