@@ -2209,6 +2209,35 @@ e_baphometist = {
 #	dignity = 200
 #}
 
+d_brighamite = {
+	color = { 20 66 204 }
+	color2={ 220 220 0 }
+	
+	capital = 430 # Salt Lake City
+	
+	dignity = 1000
+
+	title = "APOSTLE_BRIGHAMITE"
+	title_female = "APOSTLE_BRIGHAMITE"
+	foa = "APOSTLE_BRIGHAMITE_FOA"
+	primary = yes
+	
+	short_name = yes
+
+	caliphate = yes
+	allow = {
+		num_of_holy_sites = 3
+		piety = 500
+	}
+	# Controls a religion
+	controls_religion = brighamite
+	creation_requires_capital = no
+	religion = brighamite
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+
 d_mormon = {
 	color={ 255 255 255 }
 	color2={ 255 255 255 }
@@ -2217,7 +2246,7 @@ d_mormon = {
 	
 	title = "PRESIDENT_COLUMB"
 	title_female = "PRESIDENT_COLUMB"
-	foa = "POPE_FOA"
+	foa = "PRESIDENT_COLUMB_FOA"
 	short_name = yes
 	
 	# Always exists
