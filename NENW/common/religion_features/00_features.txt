@@ -128,7 +128,6 @@ religion_nature = {
 	religion_defensive = {
 		picture = GFX_religion_feature_defensive
 		trigger = {
-			NOT = { has_selected_religion_feature = religion_feature_numic }
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_defensive }
@@ -487,10 +486,6 @@ religion_doctrine = {
 		picture = GFX_religion_feature_holy_family
 		
 		trigger = {
-			NOR = {
-				has_selected_religion_feature = religion_feature_novelist
-				has_selected_religion_feature = religion_feature_baltic_2
-			}
 		}
 
 		effect = {
@@ -519,7 +514,6 @@ religion_doctrine = {
 		picture = GFX_religion_feature_holy_family
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_baltic_2
 				has_selected_religion_feature = religion_feature_novelist_2
 			}
 		}
@@ -600,7 +594,6 @@ religion_doctrine = {
 		picture = GFX_religion_feature_stable
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_numic
 				has_selected_religion_feature = religion_feature_nousthreskeia
 				has_selected_religion_feature = religion_feature_novelist_2
 			}
@@ -652,7 +645,6 @@ religion_doctrine = {
 		}
 		trigger = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_novelist
 				has_selected_religion_feature = religion_ritual_sacrifice
 				has_selected_religion_feature = religion_feature_crow_way
 			}
@@ -694,7 +686,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_jizya
 				has_selected_religion_feature = religion_dogmatic
-				has_selected_religion_feature = religion_feature_folklorist # Redundant Doctrine
 				has_selected_religion_feature = religion_feature_hellenic #Redundant
 				has_selected_religion_feature = religion_feature_kaharingan #Redundant
 				has_selected_religion_feature = religion_feature_blessing_way #Redundant
@@ -744,8 +735,6 @@ religion_doctrine = {
 		potential = {
 			NOT = { religion = thelemic } #Core feature of the religion itself.
 			NOT = { religion = thelemic_reformed } #Core feature of the religion itself.
-			NOT = { religion = summer_queen } #Core feature of the religion itself.
-			NOT = { religion = orange_king } #Core feature of the religion itself.
 			NOT = { religion = delver } #Core feature of the religion itself.
 		}
 		trigger = {
@@ -1113,8 +1102,6 @@ religion_doctrine = {
 		trigger = {
 			NOT = {
 				has_selected_religion_feature = religion_peaceful
-				has_selected_religion_feature = religion_feature_celtic
-				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_antiquarianist
 			}
 		}
@@ -1132,7 +1119,6 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
-				has_selected_religion_feature = religion_feature_celtic
 				has_selected_religion_feature = religion_feature_inuit_pagan #Redundant	
 				has_selected_religion_feature = religion_feature_bungan #Redundant
 			}
@@ -1183,7 +1169,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_defensive
-				has_selected_religion_feature = religion_feature_hellenic_new #Redundant
 				has_selected_religion_feature = religion_feature_tengri #Redundant
 				has_selected_religion_feature = religion_feature_novelist_2 #Redundant
 				has_selected_religion_feature = religion_feature_raven_tales_1
@@ -1498,7 +1483,6 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_no_leader
-				has_selected_religion_feature = religion_feature_novelist
 				religion_group = christian #Random World redundancy.
 			}
 		}
@@ -1513,39 +1497,6 @@ religion_doctrine = {
 				has_game_started = no
 				religion_group = pagan_group
 			}
-		}
-	}
-	religion_feature_celtic = {
-		picture = GFX_religion_feature_celtic
-		potential = {
-			has_game_started = yes
-			religion = celtic_pagan_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = celtic_pagan_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_adventuring
-				has_selected_religion_feature = religion_feature_celtic2
-				has_selected_religion_feature = religion_peaceful
-				has_selected_religion_feature = religion_proselytizing
-				has_selected_religion_feature = religion_meritocratic
-				has_selected_religion_feature = religion_monastic
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_adventuring }
-			custom_tooltip = { text = tooltip_religion_feature_aztec_sacrifices }
-			custom_tooltip = { text = tooltip_religion_feature_bloodthirsty_mechanics }
-			custom_tooltip = { text = tooltip_religion_feature_phonocracy }
-			hidden_tooltip = { 
-				enable_prepared_invasion = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 50
 		}
 	}
 	religion_feature_emmaean = {
@@ -1645,7 +1596,6 @@ religion_doctrine = {
 		trigger = {
 			religion = celtic_pagan_reformed
 			NOR = { 
-				has_selected_religion_feature = religion_feature_celtic
 				has_selected_religion_feature = religion_animistic
 				has_selected_religion_feature = religion_defensive
 				has_selected_religion_feature = religion_beatification
@@ -1787,60 +1737,6 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_numic = {
-		picture = GFX_religion_feature_numic
-		potential = {
-			has_game_started = yes
-			religion = numic_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = numic_reformed
-			NOR = {
-				has_selected_religion_feature = religion_stable
-				has_selected_religion_feature = religion_meritocratic
-				has_selected_religion_feature = religion_ritual_sacrifice
-				has_selected_religion_feature = religion_defensive
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_stable }
-			custom_tooltip = { text = tooltip_religion_feature_meliorism } 
-			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
-			custom_tooltip = { text = tooltip_religion_feature_defensive }
-			hidden_tooltip = { 
-				set_heir_designation = yes
-				set_short_reign_opinion_year_mult = 0
-				set_unit_modifier = {		
-					garrison_size = 0.3
-					levy_size = 0.2
-					
-					key = "DEF_RELIGION"
-				}
-				set_unit_home_modifier = {
-					land_morale = 0.8
-					light_infantry_defensive = 0.8
-					heavy_infantry_defensive = 0.8
-					pikemen_defensive = 0.8
-					light_cavalry_defensive = 0.8
-					knights_defensive = 0.8
-					archers_defensive = 0.8
-					horse_archers_defensive = 0.8
-					camel_cavalry_defensive = 0.8
-					war_elephants_defensive = 0.8
-					
-					garrison_size = 0.4
-					
-					key = "DEF_RELIGION_HOME_TERRITORY"
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
 	
 	religion_feature_raven_tales_1 = { # Combines Warmongering with Unrelenting
 		picture = GFX_religion_feature_aztec # placeholder
@@ -1890,51 +1786,6 @@ religion_doctrine = {
 			factor = 25 #unlikely
 		}
 	}
-	religion_feature_hellenic_new = {
-		picture = GFX_religion_feature_hellenic
-		potential = {
-			has_game_started = yes
-			religion = hellenic_pagan_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = hellenic_pagan_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_peaceful#contradictory
-				has_selected_religion_feature = religion_relentless #redundant
-				has_selected_religion_feature = religion_adventuring#redundant
-				has_selected_religion_feature = religion_feature_hellenic
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
-			custom_tooltip = { text = tooltip_religion_feature_offensive }			
-			custom_tooltip = { text = tooltip_religion_feature_adventuring }
-			custom_tooltip = { text = tooltip_religion_feature_war_levies }
-			hidden_tooltip = {
-				set_raised_vassal_opinion_loss = no
-				enable_prepared_invasion = ROOT
-				set_ignores_defensive_attrition = yes
-				set_unit_modifier = { 
-					light_infantry_offensive = 0.1
-					heavy_infantry_offensive = 0.1
-					light_cavalry_offensive = 0.1 
-					knights_offensive = 0.1 
-					pikemen_offensive = 0.1 
-					archers_offensive = 0.1
-					horse_archers_offensive = 0.1
-					camel_cavalry_offensive = 0.1
-					war_elephants_offensive = 0.1
-					key = "RELENTLESS_RELIGION"
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
 	
 	religion_feature_hellenic = {
 		picture = GFX_religion_feature_hellenic_old
@@ -1952,7 +1803,6 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_dogmatic
 				has_selected_religion_feature = religion_meritocratic
 				has_selected_religion_feature = religion_ritual_sacrifice
-				has_selected_religion_feature = religion_feature_hellenic_new
 			}
 		}
 		effect = {
@@ -1976,46 +1826,6 @@ religion_doctrine = {
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_pyramids }
 		}
-	}
-	religion_feature_novelist = {
-		picture = GFX_religion_feature_novelist
-		potential = {
-			has_game_started = yes
-			religion = novelist_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = novelist_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_no_leader
-				has_selected_religion_feature = religion_beatification #redundant
-				has_selected_religion_feature = religion_monastic #redundant
-				has_selected_religion_feature = religion_pronatal #redundant
-				has_selected_religion_feature = religion_feature_novelist_2
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_beatification }
-			custom_tooltip = { text = tooltip_religion_feature_eldership }
-			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_fertility_bonus }
-			custom_tooltip = { text = tooltip_religion_feature_dynasty_bonus }
-			custom_tooltip = { text = tooltip_religion_feature_improve_children }
-			custom_tooltip = { text = tooltip_religion_feature_love_likely }
-
-			hidden_tooltip = {
-				set_character_modifier = {
-					dynasty_opinion = 15
-					fertility = 0.15
-					learning = 2
-					key = "FAMILY_ATTR_RELIGION"
-				}
-			}	
-			
-
-		}
 		ai_will_do = {
 			factor = 50
 		}
@@ -2037,7 +1847,6 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_meritocratic #redundant
 				has_selected_religion_feature = religion_holy_family
 				has_selected_religion_feature = religion_stable
-				has_selected_religion_feature = religion_feature_novelist
 			}
 		}
 		effect = {
@@ -2063,32 +1872,6 @@ religion_doctrine = {
 				}
 				set_heir_designation = yes
 			}
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
-	religion_feature_folklorist = {
-		picture = GFX_religion_feature_folklorist
-		potential = {
-			has_game_started = yes
-			religion = folklorist_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = folklorist_reformed
-			NOR = { 
-				has_selected_religion_feature = religion_monastic #redundant
-				has_selected_religion_feature = religion_syncretic #redundant
-				has_selected_religion_feature = religion_feature_folklorist_2 #incompatible
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_syncretic }
-			custom_tooltip = { text = tooltip_religion_feature_eldership }
 		}
 		ai_will_do = {
 			factor = 50
@@ -2585,7 +2368,6 @@ religion_leadership = {
 			NOT = {
 				has_selected_religion_feature = religion_dogmatic
 				has_selected_religion_feature = religion_beatification
-				has_selected_religion_feature = religion_feature_novelist
 			}
 		}
 		effect = {
@@ -2646,7 +2428,6 @@ religion_leadership = {
 					}
 					OR = {
 						has_selected_religion_feature = religion_monastic
-						has_selected_religion_feature = religion_feature_folklorist
 					}
 				}
 				set_character_modifier = {
