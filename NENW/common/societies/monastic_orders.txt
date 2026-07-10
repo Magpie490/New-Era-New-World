@@ -34,12 +34,7 @@ monastic_order_benedictine = {
 			religion = watcher
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = fraticelli
-					religion = cadaverist
-					religion = hussite
-					religion = camelotist
-				}
+				religion = camelotist
 			}
 		}
 		NOT = { trait = excommunicated }
@@ -64,12 +59,7 @@ monastic_order_benedictine = {
 			religion = watcher
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = fraticelli
-					religion = cadaverist
-					religion = hussite
-					religion = camelotist
-				}
+				religion = camelotist
 			}
 			society_member_of = monastic_order_benedictine
 		}
@@ -82,12 +72,7 @@ monastic_order_benedictine = {
 			religion = watcher
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = fraticelli
-					religion = cadaverist
-					religion = hussite
-					religion = camelotist
-				}
+				religion = camelotist
 			}
 		}
 	}
@@ -384,12 +369,7 @@ monastic_order_dominican = {
 			religion = watcher
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = fraticelli
-					religion = cadaverist
-					religion = hussite
-					religion = camelotist
-				}
+				religion = camelotist
 			}
 		}
 		NOT = { trait = excommunicated }
@@ -415,12 +395,7 @@ monastic_order_dominican = {
 				religion = watcher
 				AND = {
 					is_heretic = no
-					OR = {
-						religion = fraticelli
-						religion = cadaverist
-						religion = hussite
-						religion = camelotist
-					}
+					religion = camelotist
 				}
 			}
 			society_member_of = monastic_order_dominican
@@ -434,12 +409,7 @@ monastic_order_dominican = {
 			religion = watcher
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = fraticelli
-					religion = cadaverist
-					religion = hussite
-					religion = camelotist
-				}
+				religion = camelotist
 			}
 		} 
 	}
@@ -734,12 +704,7 @@ monastic_order_orthodox = {
 			religion = oldbeliever
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = neodonatists
-					religion = easternprotestant
-					religion = marblists
-					religion = bezpopotvsy
-				}
+				religion = bezpopotvsy
 			}
 		}
 		NOT = { trait = excommunicated }
@@ -764,12 +729,7 @@ monastic_order_orthodox = {
 				religion = oldbeliever
 				AND = {
 					is_heretic = no
-					OR = {
-						religion = neodonatists
-						religion = easternprotestant
-						religion = marblists
-						religion = bezpopotvsy
-					}
+					religion = bezpopotvsy
 				}
 			}
 			society_member_of = monastic_order_orthodox
@@ -782,12 +742,7 @@ monastic_order_orthodox = {
 			religion = oldbeliever
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = neodonatists
-					religion = easternprotestant
-					religion = marblists
-					religion = bezpopotvsy
-				}
+				religion = bezpopotvsy
 			}
 		}
 	}
@@ -1390,14 +1345,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			AND = {
-				is_heretic = no
-				OR = {
-					religion = prussianist
-					religion = hussite
-					religion = xinjiao
-				}
-			}
 		}
 		NOT = { trait = excommunicated }
 		custom_tooltip = {
@@ -1418,14 +1365,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			AND = {
-				is_heretic = no
-				OR = {
-					religion = prussianist
-					religion = hussite
-					religion = xinjiao
-				}
-			}
 			society_member_of = monastic_order_lutheran
 		}
 	}
@@ -1434,14 +1373,6 @@ monastic_order_lutheran = {
 		OR = {
 			religion = lutheran
 			religion = baptist
-			AND = {
-				is_heretic = no
-				OR = {
-					religion = prussianist
-					religion = hussite
-					religion = xinjiao
-				}
-			}
 		}
 	}
 
@@ -1656,7 +1587,6 @@ monastic_order_lutheran = {
 			OR = {
 		   	religion = lutheran
 			religion = baptist
-			religion = xinjiao
 			}
 			age = 16
 			is_in_society = no
@@ -2332,7 +2262,6 @@ monastic_order_hindu = {
 		age = 16
 		OR = {
 		religion = neovedantic
-		religion = sarvodaya
 		religion = old_hindu
 		}
 		custom_tooltip = {
@@ -2353,7 +2282,6 @@ monastic_order_hindu = {
 		OR = {
 		OR = {
 		religion = neovedantic
-		religion = sarvodaya
 		religion = old_hindu
 		}
 			society_member_of = monastic_order_hindu
@@ -2548,7 +2476,6 @@ monastic_order_hindu = {
 	    	controls_religion = no
 		   	OR = {
 			religion = neovedantic
-			religion = sarvodaya
 			religion = old_hindu
 			}
 			age = 16
@@ -3133,12 +3060,7 @@ monastic_order_stoics = {
 			religion = hellenic_pagan 
 			religion = hellenic_pagan_reformed
 			AND = {
-                OR = {			
-			    culture = roman
-				culture_group = byzantine
-				culture = arvanitika
-				culture = aromanian
-				}
+                culture_group = byzantine
 				OR = { #Somewhat compatible when mixed with -Roman- Greek culture.
 					religion_group = christian 
 					religion_group = jewish_group 
@@ -3147,7 +3069,6 @@ monastic_order_stoics = {
 					religion_group = buddhist_group
 					religion_group = esoteric
 					religion_group = syncratic_group
-					religion = mesopotamian
 					religion = novelist
 					religion = novelist_reformed
 				}
@@ -3176,12 +3097,7 @@ monastic_order_stoics = {
 			religion = hellenic_pagan 
 			religion = hellenic_pagan_reformed
 			AND = {
-                OR = {			
-			    culture = roman
-				culture_group = byzantine
-				culture = arvanitika
-				culture = aromanian
-				}
+                culture_group = byzantine
 				OR = { #Somewhat compatible when mixed with -Roman- Greek culture.
 					religion_group = christian 
 					religion_group = jewish_group 
@@ -3190,7 +3106,6 @@ monastic_order_stoics = {
 					religion_group = buddhist_group
 					religion_group = esoteric
 					religion_group = syncratic_group
-					religion = mesopotamian
 					religion = novelist
 					religion = novelist_reformed
 				}
@@ -3423,12 +3338,7 @@ monastic_order_stoics = {
 				religion = hellenic_pagan 
 				religion = hellenic_pagan_reformed
 				AND = {
-                   OR = {
-			       culture = roman
-				   culture_group = byzantine
-				   culture = arvanitika
-				   culture = aromanian
-				   }
+                   culture_group = byzantine
 				   OR = { #Somewhat compatible when mixed with -Roman- Greek culture.
 					religion_group = christian 
 					religion_group = jewish_group 
@@ -3437,7 +3347,6 @@ monastic_order_stoics = {
 					religion_group = buddhist_group
 					religion_group = esoteric
 					religion_group = syncratic_group
-					religion = mesopotamian
 					religion = novelist
 					religion = novelist_reformed
 				}
@@ -3787,297 +3696,6 @@ monastic_order_methodist = {
 	}
 }
 
-monastic_order_zhao = {
-	primary_attribute = learning
-	is_religious = yes
-	opinion_to_other_members = +10
-	opinion_per_rank_above = +5
-	sound = monastic_orders_interface
-	society_ranks_gfx = monk_ranks
-	society_influence = no
-	non_interference = {
-		always = yes
-	}
-	
-	active = {
-		has_dlc = "Mystics"
-	}
-	indestructible = yes
-
-	can_join_society = {
-		hidden_trigger = {
-			NAND = {
-				ai = yes
-				is_society_rank_full = { 
-					society = monastic_order_zhao
-					rank = 1
-				}
-			}
-		}
-		age = 16
-		OR = {
-			religion = maoist
-		}
-		NOT = { trait = excommunicated }
-		custom_tooltip = {
-			text = did_not_betray_society
-			NOT = { has_character_flag = betrayed_monastic_order_zhao }
-		}
-		scaled_wealth = 0.25
-		hidden_trigger = {
-			NOT = { has_character_flag = society_join_block }
-		}
-		trigger_if = {
-			limit = { prisoner = yes }
-			prisoner = no
-		}
-	}
-	
-	show_society = {
-		OR = {
-			religion = maoist
-			society_member_of = monastic_order_zhao
-		}
-	}
-	
-	potential = {
-		OR = {
-			religion = maoist
-		}
-	}
-	
-	society_rank = {
-		level = 1
-		limit = 100 
-		startup_limit = 10
-		modifier = {
-			monthly_character_piety = 0.05
-			fertility = -0.15
-		}
-		custom_tooltip = monastic_order_education_power_zhao_tt
-	}
-	
-	society_rank = {
-		level = 2
-		limit = 50
-		startup_limit = 6
-		modifier = { 
-			monthly_character_piety = 0.1
-			learning = 1
-		}
-		decisions = {
-			monastic_orders_spiritual_guidance
-		}
-	}
-	
-	society_rank = {
-		level = 3
-		limit = 25 
-		startup_limit = 3
-		modifier = {
-			monthly_character_piety = 0.2
-			learning = 2
-			stewardship = 1
-			build_cost_temple_modifier = -0.25
-		}
-		decisions = {
-			monastic_orders_invite_ascetic
-			monastic_orders_teach_virtue
-		}
-	}
-
-	society_rank = {
-		level = 4
-		limit = 5
-		startup_limit = 1
-		modifier = { 
-			monthly_character_piety = 0.5
-			stewardship = 3
-			learning = 3
-			build_cost_temple_modifier = -0.5 
-		}
-		decisions = {
-			monastic_order_convert_county
-		}
-		custom_tooltip = zhao_power_diligent_tt
-	}
-
-	monthly_currency_gain = {
-		name = currency_name_monastic_order_zhao
-    	
-    	per_attribute = {
-    		name = stewardship
-    		value = 0.5
-    	}
-    	has_trait = {
-			trait = monk
-			value = 5
-		}
-		has_trait = {
-			trait = nun
-			value = 5
-		}
-		has_trait = {
-			trait = diligent
-			value = 3
-		}
-    	has_trait = {
-			trait = chaste
-			value = 3
-		}
-		has_trait = {
-			trait = temperate
-			value = 3
-		}
-		has_trait = {
-			trait = charitable
-			value = 1
-		}
-		has_trait = {
-			trait = kind
-			value = 1
-		}
-		has_trait = {
-			trait = patient
-			value = 1
-		}
-		has_trait = {
-			trait = humble
-			value = 1
-		}
-		has_trait = {
-			trait = zealous
-			value = 1
-		}
-		has_trait = {
-			trait = honest
-			value = 1
-		}
-		has_trait = {
-			trait = erudite
-			value = 1
-		}
-		has_trait = {
-			trait = pilgrim
-			value = 1
-		}
-		has_trait = {
-			trait = theologian
-			value = 1
-		}
-		has_trait = {
-			trait = gardener
-			value = 1
-		}
-		society_rank = {
-			rank = 4
-			value = 10
-		}
-	}
-
-	member_score_per_attribute = 3
-	member_score_per_rank = 100
-
-	member_score = {
-		value = 10
-
-		modifier = {
-			is_priest = yes
-			factor = 10
-		}
-		modifier = {
-			trait = monk
-			factor = 5
-		}
-		modifier = {
-			trait = nun
-			factor = 5
-		}
-		modifier = {
-			trait = diligent
-			factor = 1.3
-		}
-		modifier = {
-			trait = celibate
-			factor = 1.3
-		}
-    	modifier = {
-			trait = chaste
-			factor = 1.3
-		}
-		modifier = {
-			trait = temperate
-			factor = 1.3
-		}
-		modifier = {
-			trait = charitable
-			factor = 1.1
-		}
-		modifier = {
-			trait = kind
-			factor = 1.1
-		}
-		modifier = {
-			trait = patient
-			factor = 1.1
-		}
-		modifier = {
-			trait = humble
-			factor = 1.1
-		}
-		modifier = {
-			trait = zealous
-			factor = 1.1
-		}
-		modifier = {
-			trait = honest
-			factor = 1.1
-		}
-		modifier = {
-			trait = erudite
-			factor = 1.1
-		}
-		modifier = {
-			trait = pilgrim
-			factor = 1.1
-		}
-		modifier = {
-			trait = theologian
-			factor = 1.1
-		}
-		modifier = {
-			trait = gardener
-			factor = 1.1
-		}
-	}
-	
-	startup_populate = {
-	    trigger = {
-			ai = yes
-	    	controls_religion = no
-		   	religion = maoist
-			age = 16
-			is_in_society = no
-			NOT = { higher_tier_than = DUKE }
-			NOR = {
-				mercenary = yes
-				holy_order = yes
-			}
-			NOT = { trait = cynical }
-			NOT = { trait = excommunicated }
-			has_secret_religion_trait_trigger = no
-			OR = {
-				trait = zealous
-				trait = scholar
-				trait = theologian
-				trait = gardener
-				learning = 16
-				is_priest = yes
-			}
-		}
-	}
-}
-
 monastic_order_jewish = {
 	primary_attribute = learning
 	is_religious = yes
@@ -4108,9 +3726,6 @@ monastic_order_jewish = {
 		age = 30
 		is_female = no
 		OR = {
-			religion = jewish
-			religion = mikraist
-			religion = haymanot
 			religion = maaravi
 			religion = hasidic
 		}
@@ -4130,9 +3745,6 @@ monastic_order_jewish = {
 	
 	show_society = {
 		OR = {
-			religion = jewish
-			religion = mikraist
-			religion = haymanot
 			society_member_of = monastic_order_jewish
 			religion = maaravi
 			religion = hasidic
@@ -4141,9 +3753,6 @@ monastic_order_jewish = {
 	
 	potential = {
 		OR = {
-			religion = jewish
-			religion = mikraist
-			religion = haymanot
 			religion = maaravi
 			religion = hasidic
 		}
@@ -4411,9 +4020,6 @@ monastic_order_jewish = {
 			ai = yes
 	    	controls_religion = no
 			OR = {
-				religion = jewish
-				religion = haymanot
-				religion = mikraist
 				religion = maaravi
 				religion = hasidic
 			}
@@ -4808,18 +4414,12 @@ monastic_order_qurani = {
 		}
 		age = 16
 		OR = {
-			religion = malikite
-			religion = ovlatii
 			religion = sufi
-			religion = barelvi
-			religion = ibadi
 			religion = shiite
 			religion = ismaili
 			religion = zaydi
 			religion = ahmadiyya
-			religion = mesopotamian
-			religion = koranist
-			religion = alevi
+            religion = syafi
 		}
 		NOT = { trait = excommunicated }
 		custom_tooltip = {
@@ -4838,42 +4438,24 @@ monastic_order_qurani = {
 
 	show_society = {
 		OR = {
-			religion = koranist
-			religion = alevi
-			religion = malikite
-			religion = ovlatii
 			religion = sufi
-			religion = barelvi
-			religion = ibadi
 			religion = shiite
 			religion = ismaili
 			religion = zaydi
 			religion = ahmadiyya
-			religion = mesopotamian
-			religion = ramadi
 			religion = syafi
-			religion = qingzhen
 			society_member_of = monastic_order_qurani
 		}
 	}
 
 	potential = { 
 		OR = {
-			religion = koranist
-			religion = alevi
-			religion = malikite
-			religion = ovlatii
 			religion = sufi
-			religion = barelvi
-			religion = ibadi
 			religion = shiite
 			religion = ismaili
 			religion = zaydi
 			religion = ahmadiyya
-			religion = mesopotamian
-			religion = ramadi
 			religion = syafi
-			religion = qingzhen
 		} }
 
 	society_rank = {
@@ -5091,21 +4673,12 @@ monastic_order_qurani = {
 			ai = yes
 	    	controls_religion = no
 			OR = {
-		   	religion = koranist
-			religion = alevi
-			religion = malikite
-			religion = ovlatii
 			religion = sufi
-			religion = barelvi
-			religion = ibadi
 			religion = shiite
 			religion = ismaili
 			religion = zaydi
 			religion = ahmadiyya
-			religion = mesopotamian
-			religion = ramadi
 			religion = syafi
-			religion = qingzhen
 			}
 			age = 16
 			is_in_society = no
@@ -5128,283 +4701,6 @@ monastic_order_qurani = {
 	}
 }
 
-monastic_order_osvicenism = {
-	primary_attribute = diplomacy
-	is_religious = yes
-	opinion_to_other_members = +10
-	opinion_per_rank_above = +5
-	sound = monastic_orders_indian_interface
-	society_ranks_gfx = monk_ranks
-	society_influence = no
-	non_interference = {
-		always = yes
-	}
-	
-	active = {
-		has_dlc = "Mystics"
-	}
-	indestructible = yes
-
-	can_join_society = {
-		hidden_trigger = {
-			NAND = {
-				ai = yes
-				is_society_rank_full = { 
-					society = monastic_order_osvicenism
-					rank = 1
-				}
-			}
-		}
-		age = 16
-		religion = osvicenism
-		custom_tooltip = {
-			text = did_not_betray_society
-			NOT = { has_character_flag = betrayed_monastic_order_osvicenism }
-		}
-		scaled_wealth = 0.25
-		hidden_trigger = {
-			NOT = { has_character_flag = society_join_block }
-		}
-		trigger_if = {
-			limit = { prisoner = yes }
-			prisoner = no
-		}
-	}
-
-	show_society = {
-		OR = {
-			religion = osvicenism
-			society_member_of = monastic_order_osvicenism
-		}
-	}
-
-	potential = { religion = osvicenism }
-
-	society_rank = {
-		level = 1
-		limit = 50 
-		startup_limit = 10
-		modifier = {
-			monthly_character_piety = 0.05
-			fertility = -0.15
-		}
-		custom_tooltip = dharmic_good_trait_power_tt
-	}
-	
-	society_rank = {
-		level = 2
-		limit = 20
-		startup_limit = 6
-		modifier = { 
-			monthly_character_piety = 0.1
-			diplomacy = 1
-			fertility = -0.15
-		}
-		decisions = {
-			monastic_orders_go_celibate #Power: toggle celibacy
-			monastic_orders_stop_celibate
-			monastic_orders_spiritual_guidance
-		}
-	}
-	
-	society_rank = {
-		level = 3
-		limit = 10 
-		startup_limit = 3
-		modifier = {
-			monthly_character_piety = 0.2
-			diplomacy = 2
-			build_cost_temple_modifier = -0.25
-			fertility = -0.15
-		}
-		decisions = {
-			monastic_orders_invite_ascetic
-			monastic_orders_teach_virtue
-		}
-	}
-
-	society_rank = {
-		level = 4
-		limit = 5
-		startup_limit = 1
-		modifier = { 
-			monthly_character_piety = 0.5
-			diplomacy = 3
-			build_cost_temple_modifier = -0.5
-			global_revolt_risk = -0.08
-			fertility = -0.15
-		}
-		decisions = {
-			monastic_order_convert_county
-		}
-	}
-
-	monthly_currency_gain = {
-		name = currency_name_monastic_order_osvicenism
-    	
-		per_attribute = {
-    		name = diplomacy
-    		value = 0.5
-    	}
-		has_trait = {
-			trait = monk
-			value = 5
-		}
-		has_trait = {
-			trait = nun
-			value = 5
-		}
-		has_trait = {
-			trait = scholar
-			value = 3
-		}
-		has_trait = {
-			trait = content
-			value = 3
-		}
-		has_trait = {
-			trait = kind
-			value = 3
-		}
-		has_trait = {
-			trait = patient
-			value = 3
-		}
-		has_trait = {
-			trait = diligent
-			value = 1
-		}
-		has_trait = {
-			trait = temperate
-			value = 1
-		}
-		has_trait = {
-			trait = charitable
-			value = 1
-		}
-		has_trait = {
-			trait = humble
-			value = 1
-		}
-		has_trait = {
-			trait = chaste
-			value = 1
-		}
-		has_trait = {
-			trait = celibate
-			value = 1
-		}
-		has_trait = {
-			trait = honest
-			value = 1
-		}
-		has_trait = {
-			trait = theologian
-			value = 1
-		}
-		society_rank = {
-			rank = 4
-			value = 10
-		}
-	}
-
-	member_score_per_attribute = 3
-	member_score_per_rank = 100
-
-	member_score = {
-		value = 10
-
-		modifier = {
-			is_priest = yes
-			factor = 10
-		}
-		modifier = {
-			trait = monk
-			factor = 5
-		}
-		modifier = {
-			trait = nun
-			factor = 5
-		}
-		modifier = {
-			trait = scholar
-			factor = 1.3
-		}
-		modifier = {
-			trait = theologian
-			factor = 1.3
-		}
-		modifier = {
-			trait = celibate
-			factor = 1.2
-		}
-		modifier = {
-			trait = content
-			factor = 1.3
-		}
-		modifier = {
-			trait = kind
-			factor = 1.3
-		}
-		modifier = {
-			trait = patient
-			factor = 1.3
-		}
-		modifier = {
-			trait = diligent
-			factor = 1.1
-		}
-		modifier = {
-			trait = temperate
-			factor = 1.1
-		}
-		modifier = {
-			trait = charitable
-			factor = 1.1
-		}
-		modifier = {
-			trait = humble
-			factor = 1.1
-		}
-		modifier = {
-			trait = chaste
-			factor = 1.1
-		}
-		modifier = {
-			trait = celibate
-			factor = 1.1
-		}
-		modifier = {
-			trait = honest
-			factor = 1.1
-		}
-	}
-	
-	startup_populate = {
-	    trigger = {
-			ai = yes
-	    	controls_religion = no
-		   	religion = osvicenism
-			age = 16
-			is_in_society = no
-			NOT = { higher_tier_than = DUKE }
-			NOR = {
-				mercenary = yes
-				holy_order = yes
-			}
-			NOT = { trait = cynical }
-			has_secret_religion_trait_trigger = no
-			OR = {
-				trait = zealous
-				trait = scholar
-				trait = theologian
-				trait = brahmin
-				learning = 16
-				is_priest = yes
-			}
-		}
-	}
-}
 monastic_order_kirishitan = {
 	primary_attribute = learning
 	is_religious = yes
