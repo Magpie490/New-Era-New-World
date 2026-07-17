@@ -35,7 +35,6 @@ is_member_of_any_warrior_lodge_trigger = {
 			society_member_of = warrior_lodge_bon
 			society_member_of = warrior_lodge_jacobinist
 			society_member_of = warrior_lodge_sea_creed
-			society_member_of = warrior_lodge_poseidonian
 			society_member_of = warrior_lodge_wokou
 			society_member_of = warrior_lodge_shinto
 			society_member_of = warrior_lodge_mo
@@ -93,7 +92,6 @@ has_any_warrior_lodge_training_trait_trigger = {
 		trait = bon_leader
 		trait = jacobinist_leader
 		trait = sea_creed_leader
-		trait = poseidonian_leader
 		trait = wokou_leader
 		trait = shinto_leader
 		trait = mo_leader
@@ -206,10 +204,6 @@ has_current_warrior_lodge_leader_trait_trigger = {
 		trigger_else_if = {
 			limit = { society_member_of = warrior_lodge_sea_creed }
 			trait = sea_creed_leader
-		}
-		trigger_else_if = {
-			limit = { society_member_of = warrior_lodge_poseidonian }
-			trait = poseidonian_leader
 		}
 		trigger_else_if = {
 			limit = { society_member_of = warrior_lodge_wokou }
@@ -401,7 +395,7 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
 					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
 					AND = {
-						culture_group = goidelic
+						culture_group = amero_goidelic
 						OR = {
 							AND = {
 								NOT = { trait = zealous }
@@ -524,30 +518,6 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 				} 
 			}
 			society_member_of = warrior_lodge_sea_creed
-		}
-		trigger_else_if = {
-			limit = { 
-				OR = { 
-					religion = poseidonian
-					any_vassal = { religion = poseidonian }
-					any_liege = { religion = poseidonian }
-					any_neighbor_independent_ruler = { religion = poseidonian } 
-					AND = {
-						culture = doggerlander
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = poseidonian }
-							}
-							AND = {
-								trait = zealous
-								religion = poseidonian
-							}
-						}
-					}
-				} 
-			}
-			society_member_of = warrior_lodge_poseidonian
 		}
 		trigger_else_if = {
 			limit = { religion = east_brethren }
@@ -747,10 +717,7 @@ has_religion_matching_available_warrior_lodge_trigger = {
 				any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
 				any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
 				AND = {
-					OR = {
-						culture_group = goidelic
-						culture_group = amero_goidelic
-					}
+					culture_group = amero_goidelic
 					OR = {
 						AND = {
 							NOT = { trait = zealous }
@@ -878,30 +845,6 @@ has_religion_matching_available_warrior_lodge_trigger = {
 				} 
 			}
 		warrior_lodge_sea_creed = { society_has_members = yes }
-	}
-	trigger_else_if = {
-		limit = { 
-				OR = { 
-					religion = poseidonian
-					any_vassal = { religion = poseidonian }
-					any_liege = { religion = poseidonian }
-					any_neighbor_independent_ruler = { religion = poseidonian } 
-					AND = {
-						culture = doggerlander
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = poseidonian }
-							}
-							AND = {
-								trait = zealous
-								religion = poseidonian
-							}
-						}
-					}
-				} 
-			}
-		warrior_lodge_poseidonian = { society_has_members = yes }
 	}
 	trigger_else_if = {
 		limit = { religion = east_brethren }
@@ -1206,30 +1149,6 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			warrior_lodge_sea_creed = { num_of_society_members < 30 }
 		}
 		trigger_else_if = {
-			limit = { 
-				OR = { 
-					religion = poseidonian
-					any_vassal = { religion = poseidonian }
-					any_liege = { religion = poseidonian }
-					any_neighbor_independent_ruler = { religion = poseidonian } 
-					AND = {
-						culture_group = byzantine
-						OR = {
-							AND = {
-								NOT = { trait = zealous }
-								NOT = { religion = poseidonian }
-							}
-							AND = {
-								trait = zealous
-								religion = poseidonian
-							}
-						}
-					}
-				} 
-			}
-			warrior_lodge_poseidonian = { num_of_society_members < 30 }
-		}
-		trigger_else_if = {
 			limit = { religion = east_brethren }
 			warrior_lodge_wokou = { num_of_society_members < 30 }
 		}
@@ -1429,7 +1348,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
 					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
 					AND = {
-						culture_group = goidelic
+						culture_group = amero_goidelic
 						OR = {
 							AND = {
 								NOT = { trait = zealous }
@@ -1554,30 +1473,6 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 			} 
 		}
 		NOT = { warrior_lodge_sea_creed = { society_has_members = yes } }
-	}
-	trigger_else_if = {
-		limit = { 
-			OR = { 
-				religion = poseidonian
-				any_vassal = { religion = poseidonian }
-				any_liege = { religion = poseidonian }
-				any_neighbor_independent_ruler = { religion = poseidonian } 
-				AND = {
-					culture_group = byzantine
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { religion = poseidonian }
-						}
-						AND = {
-							trait = zealous
-							religion = poseidonian
-						}
-					}
-				}
-			} 
-		}
-		NOT = { warrior_lodge_poseidonian = { society_has_members = yes } }
 	}
 	trigger_else_if = {
 		limit = { religion = east_brethren }
@@ -1739,7 +1634,6 @@ this_society_is_a_warrior_lodge_trigger = {
 		is_society = warrior_lodge_iranian
 		is_society = warrior_lodge_jacobinist
 		is_society = warrior_lodge_sea_creed
-		is_society = warrior_lodge_poseidonian
 		is_society = warrior_lodge_wokou
 		is_society = warrior_lodge_shinto
 		is_society = warrior_lodge_mo
@@ -1886,7 +1780,7 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 					any_liege = { religion_openly_celtic_pagan_or_reformed_trigger = yes }
 					any_neighbor_independent_ruler = { religion_openly_celtic_pagan_or_reformed_trigger = yes } 
 					AND = {
-						culture_group = goidelic
+						culture_group = amero_goidelic
 						OR = {
 							AND = {
 								NOT = { trait = zealous }
@@ -2009,30 +1903,6 @@ has_religion_matching_warrior_lodge_to_revive_trigger = {
 			} 
 		}
 		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_sea_creed }
-	}
-	trigger_else_if = {
-		limit = { 
-			OR = { 
-				religion = poseidonian
-				any_vassal = { religion = poseidonian }
-				any_liege = { religion = poseidonian }
-				any_neighbor_independent_ruler = { religion = poseidonian } 
-				AND = {
-					culture_group = byzantine
-					OR = {
-						AND = {
-							NOT = { trait = zealous }
-							NOT = { religion = poseidonian }
-						}
-						AND = {
-							trait = zealous
-							religion = poseidonian
-						}
-					}
-				}
-			} 
-		}
-		event_target:warrior_lodge_to_revive = { is_society = warrior_lodge_poseidonian }
 	}
 	trigger_else_if = {
 		limit = { religion = east_brethren }
@@ -2413,17 +2283,17 @@ special_join_warrior_lodge_trigger = {
 						any_vassal = { 
 							OR = {
 								religion_openly_celtic_pagan_or_reformed_trigger = yes
-								culture_group = goidelic
+								culture_group = amero_goidelic
 							}  }
 						any_liege = { 
 			OR = {
 				religion_openly_celtic_pagan_or_reformed_trigger = yes
-				culture_group = goidelic
+				culture_group = amero_goidelic
 			}  }
 						any_neighbor_independent_ruler = { 
 			OR = {
 				religion_openly_celtic_pagan_or_reformed_trigger = yes
-				culture_group = goidelic
+				culture_group = amero_goidelic
 			}  }
 					}
 				}
@@ -2509,34 +2379,6 @@ special_join_warrior_lodge_trigger = {
 								religion = buccaneer
 								culture = doggerlander
 							}  
-						}
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = { FROM = { is_society = warrior_lodge_poseidonian } }
-			custom_tooltip = {
-				text = has_liege_vassal_or_neighbor_of_poseidonian_religion_tt
-				hidden_trigger = {
-					OR = {
-						any_vassal = { 
-							OR = {
-								religion = poseidonian
-								culture_group = byzantine
-							}  
-						}
-						any_liege = { 
-							OR = {
-								religion = poseidonian
-								culture_group = byzantine
-							}
-						}
-						any_neighbor_independent_ruler = { 
-							OR = {
-								religion = poseidonian
-								culture_group = byzantine
-							}
 						}
 					}
 				}
