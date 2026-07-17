@@ -2999,19 +2999,6 @@ character_event = {
         }
 		else_if = {
 			limit = {
-				OR = {
-					religion = poseidonian
-					culture_group = byzantine
-					any_vassal = { religion = poseidonian }
-					any_liege = { religion = poseidonian }
-					any_neighbor_independent_ruler = { religion = poseidonian }
-				}
-				can_join_society = warrior_lodge_poseidonian
-			}
-            join_society = warrior_lodge_poseidonian
-        }
-		else_if = {
-			limit = {
 				religion = east_brethren
 				can_join_society = warrior_lodge_wokou
 			}
