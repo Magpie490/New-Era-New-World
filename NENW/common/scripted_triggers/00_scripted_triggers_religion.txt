@@ -1142,40 +1142,39 @@ has_sympathy_for_public_religion_of_prev_trigger = {
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = chinese_traditional_group }
+		limit = { PREV = { religion_group = chinese_traditional_group } }
 		OR = {
 			trait = sympathy_chinese
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = post_christian_group }
+		limit = { PREV = { religion_group = post_christian_group } }
 		OR = {
 			trait = sympathy_post_christian
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = new_age_group }
+		limit = { PREV = { religion_group = new_age_group } }
 		OR = {
 			trait = sympathy_new_age_group
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = mormonic }
+		limit = { PREV = { religion_group = mormonic } }
 		OR = {
 			trait = sympathy_mormon
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = apocalyptic }
+		limit = { PREV = { religion_group = apocalyptic } }
 		OR = {
 			trait = sympathy_apocalyptic
 		}
 	}
 	trigger_else_if = {
-		PREV = { religion_group = shintoist_group }
+		limit = { PREV = { religion_group = shintoist_group } }
 		OR = {
 			trait = sympathy_shinto
-			trait = blorg_tolerations
 		}
 	}
 	trigger_else = {
