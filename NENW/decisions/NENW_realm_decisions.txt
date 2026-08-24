@@ -1279,10 +1279,13 @@ decisions = {
 				gain_empire_effect = yes
 			}
 			k_florida = { de_jure_liege = e_florida }
-			k_jaxland = { de_jure_liege = e_florida } 
-			if = {
-				limit = { completely_controls = d_panhandle }
-				d_panhandle = { de_jure_liege = k_jaxland }
+			k_jaxland = { de_jure_liege = e_florida }
+			custom_tooltip = {
+				text = florida_panhandle_tt
+				if = {
+					limit = { completely_controls = d_panhandle }
+					d_panhandle = { de_jure_liege = k_jaxland }
+				}
 			}
 		}
 	}
