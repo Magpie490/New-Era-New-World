@@ -883,10 +883,18 @@
 	}
 }
 800049 = {
-	name = "Horatio"
-	dynasty = 5000211
+	name = "Jackson"
+	dynasty = 5024060
 	religion = highmount
-	culture = hudsunite
+	culture = ny_asian
+	trait = charismatic_negotiator
+	trait = cynical
+	trait = groomed
+	trait = patient
+	trait = gregarious
+	trait = proud
+	trait = ambitious
+	disallow_random_traits = yes
 	2281.4.1 = {
 		birth = yes
 	}
@@ -1599,6 +1607,10 @@
 	father = 800090
 	2245.8.16 = {
 		birth = yes
+		create_bloodline = {
+			type = taconica_bloodline 
+			has_dlc = "Holy Fury"
+		}
 	}
 	2275.9.15 = {
 		add_friend = 800092
@@ -1739,17 +1751,20 @@
 	}
 }
 250033 = { #Prince of Taconica
-	name = "Charles"
+	name = "Charles" #Current ruler, a man keen on keeping his kingdom from heathenry
 	dynasty = 5000299
 	religion = columbian
 	culture = hudsunite
 	father = 800091
+	trait = martial_cleric
+	trait = shrewd
+	trait = diligent
+	trait = ambitious
+	trait = paranoid
+	trait = zealous
+	disallow_random_traits=yes
 	2275.9.15 = {
-		birth = yes
-		create_bloodline = {
-			type = taconica_bloodline 
-			has_dlc = "Holy Fury"
-		}
+		birth = yes		
 	}
 	2275.9.22 = {
 		effect = {	
