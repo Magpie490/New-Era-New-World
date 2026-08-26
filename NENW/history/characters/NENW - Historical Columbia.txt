@@ -544,7 +544,7 @@
 		death = yes
 	}
 }
-3400020 = { #15. President of Columbia. Came from a low class family, joining the Nation Guard at a young age, where he would prove himself during the start of the 2nd Great Crabber Rebellion, earning the respect of Ulpia Atalanta. He would lead the armies of the CRE in the conflict that lasted into the reign of Ford Washington. He took up arms after Donald Plato Bideriusfield was betrayed, becoming the President. He reformed the title of Vice President that wasn't in use after Gauis Washington, giving it to his son, he brough the Fili Idolators into the union and settled federalists in Delaware to stop any future rebellion. He managed to achive a stalemate in the Battle of Fredricksburg against Ulysses Hunt, building the Memnonian Walls around Washington, he died in his sleep.
+3400020 = { #15. President of Columbia. Came from a low class family, joining the Nation Guard at a young age, where he would prove himself during the start of the 2nd Great Crabber Rebellion, earning the respect of Ulpia Atalanta. He would lead the armies of the CRE in the conflict that lasted into the reign of Ford Washington. He took up arms after Donald Plato Baldwin-Garfield was betrayed, becoming the President. He reformed the title of Vice President that wasn't in use after Gauis Washington, giving it to his son, he brough the Fili Idolators into the union and settled federalists in Delaware to stop any future rebellion. He managed to achive a stalemate in the Battle of Fredricksburg against Ulysses Hunt, building the Memnonian Walls around Washington, he died in his sleep.
 	name = "Nahum Memnon"
 	dynasty = 5000168 #Yohannes
 	religion=constitutional
@@ -579,9 +579,9 @@
 }
 3400021 = { #13. President, mentor of Nahum Memnon, governor of delaware, was elected president by the senate but was assassinated by his political rival.
 	name = "Donald Plato"
-	dynasty = 5000166 #Bideriusfield
+	dynasty = 5000166 #Baldwin-Garfield
 	religion=constitutional
-	culture=federalist
+	culture=newfindler
     diplomacy=8
     martial=1
     stewardship=6
@@ -595,6 +595,11 @@
     disallow_random_traits = yes
 	2046.2.1 = {
 		birth = yes
+		create_bloodline = {
+			type = president_scion
+			has_dlc = "Holy Fury"
+		}
+		culture = "federalist"
 	}
 	2107.8.13 = {
 		death = yes
@@ -620,6 +625,200 @@
 		birth = yes
 	}
 	2107.12.25 = {
+		death = yes
+	}
+}
+
+3400023 = {
+	name = "Norman Quintus" #Son of Donald Plato, lived a relatively obscure life as a typical bureaucrat
+	dynasty = 5000166 #Baldwin-Garfield
+	religion=constitutional
+	culture=newfindler
+    father=3400021
+    trait=thrifty_clerk
+    trait=lefthanded
+    trait=dull
+	trait=content
+	trait=democrat_sen
+    disallow_random_traits = yes
+	2083.3.11 = {
+		birth = yes
+		culture = "federalist"
+	}
+	2140.5.1 = {
+		death = yes
+	}
+}
+
+3400024 = {
+	name = "Cincinnatus Schuyler" #Son of Norman Quintus, a footnote in the history of Delaware
+	dynasty = 5000166 #Baldwin-Garfield
+	religion=constitutional
+	culture=newfindler
+    father=3400023
+    trait=republican_sen
+   	2109.7.4 = {
+		birth = yes
+		culture = "federalist"
+	}
+	2160.2.11 = {
+		death = yes
+	}
+}
+
+3400025 = {
+	name = "Henry Ogden" #Son of Cincinnatus Schuyler, a footnote in the history of Delaware
+	dynasty = 5000166 #Baldwin-Garfield
+	religion=constitutional
+	culture=newfindler
+    father=3400024
+    trait=republican_sen
+   	2140.5.2 = {
+		birth = yes
+		culture = "federalist"
+	}
+	2205.11.2 = {
+		death = yes
+	}
+}
+
+3400026 = {
+	name = "Eric William" #Son of Henry Ogden, a footnote in the history of Delaware aside from living a long life
+	dynasty = 5000166 #Baldwin-Garfield
+	religion=constitutional
+	culture=newfindler
+    father=3400025
+    trait=democrat_sen
+   	2166.9.3 = {
+		birth = yes
+		culture = "federalist"
+	}
+	2249.1.20 = {
+		death = yes
+	}
+}
+
+3400027 = {
+	name = "Leonidas Hayes" #Son of Eric William, an easily amused man known for his odd habits
+	dynasty = 5000166 #Baldwin-Garfield
+	religion=constitutional
+	culture=newfindler
+    father=3400026
+    trait=naive_appeaser
+    trait=eccentric
+    trait=gamer
+	trait=kind
+	trait=democrat_sen
+    disallow_random_traits = yes
+   	2200.8.1 = {
+		birth = yes
+		culture = "federalist"
+	}
+	2280.6.5 = {
+		death = yes
+	}
+}
+
+3400028 = {
+	name = "Benjamin Yacob" #Son of Nahum Memnon, became Vice President as bestowed by his father. However, was unable to push his ambitions further due to lack of support. Lived the rest of his live on his remote estate
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400020
+	trait=underhanded_rogue
+	trait=administrator
+	trait=tall
+	trait=diligent
+	trait=envious
+	trait=ambitious
+	trait=paranoid
+	trait=zealous
+	trait=democrat_sen
+    disallow_random_traits = yes
+	2105.7.12 = {
+		birth = yes
+	}
+	2180.7.16 = {
+		death = yes
+	}
+}
+
+3400029 = {
+	name = "Gabriel Actisanes" #Son of Benjamin Yacob, a figure of little note
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400028
+	trait=republican_sen
+	trait=tall   
+	2127.9.20 = {
+		birth = yes
+	}
+	2201.4.1 = {
+		death = yes
+	}
+}
+
+3400030 = {
+	name = "Meneclus Dinaw" #Son of Gabriel Actisanes, a figure of little note
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400029
+	trait=republican_sen
+	trait=tall   
+	2158.9.10 = {
+		birth = yes
+	}
+	2213.4.1 = {
+		death = yes
+	}
+}
+
+3400031 = {
+	name = "Samuel Thorton" #Son of Meneclus Dinaw, a scholar and steward of his family history
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400030
+	trait=republican_sen
+	trait=tall   
+	2187.12.2 = {
+		birth = yes
+	}
+	2228.3.9 = {
+		death = yes
+	}
+}
+
+3400032 = {
+	name = "Girmay Ebrahim" #Son of Samuel Thorton, a mysterious figure of little note
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400031
+	trait=republican_sen
+	trait=tall   
+	2207.12.2 = {
+		birth = yes
+	}
+	2259.3.10 = {
+		death = yes
+	}
+}
+
+3400033 = {
+	name = "Adam Teshome" #Son of Girmay Ebrahim, a mysterious figure of little note
+	dynasty = 5000168 #Yohannes
+	religion=constitutional
+	culture=amherican
+    father=3400032
+	trait=republican_sen
+	trait=tall   
+	2238.11.11 = {
+		birth = yes
+	}
+	2301.3.1 = {
 		death = yes
 	}
 }
