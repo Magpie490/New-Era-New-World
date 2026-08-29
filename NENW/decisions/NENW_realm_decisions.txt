@@ -1482,8 +1482,7 @@ decisions = {
 				culture = catskiller
 				culture = hudsunite
 				culture = finger_laker
-				culture = adirondacker
-				culture = ny_asian
+				culture = adirondacker				
 			}
 			e_nys = {
 				is_titular = yes
@@ -1515,6 +1514,95 @@ decisions = {
 			k_upstachia = { de_jure_liege = e_nys }
 		}
 	}
+	
+	form_chineseny = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			culture = ny_asian
+			e_nys = {
+				has_holder = no
+			}
+			e_ny_asian = {
+				has_holder = no
+			}
+			NOT = {
+				religion = constitutional
+			}			
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control Californian Kingdoms
+			completely_controls = k_taconica
+			completely_controls = k_new_york
+			completely_controls = k_buffalo
+			completely_controls = k_adirondack
+			completely_controls = k_upstachia
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_chineseny_tt
+				e_chinafornia = {
+					gain_title_effect = yes
+					make_primary_title = yes
+				}
+			}			
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = california_female
+				}
+				new_bloodline = {
+					set_description = "california_female_desc"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = california_male
+				}
+				new_bloodline = {
+					set_description = "california_male_desc"
+				}
+			}
+			set_government_type = mandate_heaven
+			e_ny_asian = {
+				add_law = ze_administration_laws_2
+				add_law = vice_royalty_2
+				add_law = succ_dynastic_meritocratic
+			}
+			hidden_tooltip = {
+				###New York unites!
+				k_taconica = { de_jure_liege = e_ny_asian }
+				k_new_york = { de_jure_liege = e_ny_asian }
+				k_buffalo = { de_jure_liege = e_ny_asian }
+				k_adirondack = { de_jure_liege = e_ny_asian }
+				k_upstachia = { de_jure_liege = e_ny_asian }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	form_new_england = {
 		is_high_prio = yes
 		only_playable = yes
