@@ -65,6 +65,27 @@ e_canada = {
 	kanadoi = "Kanadás"
 	minoan = "Kanadás"
 }
+
+e_ny_asian = {
+	color={ 20 75 85 }
+	color2={ 60 100 160 }
+
+	capital = 3 # Manhattan
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_ny_asian = {
+					is_titular = yes
+				}
+			}
+			e_ny_asian = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 e_texas = {
 	color = { 12 51 127 }
 	color2= { 255 255 20 }
