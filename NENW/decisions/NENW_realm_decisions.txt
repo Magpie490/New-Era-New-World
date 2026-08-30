@@ -1540,7 +1540,7 @@ decisions = {
 				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
 			}
 			form_empire_allow = yes
-			#Control Californian Kingdoms
+			#Control NY Kingdoms
 			completely_controls = k_taconica
 			completely_controls = k_new_york
 			completely_controls = k_buffalo
@@ -1551,35 +1551,11 @@ decisions = {
 		effect = {
 			custom_tooltip = {
 				text = form_chineseny_tt
-				e_chinafornia = {
+				e_ny_asian = {
 					gain_title_effect = yes
 					make_primary_title = yes
 				}
 			}			
-			if = {
-				limit = {
-					is_female = yes
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = california_female
-				}
-				new_bloodline = {
-					set_description = "california_female_desc"
-				}
-			}
-			if = {
-				limit = {
-					is_female = no
-					has_dlc = "Holy Fury"
-				}
-				create_bloodline = {
-					type = california_male
-				}
-				new_bloodline = {
-					set_description = "california_male_desc"
-				}
-			}
 			set_government_type = mandate_heaven
 			e_ny_asian = {
 				add_law = ze_administration_laws_2
