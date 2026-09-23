@@ -246,23 +246,6 @@ government_flavor = {
 		has_law = succ_monastic_elective
 		NOT = { government = order_government }
 		NOT = { government = calvinist_government }
-		NOT = { has_landed_title = d_athos }
-		NOT = { has_landed_title = k_athos }
-	}
-}
-
-government_flavor = {
-	name = gov_monastic_athos
-	graphics = GFX_evt_icon
-	priority = 2
-	trigger = {
-	  OR = {
-		has_landed_title = k_athos
-		has_landed_title = d_athos
-		}
-		has_law = succ_monastic_elective
-		NOT = { government = order_government }
-		NOT = { government = calvinist_government }
 	}
 }
 
