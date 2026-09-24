@@ -511,9 +511,6 @@ monastic_elective = {
 					FROMFROM = { holder_scope = { government = calvinist_government } }
 				}
 				AND = {
-					FROMFROM = { holder_scope = { OR = { primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
-				}
-				AND = {
 					FROMFROM = {
 						OR = {
 						title = d_knights_lazarus
@@ -1570,7 +1567,7 @@ monastic_elective = {
 			FROM = { 
 				trait = bastard
 			}
-			FROMFROM = { holder_scope = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } } }
+			FROMFROM = { holder_scope = { NOT = { government = order_government } } }
 		}
 		additive_modifier = {
 			value = 10
@@ -3708,7 +3705,6 @@ monastic_elective = {
 					OR = {
 						ROOT = { higher_tier_than = BARON }
 						government = order_government
-						primary_title = { title = d_athos } primary_title = { title = k_athos }
 					}
 				}
 				spouse = {
@@ -3737,14 +3733,6 @@ monastic_elective = {
 					}
 					has_minor_title = title_court_physician
 				}
-				AND = {
-					ROOT_FROMFROM = {
-						OR = {
-						title = d_athos
-						title = k_athos
-						}
-					}
-				}
 			}
 			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
 				AND = {
@@ -3768,7 +3756,7 @@ monastic_elective = {
 			}
 			OR = {
 				is_adult = yes
-				ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
+				ROOT = { NOT = { government = order_government } }
 			}
 			religion = ROOT
 			NOR = {
@@ -3780,7 +3768,7 @@ monastic_elective = {
 				AND = {
 					trait = bastard 
 					is_ruler = no
-					ROOT = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } }
+					ROOT = { NOT = { government = order_government } }
 				}
 			}
 		}		
@@ -5279,7 +5267,7 @@ monastic_elective_2 = {
 			FROM = { 
 				trait = bastard
 			}
-			FROMFROM = { holder_scope = { NOT = { OR = { government = order_government primary_title = { title = d_athos } primary_title = { title = k_athos } } } } }
+			FROMFROM = { holder_scope = { NOT = { government = order_government } } }
 		}
 		additive_modifier = {
 			value = 10
