@@ -65,7 +65,6 @@ e_canada = {
 	kanadoi = "Kanadás"
 	minoan = "Kanadás"
 }
-
 e_ny_asian = {
 	color={ 20 75 85 }
 	color2={ 60 100 160 }
@@ -85,7 +84,6 @@ e_ny_asian = {
 		}
 	}
 }
-
 e_texas = {
 	color = { 12 51 127 }
 	color2= { 255 255 20 }
@@ -149,7 +147,6 @@ e_port_au_prince = {
 	andalu = "Puerto Prínçipe"
 	antillais = "Pòtoprens"
 	haitian = "Pòtoprens"
-	venteux = "Pòtoprens"
 	kairebiyan = "Port-o-Prins"
 	florintoi = "Por-o-Prens"
 	fluridani = "Burt 'aw Brans"
@@ -313,8 +310,12 @@ e_new_england = {
 	color2={ 220 220 0 }
 	capital = 69
 	
-	quebecois = "Nouvelle Angleterre" 
+	quebecois = "Nouvelle Angleterre"
+	aroostois = "Nouvelle Angleterre"
+	taconinach = "Sasana Nua"
+	proviguese = "Nova Inglaterra"
 	somali = "Cusub Ingiriiska"
+	
 	
 	allow = {
 		conditional_tooltip = {
@@ -368,7 +369,7 @@ e_great_lakes = {
 	capital = 170 #Chicago
 	
 	somali = "Harooyinka Weyn"
-	jugoslavinski = "Velikih Jezera"
+	jugoslavenski = "Velikih Jezera"
 	miami = "Kihcikama"
 	chippewa = "Nayaano-nibiimaang Gichigamiin"
 	odawa = "Nayaano-nibiimaang Gichigamiin"
@@ -376,7 +377,7 @@ e_great_lakes = {
 	menominee = "Nayaano-nibiimaang Gichigamiin"
 	mishyghani = "Al-Buhayrat al-Euzmaa"
 	brebharnach = "Na Lochanna Móra"
-	ameropolish = "Wielkie Jeziora"
+	ameropolski = "Wielkie Jeziora"
 	intianoi = "Megáles Límnes"
 	quebecois = "Les Grands Lacs"
 	
@@ -401,6 +402,9 @@ e_carolina = {
 	title = "HIGH_KING_TITLE"
 	title_female = "HIGH_KING_TITLE_FEMALE"
 	title_prefix = "HIGH_KING_TITLE_OF"
+	
+	karulaynasi = "Karulayna"
+	farsi = "Karolinaye"
 	
 	allow = {
 		conditional_tooltip = {
@@ -445,7 +449,8 @@ e_pennsylvania = {
 	
 	czexan = "Pensylvánie"
 	czeskoslovensky = "Pensylvánie"
-	ameropolish = "Pensylwania"
+	pennsilfaanisch = "Pennsilfaani"
+	ameropolski = "Pensylwania"
 	
 	allow = {
 		conditional_tooltip = {
@@ -478,6 +483,16 @@ e_florida = {
 	florintoi = "Flórinta"
 	intianoi = "Flórinta"
 	fluridani = "Flurida"
+	seminole = "Ekvn-Fvske" # Muscogee-Creek dictionary word for Florida, pronounced k'an-fask-eh
+	muskogee = "Ekvn-Fvske"
+	nigerian = "Fèlórídà" # realistically this and the others below will never happen, but since we have the kingdom title already
+	antillais = "Fwowid"
+	haitian = "Florid"
+	kairebiyan = "Phlorida"
+	bahamian = "Florida"
+	caribbanglo = "Flarida"
+	jamaican = "Flarida"
+	raizal = "Flarida"
 	
 	allow = {
 		conditional_tooltip = {
@@ -551,6 +566,15 @@ e_nys = {
 	capital = 10 # Albany
 	short_name = yes
 	
+	chamerian = "Shteti Perandori"
+	lietuvin = "Imperijos Valstybe"
+	lungano = "Lu Statu 'Mpiru"
+	taconinach = "An Stát Impireachta"
+	arhavi = "Di Imferye Shtat"
+	mizrahi = "Medinat Ha'Impria"
+	misryeen = "Wilayat al-Imbiraturih"
+	ny_turkish = "Imparatorluk Devleti"
+	
 	allow = {
 		conditional_tooltip = {
 			trigger = {
@@ -573,6 +597,7 @@ e_usa = {
 	haida = "T'áagwaa Tlagáay"
 	hmong = "Koom Siab Teb Amelika"
 	somali = "Wadanka Maraykanka"
+	kreyol = "Létazini"
 	
 	title = "PRESIDENT_COLUMB"
 	foa = "PRESIDENT_COLUMB_FOA"
@@ -596,6 +621,10 @@ e_boswash = {
 	color2 = { 220 220 220 }
 	
 	capital = 63 #Washington
+	
+	chamerian = "Bosuash"
+	misryeen = "Buswash"
+	arhavi = "Bosvash"
 	
 	allow = {
 		conditional_tooltip = {
@@ -626,21 +655,22 @@ e_mississippi = {
 	caddo = "Báhat Sássin" # mother of rivers
 	arapaho = "Beesniicíe"
 	koasati = "Hahcicobá"
-	lakota = "Haháwakpa" # rive of the falls
+	lakota = "Haháwakpa" # river of the falls
 	dakota = "Mninšošethaka"
-	pawnee = "Kickaátit"
 	fox = "Mäse’sibowi"
 	cheyenne = "Ma’xeé’ome’tää’e" # big, greasy river
 	miami = "Mihcisiipiiwi"
 	chippewa = "Misi-Ziibi"
 	menominee = "Maehsesepew"
 	choctaw = "Misha Sipokni"
-	cherokee = "Misisiqui Uweyv"
+	anigiduwagi = "Misisiqui Uweyv"
 	quapaw = "Ny-tonks"
 	mohawk = "Kanien’kéha'"
-	wyandot = "Yandawezue"
+	huron = "Yandawezue"
 	kiowa = "Xósáu"
 	winnebago = "Nioxete"
+	kreyol = "Méchassébbi"
+	kurdish_american = "Mîsîsîpî"
 
 	allow = {
 		conditional_tooltip = {
@@ -659,7 +689,9 @@ e_new_afrika = {
 	color = { 0 133 63 }
 	color2 = { 220 220 220 }
 	
-	capital = 1128 # Jackson
+	capital = 1128
+	
+	mascogo = "Nueva Áfrika"
 	
 	allow = {
 		conditional_tooltip = {
@@ -678,7 +710,7 @@ e_wabanakia = {
 	color = { 253 138 18 }
 	color2 = { 220 220 220 }
 	
-	capital = 3696 # Houlton
+	capital = 3696
 	
 	penobscot = "wôbanakiak" # Penobscot does not capitalize proper nouns
 	mikmaq = "Wapna'kiyik"
@@ -744,13 +776,17 @@ e_oceti_sakowin = {
 	}
 }
 e_iron_confederacy = {
-	color = { 220 20 60 }
+	color = { 97 101 105 }
 	color2 = { 255 255 255 }
 	
 	capital = 486 # Fort Peck
 	short_name = yes
 	
-	cree = "Nehiyaw-Pwat"
+	assiniboine = "Nehiyaw-Pwat"
+	plains_cree = "Nehiyaw-Pwat"
+	michif = "Nehiyaw-Pwat"
+	nakoda = "Nehiyaw-Pwat"
+	saulteaux = "Nehiyaw-Pwat"
 	
 	allow = {
 		conditional_tooltip = {
@@ -772,7 +808,10 @@ e_haudenosaunee = {
 	capital = 21 # Cortland
 	short_name = yes
 	
+	cayuga = "Hodinohso´:nih"
 	mohawk = "Rotinonhsión:ni"
+	oneida = "Lotinuhsyu·ni'"
+	onandaga = "Ganuhcyu´·nih"
 	seneca = "Hodínöhšö:ni:h"
 	
 	allow = {
@@ -794,7 +833,7 @@ e_lenape = {
 		
 	capital = 27
 	
-	lenape = "Lenapehoking"
+	lenape = "Lënapehòkink"
 		
 	allow = {
 		conditional_tooltip = {
@@ -1093,7 +1132,6 @@ e_north_american_union = { #Formable Continental Empire. Good Luck
 e_el_norte = {
 	color = { 226 93 93 }
 	color2 = { 220 220 220 }
-
 	capital = 3005 # Culiacan
 	
 	allow = {
@@ -1136,7 +1174,7 @@ e_usna = {
 	
 	capital = 63 # Washington
 
-	haida="T'áagwaa Tlagáay"
+	haida = "T'áagwaa Tlagáay"
 	
 	title = "PRESIDENT_COLUMB"
 	foa = "PRESIDENT_COLUMB_FOA"
