@@ -232,35 +232,35 @@ spriteTypes = {
 		can_be_lowres = yes
 	}
 
-	portraitType = { #Portraits - Male
-		effectFile = "gfx/FX/portrait.lua"
-		name = "PORTRAIT_french_ruler_male"
-		
-		weight = {
-			additive_modifier = {
-				value = 10000
-				portrait_age > child
-				portrait_is_female = no
-				portrait_clothing = yes
-				OR = {
-
-					portrait_culture = kreyol
-
-
-				}
-#				NOT = { portrait_government = theocracy_government }
-			}
-		}
-		
-		layer = { 
-			"GFX_frankish_male_clothes_behind_early:p3:c0"
-			"GFX_frankish_male_headgear_behind_early:p5:c1"
-			"GFX_frankish_male_clothes_early:p3:c2"
-			"GFX_frankish_male_headgear_early:p5:c5"
-		}
-		
-		headgear_that_hides_hair = { 10 }
-	}
+#	portraitType = { #Portraits - Male
+#		effectFile = "gfx/FX/portrait.lua"
+#		name = "PORTRAIT_french_ruler_male"
+#		
+#		weight = {
+#			additive_modifier = {
+#				value = 10000
+#				portrait_age > child
+#				portrait_is_female = no
+#				portrait_clothing = yes
+#				OR = {
+#
+#					portrait_culture = kreyol
+#
+#
+#				}
+##				NOT = { portrait_government = theocracy_government }
+	#		}
+	#	}
+#		
+#		layer = { 
+#			"GFX_frankish_male_clothes_behind_early:p3:c0"
+#			"GFX_frankish_male_headgear_behind_early:p5:c1"
+#			"GFX_frankish_male_clothes_early:p3:c2"
+#			"GFX_frankish_male_headgear_early:p5:c5"
+#		}
+#		
+#		headgear_that_hides_hair = { 10 }
+#	}
 	
 	portraitType = { #Portraits - Female
 		effectFile = "gfx/FX/portrait.lua"

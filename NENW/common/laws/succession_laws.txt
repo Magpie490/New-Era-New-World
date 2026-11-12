@@ -102,19 +102,12 @@ succession_laws = {
 					}
 				}
 				NOR = { 
-					religion = jacobinist
-					religion = sarvodaya
 					religion_group = muslim	
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice	
-					has_religion_feature = religion_feature_celtic
-					has_religion_feature = religion_feature_satsana_phi
+					has_religion_feature = religion_feature_celtic2				
 					has_religion_feature = religion_feature_gator
 				}
 				is_merchant_republic = no
@@ -147,6 +140,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = confederation_government } }
 			NOT = { holder_scope = { government = holymexico_government } }
 			#NOT = { holder_scope = { government = calvinist_government } }
+			#NOT = { holder_scope = { government = technocratic_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
 		}
@@ -225,19 +219,12 @@ succession_laws = {
 					}
 				}
 				NOR = { 
-					religion = jacobinist
-					religion_group = muslim 
-					religion = sarvodaya
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
+					religion_group = muslim 					
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
-					has_religion_feature = religion_feature_satsana_phi
+					has_religion_feature = religion_feature_celtic2		
 					has_religion_feature = religion_feature_gator
 				}
 				is_merchant_republic = no		
@@ -271,10 +258,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = holymexico_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
-			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { has_landed_title = d_athos } }
-			NOT = { holder_scope = { has_landed_title = k_athos } }
-			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { government = order_government } }						
 		}
 		allow = {
 			conditional_tooltip = {
@@ -339,28 +323,19 @@ succession_laws = {
 			}
 			holder_scope = {
 				OR = {
-					has_landed_title = d_athos
-					has_landed_title = k_athos
 					AND = {
 						is_tribal = yes
 						religion = folklorist
 					}
-					religion = alukta_pagan
-					religion = alukta_pagan_reformed
 					religion = donyipolo
 					religion = kiratist
 					religion = anishinaabe
 					religion = anishinaabe_reformed
-					religion = maoist
-					religion = ovlatii
 					religion = voodun
 					religion = haiti_voodoo
 					religion = hoodoo
-					religion = xinjiao
 					religion = zoroastrian
 					religion = neo_zorvanite
-					religion = taoist
-					religion = white_lotus
 					religion = loyalist
 					religion = madonnite
 					religion = santeria
@@ -369,7 +344,7 @@ succession_laws = {
 					religion = illustrious
 					religion = gibborim
 					has_religion_feature = religion_beatification
-					has_religion_feature = religion_feature_novelist
+					has_religion_feature = religion_feature_novelist_2
 					religion = gaian
 					religion = luddite
 					religion = arcadian
@@ -378,8 +353,6 @@ succession_laws = {
 					has_religion_feature = religion_feature_anishinaabe
 					has_religion_feature = religion_feature_celtic2
 					religion = sanamahist
-					has_religion_feature = religion_feature_baltic
-					has_religion_feature = religion_feature_folklorist
 					has_religion_feature = religion_feature_folklorist_2
 					has_religion_feature = religion_feature_sarna
 					has_religion_feature = religion_feature_delver
@@ -401,17 +374,10 @@ succession_laws = {
 				}
 				NOR = { 
 					religion_group = muslim 
-					religion = jacobinist
-					religion = sarvodaya
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
 					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_feature_gator
 					has_religion_feature = religion_matriarchal
@@ -457,28 +423,19 @@ succession_laws = {
 				}
 				holder_scope = {
 					OR = {
-						has_landed_title = d_athos
-						has_landed_title = k_athos
 						AND = {
 							is_tribal = yes
 							religion = folklorist
 						}
-						religion = alukta_pagan
-						religion = alukta_pagan_reformed
-						religion = kiratist
 						religion = donyipolo
+						religion = kiratist
 						religion = anishinaabe
 						religion = anishinaabe_reformed
-						religion = maoist
-						religion = ovlatii
 						religion = voodun
 						religion = haiti_voodoo
 						religion = hoodoo
-						religion = xinjiao
 						religion = zoroastrian
 						religion = neo_zorvanite
-						religion = taoist
-						religion = white_lotus
 						religion = loyalist
 						religion = madonnite			
 						religion = gaian
@@ -490,12 +447,10 @@ succession_laws = {
 						religion = illustrious
 						religion = gibborim
 						has_religion_feature = religion_beatification
-						has_religion_feature = religion_feature_novelist
+						has_religion_feature = religion_feature_novelist_2
 						has_religion_feature = religion_feature_anishinaabe
 						has_religion_feature = religion_feature_celtic2
 						religion = sanamahist
-						has_religion_feature = religion_feature_baltic
-						has_religion_feature = religion_feature_folklorist
 						has_religion_feature = religion_feature_folklorist_2
 						has_religion_feature = religion_feature_delver
 						religion = quaker
@@ -563,20 +518,13 @@ succession_laws = {
                 OR = {
                     NOR = {
 					religion_group = muslim
-					religion = jacobinist
-					religion = sarvodaya
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
-					has_religion_feature = religion_feature_satsana_phi
+					has_religion_feature = religion_feature_celtic2				
 					has_religion_feature = religion_feature_gator
-						religion_group = indian_group 
+					religion_group = indian_group 
 					}
                     is_patrician = yes
                 }
@@ -584,7 +532,6 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					is_reformed_religion = yes
-					religion = hellenic_pagan
 					religion = novelist
 					is_patrician = yes
 				}
@@ -629,8 +576,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = holymexico_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
-			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			NOT = { holder_scope = { government = order_government } }						
 		}
 		
 		allow = {
@@ -738,7 +684,7 @@ succession_laws = {
 					religion = juggalo
 					religion = eucharistic
 					religion_scope = { has_religion_feature = religion_ritual_sacrifice  }
-					religion_scope = { has_religion_feature = religion_feature_celtic }
+					religion_scope = { has_religion_feature = religion_feature_celtic2 }
 					religion_scope = { has_religion_feature = religion_feature_gator }
 				}
 				is_merchant_republic = no
@@ -790,7 +736,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
+			#NOT = { holder_scope = { controls_religion = no higher_tier_than = BARON is_patrician = no is_feudal = yes } }			
 		}
 		allow = {
 			conditional_tooltip = {
@@ -912,17 +858,12 @@ succession_laws = {
 				}
 				OR = {
 					NOR = { 
-						religion_group = muslim
-						religion = jacobinist
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
+					religion_group = muslim
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
+					has_religion_feature = religion_feature_celtic2
 					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_feature_gator
 						#religion_group = indian_group
@@ -942,7 +883,6 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					is_reformed_religion = yes
-					religion = hellenic_pagan
 					religion = novelist
 					has_law = succession_voting_power_1
 					OR = { 
@@ -1076,20 +1016,14 @@ succession_laws = {
 				OR = {
 					NOR = { 
 						religion_group = muslim
-						religion = jacobinist
-					religion = titoist	
-					religion = sarvodaya
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
+					has_religion_feature = religion_feature_celtic2
 					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_feature_gator
-						religion_group = indian_group
+						#religion_group = indian_group
 					}
 					government = confederation_government
 					has_law = succession_voting_power_1
@@ -1181,7 +1115,7 @@ succession_laws = {
 				}
 				NOR = {
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
+					has_religion_feature = religion_feature_celtic2
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -1401,21 +1335,14 @@ succession_laws = {
 				}
 				NOR = {
 					religion_group = muslim
-					religion = jacobinist
-					religion = titoist	
-					religion = sarvodaya
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
+					has_religion_feature = religion_feature_celtic2
 					has_religion_feature = religion_feature_satsana_phi
 				}
 				is_merchant_republic = no					
 				is_patrician = no
 				OR = {
 					government = agrarian_feudal_government
-					culture_group = goidelic
 					religion = ardentist
 					culture_group = brythonic
 					culture_group = amero_goidelic
@@ -1448,7 +1375,6 @@ succession_laws = {
 			OR = {
 				holder_scope = {
 					OR = {
-						culture_group = goidelic
 						culture_group = brythonic
 						culture_group = amero_goidelic
 						culture_group = appalachian_group
@@ -1563,17 +1489,11 @@ succession_laws = {
 				}
 				
 				NOR = { religion_group = muslim
-						religion = jacobinist
-					religion = titoist	
-					religion = sarvodaya
-					religion = stalinist
-					religion = trotskyite	
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
+					has_religion_feature = religion_feature_celtic2
 					has_religion_feature = religion_feature_satsana_phi
 					has_religion_feature = religion_feature_gator
 				}
@@ -1817,17 +1737,11 @@ succession_laws = {
 		potential = {
 			holder_scope = {
 				OR = {
-					religion = jacobinist
-					religion = titoist	
-					religion = stalinist
-					religion = trotskyite
-					religion = red_cult
 					religion = marked
 					religion = juggalo
 					religion = eucharistic
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_celtic
-					has_religion_feature = religion_feature_satsana_phi
+					has_religion_feature = religion_feature_celtic2
 					has_religion_feature = religion_feature_gator
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_phonocratic
@@ -1896,8 +1810,7 @@ succession_laws = {
 				OR = {
 					AND = {
 						OR = {
-							religion = deobandi
-							religion = mesopotamian
+							religion = salihi							
 						}
 						is_theocracy = no
 					}
@@ -2016,9 +1929,7 @@ succession_laws = {
 					AND = {
 						holy_order = yes
 						government = order_government
-					}
-					has_landed_title = k_athos
-					has_landed_title = d_athos
+					}					
 				}
 			}
 			NOT = { holder_scope = { government = feudal_government } }
@@ -2116,13 +2027,8 @@ succession_laws = {
 				title = k_papacy
 				title = k_gallicanist
 				title = d_fraticelli
-				title = d_gelugpa
-				title = k_serbia_triumvirate
 				title = d_thaddean
-				title = e_juche
-				title = d_cao_dai
-				title = k_katoliko
-				title = k_aglipayan
+				title = d_cao_dai				
 			}
 			temporary = no
 			NAND = {
@@ -2182,9 +2088,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
 			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { government = tribal_government } }
-			NOT = { holder_scope = { has_landed_title = d_athos } }
-			NOT = { holder_scope = { has_landed_title = k_athos } }
+			NOT = { holder_scope = { government = tribal_government } }			
 		}
 		
 		effect = {
@@ -2215,30 +2119,18 @@ succession_laws = {
 					}
 				}
 				OR = {
-					has_landed_title = e_german_confederation
-					has_landed_title = e_karnataka
 					has_landed_title = k_cree_confed
 					has_landed_title = k_upnord_confederation
-					has_landed_title = e_grand_council_oklahoma
-					has_landed_title = e_aegean
-					has_landed_title = e_kedah
-					has_landed_title = k_kawthoolei
-					has_landed_title = k_kimberlian_confederacy
+					has_landed_title = e_grand_council_oklahoma					
 				}
 				OR = {
 					NOR = { 
 						#religion_group = muslim
-						religion = jacobinist
-						religion = titoist	
-						religion = stalinist
-						religion = trotskyite	
-						religion = red_cult
 						religion = marked
 						religion = juggalo
 						religion = eucharistic
 						has_religion_feature = religion_ritual_sacrifice
-						has_religion_feature = religion_feature_celtic
-						has_religion_feature = religion_feature_satsana_phi
+						has_religion_feature = religion_feature_celtic2
 						has_religion_feature = religion_feature_gator
 						#religion_group = indian_group
 					}
@@ -2328,9 +2220,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = holymexico_government } }
 			NOT = { holder_scope = { government = calvinist_government } }
 			NOT = { holder_scope = { government = theodemocratic } }
-			NOT = { holder_scope = { government = order_government } }
-			NOT = { holder_scope = { has_landed_title = d_athos } }
-			NOT = { holder_scope = { has_landed_title = k_athos } }
+			NOT = { holder_scope = { government = order_government } }			
 		}
 		effect = {
 			succession = catholic_bishopric
@@ -2571,7 +2461,6 @@ gender_laws = {
 						has_religion_feature = religion_equal
 						AND = {
 							OR = {
-								religion = katerinist
 								religion = gaian
 								religion = raelian
 							}
@@ -2639,7 +2528,6 @@ gender_laws = {
 						has_religion_feature = religion_equal
 						AND = {
 							OR = {
-								religion = katerinist
 								religion = gaian
 								religion = raelian
 							}
@@ -2707,7 +2595,6 @@ gender_laws = {
 			holder_scope = {
 				OR = {
 					has_religion_feature = religion_matriarchal
-					religion = katerinist
 					religion = gaian
 					religion = raelian
 					religion = dianic
@@ -2727,7 +2614,6 @@ gender_laws = {
 				holder_scope = {
 					AND = {
 						OR = {
-							religion = katerinist
 							religion = gaian
 							religion = raelian
 							religion = dianic
@@ -2752,7 +2638,6 @@ gender_laws = {
 					}
 					AND = {
 						OR = {
-							religion = katerinist
 							religion = gaian
 							religion = raelian
 							religion = dianic
@@ -2782,7 +2667,6 @@ gender_laws = {
 							}
 							AND = {
 								OR = {
-									religion = katerinist
 									religion = gaian
 									religion = raelian
 									religion = dianic
@@ -2804,7 +2688,6 @@ gender_laws = {
 						}
 						AND = {
 							OR = {
-								religion = katerinist
 								religion = gaian
 								religion = raelian
 								religion = dianic

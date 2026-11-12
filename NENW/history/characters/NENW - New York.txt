@@ -883,10 +883,18 @@
 	}
 }
 800049 = {
-	name = "Horatio"
-	dynasty = 5000211
+	name = "Roderick"
+	dynasty = 5024060
 	religion = highmount
-	culture = hudsunite
+	culture = ny_asian
+	trait = charismatic_negotiator
+	trait = cynical
+	trait = groomed
+	trait = patient
+	trait = gregarious
+	trait = proud
+	trait = ambitious
+	disallow_random_traits = yes
 	2281.4.1 = {
 		birth = yes
 	}
@@ -907,13 +915,13 @@
 	}
 }
 800051 = {
-	name = "Thurman" #A duke who is proud of his Buffian heritage, symbolized by a mythical animal in blue...
+	name = "Thurman" #A warrior who is proud of his Buffian heritage, symbolized by a mythical animal in blue...
 	dynasty = 5000213 #Smith
 	religion = columbian
 	culture = buffian
-	trait = charismatic_negotiator
+	trait = tough_soldier
 	trait = groomed
-	trait = greedy
+	trait = scarred
 	trait = proud
 	trait = gregarious
 	trait = shrewd
@@ -929,10 +937,19 @@
 	}
 }
 800052 = {
-	name = "Reed"
-	dynasty = 5000214
+	name = "Norman" #A devoted scholar and follower of the columbian faith. Eager to share his theological positions to anyone who asks
+	dynasty = 5000214 #Saint-Julian
 	religion = columbian
 	culture = buffian
+	trait = scholarly_theologian
+	trait = lefthanded
+	trait = scholar
+	trait = diligent
+	trait = humble
+	trait = honest
+	trait = trusting
+	trait = zealous
+	disallow_random_traits=yes
 	2285.1.29 = {
 		birth = yes
 	}
@@ -1163,7 +1180,7 @@
 	}
 }
 800066 = {
-	name = "Jack"
+	name = "Lucius"
 	dynasty = 5000262
 	religion = columbian
 	culture = hudsunite
@@ -1180,7 +1197,7 @@
 	}
 }
 800067 = {
-	name = "Oliver"
+	name = "Pellinore" #A devoted columbian warrior claiming descent from an ancient family 
 	dynasty = 5000263
 	religion = columbian
 	culture = finger_laker
@@ -1191,6 +1208,7 @@
 	trait = trickster
 	trait = experimenter
 	trait = unyielding_leader
+	trait = sympathy_old_world_cultist
 	2285.8.23 = {
 		birth = yes
 	}
@@ -1531,7 +1549,7 @@
 		}
 	}
 }
-800088 = { #Heir of Gaoshan, interested in other things as well other then rulership
+800088 = { #Heir of Gaoshan, interested in other things as well that deviates from rulership
 	name = "Jack"
 	dynasty = 5000241
 	religion = mahayana
@@ -1599,6 +1617,10 @@
 	father = 800090
 	2245.8.16 = {
 		birth = yes
+		create_bloodline = {
+			type = taconica_bloodline 
+			has_dlc = "Holy Fury"
+		}
 	}
 	2275.9.15 = {
 		add_friend = 800092
@@ -1739,17 +1761,20 @@
 	}
 }
 250033 = { #Prince of Taconica
-	name = "Charles"
+	name = "Charles" #Current ruler, a man keen on keeping his kingdom from heathenry
 	dynasty = 5000299
 	religion = columbian
 	culture = hudsunite
 	father = 800091
+	trait = martial_cleric
+	trait = shrewd
+	trait = diligent
+	trait = ambitious
+	trait = paranoid
+	trait = zealous
+	disallow_random_traits=yes
 	2275.9.15 = {
-		birth = yes
-		create_bloodline = {
-			type = taconica_bloodline 
-			has_dlc = "Holy Fury"
-		}
+		birth = yes		
 	}
 	2275.9.22 = {
 		effect = {	
