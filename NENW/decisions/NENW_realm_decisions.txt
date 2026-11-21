@@ -4263,6 +4263,107 @@ decisions = {
 			}
 		}
 	}
+	form_new_france = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		icon = GFX_form_new_france
+		
+		potential = {
+			form_empire_potential = yes
+			e_new_france = {
+				is_titular = yes
+				has_holder = no
+			}
+			culture = caillouvian
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			completely_controls = e_maratimes
+			completely_controls = e_quebec
+			completely_controls = e_ontario
+			completely_controls = e_north_mississippi
+			completely_controls = e_south_mississippi
+			completely_controls = e_michigan
+			completely_controls = e_the_heartland
+			completely_controls = e_oklahoma
+			completely_controls = e_steel_belt
+			completely_controls = k_manitoba
+			completely_controls = k_big_sky
+			completely_controls = k_lakotah
+			completely_controls = k_wyoming
+			completely_controls = k_platte
+			completely_controls = k_kansas
+			completely_controls = k_frontrange
+			completely_controls = k_buffalo
+			completely_controls = k_adirondack
+			completely_controls = d_niagara
+		}
+		effect = {
+			hidden_tooltip = {
+				e_maratimes = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_quebec = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_ontario = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_north_mississippi = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_south_mississippi = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_michigan = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_the_heartland = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_oklahoma = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				e_steel_belt = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = e_new_france
+					}
+				}
+				k_manitoba = { de_jure_liege = e_new_france }
+				k_big_sky = { de_jure_liege = e_new_france }
+				k_lakotah = { de_jure_liege = e_new_france }
+				k_wyoming = { de_jure_liege = e_new_france }
+				k_platte = { de_jure_liege = e_new_france }
+				k_kansas = { de_jure_liege = e_new_france }
+				k_frontrange = { de_jure_liege = e_new_france }
+				k_adirondack = { de_jure_liege = e_new_france }
+				k_buffalo = { de_jure_liege = e_new_france }
+				d_niagara = { de_jure_liege = k_buffalo }
+			}
+			e_new_france = { gain_empire_effect = yes }
+		}
+	}
 
 	##HOFs
 	form_madonnite_hof = {

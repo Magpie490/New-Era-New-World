@@ -1256,6 +1256,43 @@ e_holy_north_america = {
 	short_name = yes
 }
 
+e_new_france = {
+	color = { 0 34 145 }
+	color2 = { 220 220 220 }
+	
+	capital = 1199 # Cap Diamant / Quebec City
+	
+	quebecois = "Nouvelle-France"
+	nordien = "Nouvelle-France"
+	montrealais = "Nouvelle-France"
+	ontarois = "Nouvelle-France"
+	caillouvian = "Nouvelle-France"
+	aroostois = "Nouvelle-France"
+	acadian = "Nouvelle-France"
+	rivierois = "Nouvelle-France"
+	brayonne = "Nouvelle-France"
+	darijois = "Nouvelle-France"
+	bucherons = "Nouvelle-France"
+	haitian = "Nouvelle-France"
+	antillais = "Nouvelle-France"
+	kreyol = "Nouvelle-France"
+	cajun = "Nouvelle-France"
+	illinoisais = "Nouvelle-France"
+	
+	allow = { 
+		conditional_tooltip = {
+			trigger = {
+				e_new_france = {
+					is_titular = yes
+				}
+			}
+			e_new_france = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
