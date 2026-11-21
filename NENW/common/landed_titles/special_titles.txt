@@ -1293,6 +1293,31 @@ e_new_france = {
 	}
 }
 
+e_aztec = {
+	color = { 255 127 0 }
+	color2 = { 220 220 220 }
+	
+	capital = 3067 # c_mexico
+	
+	short_name = yes
+	
+	nahuatl = "Excan Tlahtoloyan"
+	pipil = "Excan Tlahtoloyan"
+	
+	allow = { 
+		conditional_tooltip = {
+			trigger = {
+				e_aztec = {
+					is_titular = yes
+				}
+			}
+			e_aztec = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor

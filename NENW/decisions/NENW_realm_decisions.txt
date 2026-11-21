@@ -4364,6 +4364,57 @@ decisions = {
 			e_new_france = { gain_empire_effect = yes }
 		}
 	}
+	
+	form_aztec = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		icon = GFX_form_aztec
+		
+		potential = {
+			form_empire_potential = yes
+			e_aztec = {
+				is_titular = yes
+				has_holder = no
+			}
+			culture = nahuatl
+			prisoner = no
+			has_regent = no
+			NOT = {
+				religion_group = christian
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			completely_controls = k_mixteca
+			completely_controls = k_veracruz
+			completely_controls = k_guerrero
+			completely_controls = k_puebla
+			completely_controls = k_hidalgo
+			completely_controls = k_mexico
+			completely_controls = k_morelos
+			completely_controls = k_tlaxcala
+			completely_controls = d_papaloapan_OAX
+			completely_controls = d_oaxaca
+		}
+		effect = {
+			e_aztec = { gain_empire_effect = yes }
+			hidden_tooltip = {
+				k_mixteca = { de_jure_liege = e_aztec }
+				k_veracruz = { de_jure_liege = e_aztec }
+				k_guerrero = { de_jure_liege = e_aztec }
+				k_puebla = { de_jure_liege = e_aztec }
+				k_hidalgo = { de_jure_liege = e_aztec }
+				k_mexico = { de_jure_liege = e_aztec }
+				k_morelos = { de_jure_liege = e_aztec }
+				k_tlaxcala = { de_jure_liege = e_aztec }
+				d_papaloapan_OAX = { de_jure_liege = k_mixteca }
+				d_oaxaca = { de_jure_liege = k_veracruz }
+			}
+		}
+	}
 
 	##HOFs
 	form_madonnite_hof = {
