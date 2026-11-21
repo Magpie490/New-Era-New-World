@@ -4415,6 +4415,64 @@ decisions = {
 			}
 		}
 	}
+	
+	form_cuzcatlan = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			form_kingdom_potential = yes
+			k_cuzcatlan = {
+				is_titular = yes
+				has_holder = no
+			}
+			culture = pipil
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			completely_controls = d_salvador
+			prestige = 500
+		}
+		effect = {
+			k_cuzcatlan = { gain_title_effect = yes }
+			d_salvador = { de_jure_liege = k_cuzcatlan }
+		}
+	}
+	form_lenca = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		
+		potential = {
+			form_kingdom_potential = yes
+			k_lenca = {
+				is_titular = yes
+				has_holder = no
+			}
+			culture = lenca
+			prisoner = no
+			has_regent = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			completely_controls = d_san_miguel
+			completely_controls = d_choluteca
+			completely_controls = d_tegucigalpa
+		}
+		effect = {
+			k_lenca = { gain_title_effect = yes }
+			d_san_miguel = { de_jure_liege = k_lenca }
+			d_choluteca = { de_jure_liege = k_lenca }
+			d_tegucigalpa = { de_jure_liege = k_lenca }
+		}
+	}
 
 	##HOFs
 	form_madonnite_hof = {

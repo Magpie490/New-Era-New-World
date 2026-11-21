@@ -1318,6 +1318,48 @@ e_aztec = {
 	}
 }
 
+k_cuzcatlan = {
+	color = { 165 24 95 }
+	color2 = { 220 220 220 }
+	
+	capital = 3148 #San Salvador
+	
+	allow = { 
+		conditional_tooltip = {
+			trigger = {
+				k_cuzcatlan = {
+					is_titular = yes
+				}
+			}
+			k_cuzcatlan = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+k_lenca = {
+	color = { 63 63 127 }
+	color2 = { 220 220 220 }
+	
+	capital = 3161 #Tegucigalpa
+	
+	short_name = yes
+		
+	allow = { 
+		conditional_tooltip = {
+			trigger = {
+				k_lenca = {
+					is_titular = yes
+				}
+			}
+			k_lenca = {
+				is_titular = no
+			}
+		}
+	}
+}
+
 # NEOW LEFTOVERS
 
 e_china_west_governor = { #placeholder for the Chinese Empire Western Governor
