@@ -3,7 +3,13 @@ e_beecy = {
 	color2 = { 255 255 255 }
 	
 	culture = beesian
-	haida="Tlajáng"
+	
+	haida = "Tlajáng"
+	nikkeiamerikajin = "Biishii"
+	kanadajin = "Biishii"
+	cascasian = "Beisi"
+	montanum = "Bicie"
+	canadensium = "Bicie"
 	
 	capital = 548 #Vancouver
 	k_t_beecy = {
@@ -11,7 +17,10 @@ e_beecy = {
 		color2 = { 255 255 255 }
 		
 		culture = beesian
-		haida="Tlajáng"
+		haida = "Tlajáng"
+		nikkeiamerikajin = "Biishii"
+		kanadajin = "Biishii"
+		cascasian = "Beisi"
 		
 		capital = 548 #Vancouver
 		allow = {
@@ -31,15 +40,21 @@ e_beecy = {
 			color={ 133 13 9 }
 			color2={ 255 255 255 }
 			
-			haida="Xaayda"
 			capital = 3335 # Alliford Bay
 			culture = haida
 			
+			haida = "Xaayda"
+			alaskan = "Queen Charlotte Islands"
+			beesian = "Queen Charlotte Islands" # Name before 2009
+			wescoaster = "Queen Charlotte Islands"
+			cascasian = "Hahlokdahk Néuihwòhng Kwàhndóu" # translation of QCI, on account of the Anglo-Candadian influence
+			
 			d_haida = {
+			
 			color={ 178 17 17 }
 			color2={ 255 255 255 }
 			
-			haida="Xaayda Gwaay"
+			haida = "Xaayda Gwaay"
 			
 			capital = 3335 # Alliford Bay
 			
@@ -47,7 +62,9 @@ e_beecy = {
 				color={ 153 15 15 }
 				color2={ 255 255 255 }
 				
-				haida="Gamadiis"
+				haida = "Gamadiis"
+				nikkeiamerikajin = "Gamadisu"
+				kanadajin = "Gamadisu"
 				
 				holy_site = raven_tales
 				holy_site = raven_tales_reformed
@@ -72,7 +89,10 @@ e_beecy = {
 				color2={ 255 255 255 }
 				holy_site = raven_tales
 				holy_site = raven_tales_reformed
-				haida="Gwaay Haanas"
+				
+				haida = "Gwaay Haanas"
+				cascasian = "Aleihfukdak Waan"
+				nikkeiamerikajin = "Arifodo-wan"
 				
 				b_alliford_bay_alsk = {
 				}
@@ -93,9 +113,12 @@ e_beecy = {
 				color={ 127 12 12 }
 				color2={ 255 255 255 }
 				
-				haida="Hlgaagilda"
 				holy_site = raven_tales
 				holy_site = raven_tales_reformed
+				
+				haida = "Hlgaagilda"
+				beesian = "Queen Charlotte City"
+				cascasian = "Daaihjénggat Daksi"
 				
 				b_daajing_giids_alsk = {
 				}
@@ -118,7 +141,10 @@ e_beecy = {
 
 				holy_site = aurorean
 				
-				haida="Juus Káahlii"
+				haida = "Juus Káahlii"
+				nikkeiamerikajin = "Juus Káahlii"
+				kanadajin = "Juus Káahlii"
+				cascasian = "Yàuhsi Kaaleihyi"
 				
 				b_juskatla_alsk = {
 				}
@@ -139,6 +165,10 @@ e_beecy = {
 				color={ 102 10 10 }
 				color2={ 255 255 255 }
 				
+				nikkeiamerikajin = "Toreru"
+				kanadajin = "Toreru"
+				cascasian = "Dahklahk Yíh"
+				
 				b_tlell_alsk = {
 				}
 				b_anvil_alsk = {
@@ -156,13 +186,19 @@ e_beecy = {
 			}
 		}
 	}
-	k_grand_columbia = {
+	k_grand_columbia = { # Vancouver
 		color = { 42 19 191 }
 		color2 = { 0 0 206 }
 		
 		capital = 548 # Vancouver
 		
 		haida = "Yáats"
+		nikkeiamerikajin = "Bankuu"
+		kanadajin = "Vankuuvaa"
+		cascasian = "Wengehuá"
+		canjabi = "Vainkuvar"
+		montanum = "Vancuver"
+		canadensium = "Vancuver"
 		
 		d_sunshine_coast = {
 			color={ 17 31 178 }
@@ -170,10 +206,20 @@ e_beecy = {
 			
 			capital = 562 #c_sunshine_coast
 			
+			cascasian = "Yèuhnggwong Hóingohn"
+			nikkeiamerikajin = "Yoko-Kaigan"
+			kanadajin = "Yoko-Kaigan"
+			montanum = "Lit Sol"
+			canadensium = "Lit Sol"
+			
+			
 			c_powell = {
 				color = { 15 26 153 }
 				color2 = { 21 25 32 }
 				
+				nikkeiamerikajin = "Tiskuato" # After the Tla'amin name. avoids callign it Paueru
+				kanadajin = "Tiskuato"
+				cascasian = "Baauwaiyíh"
 				
 				b_powell_river_BC = {}
 				b_bliss_landing_BC = {}
@@ -187,6 +233,12 @@ e_beecy = {
 				color = { 20 35 204 }
 				color2 = { 0 2 107 }
 				
+				cascasian = "Yèuhnggwong Hóingohn"
+				nikkeiamerikajin = "Yoko-Kaigan"
+				kanadajin = "Yoko-Kaigan"
+				canjabi = "Sanasa'in Tat"
+				montanum = "Lit Sol"
+				canadensium = "Lit Sol"				
 				
 				b_gibson_BC = {}
 				b_sechelt_BC = {}
@@ -199,6 +251,12 @@ e_beecy = {
 			c_sea_to_sky = {
 				color = { 12 22 127 }
 				color2 = { 6 112 223 }
+				
+				cascasian = "Hóidóu Tin"
+				nikkeiamerikajin = "Umi To Sora"
+				kanadajin = "Umi To Sora"
+				montanum = "Mar ad Cael"
+				canadensium = "Mar ad Cael"
 								
 				b_squamish_BC = {}
 				b_pemberton_BC = {}
@@ -216,11 +274,23 @@ e_beecy = {
 			capital = 548 # Vancouver
 			
 			haida = "Gyuu" 	#Gyúu - Fishing bank
+			nikkeiamerikajin = "Bankuu"
+			kanadajin = "Vankuuvaa"
+			cascasian = "Wengehuá"
+			canjabi = "Vainkuvar"
+			montanum = "Vancuver"
+			canadensium = "Vancuver"		
 		
 			c_golden_ears_BC = {
 				color={ 55 44 178 }
 				color2={ 255 255 255 }
-			
+				
+				nikkeiamerikajin = "Oogon Mimi"
+				kanadajin = "Oogon Mimi"
+				cascasian = "Gamyíh Déu"
+				montanum = "Aures Aure"
+				canadensium = "Aures Aure"
+				
 				b_maple_ridge_BC = {}
 				b_websters_corners_BC = {}
 				b_pitt_meadows_BC = {}
@@ -240,6 +310,13 @@ e_beecy = {
 				holy_site = doukhobor
 				holy_site = shinto
 				
+				nikkeiamerikajin = "Bankuu"
+				kanadajin = "Vankuuvaa"
+				cascasian = "Wengehuá"
+				canjabi = "Vainkuvar"
+				montanum = "Vancuver"
+				canadensium = "Vancuver"			
+				
 				b_vancouver_BC = {}
 				b_surrey_BC = {}
 				b_richmond_BC = {}
@@ -251,6 +328,11 @@ e_beecy = {
 			c_abbotsford_BC = {
 				color={ 47 38 153 }
 				color2={ 255 255 255 }
+				
+				nikkeiamerikajin = "Abottsufodo"
+				kanadajin = "Abottsufodo"
+				cascasian = "Abaakchìhfukdak"
+				canjabi = "Aibatasphorad"
 			
 				b_abbotsford_BCbc = {}
 				b_lummi_WA = {}
@@ -268,12 +350,24 @@ e_beecy = {
 			capital = 547 #Bellingham Bay
 
 			culture = beesian
+			
+			dakelh = "Lhtakoh"
+			chilcotin = "?Elhdaqox"
+			nikkeiamerikajin = "Fureizadani"
+			kanadajin = "Fureizadani"
+			cascasian = "Fraser Zaakguk"
+			canjabi = "Phareser Vaili"
+			montanum = "Val Fraser"
+			canadensium = "Val Fraser"
 		
 			c_camano = {
 				color = { 127 102 204 }
 				color2 = { 0 0 0 }
 				
-				
+				nikkeiamerikajin = "Kamano"
+				kanadajin = "Kamano"
+				cascasian = "Kamáhnohk"
+
 				b_mt_vernon_WA = {}
 				b_burlington_WA = {}
 				b_anacortes_WA = {}
@@ -286,6 +380,10 @@ e_beecy = {
 				color = { 159 127 255 }
 				color2 = { 255 255 255 }
 				
+				cascasian = "Haléihsam"
+				nikkeiamerikajin = "Harison"
+				kanadajin = "Harison"
+				canjabi = "Hairisana"
 				
 				b_chilliwack_BC = {}
 				b_deroche_BC = {}
@@ -299,6 +397,10 @@ e_beecy = {
 				color = { 111 89 178 }
 				color2 = { 77 139 176 }
 				
+				nikkeiamerikajin = "Sanfuan Shotoo"
+				kanadajin = "Sanfuan Shotoo"
+				cascasian = "Quân Dâo San Juan"
+				montanum = "Insulae Sanct Ioan"
 				
 				b_roche_harbor_WA = {}
 				b_olga_WA = {}
@@ -312,6 +414,11 @@ e_beecy = {
 				color = { 95 76 153 }
 				color2 = { 97 97 97 }
 				
+				nikkeiamerikajin = "Beringamu-wan"
+				kanadajin = "Beringamu-wan"
+				cascasian = "Builàhmhon Waan"
+				montanum = "Sin Bellingham"
+				canadensium = "Sin Bellingham"
 				
 				b_bellingham_WA = {}
 				b_cordata_WA = {}
@@ -327,10 +434,17 @@ e_beecy = {
 			color2 = { 255 255 255 }
 			
 			capital = 550 #Victoria
-
+			
+			cascasian = "Wéiduolìya"
+			nikkeiamerikajin = "Vuikutoria"
+			kanadajin = "Vuikutoria"
+			canjabi = "Viktori'a"
+			
 			c_nanaimo = {
 				color = { 15 15 153 }
 				color2 = { 255 255 255}
+				
+				cascasian = "Naapnoimok"
 				
 				b_nanaimo_BC = {}
 				b_ladysmith_BC = {}
@@ -344,6 +458,11 @@ e_beecy = {
 				color = { 10 10 102 }
 				color2 = { 0 0 0 }
 				
+				cascasian = "Kaamáhnaahp"
+				nikkeiamerikajin = "Kamana"
+				kanadajin = "Kamana"
+				montanum = "Carmana"
+				canadensium = "Carmana"
 				
 				b_bamfield_BC = {}
 				b_clo_oose_BC = {}
@@ -362,6 +481,12 @@ e_beecy = {
 				holy_site = illustrious
 				holy_site = aurorean
 				
+				nikkeiamerikajin = "Saanitchi"
+				kanadajin = "Saanitchi"
+				cascasian = "Saatnèihkèih"
+				montanum = "Saanic"
+				canadensium = "Saanic"
+				
 				b_victoria_BC = {}
 				b_sidney_BC = {}
 				b_keating_BC = {}
@@ -370,9 +495,16 @@ e_beecy = {
 				b_metchosin_BC = {}
 				b_maracaibo_BC = {}
 			}
-			c_southern_gulf_islands_BC = {
+			c_southern_gulf_islands_BC = { # Southern Gulf
 				color={ 7 7 76 }
 				color2={ 255 255 255 }
+				
+				nikkeiamerikajin = "Nanbu Wangan"
+				kanadajin = "Nanbu Wangan"
+				cascasian = "Nàahmhóiwaan"
+				canjabi = "Dakhani Khari"
+				montanum = "Sin Austral"
+				canadensium = "Sin Austral"
 			
 				b_ganges_BC = {}
 				b_vesuvius_BC = {}
@@ -386,6 +518,11 @@ e_beecy = {
 			c_sooke_BC = {
 				color={ 20 20 204 }
 				color2={ 255 255 255 }
+				
+				canjabi = "Suke"
+				nikkeiamerikajin = "Sukuu"
+				kanadajin = "Sukuu"
+				cascasian = "Souhk"
 			
 				b_sooke_BC = {}
 				b_east_sooke_BC = {}
@@ -402,10 +539,19 @@ e_beecy = {
 			
 			capital = 553 #Alberni
 			
+			nikkeiamerikajin = "Nuutoka"
+			kanadajin = "Nuutoka"
+			cascasian = "Nutèka"
+			montanum = "Nootca"
+			canadensium = "Nootca"
 				
 			c_alberni = {
 				color = { 51 63 127 }
 				color2 = { 255 255 255 }
+				
+				cascasian = "Ayíhbaaknèih"
+				nikkeiamerikajin = "Arubani"
+				kanadajin = "Arubani"
 				
 				b_port_alberni_BC = {}
 				b_beaver_creek_BC = {}
@@ -419,6 +565,12 @@ e_beecy = {
 				color = { 30 38 76 }
 				color2 = { 255 240 0 }
 				
+				nootka = "Mowichat" # name for the Sound
+				nikkeiamerikajin = "Nuutoka"
+				kanadajin = "Nuutoka"
+				cascasian = "Nutèka"
+				montanum = "Nootca"
+				canadensium = "Nootca"				
 				
 				b_nootka_BC = {}
 				b_tahsis_BC = {}
@@ -431,6 +583,10 @@ e_beecy = {
 			c_kyuquot_BC = {
 				color={ 61 76 153 }
 				color2={ 255 255 255 }
+				
+				nikkeiamerikajin = "Kyukuotto"
+				kanadajin = "Kyukuott"
+				cascasian = "Kùyóuketè"
 			
 				b_fair_harbour_BC = {}
 				b_kyuquot_BC = {}
@@ -443,6 +599,10 @@ e_beecy = {
 			c_clayoquot = {
 				color = { 20 25 51 }
 				color2 = { 28 27 31 }
+				
+				nikkeiamerikajin = "Kureiokotto"
+				kanadajin = "Kureiokotto"
+				cascasian = "Kèlikuòtè"
 				
 				
 				b_hesquiat_BC = {}
@@ -457,6 +617,10 @@ e_beecy = {
 				color={ 71 89 178 }
 				color2={ 255 255 255 }
 				
+				cascasian = "Kennídí"
+				nikkeiamerikajin = "Kenedi"
+				kanadajin = "Kenedi"
+				
 				b_port_albion_BC = {}
 				b_ucluelet_BC = {}
 				b_tofino_BC = {}
@@ -466,17 +630,28 @@ e_beecy = {
 				b_long_beach_BC = {}
 			}
 		}
-		d_georgia_strait = {
+		d_georgia_strait = {  #Discovery
 			color = { 40 81 204 }
 			color2 = { 3 92 182 }
 			
 			capital = 558 #Klinaklini
+			
+			nikkeiamerikajin = "Hakken" # translation
+			kanadajin = "Hakken"
+			cascasian = "Khám Phá"
+			montanum = "Invention"
+			canadensium = "Invention"
 			
 			
 			c_klinaklini = {
 				color = { 35 71 178 }
 				color2 = { 226 199 35 }
 				
+				kwakwala = "Tlinatlina, T'inat'ina"
+				chilcotin = "Jinadlin"
+				nikkeiamerikajin = "Kurinakurini"
+				kanadajin = "Kurinakurini"
+				cascasian = "Kèlìnàkèlìní"
 				
 				b_port_neville_BC = {}
 				b_roy_BC = {}
@@ -489,6 +664,10 @@ e_beecy = {
 			c_seymour_BC = {
 				color={ 45 91 229 }
 				color2={ 255 255 255 }
+				
+				nikkeiamerikajin = "Shiimoa"
+				kanadajin = "Shiimoa"
+				cascasian = "Saimo"
 			
 				b_port_progress_BC = {}
 				b_margaret_bay_BC = {}
@@ -501,6 +680,11 @@ e_beecy = {
 			c_kingcome_BC = {
 				color={ 30 61 153 }
 				color2={ 255 255 255 }
+				
+				kwakwala = "Okwunalis"
+				cascasian = "Jinkemu"
+				nikkeiamerikajin = "Kingukamu"
+				kanadajin = "Kingukamu"
 			
 				b_kingcome_BC = {}
 				b_scott_cove_BC = {}
@@ -514,6 +698,12 @@ e_beecy = {
 				color = { 50 101 255 }
 				color2 = { 247 217 23 }
 				
+				nikkeiamerikajin = "Hakken Shotoo"
+				kanadajin = "Hakken Shotoo"
+				cascasian = "Quân Dâo Khám Phá"
+				montanum = "Insulae Invention"
+				canadensium = "Insulae Invention"
+				
 				
 				b_refuge_cove_BC = {}
 				b_brem_river_BC = {}
@@ -524,16 +714,29 @@ e_beecy = {
 				b_sonora_island_BC = {}
 			}
 		}
-		d_north_end = {
+		d_north_end = { # North Island
 			color = { 68 122 229 }
 			color2 = { 255 255 255 }
 			
 				
 			capital = 2091 #Port Hardy
 			
+			cascasian = "Bakdou"
+			nikkeiamerikajin = "Kitajima"
+			kanadajin = "Kitajima"
+			canjabi = "Utari Tapu"
+			montanum = "Septentrion Insul"
+			canadensium = "Septentrion Insul"
+			
 			c_elk_falls = {
 				color = { 61 108 204 }
 				color2 = { 0 51 152 }
+				
+				nikkeiamerikajin = "Herajika Taki"
+				kanadajin = "Herajika Taki"
+				cascasian = "Mèihlúk Buhkbou"
+				montanum = "Cataract Alc"
+				canadensium = "Cataract Alc"
 				
 				b_campbell_river_BC = {}
 				b_merville_BC = {}
@@ -546,6 +749,9 @@ e_beecy = {
 			c_port_mcneill_BC = {
 				color={ 76 136 255 }
 				color2={ 255 255 255 }
+				
+				montanum = "Port Neil"
+				canadensium = "Port Neil"
 			
 				b_port_mcneill_BC = {}
 				b_nimpkish_heights_BC = {}
@@ -586,7 +792,7 @@ e_beecy = {
 			}
 		}
 	}
-	k_wrangelia = {
+	k_wrangelia = { # Wescoast
 		color={ 14 100 140 }
 		color2={ 255 255 255 }
 		
@@ -594,6 +800,8 @@ e_beecy = {
 		culture = alaskan
 		
 		haida = "K'íis"
+		montanum = "Ora Occiden"
+		canadensium = "Ora Occiden"
 		
 		d_the_coast = {
 			color = { 17 151 178 }
@@ -604,12 +812,17 @@ e_beecy = {
 			capital = 551 #Fjordland
 		
 			haida = "Gagadáay"
+			montanum = "Ora Maritim"
+			canadensium = "Ora Maritim"
 				
 			c_fjordland = {
 				color = { 15 130 153 }
 				color2 = { 182 182 182 }
 				
 				holy_site = aurorean
+				
+				montanum = "Terr Fiord"
+				canadensium = "Terr Fiord"
 			
 				b_klemtu_BC = {}
 				b_hakai_BC = {}
@@ -624,6 +837,9 @@ e_beecy = {
 				color = { 20 173 204 }
 				color2= { 182 182 182 }
 				
+				montanum = "Heiltsuc"
+				canadensium = "Heiltsuc"
+				
 				b_bella_bella_BC = {
 				}
 				b_shearwater_BC = {}
@@ -636,6 +852,9 @@ e_beecy = {
 			c_rivers_inlet = {
 				color = { 12 108 127 }
 				color2 = { 182 182 182 }
+				
+				montanum = "Osti Flum"
+				canadensium = "Osti Flum"
 
 				
 				b_rivers_inlet_BC = {
@@ -650,8 +869,10 @@ e_beecy = {
 				color = { 22 195 229 }
 				color2 = { 182 182 182 }
 				
+				nuxalk = "Nuxalk"			
 				
 				b_bella_coola_BC = {
+				nuxalk = "Q'umk'uts"
 				}
 				b_hagensborg_BC = {}
 				b_firvale_BC = {}
@@ -666,6 +887,9 @@ e_beecy = {
 			c_princess_royal = { # 3340
 				color={ 10 86 102 }
 				color2={ 255 255 255 }
+				
+				montanum = "Principis Regi"
+				canadensium = "Principis Regi"
 				
 				b_princess_royal_alsk = {
 				}
@@ -688,7 +912,10 @@ e_beecy = {
 			color2={ 255 255 255 }
 			
 			capital = 3319 # c_ecstew
-			haida="Ts'aagws"
+			
+			haida = "Ts'aagws"
+			montanum = "Citimat"
+			canadensium = "Citimat"
 			
 			c_ecstew = { # 3319
 				color={ 7 153 153 }
@@ -725,6 +952,9 @@ e_beecy = {
 				color = { 6 127 127 }
 				color2 = { 182 182 182 }
 				
+				montanum = "Citimat"
+				canadensium = "Citimat"	
+				
 				b_kitimat_BC = {}
 				b_terrace_BC = {}
 				b_kitamaat_village_BC = {}
@@ -737,6 +967,9 @@ e_beecy = {
 			c_terrace = { # 3336
 				color={ 11 229 229 }
 				color2={ 255 255 255 }
+				
+				montanum = "Solari"
+				canadensium = "Solari"
 				
 				b_terrace_alsk = {
 				}
@@ -761,9 +994,15 @@ e_beecy = {
 			
 			capital = 3325 # c_khutzeymateen
 			
+			montanum = "Urs Terr"
+			canadensium = "Urs Terr"
+			
 			c_khutzeymateen = { # 3325
 				color={ 53 168 178 }
 				color2={ 255 255 255 }
+				
+				montanum = "Chutzeymati"
+				canadensium = "Chutzeymati"
 				
 				b_khutzeymateen_alsk = {
 				}
@@ -843,7 +1082,7 @@ e_beecy = {
 			color={ 20 127 204 }
 			color2={ 255 255 255 }
 			
-			haida="Kílaad"
+			haida = "Kílaad"
 			
 			capital = 3321 # c_pitt
 			
@@ -947,7 +1186,11 @@ e_beecy = {
 			color={ 0 51 102 }
 			color2={ 255 255 255 }
 			
-			haida="Hlanggas"
+			haida = "Hlanggas"
+			nikkeiamerikajin = "Weruzu"
+			kanadajin = "Weruzu"
+			cascasian = "Waiyíhsi"
+			ohiwyr = "Cymru Oer"
 			
 			capital = 3329 # c_revillagigedo
 			
@@ -1054,7 +1297,7 @@ e_beecy = {
 		
 		capital = 568 #c_itcha_ilgachuz
 		
-		haida="Únsgw"
+		haida = "Únsgw"
 		
 		d_cariboo = {
 			color = { 66 165 81 }
@@ -1228,6 +1471,10 @@ e_beecy = {
 		
 		capital = 570 #Kelowna
 		
+		montanum = "Ocanogan"
+		canadensium = "Ocanogan"
+		okanagan = "Ukwnaqín"	
+		
 		d_fraser_fort_george = {
 			color = { 12 127 70 }
 			color2 = { 220 220 220 }
@@ -1382,6 +1629,8 @@ e_beecy = {
 				color2 = { 147 63 3 }
 				
 				holy_site = doukhobor
+				
+				okanagan = "Ki'láwna'"
 				
 				b_kelowna_BC = {}
 				b_penicton_BC = {}

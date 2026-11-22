@@ -2,9 +2,11 @@ e_inland_empire = {
 	color = { 12 60 127 }
 	color2 = { 255 255 255 }
 	
-	haida="Tlagadáad"
+	haida = "Tlagadáad"
 	montanum = "Mediterranea"
 	canadensium = "Mediterranea"
+	manzanero = "Imperio Interior"
+	doukhobors = "Vnutrennyaya Imperiya"
 	
 	culture = lincolnite
 	
@@ -20,6 +22,10 @@ e_inland_empire = {
 
 		capital = 526
 		
+		montanum = "Desert Artemisa"
+		canadensium = "Desert Artemisa"
+		manzanero = "Artemisa" # Sagebrush, like how Mojave isn't Desierto de Mojave
+		
 		d_blue_mountains = {
 			color = { 61 153 137 }
 			color2 = { 244 130 32 }
@@ -28,6 +34,9 @@ e_inland_empire = {
 			
 			culture = portlander
 			
+			manzanero = "Montañas Azules"
+			montanum = "Montes Caerul"
+			canadensium = "Montes Caerul"
 			
 			c_wallawalla = {
 				color = { 71 178 160 }
@@ -35,7 +44,13 @@ e_inland_empire = {
 				
 				holy_site = waashat
 				
-				b_walla_walla_WA = {}
+				montanum = "Valle-Vallie"
+				canadensium = "Valle-Vallie"
+				
+				b_walla_walla_WA = {
+				montanum = "Valle-Vallie"
+				canadensium = "Valle-Vallie"
+				}
 				b_milton_freewater_OR = {}
 				b_dayton_WA = {}
 				b_touchet_WA = {}
@@ -84,6 +99,9 @@ e_inland_empire = {
 			c_morrow_OR = {
 				color={ 91 229 206 }
 				color2={ 255 255 255 }
+				
+				montanum = "Morro"
+				canadensium = "Morro"
 			
 				b_boardman_OR = {}
 				b_heppner_OR = {}
@@ -99,11 +117,18 @@ e_inland_empire = {
 			color2={ 255 255 255 }
 			
 			capital = 463
+			
+			manzanero = "Nez Percé"
+			montanum = "Nas Perforat"
+			canadensium = "Nas Perforat"
 		
 			c_salmon_river = {
 				color = { 54 216 203 }
 				color2 = { 0 180 217 }
 				
+				manzanero = "Río Salmon"
+				montanum = "Flum Salmon"
+				canadensium = "Flum Salmon"
 				
 				b_mccall_ID = {}
 				b_cascade_ID = {}
@@ -118,6 +143,10 @@ e_inland_empire = {
 				color2 = { 255 255 255 }
 				
 				holy_site = waashat
+				
+				manzanero = "Nez Percé"
+				montanum = "Nas Perforat"
+				canadensium = "Nas Perforat"
 				
 				b_lewiston_ID = {}
 				b_clarkston_WA = {}
@@ -136,11 +165,13 @@ e_inland_empire = {
 			
 			capital = 526 #Deschutes
 			
+			manzanero = "Desierto de Altura"
+			montanum = "Desert Altus"
+			canadensium = "Desert Altus"
 			
 			c_ochoco = {
 				color = { 102 204 136 }
 				color2 = { 255 255 255 }
-				
 				
 				b_paulina_OR = {}
 				b_izee_OR = {}
@@ -155,6 +186,10 @@ e_inland_empire = {
 				color2 = { 255 196 40 }
 				
 				holy_site = indian_shaker
+				
+				manzanero = "Garganta del Columbia"
+				montanum = "Gorg Columbia"
+				canadensium = "Gorg Columbia"
 				
 				b_the_dalles_OR = {}
 				b_moro_OR = {}
@@ -180,6 +215,9 @@ e_inland_empire = {
 				color = { 63 127 85 }
 				color2 = { 235 231 186 }
 				
+				montanum = "Desutes"
+				canadensium = "Desutes"
+				northern_paiute = "Nüümü Yaduka" # the people's mountain, the three sisters mountains
 				
 				b_bend_OR = {}
 				b_christmas_valley_OR = {}
@@ -195,6 +233,8 @@ e_inland_empire = {
 			
 				holy_site = aquarian
 				
+				manzanero = "Cráter"
+				
 				b_chiloquin_OR = {}
 				b_crater_lake_OR = {}
 				b_gilchrist_OR = {}
@@ -205,7 +245,7 @@ e_inland_empire = {
 			}
 		}
 	}
-	k_kootenay = {
+	k_kootenay = { #Kutenay
 		color={ 178 64 35 }
 		color2={ 255 255 255 }
 		capital = 466 #c_flathead
@@ -215,6 +255,8 @@ e_inland_empire = {
 		
 		montanum = "Cutenai"
 		canadensium = "Cutenai"
+		kutenai = "Ktunaxa"
+		doukhobors = "Kuteney"
 		
 		d_flathead = {
 			color={ 204 89 40 }
@@ -265,6 +307,7 @@ e_inland_empire = {
 				
 				montanum = "Glacies"
 				canadensium = "Glacies"
+				manzanero = "Glaciar"
 				
 				b_coram_MT = {}
 				b_hungry_horse_MT = {}
@@ -283,6 +326,7 @@ e_inland_empire = {
 			
 				montanum = "Magn Curv"
 				canadensium = "Magn Curv"
+				manzanero = "Gran Curva"
 			
 			c_banff = {
 				color = { 127 37 25 }
@@ -306,6 +350,7 @@ e_inland_empire = {
 				
 				montanum = "Columbia Lac"
 				canadensium = "Columbia Lac"
+				manzanero = "Lago Columbia"
 			
 				b_windermere_BC = {}
 				b_canal_flats_BC = {}
@@ -321,6 +366,7 @@ e_inland_empire = {
 				
 				montanum = "Val Alces"
 				canadensium = "Val Alces"
+				manzanero = "Valle de Elk"
 			
 				b_fernie_BC = {}
 				b_sparwood_BC = {}
@@ -335,6 +381,9 @@ e_inland_empire = {
 				color2 = { 182 182 182 }
 				
 				holy_site = omniaveritatis
+				
+				montanum = "Cinbascet"
+				canadensium = "Cinbascet"
 				
 				b_beaver_BC = {}
 				b_blaeberry_BC = {}
@@ -352,11 +401,12 @@ e_inland_empire = {
 			
 			montanum = "Cutenai"
 			canadensium = "Cutenai"
+			kutenai = "Ktunaxa"
 			
 			
 			capital = 502 #Kootenay
 			
-			culture = cree
+			culture = kutenai
 			
 
 			c_arrowhead = {
@@ -364,6 +414,9 @@ e_inland_empire = {
 				color2 = { 192 201 182 }
 				
 				holy_site = doukhobor
+				
+				montanum = "Sagitcusp"
+				canadensium = "Sagitcusp"
 				
 				b_revelstoke_BC = {}
 				b_nakusp_BC = {}
@@ -378,6 +431,9 @@ e_inland_empire = {
 				color = { 76 25 15 }
 				color2 = { 96 50 17 }
 				
+				montanum = "Sacerdo Lac"
+				canadensium = "Sacerdo Lac"
+				manzanero = "Lago Sacerdote"
 				
 				b_sandpoint_ID = {}
 				b_priest_river_ID = {}
@@ -392,6 +448,9 @@ e_inland_empire = {
 				color = { 153 50 30 }
 				color2 = { 53 92 211 }
 				
+				montanum = "Cutenai"
+				canadensium = "Cutenai"
+				kutenai = "Ktunaxa"
 				
 				b_creston_BC = {}
 				b_bonners_ferry_ID = {}
@@ -404,6 +463,9 @@ e_inland_empire = {
 			c_moyie_BC = {
 				color={ 51 16 10 }
 				color2={ 255 255 255 }
+				
+				montanum = "Moy"
+				canadensium = "Moy"
 			
 				b_cranbrook_BC = {}
 				b_moyie_BC = {}
@@ -433,7 +495,10 @@ e_inland_empire = {
 			
 			capital = 506 #c_colville
 			
-			culture = portlander
+			culture = okanagan
+			
+			montanum = "Colvil"
+			canadensium = "Colvil"
 			
 			
 			c_pend_oreille = {
@@ -441,6 +506,9 @@ e_inland_empire = {
 				color2 = { 255 153 64 }
 				
 				holy_site = waashat
+				
+				montanum = "Inaur"
+				canadensium = "Inaur"
 				
 				b_chewelah_WA = {}
 				b_kettle_falls_WA = {}
@@ -453,7 +521,9 @@ e_inland_empire = {
 			c_colville = {
 				color = { 255 127 102 }
 				color2 = { 10 16 70 }
-				
+
+				montanum = "Colvil"
+				canadensium = "Colvil"				
 				
 				b_coulee_dam_WA = {}
 				b_disautel_WA = {}
@@ -469,10 +539,16 @@ e_inland_empire = {
 			color2={ 255 255 255 }
 
 			capital = 545 #c_okanogan
+			
+			montanum = "Venatci"
+			canadensium = "Venatci"
 		
 			c_winthrop_WA = {
 				color={ 178 31 17 }
 				color2={ 255 255 255 }
+				
+				montanum = "Vinthrop"
+				canadensium = "Vinthrop"
 			
 				b_pateros_WA = {}
 				b_winthrop_WA = {}
@@ -486,6 +562,8 @@ e_inland_empire = {
 				color = { 127 22 12 }
 				color2 = { 255 255 255 }
 				
+				montanum = "Citit"
+				canadensium = "Citit"
 				
 				b_ellensburg_WA = {}
 				b_cle_elum_WA = {}
@@ -499,7 +577,12 @@ e_inland_empire = {
 				color = { 204 35 20 }
 				color2 = { 40 93 72 }
 
-				holy_site = templarist				
+				holy_site = templarist
+				
+				montanum = "Ocanogan"
+				canadensium = "Ocanogan"
+				okanagan = "Ukwnaqín"
+				
 				
 				b_sunnyslope_WA = {}
 				b_chellan_WA = {}
@@ -516,9 +599,15 @@ e_inland_empire = {
 
 			capital = 505 #c_spokane_valley
 			
+			montanum = "Spocan"
+			canadensium = "Spocan"
+			
 			c_adams = {
 				color = { 178 0 44 }
 				color2 = { 0 0 0 }
+				
+				montanum = "Adamus"
+				canadensium = "Adamus"
 				
 				b_davenport_WA = {}
 				b_harrington_WA = {}
@@ -547,7 +636,12 @@ e_inland_empire = {
 
 				holy_site = dominionist
 				holy_site = templarist
-				holy_site = omniaveritatis				
+				holy_site = omniaveritatis	
+				
+				manzanero = "Valle de Spokane"
+				montanum = "Val Spocan"
+				canadensium = "Val Spocan"
+				
 				
 				b_spokane_WA = {}
 				b_mead_WA = {}
@@ -558,17 +652,22 @@ e_inland_empire = {
 				b_millwood_WA = {}
 			}
 		}
-		d_clearwater = {
+		d_clearwater = { # Coeur d'Alene
 			color = { 229 45 45 }
 			color2= { 142 200 90 }
 
 			capital = 465 # Coeur d'Alene
 			
+			montanum = "Cor Alen"
+			canadensium = "Cor Alen"
+			
 			
 			c_coeur_dalene = {
 				color = { 204 40 40 }
 				color2 = { 45 32 78 }
-				
+			
+				montanum = "Cor Alen"
+				canadensium = "Cor Alen"
 				
 				b_post_falls_ID = {}
 				b_delta_gardens_ID = {}
@@ -594,6 +693,9 @@ e_inland_empire = {
 				color = { 178 35 35 }
 				color2 = { 255 255 255 }
 				
+				manzanero = "Valle de Plata"
+				montanum = "Val Argent"
+				canadensium = "Val Argent"
 				
 				b_kellogg_ID = {}
 				b_wallace_ID = {}
@@ -604,7 +706,7 @@ e_inland_empire = {
 				b_prichard_creek_ID = {}
 			}
 		}
-		d_columbia_valley = {
+		d_columbia_valley = { # Columbia River
 			color = { 204 61 85 }
 			color2 = { 33 30 37 }
 			
@@ -612,6 +714,9 @@ e_inland_empire = {
 			
 			culture = portlander
 			
+			manzanero = "Rio de Columbia"
+			montanum = "Flum Columb"
+			canadensium = "Flum Columb"
 			
 			c_douglas = {
 				color = { 178 53 74 }
@@ -644,6 +749,9 @@ e_inland_empire = {
 			c_moses_lake_WA = {
 				color={ 153 45 63 }
 				color2={ 255 255 255 }
+				
+				montanum = "Lac Moyses"
+				canadensium = "Lac Moyses"
 			
 				b_moses_lake_WA = {}	
 				b_warden_WA = {}	
@@ -657,6 +765,9 @@ e_inland_empire = {
 				color = { 255 76 106 }
 				color2 = { 207 207 207 }
 				
+				montanum = "Franclin"
+				canadensium = "Franclin"
+				
 				
 				b_pasco_WA = {}
 				b_connell_WA = {}
@@ -667,20 +778,28 @@ e_inland_empire = {
 				b_lind_WA = {}
 			}
 		}
-		d_horse_heaven = {
+		d_horse_heaven = { # Yakima
 			color = { 229 74 22 }
 			color2 = { 252 221 175 }
 			
 			capital = 512 #Yakama
 			
-			culture = salishan
+			culture = yakama
 			
+			manzanero = "Yaquima"
+			montanum = "Yacima"
+			canadensium = "Yacima"
+			yakama = "Yakama"
 			
 			c_yakama = {
 				color = { 204 66 20 }
 				color2 = { 255 255 255 }
 				
 				holy_site = waashat
+				
+				manzanero = "Yaquima"
+				montanum = "Yacima"
+				canadensium = "Yacima"	
 				
 				b_yakima_WA = {}
 				b_toppenish_WA = {}
@@ -705,6 +824,9 @@ e_inland_empire = {
 			c_kennewick_WA = {
 				color={ 178 58 17 }
 				color2={ 255 255 255 }
+				
+				montanum = "Kennevic"
+				canadensium = "Kennevic"
 			
 				b_kennewick_WA = {}		
 				b_finley_WA = {}
@@ -717,6 +839,9 @@ e_inland_empire = {
 			c_klickitat = {
 				color = { 153 49 15 }
 				color2 = { 173 113 16 }
+				
+				montanum = "Klicitat"
+				canadensium = "Klicitat"
 				
 				
 				b_goldendale_WA = {}
@@ -738,6 +863,9 @@ e_inland_empire = {
 
 		capital = 469
 		
+		montanum = "Cap Castor"
+		canadensium = "Cap Castor"
+		
 		d_helena = {
 			color={ 153 61 30 }
 			color2={ 255 255 255 }
@@ -750,6 +878,9 @@ e_inland_empire = {
 				
 				holy_site = dominionist
 				
+				montanum = "Aqualat"
+				canadensium = "Aqualat"
+		   
 				b_helena_MT = {}
 				b_bozeman_MT = {}
 				b_gellatin_MT = {}
@@ -764,6 +895,10 @@ e_inland_empire = {
 				
 				holy_site = crow_way
 				holy_site = crow_way_reformed
+				
+				manzanero = "Gran Cascadas"
+				montanum = "Magn Cataract"
+				canadensium = "Magn Cataract"
 				
 				b_great_falls_MT = {}
 				b_black_eagle_MT = {}
@@ -791,6 +926,9 @@ e_inland_empire = {
 				color = { 204 81 40 }
 				color2 = { 14 22 11 }
 				
+				montanum = "Mar"
+				canadensium = "Mar"
+				
 				b_checkerboard_MT = {}
 				b_white_sulphur_springs_MT = {}
 				b_edith_MT = {}
@@ -808,9 +946,15 @@ e_inland_empire = {
 
 			capital = 467 #c_bitterroot_valley
 			
+			montanum = "Casa Cerv"
+			canadensium = "Casa Cerv"
+			
 			c_bitterroot_valley = {
 				color = { 153 114 76 }
 				color2 = { 152 215 187 }
+				
+				montanum = "Radixamar"
+				canadensium = "Radixamar"
 				
 				
 				b_missoula_MT = {}
@@ -824,6 +968,9 @@ e_inland_empire = {
 			c_powell_MT = {
 				color={ 204 153 102 }
 				color2={ 255 255 255 }
+				
+				montanum = "Povell"
+				canadensium = "Povell"
 			
 				b_deer_lodge_MT = {}
 				b_garrison_MT = {}
@@ -836,6 +983,9 @@ e_inland_empire = {
 			c_granite = {
 				color = { 127 95 63 }
 				color2 = { 134 137 8 }
+				
+				montanum = "Granitum"
+				canadensium = "Granitum"
 				
 				b_philipsburg_MT = {}
 				b_anaconda_MT = {}
@@ -852,9 +1002,15 @@ e_inland_empire = {
 
 			capital = 469 #Beaverhead
 			
+			montanum = "Arc Argent"
+			canadensium = "Arc Argent"
+			
 			c_beaverhead = {
 				color = { 127 85 25 }
-				color2 = { 206 206 206 }				
+				color2 = { 206 206 206 }	
+
+				montanum = "Cap Castor"
+				canadensium = "Cap Castor"				
 				
 				b_butte_MT = {}
 				b_anaconda_MT1 = {}
